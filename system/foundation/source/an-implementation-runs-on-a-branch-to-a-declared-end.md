@@ -69,7 +69,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **Put through the selection interface beside the working location and the participation, and recorded as a confirmation.** Work that reaches a verdict forecasts before its work and ends Affirmed, Refuted, or Inconclusive. Work without one ends Completed. The selection follows neither the kind nor whether the work opens with a question or an intent. **Its two options read, in these words:** *Conclude with an engineer's verdict* and *Conclude without an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is.
 
-**A third option reads *What's a verdict*.** Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against a forecast stated before the work, and that work without a verdict ends Completed. The question is then asked again, with the same three options.
+**A third option reads *What's a verdict?*** Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against a forecast stated before the work, and that work without a verdict ends Completed. The question is then asked again, with the same three options.
 
 **As the engineer stated it:** an intent can also bring a forecast and verdict.
 
@@ -209,7 +209,7 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 3. Work without a verdict ends Completed.
 4. The selection follows neither the kind nor whether the work opens with a question or an intent.
 5. Its two options read, in these words: *Conclude with an engineer's verdict* and *Conclude without an engineer's verdict*.
-6. A third option reads *What's a verdict*. Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against a forecast stated before the work, and that work without a verdict ends Completed.
+6. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against a forecast stated before the work, and that work without a verdict ends Completed.
 7. Then ask the question again, with the same three options.
 
 ## The end
@@ -273,6 +273,7 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 - 2026-11-02, revised: a phase's verdict is chosen for that phase; checked: 63 directives, 63 kept, 0 less precise, 0 lost. The body's forecast sentence was then made to say the phase, as the compressed text already did
 - 2026-11-06, revised: the verdict question's options are fixed in words; checked: 72 directives, 71 kept, 1 less precise, 0 lost. Left less precise, untouched by this revision: that only an affirmed phase merges back, not a refuted or inconclusive one
 - 2026-11-07, revised: the verdict question offers *What's a verdict*; checked: 61 directives, 59 kept, 2 less precise, 0 lost. Left less precise, untouched by this revision: that only an affirmed phase merges back, and that work without a verdict is verified before integrating, which the compressed text gives only as the reason for no gate
+- 2026-11-07, revised: the option reads *What's a verdict?*, with a question mark, a wording the engineer settled; not re-checked
 
 ## History
 
@@ -339,3 +340,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:03:54 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 10:54:15 AM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 10:58:24 AM PT
