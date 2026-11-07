@@ -11,7 +11,7 @@ The engineer typed `/item $ARGUMENTS`.
 2. Read the first word typed as the subcommand. The words after it are its arguments.
 3. Where the first word is `help`, print the text of `help.md`, in this skill's directory, and do nothing more.
 4. Where nothing was typed, ask which subcommand is meant, through the selection interface, in these groups. Then ask again within the group selected.
-   - **Ideas and goals:** `idea`, `improvement`, `aspiration`, `goal`
+   - **Ideas and goals:** `idea`, `improvement`, `correction`, `aspiration`, `goal`
    - **Work and plans:** `work`, `plan`, `design`
    - **Findings:** `observation`, `mistake`, `problem`
    - **Other:** `list`, `current`, a state change, `help`
