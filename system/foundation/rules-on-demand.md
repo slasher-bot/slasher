@@ -974,6 +974,9 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 15. It compares against the remote-tracking ref, so it reflects the last fetch.
 16. A branch with no upstream reports nothing, since unpushed is relative to an upstream.
 17. An upstream missing by accident is a different fact, and is deliberately not folded into this segment.
+18. Where a feature or an experiment is Active or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's.
+19. A phase is under way where its branch exists, and its commits count as work on its implementation. Where more than one implementation is current, show the one whose branch, or a phase's branch, has the latest commit.
+20. Where none is current, print no second line.
 
 ## The startup display
 
