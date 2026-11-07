@@ -7,6 +7,6 @@ LOG
 
   /log-this                        Write a log entry for the current work
 
-  /work-session new | append       Write or append a work session record
+  /work-session new | amend        Write or amend a work session record
 
   /log help                        Print this command's help
