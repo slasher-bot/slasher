@@ -38,4 +38,22 @@ implementation=$(cd "$project" && system/foundation/current-implementation.sh)
 
 [ "$implementation" = "$control_branch" ] || fail "(unnamed)" "found:" "$implementation"
 
+# ----------------------------------------------------------------------------
+
+installed=$(mktemp -d)
+trap 'rm -rf "$project" "$installed"' EXIT
+mkdir -p "$installed/slasher/system/foundation" "$installed/slasher/local/implementations"
+cp system/foundation/current-implementation.sh "$installed/slasher/system/foundation/"
+
+cat > "$installed/slasher/local/implementations/2026-01-01T00-00-00Z-some-subject-ACTIVE.md" <<RECORD
+# Feature — Some intent
+
+- **State:** Active
+- **Implementation branch:** \`$control_branch\`
+RECORD
+
+installed_implementation=$(cd "$installed" && slasher/system/foundation/current-implementation.sh)
+
+[ "$installed_implementation" = "$control_branch" ] || fail "(unnamed)" "found:" "$installed_implementation"
+
 echo "0 failed, 0 aborted"
