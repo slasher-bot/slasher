@@ -1,6 +1,6 @@
 # The status line shows the current implementation and its phase on a second line
 
-- **State:** Open
+- **State:** Active
 - **Tags:** [idea]
 
 **The status line would carry a second line naming the current implementation, the feature or experiment under way, and its current phase.** Today the status line is one line: the repository, the branch, and any uncommitted, untracked, or unpushed work. The engineer would see what work is under way, and which step of it, without asking.
@@ -29,3 +29,4 @@ Authored by Scott Bellware on Fri Nov 6 2026 at 1:35:35 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 1:36:51 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 1:37:24 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 1:37:39 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 12:07:46 PM PT
