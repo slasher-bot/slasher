@@ -1,7 +1,7 @@
 # Base Slasher project and System Slasher project
 
 - **State:** Open
-- **Tags:** [idea]
+- **Tags:** [idea] [design]
 - **Priority:** 1
 
 **One Waytide install on a machine is its root install, and commands can be directed at it from within any project.** Two forms are named:
@@ -78,3 +78,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 1:04:45 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:09:49 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:10:50 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:14:10 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 1:15:15 PM PT
