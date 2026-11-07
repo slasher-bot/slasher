@@ -1278,7 +1278,7 @@ Trigger: When a session starts, or the engineer types its first prompt, or when 
 ```
 Slasher: Humanity in the Loop AI
 
-The engineer decides. The agent generates. Humanity rules.
+The engineer decides. The agent generates.
 ```
 
 14. The title leads. It is the first line of the display, and nothing the agent writes stands ahead of it.
