@@ -568,7 +568,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 2. Work that reaches a verdict forecasts before its work and ends Affirmed, Refuted, or Inconclusive.
 3. Work without a verdict ends Completed.
 4. The selection follows neither the kind nor whether the work opens with a question or an intent.
-5. Its two options read, in these words: *Conclude with an engineer's verdict* and *Conclude without an engineer's verdict*.
+5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
 6. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against a forecast stated before the work, and that work without a verdict ends Completed.
 7. Then ask the question again, with the same three options.
 
