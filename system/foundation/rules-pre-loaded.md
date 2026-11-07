@@ -428,8 +428,8 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
 | `/?` | Print this table |
-| `/.` | An alias of /recent |
-| `/'` | An alias of /items |
+| `/.` | An alias of /items |
+| `/'` | An alias of /recent |
 | `/unattended` | Carry out a request on the agent's own, after a plan is proposed |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/items` | Lists the current items, then the current features and experiments. |
@@ -445,7 +445,7 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 
 **After the table, run `/items 10`.** In the same response, below the table, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
-**The second row names `/?`, the third `/.`, the fourth `/'`, and the fifth `/unattended`.** `/?` is an alias of `/command-table`, `/.` is an alias of `/recent`, `/'` is an alias of `/items`, and `/unattended` is a root command of the PROCESS domain. They stand below `/slasher help`, apart from the `/items` and `/recent` rows.
+**The second row names `/?`, the third `/.`, the fourth `/'`, and the fifth `/unattended`.** `/?` is an alias of `/command-table`, `/.` is an alias of `/items`, `/'` is an alias of `/recent`, and `/unattended` is a root command of the PROCESS domain. They stand below `/slasher help`, apart from the `/items` and `/recent` rows.
 
 **The PHASE, PROCESS, PROJECTS, RELEASE, PACKAGES, LANGUAGE, and LOAD domains have no row.** `/slasher help` still gives their help, and so does each one's own help command: `/phase help`, `/process help`, `/projects help`, `/release help`, `/package help`, `/language help`, and `/load help`.
 

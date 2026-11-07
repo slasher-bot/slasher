@@ -6,8 +6,8 @@
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
 | `/?` | Print this table |
-| `/.` | An alias of /recent |
-| `/'` | An alias of /items |
+| `/.` | An alias of /items |
+| `/'` | An alias of /recent |
 | `/unattended` | Carry out a request on the agent's own, after a plan is proposed |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/items` | Lists the current items, then the current features and experiments. |
@@ -23,7 +23,7 @@
 
 **After the table, run `/items 10`.** In the same response, below the table, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
-**The second row names `/?`, the third `/.`, the fourth `/'`, and the fifth `/unattended`.** `/?` is an alias of `/command-table`, `/.` is an alias of `/recent`, `/'` is an alias of `/items`, and `/unattended` is a root command of the PROCESS domain. They stand below `/slasher help`, apart from the `/items` and `/recent` rows.
+**The second row names `/?`, the third `/.`, the fourth `/'`, and the fifth `/unattended`.** `/?` is an alias of `/command-table`, `/.` is an alias of `/items`, `/'` is an alias of `/recent`, and `/unattended` is a root command of the PROCESS domain. They stand below `/slasher help`, apart from the `/items` and `/recent` rows.
 
 **The PHASE, PROCESS, PROJECTS, RELEASE, PACKAGES, LANGUAGE, and LOAD domains have no row.** `/slasher help` still gives their help, and so does each one's own help command: `/phase help`, `/process help`, `/projects help`, `/release help`, `/package help`, `/language help`, and `/load help`.
 
@@ -40,6 +40,8 @@
 **How to apply:** at the end of the session-start read, print the table as it stands here, once, run `/items 10` below it, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Sat Nov 7 2026 `/.` was an alias of `/recent` and `/'` an alias of `/items`. The engineer swapped them.
 
 Until Sat Nov 7 2026 the `/test` row read *Run the project's tests and report on them.*
 
@@ -133,3 +135,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 2:42:33 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:43:22 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:46:44 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:48:15 AM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 12:46:02 PM PT
