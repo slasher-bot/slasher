@@ -8,8 +8,8 @@ EXPERIMENTS
   /experiment affirm               -> Affirmed (engineer's declaration only)
   /experiment refute               -> Refuted
   /experiment inconclusive         -> Inconclusive
-  /experiment suspend              -> Suspended
+  /experiment suspend, /suspend    -> Suspended
   /experiment resume               Suspended -> Active
-  /experiment supersede            -> Superseded, after suspension
-  /experiment abandon              -> Abandoned
+  /experiment supersede, /supersede-> Superseded, after suspension
+  /experiment abandon, /abandon    -> Abandoned
   /experiment help                 Print this command's help

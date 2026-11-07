@@ -17,7 +17,7 @@
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/item-state-commands-without-prefix`
-- **Base:** `930cfa95`, from `master`
+- **Base:** `e13eea89`, from `master`
 - **Working location:** branch and worktree, chosen at the start. The worktree is `../slasher-feature-worktree-item-state-commands-without-prefix`, and the main working tree stays on `master`.
 - **Participation:** not asked. The work is content work, which the local rule design-by-efferent-does-not-govern-content-work holds off the design loop.
 - **Verdict:** it concludes without an engineer's verdict, selected at the start.
@@ -30,3 +30,4 @@
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 11:45:38 AM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:49:08 AM PT

@@ -14,6 +14,7 @@
 ## Settled
 
 - **2026-11-06** — The bare forms are aliases. `/item start` and the other `/item` state subcommands stay, and `/start`, `/realize`, and the rest are aliases of them, doing exactly what they do.
+- **2026-11-07** — `/suspend`, `/supersede`, and `/abandon` act on an item, as their `/item` forms do, or on a feature or an experiment, as `/feature suspend` and the like do. Where the words typed do not say which record is meant, each asks through the selection interface. This amends the resolution of 2026-11-06 for these three, which are no longer only aliases of their `/item` forms. The other six stay aliases. Selected by the engineer.
 
 ## History
 
@@ -26,3 +27,4 @@ Then: "Actually, they should be aliases"
 Authored by Scott Bellware on Fri Nov 6 2026 at 12:38:28 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:39:18 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:45:38 AM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:49:08 AM PT

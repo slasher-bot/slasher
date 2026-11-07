@@ -34,15 +34,18 @@ ITEMS
                                    (Open and Active)
   /item current                    List current items (/item list current)
 
-  /item start                      Open -> Active
-  /item realize                    -> Realized
-  /item done                       -> Done ([work] items only)
-  /item defer                      -> Deferred
-  /item suspend                    -> Suspended
-  /item supersede                  -> Superseded, naming the replacement
-  /item abandon                    -> Abandoned
-  /item obsolete                   -> Obsolete
-  /item reopen                     Take back Realized, Deferred, Open, or Done
+  /item start, /start              Open -> Active
+  /item realize, /realize          -> Realized
+  /item done, /done                -> Done ([work] items only)
+  /item defer, /defer              -> Deferred
+  /item suspend, /suspend          -> Suspended
+  /item supersede, /supersede      -> Superseded, naming the replacement
+  /item abandon, /abandon          -> Abandoned
+  /item obsolete, /obsolete        -> Obsolete
+  /item reopen, /reopen            Take back Realized, Deferred, Open, or Done
+
+  /suspend, /supersede, and /abandon also act on a feature or an
+  experiment, and ask which record is meant where the words do not say.
 
   /item help                       Print this command's help
 
@@ -60,10 +63,10 @@ FEATURES
   /feature new with phases         Start a feature, asking for its phases
   /feature status                  Phases, current phase, and its goal
   /feature complete                -> Completed
-  /feature suspend                 -> Suspended
+  /feature suspend, /suspend       -> Suspended
   /feature resume                  Suspended -> Active
-  /feature supersede               -> Superseded, after suspension
-  /feature abandon                 -> Abandoned
+  /feature supersede, /supersede   -> Superseded, after suspension
+  /feature abandon, /abandon       -> Abandoned
   /feature help                    Print this command's help
 
   Either kind opens with a question or an intent, and whether it
@@ -79,10 +82,10 @@ EXPERIMENTS
   /experiment affirm               -> Affirmed (engineer's declaration only)
   /experiment refute               -> Refuted
   /experiment inconclusive         -> Inconclusive
-  /experiment suspend              -> Suspended
+  /experiment suspend, /suspend    -> Suspended
   /experiment resume               Suspended -> Active
-  /experiment supersede            -> Superseded, after suspension
-  /experiment abandon              -> Abandoned
+  /experiment supersede, /supersede-> Superseded, after suspension
+  /experiment abandon, /abandon    -> Abandoned
   /experiment help                 Print this command's help
 
 PHASE
