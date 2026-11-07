@@ -4,7 +4,7 @@
 
 | Command | Description |
 |---|---|
-| `/slasher help` | Print the help of every Slasher command |
+| `/slasher help, /help` | Print the help of every Slasher command |
 | `/?` | Print this table |
 | `/.` | An alias of /recent |
 | `/'` | An alias of /items |
@@ -19,7 +19,7 @@
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
 | `/test` | Run the project's tests, or other compliance routines, quality checks, and report on them. |
 
-**Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/'`, `/unattended`, `/items`, and `/recent` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items` and `/recent` are root commands of the PROCESS domain. Each has a row of its own, `/items` below the `/item` row and `/recent` below the `/experiment` row, and its description is the one its line in the help gives. A description that opens with *This command* or *These commands* in the help drops those words in the table, and opens with its verb. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, and `/'` are the only aliases with rows.
+**Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/'`, `/unattended`, `/items`, and `/recent` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items` and `/recent` are root commands of the PROCESS domain. Each has a row of its own, `/items` below the `/item` row and `/recent` below the `/experiment` row, and its description is the one its line in the help gives. A description that opens with *This command* or *These commands* in the help drops those words in the table, and opens with its verb. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, and `/'` are the only aliases with rows of their own. `/help`, an alias of `/slasher help`, shares the first row.
 
 **After the table, run `/items 10`.** In the same response, below the table, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
@@ -27,7 +27,7 @@
 
 **The PHASE, PROCESS, PROJECTS, RELEASE, PACKAGES, LANGUAGE, and LOAD domains have no row.** `/slasher help` still gives their help, and so does each one's own help command: `/phase help`, `/process help`, `/projects help`, `/release help`, `/package help`, `/language help`, and `/load help`.
 
-**The first row names `/slasher help`, which prints the help of every Slasher command.** It names no command domain.
+**The first row names `/slasher help`, which prints the help of every Slasher command, and its alias `/help`.** It names no command domain.
 
 **`/command-table` prints the table too.** It prints the table word for word, and nothing else: no `/items 10` and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain. It has no row, and the help header names it. `/commands` and `/?` are aliases of `/command-table`, and the help header names them too. `/commands` has no row either, and `/?` has the row that prints the table.
 
@@ -40,6 +40,8 @@
 **How to apply:** at the end of the session-start read, print the table as it stands here, once, run `/items 10` below it, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Sat Nov 7 2026 the first row named only `/slasher help`. The engineer added its alias `/help` to the row.
 
 Later on Sat Nov 7 2026 the engineer swapped `/.` and `/'` back, so `/.` is again an alias of `/recent` and `/'` of `/items`.
 
@@ -139,3 +141,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 2:46:44 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:48:15 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:46:02 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:47:52 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 1:22:34 PM PT
