@@ -10,14 +10,14 @@
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/status-line-second-line`
-- **Base:** the commit that carries this record, from `master`
+- **Base:** `882f6f13`, from `master`
 - **Working location:** branch and worktree, chosen at the start. The worktree is `../slasher-feature-worktree-status-line-second-line`, and the main working tree stays on `master`.
 - **Participation:** attended, chosen at the start.
 - **Verdict:** it concludes without an engineer's verdict, selected at the start.
@@ -27,7 +27,9 @@
 - **2026-11-07** — The working location is branch and worktree, selected by the engineer at the start.
 - **2026-11-07** — Participation: Attended, selected by the engineer. Agent's confidence 55%, risk of redo 45%, It'll work 85%, Your approval 60%, attended confidence 88%. The warning was shown, and Attended was recommended.
 - **2026-11-07** — The feature concludes without an engineer's verdict, selected by the engineer at the start.
+- **2026-11-07** — Completion, with the merge to `master`, worktree removal, and branch deletion, selected by the engineer at the conclusion.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 12:08:55 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 12:39:02 PM PT
