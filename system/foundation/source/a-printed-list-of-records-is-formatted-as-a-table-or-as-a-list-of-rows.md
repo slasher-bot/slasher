@@ -52,9 +52,11 @@ A list of items takes the ordinal and no SHA columns:
 
 **As the engineer stated it:** Don't print the kind as its tag. eg: for "[idea]", print in the table, "Idea"
 
-**Below the items table, `/items` counts the items it leaves out, by state.** Each state other than Open and Active that some item holds takes one line, giving the count and the state, as in `45 Realized`. The lines run from the largest count to the smallest. A Suspended item is counted here like any other, which is the treatment a hidden record already takes. A number given to `/items` does not change the counts, since they count the items whose state is not current, not the current items the number leaves out.
+**Below the items table, `/items` counts the items it leaves out, by state.** The counts are one comma-separated sentence, as in `47 Realized, 18 Recorded, 12 Abandoned`. Each state other than Open and Active that some item holds is named once, with its count. The states run from the largest count to the smallest. A Suspended item is counted here like any other, which is the treatment a hidden record already takes. A number given to `/items` does not change the counts, since they count the items whose state is not current, not the current items the number leaves out.
 
 **As the engineer stated it:** At the bottom of the table that prints by "/items", print a summary of how many other of the other iten types there are
+
+**As the engineer stated it:** Print these in a comma-separated sentence
 
 **Each current implementation is one row: its handle, its title, and its state.** Its title is the record's own, as in `Feature — The current command`. It takes no ordinal and no SHA columns, since the list is a summary below the items, not a list of its own.
 
@@ -133,7 +135,7 @@ A list of items takes the ordinal and no SHA columns:
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. In the items table `/items` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
 6. `/items` takes an optional number *n*, as in `/items 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
-7. Below the items table, print one line for each state other than Open and Active that some item holds, giving the count and the state, as in `45 Realized`. Order the lines from the largest count to the smallest. Count Suspended items here too.
+7. Below the items table, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
 8. A number given to `/items` does not change these counts.
 
 ## Keep every column short
@@ -162,8 +164,11 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-06, revised: the command is `/report`, in place of `/current`, a term swap the engineer settled; not re-checked
 - 2026-11-07, revised: the command is `/items`, in place of `/report`, a term swap the engineer settled; not re-checked
 - 2026-11-07, revised: `/items` counts the items it leaves out, by state, below the items table, as points 7 and 8 of the items command; checked: 41 directives, 39 kept, 2 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before, and the heading the no-implementation line sits under, which point 1 of the items command ties to the implementations
+- 2026-11-07, revised: `/items` prints its state counts as one comma-separated sentence, in point 7 of the items command; checked: 31 directives, 30 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before
 
 ## History
+
+Until Sat Nov 7 2026 `/items` printed its state counts one to a line, as in `45 Realized`. The engineer settled that they print as one comma-separated sentence.
 
 Until Sat Nov 7 2026 `/items` printed nothing about the items whose state is not current.
 
@@ -228,3 +233,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 11:08:55 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:04:28 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:30:58 AM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:19:47 AM PT
