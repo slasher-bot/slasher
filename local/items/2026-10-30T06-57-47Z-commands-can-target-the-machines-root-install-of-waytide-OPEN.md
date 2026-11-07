@@ -2,6 +2,7 @@
 
 - **State:** Open
 - **Tags:** [idea]
+- **Priority:** 1
 
 **One Waytide install on a machine is its root install, and commands can be directed at it from within any project.** Two forms are named:
 
@@ -50,3 +51,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 2:01:36 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 2:04:15 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 2:06:11 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:43:49 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 12:53:58 PM PT
