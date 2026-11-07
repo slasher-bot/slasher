@@ -1,6 +1,6 @@
 # An item's state commands are typed without the /item prefix
 
-- **State:** Open
+- **State:** Active
 - **Tags:** [idea]
 
 **The `/item` subcommands that change an item's state would become root commands of their own.** `/item start` would be typed `/start`, and likewise `/realize`, `/done`, `/defer`, `/suspend`, `/supersede`, `/abandon`, `/obsolete`, and `/reopen`. Each would take the item it acts on, as its `/item` form does.
@@ -25,3 +25,4 @@ Then: "Actually, they should be aliases"
 
 Authored by Scott Bellware on Fri Nov 6 2026 at 12:38:28 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:39:18 AM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:45:38 AM PT
