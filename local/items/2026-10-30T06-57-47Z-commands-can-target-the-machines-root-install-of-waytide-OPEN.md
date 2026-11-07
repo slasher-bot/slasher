@@ -26,6 +26,10 @@
 
 **Amended 2026-11-05:** the system project might be hierarchical. A system project would sit at the level of a directory holding several other projects, and serve those beneath it. **Not yet settled:** whether it is hierarchical, how a project finds its system project where there are several, the facility's form, and whether the `/root` prefix and the `/package` subcommand named above still stand.
 
+- **2026-11-07** — A project has one base project. The base project is in a directory beside the project's own, and a Slasher configuration file in their shared parent directory names it. This replaces the 2026-11-05 resolution that base projects follow the file system's hierarchy and that there can be many.
+- **2026-11-07** — A machine has one system project. A configuration under `~/.config/slasher` names its location, and the location can be anywhere. The system project is not hierarchical, and nothing resolves it through the file system. This answers the 2026-11-05 amendment's question of whether the system project is hierarchical.
+- **2026-11-07** — The system project has a `local/` directory. It holds the engineer's most general content, which belongs to no particular project.
+
 ## History
 
 Until Sat Nov 7 2026 the item was titled "Commands can target the machine's root install of Waytide". The engineer retitled it "Base Slasher project and System Slasher project".
@@ -37,6 +41,14 @@ On 2026-11-05: "Update to that idea: It should be called the "system" project. I
 Later on 2026-11-05: "Actually, it should be "root", not "system""
 
 Later still on 2026-11-05: "Actually, it should be "base" rather than "root""
+
+On 2026-11-07, as notes on the item:
+
+"A project has a single base project. It's in a peer directory of the current project. It's specified by a slasher config file in the parent directory."
+
+"A system has a single system project. It's location is specified in .config/slasher. The system project is specified arbitrarily. There's no hierarchical resolution."
+
+"The system project also has a local/ directory where the user's most general content is held - content that is not part of any particular project"
 
 Also on 2026-11-05: "For the base project, an item or log entry, hournal, etc should be able to be added to the base project"
 
@@ -52,3 +64,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 2:04:15 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 2:06:11 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:43:49 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:53:58 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 1:04:45 PM PT
