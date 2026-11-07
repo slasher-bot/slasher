@@ -147,3 +147,12 @@ if [ -n "$slasher" ]; then
 fi
 
 printf '%s\n' "$line"
+
+# The second line names the implementation under way. It is absent
+# where current-implementation.sh prints nothing.
+if [ -n "$system" ] && [ -x "$system/foundation/current-implementation.sh" ]; then
+  implementation=$("$system/foundation/current-implementation.sh" 2>/dev/null)
+  if [ -n "$implementation" ]; then
+    printf '%s\n' "$implementation"
+  fi
+fi
