@@ -56,4 +56,44 @@ installed_implementation=$(cd "$installed" && slasher/system/foundation/current-
 
 [ "$installed_implementation" = "$control_branch" ] || fail "(unnamed)" "found:" "$installed_implementation"
 
+# ----------------------------------------------------------------------------
+
+several=$(mktemp -d)
+trap 'rm -rf "$project" "$installed" "$several"' EXIT
+mkdir -p "$several/system/foundation" "$several/local/implementations"
+cp system/foundation/current-implementation.sh "$several/system/foundation/"
+
+# The receipt record is the older of the two, and its branch has the later commit.
+cat > "$several/local/implementations/2026-01-01T00-00-00Z-some-receipt-ACTIVE.md" <<'RECORD'
+# Feature — Some receipt
+
+- **State:** Active
+- **Implementation branch:** `feature/receipt`
+RECORD
+
+cat > "$several/local/implementations/2026-01-02T00-00-00Z-some-cart-ACTIVE.md" <<'RECORD'
+# Feature — Some cart
+
+- **State:** Active
+- **Implementation branch:** `feature/cart`
+RECORD
+
+commit() {
+  GIT_AUTHOR_DATE="$1" GIT_COMMITTER_DATE="$1" git -C "$several" -c user.name="some name" -c user.email="some-email" commit -q --allow-empty -m "some commit"
+}
+
+git -C "$several" init -q -b master
+commit "2026-01-01T00:00:00Z"
+git -C "$several" switch -q -c feature/receipt
+commit "2026-01-04T00:00:00Z"
+git -C "$several" switch -q -c feature/cart master
+commit "2026-01-03T00:00:00Z"
+git -C "$several" switch -q master
+
+control_recent_branch="feature/receipt"
+
+several_implementation=$(cd "$several" && system/foundation/current-implementation.sh)
+
+[ "$several_implementation" = "$control_recent_branch" ] || fail "(unnamed)" "found:" "$several_implementation"
+
 echo "0 failed, 0 aborted"
