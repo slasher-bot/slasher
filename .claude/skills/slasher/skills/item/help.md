@@ -7,6 +7,7 @@ ITEMS
   /item <kind>                     An alias of /item new <kind>, where the
                                    kind is not also a subcommand of /item
   /item idea, /idea                Create an item tagged [idea]
+  /item improvement, /improvement  Create an item tagged [improvement]
   /item work, /work, /work-item    Create an item tagged [work]
   /item plan, /plan                Create an item tagged [plan]
   /item design, /design            Create an item tagged [design]
