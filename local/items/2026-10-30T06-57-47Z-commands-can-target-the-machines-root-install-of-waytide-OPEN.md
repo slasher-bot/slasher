@@ -1,4 +1,4 @@
-# Commands can target the machine's root install of Waytide
+# Base Slasher project and System Slasher project
 
 - **State:** Open
 - **Tags:** [idea]
@@ -27,6 +27,8 @@
 
 ## History
 
+Until Sat Nov 7 2026 the item was titled "Commands can target the machine's root install of Waytide". The engineer retitled it "Base Slasher project and System Slasher project".
+
 As the engineer first stated it: "Idea: a “root” command (ie: “/root”) that allows commands to target the system's root install of waytide. Or, a command in packages that sets a consuming project in the registry to be the system-level install of waytide"
 
 On 2026-11-05: "Update to that idea: It should be called the "system" project. It's use is to have a kind of catch-all project that's for general purpose work, rather than special-purpose local project stuff. The feature needs a facility to set the system project, and a given project can override what it's system project is. It might be hierarchical, as well, so a system project is at the level of a directory containing numerous other projects."
@@ -47,3 +49,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 1:58:46 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 2:01:36 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 2:04:15 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 2:06:11 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 12:43:49 PM PT
