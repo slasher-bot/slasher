@@ -21,6 +21,7 @@
 **The kinds in common use, and what each holds:**
 
 - **`[idea]`** — a thought about what the work could be, proposed and not yet settled.
+- **`[improvement]`** — a proposed change to something that already exists, not yet settled. An idea proposes something new. An improvement concludes Realized when the change exists.
 - **`[design]`** — settled direction, recorded as dated **Settled** resolutions.
 - **`[plan]`** — a sequence of work, with checkbox tasks stating behavior and no code.
 - **`[aspiration]`** — an outcome hoped for, written only where an aspiration was asked for.
@@ -136,7 +137,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 19. Tags are the ordinary square-bracket tags every working-state artifact takes (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 20. `[observation]` and `[work]` mean what their rules say: the observations rule, and the work-item section below.
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
-22. `[idea]` is a thought proposed and not yet settled. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
+22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
@@ -194,8 +195,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-10-30, revised: Lapsed is renamed Obsolete, and a work item may take it; checked: 56 directives, 56 kept, 0 less precise, 0 lost
 - 2026-11-02, revised: each kind in common use is described, and any kind is created by its name; checked: 62 directives, 60 kept, 2 less precise, 0 lost, 1 repair; re-checked: 62 directives, 62 kept, 0 less precise, 0 lost
 - 2026-11-06, revised: a concluding state the engineer did not name is put to the engineer through the selection interface; checked: 103 directives, 100 kept, 2 less precise, 1 lost, 1 repair; re-checked: 103 directives, 101 kept, 2 less precise, 0 lost. Directives 24 and 70, the problem and mistake contrast and the description of Recorded, are less precise in text this revision did not change, and are left as they are
+- 2026-11-07, revised: `[improvement]` is described, as a proposed change to something that already exists; checked: 80 directives, 74 kept, 6 less precise, 0 lost, 1 repair; re-checked: 80 directives, 76 kept, 4 less precise, 0 lost. Directives 11, 19, 20, and 60, on the idea, the problem, the mistake, and Recorded, are less precise in text this revision did not change, and are left as they are
 
 ## History
+
+Until Sat Nov 7 2026 this rule described no `[improvement]` kind. A proposed change to something that already exists was written as an idea. The engineer settled that it is an improvement, and that ideas already written keep their tag.
 
 Until Mon Nov 2 2026 this rule named `[design]`, `[plan]`, and `[aspiration]` as examples, and said nothing of what a kind holds or of `[goal]`, `[problem]`, and `[mistake]`. The engineer settled that each kind in common use is described, and that any kind is created by its name.
 
@@ -277,3 +281,4 @@ Changed by Scott Bellware on Mon Nov 2 2026 at 6:49:58 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:45:17 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:30:03 AM PT
