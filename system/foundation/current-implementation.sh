@@ -1,6 +1,6 @@
 #!/bin/sh
-# Print the implementation branch of the current implementation. Where more than
-# one is current, print the one most recently acted upon.
+# Print the branch of the current implementation, or of its phase under way. Where
+# more than one is current, print the one most recently acted upon.
 #
 # Usage:
 #
@@ -21,12 +21,19 @@ for record in "$local"/implementations/*-ACTIVE.md "$local"/implementations/*-SU
   branch=$(sed -n 's/^- \*\*Implementation branch:\*\* `\(.*\)`$/\1/p' "$record")
   [ -n "$branch" ] || continue
 
-  # Its branch's latest commit is when the implementation was last acted upon.
-  time=$(git log -1 --format=%ct "$branch" -- 2>/dev/null)
+  # The implementation's branch and its phases' branches. The one with the
+  # latest commit is where it was last acted upon.
+  latest=$(git for-each-ref --sort=-committerdate \
+    --format='%(committerdate:unix) %(refname:short)' \
+    "refs/heads/$branch" "refs/heads/$branch.*" 2>/dev/null | head -1)
+
+  time=${latest%% *}
   time=${time:-0}
+  shown=${latest#* }
+  shown=${shown:-$branch}
 
   if [ "$time" -gt "$recent_time" ]; then
-    recent=$branch
+    recent=$shown
     recent_time=$time
   fi
 done
