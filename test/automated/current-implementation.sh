@@ -34,11 +34,11 @@ RECORD
 
 implementation=$(cd "$project" && system/foundation/current-implementation.sh)
 
-# ----------------------------------------------------------------------------
+# Prints the current implementation's branch --------------------------------
 
-[ "$implementation" = "$control_branch" ] || fail "(unnamed)" "found:" "$implementation"
+[ "$implementation" = "$control_branch" ] || fail "Prints the current implementation's branch" "found:" "$implementation"
 
-# ----------------------------------------------------------------------------
+# Prints the current implementation's branch in an installed project --------
 
 installed=$(mktemp -d)
 trap 'rm -rf "$project" "$installed"' EXIT
@@ -54,9 +54,9 @@ RECORD
 
 installed_implementation=$(cd "$installed" && slasher/system/foundation/current-implementation.sh)
 
-[ "$installed_implementation" = "$control_branch" ] || fail "(unnamed)" "found:" "$installed_implementation"
+[ "$installed_implementation" = "$control_branch" ] || fail "Prints the current implementation's branch in an installed project" "found:" "$installed_implementation"
 
-# ----------------------------------------------------------------------------
+# Prints the branch of the implementation most recently acted upon ----------
 
 several=$(mktemp -d)
 trap 'rm -rf "$project" "$installed" "$several"' EXIT
@@ -94,9 +94,9 @@ control_recent_branch="feature/receipt"
 
 several_implementation=$(cd "$several" && system/foundation/current-implementation.sh)
 
-[ "$several_implementation" = "$control_recent_branch" ] || fail "(unnamed)" "found:" "$several_implementation"
+[ "$several_implementation" = "$control_recent_branch" ] || fail "Prints the branch of the implementation most recently acted upon" "found:" "$several_implementation"
 
-# ----------------------------------------------------------------------------
+# Prints the branch of the phase under way ----------------------------------
 
 phased=$(mktemp -d)
 trap 'rm -rf "$project" "$installed" "$several" "$phased"' EXIT
@@ -122,6 +122,6 @@ control_phase_branch="feature/receipt.tax-line"
 
 phased_implementation=$(cd "$phased" && system/foundation/current-implementation.sh)
 
-[ "$phased_implementation" = "$control_phase_branch" ] || fail "(unnamed)" "found:" "$phased_implementation"
+[ "$phased_implementation" = "$control_phase_branch" ] || fail "Prints the branch of the phase under way" "found:" "$phased_implementation"
 
 echo "0 failed, 0 aborted"

@@ -32,14 +32,14 @@ RECORD
 
 status_line=$(cd "$project" && system/foundation/statusline.sh < /dev/null)
 
-# ----------------------------------------------------------------------------
+# Prints the current implementation on a second line ------------------------
 
 second_line=$(printf '%s\n' "$status_line" | sed -n 2p)
 control_implementation=$(cd "$project" && system/foundation/current-implementation.sh)
 
-[ "$second_line" = "$control_implementation" ] || fail "(unnamed)" "found:" "$status_line"
+[ "$second_line" = "$control_implementation" ] || fail "Prints the current implementation on a second line" "found:" "$status_line"
 
-# ----------------------------------------------------------------------------
+# Prints no second line where no implementation is current ------------------
 
 idle=$(mktemp -d)
 mkdir -p "$idle/system/foundation" "$idle/local/implementations"
@@ -56,6 +56,6 @@ idle_status_line=$(cd "$idle" && system/foundation/statusline.sh < /dev/null)
 
 line_count=$(printf '%s\n' "$idle_status_line" | wc -l | tr -d ' ')
 
-[ "$line_count" = 1 ] || fail "(unnamed)" "found:" "$idle_status_line"
+[ "$line_count" = 1 ] || fail "Prints no second line where no implementation is current" "found:" "$idle_status_line"
 
 echo "0 failed, 0 aborted"
