@@ -32,6 +32,8 @@
 - **2026-11-07, later** — From within the current project, the base project is addressed with `/projects -base <instruction>`, and the system project with `/projects -system <instruction>`. Other projects are addressed through the registry. This answers which form addresses them and how they sit beside `/projects`. The `/root` prefix and the `/package` subcommand named above are not the form.
 - **2026-11-07, later still** — Another project in the registry is addressed by its name in the registry, as in `/projects <project-name> <instruction>`.
 
+**Amended 2026-11-07:** there may need to be project registries at more than one level, not only the one registry under `~/.config`. An example is a large open source project made of many repositories, with a root project above them. Working inside that project's directory tree, the engineer may want to address its repositories through a registry of that project's own, rather than list every project in the one registry for the machine. **Not yet settled:** whether there are registries at more than one level, where such a registry is kept, and how a project's name is resolved where more than one registry applies.
+
 ## History
 
 Until Sat Nov 7 2026 the item was titled "Commands can target the machine's root install of Waytide". The engineer retitled it "Base Slasher project and System Slasher project".
@@ -56,6 +58,8 @@ Later on 2026-11-07, as a note on the item: "From within the current project, th
 
 Later still on 2026-11-07, as a note on the item: "Other projects can be addressed via the registry, eg: "/projects <project-name> <instruction>""
 
+Later again on 2026-11-07, as a note on the item: "There may need to be project registries at multiple levels. For example: the root project of a larger open source project with many individual repos. The user may way to address those projects when working within that filesystem namespace, rather than put all registered projects in the flat registry file in .config"
+
 Also on 2026-11-05: "For the base project, an item or log entry, hournal, etc should be able to be added to the base project"
 
 Also on 2026-11-05: "There will also be a "system" project that is a single project on a system. There can be only one of them, whereas there can be many base projects based on file system hierarchy"
@@ -73,3 +77,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 12:53:58 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:04:45 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:09:49 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:10:50 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 1:14:10 PM PT
