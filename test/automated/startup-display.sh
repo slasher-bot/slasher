@@ -24,7 +24,7 @@ control_start_text() {
 
 Slasher: Humanity in the Loop AI
 
-The engineer decides. The agent generates. Humanity rules.
+The engineer decides. The agent generates.
 
 Copyright © 2026 Scott Bellware
 Eventide Common Interest License

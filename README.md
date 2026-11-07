@@ -2,7 +2,7 @@
 
 # Humanity in the Loop AI
 
-The engineer decides. The agent generates. Humanity rules.
+The engineer decides. The agent generates.
 
 Where there is ambiguity, the agent gives the engineer options, including the option to take over.
 
