@@ -17,7 +17,7 @@ fail() {
 # Controls -------------------------------------------------------------------
 
 project=$(mktemp -d)
-trap 'rm -rf "$project"' EXIT
+trap 'rm -rf "$project" "$idle"' EXIT
 mkdir -p "$project/system/foundation" "$project/local/implementations"
 cp system/foundation/statusline.sh system/foundation/current-implementation.sh "$project/system/foundation/"
 
@@ -38,5 +38,24 @@ second_line=$(printf '%s\n' "$status_line" | sed -n 2p)
 control_implementation=$(cd "$project" && system/foundation/current-implementation.sh)
 
 [ "$second_line" = "$control_implementation" ] || fail "(unnamed)" "found:" "$status_line"
+
+# ----------------------------------------------------------------------------
+
+idle=$(mktemp -d)
+mkdir -p "$idle/system/foundation" "$idle/local/implementations"
+cp system/foundation/statusline.sh system/foundation/current-implementation.sh "$idle/system/foundation/"
+
+cat > "$idle/local/implementations/2026-01-01T00-00-00Z-some-subject-COMPLETED.md" <<'RECORD'
+# Feature — Some intent
+
+- **State:** Completed
+- **Implementation branch:** `feature/some-subject`
+RECORD
+
+idle_status_line=$(cd "$idle" && system/foundation/statusline.sh < /dev/null)
+
+line_count=$(printf '%s\n' "$idle_status_line" | wc -l | tr -d ' ')
+
+[ "$line_count" = 1 ] || fail "(unnamed)" "found:" "$idle_status_line"
 
 echo "0 failed, 0 aborted"
