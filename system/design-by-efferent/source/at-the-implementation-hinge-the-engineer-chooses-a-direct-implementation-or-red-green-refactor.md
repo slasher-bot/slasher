@@ -9,6 +9,8 @@ At the **implementation hinge** — the fourth of the five — the agent puts tw
 
 **The two options carry these labels, word for word, in this order:** *One batch, increased rework risk (agent generates full implementation)*, then *Controlled and calibrated increments (Red, Green, Refactor)*.
 
+**Each option's description opens with the agent's estimate of its rework risk**, on a line of its own, in these words with the agent's own figure: *Rework risk: 30% (how likely it is that you will have to redo what this produces.)* The figure is the agent's estimate for this unit, made when it asks. It is an estimate, not a calculation: nothing yet records whether an accepted implementation was later redone. The labels stay as fixed.
+
 The two answer the hinge's question. The hinge asks *how does this implementation come about*. These are two ways of arriving at the same place, one directly and one through the cycle. That is what makes the second a genuine **candidate** rather than a sequencing step. An engineer may prefer it, and preferring it is a design judgment about this unit. It is not a procedure applied to every one.
 
 **This is where the decision is made, and the only place.** A red is not offered at a separate hinge preceding the implementation. One gate asks, so an engineer who declines is not asked again by another mechanism.
@@ -85,6 +87,7 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 ## The labels
 
 1. Label the first option *One batch, increased rework risk (agent generates full implementation)*, and the second *Controlled and calibrated increments (Red, Green, Refactor)*, word for word, in that order.
+2. Open each option's description with the agent's own estimate, as *Rework risk: 30% (how likely it is that you will have to redo what this produces.)*. The labels stay as fixed.
 
 ## Compression
 
@@ -93,8 +96,11 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 - 2026-10-28, revised: Why points removed, solubility 58 → 59, clarity 0.81 → 0.81; checked: 17 directives, 17 kept, 0 less precise, 0 lost
 - 2026-11-08, revised: the first candidate is a full implementation, not a working implementation, a term swap the engineer settled; not re-checked
 - 2026-11-08, revised: the two options' labels are stated, at the engineer's direction; not re-checked
+- 2026-11-08, revised: each option's description opens with the agent's rework risk estimate, at the engineer's direction; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the options showed no rework risk estimate.
 
 Until Sun Nov 8 2026 the rule fixed no label for either option.
 
@@ -140,3 +146,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:04:31 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:08:26 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 2:15:41 PM PT
