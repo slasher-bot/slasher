@@ -422,7 +422,20 @@ Source: system/foundation/source/present-every-prompt-to-the-engineer-through-th
 
 Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-have-loaded.md
 
-**When the session-start read concludes, print the command domain table below, word for word.** Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
+**When the session-start read concludes, print the startup table and the sentence below it, word for word.** Print them in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
+
+| Command | Description |
+|---|---|
+| `/slasher help, /help` | Print the help of every Slasher command |
+| `/?` | Print this table |
+| `/.` | An alias of /recent |
+| `/'` | An alias of /items |
+
+The other commands are `/unattended`, `/item`, `/items`, `/feature`, `/experiment`, `/recent`, `/log`, `/journal`, `/brainstorm`, and `/test`.
+
+**The startup table is the full table abridged.** It keeps the full table's first four rows as they are. The sentence below it names, in the full table's order, every command whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
+
+**The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
 
 | Command | Description |
 |---|---|
@@ -443,7 +456,7 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 
 **Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/'`, `/unattended`, `/items`, and `/recent` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items` and `/recent` are root commands of the PROCESS domain. Each has a row of its own, `/items` below the `/item` row and `/recent` below the `/experiment` row, and its description is the one its line in the help gives. A description that opens with *This command* or *These commands* in the help drops those words in the table, and opens with its verb. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, and `/'` are the only aliases with rows of their own. `/help`, an alias of `/slasher help`, shares the first row.
 
-**After the table, run `/items 10`.** In the same response, below the table, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
+**After the startup table and its sentence, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
 **The second row names `/?`, the third `/.`, the fourth `/'`, and the fifth `/unattended`.** `/?` is an alias of `/command-table`, `/.` is an alias of `/recent`, `/'` is an alias of `/items`, and `/unattended` is a root command of the PROCESS domain. They stand below `/slasher help`, apart from the `/items` and `/recent` rows.
 
@@ -451,15 +464,15 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 
 **The first row names `/slasher help`, which prints the help of every Slasher command, and its alias `/help`.** It names no command domain.
 
-**`/command-table` prints the table too.** It prints the table word for word, and nothing else: no `/items 10` and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain. It has no row, and the help header names it. `/commands` and `/?` are aliases of `/command-table`, and the help header names them too. `/commands` has no row either, and `/?` has the row that prints the table.
+**`/command-table` prints the full table.** It prints the full table word for word, and nothing else: no startup table, no sentence, no `/items 10`, and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain. It has no row, and the help header names it. `/commands` and `/?` are aliases of `/command-table`, and the help header names them too. `/commands` has no row either, and `/?` has the row that prints the table.
 
 **The agent prints the table, not the harness.** The harness renders its display as plain text, and the table needs markdown. That is the reason the package set stanza is the agent's too.
 
 **Keep the table in line with the help.** When a domain's heading, its help command, or its description changes in the help text, change this table in the same commit.
 
-**Why:** the engineer sees what the commands are for at the moment they can start using them. The table gives one line for each domain but PHASE, PROCESS, PROJECTS, RELEASE, PACKAGES, LANGUAGE, and LOAD, so it shows the whole set at a glance, and `/slasher help` gives the detail. The current items and implementations show the engineer where the work stands before they make the first request.
+**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/?` prints the full table, and `/slasher help` gives the detail. The full table gives one line for each domain but PHASE, PROCESS, PROJECTS, RELEASE, PACKAGES, LANGUAGE, and LOAD, so it shows the whole set at a glance. The current items and implementations show the engineer where the work stands before they make the first request.
 
-**How to apply:** at the end of the session-start read, print the table as it stands here, once, run `/items 10` below it, and then turn to the engineer's request or wait for one.
+**How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 # The log holds one file per entry, with a one-line title
 
