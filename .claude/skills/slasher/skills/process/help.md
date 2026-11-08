@@ -13,6 +13,7 @@ PROCESS
   />                               An alias of /next
   /next?                           The next step in the current multi-step
                                    process
+  />?                              An alias of /next?
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
