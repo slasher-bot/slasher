@@ -1,0 +1,40 @@
+# Loop record — Base Slasher project and System Slasher project
+
+The feature lets a project address its base project, the machine's system project, and any project in the registry, by `/projects`. The feature record is `2026-11-08T03-15-40Z-base-and-system-projects`, and the item it builds is `2026-10-30T06-57-47Z-commands-can-target-the-machines-root-install-of-waytide`.
+
+**Mode:** attended.
+
+## Design, before the loop
+
+- **Decision / chat:** the agent proposed one script, `resolve-project.sh`, that prints a target project's root, with `/projects` carrying out the instruction against that root. The engineer selected that a project's name is its directory name, that `slasher.toml` in the shared parent directory names the base project with `base-project = "…"`, that `~/.config/slasher/system-project.toml` names the system project with `path = "…"`, and that the system project is a full Slasher project.
+
+## Outcome 1 — the base project is resolved
+
+### Cycle 1 — actuation
+
+- **Hinge:** how the base project is resolved, as the `/projects` skill and the test invoke it.
+- **Options:** `cd "$project" && system/foundation/resolve-project.sh -base`; `system/foundation/resolve-project.sh -base "$project"`; `cd "$project" && system/foundation/base-project.sh`.
+- **Decision / chat:** the engineer selected `cd "$project" && system/foundation/resolve-project.sh -base`. The project is the one the command runs in, and the flag mirrors `/projects -base`.
+
+### Cycle 2 — observation
+
+- **Hinge:** how the test compares the printed path with the base project's path.
+- **Options:** `[ "$base" = "$control_base" ]`, an exact comparison; both paths resolved with `pwd -P` before they are compared.
+- **Decision / chat:** the engineer asked for clarification. The agent explained that macOS gives a temporary directory two spellings, `/var/…` and `/private/var/…`, that an exact comparison settles which spelling the script prints, and that the physical comparison accepts either. The agent recommended the exact comparison, since `/projects` uses the printed path as its target. The engineer selected the exact comparison.
+
+### Cycle 3 — controls
+
+- **Hinge:** what the test builds before it runs the script.
+- **Options:** the base project as a bare directory; the base project as a git repository holding `slasher/system/`.
+- **Decision / chat:** the engineer selected the bare directory. Whether the base is a Slasher project is not part of the normal path.
+
+### Cycle 4 — implementation
+
+- **Hinge:** how `resolve-project.sh -base` comes about.
+- **Options:** a working implementation, written directly; red, green, refactor.
+- **Decision / chat:** the engineer selected the working implementation.
+- **Outcome:** `system/foundation/resolve-project.sh` reads `base-project` from `slasher.toml` in the parent of the current directory and prints the sibling's path. `test/automated/resolve-project/base.sh` is verified, and the automated suite is verified: 18 tests. Not yet committed.
+
+---
+
+Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
