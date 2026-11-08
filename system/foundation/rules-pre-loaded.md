@@ -431,7 +431,7 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 | `/., /recent` | Says what was recently done, and what's next. |
 | `/', /items` | Lists the current items, features, and experiments. |
 
-The other commands are `/unattended`, `/item`, `/feature`, `/experiment`, `/items`, `/recent`, `/process`, `/next`, `/>`, `/next?`, `/log`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/clarify`, `/<`, `/load`, and `/command-table`.
+The other commands are `/>`, `/<`, `/unattended`, `/item`, `/feature`, `/experiment`, `/items`, `/recent`, `/process`, `/next`, `/next?`, `/log`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/clarify`, `/load`, and `/command-table`.
 
 **The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
@@ -442,6 +442,8 @@ The other commands are `/unattended`, `/item`, `/feature`, `/experiment`, `/item
 | `/slasher help` | Print the help of every Slasher command |
 | `/?` | What are we doing? |
 | `/.` | An alias of /items |
+| `/>` | An alias of /next |
+| `/<` | An alias of /clarify |
 | `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
@@ -450,7 +452,6 @@ The other commands are `/unattended`, `/item`, `/feature`, `/experiment`, `/item
 | `/recent` | This command says what was recently done, and what's next. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
 | `/next` | Proceed to the next step in the current multi-step process |
-| `/>` | An alias of /next |
 | `/next?` | The next step in the current multi-step process |
 | `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
@@ -461,15 +462,14 @@ The other commands are `/unattended`, `/item`, `/feature`, `/experiment`, `/item
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
-| `/<` | An alias of /clarify |
 | `/load` | This command loads the rules now, without waiting for the first prompt. |
 | `/command-table` | Print this table |
 
-**Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/unattended`, `/items`, `/recent`, `/next`, `/>`, `/next?`, `/clarify`, `/<`, and `/command-table` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, and `/next?` are root commands of the PROCESS domain, and `/clarify` of the LANGUAGE domain. Each has a row of its own: `/items` and `/recent` above the `/process` row, `/next` and `/next?` below it, and `/clarify` below the `/language` row. An alias's row stands below the row of the command it is an alias of. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, `/>`, and `/<` are the only aliases with rows of their own. `/help`, `/'`, `/>?`, and `/commands` have none.
+**Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/unattended`, `/items`, `/recent`, `/next`, `/>`, `/next?`, `/clarify`, `/<`, and `/command-table` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, and `/next?` are root commands of the PROCESS domain, and `/clarify` of the LANGUAGE domain. Each has a row of its own: `/items` and `/recent` above the `/process` row, `/next` and `/next?` below it, and `/clarify` below the `/language` row. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, `/>`, and `/<` are the only aliases with rows of their own. `/help`, `/'`, `/>?`, and `/commands` have none.
 
 **After the startup table and its sentence, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
-**The second row names `/?`, the third `/.`, and the fourth `/unattended`.** `/?` is an alias of `/command-table`, `/.` is an alias of `/recent`, and `/unattended` is a root command of the PROCESS domain. The `/?` and `/.` rows keep the wording the table had before Sat Nov 7 2026, as the engineer selected.
+**The second row names `/?`, the third `/.`, the fourth `/>`, the fifth `/<`, and the sixth `/unattended`.** `/?` is an alias of `/command-table`, `/.` is an alias of `/recent`, `/>` is an alias of `/next`, `/<` is an alias of `/clarify`, and `/unattended` is a root command of the PROCESS domain. The `/?` and `/.` rows keep the wording the table had before Sat Nov 7 2026, as the engineer selected.
 
 **The PHASE domain has no row.** `/slasher help` still gives its help, and so does `/phase help`.
 
