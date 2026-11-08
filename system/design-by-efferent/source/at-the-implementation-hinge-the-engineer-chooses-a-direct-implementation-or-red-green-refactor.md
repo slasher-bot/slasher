@@ -7,6 +7,8 @@ At the **implementation hinge** — the fourth of the five — the agent puts tw
 1. **A full implementation** — the code that satisfies the test, written directly.
 2. **An implementation that lets the test fail**, and then the complete **red, green, refactor** cycle.
 
+**The two options carry these labels, word for word, in this order:** *One batch, increased rework risk (agent generates full implementation)*, then *Controlled and calibrated increments (Red, Green, Refactor)*.
+
 The two answer the hinge's question. The hinge asks *how does this implementation come about*. These are two ways of arriving at the same place, one directly and one through the cycle. That is what makes the second a genuine **candidate** rather than a sequencing step. An engineer may prefer it, and preferring it is a design judgment about this unit. It is not a procedure applied to every one.
 
 **This is where the decision is made, and the only place.** A red is not offered at a separate hinge preceding the implementation. One gate asks, so an engineer who declines is not asked again by another mechanism.
@@ -80,14 +82,21 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 1. The cycle counts as a real second candidate under the present-every-prompt two-option floor.
 2. The cycle is not a substitute for searching for another implementation.
 
+## The labels
+
+1. Label the first option *One batch, increased rework risk (agent generates full implementation)*, and the second *Controlled and calibrated increments (Red, Green, Refactor)*, word for word, in that order.
+
 ## Compression
 
 - 2026-10-24, compressed: compression 0.36, change 0.64, solubility 40 → 62, clarity 0.61 → 0.82, 16 directives, 16 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: How to apply removed, each directive only it carried moved to the section it belongs to, solubility 62 → 58, clarity 0.82 → 0.81; checked: 19 directives, 16 kept, 2 less precise, 1 lost, 4 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 58 → 59, clarity 0.81 → 0.81; checked: 17 directives, 17 kept, 0 less precise, 0 lost
 - 2026-11-08, revised: the first candidate is a full implementation, not a working implementation, a term swap the engineer settled; not re-checked
+- 2026-11-08, revised: the two options' labels are stated, at the engineer's direction; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the rule fixed no label for either option.
 
 Until Sun Nov 8 2026 the first candidate was named a working implementation. The engineer renamed it a full implementation.
 
@@ -130,3 +139,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:04:31 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 2:08:26 PM PT
