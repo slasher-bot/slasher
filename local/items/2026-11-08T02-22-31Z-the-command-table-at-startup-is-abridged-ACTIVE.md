@@ -15,6 +15,8 @@
 
 - **2026-11-07** — In the startup table, the `/'` row reads *Lists the current items, features, and experiments.*, in place of the `/items` row's description. The full table's `/items` row and the help keep their wording. The engineer stated the new wording, and selected that it changes the startup table only.
 
+- **2026-11-07** — In the startup table, the `/.` row names `/., /recent`. As the engineer stated it: "In the short table, replace "/." with "/., /recent""
+
 ## History
 
 As the engineer first stated it, on 2026-11-07: "The command table at startup is abridged"
@@ -27,3 +29,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 6:30:33 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:33:05 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:34:20 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:36:02 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 6:38:03 PM PT

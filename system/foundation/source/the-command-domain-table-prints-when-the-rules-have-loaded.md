@@ -6,12 +6,12 @@
 |---|---|
 | `/slasher help, /help` | Print the help of every Slasher command |
 | `/?` | Print the list of Slasher commands |
-| `/.` | Says what was recently done, and what's next. |
+| `/., /recent` | Says what was recently done, and what's next. |
 | `/'` | Lists the current items, features, and experiments. |
 
 The other commands are `/unattended`, `/item`, `/items`, `/feature`, `/experiment`, `/recent`, `/log`, `/journal`, `/brainstorm`, and `/test`.
 
-**The startup table is the full table abridged.** It keeps the full table's first four rows. The `/slasher help` row stands as it is. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row takes the `/recent` row's description. When that description changes, change the startup table in the same commit. The `/'` row reads *Lists the current items, features, and experiments.*, a shorter form of the `/items` row's description. The sentence below it names, in the full table's order, every command whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
+**The startup table is the full table abridged.** It keeps the full table's first four rows. The `/slasher help` row stands as it is. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the `/recent` row's description. When that description changes, change the startup table in the same commit. The `/'` row reads *Lists the current items, features, and experiments.*, a shorter form of the `/items` row's description. The sentence below it names, in the full table's order, every command whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
 **The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
 
@@ -53,6 +53,8 @@ The other commands are `/unattended`, `/item`, `/items`, `/feature`, `/experimen
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Sat Nov 7 2026 the startup table's `/.` row named only `/.`.
 
 Until Sat Nov 7 2026 the startup table's `/'` row took the `/items` row's description, *Lists the current items, then the current features and experiments.*
 
@@ -167,3 +169,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 6:30:01 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:33:05 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:34:20 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:36:02 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 6:38:03 PM PT
