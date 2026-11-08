@@ -3,6 +3,7 @@
 #
 #   slasher/system/foundation/resolve-project.sh -base
 #   slasher/system/foundation/resolve-project.sh -system
+#   slasher/system/foundation/resolve-project.sh <name>
 #
 # Run from the root of a Slasher project.
 #
@@ -12,6 +13,9 @@
 # -system prints the root of the machine's system project: the path that
 # ~/.config/slasher/system-project.toml records. SLASHER_SYSTEM_PROJECT
 # names another file in its place, so a test can use its own.
+#
+# <name> prints the root of the project in the machine's registry whose
+# directory has that name, as read-consuming-projects.sh lists them.
 
 set -e
 
@@ -31,5 +35,15 @@ case $1 in
 
     sed -n 's/^[[:space:]]*path[[:space:]]*=[[:space:]]*"\([^"]*\)"[[:space:]]*$/\1/p' \
       "$config"
+    ;;
+  *)
+    name=$1
+
+    "$(dirname "$0")/read-consuming-projects.sh" |
+      while IFS= read -r registered; do
+        if [ "$(basename "$registered")" = "$name" ]; then
+          printf '%s\n' "$registered"
+        fi
+      done
     ;;
 esac
