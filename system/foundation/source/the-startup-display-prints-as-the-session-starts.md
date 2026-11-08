@@ -17,7 +17,7 @@ First the title, with the tagline under it:
 ```
 Slasher: Human in the Loop AI
 
-The engineer decides. The agent generates.
+The engineer decides. The agent generates. Humanity rules.
 ```
 
 **The tagline stands under it, and nothing else does.** The tagline is the line the root `README.md` gives under its title. No other subtitle or description is printed under it. What the system is belongs to the `README.md`, which a reader reaches deliberately. This display is read every session by someone who has read it before.
@@ -148,7 +148,7 @@ Then **one blank line**, then the block, which ends the loading part:
 ```
 Slasher: Human in the Loop AI
 
-The engineer decides. The agent generates.
+The engineer decides. The agent generates. Humanity rules.
 ```
 
 14. The title leads. It is the first line of the display, and nothing the agent writes stands ahead of it.
@@ -268,8 +268,11 @@ Slasher is pre-loading its rules...
 - 2026-11-07, revised: the title reads *Slasher: Humanity in the Loop AI*, wording the engineer gave; not re-checked
 - 2026-11-07, revised: the tagline reads *The engineer decides. The agent generates.*, wording the engineer gave; not re-checked
 - 2026-11-07, revised: the title reads *Slasher: Human in the Loop AI*, wording the engineer gave; not re-checked
+- 2026-11-07, revised: the tagline reads *The engineer decides. The agent generates. Humanity rules.* again, wording the engineer gave; not re-checked
 
 ## History
+
+Until Sat Nov 7 2026, for part of that day, the tagline read *The engineer decides. The agent generates.* The engineer restored *Humanity rules.*
 
 Until Sat Nov 7 2026 the title read *Slasher: Humanity in the Loop AI*, and the root `README.md`'s title read *Humanity in the Loop AI*.
 
@@ -375,3 +378,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 11:24:39 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:52:44 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:49:24 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:15:12 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 6:20:24 PM PT
