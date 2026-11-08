@@ -62,6 +62,33 @@ The feature lets a project address its base project, the machine's system projec
 - **Decision / chat:** the engineer selected the working implementation.
 - **Outcome:** `resolve-project.sh -system` reads `path` from the file `SLASHER_SYSTEM_PROJECT` names, or from `~/.config/slasher/system-project.toml`, and prints it. `test/automated/resolve-project/system.sh` is verified, and the automated suite is verified: 19 tests.
 
+## Outcome 3 — a project in the registry is resolved by its name
+
+### Cycle 1 — actuation
+
+- **Hinge:** how a project in the registry is resolved by its name, as the `/projects` skill and the test invoke it.
+- **Options:** `cd "$project" && system/foundation/resolve-project.sh some-checkout`, the bare name; `cd "$project" && system/foundation/resolve-project.sh -name some-checkout`, the name after a flag.
+- **Decision / chat:** the engineer selected the bare name, as `/projects <name>` takes it. An argument that is not `-base` or `-system` is a name.
+
+### Cycle 2 — observation
+
+- **Hinge:** what the test reads about the effect of `resolve-project.sh some-checkout`.
+- **Options:** `[ "$resolved" = "$control_checkout" ]`, the printed path compared exactly; *Not this*, for the engineer to name another.
+- **Decision / chat:** the engineer selected the exact comparison.
+
+### Cycle 3 — controls
+
+- **Hinge:** what registry the test builds before it runs `resolve-project.sh some-checkout`.
+- **Options:** two registered projects, `some-checkout` and `some-other-checkout`; one registered project, `some-checkout`. Each project is a git repository holding `slasher/system/`, which is how `read-consuming-projects.sh` finds a project, and the registry is named by `SLASHER_REGISTRY`.
+- **Decision / chat:** the engineer selected two projects, so the test shows the name picks one project out of several.
+
+### Cycle 4 — implementation
+
+- **Hinge:** how resolving a project by its name comes about.
+- **Options:** *One batch, increased rework risk (agent generates full implementation)*, rework risk 15%; *Controlled and calibrated increments (Red, Green, Refactor)*, rework risk 10%.
+- **Decision / chat:** the engineer selected one batch.
+- **Outcome:** any argument other than `-base` or `-system` is a name. `resolve-project.sh` runs `read-consuming-projects.sh` beside it and prints each registered project whose directory has that name. `test/automated/resolve-project/name.sh` is verified, and the automated suite is verified: 20 tests.
+
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
