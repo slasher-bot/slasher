@@ -1276,7 +1276,7 @@ Trigger: When a session starts, or the engineer types its first prompt, or when 
 13. First the title, with the tagline under it:
 
 ```
-Slasher: Humanity in the Loop AI
+Slasher: Human in the Loop AI
 
 The engineer decides. The agent generates.
 ```
