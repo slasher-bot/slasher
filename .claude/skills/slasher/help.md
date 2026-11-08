@@ -120,6 +120,7 @@ PROCESS
 
   /next                            Proceed to the next step in the current
                                    multi-step process
+  />                               An alias of /next
   /next?                           The next step in the current multi-step
                                    process
 
