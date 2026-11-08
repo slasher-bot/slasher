@@ -4,7 +4,7 @@
 
 At the **implementation hinge** — the fourth of the five — the agent puts two candidates to the engineer:
 
-1. **A working implementation** — the code that satisfies the test, written directly.
+1. **A full implementation** — the code that satisfies the test, written directly.
 2. **An implementation that lets the test fail**, and then the complete **red, green, refactor** cycle.
 
 The two answer the hinge's question. The hinge asks *how does this implementation come about*. These are two ways of arriving at the same place, one directly and one through the cycle. That is what makes the second a genuine **candidate** rather than a sequencing step. An engineer may prefer it, and preferring it is a design judgment about this unit. It is not a procedure applied to every one.
@@ -31,12 +31,12 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 
 **Why:** whether to drive a unit's implementation through a failing test is a judgment about that unit. It turns on how confident the design is, whether the test's discrimination is in doubt, and whether the shape wants working out under a red. It is subtle, in that it cannot be read off the code, and load-bearing, in that the implementation follows from it. That is a hinge's definition, and it belongs at the hinge where the implementation is decided rather than as a procedure attached to every one. Offering it as one of two candidates puts the engineer in the position the gates exist to create. They compare real alternatives rather than ratifying a single proposal.
 
-**How to apply:** at the implementation hinge for a unit's **first** implementation, offer the two candidates through the selection UI. They are the working implementation, and the red/green/refactor cycle. Where the cycle is chosen, write the red only if its cause reaches no stable test. Run the suite, then green, then refactor. Do not offer the cycle when covering behavior that already exists. Do not present a failing implementation as an option merely to reach the two-option floor.
+**How to apply:** at the implementation hinge for a unit's **first** implementation, offer the two candidates through the selection UI. They are the full implementation, and the red/green/refactor cycle. Where the cycle is chosen, write the red only if its cause reaches no stable test. Run the suite, then green, then refactor. Do not offer the cycle when covering behavior that already exists. Do not present a failing implementation as an option merely to reach the two-option floor.
 
 ## Compressed
 
 1. At the implementation hinge, the fourth of the five, put two candidates to the engineer through the selection UI.
-2. The first candidate is **a working implementation**: code that satisfies the test, written directly.
+2. The first candidate is **a full implementation**: code that satisfies the test, written directly.
 3. The second candidate is **an implementation that lets the test fail**, followed by the complete **red, green, refactor** cycle.
 4. Both candidates answer the hinge's question: *how does this implementation come about*.
 5. Treat the cycle as a design judgment about this unit, not a procedure applied to every unit.
@@ -85,8 +85,11 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 - 2026-10-24, compressed: compression 0.36, change 0.64, solubility 40 → 62, clarity 0.61 → 0.82, 16 directives, 16 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: How to apply removed, each directive only it carried moved to the section it belongs to, solubility 62 → 58, clarity 0.82 → 0.81; checked: 19 directives, 16 kept, 2 less precise, 1 lost, 4 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 58 → 59, clarity 0.81 → 0.81; checked: 17 directives, 17 kept, 0 less precise, 0 lost
+- 2026-11-08, revised: the first candidate is a full implementation, not a working implementation, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the first candidate was named a working implementation. The engineer renamed it a full implementation.
 
 Until Sun Oct 25 2026 this rule was named the-implementation-hinge-offers-the-red-green-refactor-cycle and titled "The implementation hinge offers two candidates: the working implementation, or the red/green/refactor cycle".
 
@@ -126,3 +129,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 6:28:05 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 2:04:31 PM PT

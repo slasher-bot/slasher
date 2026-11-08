@@ -89,7 +89,7 @@ Source: system/design-by-efferent/source/at-the-implementation-hinge-the-enginee
 Trigger: When reaching the implementation hinge of an outcome
 
 1. At the implementation hinge, the fourth of the five, put two candidates to the engineer through the selection UI.
-2. The first candidate is **a working implementation**: code that satisfies the test, written directly.
+2. The first candidate is **a full implementation**: code that satisfies the test, written directly.
 3. The second candidate is **an implementation that lets the test fail**, followed by the complete **red, green, refactor** cycle.
 4. Both candidates answer the hinge's question: *how does this implementation come about*.
 5. Treat the cycle as a design judgment about this unit, not a procedure applied to every unit.
@@ -399,7 +399,7 @@ Trigger: When starting the DBE loop on an outcome, before the first hinge
 7. The observation hinge asks which effect the test reads, and how it reads it. It does not assume the return.
 8. **Controls** are the example constants the test is built from. That covers control form, nested vs. top-level, inner constants, Array vs. Hash seeding, and literals vs. controls.
 9. **Implementation** is the code that satisfies the test.
-10. The implementation hinge always has two candidates. One is the working implementation written directly. The other is the red/green/refactor cycle (see the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule).
+10. The implementation hinge always has two candidates. One is the full implementation written directly. The other is the red/green/refactor cycle (see the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule).
 11. **Naming** is the outcome `context` that names what the observation establishes (the test's name).
 12. The first three hinges concern the test (turn one). The fourth is the implementation (turn two).
 13. Assemble and show the turn-one test file only after the actuation, observation, and controls are accepted, per the first-turn rule.
