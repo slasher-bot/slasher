@@ -136,6 +136,7 @@ Trigger: When reaching the implementation hinge of an outcome
 ## The labels
 
 1. Label the first option *One batch, increased rework risk (agent generates full implementation)*, and the second *Controlled and calibrated increments (Red, Green, Refactor)*, word for word, in that order.
+2. Open each option's description with the agent's own estimate, as *Rework risk: 30% (how likely it is that you will have to redo what this produces.)*. The labels stay as fixed.
 
 # Attended or unattended is chosen when the work is started
 
