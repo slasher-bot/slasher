@@ -9,7 +9,8 @@ PROCESS
   /.                               An alias of /recent
 
   /next                            Proceed to the next step in the current
-                                   multi-step process
+                                   multi-step process, or resume interrupted
+                                   work
   />                               An alias of /next
   /next?                           The next step in the current multi-step
                                    process
