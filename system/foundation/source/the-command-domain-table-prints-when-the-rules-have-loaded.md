@@ -30,7 +30,7 @@ The other commands are `/>`, `/<`, `/#`, `/item`, `/feature`, `/experiment`, `/i
 | `/recent` | This command says what was recently done, and what's next. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
 | `/next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
-| `/next?` | The next step in the current multi-step process |
+| `/next?` | The next step in the current multi-step process, or the step that has been interrupted |
 | `/clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
 | `/estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
@@ -66,6 +66,8 @@ The other commands are `/>`, `/<`, `/#`, `/item`, `/feature`, `/experiment`, `/i
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Sun Nov 8 2026 the `/next?` row read *The next step in the current multi-step process*.
 
 Until Sun Nov 8 2026 the `/next` row read *Proceed to the next step in the current multi-step process*.
 
@@ -209,3 +211,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 2:00:18 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:01:25 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:30:59 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:33:46 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 2:34:17 PM PT

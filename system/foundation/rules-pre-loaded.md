@@ -452,7 +452,7 @@ The other commands are `/>`, `/<`, `/#`, `/item`, `/feature`, `/experiment`, `/i
 | `/recent` | This command says what was recently done, and what's next. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
 | `/next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
-| `/next?` | The next step in the current multi-step process |
+| `/next?` | The next step in the current multi-step process, or the step that has been interrupted |
 | `/clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
 | `/estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |

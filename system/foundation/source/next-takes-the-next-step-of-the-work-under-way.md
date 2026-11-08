@@ -8,7 +8,7 @@
 
 **The work under way is any work with steps still to take.** A plan's unchecked tasks, an implementation's phases, the design hinges of an outcome, a list of steps the agent gave, a procedure part done: each is one. Work that was interrupted, as by other requests, is still work under way, and `/next` resumes it at the step where it stopped. The next step is the first one not yet taken.
 
-**`/next?` names the next step and does not take it.** It says what the step is and what it would do, in a sentence or two.
+**`/next?` names the next step and does not take it.** Where the work was interrupted, that is the step where it stopped. It says what the step is and what it would do, in a sentence or two.
 
 **`/next` takes the next step, as the engineer saying proceed would.** It does what that step involves and nothing beyond it, and then stops, as it would after any step.
 
@@ -24,7 +24,7 @@
 
 1. `/next?` asks what the next step is, as the engineer asking *What's next?* would. `/next` takes it, as the engineer saying *proceed* would.
 2. The work under way is any work with steps still to take: a plan's tasks, an implementation's phases, an outcome's design hinges, a list of steps the agent gave, a procedure part done. Interrupted work is still under way, and `/next` resumes it where it stopped. The next step is the first not yet taken.
-3. On `/next?`, name the next step and what it would do, in a sentence or two, and do not take it.
+3. On `/next?`, name the next step, or the step where interrupted work stopped, and what it would do, in a sentence or two, and do not take it.
 4. On `/next`, take the next step and nothing beyond it, then stop.
 5. Follow the work the conversation is on. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
 6. `/next` does not stand in for a decision a rule leaves to the engineer, such as affirming an experiment, committing on `master`, or deleting a branch. It brings the step to that decision, and asks it as the step's rule says.
@@ -35,8 +35,11 @@
 - 2026-11-05, revised: the commands are `/next-work` and `/next-work?`, a term swap the engineer settled; not re-checked
 - 2026-11-05, revised: the commands are `/next` and `/next?` again, a term swap the engineer settled; not re-checked
 - 2026-11-08, revised: interrupted work is resumed by `/next`, at the engineer's direction; not re-checked
+- 2026-11-08, revised: `/next?` names the step where interrupted work stopped, at the engineer's direction; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the rule did not say that `/next?` names the step where interrupted work stopped.
 
 Until Sun Nov 8 2026 the rule did not say that `/next` resumes interrupted work.
 
@@ -54,3 +57,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 1:03:01 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 6:09:56 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:57:33 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:33:46 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 2:34:17 PM PT
