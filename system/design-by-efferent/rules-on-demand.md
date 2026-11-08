@@ -133,6 +133,10 @@ Trigger: When reaching the implementation hinge of an outcome
 1. The cycle counts as a real second candidate under the present-every-prompt two-option floor.
 2. The cycle is not a substitute for searching for another implementation.
 
+## The labels
+
+1. Label the first option *One batch, increased rework risk (agent generates full implementation)*, and the second *Controlled and calibrated increments (Red, Green, Refactor)*, word for word, in that order.
+
 # Attended or unattended is chosen when the work is started
 
 Source: system/design-by-efferent/source/attended-or-unattended-is-chosen-when-the-work-is-started.md
