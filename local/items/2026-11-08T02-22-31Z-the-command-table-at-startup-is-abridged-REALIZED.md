@@ -1,6 +1,6 @@
 # The command table at startup is abridged
 
-- **State:** Active
+- **State:** Realized
 - **Tags:** [idea]
 
 **The command table printed at startup is abridged.**
@@ -33,3 +33,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 6:34:20 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:36:02 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:38:03 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:41:18 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 6:51:14 PM PT
