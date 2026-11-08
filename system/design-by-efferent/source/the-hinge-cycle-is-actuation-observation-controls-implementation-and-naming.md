@@ -7,7 +7,7 @@ Building the initial implementation of an outcome runs a cycle of **five hinges*
 1. **Actuation** — the invocation of the unit under test (its efferent shape: name, arguments, arity, return).
 2. **Observation** — what is asserted about the result (value-equality vs. identity vs. a raised error, and what the explaining variable is compared against). **What the test reads is the side effect the actuation produces.** A returned value is one such effect, and it is a **case rather than the rule**. An actuation that returns nothing still produces an effect somewhere. An actuation that returns a value frequently produces others beside it. So the hinge asks **which effect the test reads, and how it reads it**, rather than assuming the return.
 3. **Controls** — the example constants the test is built from (which control form, nested vs. top-level, what inner constants, Array vs. Hash seeding, literals vs. controls).
-4. **Implementation** — the code that satisfies the test. This hinge always has two candidates: the working implementation written directly, or the **red/green/refactor cycle** (see the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule).
+4. **Implementation** — the code that satisfies the test. This hinge always has two candidates: the full implementation written directly, or the **red/green/refactor cycle** (see the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule).
 5. **Naming** — the outcome `context` that names what the observation establishes (the test's name).
 
 The first three concern the test (turn one). The fourth is the implementation (turn two). Only after the actuation, observation, and controls are accepted does the AI assemble and show the turn-one test file (per the first-turn rule). Then it proposes the implementation as the fourth hinge. Once that is accepted it writes it, runs the suite, and shows the test with its result.
@@ -73,7 +73,7 @@ This is the **initial**-implementation cycle for one outcome. Looping to further
 7. The observation hinge asks which effect the test reads, and how it reads it. It does not assume the return.
 8. **Controls** are the example constants the test is built from. That covers control form, nested vs. top-level, inner constants, Array vs. Hash seeding, and literals vs. controls.
 9. **Implementation** is the code that satisfies the test.
-10. The implementation hinge always has two candidates. One is the working implementation written directly. The other is the red/green/refactor cycle (see the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule).
+10. The implementation hinge always has two candidates. One is the full implementation written directly. The other is the red/green/refactor cycle (see the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule).
 11. **Naming** is the outcome `context` that names what the observation establishes (the test's name).
 12. The first three hinges concern the test (turn one). The fourth is the implementation (turn two).
 13. Assemble and show the turn-one test file only after the actuation, observation, and controls are accepted, per the first-turn rule.
@@ -127,8 +127,11 @@ This is the **initial**-implementation cycle for one outcome. Looping to further
 - 2026-10-24, compressed: compression 0.18, change 0.64, solubility 30 → 42, clarity 0.54 → 0.72, 33 directives, 33 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 42 → 42, clarity 0.72 → 0.70; checked: 28 directives, 28 kept, 0 less precise, 0 lost
 - 2026-10-29, revised: the `Explain` option and every statement about the free-text option are removed, at the engineer's direction; checked: 42 directives, 38 kept, 1 less precise, 3 lost; what is not kept was left out on purpose, in this revision or an earlier one, or is stated in the pre-loaded present-every-prompt-to-the-engineer-through-the-selection-ui rule
+- 2026-11-08, revised: the first candidate is a full implementation, not a working implementation, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the implementation hinge's first candidate was named the working implementation. The engineer renamed it the full implementation.
 
 Until Sun Oct 25 2026 this rule was named hinge-cycle and titled "The initial-implementation hinge cycle: actuation → observation → controls → implementation → naming".
 
@@ -179,3 +182,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 1:34:54 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 1:40:05 PM PT
 Changed by Scott Bellware on Wed Nov 4 2026 at 11:37:47 AM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 2:04:31 PM PT
