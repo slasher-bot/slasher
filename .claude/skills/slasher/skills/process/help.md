@@ -18,4 +18,8 @@ PROCESS
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
 
+  /estimate-confidence             The agent's confidence of proceeding
+                                   unattended from where the work stands
+  /#                               An alias of /estimate-confidence
+
   /process help                    Print this command's help
