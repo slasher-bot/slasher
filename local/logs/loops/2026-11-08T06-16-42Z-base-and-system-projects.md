@@ -33,8 +33,36 @@ The feature lets a project address its base project, the machine's system projec
 - **Hinge:** how `resolve-project.sh -base` comes about.
 - **Options:** a working implementation, written directly; red, green, refactor.
 - **Decision / chat:** the engineer selected the working implementation.
-- **Outcome:** `system/foundation/resolve-project.sh` reads `base-project` from `slasher.toml` in the parent of the current directory and prints the sibling's path. `test/automated/resolve-project/base.sh` is verified, and the automated suite is verified: 18 tests. Not yet committed.
+- **Outcome:** `system/foundation/resolve-project.sh` reads `base-project` from `slasher.toml` in the parent of the current directory and prints the sibling's path. `test/automated/resolve-project/base.sh` is verified, and the automated suite is verified: 18 tests. Committed as `8481e9d3`.
+
+## Outcome 2 — the system project is resolved
+
+### Cycle 1 — actuation
+
+- **Hinge:** how the system project is resolved, as the `/projects` skill and the test invoke it.
+- **Options:** `cd "$project" && system/foundation/resolve-project.sh -system`; `system/foundation/resolve-project.sh -system`, with no project entered.
+- **Decision / chat:** the engineer selected `cd "$project" && system/foundation/resolve-project.sh -system`, so every target is resolved from the project root, as `-base` is.
+
+### Cycle 2 — observation
+
+- **Hinge:** what the test reads about the effect of `resolve-project.sh -system`.
+- **Options:** `[ "$system" = "$control_system" ]`, the recorded path compared exactly; `[ "$system" = "$HOME/some-system" ]`, a path recorded with a leading `~` read back with the home directory expanded.
+- **Decision / chat:** the engineer selected the exact comparison against the recorded path.
+
+### Cycle 3 — controls
+
+- **Hinge:** how the test points the script at a temporary `system-project.toml` instead of the engineer's own.
+- **Options:** `SLASHER_SYSTEM_PROJECT` names the config file; `SLASHER_CONFIG` names the directory that stands in for `~/.config/slasher`; `HOME` is set to a temporary directory.
+- **Decision / chat:** the engineer asked for clarification. The agent explained that each option builds the same project and config, and differs only in how the script is pointed at the config. It recommended the file variable, since `read-consuming-projects.sh` already uses `SLASHER_REGISTRY` the same way. The engineer selected `SLASHER_SYSTEM_PROJECT`.
+
+### Cycle 4 — implementation
+
+- **Hinge:** how `resolve-project.sh -system` comes about.
+- **Options:** a working implementation, written directly; red, green, refactor.
+- **Decision / chat:** the engineer selected the working implementation.
+- **Outcome:** `resolve-project.sh -system` reads `path` from the file `SLASHER_SYSTEM_PROJECT` names, or from `~/.config/slasher/system-project.toml`, and prints it. `test/automated/resolve-project/system.sh` is verified, and the automated suite is verified: 19 tests.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 1:25:48 PM PT
