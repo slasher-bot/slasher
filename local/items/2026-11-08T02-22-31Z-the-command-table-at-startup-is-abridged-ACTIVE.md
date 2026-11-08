@@ -11,6 +11,8 @@
 
 - **2026-11-07** — In the startup table, the `/.` and `/'` rows take the descriptions of `/recent` and `/items`, in place of *An alias of /recent* and *An alias of /items*. The full table keeps the alias descriptions. As the engineer stated it: "In the short table, replace the descriptions of aliases, eg: "An alias of /recent" with the actual description"
 
+- **2026-11-07** — In the startup table, the `/?` row reads *Print the list of Slasher commands*, in place of *Print this table*. The full table keeps *Print this table*. The engineer stated the new wording, and selected that it changes the startup table only.
+
 ## History
 
 As the engineer first stated it, on 2026-11-07: "The command table at startup is abridged"
@@ -21,3 +23,4 @@ Authored by Scott Bellware on Sat Nov 7 2026 at 6:22:31 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:24:30 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:30:33 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:33:05 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 6:34:20 PM PT

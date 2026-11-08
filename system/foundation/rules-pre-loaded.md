@@ -427,13 +427,13 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 | Command | Description |
 |---|---|
 | `/slasher help, /help` | Print the help of every Slasher command |
-| `/?` | Print this table |
+| `/?` | Print the list of Slasher commands |
 | `/.` | Says what was recently done, and what's next. |
 | `/'` | Lists the current items, then the current features and experiments. |
 
 The other commands are `/unattended`, `/item`, `/items`, `/feature`, `/experiment`, `/recent`, `/log`, `/journal`, `/brainstorm`, and `/test`.
 
-**The startup table is the full table abridged.** It keeps the full table's first four rows. The `/slasher help` and `/?` rows stand as they are. The `/.` and `/'` rows take the description of the command each is an alias of: `/.` the `/recent` row's, and `/'` the `/items` row's. When either of those descriptions changes, change the startup table in the same commit. The sentence below it names, in the full table's order, every command whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
+**The startup table is the full table abridged.** It keeps the full table's first four rows. The `/slasher help` row stands as it is. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` and `/'` rows take the description of the command each is an alias of: `/.` the `/recent` row's, and `/'` the `/items` row's. When either of those descriptions changes, change the startup table in the same commit. The sentence below it names, in the full table's order, every command whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
 **The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
 
