@@ -22,7 +22,7 @@ control_start_text() {
   cat <<'DISPLAY'
 
 
-Slasher: Humanity in the Loop AI
+Slasher: Human in the Loop AI
 
 The engineer decides. The agent generates.
 
