@@ -429,11 +429,11 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 | `/slasher help, /help` | Print the help of every Slasher command |
 | `/?` | Print the list of Slasher commands |
 | `/., /recent` | Says what was recently done, and what's next. |
-| `/'` | Lists the current items, features, and experiments. |
+| `/', /items` | Lists the current items, features, and experiments. |
 
 The other commands are `/unattended`, `/item`, `/items`, `/feature`, `/experiment`, `/recent`, `/log`, `/journal`, `/brainstorm`, and `/test`.
 
-**The startup table is the full table abridged.** It keeps the full table's first four rows. The `/slasher help` row stands as it is. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the `/recent` row's description. When that description changes, change the startup table in the same commit. The `/'` row reads *Lists the current items, features, and experiments.*, a shorter form of the `/items` row's description. The sentence below it names, in the full table's order, every command whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
+**The startup table is the full table abridged.** It keeps the full table's first four rows. The `/slasher help` row stands as it is. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the `/recent` row's description. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the `/items` row's description. The sentence below it names, in the full table's order, every command whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
 **The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
 

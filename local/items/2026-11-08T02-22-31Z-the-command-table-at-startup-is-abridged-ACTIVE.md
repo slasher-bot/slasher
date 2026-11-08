@@ -17,6 +17,8 @@
 
 - **2026-11-07** — In the startup table, the `/.` row names `/., /recent`. As the engineer stated it: "In the short table, replace "/." with "/., /recent""
 
+- **2026-11-07** — In the startup table, the `/'` row names `/', /items`. The engineer wrote "In the short table, replace "/'" with "/., /items"", and then selected `/', /items` when asked whether `/.` was meant.
+
 ## History
 
 As the engineer first stated it, on 2026-11-07: "The command table at startup is abridged"
@@ -30,3 +32,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 6:33:05 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:34:20 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:36:02 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:38:03 PM PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 6:41:18 PM PT
