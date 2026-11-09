@@ -27,7 +27,7 @@ cp system/foundation/resolve-project.sh "$project/system/foundation/"
 
 base=$(cd "$project" && system/foundation/resolve-project.sh -base 2>/dev/null) && status=0 || status=$?
 
-#
+# When the parent directory holds no slasher.toml
 
 [ "$status" -ne 0 ] || fail "Fails" "output:" "$base"
 

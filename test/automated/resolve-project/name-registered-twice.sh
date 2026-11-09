@@ -42,9 +42,9 @@ REGISTRY
 
 resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-checkout 2>/dev/null) && status=0 || status=$?
 
-# ----------------------------------------------------------------------------
+# When more than one registered project has the name
 
-[ "$status" -ne 0 ] || fail "(unnamed)" "status:" "$status"
-[ -z "$resolved" ] || fail "(unnamed)" "output:" "$resolved"
+[ "$status" -ne 0 ] || fail "Fails" "status:" "$status"
+[ -z "$resolved" ] || fail "Fails" "output:" "$resolved"
 
 echo "0 failed, 0 aborted"

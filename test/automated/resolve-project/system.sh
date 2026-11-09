@@ -35,8 +35,8 @@ system=$(cd "$project" && SLASHER_SYSTEM_PROJECT="$config/system-project.toml" s
 
 echo "System: $system"
 
-# ----------------------------------------------------------------------------
+# Prints the root of the system project system-project.toml names
 
-[ "$system" = "$control_system" ] || fail "(unnamed)" "found:" "$system"
+[ "$system" = "$control_system" ] || fail "Prints the root of the system project system-project.toml names" "found:" "$system"
 
 echo "0 failed, 0 aborted"

@@ -36,8 +36,8 @@ base=$(cd "$project" && system/foundation/resolve-project.sh -base)
 
 echo "Base: $base"
 
-# ----------------------------------------------------------------------------
+# Prints the root of the base project slasher.toml names
 
-[ "$base" = "$control_base" ] || fail "(unnamed)" "found:" "$base"
+[ "$base" = "$control_base" ] || fail "Prints the root of the base project slasher.toml names" "found:" "$base"
 
 echo "0 failed, 0 aborted"
