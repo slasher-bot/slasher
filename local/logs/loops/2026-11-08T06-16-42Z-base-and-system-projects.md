@@ -199,9 +199,23 @@ This outcome is prose: a rule, a skill, and its help. It runs through no hinges,
 - **Decided:** the help gains a line for each of the three targets. The PROJECTS domain's description is left as it is, so the command table on `master` needs no change.
 - **Outcome:** the automated suite is verified: 24 tests.
 
+## Naming, at the close
+
+- **Hinge:** the name of each outcome's test.
+- **Decided:** each normal-path test is named for what it prints, and each exceptional-path test is named *Fails*, under a *When* context that states its condition, per the an-error-test-is-named-fails-and-its-condition-is-a-context rule. A shell test carries its context as the comment above its assertion.
+  - `base.sh`: *Prints the root of the base project slasher.toml names*
+  - `system.sh`: *Prints the root of the system project system-project.toml names*
+  - `name.sh`: *Prints the root of the registered project with that name*
+  - `base-without-slasher-toml.sh`: *When the parent directory holds no slasher.toml*, *Fails*
+  - `system-without-system-project-toml.sh`: *When system-project.toml is missing*, *Fails*
+  - `name-not-registered.sh`: *When no registered project has the name*, *Fails*
+  - `name-registered-twice.sh`: *When more than one registered project has the name*, *Fails*
+- **Outcome:** the automated suite is verified: 24 tests.
+
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 1:25:48 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:47:36 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:50:43 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 6:03:15 PM PT

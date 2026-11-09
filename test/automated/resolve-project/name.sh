@@ -43,8 +43,8 @@ resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml"
 
 echo "Resolved: $resolved"
 
-# ----------------------------------------------------------------------------
+# Prints the root of the registered project with that name
 
-[ "$resolved" = "$control_checkout" ] || fail "(unnamed)" "found:" "$resolved"
+[ "$resolved" = "$control_checkout" ] || fail "Prints the root of the registered project with that name" "found:" "$resolved"
 
 echo "0 failed, 0 aborted"

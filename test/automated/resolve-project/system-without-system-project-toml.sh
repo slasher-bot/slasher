@@ -27,7 +27,7 @@ cp system/foundation/resolve-project.sh "$project/system/foundation/"
 
 system=$(cd "$project" && SLASHER_SYSTEM_PROJECT="$config/system-project.toml" system/foundation/resolve-project.sh -system 2>/dev/null) && status=0 || status=$?
 
-#
+# When system-project.toml is missing
 
 [ "$status" -ne 0 ] || fail "Fails" "status:" "$status"
 [ -z "$system" ] || fail "Fails" "output:" "$system"
