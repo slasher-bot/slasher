@@ -72,8 +72,9 @@ FEATURES
   /feature abandon, /abandon       -> Abandoned
   /feature help                    Print this command's help
 
-  Either kind opens with a question or an intent, and whether it
-  reaches a verdict is chosen when it starts.
+  Either kind opens with a question or an intent. A forecast is
+  stated at the start where you give one, and the verdict is asked
+  when the work completes.
 
 EXPERIMENTS
   An experiment tests a question on its own branch or worktree, to a declared
