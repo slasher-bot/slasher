@@ -1,0 +1,3 @@
+# Claude Code does not block a plugin from fetching over the network, and relies on the engineer trusting the plugin
+
+The publish-to-marketplace feature found this, by the agent's own knowledge, not yet checked against the Claude Code documentation. A plugin's hooks and commands run as shell commands with the engineer's permissions. Hooks run unprompted, so under the recommended approach they fetch nothing and only print a hint. `/package install` is a skill, so its fetch runs through the agent's Bash tool and its permission prompt. A sandboxed session may refuse the network. Whether Anthropic's official marketplace rejects plugins that download code is not known, and matters only if Slasher is submitted there.
