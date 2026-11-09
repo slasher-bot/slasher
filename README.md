@@ -68,7 +68,9 @@ A set's members are installed as ordinary packages. Nothing records which set as
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/items` | This command lists the current items, then the current features and experiments. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
+| `/features` | This command lists the current features. |
 | `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
+| `/experiments` | This command lists the current experiments. |
 | `/recent` | This command says what was recently done, and what's next. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
 | `/next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
