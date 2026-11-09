@@ -10,7 +10,7 @@
 
 **As the engineer stated it:** also list the phases of the experiment, and indicate the current phase in that list.
 
-**It is stated at each phase's start, and not only when the record is written.** The record names the phases and their order at the start of the implementation, and work that reaches a verdict states each phase's forecast before its work. A phase can start many turns after the record was written, and the engineer then reads a branch switch and new work without the reason for either in front of them.
+**It is stated at each phase's start, and not only when the record is written.** The record names the phases and their order at the start of the implementation, and a phase with a forecast states it before its work. A phase can start many turns after the record was written, and the engineer then reads a branch switch and new work without the reason for either in front of them.
 
 ## On request
 
@@ -42,6 +42,7 @@
 - 2026-10-29, revised: a phase's goal is its question or its intent, whatever the kind; checked: 12 directives, 10 kept, 1 less precise, 1 lost, 2 repairs; re-checked: 12 directives, 11 kept, 1 less precise, 0 lost. Left less precise: the forecast named without its verdict qualifier, since only work with a verdict forecasts
 - 2026-11-02, revised: the current phase and the phases are printed on request; checked: 11 directives, 11 kept, 0 less precise, 0 lost
 - 2026-11-03, revised: /experiment status and /feature status are named; checked: 14 directives, 14 kept, 0 less precise, 0 lost
+- 2026-11-08, revised: a phase with a forecast states it, as the forecast becomes a question asked when a phase is added; not re-checked
 
 ## History
 
@@ -65,3 +66,4 @@ Changed by Scott Bellware on Thu Oct 29 2026 at 10:02:31 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 10:41:02 PM PT
 Changed by Scott Bellware on Mon Nov 2 2026 at 8:34:36 PM PT
 Changed by Scott Bellware on Tue Nov 3 2026 at 10:38:55 AM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:49:53 PM PT
