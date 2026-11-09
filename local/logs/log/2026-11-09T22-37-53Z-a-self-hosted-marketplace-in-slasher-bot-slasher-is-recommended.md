@@ -1,0 +1,3 @@
+# The publish-to-marketplace feature recommends a marketplace Slasher hosts in `slasher-bot/slasher`, with Anthropic's official marketplace considered later
+
+The agent recommended it, and the engineer has not decided. The curl install already comes from `slasher-bot/slasher`, so both installs start there. A marketplace Slasher owns lists each publish at once, with no outside review, and no outside policy on the plugin fetching packages. The curl install can write it into a project's settings. The official marketplace would add discovery, and may require a review, a version scheme, and no downloaded code. Only the version scheme is known to be planned.
