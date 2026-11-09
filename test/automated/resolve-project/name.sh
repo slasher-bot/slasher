@@ -23,13 +23,13 @@ trap 'rm -rf "$registry" "$project"' EXIT
 mkdir -p "$project/system/foundation"
 cp system/foundation/resolve-project.sh system/foundation/read-consuming-projects.sh "$project/system/foundation/"
 
-control_checkout="$registry/projects/some-checkout"
-mkdir -p "$control_checkout/slasher/system"
-git init -q "$control_checkout"
+control_project="$registry/projects/some-project"
+mkdir -p "$control_project/slasher/system"
+git init -q "$control_project"
 
-control_other_checkout="$registry/projects/some-other-checkout"
-mkdir -p "$control_other_checkout/slasher/system"
-git init -q "$control_other_checkout"
+control_other_project="$registry/projects/some-other-project"
+mkdir -p "$control_other_project/slasher/system"
+git init -q "$control_other_project"
 
 cat > "$registry/consuming-projects.toml" <<REGISTRY
 included = [
@@ -39,12 +39,12 @@ REGISTRY
 
 # Actuation ------------------------------------------------------------------
 
-resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-checkout)
+resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-project)
 
 echo "Resolved: $resolved"
 
 # Prints the root of the registered project with that name
 
-[ "$resolved" = "$control_checkout" ] || fail "Prints the root of the registered project with that name" "found:" "$resolved"
+[ "$resolved" = "$control_project" ] || fail "Prints the root of the registered project with that name" "found:" "$resolved"
 
 echo "0 failed, 0 aborted"

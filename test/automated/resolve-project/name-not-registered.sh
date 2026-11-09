@@ -23,9 +23,9 @@ trap 'rm -rf "$registry" "$project"' EXIT
 mkdir -p "$project/system/foundation"
 cp system/foundation/resolve-project.sh system/foundation/read-consuming-projects.sh "$project/system/foundation/"
 
-control_checkout="$registry/projects/some-checkout"
-mkdir -p "$control_checkout/slasher/system"
-git init -q "$control_checkout"
+control_project="$registry/projects/some-project"
+mkdir -p "$control_project/slasher/system"
+git init -q "$control_project"
 
 cat > "$registry/consuming-projects.toml" <<REGISTRY
 included = [
@@ -35,7 +35,7 @@ REGISTRY
 
 # Actuation ------------------------------------------------------------------
 
-resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-unregistered-checkout 2>/dev/null) && status=0 || status=$?
+resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-missing-project 2>/dev/null) && status=0 || status=$?
 
 # When no registered project has the name
 

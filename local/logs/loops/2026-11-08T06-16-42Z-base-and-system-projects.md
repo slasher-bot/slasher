@@ -211,6 +211,7 @@ This outcome is prose: a rule, a skill, and its help. It runs through no hinges,
   - `name-not-registered.sh`: *When no registered project has the name*, *Fails*
   - `name-registered-twice.sh`: *When more than one registered project has the name*, *Fails*
 - **Outcome:** the automated suite is verified: 24 tests.
+- **Decision / chat:** after the close, the engineer directed that a placeholder for something that does not exist takes the form *some missing …*. The engineer then directed that the registry tests' projects be named *some-project*, *some-other-project*, and *some-missing-project*. In `name.sh`, `name-not-registered.sh`, and `name-registered-twice.sh`, `some-checkout` became `some-project`, `some-other-checkout` became `some-other-project`, and `some-unregistered-checkout` became `some-missing-project`.
 
 ---
 
@@ -219,3 +220,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 1:25:48 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:47:36 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:50:43 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 6:03:15 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 6:06:51 PM PT
