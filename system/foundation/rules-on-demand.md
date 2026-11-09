@@ -578,7 +578,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 
 ## The forecast and the verdict
 
-1. At the start, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *State a forecast*, then *No forecast*. Record the answer as a confirmation, and write a stated forecast in the record.
+1. At the start, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
 2. Do not ask it where the working location is the current branch. Work there states no forecast.
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.

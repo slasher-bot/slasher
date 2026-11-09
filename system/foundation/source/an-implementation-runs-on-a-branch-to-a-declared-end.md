@@ -70,7 +70,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 ## The forecast at the start, and the verdict at the end
 
-**At the start, ask whether the work states a forecast, beside the working location and the participation, and record the answer as a confirmation.** A forecast is what is expected to happen, stated before the work. Its two options read *State a forecast*, then *No forecast*. Where the engineer states one, write it in the record. Where the working location is the current branch, do not ask: work there states none. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
+**At the start, ask whether the work states a forecast, beside the working location and the participation, and record the answer as a confirmation.** A forecast is what is expected to happen, stated before the work. Its two options read *No forecast*, then *State a forecast*, in that order. Where the engineer states one, write it in the record. Where the working location is the current branch, do not ask: work there states none. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 
 **At the end, ask the verdict question of work with a forecast, and of no other work.** It is asked when the work is complete, through the selection interface, and recorded as a confirmation. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast ends Completed, and is not asked.
 
@@ -216,7 +216,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## The forecast and the verdict
 
-1. At the start, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *State a forecast*, then *No forecast*. Record the answer as a confirmation, and write a stated forecast in the record.
+1. At the start, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
 2. Do not ask it where the working location is the current branch. Work there states no forecast.
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
@@ -293,6 +293,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-08, revised: phases merge with `--no-ff`, the record names each phase's start, the rebuild reads from it, a squashed phase's branch is deleted with `-D` and the remote branch with it, and the force-push uses `--force-with-lease`, from gaps a test run found; not re-checked
 - 2026-11-08, revised: the merge commits are dropped in the rebuild, the body lists subjects after a dash, and the remote branch is deleted only after the upstream is pushed, from gaps a second test run found; not re-checked
 - 2026-11-08, revised: a forecast is optional and asked at the start, the verdict question is asked at the end of work with a forecast, and the current branch rules out both; not re-checked
+- 2026-11-08, revised: the forecast question lists *No forecast* first, at the engineer's direction; not re-checked
 
 ## History
 
@@ -372,3 +373,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 8:50:01 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:59:52 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:04:01 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:35:54 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:42:51 PM PT
