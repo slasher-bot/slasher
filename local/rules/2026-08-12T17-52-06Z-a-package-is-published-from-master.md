@@ -6,7 +6,7 @@
 
 **A merge to some other branch does not release the hold.** An experiment's upstream branch is not always `master`, and a feature's is not either. Each may merge into another topic branch, and the foundation an-implementation-runs-on-a-branch-to-a-declared-end rule says so. That merge concludes the work against its own upstream. It does not put the content on `master`, so it licenses no publish. The publish waits for `master`, however many merges that takes.
 
-**The work also has to have concluded.** Work that reaches a verdict is **affirmed**, which the engineer declares. Work without a verdict is **completed**, and has no affirmation. Whether the work reaches a verdict is chosen at its start, whatever its kind, as the foundation an-implementation-runs-on-a-branch-to-a-declared-end rule states. Reaching `master` and reaching a concluded state are two conditions, and a publish waits for the two.
+**The work also has to have concluded.** Work that reaches a verdict is **affirmed**, which the engineer declares. Work without a verdict is **completed**, and has no affirmation. Whether the work reaches a verdict is asked at its end, of work with a forecast, whatever its kind, as the foundation an-implementation-runs-on-a-branch-to-a-declared-end rule states. Reaching `master` and reaching a concluded state are two conditions, and a publish waits for the two.
 
 ## The publish is never offered
 
@@ -47,7 +47,7 @@ Never offer a publish while an experiment or a feature is open. Never name one a
 1. Publish only after the work merges to `master`. A commit, or a merge to any other branch, does not license a publish.
 2. An experiment and a feature never publish. Neither is `master`.
 3. An experiment's or a feature's upstream may be another topic branch. A merge into it concludes the work against that upstream, but puts nothing on `master` and licenses no publish. The publish waits for `master`, however many merges that takes.
-4. The work must also have concluded: work that reaches a verdict is affirmed, which the engineer declares, and work without one is completed and has no affirmation, whatever the kind. Whether the work reaches a verdict is chosen at its start.
+4. The work must also have concluded: work that reaches a verdict is affirmed, which the engineer declares, and work without one is completed and has no affirmation, whatever the kind. Whether the work reaches a verdict is asked at its end.
 5. A publish waits for both conditions: reaching `master` and reaching a concluded state.
 6. Merge the work to `master` first. Then publish the affected packages, following `CONTRIBUTING.md`.
 7. Do not publish from an experiment branch, a feature branch, or any other topic branch.
@@ -72,8 +72,11 @@ Never offer a publish while an experiment or a feature is open. Never name one a
 
 - 2026-10-29, compressed: 5183 → 2360 characters; checked: 32 directives, 23 kept, 6 less precise, 3 lost; 5 repairs, re-checked: 27 directives, 24 kept, 2 less precise, 1 lost; what is still not kept was judged reasons or background
 - 2026-10-29, revised: a publish waits for concluded work, with or without a verdict, whatever the kind; checked: 16 directives, 14 kept, 2 less precise, 0 lost, 1 repair; re-checked: 16 directives, 15 kept, 1 less precise, 0 lost. Left less precise: the harness suggestion's wording, which keeps that it does not weaken the instruction
+- 2026-11-08, revised: whether the work reaches a verdict is asked at its end; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 this rule said whether the work reaches a verdict is chosen at its start.
 
 Until Thu Oct 29 2026 this rule read the concluded state by kind: an experiment affirmed, a feature completed. The engineer settled that whether the work reaches a verdict is chosen at its start, whatever its kind.
 
@@ -98,3 +101,5 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:27:43 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 10:42:15 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:25 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:32 PM PT

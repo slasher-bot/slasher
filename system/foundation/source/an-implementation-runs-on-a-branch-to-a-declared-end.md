@@ -8,7 +8,7 @@
 
 An implementation is bounded work with a lifecycle. It runs on a branch created for it, it is designed through the five hinges, and it reaches one of a fixed set of declared states. It is never left silently open.
 
-**Whether the work reaches a verdict decides the parts that differ, and the tag does not.** Either kind opens with a question or an intent, and whether it forecasts and reaches a verdict is chosen at the start (see the the-implementations-directory-holds-one-record-per-implementation rule). Every clause below that names work with a verdict, or work without one, names it because of that choice. No clause varies by kind. The tag names the branch and the record, and nothing else.
+**Whether the work states a forecast decides the parts that differ while it runs, and whether it reaches a verdict is asked at its end. The tag decides neither.** Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one, and only work with a forecast can reach a verdict (see the the-implementations-directory-holds-one-record-per-implementation rule). Every clause below that names work with a forecast, or work with or without a verdict, names it because of those two. No clause varies by kind. The tag names the branch and the record, and nothing else.
 
 **As the engineer stated it:** change features and experiments so that both can have either an intent or a question.
 
@@ -52,7 +52,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 > **The current branch** — Build it where the working tree already is, creating nothing. There is
 > no branch to switch back to and nothing to merge.
 
-**The current branch is offered only to work without a verdict, and it is offered last.** Work that reaches a verdict is a controlled deviation from the main line: it may be refuted or abandoned, and until it is affirmed its changes must not reach the branch it deviates from. The branch is what makes that reversible, so it is not optional there. Work without a verdict **is** the main line, and a branch prevents nothing already ordinary. This holds whatever the kind.
+**The current branch is offered last, and choosing it rules out a forecast and a verdict.** Work with a forecast is a controlled deviation from the main line: it may be refuted or abandoned, and until it is affirmed its changes must not reach the branch it deviates from. The branch is what makes that reversible, so work built on the current branch states no forecast, concludes Completed, and is not asked the verdict question at its end. Work without a forecast **is** the main line, and a branch prevents nothing already ordinary. This holds whatever the kind.
 
 **Last, because a first option reads as recommended** whatever a rule says about defaults, and the current branch is the option that gives up isolation.
 
@@ -68,11 +68,15 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **Attended or unattended, put through the selection interface beside the working location.** Attended is the default. See the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule, which states why the two sit at one gate and what changes between them.
 
-## Whether the work reaches a verdict, chosen at the start
+## The forecast at the start, and the verdict at the end
 
-**Put through the selection interface beside the working location and the participation, and recorded as a confirmation.** Work that reaches a verdict forecasts before its work and ends Affirmed, Refuted, or Inconclusive. Work without one ends Completed. The selection follows neither the kind nor whether the work opens with a question or an intent. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is.
+**At the start, ask whether the work states a forecast, beside the working location and the participation, and record the answer as a confirmation.** A forecast is what is expected to happen, stated before the work. Its two options read *State a forecast*, then *No forecast*. Where the engineer states one, write it in the record. Where the working location is the current branch, do not ask: work there states none. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 
-**A third option reads *What's a verdict?*** Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against a forecast stated before the work, and that work without a verdict ends Completed. The question is then asked again, with the same three options.
+**At the end, ask the verdict question of work with a forecast, and of no other work.** It is asked when the work is complete, through the selection interface, and recorded as a confirmation. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast ends Completed, and is not asked.
+
+**A third option reads *What's a verdict?*** Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed. The question is then asked again, with the same three options.
+
+**The verdict waits for the end because what the work shows is known only then.** A forecast keeps the verdict possible without deciding it.
 
 **As the engineer stated it:** an intent can also bring a forecast and verdict.
 
@@ -96,41 +100,41 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **Branch deletion is engineer-confirmed, put through the selection interface, and the worktree is removed first.** Git refuses to delete a branch checked out in a worktree, and **one confirmation covers the two**, and the phase branches the implementation kept — a single cleanup act with a forced order, which splitting would prompt twice for. A squashed phase's branch is deleted with `git branch -D`, since its own commits never reached the upstream branch and git refuses `-d`. Where the implementation's branch was pushed, the deletion covers its branch on the remote too, and that branch is deleted only after the upstream branch holding the work has been pushed. Deleting it sooner leaves the remote holding the work on no branch. Suspension never deletes and never removes a worktree.
 
-## The agent never raises the end of work that reaches a verdict
+## The agent never raises the end of work with a forecast
 
 **Do not offer to conclude, affirm, refute, or merge it.** Not as a next step, not as an option among others, and not as a precondition for something else. The precondition form is the one that slips through: *this cannot be published until it merges* states a true fact and points at the ending. Report what is settled and what is open, and stop there.
 
-**The length of work that reaches a verdict is the engineer's judgment** and is not readable from how much work the branch holds. An agent that has just finished a stretch of work sees a natural stopping point where the engineer sees a question still open. The prompt would arrive at the moment the agent's view is narrowest.
+**The length of work with a forecast is the engineer's judgment** and is not readable from how much work the branch holds. An agent that has just finished a stretch of work sees a natural stopping point where the engineer sees a question still open. The prompt would arrive at the moment the agent's view is narrowest.
 
-**This does not reach work without a verdict**, which has no verdict to press toward and whose completion is the ordinary conclusion of main-line work.
+**This does not reach work without a forecast**, which has no verdict to press toward and whose completion is the ordinary conclusion of main-line work.
 
 ## Drift, and the one lifecycle change the agent does raise
 
-**While work that reaches a verdict is open under branch only, watch for main-sequence work starting**, and surface it rather than letting the branches silently diverge. Offer two recourses through the selection interface — **suspend the implementation**, where the intent is to stop working it for now, or **add a worktree**, where the intent is to keep working it alongside. Neither ends the implementation, and the engineer's intent decides.
+**While work with a forecast is open under branch only, watch for main-sequence work starting**, and surface it rather than letting the branches silently diverge. Offer two recourses through the selection interface — **suspend the implementation**, where the intent is to stop working it for now, or **add a worktree**, where the intent is to keep working it alongside. Neither ends the implementation, and the engineer's intent decides.
 
 **What the watch rests on, stated plainly:** the branch name, which the status line carries every turn, and a judgment of whether the work at hand serves the recorded question or intent. Only the first is mechanical, and a missed detection produces nothing at all — no alarm, no artifact, just the divergence. It is a practice, not a guarantee.
 
 **Under a worktree there is nothing to diverge and nothing to notice.** The main working tree stays on the upstream branch and the implementation leaves no trace in it, so the configuration that isolates best is the one that most easily loses track. That is what the **session-start notice** answers, reporting every implementation that has not concluded.
 
-**There is no counterpart for work without a verdict.** Other work during it is ordinary rather than a problem, so there is nothing to detect. Work being forgotten is covered by the same notice.
+**There is no counterpart for work without a forecast.** Other work during it is ordinary rather than a problem, so there is nothing to detect. Work being forgotten is covered by the same notice.
 
-**Why:** an experiment and a feature share one lifecycle: the branch, the working location, the participation decision, the declared end, the confirmations, the conclusion in the main working tree, and the confirmed branch deletion. What differs is the forecast, the verdict, the merge gate, the affirmation, the current-branch option, and the drift watch — and every one of those follows from whether the work is judged against a forecast, which is chosen for each piece of work at the start.
+**Why:** an experiment and a feature share one lifecycle: the branch, the working location, the participation decision, the declared end, the confirmations, the conclusion in the main working tree, and the confirmed branch deletion. What differs is the forecast, the verdict, the merge gate, the affirmation, the current-branch option, and the drift watch — and every one of those follows from whether the work is judged against a forecast. Whether it states one is decided at the start, and whether it is judged is decided at the end.
 
 Stating the shared lifecycle once and conditioning six clauses on the verdict choice is smaller than stating it twice, and it makes the asymmetry legible instead of leaving a reader to diff two rules to find it.
 
-**How to apply:** branch for every implementation, named for its tag. Record the upstream branch, the branch, and the base. Ask the working location, the participation level, and whether the work reaches a verdict at the start, through the selection interface, and record all three. Offer the current branch only for work without a verdict, and offer it last. Before work that reaches a verdict merges, write on its branch the rules and changes master needs to conform to it.
+**How to apply:** branch for every implementation, named for its tag. Record the upstream branch, the branch, and the base. Ask the working location, the participation level, and whether the work states a forecast at the start, through the selection interface, and record all three. Offer the current branch last, and ask no forecast there. Ask the verdict question at the end, of work with a forecast only. Before work that reaches a verdict merges, write on its branch the rules and changes master needs to conform to it.
 
 Follow DBE inside. End in a declared state. Copy affirmed work's log into the project's log and merge where it produced implementation. Verify work without a verdict before integrating and add no gate at the merge.
 
-Raise no ending for work that reaches a verdict. Leave the engineer on the upstream branch in the main working tree. Confirm before deleting any branch, removing the worktree first under one confirmation.
+Raise no ending for work with a forecast. Leave the engineer on the upstream branch in the main working tree. Confirm before deleting any branch, removing the worktree first under one confirmation.
 
 ## Compressed
 
 1. An implementation runs on its own branch, designed through the five hinges by DBE, to a declared state.
 2. It is never left silently open.
-3. Whether the work reaches a verdict decides the parts that differ. The tag names the record and the branch, and decides nothing else.
-4. Either kind opens with a question or an intent, and whether it reaches a verdict is chosen at the start (see the the-implementations-directory-holds-one-record-per-implementation rule).
-5. A clause below names work with or without a verdict only because of that difference. Every other clause holds for both.
+3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
+4. Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one, and only work with a forecast can reach a verdict (see the the-implementations-directory-holds-one-record-per-implementation rule).
+5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
 
@@ -185,9 +189,9 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 > **The current branch** — Build it where the working tree already is, creating nothing. There is
 > no branch to switch back to and nothing to merge.
 
-3. Offer the current branch only to work without a verdict, whatever the kind.
-4. The changes of work that reaches a verdict must not reach the branch it deviates from before it is affirmed, and its own branch is what keeps them out.
-5. Work without a verdict is the main line.
+3. Choosing the current branch rules out a forecast and a verdict. Work built there states no forecast, concludes Completed, and is not asked the verdict question.
+4. The changes of work with a forecast must not reach the branch it deviates from before it is affirmed, and its own branch is what keeps them out.
+5. Work without a forecast is the main line.
 6. Offer the current branch last, because a first option reads as recommended, and the current branch gives up isolation.
 7. The current branch's cost: there is no isolation, partial work sits where others read, and abandoning means reverting rather than deleting a branch.
 8. On the current branch, the record still carries the intent, the state, and the confirmations.
@@ -210,15 +214,16 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule states why the two sit at one gate, and what changes between them.
 4. Record both choices.
 
-## The verdict
+## The forecast and the verdict
 
-1. Put whether the work reaches a verdict through the selection interface at the start, beside the working location and the participation, and record it as a confirmation.
-2. Work that reaches a verdict forecasts before its work and ends Affirmed, Refuted, or Inconclusive.
-3. Work without a verdict ends Completed.
-4. The selection follows neither the kind nor whether the work opens with a question or an intent.
+1. At the start, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *State a forecast*, then *No forecast*. Record the answer as a confirmation, and write a stated forecast in the record.
+2. Do not ask it where the working location is the current branch. Work there states no forecast.
+3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
+4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
-6. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against a forecast stated before the work, and that work without a verdict ends Completed.
-7. Then ask the question again, with the same three options.
+6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast ends Completed, unasked.
+7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed.
+8. Then ask the question again, with the same three options.
 
 ## The end
 
@@ -252,22 +257,22 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 28. Remove the worktree first, since git refuses to delete a branch checked out in a worktree.
 29. Suspension deletes no branch and removes no worktree.
 
-## The agent never raises the end of work that reaches a verdict
+## The agent never raises the end of work with a forecast
 
 1. Do not offer to conclude, affirm, refute, or merge one: not as a next step, an option, or a precondition.
 2. Report what is settled and what is open, and stop.
-3. The length of work that reaches a verdict is the engineer's judgment, not readable from the work done.
-4. Work without a verdict is not covered, because its completion is ordinary.
+3. The length of work with a forecast is the engineer's judgment, not readable from the work done.
+4. Work without a forecast is not covered, because its completion is ordinary.
 
 ## Drift
 
-1. While work that reaches a verdict is open under branch only, watch for main-sequence work starting, and surface it.
+1. While work with a forecast is open under branch only, watch for main-sequence work starting, and surface it.
 2. Offer two recourses through the selection interface: suspend the implementation, where the intent is to stop working it for now, or add a worktree, where the intent is to keep working it alongside.
 3. Neither recourse ends the implementation, and the engineer's intent decides.
 4. The watch rests on the branch name in the status line and on a judgment of whether the work serves the recorded question or intent.
 5. The watch is a practice, not a guarantee.
 6. Under a worktree there is nothing to watch. The session-start notice reports every implementation that has not concluded.
-7. Work without a verdict has no watch, since starting other work during it is ordinary.
+7. Work without a forecast has no watch, since starting other work during it is ordinary.
 
 ## Compression
 
@@ -287,8 +292,11 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 - 2026-11-08, revised: the squash happens when the implementation concludes, not when each phase does, and phases merge with their history meanwhile; not re-checked
 - 2026-11-08, revised: phases merge with `--no-ff`, the record names each phase's start, the rebuild reads from it, a squashed phase's branch is deleted with `-D` and the remote branch with it, and the force-push uses `--force-with-lease`, from gaps a test run found; not re-checked
 - 2026-11-08, revised: the merge commits are dropped in the rebuild, the body lists subjects after a dash, and the remote branch is deleted only after the upstream is pushed, from gaps a second test run found; not re-checked
+- 2026-11-08, revised: a forecast is optional and asked at the start, the verdict question is asked at the end of work with a forecast, and the current branch rules out both; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 whether the work reached a verdict was asked at the start, beside the working location, and work that reached one forecast before its work. The current branch was offered only to work without a verdict.
 
 Until Sun Nov 8 2026 a phase's commits stayed on the implementation's branch with their history through the conclusion, unsquashed, and a phase's branch was not named in the deletion at the end.
 
@@ -363,3 +371,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 8:42:47 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:50:01 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:59:52 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:04:01 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:35:54 PM PT
