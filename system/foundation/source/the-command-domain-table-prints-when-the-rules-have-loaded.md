@@ -22,12 +22,12 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/slasher help` | Print the help of every Slasher command |
 | `/?, /commands` | Print this table |
 | `/., /recent` | Says what was recently done, and what's next. |
-| `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
 | `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
+| `/', /items` | Lists the current items, then the current features and experiments. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/features` | Lists the current features. |
 | `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
@@ -54,7 +54,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **After the startup table, its sentence, and the help line, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
-**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>` of `/next`, `/>?` of `/next?`, `/<` of `/clarify`, `/#` of `/estimate-confidence`, and `/?` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/?, /commands`, `/., /recent`, `/', /items`, `/>, /next`, `/>?, /next?`, `/<, /clarify`, and `/#, /estimate-confidence`.
+**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>` of `/next`, `/>?` of `/next?`, `/<` of `/clarify`, `/#` of `/estimate-confidence`, and `/?` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/?, /commands`, `/., /recent`, `/>, /next`, `/>?, /next?`, `/<, /clarify`, and `/#, /estimate-confidence`. The one exception is `/', /items`, which stands below the `/item` row.
 
 **The PHASE domain has no row.** `/slasher help` still gives its help, and so does `/phase help`.
 
@@ -71,6 +71,8 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Mon Nov 9 2026, for part of that day, the `/', /items` row stood at the top of the full table, below the `/., /recent` row. The engineer moved it below the `/item` row.
 
 Until Mon Nov 9 2026 the full table's `/.`, `/'`, `/features`, `/experiments`, `/projects`, `/release`, and `/load` descriptions opened with *This command*, as the help's do. The engineer removed it.
 
@@ -251,3 +253,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 10:53:56 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 12:48:53 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 12:52:41 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 1:02:10 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 1:05:30 PM PT
