@@ -89,7 +89,35 @@ The feature lets a project address its base project, the machine's system projec
 - **Decision / chat:** the engineer selected one batch.
 - **Outcome:** any argument other than `-base` or `-system` is a name. `resolve-project.sh` runs `read-consuming-projects.sh` beside it and prints each registered project whose directory has that name. `test/automated/resolve-project/name.sh` is verified, and the automated suite is verified: 20 tests.
 
+## Outcome 4 — the base project is not resolved without slasher.toml
+
+- **Decision / chat:** the engineer selected this outcome next, over a name not in the registry, two projects with one name, and `/projects` running an instruction.
+
+### Cycle 1 — actuation
+
+- **Hinge:** how the base project is resolved when the parent directory holds no `slasher.toml`.
+- **Options:** `cd "$project" && system/foundation/resolve-project.sh -base`, the invocation `base.sh` uses, in its own file, `test/automated/resolve-project/base-without-slasher-toml.sh`; *Not this*.
+- **Decision / chat:** the engineer selected the invocation `base.sh` uses.
+
+### Cycle 2 — observation
+
+- **Hinge:** what the test reads about `resolve-project.sh -base` with no `slasher.toml`.
+- **Options:** a non-zero exit; a non-zero exit and the script's own message on standard error; a non-zero exit and no path on standard output.
+- **Decision / chat:** the engineer selected the non-zero exit.
+
+### Cycle 3 — controls
+
+- **Hinge:** what the test builds before it runs the script.
+- **Options:** the project alone in its parent directory; the project and a sibling base directory, with only `slasher.toml` missing.
+- **Decision / chat:** the engineer selected the project alone.
+
+### Cycle 4 — implementation
+
+- **Hinge:** how the failure comes about.
+- **Outcome:** the test passed before any code was written. The script already exits non-zero, because `sed` cannot read the missing file. The hinge was degenerate, and the engineer kept the test as coverage. The automated suite is verified: 21 tests.
+
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 1:25:48 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 5:47:36 PM PT
