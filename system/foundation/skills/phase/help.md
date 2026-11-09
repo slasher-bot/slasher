@@ -5,7 +5,7 @@ PHASE
   /phase, /phase current           The current phase, its goal, and its branch
   /phase add <name>                Add a phase after the last
   /phase start                     Start the next phase
-  /phase complete                  -> Completed, merged into the implementation
+  /phase complete                  -> Completed, squashed into the implementation
   /phase affirm                    -> Affirmed (engineer's declaration only)
   /phase refute                    -> Refuted (the phase's proposition is
                                    not realized)
