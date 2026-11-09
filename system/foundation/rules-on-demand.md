@@ -1114,6 +1114,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
     - **Abandoned**: dropped before concluding. It is not merged, and the record is kept.
     - **Superseded**: replaced by another implementation. Each of the two records names its counterpart.
     - **Suspended**: paused, not ended.
+    - **Discontinued**: stopped, with no plan to resume. It is not current work: the list of current work and the session-start notice leave it out. It may resume, and what it recorded may be merged.
 11. The words only work that reaches a verdict takes are these.
     - **Affirmed**: the question held, or the intent was met as forecast. The engineer declares it.
     - **Refuted**: the question was disproven, or the intent was not met as forecast.

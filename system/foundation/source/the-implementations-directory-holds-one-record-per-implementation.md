@@ -43,6 +43,7 @@ Open with the **Question** or the **Intent**, then the setup:
 - **Abandoned** — dropped before concluding. Not merged, and the record is kept.
 - **Superseded** — replaced by another implementation. The two records name the counterpart.
 - **Suspended** — paused, not ended.
+- **Discontinued** — stopped, with no plan to resume. It is not current work, so the list of current work and the session-start notice leave it out. It may resume, and what it recorded may be merged.
 
 **The words work that reaches a verdict takes**, because each is a verdict:
 
@@ -123,6 +124,7 @@ Write the state line as `Active` when the record is written, and update it as th
     - **Abandoned**: dropped before concluding. It is not merged, and the record is kept.
     - **Superseded**: replaced by another implementation. Each of the two records names its counterpart.
     - **Suspended**: paused, not ended.
+    - **Discontinued**: stopped, with no plan to resume. It is not current work: the list of current work and the session-start notice leave it out. It may resume, and what it recorded may be merged.
 11. The words only work that reaches a verdict takes are these.
     - **Affirmed**: the question held, or the intent was met as forecast. The engineer declares it.
     - **Refuted**: the question was disproven, or the intent was not met as forecast.
@@ -174,8 +176,11 @@ Write the state line as `Active` when the record is written, and update it as th
 - 2026-10-29, revised: either kind opens with a question or an intent, and the verdict is chosen at the start; checked: 52 directives, 52 kept, 0 less precise, 0 lost
 - 2026-11-06, revised: a concluding state the engineer did not name is put to the engineer through the selection interface; checked: 76 directives, 75 kept, 0 less precise, 1 lost, 1 repair; re-checked: 76 directives, 76 kept, 0 less precise, 0 lost
 - 2026-11-08, revised: the forecast is asked at the start and the verdict at the end; not re-checked
+- 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 an implementation had no Discontinued state. A paused implementation could only be Suspended, which stays in the list of current work.
 
 Until Sun Nov 8 2026 whether the work forecast and reached a verdict was one choice, made at the start.
 
@@ -229,3 +234,4 @@ Changed by Scott Bellware on Thu Oct 29 2026 at 10:38:42 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:13 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 2:59:48 PM PT

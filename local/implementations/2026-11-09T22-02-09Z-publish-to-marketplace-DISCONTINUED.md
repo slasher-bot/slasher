@@ -14,7 +14,7 @@ Slasher's plugin is listed in a Claude Code plugin marketplace. A project that i
 
 ## State
 
-- **State:** Suspended
+- **State:** Discontinued
 
 ## Setup
 
@@ -33,6 +33,7 @@ Slasher's plugin is listed in a Claude Code plugin marketplace. A project that i
 - **2026-11-09** — The feature states a forecast, selected by the engineer at the start. The engineer accepted the forecast's wording.
 - **2026-11-09** — The feature is Suspended, with its research merged into `master`, selected by the engineer. The engineer asked for it to be set aside as inconclusive until they return to it. The branch and the worktree are kept.
 - **2026-11-09** — Branch deletion and worktree removal, selected by the engineer, since the branch was fully merged into `master`. This departs from the rule that suspension deletes no branch. Resuming starts a new branch from `master`.
+- **2026-11-09** — The feature is Discontinued, in place of Suspended, selected by the engineer, so that it is not listed as current work. The engineer added the Discontinued state to the implementations rule for it.
 
 ## Findings so far
 
@@ -43,3 +44,4 @@ The research reached no conclusion. Its five log entries on the branch were merg
 Authored by Scott Bellware on Mon Nov 9 2026 at 2:02:09 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 2:54:27 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 2:55:51 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 2:59:56 PM PT

@@ -169,11 +169,12 @@ implementations=
 if [ -n "$own" ]; then
   # One directory, one call. The concluded words are the union of the two kinds':
   # an experiment reaches a verdict, a feature reaches Completed, and both may be
-  # abandoned or superseded. Suspended is deliberately absent — a suspended
-  # implementation is paused rather than concluded, and is still reported.
+  # abandoned or superseded. A discontinued implementation is not current work, so it is
+  # not reported. Suspended is deliberately absent — a suspended implementation is paused
+  # rather than concluded, and is still reported.
   implementations=$(
     report_open "$own/implementations" implementation implementations \
-      Affirmed Refuted Inconclusive Completed Abandoned Superseded
+      Affirmed Refuted Inconclusive Completed Abandoned Superseded Discontinued
   )
 fi
 
