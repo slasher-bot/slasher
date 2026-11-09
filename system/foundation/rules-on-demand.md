@@ -524,15 +524,17 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 6. A `worktree/` segment carries into each phase's name.
 7. A phase branches from the implementation's branch and concludes into it.
 8. Where the phase reaches a verdict, it is affirmed, refuted, or inconclusive only on the engineer's declaration.
-9. An affirmed phase's commits are squashed into the implementation's branch.
+9. An affirmed phase merges back into the implementation's branch.
 10. The record carries each phase's verdict and findings.
-11. Where the phase reaches no verdict, it concludes Completed, with no verdict, and its commits are squashed into the implementation's branch.
+11. Where the phase reaches no verdict, it concludes Completed, with no verdict, and merges back into the implementation's branch.
 12. One phase runs at a time, in the record's order, each from the implementation's branch as the earlier phases left it.
 13. A phase's commits reach no other branch.
 14. The implementation concludes after its phases, and only then merges to its upstream branch.
-15. A phase's commits arrive as one squashed commit, not merged with their history. Its subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first.
-16. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
-17. Keep a phase's branch until the implementation concludes. Delete it with the implementation's branch.
+15. Squash a phase's commits when the implementation concludes, not when the phase does. Before the implementation merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
+16. A commit made outside any phase stays as it is, in its place. Where the branch was pushed, the rebuilt branch is force-pushed on the engineer's selection.
+17. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first.
+18. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
+19. Keep a phase's branch until the implementation concludes. Delete it with the implementation's branch.
 
 ## The working location
 
