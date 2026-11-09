@@ -946,6 +946,7 @@ Slasher installed at slasher/system/ — 5 packages: foundation, language, testi
 22. `printf` interpolates the notice and the instruction into a JSON string with no escaping.
 23. A double quote ends the string, and a lone backslash begins an invalid escape.
 24. Either way the harness fails to parse the output, and the notice disappears with no error.
+25. After a compaction, one line stands in place of the startup display and the notice: `Context compacted. Slasher is reloading its rules.` It says what the session does next, and reports no read.
 
 ## The read instruction
 
@@ -1395,6 +1396,7 @@ Slasher is pre-loading its rules...
 57. A blank line prints as a blank line. The figure keeps its spacing without a fence.
 58. These are the whole of what is printed. No greeting, no account of what is about to be read, and no name for the block accompany them.
 59. The package set's absence is the ordinary case, not an omission.
+60. After a compaction, the session-start part is not printed. One line stands in its place, per the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule.
 
 # Unattended carries out a request without stopping for the engineer
 

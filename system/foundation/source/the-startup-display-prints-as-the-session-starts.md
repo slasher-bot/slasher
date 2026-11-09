@@ -2,7 +2,7 @@
 
 **Trigger:** When a session starts, or the engineer types its first prompt, or when changing the startup display or its script
 
-The things below are printed verbatim, in two parts. **The session-start part** prints as the session starts: the title and the copyright and license ahead of the session-start notice, and the load line after it, last. **The loading part** prints on the session's first prompt, whatever the prompt is, since that is when the rules are read: the loading line, then the figure. Five things are always printed, in the order this file gives them. The package set is printed only where the project has declared one, and it prints after the loading part, whatever its place in this file.
+The things below are printed verbatim, in two parts. **The session-start part** prints as the session starts: the title and the copyright and license ahead of the session-start notice, and the load line after it, last. **The loading part** prints on the session's first prompt, whatever the prompt is, since that is when the rules are read: the loading line, then the figure. Five things are always printed, in the order this file gives them. After a compaction the session-start part is not printed, and one line stands in its place, per the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule. The package set is printed only where the project has declared one, and it prints after the loading part, whatever its place in this file.
 
 **The harness prints the five, and the agent prints none of them.** As the session starts, the Slasher plugin's `SessionStart` hook runs `slasher/system/foundation/session-start.sh`, which prints the title and the copyright and license ahead of the session-start notice, and the load line after it, in the one `systemMessage`. It takes the title and the license from `startup-display.sh message`, and the load line from `startup-display.sh load-line`, each of which prints its blocks alone. On every prompt, the plugin's `UserPromptSubmit` hook runs `slasher/system/foundation/startup-display.sh`, which prints the loading part as a `systemMessage` on the session's first prompt and nothing after. An agent can skip a display it is told to print, or write it into its thinking, where it is not shown, and nothing reports either. A display the harness prints does not depend on the agent following an instruction.
 
@@ -239,6 +239,7 @@ Slasher is pre-loading its rules...
 57. A blank line prints as a blank line. The figure keeps its spacing without a fence.
 58. These are the whole of what is printed. No greeting, no account of what is about to be read, and no name for the block accompany them.
 59. The package set's absence is the ordinary case, not an omission.
+60. After a compaction, the session-start part is not printed. One line stands in its place, per the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule.
 
 ## Compression
 
@@ -269,8 +270,11 @@ Slasher is pre-loading its rules...
 - 2026-11-07, revised: the tagline reads *The engineer decides. The agent generates.*, wording the engineer gave; not re-checked
 - 2026-11-07, revised: the title reads *Slasher: Human in the Loop AI*, wording the engineer gave; not re-checked
 - 2026-11-07, revised: the tagline reads *The engineer decides. The agent generates. Humanity rules.* again, wording the engineer gave; not re-checked
+- 2026-11-08, revised: the session-start part is not printed after a compaction, as point 60; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the session-start part printed after a compaction too.
 
 Until Sat Nov 7 2026, for part of that day, the tagline read *The engineer decides. The agent generates.* The engineer restored *Humanity rules.*
 
@@ -379,3 +383,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 12:52:44 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:49:24 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:15:12 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:20:24 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 5:25:11 PM PT

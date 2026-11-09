@@ -118,6 +118,8 @@ The notice and the display are wired by the hooks of the Slasher plugin, in `.cl
 
 **After a compaction, the instruction opens with one more sentence.** The hook runs again when the context is compacted, and it reads the event's source from its input. Where the source is `compact`, the instruction first says that the rules read at the start now survive only as the compaction's summary, which does not hold them, and that the loader is to be run again before the next act. Without that sentence, the instruction given at the start reads as already done: the summary says the read happened, and most sessions went on from the summary. A start, a resume, and a clear get the instruction unchanged.
 
+**After a compaction, the engineer sees one line in place of the startup display and the notice:** `Context compacted. Slasher is reloading its rules.` The session is already under way, so the title, the copyright and license, the install line, the open line, and the load line tell the engineer nothing new. The load line would also be wrong, since the agent reads the rules again without `/load`. The line says what the session does next, as the read instruction does, and reports no read, so it is no exception to *installed, never loaded*.
+
 **The instruction carries the core rules after it, so they hold from the session's start, before the read.** `foundation/core-rules` names them, and the hook adds each as the loader prints it, under a line saying they hold before the read, which still runs in full. A hook can give the agent at most 10,000 characters, and Claude Code saves anything longer to a file the agent is not asked to read. So the core holds only the rules that shape the first answer, and the whole of what the hook gives the agent stays within 10,000 characters. The core rules hold quotation marks and backslashes, which the hook escapes, unlike the notice, which carries none.
 
 **It tells the agent not to print the startup display, because the harness prints it.** Under a later model the display stopped reaching the engineer, skipped or written into the agent's thinking, and nothing reported it. The plugin's hooks now print it, as the session starts and on its first prompt (see the the-startup-display-prints-as-the-session-starts rule). The **art is not carried on this channel either**. The display hook reads it from that rule.
@@ -203,6 +205,7 @@ Slasher installed at slasher/system/ — 5 packages: foundation, language, testi
 22. `printf` interpolates the notice and the instruction into a JSON string with no escaping.
 23. A double quote ends the string, and a lone backslash begins an invalid escape.
 24. Either way the harness fails to parse the output, and the notice disappears with no error.
+25. After a compaction, one line stands in place of the startup display and the notice: `Context compacted. Slasher is reloading its rules.` It says what the session does next, and reports no read.
 
 ## The read instruction
 
@@ -318,8 +321,11 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 - 2026-11-05, revised: the instruction carries the core rules, within the hook's 10,000 characters; checked: 63 directives, 59 kept, 4 less precise, 0 lost, 2 repairs, to the core rules point; re-checked: 63 directives, 61 kept, 2 less precise, 0 lost. Left less precise: the status line example's in-between lines, which the prose states, and that the loading part is read from the startup display rule, as the art is
 - 2026-11-06, revised: the agent prints the command domain table at the end of the session-start read, beside the package set stanza; checked: 103 directives, 99 kept, 4 less precise, 0 lost. Left less precise, none touched by this revision: that the uncommitted changes segment carries no count, that the loading part reads its content from the startup display rule, that the authoring source lists packages under `system/`, and that `session-start.sh instruction` prints the instruction alone, as plain text
 - 2026-11-07, revised: the status line's second line names the implementation under way, as points 18 to 20 of the status line; checked: 46 directives, 40 kept, 6 less precise, 0 lost, 2 repairs; re-checked: 46 directives, 42 kept, 4 less precise, 0 lost. Directives 15, 19, 32, and 46, on a missing upstream, the loading part, the compaction, and `/load`, are less precise in text this revision did not change, and are left as they are
+- 2026-11-08, revised: after a compaction the notice is one line in place of the startup display, as point 25 of the session-start notice; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the engineer saw the whole startup display and notice after a compaction, as at a session's start.
 
 Until Sat Nov 7 2026 the status line was one line, and did not name the implementation under way.
 
@@ -468,3 +474,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 8:06:23 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 9:34:21 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:35:33 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 5:25:11 PM PT

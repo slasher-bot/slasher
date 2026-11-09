@@ -299,17 +299,23 @@ if [ "$source" = "compact" ]; then
   instruction="The context has just been compacted. The rules read at the start of this session now survive only as the compaction's summary, which does not hold them. Before your next act, whatever the next request is, run the loader again and read its whole output, as follows. ${instruction}"
 fi
 
-# The startup display's title and license lead the message, and its load line ends it, so the
-# notice stands between them. startup-display.sh prints each ready for a JSON string, and prints
-# nothing where its rule is missing, which leaves the notice alone.
-display=$(sh "$system/foundation/startup-display.sh" message 2>/dev/null)
-if [ -n "$display" ]; then
-  notice="${display}\\n\\n${notice}"
-fi
+# After a compaction the session is under way, so the engineer sees one line in place of the
+# startup display and the notice.
+if [ "$source" = "compact" ]; then
+  notice="Context compacted. Slasher is reloading its rules."
+else
+  # The startup display's title and license lead the message, and its load line ends it, so the
+  # notice stands between them. startup-display.sh prints each ready for a JSON string, and prints
+  # nothing where its rule is missing, which leaves the notice alone.
+  display=$(sh "$system/foundation/startup-display.sh" message 2>/dev/null)
+  if [ -n "$display" ]; then
+    notice="${display}\\n\\n${notice}"
+  fi
 
-load_line=$(sh "$system/foundation/startup-display.sh" load-line 2>/dev/null)
-if [ -n "$load_line" ]; then
-  notice="${notice}\\n\\n${load_line}"
+  load_line=$(sh "$system/foundation/startup-display.sh" load-line 2>/dev/null)
+  if [ -n "$load_line" ]; then
+    notice="${notice}\\n\\n${load_line}"
+  fi
 fi
 
 # The core rules, carried after the instruction, so they hold from the session's start, before
