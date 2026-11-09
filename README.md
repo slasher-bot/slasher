@@ -11,6 +11,7 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 - **Rules that direct the agent's behavior.** The whole rule set is loaded at the start of every session, one rule per file, written in prose.
 - **Work that records itself.** Decisions, plans, features, and experiments are recorded in the project's `slasher/` directory and committed with the code.
 - **A design method with the engineer in control at decision points.** Design By Efferent: the agent stops at the decisions that matter and offers options, never a single proposal.
+- **Human in the loop, or fully automated.** When a feature or experiment starts, the engineer chooses how much autonomy the agent is given.
 - **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
 - **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one.
 - **Domain conventions.** Packages for language, testing, git, and versioning.
