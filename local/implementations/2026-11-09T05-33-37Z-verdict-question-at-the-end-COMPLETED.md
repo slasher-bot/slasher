@@ -15,7 +15,7 @@ The work changes rules and skills and no script, so it is content work, and runs
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -33,6 +33,13 @@ The work changes rules and skills and no script, so it is content work, and runs
 - **2026-11-08** — The feature concludes without an engineer's verdict, selected by the engineer at the start.
 - **2026-11-08** — No participation was asked. The work is content work, which the local rule keeps out of the hinges.
 
+- **2026-11-08** — The feature is Completed and merges into `master`, selected by the engineer. The item is Realized, selected by the engineer.
+
+## Outcome
+
+The start asks whether the work states a forecast, *No forecast* first, and the end asks the verdict question of work with a forecast only. The current branch rules out both. Phases follow the same rules, asked when added and when complete. A simulated feature in a scratch repository exercised the path with a forecast and no verdict. Along the way the Attended option came to label its figure *Confidence:*. The automated suite is verified: 25 tests.
+
 ---
 
 Authored by Scott Bellware on Sun Nov 8 2026 at 9:33:37 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:52:21 PM PT
