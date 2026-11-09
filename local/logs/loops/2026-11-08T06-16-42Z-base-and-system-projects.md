@@ -116,8 +116,34 @@ The feature lets a project address its base project, the machine's system projec
 - **Hinge:** how the failure comes about.
 - **Outcome:** the test passed before any code was written. The script already exits non-zero, because `sed` cannot read the missing file. The hinge was degenerate, and the engineer kept the test as coverage. The automated suite is verified: 21 tests.
 
+## Outcome 5 — the system project is not resolved without system-project.toml
+
+### Cycle 1 — actuation
+
+- **Hinge:** how the system project is resolved when `system-project.toml` is missing.
+- **Options:** `cd "$project" && SLASHER_SYSTEM_PROJECT="$config/system-project.toml" system/foundation/resolve-project.sh -system`, the invocation `system.sh` uses, in its own file, `test/automated/resolve-project/system-without-system-project-toml.sh`; *Not this*.
+- **Decision / chat:** the engineer selected the invocation `system.sh` uses.
+
+### Cycle 2 — observation
+
+- **Hinge:** what the test reads about `resolve-project.sh -system` with no `system-project.toml`.
+- **Options:** a non-zero exit; a non-zero exit and no path on standard output.
+- **Decision / chat:** the engineer selected a non-zero exit and no path on standard output.
+
+### Cycle 3 — controls
+
+- **Hinge:** what the test builds before it runs the script.
+- **Options:** an empty config directory, with the file missing; no config directory, as on a machine where `~/.config/slasher` was never made.
+- **Decision / chat:** the engineer selected the empty config directory.
+
+### Cycle 4 — implementation
+
+- **Hinge:** how the failure comes about.
+- **Outcome:** the test passed before any code was written. The script already exits non-zero and prints nothing, because `sed` cannot read the missing file. The hinge was degenerate, and the engineer kept the test as coverage.
+
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 1:25:48 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:47:36 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 5:50:43 PM PT
