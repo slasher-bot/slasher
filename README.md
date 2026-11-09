@@ -9,7 +9,7 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 ## What Slasher Offers
 
 - **Rules that direct the agent's behavior.** Rules are written in prose, one rule per file. Most are pre-loaded at the start of every session. The rest load on demand, at the moment the agent takes the act they govern, such as writing a commit message.
-- **Work that records itself.** Decisions, plans, features, and experiments are recorded in the project's `slasher/` directory and committed with the code.
+- **Work that records itself.** Detailed event logs recorded for every step and decision about ideas, features, experiments, designs, plans, and just about every aspect of a project.
 - **Commands for the work.** Slash commands record items and decisions, start features and experiments, take the next step, and say what was recently done. `/help` lists them all.
 - **A design method with the engineer in control at decision points.** Design By Efferent: the agent stops at the decisions that matter and offers options, never a single proposal.
 - **Human in the loop, or fully automated.** When a feature or experiment starts, the engineer chooses how much autonomy the agent is given.
