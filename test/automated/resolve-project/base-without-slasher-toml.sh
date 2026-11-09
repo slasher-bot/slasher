@@ -31,4 +31,4 @@ base=$(cd "$project" && system/foundation/resolve-project.sh -base 2>/dev/null) 
 
 [ "$status" -ne 0 ] || fail "Fails" "output:" "$base"
 
-echo "1 passed"
+echo "0 failed, 0 aborted"
