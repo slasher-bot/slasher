@@ -15,7 +15,7 @@ The things below are printed verbatim, in two parts. **The session-start part** 
 First the title, with the tagline under it:
 
 ```
-Slasher: Human in the Loop AI
+Slasher: Human in the Loop Harness
 
 The engineer decides. The agent generates. Humanity rules.
 ```
@@ -146,7 +146,7 @@ Then **one blank line**, then the block, which ends the loading part:
 13. First the title, with the tagline under it:
 
 ```
-Slasher: Human in the Loop AI
+Slasher: Human in the Loop Harness
 
 The engineer decides. The agent generates. Humanity rules.
 ```
@@ -271,8 +271,11 @@ Slasher is pre-loading its rules...
 - 2026-11-07, revised: the title reads *Slasher: Human in the Loop AI*, wording the engineer gave; not re-checked
 - 2026-11-07, revised: the tagline reads *The engineer decides. The agent generates. Humanity rules.* again, wording the engineer gave; not re-checked
 - 2026-11-08, revised: the session-start part is not printed after a compaction, as point 60; not re-checked
+- 2026-11-08, revised: the title reads *Slasher: Human in the Loop Harness*, wording the engineer gave; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the title read *Slasher: Human in the Loop AI*, and the root `README.md`'s title read *Human in the Loop AI*.
 
 Until Sun Nov 8 2026 the session-start part printed after a compaction too.
 
@@ -384,3 +387,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 12:49:24 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:15:12 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:20:24 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:25:11 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 11:05:51 PM PT

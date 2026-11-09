@@ -1,6 +1,6 @@
 ![Slasher](material/slasher-logo-wide.png)
 
-# Human in the Loop AI
+# Human in the Loop Harness
 
 The engineer decides. The agent generates. Humanity rules.
 
