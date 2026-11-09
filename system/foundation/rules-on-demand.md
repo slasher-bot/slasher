@@ -195,7 +195,7 @@ Trigger: When starting a phase of an experiment or a feature, or when the engine
 
 Source: system/foundation/source/a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows.md
 
-Trigger: When the engineer asks for a list of records, as with `/item list`, `/list`, or `/items`
+Trigger: When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/features`, or `/experiments`
 
 1. When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence. A table presents the fields in headed columns. Rows present one record to a line, with its fields in sequence and no columns. A list is called a table only where it is formatted as columns.
 2. This applies to any record type. That includes items, implementation records, log entries, loop records, work session records, migration records, journal entries, and commits.
@@ -203,7 +203,7 @@ Trigger: When the engineer asks for a list of records, as with `/item list`, `/l
 4. The handle is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit.
 5. Every column after the handle has a heading.
 6. Two SHA columns come right after the handle: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the handle, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed.
-7. These two SHA columns are always present, in every list but a list of items or a list of commits. They are not chosen per request.
+7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features` and `/experiments` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
 ```
@@ -244,6 +244,16 @@ A list of items takes the ordinal and no SHA columns:
 6. `/items` takes an optional number *n*, as in `/items 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
 7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
 8. A number given to `/items` does not change these counts.
+
+## The features and experiments commands
+
+1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Active or Suspended.
+2. A record's kind is the word its title opens with, as in `Feature — The current command`.
+3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
+4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
+5. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
+6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Active and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
+7. A number given to the command does not change these counts.
 
 ## Keep every column short
 

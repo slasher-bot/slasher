@@ -12,4 +12,5 @@ EXPERIMENTS
   /experiment resume               Suspended -> Active
   /experiment supersede, /supersede-> Superseded, after suspension
   /experiment abandon, /abandon    -> Abandoned
+  /experiments [<n>]               The current experiments, or the n most recent
   /experiment help                 Print this command's help

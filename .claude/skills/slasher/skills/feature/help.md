@@ -10,6 +10,7 @@ FEATURES
   /feature resume                  Suspended -> Active
   /feature supersede, /supersede   -> Superseded, after suspension
   /feature abandon, /abandon       -> Abandoned
+  /features [<n>]                  The current features, or the n most recent
   /feature help                    Print this command's help
 
   Either kind opens with a question or an intent. A forecast is

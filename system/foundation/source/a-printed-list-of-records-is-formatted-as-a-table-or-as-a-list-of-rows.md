@@ -1,6 +1,6 @@
 # A printed list of records is formatted as a table or as a list of rows
 
-**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, or `/items`
+**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/features`, or `/experiments`
 
 **When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence.** A table presents the fields in headed columns. Rows present one record to a line, its fields in sequence, with no columns. **A list is called a table only where it is formatted as columns.** That reaches any record — items, implementation records, log entries, loop records, work session records, migration records, journal entries, and commits.
 
@@ -8,7 +8,7 @@
 
 **A list of items opens with an ordinal**, a number from 1 in the order the rows are printed, ahead of the handle. The engineer refers to a row by that number.
 
-**Two SHA columns follow the handle: the commit that created the record, and the last to touch it.** They are standing columns rather than chosen ones, in every list but a list of items and a list of commits.
+**Two SHA columns follow the handle: the commit that created the record, and the last to touch it.** They are standing columns rather than chosen ones, in every list but a list of items, a list of commits, and the lists `/features` and `/experiments` print.
 
 ```
 |                        | created   | changed   | implementation                   | state     |
@@ -68,6 +68,20 @@ A list of items takes the ordinal and no SHA columns:
 
 **As the engineer stated it:** Change current-items to current, and include a summary of current implementations at the bottom.
 
+## The features and experiments commands
+
+**`/features` lists the current features, and `/experiments` lists the current experiments.** A current feature or experiment is one whose `**State:**` line reads Active or Suspended, as with the current implementations `/items` lists. A record's kind is the word its title opens with, as in `Feature — The current command` or `Experiment — Rules files flattening`.
+
+**Each row is an ordinal, the record's handle, its title, and its state.** The list takes the ordinal and no SHA columns, as a list of items does, since each command does for its kind what `/items` does for items. The title is the record's own.
+
+**Each command takes an optional number, *n*, and then lists only the *n* most recently created current records of its kind.** A record's recency is its handle. The records listed keep the order of the full list, oldest first, and their ordinals count from 1. `/features 3` lists the three most recently created current features.
+
+**Where none of its kind is current, the list is one line:** *No current feature.* for `/features`, and *No current experiment.* for `/experiments`.
+
+**Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Active and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
+
+**As the engineer stated it:** Create a "/features" command and an "/experiments" command that does for them what the "/items" command does
+
 ## Keep every column short
 
 **A field that is a sentence does not belong in a table.** Column widths are fixed against the widest cell, so one long field narrows every other column and wraps every row. What was a scannable grid becomes prose in boxes.
@@ -98,7 +112,7 @@ Keep every column short. Where a field runs to a sentence, use rows instead.
 4. The handle is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit.
 5. Every column after the handle has a heading.
 6. Two SHA columns come right after the handle: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the handle, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed.
-7. These two SHA columns are always present, in every list but a list of items or a list of commits. They are not chosen per request.
+7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features` and `/experiments` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
 ```
@@ -140,6 +154,16 @@ A list of items takes the ordinal and no SHA columns:
 7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
 8. A number given to `/items` does not change these counts.
 
+## The features and experiments commands
+
+1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Active or Suspended.
+2. A record's kind is the word its title opens with, as in `Feature — The current command`.
+3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
+4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
+5. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
+6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Active and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
+7. A number given to the command does not change these counts.
+
 ## Keep every column short
 
 1. Keep every column short.
@@ -168,6 +192,7 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-07, revised: `/items` counts the items it leaves out, by state, below the items table, as points 7 and 8 of the items command; checked: 41 directives, 39 kept, 2 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before, and the heading the no-implementation line sits under, which point 1 of the items command ties to the implementations
 - 2026-11-07, revised: `/items` prints its state counts as one comma-separated sentence, in point 7 of the items command; checked: 31 directives, 30 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before
 - 2026-11-07, revised: `/items` prints its state counts under the heading *Other items*, in point 7 of the items command; checked: 36 directives, 35 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the heading the no-implementation line sits under, as before
+- 2026-11-09, revised: `/features` and `/experiments` list the current records of their kind, with an optional number and counts of the other states, as the features and experiments commands; checked: 48 directives, 47 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before
 
 ## History
 
@@ -240,3 +265,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 1:04:28 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:30:58 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:19:47 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:55:17 AM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 10:53:56 PM PT
