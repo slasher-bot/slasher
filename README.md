@@ -6,6 +6,15 @@ The engineer decides. The agent generates. Humanity rules.
 
 Where there is ambiguity, the agent gives the engineer options, including the option to take over.
 
+## What Slasher offers
+
+- **Rules that direct the agent's behavior.** The whole rule set is loaded at the start of every session, one rule per file, written in prose.
+- **Work that records itself.** Decisions, plans, features, and experiments are recorded in the project's `slasher/` directory and committed with the code.
+- **A design method with the engineer in control at decision points.** Design By Efferent: the agent stops at the decisions that matter and offers options, never a single proposal.
+- **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
+- **Domain conventions.** Packages for language, testing, git, and versioning.
+- **Machinery.** The installer, package sets, a session-start hook, a status line, and commands.
+
 ## Install Slasher
 
 Slasher's packages are installed using `git subtree`. Each package is its own subtree, which allows the packages to be refreshed from the source.
