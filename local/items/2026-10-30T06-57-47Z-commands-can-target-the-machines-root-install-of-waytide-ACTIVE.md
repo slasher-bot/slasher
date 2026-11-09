@@ -35,6 +35,7 @@
 **Amended 2026-11-07:** there may need to be project registries at more than one level, not only the one registry under `~/.config`. An example is a large open source project made of many repositories, with a root project above them. Working inside that project's directory tree, the engineer may want to address its repositories through a registry of that project's own, rather than list every project in the one registry for the machine. **Not yet settled:** whether there are registries at more than one level, where such a registry is kept, and how a project's name is resolved where more than one registry applies.
 
 - **2026-11-08** — Registries at more than one level are canceled. There is one registry, the machine's, under `~/.config/slasher`. This answers the 2026-11-07 amendment.
+- **2026-11-08, later** — Registries at more than one level are abandoned, not canceled. This replaces the word in the resolution above, and what it says otherwise stands.
 
 ## History
 
@@ -83,3 +84,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 1:14:10 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:15:15 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 7:15:40 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 7:11:58 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 7:14:09 PM PT
