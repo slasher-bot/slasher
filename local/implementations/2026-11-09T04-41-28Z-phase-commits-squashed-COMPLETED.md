@@ -12,14 +12,14 @@ The work changes a rule and no script, so it is content work, and runs through n
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/phase-commits-squashed`
-- **Base:** the commit on `master` that adds this record
+- **Base:** `06be9e05`, from `master`, the commit that adds this record
 - **Working location:** branch and worktree, chosen at the start. The worktree is `../slasher-feature-worktree-phase-commits-squashed`, and the main working tree stays on `master`.
 - **Participation:** none asked. The work is content work.
 - **Verdict:** it concludes without an engineer's verdict, selected at the start.
@@ -30,6 +30,13 @@ The work changes a rule and no script, so it is content work, and runs through n
 - **2026-11-08** — The feature concludes without an engineer's verdict, selected by the engineer at the start.
 - **2026-11-08** — No participation was asked. The work is content work, which the local rule keeps out of the hinges.
 
+- **2026-11-08** — The feature is Completed and merges into `master`, selected by the engineer. The item is Realized, selected by the engineer.
+
+## Outcome
+
+The an-implementation-runs-on-a-branch-to-a-declared-end rule squashes a phase's commits when the implementation concludes. Phases merge with `--no-ff` meanwhile, the record names each phase's start, and the conclusion rebuilds the branch with one squashed commit per phase. Two runs by a fresh agent tested it in a scratch repository. The first found seven gaps, of which four were closed. The second passed, and three of its gaps were closed. The fixes from the second run have not been run again. The automated suite is verified: 25 tests.
+
 ---
 
 Authored by Scott Bellware on Sun Nov 8 2026 at 8:41:28 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:10:37 PM PT
