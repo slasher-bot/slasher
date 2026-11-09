@@ -41,22 +41,6 @@ The script fetches the packages over SSH. Where no SSH key is registered, run it
 
 The file is committed as an executable, but `curl` transfers content and not file metadata. The copy it writes is not executable, whatever mode the original carries. Every other script here is invoked as itself, because every other script reaches a project by `git subtree`, which does preserve the mode.
 
-### Package sets
-
-A **package set** is a named list of packages, so a configuration that is wanted more than once is asked for by name rather than assembled again. Two exist:
-
-- **`default`** — `foundation`, `language`, `testing`, `git`, `versioning`, `design-by-efferent`, `journal`. Everything except the tool-specific packages. This is what no arguments installs.
-- **`content`** — `foundation`, `language`, `git`, `versioning`, `journal`. For a project whose product is prose or pages: articles, lessons, slide decks, a site. It leaves out `design-by-efferent`, whose five hinges are a design method for a unit of code, and `testing` with it.
-
-```
-sh install                 # the default set
-sh install content         # a package set
-sh install foundation git  # packages by name
-sh install content journal # a set and a package together
-```
-
-A set's members are installed as ordinary packages. Nothing records which set asked for them, and a project that installed `content` is indistinguishable afterward from one that named those five packages itself.
-
 ## Commands
 
 Type `/help` for the full list, or `/<command> help` for an individual command.
