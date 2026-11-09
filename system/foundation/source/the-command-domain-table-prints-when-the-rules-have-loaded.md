@@ -9,7 +9,7 @@
 | `/., /recent` | Says what was recently done, and what's next. |
 | `/', /items` | Lists the current items, features, and experiments. |
 
-The other commands are `/>`, `/<`, `/#`, `/item`, `/feature`, `/experiment`, `/items`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/unattended`, `/estimate-confidence`, `/log`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/load`, and `/commands`.
+The other commands are `/>`, `/<`, `/#`, `/item`, `/feature`, `/experiment`, `/items`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/unattended`, `/estimate-confidence`, `/log`, `/decision`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/load`, and `/commands`.
 
 Type /help for more
 
@@ -37,6 +37,7 @@ Type /help for more
 | `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
 | `/estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |
+| `/decision` | Log a decision, tagged [decision] |
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
 | `/test` | These commands run the project's tests and report on them. |
@@ -51,7 +52,7 @@ Type /help for more
 
 **Each table is followed by the help line, *Type /help for more*.** It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
 
-**Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/unattended`, `/items`, `/recent`, `/next`, `/>`, `/next?`, `/clarify`, `/<`, `/#`, `/estimate-confidence`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, and `/clarify` of the LANGUAGE domain. Each has a row of its own: `/items` and `/recent` above the `/process` row, `/next`, `/next?`, `/clarify`, `/unattended`, and `/estimate-confidence` below it, in that order. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, `/>`, `/<`, `/#`, and `/commands` are the only aliases with rows of their own. `/help`, `/'`, `/>?`, and `/command-table` itself have none.
+**Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/unattended`, `/items`, `/recent`, `/next`, `/>`, `/next?`, `/clarify`, `/<`, `/#`, `/estimate-confidence`, `/decision`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own: `/items` and `/recent` above the `/process` row, `/next`, `/next?`, `/clarify`, `/unattended`, and `/estimate-confidence` below it, in that order, and `/decision` below the `/log` row. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, `/>`, `/<`, `/#`, and `/commands` are the only aliases with rows of their own. `/help`, `/'`, `/>?`, and `/command-table` itself have none.
 
 **After the startup table, its sentence, and the help line, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
@@ -72,6 +73,8 @@ Type /help for more
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Sun Nov 8 2026 the full table had no `/decision` row.
 
 Until Sun Nov 8 2026 the help line read *For more help, type /help*.
 
@@ -224,3 +227,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 2:33:46 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:34:17 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:31:46 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:34:48 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 6:58:17 PM PT
