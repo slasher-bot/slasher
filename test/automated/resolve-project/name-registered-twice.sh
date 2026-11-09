@@ -23,13 +23,13 @@ trap 'rm -rf "$registry" "$project"' EXIT
 mkdir -p "$project/system/foundation"
 cp system/foundation/resolve-project.sh system/foundation/read-consuming-projects.sh "$project/system/foundation/"
 
-control_checkout="$registry/some-projects/some-checkout"
-mkdir -p "$control_checkout/slasher/system"
-git init -q "$control_checkout"
+control_project="$registry/some-projects/some-project"
+mkdir -p "$control_project/slasher/system"
+git init -q "$control_project"
 
-control_other_checkout="$registry/some-other-projects/some-checkout"
-mkdir -p "$control_other_checkout/slasher/system"
-git init -q "$control_other_checkout"
+control_other_project="$registry/some-other-projects/some-project"
+mkdir -p "$control_other_project/slasher/system"
+git init -q "$control_other_project"
 
 cat > "$registry/consuming-projects.toml" <<REGISTRY
 included = [
@@ -40,7 +40,7 @@ REGISTRY
 
 # Actuation ------------------------------------------------------------------
 
-resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-checkout 2>/dev/null) && status=0 || status=$?
+resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-project 2>/dev/null) && status=0 || status=$?
 
 # When more than one registered project has the name
 
