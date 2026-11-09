@@ -11,7 +11,7 @@
 
 The other commands are `/>`, `/<`, `/#`, `/item`, `/feature`, `/experiment`, `/items`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/unattended`, `/estimate-confidence`, `/log`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/load`, and `/commands`.
 
-For more help, type /help
+Type /help for more
 
 **The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
@@ -47,9 +47,9 @@ For more help, type /help
 | `/load` | This command loads the rules now, without waiting for the first prompt. |
 | `/commands` | Print this table |
 
-For more help, type /help
+Type /help for more
 
-**Each table is followed by the help line, *For more help, type /help*.** It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
+**Each table is followed by the help line, *Type /help for more*.** It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
 
 **Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/unattended`, `/items`, `/recent`, `/next`, `/>`, `/next?`, `/clarify`, `/<`, `/#`, `/estimate-confidence`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, and `/clarify` of the LANGUAGE domain. Each has a row of its own: `/items` and `/recent` above the `/process` row, `/next`, `/next?`, `/clarify`, `/unattended`, and `/estimate-confidence` below it, in that order. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, `/>`, `/<`, `/#`, and `/commands` are the only aliases with rows of their own. `/help`, `/'`, `/>?`, and `/command-table` itself have none.
 
@@ -72,6 +72,8 @@ For more help, type /help
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Sun Nov 8 2026 the help line read *For more help, type /help*.
 
 Until Sun Nov 8 2026 no help line followed either table.
 
@@ -221,3 +223,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 2:30:59 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:33:46 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:34:17 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:31:46 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 5:34:48 PM PT
