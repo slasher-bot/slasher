@@ -23,6 +23,7 @@
 - **`[idea]`** — a thought about what the work could be, proposed and not yet settled.
 - **`[improvement]`** — a proposed change to something that already exists, not yet settled. An idea proposes something new. An improvement concludes Realized when the change exists.
 - **`[correction]`** — a proposed change that puts right something that exists and is wrong, such as a false statement in a rule. An improvement changes something that is not wrong. A correction concludes Realized when the fix exists.
+- **`[rework]`** — work to redo something already produced that turned out wrong. A rework item carries `[rework]`, `[work]`, and `[correction]` together: it is a correction, and a piece of work to be done. As a work item it concludes `Done`, never `Realized`, whatever its `[correction]` tag says of a correction alone.
 - **`[design]`** — settled direction, recorded as dated **Settled** resolutions.
 - **`[plan]`** — a sequence of work, with checkbox tasks stating behavior and no code.
 - **`[aspiration]`** — an outcome hoped for, written only where an aspiration was asked for.
@@ -94,6 +95,7 @@ Every item carries a `**State:**` line, from the moment it is written:
 - **Done** — the work is done. It takes the place of `Realized`, which a work item does not take.
 - **Before it concludes**, a work item takes an item's states — `Open`, `Active`, `Deferred`, and `Suspended`.
 - **`Done` is taken back** to `Active` when the work reopens, as `Realized` is for any other item.
+- **A rework item is a work item.** Its `[work]` tag decides its states, so it concludes `Done`, though it also carries `[correction]`.
 
 **Why:** a work item describes something to do rather than something to exist, so *realized* misstates its end. *Done* says what happened to it.
 
@@ -138,7 +140,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 19. Tags are the ordinary square-bracket tags every working-state artifact takes (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 20. `[observation]` and `[work]` mean what their rules say: the observations rule, and the work-item section below.
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
-22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong, and concludes Realized when the fix exists. An improvement changes something that is not wrong. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
+22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong, and concludes Realized when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
@@ -169,7 +171,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 50. An item tagged `[work]` is a piece of work to be done.
 51. A work item takes `Open`, `Active`, `Deferred`, and `Suspended`.
 52. A work item concludes `Done`, `Abandoned`, `Superseded`, or `Obsolete`.
-53. A work item never takes `Realized`.
+53. A work item never takes `Realized`. A rework item is a work item, and concludes `Done` though it also carries `[correction]`.
 54. Take `Done` back to `Active` when the work reopens.
 55. Supersede an item rather than rewrite it.
 56. What a superseded item settled stays as written.
@@ -198,8 +200,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-06, revised: a concluding state the engineer did not name is put to the engineer through the selection interface; checked: 103 directives, 100 kept, 2 less precise, 1 lost, 1 repair; re-checked: 103 directives, 101 kept, 2 less precise, 0 lost. Directives 24 and 70, the problem and mistake contrast and the description of Recorded, are less precise in text this revision did not change, and are left as they are
 - 2026-11-07, revised: `[improvement]` is described, as a proposed change to something that already exists; checked: 80 directives, 74 kept, 6 less precise, 0 lost, 1 repair; re-checked: 80 directives, 76 kept, 4 less precise, 0 lost. Directives 11, 19, 20, and 60, on the idea, the problem, the mistake, and Recorded, are less precise in text this revision did not change, and are left as they are
 - 2026-11-07, revised: `[correction]` is described, as a proposed change that puts right something that exists and is wrong; checked: 72 directives, 71 kept, 1 less precise, 0 lost. Left less precise, untouched by this revision: that a settled item is never regenerated, which the compressed text says only of an item another names as what it realizes
+- 2026-11-08, revised: the `[rework]` kind, carrying `[work]` and `[correction]` and concluding as a work item; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 this rule described no `[rework]` kind.
 
 Until Sat Nov 7 2026 this rule described no `[correction]` kind. The engineer settled that a correction is a proposed change that puts right something that exists and is wrong.
 
@@ -287,3 +292,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:30:03 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:36:57 AM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 8:18:46 PM PT
