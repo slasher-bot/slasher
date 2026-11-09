@@ -1,6 +1,6 @@
 # The README presents more of Waytide's capabilities
 
-- **State:** Open
+- **State:** Abandoned
 - **Tags:** [idea]
 - **Waits for:** Waytide's website
 
@@ -20,3 +20,4 @@ As the engineer first stated it: "New idea: Include more of Waytide's capabiliti
 
 Authored by Scott Bellware on Thu Oct 22 2026 at 9:44:46 AM PT
 Changed by Scott Bellware on Thu Oct 22 2026 at 9:51:41 AM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 8:36:15 PM PT
