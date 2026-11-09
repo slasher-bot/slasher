@@ -1164,7 +1164,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 19. Tags are the ordinary square-bracket tags every working-state artifact takes (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 20. `[observation]` and `[work]` mean what their rules say: the observations rule, and the work-item section below.
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
-22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong, and concludes Realized when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
+22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Done` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
@@ -1195,7 +1195,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 50. An item tagged `[work]` is a piece of work to be done.
 51. A work item takes `Open`, `Active`, `Deferred`, and `Suspended`.
 52. A work item concludes `Done`, `Abandoned`, `Superseded`, or `Obsolete`.
-53. A work item never takes `Realized`. A rework item is a work item, and concludes `Done` though it also carries `[correction]`.
+53. A work item never takes `Realized`. A correction and a rework item are work items, and each concludes `Done`.
 54. Take `Done` back to `Active` when the work reopens.
 55. Supersede an item rather than rewrite it.
 56. What a superseded item settled stays as written.

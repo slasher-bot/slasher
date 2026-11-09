@@ -8,7 +8,8 @@ ITEMS
                                    kind is not also a subcommand of /item
   /item idea, /idea                Create an item tagged [idea]
   /item improvement, /improvement  Create an item tagged [improvement]
-  /item correction, /correction    Create an item tagged [correction]
+  /item correction, /correction    Create an item tagged [correction] [work]
+                                   [rework]
   /item rework                     Create an item tagged [rework] [work]
                                    [correction]
   /item work, /work, /work-item    Create an item tagged [work]
