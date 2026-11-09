@@ -142,7 +142,7 @@ Trigger: When creating an item, adding a dated Settled resolution to it, changin
 
 Source: system/foundation/source/a-log-entry-recording-an-engineers-decision-is-tagged-decision.md
 
-Trigger: When writing a log entry that records a decision
+Trigger: When writing a log entry that records a decision, or when the engineer types `/decision`
 
 1. When the engineer makes a decision, the log entry that records it carries `**Tags:** [decision]`.
 2. The tag says who decided. Every log entry states a decision, so the tag marks the engineer's.
@@ -167,6 +167,15 @@ Trigger: When writing a log entry that records a decision
 4. An engineer's decision to stop doing something is tagged `[decision] [suspended]`.
 5. What `[decision]` marks is fixed here.
 6. The set of the engineer's decisions is read from this tag.
+
+## The /decision command
+
+1. `/decision <text>` logs the text as the engineer's decision. The text is the entry's title, in the engineer's words, with grammar and flow corrected and nothing added.
+2. The entry carries `**Tags:** [decision]` and follows every convention of the log, per the the-log-holds-one-file-per-entry-with-a-one-line-title rule.
+3. `/decision` alone logs the decision the conversation has just reached, stated as the title, as `/log-this` states the work's, tagged `[decision]`.
+4. Where that decision is the agent's act under a rule, say so and write nothing.
+5. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
+6. Commit the entry with the change it bears on, or on its own with a `Log:` prefix.
 
 # When an implementation's phase starts, its goal is stated, and the phases are listed with the current one marked
 

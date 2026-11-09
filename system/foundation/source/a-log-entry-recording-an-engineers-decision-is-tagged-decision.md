@@ -1,6 +1,6 @@
 # A log entry recording an engineer's decision is tagged `[decision]`
 
-**Trigger:** When writing a log entry that records a decision
+**Trigger:** When writing a log entry that records a decision, or when the engineer types `/decision`
 
 **When the engineer makes a decision, the log entry that records it carries `**Tags:** [decision]`.** The tag says who decided.
 
@@ -25,6 +25,14 @@
 **Why:** the log carries the agent's acts and the engineer's decisions in the same form, one line each. A reader who reconsiders a direction needs to know which were the engineer's. A decision the engineer made is changed by the engineer, and an act of the agent is corrected against the rule it followed. With the tag, the engineer's decisions are a set that one search finds.
 
 **How to apply:** when the engineer makes a decision, write its log entry with `**Tags:** [decision]` under the title. Do not tag an entry for an act the agent took under a rule.
+
+## The /decision command
+
+**`/decision <text>` logs the text as the engineer's decision.** The text is the entry's title, in the engineer's words, with grammar and flow corrected and nothing added. The entry carries `**Tags:** [decision]` under it, and follows every convention of the log, per the the-log-holds-one-file-per-entry-with-a-one-line-title rule. The engineer typed it, so it is the engineer's decision, whether or not an option was put forward first.
+
+**`/decision` alone logs the decision the conversation has just reached.** It states that decision as the title, as `/log-this` states the work's, and tags it `[decision]`. Where the decision is the agent's act under a rule rather than the engineer's selection, it is not a decision this command logs, and the command says so and writes nothing. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
+
+**Commit the entry as the log rule says:** with the change it bears on, or on its own with a `Log:` prefix.
 
 ## Compressed
 
@@ -52,13 +60,25 @@
 5. What `[decision]` marks is fixed here.
 6. The set of the engineer's decisions is read from this tag.
 
+## The /decision command
+
+1. `/decision <text>` logs the text as the engineer's decision. The text is the entry's title, in the engineer's words, with grammar and flow corrected and nothing added.
+2. The entry carries `**Tags:** [decision]` and follows every convention of the log, per the the-log-holds-one-file-per-entry-with-a-one-line-title rule.
+3. `/decision` alone logs the decision the conversation has just reached, stated as the title, as `/log-this` states the work's, tagged `[decision]`.
+4. Where that decision is the agent's act under a rule, say so and write nothing.
+5. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
+6. Commit the entry with the change it bears on, or on its own with a `Log:` prefix.
+
 ## Compression
 
 - 2026-10-24, compressed: compression 0.15, change 0.37, solubility 72 → 93, clarity 0.62 → 1.00, 8 directives, 8 kept, 0 less precise, 0 lost, after 1 repair, re-checked kept
 - 2026-10-27, revised: `[decision]` is no longer called a reserved tag, a term the engineer settled; not checked
 - 2026-10-28, revised: Why points removed, solubility 93 → 93, clarity 1.00 → 0.99; checked: 10 directives, 10 kept, 0 less precise, 0 lost
+- 2026-11-08, revised: the /decision command, a section of its own in the body and the compressed text; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 there was no `/decision` command, and this rule's trigger named only writing a decision entry.
 
 Until Sun Oct 25 2026 this rule was named a-decision-the-engineer-made-is-tagged-decision and titled "A log entry recording a decision the engineer made is tagged `[decision]`".
 
@@ -83,3 +103,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 9:42:16 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 6:57:09 PM PT
