@@ -517,7 +517,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 ## Phases
 
 1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the implementation's.
-2. The record names the phases and their order at the start.
+2. The record names the phases and their order at the start, and, as each phase starts, the commit it branched from.
 3. Whether a phase reaches a verdict is chosen for that phase when it is added, whatever its implementation chose. A phase that reaches a verdict states its forecast before its work. One without states none.
 4. A phase's branch is the implementation's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
 5. Git refuses a slash here, because no branch can sit beneath another branch's name.
@@ -530,8 +530,8 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 12. One phase runs at a time, in the record's order, each from the implementation's branch as the earlier phases left it.
 13. A phase's commits reach no other branch.
 14. The implementation concludes after its phases, and only then merges to its upstream branch.
-15. Squash a phase's commits when the implementation concludes, not when the phase does. Before the implementation merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
-16. A commit made outside any phase stays as it is, in its place. Where the branch was pushed, the rebuilt branch is force-pushed on the engineer's selection.
+15. Merge a concluded phase with `git merge --no-ff`. Squash a phase's commits when the implementation concludes, not when the phase does. Read each phase's commits from the start the record names to the phase's branch. Before the implementation merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
+16. A commit made outside any phase keeps its content and its message, in its place. Its SHA changes. Where the branch was pushed, force-push the rebuilt branch with `--force-with-lease` against the pushed tip, on the engineer's selection.
 17. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first.
 18. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
 19. Keep a phase's branch until the implementation concludes. Delete it with the implementation's branch.
@@ -614,7 +614,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 24. Under branch only, the working tree switches back.
 25. Under a worktree, end the session in the main working tree, never in the removed directory.
 26. On the current branch there is nothing to return from.
-27. Branch deletion takes one confirmation from the engineer, through the selection interface. It covers the worktree removal and the kept phase branches too. Do not prompt twice.
+27. Branch deletion takes one confirmation from the engineer, through the selection interface. It covers the worktree removal, the kept phase branches, and the implementation's branch on the remote where it was pushed. Do not prompt twice. Delete a squashed phase's branch with `git branch -D`, since git refuses `-d` for it.
 28. Remove the worktree first, since git refuses to delete a branch checked out in a worktree.
 29. Suspension deletes no branch and removes no worktree.
 
