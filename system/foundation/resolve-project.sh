@@ -15,7 +15,8 @@
 # names another file in its place, so a test can use its own.
 #
 # <name> prints the root of the project in the machine's registry whose
-# directory has that name, as read-consuming-projects.sh lists them.
+# directory has that name, as read-consuming-projects.sh lists them. Where no
+# registered project has that name, it prints nothing and exits non-zero.
 
 set -e
 
@@ -39,11 +40,20 @@ case $1 in
   *)
     name=$1
 
-    "$(dirname "$0")/read-consuming-projects.sh" |
-      while IFS= read -r registered; do
-        if [ "$(basename "$registered")" = "$name" ]; then
-          printf '%s\n' "$registered"
-        fi
-      done
+    resolved=$(
+      "$(dirname "$0")/read-consuming-projects.sh" |
+        while IFS= read -r registered; do
+          if [ "$(basename "$registered")" = "$name" ]; then
+            printf '%s\n' "$registered"
+          fi
+        done
+    )
+
+    if [ -z "$resolved" ]; then
+      echo "No project named $name is in the registry" >&2
+      exit 1
+    fi
+
+    printf '%s\n' "$resolved"
     ;;
 esac

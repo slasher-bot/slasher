@@ -32,4 +32,4 @@ system=$(cd "$project" && SLASHER_SYSTEM_PROJECT="$config/system-project.toml" s
 [ "$status" -ne 0 ] || fail "Fails" "status:" "$status"
 [ -z "$system" ] || fail "Fails" "output:" "$system"
 
-echo "1 passed"
+echo "0 failed, 0 aborted"
