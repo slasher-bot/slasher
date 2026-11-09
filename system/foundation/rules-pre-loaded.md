@@ -433,7 +433,7 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 
 The other commands are `/>`, `/<`, `/#`, `/item`, `/feature`, `/experiment`, `/items`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/unattended`, `/estimate-confidence`, `/log`, `/decision`, `/observation`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/load`, and `/commands`.
 
-Type /help for Slasher's full help, or <command> help for help for a particular command.
+Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
@@ -471,9 +471,9 @@ Type /help for Slasher's full help, or <command> help for help for a particular 
 | `/load` | This command loads the rules now, without waiting for the first prompt. |
 | `/commands` | Print this table |
 
-Type /help for Slasher's full help, or <command> help for help for a particular command.
+Type /help for all of Slasher's help, or /<command> help for one command's.
 
-**Each table is followed by the help line:** *Type /help for Slasher's full help, or <command> help for help for a particular command.* It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
+**Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
 
 **Each row is one command domain, except the `/slasher help`, `/?`, `/.`, `/unattended`, `/items`, `/recent`, `/next`, `/>`, `/next?`, `/clarify`, `/<`, `/#`, `/estimate-confidence`, `/decision`, `/observation`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own: `/items` and `/recent` above the `/process` row, `/next`, `/next?`, `/clarify`, `/unattended`, and `/estimate-confidence` below it, in that order, and `/decision` below the `/log` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/?`, `/.`, `/>`, `/<`, `/#`, `/observation`, and `/commands` are the only aliases with rows of their own. `/help`, `/'`, `/>?`, and `/command-table` itself have none.
 
