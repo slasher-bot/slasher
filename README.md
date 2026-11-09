@@ -48,19 +48,20 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | Command | Description |
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
-| `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
+| `/?, /commands` | Print this table |
+| `/., /recent` | This command says what was recently done, and what's next. |
 | `/', /items` | This command lists the current items, then the current features and experiments. |
+| `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
+| `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
+| `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
+| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
+| `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/features` | This command lists the current features. |
 | `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/experiments` | This command lists the current experiments. |
-| `/., /recent` | This command says what was recently done, and what's next. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
-| `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
-| `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
-| `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
-| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |
 | `/decision` | Log a decision, tagged [decision] |
 | `/observation` | Record an observation |
@@ -72,7 +73,6 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/load` | This command loads the rules now, without waiting for the first prompt. |
-| `/?, /commands` | Print this table |
 
 ## License
 

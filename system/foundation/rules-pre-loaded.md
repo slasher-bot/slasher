@@ -442,19 +442,20 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | Command | Description |
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
-| `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
+| `/?, /commands` | Print this table |
+| `/., /recent` | This command says what was recently done, and what's next. |
 | `/', /items` | This command lists the current items, then the current features and experiments. |
+| `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
+| `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
+| `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
+| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
+| `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/features` | This command lists the current features. |
 | `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/experiments` | This command lists the current experiments. |
-| `/., /recent` | This command says what was recently done, and what's next. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
-| `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
-| `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
-| `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
-| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |
 | `/decision` | Log a decision, tagged [decision] |
 | `/observation` | Record an observation |
@@ -466,23 +467,22 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/load` | This command loads the rules now, without waiting for the first prompt. |
-| `/?, /commands` | Print this table |
 
 Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
 
-**Each row is one command domain, except the `/slasher help`, `/unattended`, `/items`, `/features`, `/experiments`, `/recent`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/decision`, `/observation`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own: `/items` below the `/item` row, `/recent` above the `/process` row, `/next`, `/next?`, `/clarify`, `/unattended`, and `/estimate-confidence` below it, in that order, and `/decision` below the `/log` row. `/features` is a root command of the FEATURES domain, and `/experiments` of the EXPERIMENTS domain. `/features` has a row below the `/feature` row, and `/experiments` below the `/experiment` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/observation` and `/commands` are the only aliases with rows of their own. `/help` and `/command-table` itself have none.
+**Each row is one command domain, except the `/slasher help`, `/unattended`, `/items`, `/features`, `/experiments`, `/recent`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/decision`, `/observation`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own. `/unattended` stands below the `/process` row, and `/decision` below the `/log` row. The rows of the commands with shortcut aliases stand at the top, as the paragraph on shortcut aliases sets out. `/features` is a root command of the FEATURES domain, and `/experiments` of the EXPERIMENTS domain. `/features` has a row below the `/feature` row, and `/experiments` below the `/experiment` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *This command* or *These commands*, as the help does. Print no other root command, alias, or subcommand in the table. `/observation` and `/commands` are the only aliases with rows of their own. `/help` and `/command-table` itself have none.
 
 **After the startup table, its sentence, and the help line, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
-**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>` of `/next`, `/>?` of `/next?`, `/<` of `/clarify`, `/#` of `/estimate-confidence`, and `/?` of `/command-table`. Their rows read `/', /items`, `/., /recent`, `/>, /next`, `/>?, /next?`, `/<, /clarify`, `/#, /estimate-confidence`, and `/?, /commands`. `/unattended` is a root command of the PROCESS domain, and its row stands below the `/clarify` row.
+**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>` of `/next`, `/>?` of `/next?`, `/<` of `/clarify`, `/#` of `/estimate-confidence`, and `/?` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/?, /commands`, `/., /recent`, `/', /items`, `/>, /next`, `/>?, /next?`, `/<, /clarify`, and `/#, /estimate-confidence`.
 
 **The PHASE domain has no row.** `/slasher help` still gives its help, and so does `/phase help`.
 
 **The first row names `/slasher help`, which prints the help of every Slasher command.** It names no command domain.
 
-**`/command-table` prints the full table.** It prints the full table and the help line below it, word for word, and nothing else: no startup table, no sentence, no `/items 10`, and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain, and has no row. `/commands` and `/?` are aliases of `/command-table`, and the help header names them. `/commands` has the last row, and `/?` shares it.
+**`/command-table` prints the full table.** It prints the full table and the help line below it, word for word, and nothing else: no startup table, no sentence, no `/items 10`, and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain, and has no row. `/commands` and `/?` are aliases of `/command-table`, and the help header names them. `/?` and `/commands` share the second row.
 
 **The agent prints the table, not the harness.** The harness renders its display as plain text, and the table needs markdown. That is the reason the package set stanza is the agent's too.
 
