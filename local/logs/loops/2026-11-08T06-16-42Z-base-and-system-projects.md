@@ -187,6 +187,18 @@ The feature lets a project address its base project, the machine's system projec
 - **Decided:** written directly. The test failed against the script, which printed both paths and exited 0. The change is one more guard beside outcome 6's.
 - **Outcome:** where more than one path matches, the script writes `More than one project named <name> is in the registry:` to standard error, with each path under it, and exits 1. The automated suite is verified: 24 tests.
 
+## Outcome 8 — `/projects` carries out an instruction in another project
+
+This outcome is prose: a rule, a skill, and its help. It runs through no hinges, per the local design-by-efferent-does-not-govern-content-work rule.
+
+- **Decided:** the rule is renamed projects-lists-the-registry-and-carries-out-an-instruction-in-another-project, since listing is no longer the whole of what it says. The skill, the foundation README, and the compiled rules follow the new name.
+- **Decided:** `/projects -base`, `-system`, or `<name>`, with an instruction, runs `resolve-project.sh` from the current project's root. Where the script fails, its message is reported and nothing more is done.
+- **Decided:** the target's own loader is run from the target's root before acting, and its rules govern the act. A Slasher project's records must keep its own conventions, and the system project is a full Slasher project.
+- **Decided:** a commit in the target waits for the engineer's selection, whatever the current project allows. This settles the open question of whether the agent commits in the target. A commit in another repository is outside the work the engineer is watching.
+- **Decided:** a target with no instruction prints the target's root, and acts on nothing.
+- **Decided:** the help gains a line for each of the three targets. The PROJECTS domain's description is left as it is, so the command table on `master` needs no change.
+- **Outcome:** the automated suite is verified: 24 tests.
+
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
