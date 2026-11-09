@@ -89,7 +89,7 @@ A set's members are installed as ordinary packages. Nothing records which set as
 | `/load` | This command loads the rules now, without waiting for the first prompt. |
 | `/commands` | Print this table |
 
-Type /help for all of Slasher's help, or /<command> help for one command's.
+Type `/help` for all of Slasher's help, or `/<command> help` for one command's.
 
 ## License
 
