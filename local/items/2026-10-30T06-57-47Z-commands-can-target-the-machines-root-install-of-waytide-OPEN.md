@@ -1,6 +1,6 @@
 # Base Slasher project and System Slasher project
 
-- **State:** Active
+- **State:** Open
 - **Tags:** [idea] [design]
 - **Priority:** 1
 
@@ -85,3 +85,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 1:15:15 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 7:15:40 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 7:11:58 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 7:14:09 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 7:16:08 PM PT
