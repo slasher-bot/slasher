@@ -49,17 +49,17 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
 | `/?, /commands` | Print this table |
-| `/., /recent` | This command says what was recently done, and what's next. |
-| `/', /items` | This command lists the current items, then the current features and experiments. |
+| `/., /recent` | Says what was recently done, and what's next. |
+| `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
 | `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
-| `/features` | This command lists the current features. |
+| `/features` | Lists the current features. |
 | `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
-| `/experiments` | This command lists the current experiments. |
+| `/experiments` | Lists the current experiments. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
 | `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
 | `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |
@@ -68,11 +68,11 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
 | `/test` | These commands run the project's tests and report on them. |
-| `/projects` | This command lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
-| `/release` | This command presents the candidates for a package's next version, for the engineer to choose. |
+| `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
+| `/release` | Presents the candidates for a package's next version, for the engineer to choose. |
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
-| `/load` | This command loads the rules now, without waiting for the first prompt. |
+| `/load` | Loads the rules now, without waiting for the first prompt. |
 
 ## License
 
