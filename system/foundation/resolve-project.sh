@@ -16,7 +16,8 @@
 #
 # <name> prints the root of the project in the machine's registry whose
 # directory has that name, as read-consuming-projects.sh lists them. Where no
-# registered project has that name, it prints nothing and exits non-zero.
+# registered project has that name, or more than one has, it prints nothing
+# and exits non-zero.
 
 set -e
 
@@ -51,6 +52,12 @@ case $1 in
 
     if [ -z "$resolved" ]; then
       echo "No project named $name is in the registry" >&2
+      exit 1
+    fi
+
+    if [ "$(printf '%s\n' "$resolved" | wc -l)" -gt 1 ]; then
+      echo "More than one project named $name is in the registry:" >&2
+      printf '%s\n' "$resolved" | sed 's/^/  /' >&2
       exit 1
     fi
 

@@ -164,6 +164,29 @@ The feature lets a project address its base project, the machine's system projec
 - **Decided:** written directly. The test failed against the script, which exited 0. The change is small, a guard on an empty result, and a red was already observed.
 - **Outcome:** the name branch collects the matching paths. Where there are none, it writes `No project named <name> is in the registry` to standard error and exits 1. The automated suite is verified: 23 tests.
 
+## Outcome 7 — a name two registered projects share is not resolved
+
+### Cycle 1 — actuation
+
+- **Hinge:** how a project is resolved by a name two registered projects have.
+- **Decided:** `cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-checkout`, the invocation `name.sh` uses, in its own file, `test/automated/resolve-project/name-registered-twice.sh`.
+
+### Cycle 2 — observation
+
+- **Hinge:** what the test reads about the effect.
+- **Decided:** a non-zero exit, and no path on standard output. Before this outcome the script printed both paths, and `/projects` would have taken two lines as one target. Neither path is the right one to pick, so neither is printed.
+
+### Cycle 3 — controls
+
+- **Hinge:** what registry the test builds.
+- **Decided:** two included directories, `some-projects` and `some-other-projects`, each holding a checkout named `some-checkout`. Two directories are needed, since one directory cannot hold two entries with one name.
+
+### Cycle 4 — implementation
+
+- **Hinge:** how the failure comes about.
+- **Decided:** written directly. The test failed against the script, which printed both paths and exited 0. The change is one more guard beside outcome 6's.
+- **Outcome:** where more than one path matches, the script writes `More than one project named <name> is in the registry:` to standard error, with each path under it, and exits 1. The automated suite is verified: 24 tests.
+
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
