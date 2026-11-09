@@ -1,9 +1,13 @@
 # A correction is also tagged [work] and [rework]
 
-- **State:** Open
+- **State:** Realized
 - **Tags:** [idea]
 
 **An item tagged `[correction]` is proposed to carry the `[work]` and `[rework]` tags as well.**
+
+## Settled
+
+- **2026-11-08** — A correction carries `[correction]`, `[work]`, and `[rework]`, and concludes as a work item: `Done` when the fix exists, never `Realized`. This is decided by the agent under `/unattended`, in the plan the engineer accepted.
 
 ## History
 
@@ -17,3 +21,5 @@ Later on 2026-11-08 the engineer added: "A rework item should also be tagged [re
 
 Authored by Scott Bellware on Sun Nov 8 2026 at 2:19:25 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:21:30 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 8:22:50 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 8:23:10 PM PT
