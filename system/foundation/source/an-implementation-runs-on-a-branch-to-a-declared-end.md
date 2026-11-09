@@ -29,9 +29,10 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 **As the engineer stated it:** features should have phases as well.
 
 - **A phase's branch is the implementation's branch name, a dot, and the phase's name** — `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`. A slash cannot join them: git refuses a branch named beneath another branch's name, so `experiment/rule-reduction/flattening` cannot exist beside `experiment/rule-reduction`. The `worktree/` segment, where the implementation has one, carries into each phase's name.
-- **A phase branches from the implementation's branch and concludes into it.** Where the phase reaches a verdict, it is affirmed, refuted, or inconclusive on the engineer's declaration, and an affirmed phase's commits are squashed into the implementation's branch. The record carries each phase's verdict and findings. Where the phase reaches no verdict, it concludes **Completed**, and its commits are squashed into the implementation's branch, with no verdict.
-- **A phase's commits arrive on the implementation's branch as one squashed commit**, not merged with their history. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, so their history survives in the message. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
-- **A phase's branch is kept until the implementation concludes**, so its separate commits can still be read. It is deleted with the implementation's branch, under the same one confirmation.
+- **A phase branches from the implementation's branch and concludes into it.** Where the phase reaches a verdict, it is affirmed, refuted, or inconclusive on the engineer's declaration, and an affirmed phase merges back into the implementation's branch. The record carries each phase's verdict and findings. Where the phase reaches no verdict, it concludes **Completed** and merges back into the implementation's branch, with no verdict.
+- **A phase's commits are squashed when the implementation concludes, not when the phase does.** While the work runs, a phase merges with its history, so its separate commits can be read on the implementation's branch. When the implementation concludes, and before it merges to its upstream branch, its branch is rebuilt so that each merged phase is one squashed commit, in the phases' order. A commit made on the implementation's branch outside any phase stays as it is, in its place. Where the branch was pushed, the rebuilt branch is force-pushed, which waits for the engineer's selection as every push does.
+- **The squashed commit's subject summarizes what the phase built**, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, so their history survives in the message. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
+- **A phase's branch is kept until the implementation concludes**, since the rebuild reads each phase's commits from it. It is deleted with the implementation's branch, under the same one confirmation.
 - **The implementation concludes after its phases**, and only then merges to its upstream branch. A phase's commits reach no other branch.
 - **One phase runs at a time, in the order the record names**, each starting from the implementation's branch as the phases before it left it.
 
@@ -157,15 +158,17 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 6. A `worktree/` segment carries into each phase's name.
 7. A phase branches from the implementation's branch and concludes into it.
 8. Where the phase reaches a verdict, it is affirmed, refuted, or inconclusive only on the engineer's declaration.
-9. An affirmed phase's commits are squashed into the implementation's branch.
+9. An affirmed phase merges back into the implementation's branch.
 10. The record carries each phase's verdict and findings.
-11. Where the phase reaches no verdict, it concludes Completed, with no verdict, and its commits are squashed into the implementation's branch.
+11. Where the phase reaches no verdict, it concludes Completed, with no verdict, and merges back into the implementation's branch.
 12. One phase runs at a time, in the record's order, each from the implementation's branch as the earlier phases left it.
 13. A phase's commits reach no other branch.
 14. The implementation concludes after its phases, and only then merges to its upstream branch.
-15. A phase's commits arrive as one squashed commit, not merged with their history. Its subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first.
-16. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
-17. Keep a phase's branch until the implementation concludes. Delete it with the implementation's branch.
+15. Squash a phase's commits when the implementation concludes, not when the phase does. Before the implementation merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
+16. A commit made outside any phase stays as it is, in its place. Where the branch was pushed, the rebuilt branch is force-pushed on the engineer's selection.
+17. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first.
+18. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
+19. Keep a phase's branch until the implementation concludes. Delete it with the implementation's branch.
 
 ## The working location
 
@@ -281,10 +284,11 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 - 2026-11-07, revised: the option reads *What's a verdict?*, with a question mark, a wording the engineer settled; not re-checked
 - 2026-11-07, revised: the without-verdict option is listed first; re-checked: 61 directives, 60 kept, 1 less precise, 0 lost. Left less precise, untouched by this revision: that work without a verdict is verified before integrating
 - 2026-11-08, revised: a phase's commits are squashed into the implementation's branch, and its branch is kept until the implementation concludes; not re-checked
+- 2026-11-08, revised: the squash happens when the implementation concludes, not when each phase does, and phases merge with their history meanwhile; not re-checked
 
 ## History
 
-Until Sun Nov 8 2026 a concluded phase merged into the implementation's branch with its history, and its branch was not named in the deletion at the end.
+Until Sun Nov 8 2026 a phase's commits stayed on the implementation's branch with their history through the conclusion, unsquashed, and a phase's branch was not named in the deletion at the end.
 
 Until Sat Nov 7 2026 *Conclude with an engineer's verdict* was the first option and *Conclude without an engineer's verdict* the second.
 
@@ -354,3 +358,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 10:54:15 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 10:58:24 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 10:59:40 AM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:42:47 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 8:50:01 PM PT
