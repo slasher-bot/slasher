@@ -542,9 +542,9 @@ Source: system/foundation/source/the-log-holds-one-file-per-entry-with-a-one-lin
 6. Never write that summary to a file.
 7. Give it in the response instead.
 
-## Log this
+## Logging the work under way
 
-1. A bare `/log`, and its alias `/log-this`, writes a log entry for the work the conversation is on. State as its title the decision or finding the work has just reached, with a body where the reasoning will not fit.
+1. A bare `/log` writes a log entry for the work the conversation is on. State as its title the decision or finding the work has just reached, with a body where the reasoning will not fit.
 2. Where nothing has been reached, say so and write nothing. Where it is unclear which decision is meant, ask, through the selection interface.
 3. The entry follows every convention of an entry the engineer dictates.
 

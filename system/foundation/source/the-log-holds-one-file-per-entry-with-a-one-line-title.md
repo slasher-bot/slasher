@@ -12,9 +12,9 @@ Record the log's entries made during sessions as one file per entry in `slasher/
 
 **How to apply:** when a decision is made, write a titled entry under `slasher/local/logs/log/`, with a UTC filename. It is one line in the ordinary case, and takes a body where its reasoning will not fit the title. Commit it with the change, or with a `Log:` prefix.
 
-## Log this
+## Logging the work under way
 
-**A bare `/log` writes a log entry for the work the conversation is on, without the engineer stating the decision.** `/log-this` is its alias, and does the same. The agent states the decision or the finding the work has just reached as the entry's title, and adds a body where the reasoning will not fit. Where the work has reached nothing to log, it says so and writes nothing. Where it is unclear which decision is meant, it asks, through the selection interface. The entry follows every convention an entry the engineer dictates follows.
+**A bare `/log` writes a log entry for the work the conversation is on, without the engineer stating the decision.** The agent states the decision or the finding the work has just reached as the entry's title, and adds a body where the reasoning will not fit. Where the work has reached nothing to log, it says so and writes nothing. Where it is unclear which decision is meant, it asks, through the selection interface. The entry follows every convention an entry the engineer dictates follows.
 
 ## Compressed
 
@@ -64,9 +64,9 @@ Record the log's entries made during sessions as one file per entry in `slasher/
 6. Never write that summary to a file.
 7. Give it in the response instead.
 
-## Log this
+## Logging the work under way
 
-1. A bare `/log`, and its alias `/log-this`, writes a log entry for the work the conversation is on. State as its title the decision or finding the work has just reached, with a body where the reasoning will not fit.
+1. A bare `/log` writes a log entry for the work the conversation is on. State as its title the decision or finding the work has just reached, with a body where the reasoning will not fit.
 2. Where nothing has been reached, say so and write nothing. Where it is unclear which decision is meant, ask, through the selection interface.
 3. The entry follows every convention of an entry the engineer dictates.
 
@@ -80,8 +80,11 @@ Record the log's entries made during sessions as one file per entry in `slasher/
 - 2026-10-29, merge from master re-checked: 29 directives, 28 kept, 1 less precise, 0 lost, 1 repairs
 - 2026-11-03, revised: /log-this writes an entry for the current work; checked: 27 directives, 27 kept, 0 less precise, 0 lost
 - 2026-11-09, revised: a bare /log writes an entry for the current work, and /log-this is its alias; not re-checked
+- 2026-11-09, revised: /log-this is removed; not re-checked
 
 ## History
+
+On Mon Nov 9 2026 `/log-this` was for a time an alias of a bare `/log`, until the engineer removed it.
 
 Until Mon Nov 9 2026 a bare `/log` asked what to log, offering the decisions the conversation had reached, and only `/log-this` logged the work under way.
 
@@ -150,3 +153,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 2:00:23 PM PT
 Changed by Scott Bellware on Tue Nov 3 2026 at 10:38:55 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:06:44 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 3:07:53 PM PT

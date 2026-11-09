@@ -172,7 +172,7 @@ Trigger: When writing a log entry that records a decision, or when the engineer 
 
 1. `/decision <text>` logs the text as the engineer's decision. The text is the entry's title, in the engineer's words, with grammar and flow corrected and nothing added.
 2. The entry carries `**Tags:** [decision]` and follows every convention of the log, per the the-log-holds-one-file-per-entry-with-a-one-line-title rule.
-3. `/decision` alone logs the decision the conversation has just reached, stated as the title, as `/log-this` states the work's, tagged `[decision]`.
+3. `/decision` alone logs the decision the conversation has just reached, stated as the title, as a bare `/log` states the work's, tagged `[decision]`.
 4. Where that decision is the agent's act under a rule, say so and write nothing.
 5. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
 6. Commit the entry with the change it bears on, or on its own with a `Log:` prefix.
