@@ -24,12 +24,12 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 ## An implementation in phases
 
-**An experiment or a feature may run in phases.** Each phase is a question or an intent of its own that serves the implementation's. The record names the phases and their order at the start, and, as each phase starts, the commit it branched from. **Whether a phase reaches a verdict is chosen for that phase, when it is added**, whatever its implementation chose. A phase that reaches a verdict states its forecast before its work, and a phase without one states none. **As the engineer stated it:** chosen per phase.
+**An experiment or a feature may run in phases.** Each phase is a question or an intent of its own that serves the implementation's. The record names the phases and their order at the start, and, as each phase starts, the commit it branched from. **Whether a phase states a forecast is asked when it is added**, whatever its implementation chose, with the options the implementation's forecast question has: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work, and a phase without one states none. **A phase with a forecast is asked the verdict question when its work is complete**, with the implementation's three options. A phase without one concludes Completed, unasked. **As the engineer stated it:** chosen per phase.
 
 **As the engineer stated it:** features should have phases as well.
 
 - **A phase's branch is the implementation's branch name, a dot, and the phase's name** — `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`. A slash cannot join them: git refuses a branch named beneath another branch's name, so `experiment/rule-reduction/flattening` cannot exist beside `experiment/rule-reduction`. The `worktree/` segment, where the implementation has one, carries into each phase's name.
-- **A phase branches from the implementation's branch and concludes into it.** Where the phase reaches a verdict, it is affirmed, refuted, or inconclusive on the engineer's declaration, and an affirmed phase merges back into the implementation's branch. The record carries each phase's verdict and findings. Where the phase reaches no verdict, it concludes **Completed** and merges back into the implementation's branch, with no verdict.
+- **A phase branches from the implementation's branch and concludes into it.** Where the phase is concluded with a verdict, it is affirmed, refuted, or inconclusive on the engineer's declaration, and an affirmed phase merges back into the implementation's branch. The record carries each phase's verdict and findings. Where the phase is concluded without a verdict, or has no forecast, it concludes **Completed** and merges back into the implementation's branch, with no verdict.
 - **A phase's commits are squashed when the implementation concludes, not when the phase does.** While the work runs, a phase merges with its history, with `git merge --no-ff`, so the merge commit marks where it ends and its separate commits can be read on the implementation's branch. When the implementation concludes, and before it merges to its upstream branch, its branch is rebuilt so that each merged phase is one squashed commit, in the phases' order. Each phase's `--no-ff` merge commit is dropped, since its squashed commit takes its place. The rebuild reads each phase's commits from the commit the record names as its start to the phase's branch. A commit made on the implementation's branch outside any phase keeps its content and its message, in its place. Its SHA changes, since its parent does. Where the branch was pushed, the rebuilt branch is force-pushed with `--force-with-lease` against the pushed tip, which waits for the engineer's selection as every push does.
 - **The squashed commit's subject summarizes what the phase built**, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, each on its own line after a dash, as `- Receipt tax rate`, so their history survives in the message. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
 - **A phase's branch is kept until the implementation concludes**, since the rebuild reads each phase's commits from it. It is deleted with the implementation's branch, under the same one confirmation.
@@ -156,15 +156,15 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the implementation's.
 2. The record names the phases and their order at the start, and, as each phase starts, the commit it branched from.
-3. Whether a phase reaches a verdict is chosen for that phase when it is added, whatever its implementation chose. A phase that reaches a verdict states its forecast before its work. One without states none.
+3. When a phase is added, ask whether it states a forecast, whatever its implementation chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the implementation's three options. A phase without a forecast is not asked.
 4. A phase's branch is the implementation's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
 5. Git refuses a slash here, because no branch can sit beneath another branch's name.
 6. A `worktree/` segment carries into each phase's name.
 7. A phase branches from the implementation's branch and concludes into it.
-8. Where the phase reaches a verdict, it is affirmed, refuted, or inconclusive only on the engineer's declaration.
+8. Where the phase is concluded with a verdict, it is affirmed, refuted, or inconclusive only on the engineer's declaration.
 9. An affirmed phase merges back into the implementation's branch.
 10. The record carries each phase's verdict and findings.
-11. Where the phase reaches no verdict, it concludes Completed, with no verdict, and merges back into the implementation's branch.
+11. Where the phase is concluded without a verdict, or has no forecast, it concludes Completed, with no verdict, and merges back into the implementation's branch.
 12. One phase runs at a time, in the record's order, each from the implementation's branch as the earlier phases left it.
 13. A phase's commits reach no other branch.
 14. The implementation concludes after its phases, and only then merges to its upstream branch.
@@ -294,8 +294,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-08, revised: the merge commits are dropped in the rebuild, the body lists subjects after a dash, and the remote branch is deleted only after the upstream is pushed, from gaps a second test run found; not re-checked
 - 2026-11-08, revised: a forecast is optional and asked at the start, the verdict question is asked at the end of work with a forecast, and the current branch rules out both; not re-checked
 - 2026-11-08, revised: the forecast question lists *No forecast* first, at the engineer's direction; not re-checked
+- 2026-11-08, revised: a phase is asked a forecast when added and the verdict when complete, as an implementation is, at the engineer's direction; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 whether a phase reached a verdict was chosen when it was added.
 
 Until Sun Nov 8 2026 whether the work reached a verdict was asked at the start, beside the working location, and work that reached one forecast before its work. The current branch was offered only to work without a verdict.
 
@@ -374,3 +377,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 8:59:52 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:04:01 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:35:54 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:42:51 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:49:53 PM PT
