@@ -14,7 +14,7 @@ Record the log's entries made during sessions as one file per entry in `slasher/
 
 ## Log this
 
-**`/log-this` writes a log entry for the work the conversation is on, without the engineer stating the decision.** The agent states the decision or the finding the work has just reached as the entry's title, and adds a body where the reasoning will not fit. Where the work has reached nothing to log, it says so and writes nothing. Where it is unclear which decision is meant, it asks, through the selection interface. The entry follows every convention an entry the engineer dictates follows.
+**A bare `/log` writes a log entry for the work the conversation is on, without the engineer stating the decision.** `/log-this` is its alias, and does the same. The agent states the decision or the finding the work has just reached as the entry's title, and adds a body where the reasoning will not fit. Where the work has reached nothing to log, it says so and writes nothing. Where it is unclear which decision is meant, it asks, through the selection interface. The entry follows every convention an entry the engineer dictates follows.
 
 ## Compressed
 
@@ -66,7 +66,7 @@ Record the log's entries made during sessions as one file per entry in `slasher/
 
 ## Log this
 
-1. `/log-this` writes a log entry for the work the conversation is on. State as its title the decision or finding the work has just reached, with a body where the reasoning will not fit.
+1. A bare `/log`, and its alias `/log-this`, writes a log entry for the work the conversation is on. State as its title the decision or finding the work has just reached, with a body where the reasoning will not fit.
 2. Where nothing has been reached, say so and write nothing. Where it is unclear which decision is meant, ask, through the selection interface.
 3. The entry follows every convention of an entry the engineer dictates.
 
@@ -79,8 +79,11 @@ Record the log's entries made during sessions as one file per entry in `slasher/
 - 2026-10-28, revised: Why points removed, solubility 65 → 62, clarity 0.70 → 0.70; checked: 21 directives, 21 kept, 0 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 29 directives, 28 kept, 1 less precise, 0 lost, 1 repairs
 - 2026-11-03, revised: /log-this writes an entry for the current work; checked: 27 directives, 27 kept, 0 less precise, 0 lost
+- 2026-11-09, revised: a bare /log writes an entry for the current work, and /log-this is its alias; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 a bare `/log` asked what to log, offering the decisions the conversation had reached, and only `/log-this` logged the work under way.
 
 Until Mon Nov 2 2026 an entry was written for a decision the engineer stated or the agent detected, and no command asked for one for the current work.
 
@@ -146,3 +149,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 10:02:47 PM PT
 Changed by Scott Bellware on Sun Oct 25 2026 at 2:00:23 PM PT
 Changed by Scott Bellware on Tue Nov 3 2026 at 10:38:55 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 3:06:44 PM PT
