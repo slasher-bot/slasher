@@ -6,7 +6,6 @@ LOG
   /log <message>                   Write a log entry with this message
   /log summary                     Summarize the log
 
-  /log-this                        An alias of /log
   /decision [<decision>]           Log a decision, tagged [decision]
 
   /work-session new | amend        Write or amend a work session record

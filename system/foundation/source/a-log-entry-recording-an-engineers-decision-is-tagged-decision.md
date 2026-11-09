@@ -30,7 +30,7 @@
 
 **`/decision <text>` logs the text as the engineer's decision.** The text is the entry's title, in the engineer's words, with grammar and flow corrected and nothing added. The entry carries `**Tags:** [decision]` under it, and follows every convention of the log, per the the-log-holds-one-file-per-entry-with-a-one-line-title rule. The engineer typed it, so it is the engineer's decision, whether or not an option was put forward first.
 
-**`/decision` alone logs the decision the conversation has just reached.** It states that decision as the title, as `/log-this` states the work's, and tags it `[decision]`. Where the decision is the agent's act under a rule rather than the engineer's selection, it is not a decision this command logs, and the command says so and writes nothing. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
+**`/decision` alone logs the decision the conversation has just reached.** It states that decision as the title, as a bare `/log` states the work's, and tags it `[decision]`. Where the decision is the agent's act under a rule rather than the engineer's selection, it is not a decision this command logs, and the command says so and writes nothing. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
 
 **Commit the entry as the log rule says:** with the change it bears on, or on its own with a `Log:` prefix.
 
@@ -64,7 +64,7 @@
 
 1. `/decision <text>` logs the text as the engineer's decision. The text is the entry's title, in the engineer's words, with grammar and flow corrected and nothing added.
 2. The entry carries `**Tags:** [decision]` and follows every convention of the log, per the the-log-holds-one-file-per-entry-with-a-one-line-title rule.
-3. `/decision` alone logs the decision the conversation has just reached, stated as the title, as `/log-this` states the work's, tagged `[decision]`.
+3. `/decision` alone logs the decision the conversation has just reached, stated as the title, as a bare `/log` states the work's, tagged `[decision]`.
 4. Where that decision is the agent's act under a rule, say so and write nothing.
 5. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
 6. Commit the entry with the change it bears on, or on its own with a `Log:` prefix.
@@ -104,3 +104,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 9:42:16 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 6:57:09 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 3:07:53 PM PT
