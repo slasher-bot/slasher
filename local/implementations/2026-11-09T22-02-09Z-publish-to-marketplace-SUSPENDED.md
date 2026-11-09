@@ -14,7 +14,7 @@ Slasher's plugin is listed in a Claude Code plugin marketplace. A project that i
 
 ## State
 
-- **State:** Active
+- **State:** Suspended
 
 ## Setup
 
@@ -31,7 +31,13 @@ Slasher's plugin is listed in a Claude Code plugin marketplace. A project that i
 - **2026-11-09** — The working location is branch and worktree, selected by the engineer at the start.
 - **2026-11-09** — Participation: Attended, selected by the engineer. Agent's confidence 45%, risk of redo 55%, It'll work 60%, Your approval 50%, attended confidence 65%. The warning was shown, and Attended was recommended.
 - **2026-11-09** — The feature states a forecast, selected by the engineer at the start. The engineer accepted the forecast's wording.
+- **2026-11-09** — The feature is Suspended, with its research merged into `master`, selected by the engineer. The engineer asked for it to be set aside as inconclusive until they return to it. The branch and the worktree are kept.
+
+## Findings so far
+
+The research reached no conclusion. Its five log entries on the branch were merged into `master`: the plugin needs Slasher's packages installed in the project; a per-project plugin that installs the rules on first use is recommended; Claude Code does not block a plugin from fetching over the network; a marketplace Slasher hosts in `slasher-bot/slasher` is recommended; and the plugin passes `claude plugin validate` and would not pass the directory's pre-submission checks. The work item to adopt a version number scheme arose from it.
 
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 2:02:09 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 2:54:27 PM PT
