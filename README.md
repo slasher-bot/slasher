@@ -6,7 +6,7 @@ The engineer decides. The agent generates. Humanity rules.
 
 Where there is ambiguity, the agent gives the engineer options, including the option to take over.
 
-## What Slasher offers
+## What Slasher Offers
 
 - **Rules that direct the agent's behavior.** The whole rule set is loaded at the start of every session, one rule per file, written in prose.
 - **Work that records itself.** Decisions, plans, features, and experiments are recorded in the project's `slasher/` directory and committed with the code.
