@@ -57,6 +57,8 @@ A set's members are installed as ordinary packages. Nothing records which set as
 
 ## Commands
 
+Type `/help` for the full list, or `/<command> help` for an individual command.
+
 | Command | Description |
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
@@ -90,8 +92,6 @@ A set's members are installed as ordinary packages. Nothing records which set as
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/load` | This command loads the rules now, without waiting for the first prompt. |
 | `/commands` | Print this table |
-
-Type `/help` for all of Slasher's help, or `/<command> help` for one command's.
 
 ## License
 
