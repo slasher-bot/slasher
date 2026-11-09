@@ -70,6 +70,7 @@ Trigger: When creating or editing a file under `test/`
 6. Write `control_file = "some file"` for a placeholder string value. Write each further placeholder in the "some other …" form, as in `"some other file"`.
 7. Use specific string content only when the test actually depends on it.
 8. Non-string placeholder values, such as a number, are not covered, because they have no "some" form.
+9. "some …" names something that exists. A placeholder for something that does not exist takes the form "some missing …", as in `"some-missing-project"`.
 
 # A feature with one case has one test file, named for the feature
 
