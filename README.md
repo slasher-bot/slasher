@@ -50,12 +50,12 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/slasher help` | Print the help of every Slasher command |
 | `/?, /commands` | Print this table |
 | `/., /recent` | Says what was recently done, and what's next. |
-| `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
 | `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
+| `/', /items` | Lists the current items, then the current features and experiments. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/features` | Lists the current features. |
 | `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
