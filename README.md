@@ -95,7 +95,7 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 
 ## License
 
-Slasher is licensed under the **Eventide Common Interest License**. It is source-available and free to use. It is not open source in the strict sense, since it does not permit modification without assent. The license text is forthcoming and will be published in `LICENSE`.
+Slasher is licensed under the **Eventide Common Interest License**. It is source-available and free to use. It is not open source in the strict sense, since it does not permit modification without permission. The license text is forthcoming and will be published in `LICENSE`.
 
 ---
 
