@@ -30,8 +30,8 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 - **A phase's branch is the implementation's branch name, a dot, and the phase's name** — `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`. A slash cannot join them: git refuses a branch named beneath another branch's name, so `experiment/rule-reduction/flattening` cannot exist beside `experiment/rule-reduction`. The `worktree/` segment, where the implementation has one, carries into each phase's name.
 - **A phase branches from the implementation's branch and concludes into it.** Where the phase reaches a verdict, it is affirmed, refuted, or inconclusive on the engineer's declaration, and an affirmed phase merges back into the implementation's branch. The record carries each phase's verdict and findings. Where the phase reaches no verdict, it concludes **Completed** and merges back into the implementation's branch, with no verdict.
-- **A phase's commits are squashed when the implementation concludes, not when the phase does.** While the work runs, a phase merges with its history, with `git merge --no-ff`, so the merge commit marks where it ends and its separate commits can be read on the implementation's branch. When the implementation concludes, and before it merges to its upstream branch, its branch is rebuilt so that each merged phase is one squashed commit, in the phases' order. The rebuild reads each phase's commits from the commit the record names as its start to the phase's branch. A commit made on the implementation's branch outside any phase keeps its content and its message, in its place. Its SHA changes, since its parent does. Where the branch was pushed, the rebuilt branch is force-pushed with `--force-with-lease` against the pushed tip, which waits for the engineer's selection as every push does.
-- **The squashed commit's subject summarizes what the phase built**, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, so their history survives in the message. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
+- **A phase's commits are squashed when the implementation concludes, not when the phase does.** While the work runs, a phase merges with its history, with `git merge --no-ff`, so the merge commit marks where it ends and its separate commits can be read on the implementation's branch. When the implementation concludes, and before it merges to its upstream branch, its branch is rebuilt so that each merged phase is one squashed commit, in the phases' order. Each phase's `--no-ff` merge commit is dropped, since its squashed commit takes its place. The rebuild reads each phase's commits from the commit the record names as its start to the phase's branch. A commit made on the implementation's branch outside any phase keeps its content and its message, in its place. Its SHA changes, since its parent does. Where the branch was pushed, the rebuilt branch is force-pushed with `--force-with-lease` against the pushed tip, which waits for the engineer's selection as every push does.
+- **The squashed commit's subject summarizes what the phase built**, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, each on its own line after a dash, as `- Receipt tax rate`, so their history survives in the message. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
 - **A phase's branch is kept until the implementation concludes**, since the rebuild reads each phase's commits from it. It is deleted with the implementation's branch, under the same one confirmation.
 - **The implementation concludes after its phases**, and only then merges to its upstream branch. A phase's commits reach no other branch.
 - **One phase runs at a time, in the order the record names**, each starting from the implementation's branch as the phases before it left it.
@@ -94,7 +94,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **Conclude in the main working tree, on the upstream branch.** With branch only, the working tree switches back. Under a worktree the main working tree never left it, so the session must end there rather than in a directory that has been removed. On the current branch there is nowhere to return from.
 
-**Branch deletion is engineer-confirmed, put through the selection interface, and the worktree is removed first.** Git refuses to delete a branch checked out in a worktree, and **one confirmation covers the two**, and the phase branches the implementation kept — a single cleanup act with a forced order, which splitting would prompt twice for. A squashed phase's branch is deleted with `git branch -D`, since its own commits never reached the upstream branch and git refuses `-d`. Where the implementation's branch was pushed, the deletion covers its branch on the remote too. Suspension never deletes and never removes a worktree.
+**Branch deletion is engineer-confirmed, put through the selection interface, and the worktree is removed first.** Git refuses to delete a branch checked out in a worktree, and **one confirmation covers the two**, and the phase branches the implementation kept — a single cleanup act with a forced order, which splitting would prompt twice for. A squashed phase's branch is deleted with `git branch -D`, since its own commits never reached the upstream branch and git refuses `-d`. Where the implementation's branch was pushed, the deletion covers its branch on the remote too, and that branch is deleted only after the upstream branch holding the work has been pushed. Deleting it sooner leaves the remote holding the work on no branch. Suspension never deletes and never removes a worktree.
 
 ## The agent never raises the end of work that reaches a verdict
 
@@ -164,9 +164,9 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 12. One phase runs at a time, in the record's order, each from the implementation's branch as the earlier phases left it.
 13. A phase's commits reach no other branch.
 14. The implementation concludes after its phases, and only then merges to its upstream branch.
-15. Merge a concluded phase with `git merge --no-ff`. Squash a phase's commits when the implementation concludes, not when the phase does. Read each phase's commits from the start the record names to the phase's branch. Before the implementation merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
+15. Merge a concluded phase with `git merge --no-ff`. Squash a phase's commits when the implementation concludes, not when the phase does. Read each phase's commits from the start the record names to the phase's branch. Drop each phase's `--no-ff` merge commit, since its squashed commit takes its place. Before the implementation merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
 16. A commit made outside any phase keeps its content and its message, in its place. Its SHA changes. Where the branch was pushed, force-push the rebuilt branch with `--force-with-lease` against the pushed tip, on the engineer's selection.
-17. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first.
+17. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, each on its own line after a dash.
 18. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
 19. Keep a phase's branch until the implementation concludes. Delete it with the implementation's branch.
 
@@ -248,7 +248,7 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 24. Under branch only, the working tree switches back.
 25. Under a worktree, end the session in the main working tree, never in the removed directory.
 26. On the current branch there is nothing to return from.
-27. Branch deletion takes one confirmation from the engineer, through the selection interface. It covers the worktree removal, the kept phase branches, and the implementation's branch on the remote where it was pushed. Do not prompt twice. Delete a squashed phase's branch with `git branch -D`, since git refuses `-d` for it.
+27. Branch deletion takes one confirmation from the engineer, through the selection interface. It covers the worktree removal, the kept phase branches, and the implementation's branch on the remote where it was pushed. Delete the remote branch only after the upstream branch holding the work has been pushed. Do not prompt twice. Delete a squashed phase's branch with `git branch -D`, since git refuses `-d` for it.
 28. Remove the worktree first, since git refuses to delete a branch checked out in a worktree.
 29. Suspension deletes no branch and removes no worktree.
 
@@ -286,6 +286,7 @@ Raise no ending for work that reaches a verdict. Leave the engineer on the upstr
 - 2026-11-08, revised: a phase's commits are squashed into the implementation's branch, and its branch is kept until the implementation concludes; not re-checked
 - 2026-11-08, revised: the squash happens when the implementation concludes, not when each phase does, and phases merge with their history meanwhile; not re-checked
 - 2026-11-08, revised: phases merge with `--no-ff`, the record names each phase's start, the rebuild reads from it, a squashed phase's branch is deleted with `-D` and the remote branch with it, and the force-push uses `--force-with-lease`, from gaps a test run found; not re-checked
+- 2026-11-08, revised: the merge commits are dropped in the rebuild, the body lists subjects after a dash, and the remote branch is deleted only after the upstream is pushed, from gaps a second test run found; not re-checked
 
 ## History
 
@@ -361,3 +362,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 10:59:40 AM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:42:47 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:50:01 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:59:52 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:04:01 PM PT
