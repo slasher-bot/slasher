@@ -32,7 +32,7 @@ with these options:
 
 > **Unattended** — The agent makes the decisions and generates through if you accept the plan it'll propose.
 >
-> **Attended (95%)** — You decide. The agent automates.
+> **Attended (Confidence: 95%)** — You decide. The agent automates.
 
 **The question carries the agent's confidence in doing the work unattended, as three percentages, and the risk of redo that follows from them.** Each is on a line of its own, followed by a sentence in parentheses that says what it measures, so the engineer does not have to know the terms to read it. The question is plain text, with no `**` around a figure, because the selection UI does not render markdown and prints the asterisks as characters. The figures above are examples. Each is the agent's own estimate for this piece of work, made at the moment it asks.
 
@@ -53,13 +53,13 @@ with these options:
 
 and the Attended option is marked as the recommendation, and moves first:
 
-> **Attended (Recommended, 90%)** — You decide. The agent automates.
+> **Attended (Recommended, Confidence: 90%)** — You decide. The agent automates.
 >
 > **Unattended** — The agent makes the decisions and generates through if you accept the plan it'll propose.
 
 Above 70%, the question carries no warning, neither option is marked, and Unattended is first. The engineer still chooses either way.
 
-**The Attended option carries, in parentheses, the agent's confidence if the work is attended.** Where Attended is the recommendation, the figure shares the parentheses: *Attended (Recommended, 90%)*. Attended work removes most of the risk behind *Your approval*, since the engineer decides each point where the design could go more than one way. That leaves *It'll work* as the main limit, so the attended confidence is about that figure, and may be a little higher, since a wrong turn is caught when it is taken. It is estimated, not calculated, like the other figures.
+**The Attended option carries, in parentheses, the agent's confidence if the work is attended, after the word *Confidence:*.** Where Attended is the recommendation, the figure shares the parentheses: *Attended (Recommended, Confidence: 90%)*. Attended work removes most of the risk behind *Your approval*, since the engineer decides each point where the design could go more than one way. That leaves *It'll work* as the main limit, so the attended confidence is about that figure, and may be a little higher, since a wrong turn is caught when it is taken. It is estimated, not calculated, like the other figures.
 
 **As the engineer stated it:** In each Attended option, put the confidence percentage in parentheses
 
@@ -168,7 +168,7 @@ with these options:
 
 > **Unattended** — The agent makes the decisions and generates through if you accept the plan it'll propose.
 >
-> **Attended (95%)** — You decide. The agent automates.
+> **Attended (Confidence: 95%)** — You decide. The agent automates.
 
 15. These words are fixed. The figures are examples.
 16. Put each figure on a line of its own, followed by its fixed sentence that says what it measures, in parentheses. Write no `**` around a figure. The selection UI prints them as characters.
@@ -185,7 +185,7 @@ with these options:
 
 25. When the overall score is 70% or lower, mark the Attended option as the recommendation, and list it first:
 
-> **Attended (Recommended, 90%)** — You decide. The agent automates.
+> **Attended (Recommended, Confidence: 90%)** — You decide. The agent automates.
 >
 > **Unattended** — The agent makes the decisions and generates through if you accept the plan it'll propose.
 
@@ -206,7 +206,7 @@ with these options:
 37. Under unattended work, write no Options line and no Decision / chat line.
 38. Do not write an unattended cycle as though an engineer was consulted.
 39. Do not mark unattended hinges with the a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule form *"none — no gate"*. That form surfaces a skipped gate in an attended run as a defect.
-40. Put the agent's estimate of its confidence if the work is attended in parentheses in the Attended option, as *Attended (95%)*, or *Attended (Recommended, 90%)* where it is recommended. Estimate it as about the *It'll work* figure, or a little higher. Do not calculate it.
+40. Put the agent's estimate of its confidence if the work is attended in parentheses in the Attended option, as *Attended (Confidence: 95%)*, or *Attended (Recommended, Confidence: 90%)* where it is recommended. Estimate it as about the *It'll work* figure, or a little higher. Do not calculate it.
 
 ## Unattended presents a plan before it generates
 
@@ -259,8 +259,11 @@ with these exact options:
 - 2026-11-07, revised: the *It'll work* sentence reads *how sure the agent is that what it builds on its own does what it says*, wording the engineer gave, after a moment ending *does what it says it does*; not re-checked
 - 2026-11-07, revised: *It is 100% minus the agent's confidence.* is removed from the risk-of-redo line, as the engineer directed; not re-checked
 - 2026-11-07, revised: the Attended option carries the attended confidence in parentheses, and the confirmation records it, as point 40 and point 32; checked: 51 directives, 51 kept, 0 less precise, 0 lost, 0 repairs
+- 2026-11-08, revised: the Attended option's figure follows *Confidence:*, at the engineer's direction; not re-checked
 
 ## History
+
+Until Sun Nov 8 2026 the Attended option gave its figure alone, as *Attended (95%)*.
 
 Until Sat Nov 7 2026 the Attended option carried no figure, and the start confirmation recorded four figures.
 
@@ -339,3 +342,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 1:58:31 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 1:59:54 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:06:32 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:18:41 AM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:44:58 PM PT

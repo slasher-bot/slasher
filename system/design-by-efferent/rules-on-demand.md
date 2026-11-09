@@ -170,7 +170,7 @@ with these options:
 
 > **Unattended** — The agent makes the decisions and generates through if you accept the plan it'll propose.
 >
-> **Attended (95%)** — You decide. The agent automates.
+> **Attended (Confidence: 95%)** — You decide. The agent automates.
 
 15. These words are fixed. The figures are examples.
 16. Put each figure on a line of its own, followed by its fixed sentence that says what it measures, in parentheses. Write no `**` around a figure. The selection UI prints them as characters.
@@ -187,7 +187,7 @@ with these options:
 
 25. When the overall score is 70% or lower, mark the Attended option as the recommendation, and list it first:
 
-> **Attended (Recommended, 90%)** — You decide. The agent automates.
+> **Attended (Recommended, Confidence: 90%)** — You decide. The agent automates.
 >
 > **Unattended** — The agent makes the decisions and generates through if you accept the plan it'll propose.
 
@@ -208,7 +208,7 @@ with these options:
 37. Under unattended work, write no Options line and no Decision / chat line.
 38. Do not write an unattended cycle as though an engineer was consulted.
 39. Do not mark unattended hinges with the a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule form *"none — no gate"*. That form surfaces a skipped gate in an attended run as a defect.
-40. Put the agent's estimate of its confidence if the work is attended in parentheses in the Attended option, as *Attended (95%)*, or *Attended (Recommended, 90%)* where it is recommended. Estimate it as about the *It'll work* figure, or a little higher. Do not calculate it.
+40. Put the agent's estimate of its confidence if the work is attended in parentheses in the Attended option, as *Attended (Confidence: 95%)*, or *Attended (Recommended, Confidence: 90%)* where it is recommended. Estimate it as about the *It'll work* figure, or a little higher. Do not calculate it.
 
 ## Unattended presents a plan before it generates
 
