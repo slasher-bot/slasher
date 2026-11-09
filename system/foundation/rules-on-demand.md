@@ -837,15 +837,21 @@ Trigger: When the engineer asks to refresh or install Slasher's packages, as wit
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would overwrite with a consuming project's bootstrap.
 5. Say that a refreshed or installed rule is read at the next load of the rules: a session restart, or `load rules`.
 
-# Projects lists the machine's registry of Slasher projects
+# Projects lists the registry, and carries out an instruction in another project
 
-Source: system/foundation/source/projects-lists-the-machines-registry-of-slasher-projects.md
+Source: system/foundation/source/projects-lists-the-registry-and-carries-out-an-instruction-in-another-project.md
 
-Trigger: When the engineer asks for the Slasher projects on this machine, as with `/projects`
+Trigger: When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -base`, `/projects -system`, or `/projects <name>`
 
-1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `read-consuming-projects.sh`, which reads `~/.config/slasher/consuming-projects.toml`, and print its report.
-2. Write no project's name into any file, and none into the project the session is in.
-3. List only. Do not change the registry, and act on no project listed. Where there is no registry, say so.
+1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `read-consuming-projects.sh`, which reads `~/.config/slasher/consuming-projects.toml`, and print its report. Where there is no registry, say so.
+2. `/projects -base <instruction>`, `/projects -system <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the base project, the machine's system project, or the registered project with that name.
+3. Resolve the target from the current project's root with `slasher/system/foundation/resolve-project.sh -base`, `-system`, or `<name>`, or `system/foundation/resolve-project.sh` where there is no `slasher/` directory. It prints the target's root.
+4. Where the script fails, report its message and do nothing more.
+5. Before acting, run the target's loader from the target's root, and follow the rules it prints for the act.
+6. Carry out the instruction under the target's root, by the target's conventions. Report what was done and where.
+7. A commit in the target waits for the engineer's selection.
+8. With a target and no instruction, print the target's root, and act on nothing.
+9. Do not change the registry, `slasher.toml`, or `system-project.toml`. Write no project's name into the project the session is in.
 
 # Record a rule's authorship in a provenance footer
 
