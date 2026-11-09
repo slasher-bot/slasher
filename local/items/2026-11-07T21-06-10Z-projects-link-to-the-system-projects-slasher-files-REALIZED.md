@@ -1,6 +1,6 @@
 # Projects link to the system project's Slasher files
 
-- **State:** Open
+- **State:** Realized
 - **Tags:** [idea]
 
 **The system project might be the source of the Slasher `system/` files.** Each project would link to them with a symlink, in place of holding a copy that has to be refreshed.
@@ -16,3 +16,4 @@ As the engineer first stated it, on 2026-11-07: "It's possible that the system p
 ---
 
 Authored by Scott Bellware on Sat Nov 7 2026 at 1:06:10 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 8:14:33 PM PT
