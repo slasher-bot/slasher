@@ -1,6 +1,6 @@
 # Ask the verdict question after an implementation completes
 
-- **State:** Active
+- **State:** Realized
 - **Tags:** [idea]
 
 **The verdict question would be asked after an implementation's work is complete, not at its start.** Today it is asked at the start, beside the working location, per the an-implementation-runs-on-a-branch-to-a-declared-end rule.
@@ -20,3 +20,4 @@ As the engineer first stated it, on 2026-11-08: "Ask the verdict question after 
 Authored by Scott Bellware on Sun Nov 8 2026 at 8:44:20 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:33:37 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:50:06 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:52:21 PM PT
