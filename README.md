@@ -14,6 +14,7 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 - **Human in the loop, or fully automated.** When a feature or experiment starts, the engineer chooses how much autonomy the agent is given.
 - **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
 - **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one.
+- **Commands for the work.** Slash commands record items and decisions, start features and experiments, take the next step, and say what was recently done. `/help` lists them all.
 - **Domain conventions.** Packages for language, testing, git, and versioning.
 - **Machinery.** The installer, package sets, a session-start hook, a status line, and commands.
 
