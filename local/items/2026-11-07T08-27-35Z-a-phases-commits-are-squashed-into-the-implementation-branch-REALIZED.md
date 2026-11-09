@@ -1,6 +1,6 @@
 # A phase's commits are squashed into the implementation branch
 
-- **State:** Active
+- **State:** Realized
 - **Tags:** [idea]
 
 **When a phase concludes, its commits would be squashed into one commit on the implementation branch, rather than merged with their history.** Today a phase merges back into the implementation's branch, as the an-implementation-runs-on-a-branch-to-a-declared-end rule says, and every commit of the phase arrives with it.
@@ -28,3 +28,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 8:42:55 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:50:01 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:59:52 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:04:01 PM PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 9:10:37 PM PT
