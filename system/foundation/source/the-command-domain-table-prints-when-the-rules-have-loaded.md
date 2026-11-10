@@ -56,6 +56,18 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>>` of `/next`, `/?` of `/next?`, `/??` of `/clarify`, `/???` of `/estimate-confidence`, and `/;` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/;, /commands`, `/., /recent`, `/', /items`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, and `/???, /estimate-confidence`.
 
+**`/shortcuts` prints the shortcuts table, and `/sc` is its alias.** It prints the table below, word for word, and nothing else. Each row names a shortcut alias, the command it stands for, and what it does. `/shortcuts` and `/sc` belong to no command domain, and have no row in the full table. When a shortcut alias is added, removed, or changed, change this table in the same commit.
+
+| Shortcut | Command | Does |
+|---|---|---|
+| `/'` | `/items` | Lists the current items and implementations |
+| `/.` | `/recent` | Says what was recently done, and what's next |
+| `/>>` | `/next` | Takes the next step |
+| `/?` | `/next?` | Names the next step |
+| `/??` | `/clarify` | Explains the previous answer again |
+| `/???` | `/estimate-confidence` | Gives the agent's confidence of proceeding unattended |
+| `/;` | `/command-table` | Prints the command table |
+
 **The PHASE domain has no row.** `/slasher help` still gives its help, and so does `/phase help`.
 
 **The first row names `/slasher help`, which prints the help of every Slasher command.** It names no command domain.
@@ -71,6 +83,8 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026 there was no shortcuts table, and no `/shortcuts` or `/sc` command.
 
 Until Tue Nov 10 2026, for part of that day, `/??` was the alias of `/estimate-confidence`, and `/>` the alias of `/clarify`. The engineer replaced them with `/???` and `/??`.
 
@@ -284,3 +298,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 11:47:11 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:37:27 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:41:04 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:22 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:45:39 AM PT
