@@ -1,6 +1,6 @@
 # Email is fetched through a general mechanism, with a general token or credential store
 
-- **State:** Open
+- **State:** Implementation
 - **Tags:** [idea]
 
 **A general way to fetch email, which is not tied to one provider, reads its access from a general store of tokens or credentials.** The store serves the email fetch, and is not specific to it.
@@ -11,6 +11,8 @@
 - which providers and protocols the fetch covers
 - where the store lives, which is outside any repository, as per-machine configuration is, so that no credential is committed
 
+**Implementation:** the feature `2026-11-10T06-02-53Z-general-email-fetch` carries this idea's work.
+
 ## History
 
 As the engineer first stated it: "Idea: generalized email fetch with generalized token or credential store"
@@ -18,3 +20,4 @@ As the engineer first stated it: "Idea: generalized email fetch with generalized
 ---
 
 Authored by Scott Bellware on Sat Oct 31 2026 at 9:20:53 AM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 10:02:53 PM PT
