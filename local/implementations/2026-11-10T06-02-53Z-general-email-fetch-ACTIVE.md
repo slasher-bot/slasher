@@ -36,6 +36,7 @@
 - **2026-11-09** — Participation: Attended, selected by the engineer. Agent's confidence 45%, risk of redo 55%, It'll work 70%, Your approval 50%, attended confidence 75%. The warning was shown, and Attended was recommended.
 - **2026-11-09** — The feature states no forecast, selected by the engineer at the start.
 - **2026-11-09** — Neither phase states a forecast, selected by the engineer when the phases were added.
+- **2026-11-10** — The engineer certified the Keychain credentials by a final visual inspection: a credential written by the script to the login keychain was seen in Keychain Access, and read back by name and by host. **As the engineer stated it:** "I've certified the feature by final visual inspection".
 
 ## Prior work
 
@@ -52,3 +53,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 10:06:29 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 10:25:56 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 10:28:57 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:03:13 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:16:52 AM PT

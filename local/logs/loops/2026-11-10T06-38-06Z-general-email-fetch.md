@@ -163,6 +163,33 @@ The engineer took the next step with `/>>`. The actuation, `credential.sh read s
 - **Decision / chat:** one batch.
 - **Outcome:** `credential.sh read <host>` looks the item up by its host alone, and the read by host and user is gone. The automated suite passes, 30 of 30.
 
+## Between the phases — the login keychain is covered by an interactive test
+
+The engineer asked how to test the credential script against their own macOS keychain, then asked for an interactive test. It covers behavior that already exists, so its implementation hinge is degenerate.
+
+### Cycle 23 — Actuation
+
+- **Hinge:** what the test actuates against the login keychain.
+- **Options:** a write then a read by name. A write then a read by host.
+- **Decision / chat:** a write, then a read by name.
+
+### Cycle 24 — Controls
+
+- **Hinge:** how the test sets up and cleans up the login keychain item.
+- **Options:** `IMAP_KEYCHAIN` unset, the made-up host `imap.test.invalid` under the reserved `.invalid` domain, and the item deleted on exit, pass or fail. Something else.
+- **Decision / chat:** the made-up host, removed on exit.
+
+### Cycle 25 — Observation
+
+- **Hinge:** what the test checks after the read.
+- **Options:** the printed credential. The printed credential, and the item's host and login shown.
+- **Decision / chat:** the engineer asked for the question to be clarified, then selected the printed credential, the recommended option.
+
+### Cycle 26 — Implementation
+
+- **Hinge:** none, beyond confirming the test passes against the code as it is. The test is interactive, so the engineer ran it.
+- **Outcome:** `test/interactive/imap/credential/login-keychain.sh`. The engineer's run ended `0 failed, 0 aborted`, and the item was removed.
+
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:38:06 PM PT
@@ -171,3 +198,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 11:15:11 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 11:23:55 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:00:42 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:02:44 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:12:40 AM PT
