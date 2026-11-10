@@ -16,7 +16,7 @@ fi
 recent=
 recent_time=-1
 
-for record in "$local"/implementations/*-ACTIVE.md "$local"/implementations/*-SUSPENDED.md; do
+for record in "$local"/implementations/*-OPEN.md "$local"/implementations/*-ACTIVE.md "$local"/implementations/*-SUSPENDED.md; do
   [ -f "$record" ] || continue
   branch=$(sed -n 's/^- \*\*Implementation branch:\*\* `\(.*\)`$/\1/p' "$record")
   [ -n "$branch" ] || continue

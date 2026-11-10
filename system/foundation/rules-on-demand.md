@@ -237,7 +237,7 @@ A list of items takes the ordinal and no SHA columns:
 ## The items command
 
 1. `/items` lists the current items, then, under a heading of their own, the current implementations.
-2. The current implementations are the features and experiments whose `**State:**` line reads Active or Suspended.
+2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. In the items table `/items` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
@@ -247,12 +247,12 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The features and experiments commands
 
-1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Active or Suspended.
+1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Open, Active, or Suspended.
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
 3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
 4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
 5. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
-6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Active and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
+6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
 7. A number given to the command does not change these counts.
 
 ## Keep every column short
@@ -1033,7 +1033,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 15. It compares against the remote-tracking ref, so it reflects the last fetch.
 16. A branch with no upstream reports nothing, since unpushed is relative to an upstream.
 17. An upstream missing by accident is a different fact, and is deliberately not folded into this segment.
-18. Where a feature or an experiment is Active or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's.
+18. Where a feature or an experiment is Open, Active, or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's.
 19. A phase is under way where its branch exists, and its commits count as work on its implementation. Where more than one implementation is current, show the one whose branch, or a phase's branch, has the latest commit.
 20. Where none is current, print no second line.
 

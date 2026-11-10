@@ -63,7 +63,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 
 **A branch with no upstream reports nothing.** "Unpushed" is a claim relative to somewhere, and with no upstream configured there is nowhere for it to be relative to. A branch that was never going to be pushed is ordinary, and calling it unpushed would be false. That does leave an upstream missing *by accident* unreported. It is a different fact from the one this segment names, and it is deliberately not folded in.
 
-**A second line names the implementation under way.** Where a feature or an experiment is Active or Suspended, the line beneath shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's. A phase is under way where its branch exists, and a phase's commits count as work on its implementation. Where more than one implementation is current, the line shows the one most recently acted upon: the one whose branch, or a phase's branch, has the latest commit. Where none is current, there is no second line.
+**A second line names the implementation under way.** Where a feature or an experiment is Open, Active, or Suspended, the line beneath shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's. A phase is under way where its branch exists, and a phase's commits count as work on its implementation. Where more than one implementation is current, the line shows the one most recently acted upon: the one whose branch, or a phase's branch, has the latest commit. Where none is current, there is no second line.
 
 - **A startup display, in two parts.** As the session starts, the session-start part frames the notice: the title and the copyright and license ahead of it, and the load line after it, last. The loading part, the loading line and then the figure, prints on the session's first prompt, whatever it is: the plugin's `UserPromptSubmit` hook runs `slasher/system/foundation/startup-display.sh` on every prompt, and it prints on the first only. Both read them from the the-startup-display-prints-as-the-session-starts rule, which governs the display.
 
@@ -260,7 +260,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 15. It compares against the remote-tracking ref, so it reflects the last fetch.
 16. A branch with no upstream reports nothing, since unpushed is relative to an upstream.
 17. An upstream missing by accident is a different fact, and is deliberately not folded into this segment.
-18. Where a feature or an experiment is Active or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's.
+18. Where a feature or an experiment is Open, Active, or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's.
 19. A phase is under way where its branch exists, and its commits count as work on its implementation. Where more than one implementation is current, show the one whose branch, or a phase's branch, has the latest commit.
 20. Where none is current, print no second line.
 
@@ -322,8 +322,11 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 - 2026-11-06, revised: the agent prints the command domain table at the end of the session-start read, beside the package set stanza; checked: 103 directives, 99 kept, 4 less precise, 0 lost. Left less precise, none touched by this revision: that the uncommitted changes segment carries no count, that the loading part reads its content from the startup display rule, that the authoring source lists packages under `system/`, and that `session-start.sh instruction` prints the instruction alone, as plain text
 - 2026-11-07, revised: the status line's second line names the implementation under way, as points 18 to 20 of the status line; checked: 46 directives, 40 kept, 6 less precise, 0 lost, 2 repairs; re-checked: 46 directives, 42 kept, 4 less precise, 0 lost. Directives 15, 19, 32, and 46, on a missing upstream, the loading part, the compaction, and `/load`, are less precise in text this revision did not change, and are left as they are
 - 2026-11-08, revised: after a compaction the notice is one line in place of the startup display, as point 25 of the session-start notice; not re-checked
+- 2026-11-09, revised: the second status line takes an Open implementation too; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 the status line's second line named an Active or Suspended implementation only, since an implementation took no Open state.
 
 Until Sun Nov 8 2026 the engineer saw the whole startup display and notice after a compaction, as at a session's start.
 
@@ -475,3 +478,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 9:34:21 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:35:33 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:25:11 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
