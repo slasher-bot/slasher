@@ -13,7 +13,7 @@ The other commands are `/item`, `/items`, `/feature`, `/features`, `/experiment`
 
 Type /help for all of Slasher's help, or /<command> help for one command's.
 
-**The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/;` row reads *Print the list of Slasher commands*, since the table `/;` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>>`, `/?`, `/??`, `/???`, and `/sc`. When a row is added to the full table or removed from it, change the sentence in the same commit.
+**The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/;` row reads *Print the list of Slasher commands*, since the table `/;` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>>`, `/?`, `/??`, `/#`, and `/sc`. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
 **The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
 
@@ -26,7 +26,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/?, /next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
-| `/???, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
+| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/features` | Lists the current features. |
@@ -55,7 +55,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **After the startup table, its sentence, and the help line, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
-**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>>` of `/next`, `/?` of `/next?`, `/??` of `/clarify`, `/???` of `/estimate-confidence`, and `/;` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/;, /commands`, `/., /recent`, `/', /items`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, and `/???, /estimate-confidence`.
+**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>>` of `/next`, `/?` of `/next?`, `/??` of `/clarify`, `/#` of `/estimate-confidence`, and `/;` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/;, /commands`, `/., /recent`, `/', /items`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, and `/#, /estimate-confidence`.
 
 **`/shortcuts` prints the shortcuts table, and `/sc` is its alias.** It prints the table below, word for word, and nothing else. Each row names a shortcut alias, the command it stands for, and what it does. `/shortcuts` and `/sc` belong to no command domain. They share a row in the full table, just above the `/load` row. When a shortcut alias is added, removed, or changed, change this table in the same commit.
 
@@ -66,7 +66,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
 | `/??` | `/clarify` | Explains the previous answer again |
-| `/???` | `/estimate-confidence` | Gives the agent's confidence of proceeding unattended |
+| `/#` | `/estimate-confidence` | Gives the agent's confidence of proceeding unattended |
 | `/;` | `/command-table` | Prints the command table |
 
 **The PHASE domain has no row.** `/slasher help` still gives its help, and so does `/phase help`.
@@ -84,6 +84,8 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026, for part of that day, `/???` was the alias of `/estimate-confidence`. The engineer changed it to `/#`.
 
 Until Tue Nov 10 2026 the `/recent` description was *Says what was recently done, and what's next.* The engineer changed it to *Brief summary of recent work, and what's next.*
 
@@ -310,3 +312,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 10:48:20 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:51:43 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:52:54 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:53:54 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
