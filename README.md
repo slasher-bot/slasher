@@ -48,7 +48,7 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | Command | Description |
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
-| `/???, /commands` | Print this table |
+| `/;, /commands` | Print this table |
 | `/., /recent` | Says what was recently done, and what's next. |
 | `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
