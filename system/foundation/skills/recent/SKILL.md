@@ -1,6 +1,6 @@
 ---
 name: recent
-description: Say what was recently done, and what's next.
+description: Brief summary of recent work, and what's next.
 disable-model-invocation: true
 ---
 
