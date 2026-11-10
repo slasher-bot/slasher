@@ -21,6 +21,7 @@ PROCESS
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
+  /! <request>                     An alias of /unattended
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
