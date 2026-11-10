@@ -1,6 +1,6 @@
 # A log entry for an idea names the record and what happened to it, and never asserts the idea's content as fact
 
-- **State:** Realized
+- **State:** Recorded
 - **Tags:** [design]
 
 ## Premise
@@ -67,8 +67,11 @@
 - **No conforming pass follows.** Recording this settles what is written from now on, per the `language` package's a-word-is-reserved-in-six-steps rule's statement that a conforming pass is asked for separately.
   - **2026-08-24 — the engineer asked for one separately, which is what that rule anticipates.** It was bounded to the six entries and is done. Nothing standing was conformed beyond them.
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Realized. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Mon Aug 24 2026 at 3:23:14 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 3:29:33 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 3:38:02 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT

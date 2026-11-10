@@ -53,15 +53,15 @@ Existing items and implementation records are converted to these states, under a
 
 ## Tasks
 
-- [ ] Every kind of record starts and concludes as the table gives.
-- [ ] Every record that changes state takes the shared states, and the items rule states how Deferred and Discontinued differ.
-- [ ] A feature or an experiment can be superseded without first being suspended.
-- [ ] The item, feature, and experiment commands offer subcommands paired by meaning, and refuse one that maps to no state.
-- [ ] Each state-change root command acts on an item, a feature, or an experiment, and asks which where the words do not say.
-- [ ] Resume brings records back from the states given, and the reopen command no longer exists.
-- [ ] The help of each affected command describes its states as they now are.
-- [ ] A migration record plans the conversion of existing items and implementation records.
-- [ ] Existing items and implementation records carry the new states.
+- [x] Every kind of record starts and concludes as the table gives.
+- [x] Every record that changes state takes the shared states, and the items rule states how Deferred and Discontinued differ.
+- [x] A feature or an experiment can be superseded without first being suspended.
+- [x] The item, feature, and experiment commands offer subcommands paired by meaning, and refuse one that maps to no state.
+- [x] Each state-change root command acts on an item, a feature, or an experiment, and asks which where the words do not say.
+- [x] Resume brings records back from the states given, and the reopen command no longer exists.
+- [x] The help of each affected command describes its states as they now are.
+- [x] A migration record plans the conversion of existing items and implementation records.
+- [x] Existing items and implementation records carry the new states.
 
 ## Out of Scope / Deferred
 
@@ -80,3 +80,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 8:24:22 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:28:00 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:37:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:49:07 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:16 PM PT

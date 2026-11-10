@@ -1,6 +1,6 @@
 # Design By Efferent is an `ext/` package
 
-- **State:** Abandoned
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** abandoned by the engineer's decision on 2026-08-25.
@@ -55,6 +55,8 @@ Related:
 - *Waytide for content and web* — the feature underway, and the reason this came up
 - the `ext/ruby-lang` package — the one worked precedent for a package leaving the default set
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Abandoned. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Sun Aug 23 2026 at 1:16:27 AM PT
@@ -62,3 +64,4 @@ Changed by Scott Bellware on Mon Aug 24 2026 at 5:12:39 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 5:17:55 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 10:31:30 PM PT
 Changed by Scott Bellware on Tue Aug 25 2026 at 10:54:07 AM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT

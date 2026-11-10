@@ -1,6 +1,6 @@
 # The grouping is `ext/`, for external and extension both
 
-- **State:** Realized
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** the name answers the admission question that two earlier ideas left open, and it costs a third rename of the same directory and an abbreviation where the system has used whole words. It is promoted to `Active` once those are weighed.
@@ -52,8 +52,11 @@ Related:
 - *Waytide for content and web* — the second member, being built now
 - the `expand-abbreviations-on-first-use` rule — the reason an abbreviation is weighed rather than taken
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Realized. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Sun Aug 23 2026 at 1:17:30 AM PT
 Changed by Scott Bellware on Sun Aug 23 2026 at 1:14:38 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 12:41:20 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT
