@@ -1,6 +1,6 @@
 # Item and implementation states and commands are harmonized, restated
 
-- **State:** Open
+- **State:** Active
 - **Tags:** [plan]
 
 Items and implementations (features and experiments) take one set of states and one set of commands. Each command acts on an item, a feature, or an experiment, and maps its name to the state that kind of record takes. This plan restates the settled design of `2026-11-10T00-13-50Z-item-and-implementation-states-and-commands-are-harmonized`, which it supersedes and which keeps the record of how each decision was reached.
@@ -79,3 +79,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 8:21:46 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:24:22 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:28:00 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:37:25 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:49:07 PM PT
