@@ -118,9 +118,9 @@ Trigger: When creating an item, adding a dated Settled resolution to it, changin
 4. Write the entry on the item's creation.
 5. Write the entry on each dated `Settled` resolution added after the item is created.
 6. Write the entry on each change of the item's `**State:**` line.
-7. A change of state is the line reaching Open, Active, Realized, Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete, or Done for a work item.
-8. A change of state is also the line taking back Realized, Deferred, Discontinued, Open, or a work item's Done.
-9. An observation is `Recorded` and never moves, so it takes a creation entry only.
+7. A change of state is the line reaching any state word the items rule names: Open, Active, a concluding state such as Realized, Done, Corrected, Resolved, or Completed, or Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete.
+8. A change of state is also the line taking a state back, by resume.
+9. A design and an observation are `Recorded` and never move, so each takes a creation entry only.
 10. Do not log a completed checkbox task, because it carries out a direction already settled.
 11. Do not log prose that settles nothing either. Examples are reconciling a Background & Motivation section, correcting a summary, and rewording a section.
 12. The provenance footer records those unlogged changes.
@@ -304,7 +304,7 @@ Trigger: When creating, renaming, changing the state of, or referencing an item 
 2. Where name and line disagree, the line is right and the name is stale.
 3. A state change renames the file, using `git mv`.
 4. When a reversible word is taken back, rename the file to the state the record returns to, **ACTIVE** or **OPEN**.
-5. The reversible words are **Realized**, **Deferred**, **Discontinued**, **Open**, and a work item's **Done**, as the the-items-directory-holds-one-file-per-item rule sets out.
+5. Any state but Open, Active, and Recorded can be taken back by resume, as the the-items-directory-holds-one-file-per-item rule sets out.
 6. A reference to a record omits its state suffix and extension, and keeps the prefix and name. A rename then breaks no reference.
 7. A reader finds the record by that prefix and name.
 8. Leave historical records as written.
@@ -505,24 +505,25 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 1. An implementation runs on its own branch, designed through the five hinges by DBE, to a declared state.
 2. It is never left silently open.
 3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
-4. Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one, and only work with a forecast can reach a verdict (see the the-implementations-directory-holds-one-record-per-implementation rule).
+4. Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule).
 5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
 
-1. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
-2. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
-3. Add `-run-<n>` only where the work has more than one run.
-4. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
-5. A branch checked out in a worktree cannot be checked out in the main working tree, and `git branch` is where that question comes up.
-6. Adding a worktree to work under way renames the branch.
-7. The rename is confirmed, and the record carries it.
-8. Keep the upstream branch out of the name, since a branch can outlive its upstream target. The record names it.
-9. A worktree is the one fact the name carries, because `git branch` has no other answer for it.
-10. The rename keeps that fact current.
-11. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
-12. Make no git tag for the base.
-13. A later run branches from the recorded commit.
+1. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
+3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
+4. Add `-run-<n>` only where the work has more than one run.
+5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
+6. A branch checked out in a worktree cannot be checked out in the main working tree, and `git branch` is where that question comes up.
+7. Adding a worktree to work under way renames the branch.
+8. The rename is confirmed, and the record carries it.
+9. Keep the upstream branch out of the name, since a branch can outlive its upstream target. The record names it.
+10. A worktree is the one fact the name carries, because `git branch` has no other answer for it.
+11. The rename keeps that fact current.
+12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
+13. Make no git tag for the base.
+14. A later run branches from the recorded commit.
 
 ## Phases
 
@@ -593,7 +594,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
-6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast ends Completed, unasked.
+6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
 7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed.
 8. Then ask the question again, with the same three options.
 
@@ -612,8 +613,8 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 11. Work without a verdict has no affirmation.
 12. Refuted, inconclusive, abandoned, and superseded work keeps its record, marked with its state, so the attempt and its findings survive.
 13. Refuted, inconclusive, abandoned, and superseded work does not merge.
-14. Supersession runs through suspension.
-15. The superseded implementation stays Suspended, its branch kept, until the engineer concludes it as superseded.
+14. Supersede an implementation at any time, without suspending it first.
+15. Keep the superseded implementation's branch until the engineer confirms its deletion.
 16. The two records name each other.
 17. A child supersedes its parent by preserving it.
 18. The child merges the parent first, taking every commit the parent made after the child branched.
@@ -1092,7 +1093,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
 5. Work with a forecast states it, what is expected to happen, before the work.
 6. As the work proceeds, it records what actually happened against the forecast.
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
-8. Work without a forecast records no comparison against one, and no findings or misses, and cannot reach a verdict.
+8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
 10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the start, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
@@ -1101,27 +1102,30 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
 ## The state
 
 1. The state sits on a canonical `**State:**` line carrying one word and nothing else, for example `- **State:** Suspended`.
-2. Write the line with the record, as `Active`, and change it as the record reaches another word.
+2. Write the line with the record, as `Open`, and change it as the record reaches another word.
 3. That line is the only authoritative statement of the state.
 4. The state words may appear freely in the record's prose. Nothing else in the file is read as the state.
 5. `Active` is the in-progress state, as it is for an item.
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
-8. A record is written when its work starts, so it carries `Active` from the moment it is written.
-9. The filename carries the state suffix, `-ACTIVE` while the work is in progress (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
+8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+9. The filename carries the state suffix, as `-OPEN` or `-ACTIVE` (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
 10. The state words every implementation takes are these.
+    - **Open**: the record and the branch exist, and the work has not started.
     - **Active**: the work is in progress.
-    - **Abandoned**: dropped before concluding. It is not merged, and the record is kept.
-    - **Superseded**: replaced by another implementation. Each of the two records names its counterpart.
+    - **Deferred**: kept to do later, with no one working toward it.
     - **Suspended**: paused, not ended.
-    - **Discontinued**: stopped, with no plan to resume. It is not current work: the list of current work and the session-start notice leave it out. It may resume, and what it recorded may be merged.
-11. The words only work that reaches a verdict takes are these.
-    - **Affirmed**: the question held, or the intent was met as forecast. The engineer declares it.
-    - **Refuted**: the question was disproven, or the intent was not met as forecast.
-    - **Inconclusive**: it ran and gave no clear verdict either way.
-12. The word only work without a verdict takes is this.
+    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the session-start notice leave it out. What it recorded may be merged.
+    - **Obsolete**: it lost its relevance over time, with no one deciding.
+    - **Superseded**: replaced by another implementation. Each of the two records names its counterpart. Supersede at any time, without suspending first.
+    - **Abandoned**: dropped before concluding, by decision. It is not merged, and the record is kept.
+11. The concluding words are these, and any implementation takes any of them, whether or not it has a forecast.
     - **Completed**: integrated into the upstream branch. It is the ordinary conclusion.
-13. Work without a verdict takes no verdict word, and work with one takes no `Completed`, whatever the kind.
+    - **Affirmed**: the question held, or the intent was met, as forecast where there is one. The engineer declares it.
+    - **Refuted**: the question was disproven, or the intent was not met.
+    - **Inconclusive**: it ran and gave no clear verdict either way.
+12. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
+13. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 14. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
 
 ## Runs
@@ -1196,25 +1200,25 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 34. A reference in an item that time has overtaken is not a defect.
 35. Do not chase such a reference.
 36. Every item carries a `**State:**` line from the moment it is written, holding one of the words below and no other. Absence is not a state, and an item without the line is a defect.
-37. **Open** — the work has not started. Start every item but an observation **Open**, whether its thinking is settled or not.
+37. Start an idea, an improvement, a plan, a work item, a rework item, a correction, a mistake, and a problem **Open**. **Open** means the work has not started, whether its thinking is settled or not. A kind not named here starts Open and concludes Realized.
 38. Make an item **Active** when its work starts. **Active** is the in-progress state.
-39. An observation, and only an observation, starts and stays **Recorded**.
-40. **Realized** — what it describes exists.
-41. **Deferred** — kept deliberately, with no date and no one working toward it.
+39. Start a goal, an aspiration, a design, and an observation **Recorded**. A design and an observation stay Recorded. Make a goal or an aspiration Active from Recorded where the engineer asks, or leave it Recorded.
+40. **Realized** — what it describes exists. An idea, an improvement, a plan, a goal, and an aspiration conclude Realized. A goal or an aspiration is Realized only when the engineer says so.
+41. **Deferred** — kept to do later, with no date and no one working toward it.
 42. An item merely waiting its turn is not **Deferred**. It carries `**Waits for:**` and whatever state its thinking has reached.
 43. **Suspended** — paused, not ended.
 44. **Superseded** — a later item replaced it, and the two name each other.
 45. **Abandoned** — dropped by decision.
-46. **Obsolete** — it lost its relevance over time, as the work moved past it with no one deciding. Where a decision dropped it, it is **Abandoned**. Any item takes it, a work item included.
-47. **Discontinued** — stopped, with no plan to resume. It is not current work, so the list of current items leaves it out. It may resume.
-48. Take `Realized`, `Deferred`, `Discontinued`, and `Open` back to `Active` or `Open` when the work resumes. The other states are not taken back. Conclude an item whose work is done on an experiment's branch when the work is done, as `Realized`, or `Done` for a work item. Do not wait for the merge, and name the branch.
+46. **Obsolete** — it lost its relevance over time, as the work moved past it with no one deciding. Where a decision dropped it, it is **Abandoned**. Any item that changes state takes it.
+47. **Discontinued** — stopped, with no plan to do it. It is not current work, so the list of current items leaves it out. Deferred is kept to do later, and Discontinued has no plan to do it.
+48. Take back any state but Open, Active, and Recorded with resume, to Open or Active as the engineer's words say. Where they do not say which, ask. Conclude an item whose work is done on an experiment's branch when the work is done, in its kind's concluding state. Do not wait for the merge, and name the branch.
 49. At each change of state, change the `**State:**` line and rename the file.
 50. At each change of state, write the log entry.
 51. An item tagged `[work]` is a piece of work to be done.
-52. A work item takes `Open`, `Active`, `Deferred`, `Suspended`, and `Discontinued`.
-53. A work item concludes `Done`, `Abandoned`, `Superseded`, or `Obsolete`.
-54. A work item never takes `Realized`. A correction and a rework item are work items, and each concludes `Done`.
-55. Take `Done` back to `Active` when the work reopens.
+52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — items take it, and no kind concludes with it yet.
+53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
+54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
+55. Complete concludes an item in its kind's concluding state.
 56. Supersede an item rather than rewrite it.
 57. What a superseded item settled stays as written.
 58. Amend an item by dated addition.
@@ -1222,7 +1226,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 60. Answer a question that runs against what an item settled, and record the change.
 61. Do not refuse to answer until the item is amended.
 62. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
-63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one.
+63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. *Complete that item* names its kind's concluding state.
 
 # The log records why work was abandoned, and never says undone work was done
 

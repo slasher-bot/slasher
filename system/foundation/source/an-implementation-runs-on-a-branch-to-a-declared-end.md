@@ -8,11 +8,13 @@
 
 An implementation is bounded work with a lifecycle. It runs on a branch created for it, it is designed through the five hinges, and it reaches one of a fixed set of declared states. It is never left silently open.
 
-**Whether the work states a forecast decides the parts that differ while it runs, and whether it reaches a verdict is asked at its end. The tag decides neither.** Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one, and only work with a forecast can reach a verdict (see the the-implementations-directory-holds-one-record-per-implementation rule). Every clause below that names work with a forecast, or work with or without a verdict, names it because of those two. No clause varies by kind. The tag names the branch and the record, and nothing else.
+**Whether the work states a forecast decides the parts that differ while it runs, and whether it reaches a verdict is asked at its end. The tag decides neither.** Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule). Every clause below that names work with a forecast, or work with or without a verdict, names it because of those two. No clause varies by kind. The tag names the branch and the record, and nothing else.
 
 **As the engineer stated it:** change features and experiments so that both can have either an intent or a question.
 
 ## The branch
+
+**`new` creates the branch, and writes the record `Open`.** `start` makes the record `Active` when the work starts.
 
 - **Name it `experiment/<subject>` or `feature/<subject>`**, matching the tag. `<subject>` is a short dash-separated, lower-case name of what is under test or what is being built, named literally. Add a `-run-<n>` suffix only where the work actually has multiple runs.
 - **Where the work has a worktree, the name carries `worktree/`** — `feature/worktree/<subject>` and `experiment/worktree/<subject>`. A branch checked out in a worktree cannot be checked out again in the main working tree, and nothing in `git branch` says which those are. The segment says it in the one listing where the question comes up.
@@ -72,7 +74,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **At the start, ask whether the work states a forecast, beside the working location and the participation, and record the answer as a confirmation.** A forecast is what is expected to happen, stated before the work. Its two options read *No forecast*, then *State a forecast*, in that order. Where the engineer states one, write it in the record. Where the working location is the current branch, do not ask: work there states none. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 
-**At the end, ask the verdict question of work with a forecast, and of no other work.** It is asked when the work is complete, through the selection interface, and recorded as a confirmation. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast ends Completed, and is not asked.
+**At the end, ask the verdict question of work with a forecast, and of no other work.** It is asked when the work is complete, through the selection interface, and recorded as a confirmation. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it Affirmed, Refuted, or Inconclusive instead.
 
 **A third option reads *What's a verdict?*** Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed. The question is then asked again, with the same three options.
 
@@ -92,7 +94,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **Refuted, inconclusive, abandoned, and superseded keep the record and do not merge.** The record is maintained and marked, so the attempt and its findings survive as evidence.
 
-**Supersession runs through suspension.** A superseded implementation stays **Suspended** until the engineer explicitly concludes it as superseded, and its branch is kept until then. The two records name the counterpart.
+**An implementation can be superseded at any time, without first being suspended.** Its branch is kept until the engineer confirms its deletion. The two records name the counterpart.
 
 **A child supersedes its parent by preserving it.** Work created from another's branch already holds that history. The child merges the parent first, which brings over every commit the parent made after the child was created from it and makes deleting the parent branch lossless. Then the parent is parked `Superseded`, the records name each other, the child's upstream becomes what the parent's was, and the parent branch is deleted on confirmation. **This is the one supersession that merges the superseded branch**, because a child already contains its parent and refusing the merge would discard the parent's last commits rather than preserve them.
 
@@ -133,24 +135,25 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 1. An implementation runs on its own branch, designed through the five hinges by DBE, to a declared state.
 2. It is never left silently open.
 3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
-4. Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one, and only work with a forecast can reach a verdict (see the the-implementations-directory-holds-one-record-per-implementation rule).
+4. Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule).
 5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
 
-1. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
-2. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
-3. Add `-run-<n>` only where the work has more than one run.
-4. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
-5. A branch checked out in a worktree cannot be checked out in the main working tree, and `git branch` is where that question comes up.
-6. Adding a worktree to work under way renames the branch.
-7. The rename is confirmed, and the record carries it.
-8. Keep the upstream branch out of the name, since a branch can outlive its upstream target. The record names it.
-9. A worktree is the one fact the name carries, because `git branch` has no other answer for it.
-10. The rename keeps that fact current.
-11. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
-12. Make no git tag for the base.
-13. A later run branches from the recorded commit.
+1. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
+3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
+4. Add `-run-<n>` only where the work has more than one run.
+5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
+6. A branch checked out in a worktree cannot be checked out in the main working tree, and `git branch` is where that question comes up.
+7. Adding a worktree to work under way renames the branch.
+8. The rename is confirmed, and the record carries it.
+9. Keep the upstream branch out of the name, since a branch can outlive its upstream target. The record names it.
+10. A worktree is the one fact the name carries, because `git branch` has no other answer for it.
+11. The rename keeps that fact current.
+12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
+13. Make no git tag for the base.
+14. A later run branches from the recorded commit.
 
 ## Phases
 
@@ -221,7 +224,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
-6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast ends Completed, unasked.
+6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
 7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed.
 8. Then ask the question again, with the same three options.
 
@@ -240,8 +243,8 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 11. Work without a verdict has no affirmation.
 12. Refuted, inconclusive, abandoned, and superseded work keeps its record, marked with its state, so the attempt and its findings survive.
 13. Refuted, inconclusive, abandoned, and superseded work does not merge.
-14. Supersession runs through suspension.
-15. The superseded implementation stays Suspended, its branch kept, until the engineer concludes it as superseded.
+14. Supersede an implementation at any time, without suspending it first.
+15. Keep the superseded implementation's branch until the engineer confirms its deletion.
 16. The two records name each other.
 17. A child supersedes its parent by preserving it.
 18. The child merges the parent first, taking every commit the parent made after the child branched.
@@ -295,8 +298,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-08, revised: a forecast is optional and asked at the start, the verdict question is asked at the end of work with a forecast, and the current branch rules out both; not re-checked
 - 2026-11-08, revised: the forecast question lists *No forecast* first, at the engineer's direction; not re-checked
 - 2026-11-08, revised: a phase is asked a forecast when added and the verdict when complete, as an implementation is, at the engineer's direction; not re-checked
+- 2026-11-09, revised: new creates the branch and writes the record Open, supersession needs no suspension, and any work can take a verdict word; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 supersession ran through suspension, the record was written Active when the branch was created, and only work with a forecast could reach a verdict.
 
 Until Sun Nov 8 2026 whether a phase reached a verdict was chosen when it was added.
 
@@ -378,3 +384,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 9:04:01 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:35:54 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:42:51 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:49:53 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:01:01 PM PT
