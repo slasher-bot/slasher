@@ -59,6 +59,8 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Any implementation can take any concluding word, whether or not it has a forecast.** The engineer concludes it Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. **`complete` concludes an implementation without a forecast as Completed.** Where it has a forecast, the agent asks which concluding word it takes: Completed, Affirmed, Refuted, or Inconclusive.
 
+**Where the implementation is created for an item, the item takes `Implementation`**, and the two records name each other. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, the agent asks the engineer what state the item takes. See the the-items-directory-holds-one-file-per-item rule.
+
 **Any state but Open and Active can be taken back**, by `resume`, which returns the implementation to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 
 **Where the engineer asks for an implementation to be concluded and names no state, the state is put to the engineer through the selection interface.** Each concluding state the implementation can take is an option. The agent does not choose the state, and does not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
@@ -138,8 +140,9 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
     - **Refuted**: the question was disproven, or the intent was not met.
     - **Inconclusive**: it ran and gave no clear verdict either way.
 12. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
-13. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
-14. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
+13. Where the implementation is created for an item, make the item Implementation, and name each record in the other. When the implementation is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
+14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
+15. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
 
 ## Runs
 
@@ -185,8 +188,11 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 - 2026-11-08, revised: the forecast is asked at the start and the verdict at the end; not re-checked
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 - 2026-11-09, revised: a record starts Open, takes Deferred and Obsolete, takes any concluding word, and is superseded without suspension, as the harmonized-states plan settles; not re-checked
+- 2026-11-09, revised: an item an implementation is created for takes Implementation, and follows it; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 an implementation did not change the state of the item it was created for.
 
 Until Mon Nov 9 2026 a record was written Active when its work started, took no Open, Deferred, or Obsolete, and took a verdict word only where it had a forecast and Completed only where it had none. Resume took back Suspended and Discontinued only.
 
@@ -246,3 +252,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:13 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 2:59:48 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:40 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT

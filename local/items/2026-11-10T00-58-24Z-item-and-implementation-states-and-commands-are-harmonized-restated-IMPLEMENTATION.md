@@ -1,6 +1,6 @@
 # Item and implementation states and commands are harmonized, restated
 
-- **State:** Active
+- **State:** Implementation
 - **Tags:** [plan]
 
 Items and implementations (features and experiments) take one set of states and one set of commands. Each command acts on an item, a feature, or an experiment, and maps its name to the state that kind of record takes. This plan restates the settled design of `2026-11-10T00-13-50Z-item-and-implementation-states-and-commands-are-harmonized`, which it supersedes and which keeps the record of how each decision was reached.
@@ -51,6 +51,8 @@ Existing items and implementation records are converted to these states, under a
 - **2026-11-09** — A kind can exist before any item uses it, and a kind can come into existence on its first use. The kinds in the table that no item carries yet need nothing added.
 - **2026-11-09** — An item tagged both `[idea]` and `[design]` concludes as an idea. The idea has primacy.
 
+**Implementation:** the feature `2026-11-10T04-49-07Z-harmonized-states` carries this plan's work.
+
 ## Tasks
 
 - [x] Every kind of record starts and concludes as the table gives.
@@ -81,3 +83,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 8:28:00 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:37:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:49:07 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:16 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:33 PM PT
