@@ -144,4 +144,30 @@ opened_implementation=$(cd "$opened" && system/foundation/current-implementation
 
 [ "$opened_implementation" = "$control_open_branch" ] || fail "Prints the branch of an Open implementation" "found:" "$opened_implementation"
 
+# Prints the branch of an implementation recorded only in another worktree ---
+
+worktreed=$(mktemp -d)
+trap 'rm -rf "$project" "$installed" "$several" "$phased" "$opened" "$worktreed"' EXIT
+worktreed_project="$worktreed/some-project"
+mkdir -p "$worktreed_project/system/foundation" "$worktreed_project/local/implementations"
+cp system/foundation/current-implementation.sh "$worktreed_project/system/foundation/"
+
+git -C "$worktreed_project" init -q -b master
+commit "$worktreed_project" "2026-01-01T00:00:00Z"
+
+control_worktree_branch="feature/worktree/some-cart"
+git -C "$worktreed_project" worktree add -q -b "$control_worktree_branch" "$worktreed/some-cart"
+
+mkdir -p "$worktreed/some-cart/local/implementations"
+cat > "$worktreed/some-cart/local/implementations/2026-01-01T00-00-00Z-some-cart-ACTIVE.md" <<RECORD
+# Feature — Some cart
+
+- **State:** Active
+- **Implementation branch:** \`$control_worktree_branch\`
+RECORD
+
+worktreed_implementation=$(cd "$worktreed_project" && system/foundation/current-implementation.sh)
+
+[ "$worktreed_implementation" = "$control_worktree_branch" ] || fail "" "found:" "$worktreed_implementation"
+
 echo "0 failed, 0 aborted"
