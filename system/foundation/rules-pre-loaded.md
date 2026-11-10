@@ -428,7 +428,7 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 |---|---|
 | `/slasher help, /help` | Print the help of every Slasher command |
 | `/;` | Print the list of Slasher commands |
-| `/., /recent` | Says what was recently done, and what's next. |
+| `/., /recent` | Brief summary of recent work, and what's next. |
 | `/', /items` | Lists the current items, features, and experiments. |
 
 The other commands are `/item`, `/items`, `/feature`, `/features`, `/experiment`, `/experiments`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/unattended`, `/estimate-confidence`, `/log`, `/decision`, `/observation`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/shortcuts`, `/load`, and `/commands`.
@@ -443,7 +443,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
 | `/;, /commands` | Print this table |
-| `/., /recent` | Says what was recently done, and what's next. |
+| `/., /recent` | Brief summary of recent work, and what's next. |
 | `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/?, /next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
@@ -484,7 +484,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | Shortcut | Command | Does |
 |---|---|---|
 | `/'` | `/items` | Lists the current items and implementations |
-| `/.` | `/recent` | Says what was recently done, and what's next |
+| `/.` | `/recent` | Brief summary of recent work, and what's next |
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
 | `/??` | `/clarify` | Explains the previous answer again |

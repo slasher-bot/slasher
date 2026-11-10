@@ -6,7 +6,7 @@
 |---|---|
 | `/slasher help, /help` | Print the help of every Slasher command |
 | `/;` | Print the list of Slasher commands |
-| `/., /recent` | Says what was recently done, and what's next. |
+| `/., /recent` | Brief summary of recent work, and what's next. |
 | `/', /items` | Lists the current items, features, and experiments. |
 
 The other commands are `/item`, `/items`, `/feature`, `/features`, `/experiment`, `/experiments`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/unattended`, `/estimate-confidence`, `/log`, `/decision`, `/observation`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/shortcuts`, `/load`, and `/commands`.
@@ -21,7 +21,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 |---|---|
 | `/slasher help` | Print the help of every Slasher command |
 | `/;, /commands` | Print this table |
-| `/., /recent` | Says what was recently done, and what's next. |
+| `/., /recent` | Brief summary of recent work, and what's next. |
 | `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/?, /next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
@@ -62,7 +62,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | Shortcut | Command | Does |
 |---|---|---|
 | `/'` | `/items` | Lists the current items and implementations |
-| `/.` | `/recent` | Says what was recently done, and what's next |
+| `/.` | `/recent` | Brief summary of recent work, and what's next |
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
 | `/??` | `/clarify` | Explains the previous answer again |
@@ -84,6 +84,8 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026 the `/recent` description was *Says what was recently done, and what's next.* The engineer changed it to *Brief summary of recent work, and what's next.*
 
 Until Tue Nov 10 2026, for part of that day, the `/next?` row's description ended with *Equivalent to "what are we doing?" or "what's next?"*. The engineer moved the two questions to its start.
 
@@ -307,3 +309,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 10:45:39 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:48:20 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:51:43 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:52:54 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:53:54 AM PT
