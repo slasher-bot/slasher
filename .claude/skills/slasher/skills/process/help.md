@@ -12,7 +12,7 @@ PROCESS
                                    multi-step process, or resume interrupted
                                    work
   />>                              An alias of /next
-  /next?                           "what are we doing?" or "what's next?"
+  /next?                           "What are we doing?" or "what's next?"
                                    The next step in the current multi-step
                                    process, or the step that has been
                                    interrupted.

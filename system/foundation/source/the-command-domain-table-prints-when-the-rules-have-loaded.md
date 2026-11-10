@@ -24,7 +24,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/., /recent` | Says what was recently done, and what's next. |
 | `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
-| `/?, /next?` | "what are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
+| `/?, /next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/???, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
@@ -306,3 +306,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:22 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:45:39 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:48:20 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:51:43 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:52:54 AM PT
