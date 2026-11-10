@@ -1,8 +1,8 @@
 # Estimate-confidence gives the agent's confidence of proceeding unattended
 
-**Trigger:** When the engineer types `/estimate-confidence` or `/#`, or asks for the agent's confidence of proceeding unattended
+**Trigger:** When the engineer types `/estimate-confidence` or `/??`, or asks for the agent's confidence of proceeding unattended
 
-**`/estimate-confidence` gives the agent's confidence of finishing the work under way on its own, from where the work stands.** `/#` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
+**`/estimate-confidence` gives the agent's confidence of finishing the work under way on its own, from where the work stands.** `/??` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
 
 **Give five figures, each the agent's own estimate for this work, made when the command is typed.** Each figure is followed by its fixed sentence, in parentheses:
 
@@ -18,7 +18,11 @@
 
 **Why:** the engineer can ask, at any point in the work, how far the agent could be trusted to go on alone, in the same terms the work was started in.
 
-**How to apply:** on `/estimate-confidence` or `/#`, estimate the figures for the rest of the work under way, print them with their sentences, add the warning line where it applies, list what drives the two figures, and stop.
+**How to apply:** on `/estimate-confidence` or `/??`, estimate the figures for the rest of the work under way, print them with their sentences, add the warning line where it applies, list what drives the two figures, and stop.
+
+## History
+
+Until Tue Nov 10 2026 the command's alias was `/#`. The engineer removed it, and `/??` is its alias.
 
 Related:
 
@@ -28,3 +32,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Sun Nov 8 2026 at 2:30:48 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:37:43 AM PT

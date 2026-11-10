@@ -22,6 +22,6 @@ PROCESS
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
-  /#, /??                          Aliases of /estimate-confidence
+  /??                              An alias of /estimate-confidence
 
   /process help                    Print this command's help
