@@ -1,6 +1,6 @@
 # A package checks whether it is current with its upstream when it loads, and a stale one is put to the engineer
 
-- **State:** Abandoned
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** the engineer dropped it on 2026-08-24. Abandoning is a decision, which is what separates it from a record that lapsed because the work moved past it.
@@ -126,6 +126,8 @@ Related:
 - its downstream-work-is-never-offered rule — the other direction, which is forbidden
 - its present-every-prompt-through-askuserquestion rule — how the ask would be put
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Abandoned. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Mon Aug 24 2026 at 2:37:14 PM PT
@@ -135,3 +137,4 @@ Changed by Scott Bellware on Mon Aug 24 2026 at 3:01:55 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 3:11:24 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 3:22:41 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 5:28:30 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT
