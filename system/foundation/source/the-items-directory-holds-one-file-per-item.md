@@ -173,7 +173,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 19. Tags are the ordinary square-bracket tags every working-state artifact takes (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 20. `[observation]` and `[work]` mean what their rules say: the observations rule, and the work-item section below.
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
-22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Done` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
+22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Corrected` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. Of the two, the first tag names which was asked for. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
@@ -207,8 +207,6 @@ Change the state as the item reaches another word, renaming the file with it, an
 53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
 54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
 55. Complete concludes an item in its kind's concluding state.
-56. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item.
-57. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 56. Supersede an item rather than rewrite it.
 57. What a superseded item settled stays as written.
 58. Amend an item by dated addition.
@@ -216,7 +214,9 @@ Change the state as the item reaches another word, renaming the file with it, an
 60. Answer a question that runs against what an item settled, and record the change.
 61. Do not refuse to answer until the item is amended.
 62. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
-63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. *Complete that item* names its kind's concluding state.
+63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The implementations rule asks the same for an implementation concluded with no state named. *Complete that item* names its kind's concluding state.
+64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item, since the implementation is listed as current work in its place.
+65. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 
 ## Compression
 
@@ -241,6 +241,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 - 2026-11-09, revised: each kind starts and concludes as the harmonized-states plan's table gives, with Corrected, Resolved, and Completed, and resume takes back any state but Open, Active, and Recorded; not re-checked
 - 2026-11-09, revised: the Implementation state, which the engineer added; not re-checked
+- 2026-11-09, checked: 98 directives, 90 kept, 7 less precise, 1 lost, 4 repairs: a correction concludes Corrected throughout, the first tag names which was asked for, an implementation is current work in place of its item, the conclusion prompt holds for an implementation too, and the Implementation points are renumbered 64 and 65; re-checked: 98 directives, 95 kept, 3 less precise, 0 lost. Left less precise, in text this revision did not change: that Discontinued means the same for an item, the name of the selection tool, and that a settled item in general is never regenerated
 
 ## History
 
@@ -345,3 +346,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 8:22:50 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:12 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:59:34 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT

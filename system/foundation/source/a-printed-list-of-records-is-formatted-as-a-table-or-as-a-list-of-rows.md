@@ -194,6 +194,7 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-07, revised: `/items` prints its state counts under the heading *Other items*, in point 7 of the items command; checked: 36 directives, 35 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the heading the no-implementation line sits under, as before
 - 2026-11-09, revised: `/features` and `/experiments` list the current records of their kind, with an optional number and counts of the other states, as the features and experiments commands; checked: 48 directives, 47 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before
 - 2026-11-09, revised: a current implementation is Open, Active, or Suspended; not re-checked
+- 2026-11-09, checked: 61 directives, 60 kept, 1 less precise, 0 lost. Left less precise: the kind column's example for [work], which the general instruction produces
 
 ## History
 
@@ -270,3 +271,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 11:19:47 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:55:17 AM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 10:53:56 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT

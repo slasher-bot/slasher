@@ -323,6 +323,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 - 2026-11-07, revised: the status line's second line names the implementation under way, as points 18 to 20 of the status line; checked: 46 directives, 40 kept, 6 less precise, 0 lost, 2 repairs; re-checked: 46 directives, 42 kept, 4 less precise, 0 lost. Directives 15, 19, 32, and 46, on a missing upstream, the loading part, the compaction, and `/load`, are less precise in text this revision did not change, and are left as they are
 - 2026-11-08, revised: after a compaction the notice is one line in place of the startup display, as point 25 of the session-start notice; not re-checked
 - 2026-11-09, revised: the second status line takes an Open implementation too; not re-checked
+- 2026-11-09, checked: 85 directives, 81 kept, 3 less precise, 1 lost. The directive left lost is when the rule applies, which its Trigger line carries. The three less precise are in text this revision did not change
 
 ## History
 
@@ -479,3 +480,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:35:33 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:25:11 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT

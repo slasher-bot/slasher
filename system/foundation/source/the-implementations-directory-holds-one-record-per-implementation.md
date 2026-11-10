@@ -139,7 +139,7 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
     - **Affirmed**: the question held, or the intent was met, as forecast where there is one. The engineer declares it.
     - **Refuted**: the question was disproven, or the intent was not met.
     - **Inconclusive**: it ran and gave no clear verdict either way.
-12. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
+12. The engineer concludes an implementation Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
 13. Where the implementation is created for an item, make the item Implementation, and name each record in the other. When the implementation is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
 14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 15. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
@@ -189,6 +189,7 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 - 2026-11-09, revised: a record starts Open, takes Deferred and Obsolete, takes any concluding word, and is superseded without suspension, as the harmonized-states plan settles; not re-checked
 - 2026-11-09, revised: an item an implementation is created for takes Implementation, and follows it; not re-checked
+- 2026-11-09, checked: 70 directives, 67 kept, 2 less precise, 1 lost, 1 repair: the affirm, refute, and inconclusive commands are named; re-checked: 70 directives, 67 kept, 2 less precise, 1 lost. The directive left lost is when the rule applies, which its Trigger line carries
 
 ## History
 
@@ -253,3 +254,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:13 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 2:59:48 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:40 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
