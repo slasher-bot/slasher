@@ -9,7 +9,10 @@ EXPERIMENTS
   /experiment refute               -> Refuted
   /experiment inconclusive         -> Inconclusive
   /experiment suspend, /suspend    -> Suspended
-  /experiment resume               Suspended -> Active
+  /experiment discontinue, /discontinue
+                                   -> Discontinued
+  /experiment resume               Suspended or Discontinued
+                                   -> Active
   /experiment supersede, /supersede-> Superseded, after suspension
   /experiment abandon, /abandon    -> Abandoned
   /experiments [<n>]               The current experiments, or the n most recent

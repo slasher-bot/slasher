@@ -19,5 +19,5 @@ The engineer typed `/item $ARGUMENTS`.
 6. **`observation`**: record an observation. Load an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes.
 7. **`list <state>`**: list the items in that state. `current` means Open and Active. Load a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows. Where no state was typed, ask which.
 8. **`current`**: list the current items, as `list current` does.
-9. **A state change**, `start`, `realize`, `done`, `defer`, `suspend`, `supersede`, `abandon`, `obsolete`, or `reopen`, followed by the item: change that item's state. Load the-items-directory-holds-one-file-per-item. Where no item was named, or the words name more than one, ask which, through the selection interface.
+9. **A state change**, `start`, `realize`, `done`, `defer`, `suspend`, `discontinue`, `supersede`, `abandon`, `obsolete`, or `reopen`, followed by the item: change that item's state. Load the-items-directory-holds-one-file-per-item. Where no item was named, or the words name more than one, ask which, through the selection interface.
 10. Any other first word that is not a kind is not guessed at. Say it is not one of this command's subcommands, and ask which is meant, as step 4 does.

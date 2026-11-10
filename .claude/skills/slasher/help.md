@@ -42,13 +42,16 @@ ITEMS
   /item done, /done                -> Done ([work] items only)
   /item defer, /defer              -> Deferred
   /item suspend, /suspend          -> Suspended
+  /item discontinue, /discontinue  -> Discontinued
   /item supersede, /supersede      -> Superseded, naming the replacement
   /item abandon, /abandon          -> Abandoned
   /item obsolete, /obsolete        -> Obsolete
-  /item reopen, /reopen            Take back Realized, Deferred, Open, or Done
+  /item reopen, /reopen            Take back Realized, Deferred,
+                                   Discontinued, Open, or Done
 
-  /suspend, /supersede, and /abandon also act on a feature or an
-  experiment, and ask which record is meant where the words do not say.
+  /suspend, /discontinue, /supersede, and /abandon also act on a
+  feature or an experiment, and ask which record is meant where the
+  words do not say.
 
   /item help                       Print this command's help
 
@@ -67,7 +70,10 @@ FEATURES
   /feature status                  Phases, current phase, and its goal
   /feature complete                -> Completed
   /feature suspend, /suspend       -> Suspended
-  /feature resume                  Suspended -> Active
+  /feature discontinue, /discontinue
+                                   -> Discontinued
+  /feature resume                  Suspended or Discontinued
+                                   -> Active
   /feature supersede, /supersede   -> Superseded, after suspension
   /feature abandon, /abandon       -> Abandoned
   /features [<n>]                  The current features, or the n most recent
@@ -88,7 +94,10 @@ EXPERIMENTS
   /experiment refute               -> Refuted
   /experiment inconclusive         -> Inconclusive
   /experiment suspend, /suspend    -> Suspended
-  /experiment resume               Suspended -> Active
+  /experiment discontinue, /discontinue
+                                   -> Discontinued
+  /experiment resume               Suspended or Discontinued
+                                   -> Active
   /experiment supersede, /supersede-> Superseded, after suspension
   /experiment abandon, /abandon    -> Abandoned
   /experiments [<n>]               The current experiments, or the n most recent
