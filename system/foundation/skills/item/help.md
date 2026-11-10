@@ -32,13 +32,16 @@ ITEMS
   /item done, /done                -> Done ([work] items only)
   /item defer, /defer              -> Deferred
   /item suspend, /suspend          -> Suspended
+  /item discontinue, /discontinue  -> Discontinued
   /item supersede, /supersede      -> Superseded, naming the replacement
   /item abandon, /abandon          -> Abandoned
   /item obsolete, /obsolete        -> Obsolete
-  /item reopen, /reopen            Take back Realized, Deferred, Open, or Done
+  /item reopen, /reopen            Take back Realized, Deferred,
+                                   Discontinued, Open, or Done
 
-  /suspend, /supersede, and /abandon also act on a feature or an
-  experiment, and ask which record is meant where the words do not say.
+  /suspend, /discontinue, /supersede, and /abandon also act on a
+  feature or an experiment, and ask which record is meant where the
+  words do not say.
 
   /item help                       Print this command's help
 

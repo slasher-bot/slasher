@@ -71,6 +71,7 @@ Every item carries a `**State:**` line, from the moment it is written:
 - **Suspended** — paused, not ended.
 - **Superseded** — another item replaced it, and the two name each other.
 - **Abandoned** — dropped, by decision.
+- **Discontinued** — stopped, with no plan to resume. It is not current work, so the list of current items leaves it out. It may resume. It means what it means for a feature or an experiment.
 - **Recorded** — an observation, and an observation only. It is the one state that never changes: an observation has no lifecycle, so it carries this word from the moment it is written and carries it for good. See the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule.
 - **Obsolete** — it lost its relevance over time. **`Obsolete` and `Abandoned` differ in who acted:** abandoning is a decision, and an item becomes obsolete when nobody decides and the work moves past it. Any item takes it, a work item included.
 
@@ -80,7 +81,7 @@ Every item carries a `**State:**` line, from the moment it is written:
 
 **`Open` is the starting word for every other item**, whether its thinking is settled or not. **`Active` is the in-progress state**, and an item reaches it when its work starts. **As the engineer stated it:** Active is the in-progress state. Absence is not a state, and an item without a line is a defect.
 
-**`Realized`, `Deferred`, and `Open` are taken back**, each returning to `Active` or to `Open` when the work resumes. The rest are not.
+**`Realized`, `Deferred`, `Discontinued`, and `Open` are taken back**, each returning to `Active` or to `Open` when the work resumes. The rest are not.
 
 **An item whose work is done on an experiment's branch concludes when the work is done**, as `Realized`, or as `Done` for a work item. It does not wait for the experiment to merge. The item names the branch the work is on.
 
@@ -93,7 +94,7 @@ Every item carries a `**State:**` line, from the moment it is written:
 **An item tagged `[work]` is a piece of work to be done, and it concludes as `Done`, `Abandoned`, `Superseded`, or `Obsolete`.** This rule names the tag and says what follows.
 
 - **Done** — the work is done. It takes the place of `Realized`, which a work item does not take.
-- **Before it concludes**, a work item takes an item's states — `Open`, `Active`, `Deferred`, and `Suspended`.
+- **Before it concludes**, a work item takes an item's states — `Open`, `Active`, `Deferred`, `Suspended`, and `Discontinued`.
 - **`Done` is taken back** to `Active` when the work reopens, as `Realized` is for any other item.
 - **A correction and a rework item are work items.** Their `[work]` tag decides their states, so each concludes `Done`.
 
@@ -165,22 +166,23 @@ Change the state as the item reaches another word, renaming the file with it, an
 44. **Superseded** — a later item replaced it, and the two name each other.
 45. **Abandoned** — dropped by decision.
 46. **Obsolete** — it lost its relevance over time, as the work moved past it with no one deciding. Where a decision dropped it, it is **Abandoned**. Any item takes it, a work item included.
-47. Take `Realized`, `Deferred`, and `Open` back to `Active` or `Open` when the work resumes. The other states are not taken back. Conclude an item whose work is done on an experiment's branch when the work is done, as `Realized`, or `Done` for a work item. Do not wait for the merge, and name the branch.
-48. At each change of state, change the `**State:**` line and rename the file.
-49. At each change of state, write the log entry.
-50. An item tagged `[work]` is a piece of work to be done.
-51. A work item takes `Open`, `Active`, `Deferred`, and `Suspended`.
-52. A work item concludes `Done`, `Abandoned`, `Superseded`, or `Obsolete`.
-53. A work item never takes `Realized`. A correction and a rework item are work items, and each concludes `Done`.
-54. Take `Done` back to `Active` when the work reopens.
-55. Supersede an item rather than rewrite it.
-56. What a superseded item settled stays as written.
-57. Amend an item by dated addition.
-58. When amending, keep an outdated resolution's date and wording, and state what changed in a later resolution.
-59. Answer a question that runs against what an item settled, and record the change.
-60. Do not refuse to answer until the item is amended.
-61. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
-62. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one.
+47. **Discontinued** — stopped, with no plan to resume. It is not current work, so the list of current items leaves it out. It may resume.
+48. Take `Realized`, `Deferred`, `Discontinued`, and `Open` back to `Active` or `Open` when the work resumes. The other states are not taken back. Conclude an item whose work is done on an experiment's branch when the work is done, as `Realized`, or `Done` for a work item. Do not wait for the merge, and name the branch.
+49. At each change of state, change the `**State:**` line and rename the file.
+50. At each change of state, write the log entry.
+51. An item tagged `[work]` is a piece of work to be done.
+52. A work item takes `Open`, `Active`, `Deferred`, `Suspended`, and `Discontinued`.
+53. A work item concludes `Done`, `Abandoned`, `Superseded`, or `Obsolete`.
+54. A work item never takes `Realized`. A correction and a rework item are work items, and each concludes `Done`.
+55. Take `Done` back to `Active` when the work reopens.
+56. Supersede an item rather than rewrite it.
+57. What a superseded item settled stays as written.
+58. Amend an item by dated addition.
+59. When amending, keep an outdated resolution's date and wording, and state what changed in a later resolution.
+60. Answer a question that runs against what an item settled, and record the change.
+61. Do not refuse to answer until the item is amended.
+62. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
+63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one.
 
 ## Compression
 
@@ -202,8 +204,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-07, revised: `[correction]` is described, as a proposed change that puts right something that exists and is wrong; checked: 72 directives, 71 kept, 1 less precise, 0 lost. Left less precise, untouched by this revision: that a settled item is never regenerated, which the compressed text says only of an item another names as what it realizes
 - 2026-11-08, revised: the `[rework]` kind, carrying `[work]` and `[correction]` and concluding as a work item; not re-checked
 - 2026-11-08, revised: a correction carries `[work]` and `[rework]`, and concludes `Done`; not re-checked
+- 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 an item had no Discontinued state. The engineer settled that it means what it means for a feature or an experiment, and that it is taken back.
 
 Until Sun Nov 8 2026 a correction carried `[correction]` alone, and concluded `Realized` when the fix existed.
 
@@ -297,3 +302,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 11:30:03 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:36:57 AM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:18:46 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:22:50 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:12 PM PT

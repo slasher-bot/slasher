@@ -7,7 +7,10 @@ FEATURES
   /feature status                  Phases, current phase, and its goal
   /feature complete                -> Completed
   /feature suspend, /suspend       -> Suspended
-  /feature resume                  Suspended -> Active
+  /feature discontinue, /discontinue
+                                   -> Discontinued
+  /feature resume                  Suspended or Discontinued
+                                   -> Active
   /feature supersede, /supersede   -> Superseded, after suspension
   /feature abandon, /abandon       -> Abandoned
   /features [<n>]                  The current features, or the n most recent

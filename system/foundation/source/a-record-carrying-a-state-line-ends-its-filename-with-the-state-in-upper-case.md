@@ -26,7 +26,7 @@ Where a record carries a canonical `**State:**` line, its **filename** ends with
 
 **The name is derived from the line and changes only when it changes.** Where the two disagree the line is right, and the name is stale.
 
-**So a state change renames the file.** A record reaching a new word is renamed with `git mv`, and a reversible word taken back — **Realized**, **Deferred**, **Open**, or a work item's **Done**, as the the-items-directory-holds-one-file-per-item rule sets out — renames it to the state the item returns to, **ACTIVE** or **OPEN**.
+**So a state change renames the file.** A record reaching a new word is renamed with `git mv`, and a reversible word taken back — **Realized**, **Deferred**, **Discontinued**, **Open**, or a work item's **Done**, as the the-items-directory-holds-one-file-per-item rule sets out — renames it to the state the item returns to, **ACTIVE** or **OPEN**.
 
 **A reference to a record omits its state suffix, so a state change breaks no reference.** The reference keeps the rest of the filename, the ISO-8601-UTC prefix and the name, as in `2026-10-24T20-42-50Z-a-rules-name-is-soluble`. That part does not change with the state, so a reference written before a state change still names the record after it. A reader finds the file by that prefix and name. The reference is not a path that opens directly, which is the cost of its staying true.
 
@@ -71,7 +71,7 @@ When the state changes, rename it again. When a reversible state word is taken b
 2. Where name and line disagree, the line is right and the name is stale.
 3. A state change renames the file, using `git mv`.
 4. When a reversible word is taken back, rename the file to the state the record returns to, **ACTIVE** or **OPEN**.
-5. The reversible words are **Realized**, **Deferred**, **Open**, and a work item's **Done**, as the the-items-directory-holds-one-file-per-item rule sets out.
+5. The reversible words are **Realized**, **Deferred**, **Discontinued**, **Open**, and a work item's **Done**, as the the-items-directory-holds-one-file-per-item rule sets out.
 6. A reference to a record omits its state suffix and extension, and keeps the prefix and name. A rename then breaks no reference.
 7. A reader finds the record by that prefix and name.
 8. Leave historical records as written.
@@ -83,8 +83,11 @@ When the state changes, rename it again. When a reversible state word is taken b
 - 2026-10-27, revised: every item and implementation record carries a suffix; checked: 24 directives, 23 kept, 1 less precise, 0 lost, 1 repair, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 75 → 71, clarity 0.89 → 0.87; checked: 23 directives, 22 kept, 1 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 24 directives, 23 kept, 0 less precise, 1 lost, 1 repair
+- 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 an item had no Discontinued state, and the reversible words did not include it.
 
 Until Sun Oct 25 2026 this rule was named a-record-ends-with-its-state-in-upper-case and titled "A record carrying a state line ends its filename with that state in upper case".
 
@@ -135,3 +138,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 7:01:29 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 10:34:26 AM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:26:52 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 6:34:30 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:33 PM PT
