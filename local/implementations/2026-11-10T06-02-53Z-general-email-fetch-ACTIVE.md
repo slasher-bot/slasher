@@ -10,7 +10,7 @@
 
 ## State
 
-- **State:** Open
+- **State:** Active
 
 ## Setup
 
@@ -26,7 +26,7 @@
 
 **As the engineer stated it:** "The feature's first phase is the macOS Keychain implementation. The next phase is the mailbox fetch."
 
-1. **Keychain credentials** — the macOS Keychain implementation: a credential is stored in and read from the Keychain. Branch `feature/worktree/general-email-fetch.keychain-credentials`. No forecast.
+1. **Keychain credentials** — the macOS Keychain implementation: a credential is stored in and read from the Keychain. Branch `feature/worktree/general-email-fetch.keychain-credentials`. No forecast. Started from `99ea1898`, on the feature's branch.
 2. **Mailbox fetch** — an IMAP mailbox is fetched into the project, with its credential read from the Keychain. Branch `feature/worktree/general-email-fetch.mailbox-fetch`. No forecast.
 
 ## Confirmations
@@ -49,3 +49,4 @@
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:02:53 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 10:06:29 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 10:25:56 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 10:28:57 PM PT
