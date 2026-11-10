@@ -414,7 +414,7 @@ Source: system/foundation/source/present-every-prompt-to-the-engineer-through-th
 6. Present every genuine candidate you find.
 7. Do not search for options just to fill the second place.
 8. Do not say that a lone candidate is the only possibility.
-9. Where there is one genuine candidate, offer it and its negative, as in *Accept* and *Don't accept*. The negative is a real answer, not an invented option.
+9. Where there is one genuine candidate, offer it and its negative, labelled *Something else — say what to change*. The negative is a real answer, not an invented option.
 10. This applies whenever you would ask the engineer to decide or answer. That includes a design decision, a "which approach", a confirmation to proceed or commit, and a clarification between interpretations.
 11. Keep plain prose for statements, reports, and explanations that do not ask the engineer to choose.
 
