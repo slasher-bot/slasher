@@ -72,6 +72,7 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/release` | Presents the candidates for a package's next version, for the engineer to choose. |
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
+| `/sc, /shortcuts` | Print the shortcuts table |
 | `/load` | Loads the rules now, without waiting for the first prompt. |
 
 ## License
