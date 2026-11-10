@@ -1125,8 +1125,9 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
     - **Refuted**: the question was disproven, or the intent was not met.
     - **Inconclusive**: it ran and gave no clear verdict either way.
 12. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
-13. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
-14. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
+13. Where the implementation is created for an item, make the item Implementation, and name each record in the other. When the implementation is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
+14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
+15. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
 
 ## Runs
 
@@ -1219,6 +1220,8 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
 54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
 55. Complete concludes an item in its kind's concluding state.
+56. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item.
+57. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 56. Supersede an item rather than rewrite it.
 57. What a superseded item settled stays as written.
 58. Amend an item by dated addition.

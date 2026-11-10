@@ -81,6 +81,11 @@ A kind the table does not name starts Open and concludes Realized, as an idea do
 - **Open** — the work has not started, whether the thinking is settled or not.
 - **Recorded** — the starting state of a goal, an aspiration, a design, and an observation. A design and an observation never leave it. See the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule. The engineer can make a goal or an aspiration Active, or leave it Recorded.
 - **Active** — the work is in progress. An item becomes Active when its work starts, from Open, or from Recorded for a goal or an aspiration.
+- **Implementation** — the item turned into a feature or an experiment, which carries its work. The item and the implementation record name each other.
+
+**An item that turns into an implementation takes `Implementation`.** It takes it when the feature or the experiment is created for it. It follows the implementation: when the implementation is Completed or Affirmed, the item takes its kind's concluding state. When the implementation reaches any other concluding state, or is set aside, the agent asks the engineer what state the item takes. An item in Implementation is not a current item, since the implementation is listed as current work in its place.
+
+**As the engineer stated it:** When an item turns into an implementation, change its state to "implementation".
 
 **The concluding states, by kind:**
 
@@ -202,6 +207,8 @@ Change the state as the item reaches another word, renaming the file with it, an
 53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
 54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
 55. Complete concludes an item in its kind's concluding state.
+56. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item.
+57. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 56. Supersede an item rather than rewrite it.
 57. What a superseded item settled stays as written.
 58. Amend an item by dated addition.
@@ -233,8 +240,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-08, revised: a correction carries `[work]` and `[rework]`, and concludes `Done`; not re-checked
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 - 2026-11-09, revised: each kind starts and concludes as the harmonized-states plan's table gives, with Corrected, Resolved, and Completed, and resume takes back any state but Open, Active, and Recorded; not re-checked
+- 2026-11-09, revised: the Implementation state, which the engineer added; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 an item whose work a feature or an experiment carried stayed Open or Active, and was listed beside the implementation.
 
 Until Mon Nov 9 2026 every item but an observation started Open, a design included, and concluded Realized, or Done for a work item, a correction included. Only Realized, Deferred, Discontinued, Open, and Done were taken back. The engineer settled the harmonized-states plan, which gives each kind its own start and concluding state, adds Corrected, Resolved, and Completed, and lets resume take back any concluding state.
 
@@ -334,3 +344,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 8:18:46 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 8:22:50 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:12 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:59:34 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
