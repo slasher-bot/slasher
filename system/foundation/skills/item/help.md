@@ -27,21 +27,25 @@ ITEMS
                                    (Open and Active)
   /item current                    List current items (/item list current)
 
-  /item start, /start              Open -> Active
+  /item start, /start              Open, or Recorded for a goal or an
+                                   aspiration -> Active
+  /item complete, /complete        -> the kind's concluding state:
+                                   Realized, Done, Corrected, or Resolved
   /item realize, /realize          -> Realized
-  /item done, /done                -> Done ([work] items only)
-  /item defer, /defer              -> Deferred
+  /item done, /done                -> Done ([work] and [rework] items)
+  /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
-  /item discontinue, /discontinue  -> Discontinued
+  /item discontinue, /discontinue  -> Discontinued (no plan to do it)
+  /item obsolete, /obsolete        -> Obsolete
   /item supersede, /supersede      -> Superseded, naming the replacement
   /item abandon, /abandon          -> Abandoned
-  /item obsolete, /obsolete        -> Obsolete
-  /item reopen, /reopen            Take back Realized, Deferred,
-                                   Discontinued, Open, or Done
+  /item resume, /resume            Any state but Open, Active, or
+                                   Recorded -> Open or Active
 
-  /suspend, /discontinue, /supersede, and /abandon also act on a
-  feature or an experiment, and ask which record is meant where the
-  words do not say.
+  Each state change also acts on a feature or an experiment, and
+  asks which record is meant where the words do not say. A state
+  the record cannot take is refused. /affirm, /refute, and
+  /inconclusive act on a feature or an experiment only.
 
   /item help                       Print this command's help
 

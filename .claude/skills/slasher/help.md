@@ -37,21 +37,25 @@ ITEMS
                                    (Open and Active)
   /item current                    List current items (/item list current)
 
-  /item start, /start              Open -> Active
+  /item start, /start              Open, or Recorded for a goal or an
+                                   aspiration -> Active
+  /item complete, /complete        -> the kind's concluding state:
+                                   Realized, Done, Corrected, or Resolved
   /item realize, /realize          -> Realized
-  /item done, /done                -> Done ([work] items only)
-  /item defer, /defer              -> Deferred
+  /item done, /done                -> Done ([work] and [rework] items)
+  /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
-  /item discontinue, /discontinue  -> Discontinued
+  /item discontinue, /discontinue  -> Discontinued (no plan to do it)
+  /item obsolete, /obsolete        -> Obsolete
   /item supersede, /supersede      -> Superseded, naming the replacement
   /item abandon, /abandon          -> Abandoned
-  /item obsolete, /obsolete        -> Obsolete
-  /item reopen, /reopen            Take back Realized, Deferred,
-                                   Discontinued, Open, or Done
+  /item resume, /resume            Any state but Open, Active, or
+                                   Recorded -> Open or Active
 
-  /suspend, /discontinue, /supersede, and /abandon also act on a
-  feature or an experiment, and ask which record is meant where the
-  words do not say.
+  Each state change also acts on a feature or an experiment, and
+  asks which record is meant where the words do not say. A state
+  the record cannot take is refused. /affirm, /refute, and
+  /inconclusive act on a feature or an experiment only.
 
   /item help                       Print this command's help
 
@@ -65,17 +69,24 @@ FEATURES
   A feature builds something the project needs, on its own branch or worktree,
   to a declared end. Features and experiments are both kinds of implementations.
 
-  /feature new                     Start a feature
-  /feature new with phases         Start a feature, asking for its phases
+  /feature new                     Create its branch and an Open record
+  /feature new with phases         Create it, asking for its phases
   /feature status                  Phases, current phase, and its goal
-  /feature complete                -> Completed
+  /feature start, /start           Open -> Active
+  /feature complete, /complete     -> Completed, or asks which state
+                                   where there is a forecast
+  /feature affirm, /affirm         -> Affirmed (engineer's declaration only)
+  /feature refute, /refute         -> Refuted
+  /feature inconclusive, /inconclusive
+                                   -> Inconclusive
+  /feature defer, /defer           -> Deferred (kept to do later)
   /feature suspend, /suspend       -> Suspended
   /feature discontinue, /discontinue
-                                   -> Discontinued
-  /feature resume                  Suspended or Discontinued
-                                   -> Active
-  /feature supersede, /supersede   -> Superseded, after suspension
+                                   -> Discontinued (no plan to do it)
+  /feature obsolete, /obsolete     -> Obsolete
+  /feature supersede, /supersede   -> Superseded, naming the replacement
   /feature abandon, /abandon       -> Abandoned
+  /feature resume, /resume         Any state but Open or Active -> Active
   /features [<n>]                  The current features, or the n most recent
   /feature help                    Print this command's help
 
@@ -87,19 +98,25 @@ EXPERIMENTS
   An experiment tests a question on its own branch or worktree, to a declared
   end. Features and experiments are both kinds of implementations.
 
-  /experiment new                  Start an experiment
-  /experiment new with phases      Start an experiment, asking for its phases
+  /experiment new                  Create its branch and an Open record
+  /experiment new with phases      Create it, asking for its phases
   /experiment status               Phases, current phase, and its goal
-  /experiment affirm               -> Affirmed (engineer's declaration only)
-  /experiment refute               -> Refuted
-  /experiment inconclusive         -> Inconclusive
+  /experiment start, /start        Open -> Active
+  /experiment complete, /complete  -> Completed, or asks which state
+                                   where there is a forecast
+  /experiment affirm, /affirm      -> Affirmed (engineer's declaration only)
+  /experiment refute, /refute      -> Refuted
+  /experiment inconclusive, /inconclusive
+                                   -> Inconclusive
+  /experiment defer, /defer        -> Deferred (kept to do later)
   /experiment suspend, /suspend    -> Suspended
   /experiment discontinue, /discontinue
-                                   -> Discontinued
-  /experiment resume               Suspended or Discontinued
-                                   -> Active
-  /experiment supersede, /supersede-> Superseded, after suspension
+                                   -> Discontinued (no plan to do it)
+  /experiment obsolete, /obsolete  -> Obsolete
+  /experiment supersede, /supersede
+                                   -> Superseded, naming the replacement
   /experiment abandon, /abandon    -> Abandoned
+  /experiment resume, /resume      Any state but Open or Active -> Active
   /experiments [<n>]               The current experiments, or the n most recent
   /experiment help                 Print this command's help
 
