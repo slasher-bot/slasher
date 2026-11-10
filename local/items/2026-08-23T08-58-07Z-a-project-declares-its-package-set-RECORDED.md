@@ -1,6 +1,6 @@
 # A project declares its package set, and the packages outside it deactivate
 
-- **State:** Realized
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** the two questions that held it `Open` are answered. What deactivation does is settled, and the answer dissolves the conflict with the unconditional session-start read rather than requiring that rule to change.
@@ -102,6 +102,8 @@ Related:
 - the `announce-waytide-at-session-start` rule — the unconditional read this leaves whole
 - the local rule *Design By Efferent does not govern content work* — the hand-built stand-in this would retire
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Realized. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Sun Aug 23 2026 at 1:58:07 AM PT
@@ -111,3 +113,4 @@ Changed by Scott Bellware on Sun Aug 23 2026 at 2:11:38 AM PT
 Changed by Scott Bellware on Sun Aug 23 2026 at 2:14:52 AM PT
 Changed by Scott Bellware on Sun Aug 23 2026 at 2:34:07 AM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 12:51:37 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT

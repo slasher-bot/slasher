@@ -1,6 +1,6 @@
 # Waytide for content and web
 
-- **State:** Realized
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** what the idea describes exists. The engineer declared it done on 2026-08-24.
@@ -55,8 +55,11 @@ Related:
 - *Waytide's Self-Explanation* and *A Generalized Description of Waytide* — the two aspirations that already reach the website, whose production and presentation live in that project
 - the `tools/ruby-lang` package — the worked precedent for a tool package and for authoring one outside the composite
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Realized. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Sat Aug 22 2026 at 11:58:41 PM PT
 Changed by Scott Bellware on Sun Aug 23 2026 at 3:58:40 AM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 5:19:07 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT

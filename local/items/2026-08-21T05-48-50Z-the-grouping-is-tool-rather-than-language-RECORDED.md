@@ -1,6 +1,6 @@
 # The grouping is `tool/`, not a language
 
-- **State:** Superseded
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** the axis is proposed and the extent is not settled. What `tool` covers, whether the existing `code/` directory is renamed to it, and what becomes of the published `code-ruby` repository are each open. It is promoted to `Active` once those are decided.
@@ -50,8 +50,11 @@ Related:
 - `CONTRIBUTING.md` — the path-change publish, and the four composite renames that each took one
 - the file-names rule — the dash-separated lower-case naming a directory takes
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Superseded. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Thu Aug 20 2026 at 10:48:50 PM PT
 Changed by Scott Bellware on Thu Aug 20 2026 at 11:00:46 PM PT
 Changed by Scott Bellware on Sun Aug 23 2026 at 1:14:38 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT

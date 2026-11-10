@@ -1,6 +1,6 @@
 # The Ruby package leaves the default distribution, and a `waytide-ruby` distribution installs it with the rest
 
-- **State:** Realized
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** what the idea describes exists. The engineer declared it implemented on 2026-08-24.
@@ -54,7 +54,10 @@ Related:
 - the a-citation-is-not-a-dependency rule — why no rule breaks when Ruby leaves the default
 - `CONTRIBUTING.md` — the publish procedure a distribution repository would join
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Realized. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Thu Aug 20 2026 at 10:21:29 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 5:19:07 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT

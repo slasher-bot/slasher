@@ -1,6 +1,6 @@
 # Item and implementation states and commands are harmonized, restated
 
-- **State:** Open
+- **State:** Realized
 - **Tags:** [plan]
 
 Items and implementations (features and experiments) take one set of states and one set of commands. Each command acts on an item, a feature, or an experiment, and maps its name to the state that kind of record takes. This plan restates the settled design of `2026-11-10T00-13-50Z-item-and-implementation-states-and-commands-are-harmonized`, which it supersedes and which keeps the record of how each decision was reached.
@@ -51,17 +51,19 @@ Existing items and implementation records are converted to these states, under a
 - **2026-11-09** — A kind can exist before any item uses it, and a kind can come into existence on its first use. The kinds in the table that no item carries yet need nothing added.
 - **2026-11-09** — An item tagged both `[idea]` and `[design]` concludes as an idea. The idea has primacy.
 
+**Implementation:** the feature `2026-11-10T04-49-07Z-harmonized-states` carries this plan's work. It is Completed, so the plan is Realized.
+
 ## Tasks
 
-- [ ] Every kind of record starts and concludes as the table gives.
-- [ ] Every record that changes state takes the shared states, and the items rule states how Deferred and Discontinued differ.
-- [ ] A feature or an experiment can be superseded without first being suspended.
-- [ ] The item, feature, and experiment commands offer subcommands paired by meaning, and refuse one that maps to no state.
-- [ ] Each state-change root command acts on an item, a feature, or an experiment, and asks which where the words do not say.
-- [ ] Resume brings records back from the states given, and the reopen command no longer exists.
-- [ ] The help of each affected command describes its states as they now are.
-- [ ] A migration record plans the conversion of existing items and implementation records.
-- [ ] Existing items and implementation records carry the new states.
+- [x] Every kind of record starts and concludes as the table gives.
+- [x] Every record that changes state takes the shared states, and the items rule states how Deferred and Discontinued differ.
+- [x] A feature or an experiment can be superseded without first being suspended.
+- [x] The item, feature, and experiment commands offer subcommands paired by meaning, and refuse one that maps to no state.
+- [x] Each state-change root command acts on an item, a feature, or an experiment, and asks which where the words do not say.
+- [x] Resume brings records back from the states given, and the reopen command no longer exists.
+- [x] The help of each affected command describes its states as they now are.
+- [x] A migration record plans the conversion of existing items and implementation records.
+- [x] Existing items and implementation records carry the new states.
 
 ## Out of Scope / Deferred
 
@@ -79,3 +81,7 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 8:21:46 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:24:22 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:28:00 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:37:25 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:49:07 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:16 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:33 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:40:49 PM PT
