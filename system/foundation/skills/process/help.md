@@ -15,13 +15,13 @@ PROCESS
   /next?                           The next step in the current multi-step
                                    process, or the step that has been
                                    interrupted
-  />                               An alias of /next?
+  />, /?                           Aliases of /next?
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
-  /#                               An alias of /estimate-confidence
+  /#, /??                          Aliases of /estimate-confidence
 
   /process help                    Print this command's help
