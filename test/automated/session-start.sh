@@ -117,6 +117,40 @@ case "$open_message" in
   *) fail "Sets the open implementations apart from the install line with a blank line" "message:" "$open_message" ;;
 esac
 
+# Reports an Open implementation, and not a Deferred or an Obsolete one ------------
+
+states=$(mktemp -d)
+trap 'rm -rf "$project" "$states"' EXIT
+mkdir -p "$states/system/foundation" "$states/local/implementations"
+cp system/foundation/session-start.sh "$states/system/foundation/"
+echo some-readme > "$states/system/foundation/README.md"
+
+cat > "$states/local/implementations/2026-01-01T00-00-00Z-some-cart-OPEN.md" <<'RECORD'
+# Feature — Some cart
+
+- **State:** Open
+RECORD
+
+cat > "$states/local/implementations/2026-01-02T00-00-00Z-some-receipt-DEFERRED.md" <<'RECORD'
+# Feature — Some receipt
+
+- **State:** Deferred
+RECORD
+
+cat > "$states/local/implementations/2026-01-03T00-00-00Z-some-payment-OBSOLETE.md" <<'RECORD'
+# Feature — Some payment
+
+- **State:** Obsolete
+RECORD
+
+states_output=$(cd "$states" && sh system/foundation/session-start.sh < /dev/null)
+states_message=$(printf '%s' "$states_output" | python3 -c 'import json,sys; print(json.load(sys.stdin)["systemMessage"])')
+
+case "$states_message" in
+  *"1 implementation open: some-cart (open)") ;;
+  *) fail "Reports an Open implementation, and not a Deferred or an Obsolete one" "message:" "$states_message" ;;
+esac
+
 # Carries the core rules after the read instruction ---------------------------------
 
 cp system/foundation/load-rules.sh "$project/system/foundation/"
@@ -153,4 +187,4 @@ repository_length=$(printf '%s' "$repository_context" | python3 -c 'import sys; 
 
 [ "$repository_length" -le 10000 ] || fail "Keeps this repository's context within the hook's 10,000 characters" "length:" "$repository_length"
 
-echo "8 passed"
+echo "9 passed"

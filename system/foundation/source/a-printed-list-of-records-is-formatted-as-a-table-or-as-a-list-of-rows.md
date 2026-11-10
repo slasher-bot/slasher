@@ -40,7 +40,7 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The items command
 
-**`/items` lists the current items, then the current implementations.** The items are the ones `current` asks for, Open and Active. The implementations are the features and experiments whose `**State:**` line reads Active or Suspended: the ones that have not concluded, whether they are under way or paused.
+**`/items` lists the current items, then the current implementations.** The items are the ones `current` asks for, Open and Active. The implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
 
 **The items table printed by `/items` takes a kind column, between the title and the state.** It names the kind each of the item's tags gives, written as a word, not as a tag: *Idea* for `[idea]`, *Work* for `[work]`, and *Legal matter* for `[legal-matter]`. Where the item carries several tags, it names each, separated by commas. Other lists of items take no kind column unless it is asked for.
 
@@ -70,7 +70,7 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The features and experiments commands
 
-**`/features` lists the current features, and `/experiments` lists the current experiments.** A current feature or experiment is one whose `**State:**` line reads Active or Suspended, as with the current implementations `/items` lists. A record's kind is the word its title opens with, as in `Feature — The current command` or `Experiment — Rules files flattening`.
+**`/features` lists the current features, and `/experiments` lists the current experiments.** A current feature or experiment is one whose `**State:**` line reads Open, Active, or Suspended, as with the current implementations `/items` lists. A record's kind is the word its title opens with, as in `Feature — The current command` or `Experiment — Rules files flattening`.
 
 **Each row is an ordinal, the record's handle, its title, and its state.** The list takes the ordinal and no SHA columns, as a list of items does, since each command does for its kind what `/items` does for items. The title is the record's own.
 
@@ -78,7 +78,7 @@ A list of items takes the ordinal and no SHA columns:
 
 **Where none of its kind is current, the list is one line:** *No current feature.* for `/features`, and *No current experiment.* for `/experiments`.
 
-**Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Active and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
+**Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Open, Active, and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
 
 **As the engineer stated it:** Create a "/features" command and an "/experiments" command that does for them what the "/items" command does
 
@@ -146,7 +146,7 @@ A list of items takes the ordinal and no SHA columns:
 ## The items command
 
 1. `/items` lists the current items, then, under a heading of their own, the current implementations.
-2. The current implementations are the features and experiments whose `**State:**` line reads Active or Suspended.
+2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. In the items table `/items` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
@@ -156,12 +156,12 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The features and experiments commands
 
-1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Active or Suspended.
+1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Open, Active, or Suspended.
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
 3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
 4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
 5. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
-6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Active and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
+6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
 7. A number given to the command does not change these counts.
 
 ## Keep every column short
@@ -193,8 +193,11 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-07, revised: `/items` prints its state counts as one comma-separated sentence, in point 7 of the items command; checked: 31 directives, 30 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before
 - 2026-11-07, revised: `/items` prints its state counts under the heading *Other items*, in point 7 of the items command; checked: 36 directives, 35 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the heading the no-implementation line sits under, as before
 - 2026-11-09, revised: `/features` and `/experiments` list the current records of their kind, with an optional number and counts of the other states, as the features and experiments commands; checked: 48 directives, 47 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before
+- 2026-11-09, revised: a current implementation is Open, Active, or Suspended; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 a current implementation was Active or Suspended, since an implementation took no Open state.
 
 Until Sat Nov 7 2026 `/items` printed its state counts with no heading. The engineer settled that they sit under the heading *Other items*.
 
@@ -266,3 +269,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 1:30:58 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:19:47 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:55:17 AM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 10:53:56 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT

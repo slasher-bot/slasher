@@ -118,6 +118,9 @@ report_open() {
     [ -z "$concluded" ] || continue
 
     case "$state" in
+      Open)
+        note=open
+        ;;
       Active)
         note=active
         ;;
@@ -133,7 +136,7 @@ report_open() {
     esac
 
     # The name is the filename without its datetime prefix and without its state suffix,
-    # which an open record carries as -ACTIVE or -SUSPENDED.
+    # which an open record carries as -OPEN, -ACTIVE, or -SUSPENDED.
     name=$(
       basename "$record" .md |
         sed -e 's|^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}T[0-9]\{2\}-[0-9]\{2\}-[0-9]\{2\}Z-||' \
@@ -168,13 +171,14 @@ implementations=
 
 if [ -n "$own" ]; then
   # One directory, one call. The concluded words are the union of the two kinds':
-  # an experiment reaches a verdict, a feature reaches Completed, and both may be
-  # abandoned or superseded. A discontinued implementation is not current work, so it is
-  # not reported. Suspended is deliberately absent — a suspended implementation is paused
-  # rather than concluded, and is still reported.
+  # any implementation may reach a verdict or Completed, and may be abandoned or
+  # superseded. A deferred, discontinued, or obsolete implementation is not current work,
+  # so it is not reported. Open and Suspended are deliberately absent — an open
+  # implementation has its branch, and a suspended one is paused rather than concluded,
+  # and both are still reported.
   implementations=$(
     report_open "$own/implementations" implementation implementations \
-      Affirmed Refuted Inconclusive Completed Abandoned Superseded Discontinued
+      Affirmed Refuted Inconclusive Completed Abandoned Superseded Discontinued Deferred Obsolete
   )
 fi
 

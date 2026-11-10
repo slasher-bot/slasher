@@ -124,4 +124,24 @@ phased_implementation=$(cd "$phased" && system/foundation/current-implementation
 
 [ "$phased_implementation" = "$control_phase_branch" ] || fail "Prints the branch of the phase under way" "found:" "$phased_implementation"
 
+# Prints the branch of an Open implementation -------------------------------
+
+opened=$(mktemp -d)
+trap 'rm -rf "$project" "$installed" "$several" "$phased" "$opened"' EXIT
+mkdir -p "$opened/system/foundation" "$opened/local/implementations"
+cp system/foundation/current-implementation.sh "$opened/system/foundation/"
+
+control_open_branch="feature/some-cart"
+
+cat > "$opened/local/implementations/2026-01-01T00-00-00Z-some-cart-OPEN.md" <<RECORD
+# Feature — Some cart
+
+- **State:** Open
+- **Implementation branch:** \`$control_open_branch\`
+RECORD
+
+opened_implementation=$(cd "$opened" && system/foundation/current-implementation.sh)
+
+[ "$opened_implementation" = "$control_open_branch" ] || fail "Prints the branch of an Open implementation" "found:" "$opened_implementation"
+
 echo "0 failed, 0 aborted"
