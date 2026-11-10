@@ -28,6 +28,15 @@
 - **2026-11-09** — Participation: Attended, selected by the engineer. Agent's confidence 45%, risk of redo 55%, It'll work 70%, Your approval 50%, attended confidence 75%. The warning was shown, and Attended was recommended.
 - **2026-11-09** — The feature states no forecast, selected by the engineer at the start.
 
+## Prior work
+
+**As the engineer stated it:** "There's an old Waytide project at ~/works/RCC that has email retreival implementations".
+
+- **The fetch:** `~/projects/sbellware/download-mailbox/download_mailbox.py`, a 310-line Python script on the standard library's `imaplib`. It takes a host, a user, a folder, an output directory, and the name of an environment variable holding the password, prompting where it is unset. It connects over TLS on port 993 by default. It writes each message as text, saves attachments, strips HTML where no plain-text part exists, and skips messages already downloaded, by UID.
+- **The callers:** `~/works/RCC/email-export/`, four shell scripts. Each sources a credentials file at `${XDG_CONFIG_HOME:-$HOME/.config}/rcc/credentials`, which sets one environment variable per mailbox, and calls the fetch for one mailbox or Gmail label into a directory of its own. Two mailboxes are fetched: a Gmail account, by label, and a mailbox on the organization's own IMAP server.
+- **What it shows for the unsettled matters:** the provider is general already, since any IMAP server serves. The store is a per-machine file under `~/.config/`, outside any repository, but it is specific to one project and holds passwords, not tokens. Gmail is reached by IMAP with a password, not by OAuth.
+
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:02:53 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 10:06:29 PM PT
