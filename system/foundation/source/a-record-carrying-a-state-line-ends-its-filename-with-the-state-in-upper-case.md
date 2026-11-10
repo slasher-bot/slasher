@@ -70,7 +70,7 @@ When the state changes, rename it again. When a reversible state word is taken b
 1. The name is derived from the line. It changes only when the line changes.
 2. Where name and line disagree, the line is right and the name is stale.
 3. A state change renames the file, using `git mv`.
-4. When a reversible word is taken back, rename the file to the state the record returns to, **ACTIVE** or **OPEN**.
+4. When a reversible word is taken back, rename the file to the state the record returns to, such as **ACTIVE** or **OPEN**.
 5. Any state but Open, Active, and Recorded can be taken back by resume, as the the-items-directory-holds-one-file-per-item rule sets out.
 6. A reference to a record omits its state suffix and extension, and keeps the prefix and name. A rename then breaks no reference.
 7. A reader finds the record by that prefix and name.
@@ -85,6 +85,7 @@ When the state changes, rename it again. When a reversible state word is taken b
 - 2026-10-29, merge from master re-checked: 24 directives, 23 kept, 0 less precise, 1 lost, 1 repair
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 - 2026-11-09, revised: any state but Open, Active, and Recorded can be taken back; not re-checked
+- 2026-11-09, checked: 28 directives, 26 kept, 2 less precise, 0 lost, 1 repair: the state a record returns to is an example, not a closed list; re-checked: 28 directives, 26 kept, 2 less precise, 0 lost. Left less precise: that a reference is not an openable path, and that a record without a state line takes no suffix, both implied
 
 ## History
 
@@ -143,3 +144,4 @@ Changed by Scott Bellware on Wed Oct 28 2026 at 5:26:52 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 6:34:30 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:33 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:03 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT

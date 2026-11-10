@@ -303,7 +303,7 @@ Trigger: When creating, renaming, changing the state of, or referencing an item 
 1. The name is derived from the line. It changes only when the line changes.
 2. Where name and line disagree, the line is right and the name is stale.
 3. A state change renames the file, using `git mv`.
-4. When a reversible word is taken back, rename the file to the state the record returns to, **ACTIVE** or **OPEN**.
+4. When a reversible word is taken back, rename the file to the state the record returns to, such as **ACTIVE** or **OPEN**.
 5. Any state but Open, Active, and Recorded can be taken back by resume, as the the-items-directory-holds-one-file-per-item rule sets out.
 6. A reference to a record omits its state suffix and extension, and keeps the prefix and name. A rename then breaks no reference.
 7. A reader finds the record by that prefix and name.
@@ -1124,7 +1124,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
     - **Affirmed**: the question held, or the intent was met, as forecast where there is one. The engineer declares it.
     - **Refuted**: the question was disproven, or the intent was not met.
     - **Inconclusive**: it ran and gave no clear verdict either way.
-12. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
+12. The engineer concludes an implementation Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
 13. Where the implementation is created for an item, make the item Implementation, and name each record in the other. When the implementation is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
 14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 15. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
@@ -1186,7 +1186,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 19. Tags are the ordinary square-bracket tags every working-state artifact takes (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 20. `[observation]` and `[work]` mean what their rules say: the observations rule, and the work-item section below.
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
-22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Done` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
+22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Corrected` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. Of the two, the first tag names which was asked for. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
@@ -1220,8 +1220,6 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
 54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
 55. Complete concludes an item in its kind's concluding state.
-56. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item.
-57. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 56. Supersede an item rather than rewrite it.
 57. What a superseded item settled stays as written.
 58. Amend an item by dated addition.
@@ -1229,7 +1227,9 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 60. Answer a question that runs against what an item settled, and record the change.
 61. Do not refuse to answer until the item is amended.
 62. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
-63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. *Complete that item* names its kind's concluding state.
+63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The implementations rule asks the same for an implementation concluded with no state named. *Complete that item* names its kind's concluding state.
+64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item, since the implementation is listed as current work in its place.
+65. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 
 # The log records why work was abandoned, and never says undone work was done
 

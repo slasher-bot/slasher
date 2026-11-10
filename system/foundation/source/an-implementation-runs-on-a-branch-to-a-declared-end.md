@@ -299,6 +299,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-08, revised: the forecast question lists *No forecast* first, at the engineer's direction; not re-checked
 - 2026-11-08, revised: a phase is asked a forecast when added and the verdict when complete, as an implementation is, at the engineer's direction; not re-checked
 - 2026-11-09, revised: new creates the branch and writes the record Open, supersession needs no suspension, and any work can take a verdict word; not re-checked
+- 2026-11-09, checked: 103 directives, 102 kept, 1 less precise, 0 lost. Left less precise: that the verdict question goes through the selection interface, which its fixed options imply
 
 ## History
 
@@ -385,3 +386,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 9:35:54 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:42:51 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:49:53 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:01:01 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
