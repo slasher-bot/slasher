@@ -24,7 +24,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/., /recent` | Says what was recently done, and what's next. |
 | `/', /items` | Lists the current items, then the current features and experiments. |
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
-| `/?, /next?` | The next step in the current multi-step process, or the step that has been interrupted. Equivalent to "what are we doing?" or "what's next?" |
+| `/?, /next?` | "what are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/???, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
@@ -84,6 +84,8 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026, for part of that day, the `/next?` row's description ended with *Equivalent to "what are we doing?" or "what's next?"*. The engineer moved the two questions to its start.
 
 Until Tue Nov 10 2026, for part of that day, `/shortcuts` and `/sc` had no row in the full table. The engineer added one just above the `/load` row.
 
@@ -303,3 +305,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 10:41:04 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:22 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:45:39 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:48:20 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:51:43 AM PT
