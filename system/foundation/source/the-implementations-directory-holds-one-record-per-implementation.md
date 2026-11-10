@@ -27,7 +27,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Work with a forecast states it** — what is expected to happen — **before** the work. As the work proceeds it records what actually happened against that forecast, then the findings and any post-hoc misses. The outcomes the forecast did not account for are usually the most informative.
 
-**Work without a forecast states none of that.** There is no comparison against a forecast, and no findings or misses, and it cannot reach a verdict.
+**Work without a forecast states none of that.** There is no comparison against a forecast, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word, which any implementation can take.
 
 **Every record carries the confirmations the lifecycle required**, so the work's authority is auditable: the working-location selection at the start, the attended-or-unattended selection at the start, the forecast selection at the start, the verdict selection at the end where the work has a forecast, adding a worktree to work already under way, and branch deletion with worktree removal. **Work that reaches a verdict also records** the affirmation declaration, concluding a superseded one, and merging untested code.
 
@@ -35,27 +35,31 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **The state sits on a canonical `**State:**` line**, carrying one word and nothing else — `- **State:** Suspended`. It is written with the record, and changes as the record reaches another word. That line is the only authoritative statement of the state: the same words run through a record's prose freely, and nothing else in the file can be read as the state.
 
-**`Active` is the in-progress state**, as it is for an item. A record is written when its work starts, so it carries `Active` from the moment it is written. Absence is not a state, and a record without a line is a defect.
+**`new` creates the branch and writes the record `Open`.** `start` makes it `Active`, the in-progress state, as it is for an item. Absence is not a state, and a record without a line is a defect.
 
 **The state words every implementation takes:**
 
+- **Open** — the record and the branch exist, and the work has not started.
 - **Active** — the work is in progress.
-- **Abandoned** — dropped before concluding. Not merged, and the record is kept.
-- **Superseded** — replaced by another implementation. The two records name the counterpart.
+- **Deferred** — kept to do later, with no one working toward it.
 - **Suspended** — paused, not ended.
-- **Discontinued** — stopped, with no plan to resume. It is not current work, so the list of current work and the session-start notice leave it out. It may resume, and what it recorded may be merged.
+- **Discontinued** — stopped, with no plan to do it. It is not current work, so the list of current work and the session-start notice leave it out. What it recorded may be merged.
+- **Obsolete** — it lost its relevance over time, as the work moved past it with no one deciding.
+- **Superseded** — replaced by another implementation. The two records name the counterpart. An implementation can be superseded at any time, without first being suspended.
+- **Abandoned** — dropped before concluding, by decision. Not merged, and the record is kept.
 
-**The words work that reaches a verdict takes**, because each is a verdict:
+**Deferred and Discontinued differ in intent.** A Deferred implementation is kept to do later. A Discontinued one has no plan to do it.
 
-- **Affirmed** — the question held, or the intent was met as forecast. The engineer declares it.
-- **Refuted** — the question was disproven, or the intent was not met as forecast.
-- **Inconclusive** — it ran and gave no clear verdict either way.
-
-**The word work without a verdict takes:**
+**The concluding words:**
 
 - **Completed** — integrated into the upstream branch. The ordinary conclusion.
+- **Affirmed** — the question held, or the intent was met, as forecast where there is a forecast. The engineer declares it.
+- **Refuted** — the question was disproven, or the intent was not met.
+- **Inconclusive** — it ran and gave no clear verdict either way.
 
-**Work without a verdict has no verdict words, and work with one has no `Completed`.** Neither is an oversight, and neither depends on the kind.
+**Any implementation can take any concluding word, whether or not it has a forecast.** The engineer concludes it Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. **`complete` concludes an implementation without a forecast as Completed.** Where it has a forecast, the agent asks which concluding word it takes: Completed, Affirmed, Refuted, or Inconclusive.
+
+**Any state but Open and Active can be taken back**, by `resume`, which returns the implementation to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 
 **Where the engineer asks for an implementation to be concluded and names no state, the state is put to the engineer through the selection interface.** Each concluding state the implementation can take is an option. The agent does not choose the state, and does not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
 
@@ -79,7 +83,7 @@ The same frontmatter-free markdown as rules — a `# Experiment — <name>` or `
 
 **How to apply:** record every implementation here, tagged `[experiment]` or `[feature]`. Open with the question or the intent, then the branch topology, the working location, and whether it states a forecast. Forecast before the work where the engineer gives one, and record what happened against it. Record the verdict selection at the end, where the work has a forecast.
 
-Write the state line as `Active` when the record is written, and update it as the state changes. Record each confirmation the lifecycle requires.
+Write the state line as `Open` when `new` writes the record, make it `Active` when the work starts, and update it as the state changes. Record each confirmation the lifecycle requires.
 
 ## Compressed
 
@@ -102,7 +106,7 @@ Write the state line as `Active` when the record is written, and update it as th
 5. Work with a forecast states it, what is expected to happen, before the work.
 6. As the work proceeds, it records what actually happened against the forecast.
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
-8. Work without a forecast records no comparison against one, and no findings or misses, and cannot reach a verdict.
+8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
 10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the start, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
@@ -111,27 +115,30 @@ Write the state line as `Active` when the record is written, and update it as th
 ## The state
 
 1. The state sits on a canonical `**State:**` line carrying one word and nothing else, for example `- **State:** Suspended`.
-2. Write the line with the record, as `Active`, and change it as the record reaches another word.
+2. Write the line with the record, as `Open`, and change it as the record reaches another word.
 3. That line is the only authoritative statement of the state.
 4. The state words may appear freely in the record's prose. Nothing else in the file is read as the state.
 5. `Active` is the in-progress state, as it is for an item.
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
-8. A record is written when its work starts, so it carries `Active` from the moment it is written.
-9. The filename carries the state suffix, `-ACTIVE` while the work is in progress (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
+8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+9. The filename carries the state suffix, as `-OPEN` or `-ACTIVE` (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
 10. The state words every implementation takes are these.
+    - **Open**: the record and the branch exist, and the work has not started.
     - **Active**: the work is in progress.
-    - **Abandoned**: dropped before concluding. It is not merged, and the record is kept.
-    - **Superseded**: replaced by another implementation. Each of the two records names its counterpart.
+    - **Deferred**: kept to do later, with no one working toward it.
     - **Suspended**: paused, not ended.
-    - **Discontinued**: stopped, with no plan to resume. It is not current work: the list of current work and the session-start notice leave it out. It may resume, and what it recorded may be merged.
-11. The words only work that reaches a verdict takes are these.
-    - **Affirmed**: the question held, or the intent was met as forecast. The engineer declares it.
-    - **Refuted**: the question was disproven, or the intent was not met as forecast.
-    - **Inconclusive**: it ran and gave no clear verdict either way.
-12. The word only work without a verdict takes is this.
+    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the session-start notice leave it out. What it recorded may be merged.
+    - **Obsolete**: it lost its relevance over time, with no one deciding.
+    - **Superseded**: replaced by another implementation. Each of the two records names its counterpart. Supersede at any time, without suspending first.
+    - **Abandoned**: dropped before concluding, by decision. It is not merged, and the record is kept.
+11. The concluding words are these, and any implementation takes any of them, whether or not it has a forecast.
     - **Completed**: integrated into the upstream branch. It is the ordinary conclusion.
-13. Work without a verdict takes no verdict word, and work with one takes no `Completed`, whatever the kind.
+    - **Affirmed**: the question held, or the intent was met, as forecast where there is one. The engineer declares it.
+    - **Refuted**: the question was disproven, or the intent was not met.
+    - **Inconclusive**: it ran and gave no clear verdict either way.
+12. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
+13. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 14. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
 
 ## Runs
@@ -177,8 +184,11 @@ Write the state line as `Active` when the record is written, and update it as th
 - 2026-11-06, revised: a concluding state the engineer did not name is put to the engineer through the selection interface; checked: 76 directives, 75 kept, 0 less precise, 1 lost, 1 repair; re-checked: 76 directives, 76 kept, 0 less precise, 0 lost
 - 2026-11-08, revised: the forecast is asked at the start and the verdict at the end; not re-checked
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
+- 2026-11-09, revised: a record starts Open, takes Deferred and Obsolete, takes any concluding word, and is superseded without suspension, as the harmonized-states plan settles; not re-checked
 
 ## History
+
+Until Mon Nov 9 2026 a record was written Active when its work started, took no Open, Deferred, or Obsolete, and took a verdict word only where it had a forecast and Completed only where it had none. Resume took back Suspended and Discontinued only.
 
 Until Mon Nov 9 2026 an implementation had no Discontinued state. A paused implementation could only be Suspended, which stays in the list of current work.
 
@@ -235,3 +245,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:13 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 2:59:48 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:40 PM PT
