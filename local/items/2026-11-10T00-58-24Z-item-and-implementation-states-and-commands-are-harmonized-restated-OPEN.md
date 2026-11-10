@@ -40,6 +40,17 @@ The item, feature, and experiment commands offer the same subcommands, paired by
 
 Existing items and implementation records are converted to these states, under a migration record.
 
+## Settled
+
+- **2026-11-09** — Resume brings an item back to Open or to Active, as the engineer's words say. Where they do not say which, the agent asks.
+- **2026-11-09** — Any terminal state can be reversed, by resume. That includes Realized, Done, Corrected, Resolved, Completed, Affirmed, Refuted, Inconclusive, Obsolete, Superseded, and Abandoned. This replaces the decision that resume does not bring back a Corrected or a Resolved record.
+- **2026-11-09** — The engineer can make a goal or an aspiration Active with start, from Recorded, or leave it Recorded.
+- **2026-11-09** — Complete concludes a feature or an experiment that has no forecast as Completed. Where it has a forecast, the agent asks which concluding state it takes: Completed, Affirmed, Refuted, or Inconclusive.
+- **2026-11-09** — New creates a feature's or an experiment's branch, and writes its record Open.
+- **2026-11-09** — What resuming a Completed feature or experiment does to its merged branch is settled when it first occurs.
+- **2026-11-09** — A kind can exist before any item uses it, and a kind can come into existence on its first use. The kinds in the table that no item carries yet need nothing added.
+- **2026-11-09** — An item tagged both `[idea]` and `[design]` concludes as an idea. The idea has primacy.
+
 ## Tasks
 
 - [ ] Every kind of record starts and concludes as the table gives.
@@ -55,7 +66,16 @@ Existing items and implementation records are converted to these states, under a
 ## Out of Scope / Deferred
 
 - The conclusion of an item with the Completed state, until a kind of item is given it.
+- What resuming a Completed feature or experiment does to its merged branch, until it first occurs.
 
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 4:58:24 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:04:37 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:05:54 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:08:55 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:19:56 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:21:46 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:24:22 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:28:00 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 8:37:25 PM PT
