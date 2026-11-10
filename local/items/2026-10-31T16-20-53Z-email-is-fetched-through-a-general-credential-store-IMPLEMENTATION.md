@@ -11,6 +11,10 @@
 - which providers and protocols the fetch covers
 - where the store lives, which is outside any repository, as per-machine configuration is, so that no credential is committed
 
+## Settled
+
+- **2026-11-09** — The fetch covers IMAP only, for now. **As the engineer stated it:** "It will only be IMAP for now". This settles which providers and protocols the fetch covers: any IMAP server.
+
 **Implementation:** the feature `2026-11-10T06-02-53Z-general-email-fetch` carries this idea's work.
 
 ## History
@@ -21,3 +25,4 @@ As the engineer first stated it: "Idea: generalized email fetch with generalized
 
 Authored by Scott Bellware on Sat Oct 31 2026 at 9:20:53 AM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 10:02:53 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 10:09:55 PM PT
