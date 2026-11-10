@@ -1,6 +1,6 @@
 # The session-start notice opens with `Waytide: Human-Agent Relations`
 
-- **State:** Realized
+- **State:** Recorded
 - **Tags:** [design]
 
 **Why this state:** what the idea was for exists, on the other surface. The engineer settled on 2026-08-24 that the category line reaching the rule read's head satisfies the intent, and that the notice itself was never the point.
@@ -71,8 +71,11 @@ Related:
 - the initialization-rule — the agent-printed head of the read, which carries the pair as of 2026-08-21
 - *A Generalized Description of Waytide* — where the category line is settled
 
+**2026-11-09** — This design is Recorded, under the migration that gives existing records the harmonized states. It was Realized. A design starts and stays Recorded.
+
 ---
 
 Authored by Scott Bellware on Thu Aug 20 2026 at 11:05:16 PM PT
 Changed by Scott Bellware on Fri Aug 21 2026 at 11:25:15 AM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 5:22:18 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT
