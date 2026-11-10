@@ -165,7 +165,7 @@ PROCESS
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
-  /??                              An alias of /estimate-confidence
+  /???                             An alias of /estimate-confidence
 
   /process help                    Print this command's help
 
@@ -262,7 +262,7 @@ LANGUAGE
   /clarify                         Explain the previous answer again using
                                    what the agent knows of the engineer's
                                    understanding
-  />                               An alias of /clarify
+  /??                              An alias of /clarify
 
   /expand                          Expand the previous answer
 
