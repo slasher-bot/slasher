@@ -487,6 +487,30 @@ migrate_observation_state() {
   fi
 }
 
+# Retag a project's observation items as notes. An item tagged [observation] became a
+# note on 2026-11-11, and a rule change cannot retag a project's own files, so the
+# installer does it. Only the Tags line changes, and the filename keeps -RECORDED.
+migrate_note_tag() {
+  items_dir="slasher/local/items"
+
+  [ -d "$items_dir" ] || return 0
+
+  migrated=0
+  for item in "$items_dir"/*.md; do
+    [ -f "$item" ] || continue
+    grep -q '^\(- \)\{0,1\}\*\*Tags:\*\*.*\[observation\]' "$item" || continue
+
+    sed '/^\(- \)\{0,1\}\*\*Tags:\*\*/s/\[observation\]/[note]/' "$item" > "$item.tmp"
+    mv "$item.tmp" "$item"
+    migrated=$((migrated + 1))
+  done
+
+  if [ "$migrated" -gt 0 ]; then
+    echo "Retagged $migrated item(s) from [observation] to [note] — an observation item is now a note."
+    echo "Commit the change."
+  fi
+}
+
 # 0. Print the bootstrap section and stop. Nothing is installed and nothing is placed,
 #    so this is safe to run anywhere, including from the authoring source. It exists so
 #    refresh-packages.sh can compare a project's AGENTS.md against the current text
@@ -524,3 +548,4 @@ migrate_work_sessions
 migrate_logs
 migrate_items
 migrate_observation_state
+migrate_note_tag

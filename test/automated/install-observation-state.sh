@@ -29,7 +29,7 @@ control_observation_text() {
 # Some observation
 
 - **State:** Stated
-- **Tags:** [observation]
+- **Tags:** [note]
 
 Some text.
 ITEM
@@ -40,7 +40,7 @@ control_observation_expected_text() {
 # Some observation
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 Some text.
 ITEM
