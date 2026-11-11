@@ -1,7 +1,7 @@
 # Three words name the non-agent party, split by package and never reconciled
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 **The count**, across the eight packages:
 
@@ -53,3 +53,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
 Changed by Scott Bellware on Fri Aug 21 2026 at 11:39:17 AM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

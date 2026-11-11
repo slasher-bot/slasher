@@ -22,6 +22,13 @@ Until the fifth increment, the 18 items carry `[observation]` while the rules na
 
 ## What happened
 
+1. The rule was renamed a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes and rewritten. Its compressed text was checked: 19 directives, all kept after one repair.
+2. Twelve foundation rules, the foundation vocabulary, and the foundation README name notes.
+3. `/note` and `/item note` replace `/observation` and `/observe`.
+4. `install.sh` retags `[observation]` items as `[note]`, tested by `install-note-tag.sh`. The two older state-rename tests tag their controls `[note]`.
+5. The 18 items were retagged. Their filenames are unchanged.
+
 ---
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 10:43:28 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

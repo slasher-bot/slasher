@@ -1,7 +1,7 @@
 # Deferred items preempt design and plans, and a deferred item is deleted on resolution
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 **The observation, as stated by the developer:** the design of a system is often not kept up to date as the work goes on, and both design and plan tend to be preempted by the entries into deferred items.
 
@@ -54,3 +54,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
 Changed by Scott Bellware on Tue Aug 18 2026 at 5:31:14 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

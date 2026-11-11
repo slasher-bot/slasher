@@ -1,7 +1,7 @@
 # `harness` names two things in the same domain, and no vocabulary reserves it
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 ## The two referents
 
@@ -61,3 +61,4 @@ The 2026-08-03 reasoning inverted that ground — gripping rigid is what the rul
 
 Authored by Scott Bellware on Thu Aug 20 2026 at 1:19:57 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT
