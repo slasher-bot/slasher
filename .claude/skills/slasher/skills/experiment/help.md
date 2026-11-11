@@ -21,5 +21,5 @@ EXPERIMENTS
                                    -> Superseded, naming the replacement
   /experiment abandon, /abandon    -> Abandoned
   /experiment resume, /resume      Any state but Open or Active -> Active
-  /experiments [<n>]               The current experiments, or the n most recent
+  /experiments [current] [<n>]     The current experiments, or the n most recent
   /experiment help                 Print this command's help

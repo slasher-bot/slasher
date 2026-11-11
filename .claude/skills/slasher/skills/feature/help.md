@@ -20,7 +20,7 @@ FEATURES
   /feature supersede, /supersede   -> Superseded, naming the replacement
   /feature abandon, /abandon       -> Abandoned
   /feature resume, /resume         Any state but Open or Active -> Active
-  /features [<n>]                  The current features, or the n most recent
+  /features [current] [<n>]        The current features, or the n most recent
   /feature help                    Print this command's help
 
   Either kind opens with a question or an intent. A forecast is
