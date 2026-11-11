@@ -24,6 +24,12 @@
 # port in place of 993, and IMAP_TLS=no connects without TLS, on 143 where
 # no port is named. Use sites leave the three unset.
 
+import sys
+
+if sys.version_info < (3, 11):
+    sys.exit("fetch.py needs Python 3.11 or later, and this is Python "
+             + ".".join(str(part) for part in sys.version_info[:3]) + ".")
+
 import email
 import email.utils
 import html
@@ -32,7 +38,6 @@ import os
 import re
 import ssl
 import subprocess
-import sys
 import tomllib
 from datetime import datetime, timezone
 from email.header import decode_header, make_header

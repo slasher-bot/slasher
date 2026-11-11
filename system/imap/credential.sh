@@ -12,6 +12,11 @@
 # place of the login keychain.
 set -e
 
+command -v security >/dev/null 2>&1 || {
+  echo "credential.sh needs macOS's security command, which was not found. The imap package runs on macOS." >&2
+  exit 1
+}
+
 command=$1
 host=$2
 user=$3

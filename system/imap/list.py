@@ -9,8 +9,13 @@
 # or printed. IMAP_KEYCHAIN names a keychain file in place of the login
 # keychain.
 
-import os
 import sys
+
+if sys.version_info < (3, 11):
+    sys.exit("list.py needs Python 3.11 or later, and this is Python "
+             + ".".join(str(part) for part in sys.version_info[:3]) + ".")
+
+import os
 
 # Importing fetch.py writes no compiled copy beside it, in the project.
 sys.dont_write_bytecode = True
