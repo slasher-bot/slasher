@@ -2,7 +2,7 @@
 |---|---|---|
 | `/'` | `/current` | Lists the current items and implementations |
 | `/.` | `/recent` | Brief summary of recent work, and what's next |
-| `/,` | `/ask-again` | Repeats the agent's previous multiple-choice question |
+| `/aa` | `/ask-again` | Repeats the agent's previous multiple-choice question |
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
 | `/??` | `/clarify` | Explains the previous answer again |

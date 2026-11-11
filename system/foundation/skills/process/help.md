@@ -26,7 +26,7 @@ PROCESS
 
   /ask-again                       Repeat the agent's previous multiple-choice
                                    question
-  /,                               An alias of /ask-again
+  /aa                              An alias of /ask-again
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
