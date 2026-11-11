@@ -64,7 +64,7 @@ For more detail than bullet points, ask for an expanded answer.
 ```
 
 2. Write it as a line on its own, not as a selection prompt.
-3. A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, or a request worded *Briefly explain…*.
+3. A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, a request worded *Briefly explain…*, or an answer asked for with `/brief`.
 4. End any other answer with the line only where the agent compressed material out of it and an expansion would add something. That is the agent's own judgment.
 5. It offers more depth on the answer given, not a next topic. Do not end any answer with an offer of a next topic, or of what else might be done.
 6. It names the form being given up, "more detail than bullet points". "More detail" alone does not do this.
@@ -75,6 +75,13 @@ For more detail than bullet points, ask for an expanded answer.
 1. `/expand` gives the previous answer at more length, adding the detail compressed out of it: the reasoning, the figures, and the examples.
 2. It says the same thing, with no claim changed, and is still led by its point.
 3. It is a list where its items are facts, with prose where reasoning runs from one step to the next.
+
+## Answering in brief
+
+1. `/brief <request>` answers the request in brief, as opening it with *Brief:* does.
+2. A bare `/brief` gives the previous answer again in brief, with no claim changed.
+3. A brief answer leads with its point and takes a few lines.
+4. It is a brief explanation, so it ends with the expansion line.
 
 # Communicate plainly, and name the actual thing
 

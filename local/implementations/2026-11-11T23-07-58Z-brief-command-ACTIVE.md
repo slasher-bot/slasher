@@ -24,6 +24,11 @@
 
 ## What happened
 
+- `/brief <request>` answers the request in brief, and a bare `/brief` gives the previous answer again in brief. The skill sits in the `language` package and loads the answer-is-a-list rule, as `/expand` does.
+- The answer-is-a-list rule has an *Answering in brief* section, and its brief explanation names `/brief`. Its compressed text was checked: 29 directives, 28 kept, 1 less precise, 0 lost.
+- The LANGUAGE help lists `/brief`. The startup sentence does not, since it names only commands with rows in the command table, and `/expand` is not named there either. The plan said the build would add it, and the work did not.
+- The automated suite passed: 46 tests.
+
 ## Confirmations
 
 - **2026-11-11** — Working location: branch and worktree, selected by the engineer.
@@ -34,3 +39,4 @@
 ---
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 3:07:58 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 3:09:27 PM PT

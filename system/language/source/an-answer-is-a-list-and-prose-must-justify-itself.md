@@ -49,7 +49,7 @@ For more detail than bullet points, ask for an expanded answer.
 ```
 
 - **It is a line, not a prompt.** A selection prompt where no decision is pending doubles the turns and becomes furniture — a thing always present is read once and never again.
-- **A brief explanation always ends with it.** A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, or a request worded *Briefly explain…*. Its brevity is the point of the request, so there is always more to give.
+- **A brief explanation always ends with it.** A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, a request worded *Briefly explain…*, or an answer asked for with `/brief`. Its brevity is the point of the request, so there is always more to give.
 - **Any other answer ends with it only where the agent compressed material out of it, and an expansion would add something.** That is the agent's own judgment. On a report, a confirmation, or an answer that says all it has, the line is noise, and putting it under every answer is how a line stops being read.
 - **What it offers is depth on the answer given, not a next topic.** That distinction is the whole difference between this line and the trailing offer-of-more that is otherwise a defect: it points back at what was just said, not forward at what else might be done.
 - **It names the form being traded away**, not only the depth on offer. *More detail* alone leaves an engineer to guess what an expansion would look like. *more detail than bullet points* says the expansion is a different form of answer, which is what they would be asking for.
@@ -65,6 +65,10 @@ Write prose only where the answer is a sentence or two. Do not reach for it beca
 ## Expanding an answer
 
 **`/expand` gives the previous answer at more length: the detail that was compressed out of it.** It says the same thing the answer said, with no claim changed, and adds the reasoning, the figures, and the examples the list left out. It is still led by its point, and still a list where its items are facts, with prose where reasoning runs from one step to the next.
+
+## Answering in brief
+
+**`/brief` asks for an answer in brief, as opening a request with *Brief:* does.** Words typed after it are the request, and they are answered in brief. A bare `/brief` gives the previous answer again in brief, with no claim changed. A brief answer leads with its point and takes a few lines. It is a brief explanation, so it ends with the expansion line. `/brief` and `/expand` are counterparts: one gives an answer in fewer words, and the other in more.
 
 ## Compressed
 
@@ -112,7 +116,7 @@ For more detail than bullet points, ask for an expanded answer.
 ```
 
 2. Write it as a line on its own, not as a selection prompt.
-3. A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, or a request worded *Briefly explain…*.
+3. A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, a request worded *Briefly explain…*, or an answer asked for with `/brief`.
 4. End any other answer with the line only where the agent compressed material out of it and an expansion would add something. That is the agent's own judgment.
 5. It offers more depth on the answer given, not a next topic. Do not end any answer with an offer of a next topic, or of what else might be done.
 6. It names the form being given up, "more detail than bullet points". "More detail" alone does not do this.
@@ -124,6 +128,13 @@ For more detail than bullet points, ask for an expanded answer.
 2. It says the same thing, with no claim changed, and is still led by its point.
 3. It is a list where its items are facts, with prose where reasoning runs from one step to the next.
 
+## Answering in brief
+
+1. `/brief <request>` answers the request in brief, as opening it with *Brief:* does.
+2. A bare `/brief` gives the previous answer again in brief, with no claim changed.
+3. A brief answer leads with its point and takes a few lines.
+4. It is a brief explanation, so it ends with the expansion line.
+
 ## Compression
 
 - 2026-10-24, compressed: compression 0.49, change 0.71, solubility 25 → 53, clarity 0.41 → 0.78, 22 directives, 22 kept, 0 less precise, 0 lost, after 1 repair, re-checked kept
@@ -131,8 +142,11 @@ For more detail than bullet points, ask for an expanded answer.
 - 2026-11-03, revised: /expand gives the previous answer at more length; checked: 29 directives, 28 kept, 1 less precise, 0 lost. Left less precise, from before this change: the detail behind a sentence or two taking no list
 - 2026-11-07, revised: the expansion line ends every answer the agent compressed, list or prose, and is no longer the agent's judgment; re-checked: 24 directives, 23 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the bans on a single bullet and on two bullets for a two-clause answer, which *Such an answer takes no list* carries
 - 2026-11-07, revised: a brief explanation always ends with the expansion line, and another answer only where the agent judges an expansion would add something; checked: 25 directives, 23 kept, 1 less precise, 1 lost, 1 repair: the ban on a single bullet, or two bullets for a two-clause answer, restored to the compressed text; re-checked: 25 directives, 24 kept, 1 less precise, 0 lost. Left less precise: the line left off reports and confirmations, which *an answer that says all it has* carries
+- 2026-11-11, revised: `/brief` answers a request in brief, or gives the previous answer again in brief; checked: 29 directives, 28 kept, 1 less precise, 0 lost, 0 repairs. Left less precise, from before this change: the line left off reports and confirmations, which *an answer that says all it has* carries
 
 ## History
+
+Until Wed Nov 11 2026 no command asked for an answer in brief. An answer was asked for in brief by opening the request with *Brief:*.
 
 For a time on Sat Nov 7 2026 the expansion line ended every answer the agent compressed, list or prose. The engineer found it displayed too often, and settled that a brief explanation always ends with it, and another answer only at the agent's judgment.
 
@@ -176,3 +190,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Tue Nov 3 2026 at 10:38:55 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:22:04 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:30:08 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 3:08:14 PM PT
