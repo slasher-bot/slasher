@@ -10,7 +10,7 @@
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -54,6 +54,11 @@
 - **2026-11-10** — Neither of the two later phases states a forecast, selected by the engineer when they were added.
 - **2026-11-10** — The command table phase goes after email commands, states no forecast, and carries the work item on the command table's printing, selected by the engineer when it was added.
 - **2026-11-10** — The packaging and installation phase's scope, selected by the engineer, includes creating the package repository `slasher-bot/imap` and publishing the package to it from this feature. That is the exception to the local rule that a package is published from `master`, put to the engineer through the selection interface, as the rule asks where an implementation's intent is about publishing.
+- **2026-11-10** — The feature is Completed, as the engineer asked. It states no forecast, so it is not asked the verdict question. Each phase's commits were squashed into one, and the branch force-pushed, selected by the engineer. It merges into `master`.
+
+## Outcome
+
+The five phases are done. A credential is kept in the macOS Keychain and read by host or by name. A mailbox is fetched into the project or the private store, by name, by host, or every account, with a fetch file listing folders and Gmail labels. `/email` fetches and lists the accounts, keeping credentials out of the chat. Each package carries its command table rows, and the build joins them. The `imap` package is published to `slasher-bot/imap` and installs by name. The email-fetching idea is Realized, and the command-table work item is Done.
 
 ## Prior work
 
@@ -81,3 +86,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 10:41:12 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:55 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:46:21 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:38:41 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:43:43 PM PT

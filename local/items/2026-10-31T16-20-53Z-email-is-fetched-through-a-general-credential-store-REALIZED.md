@@ -1,6 +1,6 @@
 # Email is fetched through a general mechanism, with a general token or credential store
 
-- **State:** Implementation
+- **State:** Realized
 - **Tags:** [idea]
 
 **A general way to fetch email, which is not tied to one provider, reads its access from a general store of tokens or credentials.** The store serves the email fetch, and is not specific to it.
@@ -33,7 +33,7 @@
 - **2026-11-10** — `/email fetch` with no name or host, and so a bare `/email`, fetches every account in the Keychain, each following its own fetch file.
 - **2026-11-10** — An account whose credential has no name has its mail, and its fetch file, under its host and its login, as in `slasher/local/email/imap.gmail.com/you@gmail.com/INBOX/`.
 
-**Implementation:** the feature `2026-11-10T06-02-53Z-general-email-fetch` carries this idea's work.
+**Implementation:** the feature `2026-11-10T06-02-53Z-general-email-fetch` carries this idea's work. It is Completed, so this idea is Realized.
 
 ## History
 
@@ -57,3 +57,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 7:11:22 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 7:12:28 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 7:12:47 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 7:13:24 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:43:43 PM PT
