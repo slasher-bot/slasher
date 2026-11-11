@@ -20,7 +20,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, and `/observation` below `/decision`, each in its domain's rows file. `/clarify, /??`, `/ask-again, /..`, `/estimate-confidence, /#`, `/unattended, /!`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, and `/observation` below `/decision`, each in its domain's rows file. `/clarify, /??`, `/ask-again, /,`, `/estimate-confidence, /#`, `/unattended, /!`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -748,11 +748,11 @@ Lines 1–6 below are the opening statements, which come before any section head
 
 Source: system/foundation/source/ask-again-puts-the-last-escaped-question-again.md
 
-Trigger: When the engineer types `/ask-again` or `/..`, or asks for the last question again
+Trigger: When the engineer types `/ask-again` or `/,`, or asks for the last question again
 
-**Trigger:** When the engineer types `/ask-again` or `/..`, or asks for the last question again
+**Trigger:** When the engineer types `/ask-again` or `/,`, or asks for the last question again
 
-**`/ask-again` puts the last question the engineer escaped again, through the selection interface.** The engineer escapes a question by refusing it, by stopping it to clarify, or by interrupting it. The agent does not put an escaped question again on its own, so `/ask-again` is how the engineer asks for it. `/..` is its shortcut alias.
+**`/ask-again` puts the last question the engineer escaped again, through the selection interface.** The engineer escapes a question by refusing it, by stopping it to clarify, or by interrupting it. The agent does not put an escaped question again on its own, so `/ask-again` is how the engineer asks for it. `/,` is its shortcut alias.
 
 **As the engineer stated it:** Ask Again shourtcut
 
@@ -764,7 +764,7 @@ Trigger: When the engineer types `/ask-again` or `/..`, or asks for the last que
 
 **Why:** an escaped question is not put again unasked, so that the engineer has time to digest it. The engineer then needs a short way to say *I am ready, ask me again*. A fixed command keeps that request from being read as something else.
 
-**How to apply:** on `/ask-again` or `/..`, find the last question the engineer escaped. Put it again through the selection interface, as it was asked, with any change the conversation since has made to its candidates. Where none was escaped, say so.
+**How to apply:** on `/ask-again` or `/,`, find the last question the engineer escaped. Put it again through the selection interface, as it was asked, with any change the conversation since has made to its candidates. Where none was escaped, say so.
 
 # Brainstorming records points as they are said, and organizes them at the end
 

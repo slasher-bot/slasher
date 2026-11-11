@@ -24,7 +24,7 @@
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |
-| `/ask-again, /..` | Repeat the agent's previous multiple-choice question |
+| `/ask-again, /,` | Repeat the agent's previous multiple-choice question |
 | `/estimate-confidence, /#` | The agent's confidence of proceeding unattended from where the work stands |
 | `/unattended, /!` | Carry out a request on the agent's own, after a plan is accepted |
 | `/shortcuts, /sc` | Print the shortcuts table |
