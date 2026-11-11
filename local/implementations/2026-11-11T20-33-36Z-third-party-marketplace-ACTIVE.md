@@ -35,6 +35,8 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **The plugin's role:** the entry point to install. The marketplace's plugin carries `/package install` and the hooks, and installing it is how a project gets Slasher, in place of the `curl` install. The packages still go into `slasher/system/`.
 - **The marketplace's repository:** `slasher-bot/slasher`, with `.claude-plugin/marketplace.json` at its root. A user adds it with `/plugin marketplace add slasher-bot/slasher`.
 - **The plugins:** one plugin to a package, each depending on `foundation`. A bundle plugin, `slasher`, depends on the default set, so one install brings them all.
+- **The first step:** a marketplace listing the `foundation` plugin alone, added from the worktree's local path, to try the install end to end before anything is pushed.
+- **The plugin's root:** a built directory. A script assembles `plugins/foundation/` from the package, as `assemble-plugin.sh` does today, the build is committed, and `marketplace.json` names `./plugins/foundation`.
 
 ## What happened
 
@@ -52,3 +54,4 @@ Authored by Scott Bellware on Wed Nov 11 2026 at 12:33:36 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:02 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:46:14 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:05 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:09:35 PM PT
