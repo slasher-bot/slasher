@@ -60,6 +60,36 @@ case "$set_output" in
   *) fail "With a package set declared, the read instruction says deactivated packages are listed, not printed" "output:" "$set_output" ;;
 esac
 
+# Names a package installed after the declaration as deactivated, and has the default set printed ---
+
+later_project=$(mktemp -d)
+trap 'rm -rf "$project" "$later_project"' EXIT
+
+mkdir -p "$later_project/system/foundation" "$later_project/system/later" "$later_project/local"
+cp system/foundation/session-start.sh "$later_project/system/foundation/"
+echo some-readme > "$later_project/system/foundation/README.md"
+echo some-readme > "$later_project/system/later/README.md"
+
+cat > "$later_project/local/2026-01-01T00-00-00Z-default-package-set.md" <<'SET'
+# Default package set
+
+- **Package set:** default
+- **Packages:** foundation
+- **Inactive:** none
+SET
+
+later_output=$(cd "$later_project" && sh system/foundation/session-start.sh instruction < /dev/null)
+
+case "$later_output" in
+  *"The active packages are foundation, and the deactivated ones are later."*) ;;
+  *) fail "Names a package installed after the declaration as deactivated" "output:" "$later_output" ;;
+esac
+
+case "$later_output" in
+  *"Print the package set at the head of the response that carries the read"*) ;;
+  *) fail "Has a default set printed where an installed package is not on its Packages line" "output:" "$later_output" ;;
+esac
+
 # Prints the read instruction alone, as the hook emits it -------------------------
 
 control_instruction=$(printf '%s' "$set_output" | python3 -c 'import json,sys; print(json.load(sys.stdin)["hookSpecificOutput"]["additionalContext"])')
