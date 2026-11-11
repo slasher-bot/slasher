@@ -30,9 +30,9 @@
 - **`[goal]`** — an outcome the project means to reach, which other items serve. It names the end the work is for, and stays open until that end is reached or given up.
 - **`[problem]`** — something wrong or in the way, recorded before anyone knows what to do about it. It states the difficulty on its own, so that it is kept without a solution being named.
 - **`[mistake]`** — something done wrong, recorded with what went wrong and why. A problem may have no author. A mistake is an act that should have gone otherwise, and recording it keeps what was learned from it.
-- **`[observation]`** and **`[work]`** — each has a rule of its own: the observations rule, and the work-item section below.
+- **`[note]`** and **`[work]`** — each has a rule of its own: the notes rule, and the work-item section below.
 
-**A kind takes the states every item takes**, and starts and concludes as the table under *The states* gives. Where its own rule says otherwise, as the observations rule and the work-item section do, that rule decides.
+**A kind takes the states every item takes**, and starts and concludes as the table under *The states* gives. Where its own rule says otherwise, as the notes rule and the work-item section do, that rule decides.
 
 ## Two optional lines any item may carry
 
@@ -72,14 +72,14 @@ Every item carries a `**State:**` line, from the moment it is written. **Each ki
 | Correction, mistake | Open | Corrected |
 | Problem | Open | Resolved |
 | Design | Recorded | does not change state |
-| Observation | Recorded | does not change state |
+| Note | Recorded | does not change state |
 
 A kind the table does not name starts Open and concludes Realized, as an idea does.
 
 **The starting and in-progress states:**
 
 - **Open** — the work has not started, whether the thinking is settled or not.
-- **Recorded** — the starting state of a goal, an aspiration, a design, and an observation. A design and an observation never leave it. See the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule. The engineer can make a goal or an aspiration Active, or leave it Recorded.
+- **Recorded** — the starting state of a goal, an aspiration, a design, and a note. A design and a note never leave it. See the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule. The engineer can make a goal or an aspiration Active, or leave it Recorded.
 - **Active** — the work is in progress. An item becomes Active when its work starts, from Open, or from Recorded for a goal or an aspiration.
 - **Implementation** — the item turned into a feature or an experiment, which carries its work. The item and the implementation record name each other.
 
@@ -171,7 +171,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 17. The tag set is open.
 18. An item may carry several tags.
 19. Tags are the ordinary square-bracket tags every working-state artifact takes (see the a-record-may-be-categorized-with-square-bracket-tags rule).
-20. `[observation]` and `[work]` mean what their rules say: the observations rule, and the work-item section below.
+20. `[note]` and `[work]` mean what their rules say: the notes rule, and the work-item section below.
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
 22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Corrected` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. Of the two, the first tag names which was asked for. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
@@ -190,7 +190,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 36. Every item carries a `**State:**` line from the moment it is written, holding one of the words below and no other. Absence is not a state, and an item without the line is a defect.
 37. Start an idea, an improvement, a plan, a work item, a rework item, a correction, a mistake, and a problem **Open**. **Open** means the work has not started, whether its thinking is settled or not. A kind not named here starts Open and concludes Realized.
 38. Make an item **Active** when its work starts. **Active** is the in-progress state.
-39. Start a goal, an aspiration, a design, and an observation **Recorded**. A design and an observation stay Recorded. Make a goal or an aspiration Active from Recorded where the engineer asks, or leave it Recorded.
+39. Start a goal, an aspiration, a design, and a note **Recorded**. A design and a note stay Recorded. Make a goal or an aspiration Active from Recorded where the engineer asks, or leave it Recorded.
 40. **Realized** — what it describes exists. An idea, an improvement, a plan, a goal, and an aspiration conclude Realized. A goal or an aspiration is Realized only when the engineer says so.
 41. **Deferred** — kept to do later, with no date and no one working toward it.
 42. An item merely waiting its turn is not **Deferred**. It carries `**Waits for:**` and whatever state its thinking has reached.
@@ -242,8 +242,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-09, revised: each kind starts and concludes as the harmonized-states plan's table gives, with Corrected, Resolved, and Completed, and resume takes back any state but Open, Active, and Recorded; not re-checked
 - 2026-11-09, revised: the Implementation state, which the engineer added; not re-checked
 - 2026-11-09, checked: 98 directives, 90 kept, 7 less precise, 1 lost, 4 repairs: a correction concludes Corrected throughout, the first tag names which was asked for, an implementation is current work in place of its item, the conclusion prompt holds for an implementation too, and the Implementation points are renumbered 64 and 65; re-checked: 98 directives, 95 kept, 3 less precise, 0 lost. Left less precise, in text this revision did not change: that Discontinued means the same for an item, the name of the selection tool, and that a settled item in general is never regenerated
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Mon Nov 9 2026 an item whose work a feature or an experiment carried stayed Open or Active, and was listed beside the implementation.
 
@@ -285,7 +288,7 @@ Related:
 - the a-record-may-be-categorized-with-square-bracket-tags rule — the tags that say what an item is
 - the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule — the filename suffix
 - the a-log-entry-is-written-for-an-item-on-creation-on-each-settled-resolution-and-on-a-change-of-state rule — the log entry an item takes
-- the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule — an observation, which is an item whose one state never changes
+- the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule — a note, which is an item whose one state never changes
 - the file-names, working-state-artifacts-carry-a-provenance-footer, and an-item-that-sequences-work-contains-no-code-samples rules
 - the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule — the other `Suspended`, which is an act on something the project did rather than a state on something it wanted
 
@@ -347,3 +350,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:12 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 8:59:34 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

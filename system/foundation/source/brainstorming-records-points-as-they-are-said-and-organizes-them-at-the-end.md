@@ -20,7 +20,7 @@
 
 ## Brainstorming into a kind of item
 
-**`/brainstorm <kind>` begins brainstorming with the destination already settled:** a new item of that kind, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `observation`, `mistake`, and `problem`. At the end the agent reframes the points and writes them to the new item, and does not ask where they go.
+**`/brainstorm <kind>` begins brainstorming with the destination already settled:** a new item of that kind, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `note`, `mistake`, and `problem`. At the end the agent reframes the points and writes them to the new item, and does not ask where they go.
 
 ## Suspending
 
@@ -46,7 +46,7 @@
 4. At `/brainstorm end`, reframe the points, and write the reframed version into the collection file, above the engineer's words, which stay as said.
 5. Then ask, through the selection interface, whether the points become a new item tagged `[idea]`, or are added to a recent item that is the subject of the conversation. Write the reframed version there.
 6. Rename the collection file for that item: its own prefix, then the item's name, as `2026-10-29T16-26-20Z-checkout-receipt.md`. The item does not name the file. Keep the file.
-7. `/brainstorm <kind>`, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `observation`, `mistake`, and `problem`, settles the destination at the start: a new item of that kind. At the end, write to it without asking.
+7. `/brainstorm <kind>`, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `note`, `mistake`, and `problem`, settles the destination at the start: a new item of that kind. At the end, write to it without asking.
 8. `/brainstorm resume` reopens a collection file that has ended or is suspended. Add the new words after the earlier ones. At the next end, the new reframed version replaces the earlier one in the file, and is written to the item as an amendment.
 9. Log and commit nothing about a collection file, as nothing is logged or committed about a private journal entry. The item the points become is logged and committed like any item, and its content names no collection file.
 10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or ask where they go. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
@@ -58,8 +58,11 @@
 - 2026-11-05, revised: `/brainstorm` takes every item kind; checked: 27 directives, 27 kept, 0 less precise, 0 lost
 - 2026-11-06, revised: freewriting is renamed brainstorming, `/freewrite` is renamed `/brainstorm`, and the `/freeform` alias is removed; checked: 39 directives, 39 kept, 0 less precise, 0 lost
 - 2026-11-06, revised: `/brainstorm suspend` stops recording without ending, and `/brainstorm resume` reopens a suspended collection file; checked: 20 directives, 20 kept, 0 less precise, 0 lost
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Fri Nov 6 2026 brainstorming could not be suspended, and `/brainstorm resume` reopened only a collection file that had ended.
 
@@ -83,3 +86,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 7:54:49 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 10:49:24 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:58:01 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

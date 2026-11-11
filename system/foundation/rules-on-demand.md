@@ -20,7 +20,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, and `/observation` below `/decision`, each in its domain's rows file. `/clarify, /??`, `/ask-again, /aa`, `/estimate-confidence, /#`, `/unattended, /!`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, and `/note` below `/decision`, each in its domain's rows file. `/clarify, /??`, `/ask-again, /aa`, `/estimate-confidence, /#`, `/unattended, /!`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -150,7 +150,7 @@ Trigger: When creating an item, adding a dated Settled resolution to it, changin
 6. Write the entry on each change of the item's `**State:**` line.
 7. A change of state is the line reaching any state word the items rule names: Open, Active, a concluding state such as Realized, Done, Corrected, Resolved, or Completed, or Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete.
 8. A change of state is also the line taking a state back, by resume.
-9. A design and an observation are `Recorded` and never move, so each takes a creation entry only.
+9. A design and a note are `Recorded` and never move, so each takes a creation entry only.
 10. Do not log a completed checkbox task, because it carries out a direction already settled.
 11. Do not log prose that settles nothing either. Examples are reconciling a Background & Motivation section, correcting a summary, and rewording a section.
 12. The provenance footer records those unlogged changes.
@@ -164,7 +164,7 @@ Trigger: When creating an item, adding a dated Settled resolution to it, changin
 20. Carry the same into the commit subject the entry travels in: name the record, attribute what it settles to the record, and keep the mood. An entry corrected while its commit subject makes the same claim is half corrected.
 21. Fix no wording template. *X is recorded as an item, Open because …* and *X is realized* are forms in use.
 22. This rule states the obligation once, for every item.
-23. The an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule, the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule state their own entries.
+23. The a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule, the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule state their own entries.
 24. The the-items-directory-holds-one-file-per-item rule points here and keeps no second copy.
 25. The the-log-holds-one-file-per-entry-with-a-one-line-title rule's general trigger is to log whenever a real decision is made, and when in doubt. It rests on each writer's judgment, so it does not make the entries reliable.
 
@@ -206,6 +206,54 @@ Trigger: When writing a log entry that records a decision, or when the engineer 
 4. Where that decision is the agent's act under a rule, say so and write nothing.
 5. Where it is unclear which decision is meant, ask, through the selection interface. Where nothing has been decided, say so and write nothing.
 6. Commit the entry with the change it bears on, or on its own with a `Log:` prefix.
+
+# A note is a remark worth keeping, whose one state, Recorded, never changes
+
+Source: system/foundation/source/a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes.md
+
+Trigger: When recording or revising a note in slasher/local/items/
+
+Lines 1–8 below are the opening statements, which come before any section heading.
+
+1. A note is a remark worth keeping that binds nothing.
+2. It can be a working hypothesis, a definition, an unratified method, a finding, or any other remark that should not be lost.
+3. It is not read as binding at session start, the way rules are. It records what was thought or seen when it was written.
+4. A note lives in `slasher/local/items/`.
+5. A note is tagged `[note]`.
+6. The tag is what makes a record a note.
+7. The word *observation* belongs to Design By Efferent, where it is what a test reads about the outcome of an actuation.
+8. Never call a remark worth keeping an observation. It is a note.
+
+## `Recorded` is a note's only state, and it never changes
+
+1. A note carries `**State:** Recorded` from the moment it is written.
+2. It keeps that state for the rest of its life.
+3. Its filename ends `-RECORDED`.
+4. It carries no `**Why this state:**` line.
+5. A note has no lifecycle.
+6. It is never realized, abandoned, obsolete, superseded, or suspended.
+7. A note that no longer holds is not retracted.
+8. A later note states the later thinking.
+9. The earlier note stays as what was thought at the time.
+10. A note is not promoted.
+11. Where the thinking stabilizes into a binding convention, write the rule in `slasher/local/rules/` the way any rule is written.
+12. Do not change the note. It takes no line naming the rule.
+13. The the-items-directory-holds-one-file-per-item rule needs no exception, because a note also carries a state from the moment it is written. Its state is fixed, not absent.
+
+## The shape
+
+1. **When to use:** use a note for material worth keeping that binds nothing: a hypothesis under discovery, an unratified method or definition, a finding, or a remark.
+2. When in doubt between a rule and a note, prefer a note.
+3. **Format:** use the same frontmatter-free markdown as rules.
+4. The file starts with a `# <title>`, then a `**State:** Recorded` line.
+5. Next comes a `**Tags:**` line carrying `[note]`, then the content in prose.
+6. The filename follows the ISO-8601-UTC prefix convention (see the file-names rule).
+7. The filename ends `-RECORDED`.
+8. **Provenance footer:** end the file with the `Authored by … / Changed by …` footer, like every working-state artifact.
+9. **Recording one:** add the file.
+10. Add a matching one-line entry to `slasher/local/logs/log/`, noting it was recorded as a note.
+11. Never change a note's state.
+12. Where the thinking moves, write a later note and leave the earlier one as written.
 
 # When an implementation's phase starts, its goal is stated, and the phases are listed with the current one marked
 
@@ -317,7 +365,7 @@ Trigger: When creating, renaming, changing the state of, or referencing an item 
 4. Each convention fixes its own state words. This rule fixes only where the word is rendered.
 5. Every item and every implementation record carries a suffix. Each carries a state line from the moment it is written, and the in-progress state of each is **Active**.
 6. A name with no suffix is a defect.
-7. An observation's suffix is always `-RECORDED`.
+7. A note's suffix is always `-RECORDED`.
 8. The file's contents are unchanged. Add no suffix to any file's contents.
 9. The state inside the file is the `**State:**` line and nothing else.
 10. The file still ends with its provenance footer.
@@ -352,7 +400,7 @@ Trigger: When adding a tag to a record or a list item
 4. Write a tag lower-case in square brackets, with dashes between words: `[legal-matter]`.
 5. Tags are optional and freeform. Add one when it is useful.
 6. Nothing checks tags, and there is no fixed list.
-7. Some tags have lifecycle states, such as `[experiment]`, `[feature]`, `[observation]`, and `[work]`. Each one's own rule states its states.
+7. Some tags have lifecycle states, such as `[experiment]`, `[feature]`, `[note]`, and `[work]`. Each one's own rule states its states.
 
 # A rule's compressed text is written in its source, checked against it, and its figures recorded below the body
 
@@ -696,54 +744,6 @@ Trigger: When writing or revising an item in slasher/local/items/ that sequences
 10. At implementation time, generate code only on the user's explicit instruction.
 11. Generate it in the increments the user chooses.
 
-# An observation is a working hypothesis whose one state, Recorded, never changes
-
-Source: system/foundation/source/an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes.md
-
-Trigger: When recording or revising an observation in slasher/local/items/
-
-Lines 1–6 below are the opening statements, which come before any section heading.
-
-1. `slasher/local/items/` holds working hypotheses, definitions, and methods that are not yet binding.
-2. They are rule-candidates surfaced during open-ended discovery, before the thinking has stabilized.
-3. They are not read as binding at session start, the way rules are.
-4. An observation lives in `slasher/local/items/`.
-5. An observation is tagged `[observation]`.
-6. The tag is what makes a record an observation.
-
-## `Recorded` is an observation's only state, and it never changes
-
-1. An observation carries `**State:** Recorded` from the moment it is written.
-2. It keeps that state for the rest of its life.
-3. Its filename ends `-RECORDED`.
-4. It carries no `**Why this state:**` line.
-5. An observation has no lifecycle.
-6. It is never realized, abandoned, obsolete, superseded, or suspended.
-7. An observation that no longer holds is not retracted.
-8. A later observation states the later thinking.
-9. The earlier observation stays as what was thought at the time.
-10. An observation is not promoted.
-11. Where the thinking stabilizes into a binding convention, write the rule in `slasher/local/rules/` the way any rule is written.
-12. Do not change the observation. It takes no line naming the rule.
-13. The the-items-directory-holds-one-file-per-item rule needs no exception, because an observation also carries a state from the moment it is written. Its state is fixed, not absent.
-
-## The shape
-
-1. **When to use:** use an observation for material worth keeping that is still under active discovery.
-2. Also use one for a method or definition the engineer has not ratified as a convention.
-3. When in doubt between a rule and an observation, prefer an observation.
-4. **Format:** use the same frontmatter-free markdown as rules.
-5. The file starts with a `# <title>`, then a `**State:** Recorded` line.
-6. Next comes a `**Tags:**` line carrying `[observation]`, then the content in prose.
-7. The filename follows the ISO-8601-UTC prefix convention (see the file-names rule).
-8. The filename ends `-RECORDED`.
-9. **Provenance footer:** end the file with the `Authored by … / Changed by …` footer, like every working-state artifact.
-10. **Recording one:** add the file.
-11. Add a matching one-line entry to `slasher/local/logs/log/`.
-12. The entry notes that it was recorded as an observation, and why it is not yet a rule.
-13. Never change an observation's state.
-14. Where the thinking moves, write a later observation and leave the earlier one as written.
-
 # Ask-again puts the last escaped question again
 
 Source: system/foundation/source/ask-again-puts-the-last-escaped-question-again.md
@@ -778,7 +778,7 @@ Trigger: When the engineer begins, ends, suspends, or resumes brainstorming (`/b
 4. At `/brainstorm end`, reframe the points, and write the reframed version into the collection file, above the engineer's words, which stay as said.
 5. Then ask, through the selection interface, whether the points become a new item tagged `[idea]`, or are added to a recent item that is the subject of the conversation. Write the reframed version there.
 6. Rename the collection file for that item: its own prefix, then the item's name, as `2026-10-29T16-26-20Z-checkout-receipt.md`. The item does not name the file. Keep the file.
-7. `/brainstorm <kind>`, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `observation`, `mistake`, and `problem`, settles the destination at the start: a new item of that kind. At the end, write to it without asking.
+7. `/brainstorm <kind>`, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `note`, `mistake`, and `problem`, settles the destination at the start: a new item of that kind. At the end, write to it without asking.
 8. `/brainstorm resume` reopens a collection file that has ended or is suspended. Add the new words after the earlier ones. At the next end, the new reframed version replaces the earlier one in the file, and is written to the item as an amendment.
 9. Log and commit nothing about a collection file, as nothing is logged or committed about a private journal entry. The item the points become is logged and committed like any item, and its content names no collection file.
 10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or ask where they go. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
@@ -1237,7 +1237,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 17. The tag set is open.
 18. An item may carry several tags.
 19. Tags are the ordinary square-bracket tags every working-state artifact takes (see the a-record-may-be-categorized-with-square-bracket-tags rule).
-20. `[observation]` and `[work]` mean what their rules say: the observations rule, and the work-item section below.
+20. `[note]` and `[work]` mean what their rules say: the notes rule, and the work-item section below.
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
 22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Corrected` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. Of the two, the first tag names which was asked for. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
@@ -1256,7 +1256,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 36. Every item carries a `**State:**` line from the moment it is written, holding one of the words below and no other. Absence is not a state, and an item without the line is a defect.
 37. Start an idea, an improvement, a plan, a work item, a rework item, a correction, a mistake, and a problem **Open**. **Open** means the work has not started, whether its thinking is settled or not. A kind not named here starts Open and concludes Realized.
 38. Make an item **Active** when its work starts. **Active** is the in-progress state.
-39. Start a goal, an aspiration, a design, and an observation **Recorded**. A design and an observation stay Recorded. Make a goal or an aspiration Active from Recorded where the engineer asks, or leave it Recorded.
+39. Start a goal, an aspiration, a design, and a note **Recorded**. A design and a note stay Recorded. Make a goal or an aspiration Active from Recorded where the engineer asks, or leave it Recorded.
 40. **Realized** — what it describes exists. An idea, an improvement, a plan, a goal, and an aspiration conclude Realized. A goal or an aspiration is Realized only when the engineer says so.
 41. **Deferred** — kept to do later, with no date and no one working toward it.
 42. An item merely waiting its turn is not **Deferred**. It carries `**Waits for:**` and whatever state its thinking has reached.
@@ -1513,7 +1513,7 @@ Trigger: When creating or changing a working-state document under slasher/
 1. Every working-state artifact under `slasher/` that is a document with a body ends with a **provenance footer**.
 2. The footer is the `Authored by … / Changed by …` block, in the record-a-rules-authorship-in-a-provenance-footer format, with a local human-readable datetime.
 3. The footer goes on every implementation record, whether an experiment or a feature.
-4. It goes on every item, whatever it is tagged, including designs, plans, observations, and deferred work.
+4. It goes on every item, whatever it is tagged, including designs, plans, notes, and deferred work.
 5. It goes on every loop record and every work session record.
 6. Write `Authored by <name> on <local datetime>` for the original author, on creation.
 7. Append a `Changed by <name> on <local datetime>` line for each later change, oldest first.

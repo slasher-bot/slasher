@@ -17,7 +17,7 @@ Titled `# Work Session — <name> (<date>)`, it reads in this order. **Records w
 - **Chronological body** — numbered sections (`## 1.`, `## 2.`, …) walking the work session in order. Each states what was asked and concluded at that step, with settled vocabulary defined as it arises, and inline pointers to the durable records the step produced.
 - **Takeaways** — the settled conclusions, compressed to a few bullets.
 - **Glossary** — the terms settled during the work session, each with its literal definition.
-- **Where the durable records live** — pointers to the rules, observations, log entries, experiments, and code the work session produced.
+- **Where the durable records live** — pointers to the rules, notes, log entries, experiments, and code the work session produced.
 - Optionally, a **reflective closing note** on the work session itself.
 - A **provenance footer** — like every working-state artifact, a work session record ends with the `Authored by … / Changed by …` footer, so the file stands on its own. See the working-state-artifacts-carry-a-provenance-footer rule (the shared convention and its reason) and the record-a-rules-authorship-in-a-provenance-footer rule (the format).
 
@@ -67,7 +67,7 @@ When *you* raise the question of recording, rather than being told to, put it th
 9. Each section points inline to the durable records that step produced.
 10. **Takeaways**: the settled conclusions, compressed to a few bullets.
 11. **Glossary**: the terms settled during the work session, each with its literal definition.
-12. **Where the durable records live**: pointers to the rules, observations, log entries, experiments, and code the work session produced.
+12. **Where the durable records live**: pointers to the rules, notes, log entries, experiments, and code the work session produced.
 13. Optionally, a **reflective closing note** on the work session itself.
 14. A **provenance footer**: the record ends with the `Authored by … / Changed by …` footer, like every working-state artifact.
 15. The footer follows the working-state-artifacts-carry-a-provenance-footer rule and the record-a-rules-authorship-in-a-provenance-footer format.
@@ -82,8 +82,11 @@ When *you* raise the question of recording, rather than being told to, put it th
 - 2026-11-05, revised: the agent also proposes a record at a conclusion it carries out; checked: 36 directives, 34 kept, 1 less precise, 1 lost, 1 repair, restoring that a design is read against the records and never regenerated from them; re-checked: 36 directives, 36 kept, 0 less precise, 0 lost
 - 2026-11-07, revised: the design reconciliation asked after a record is written is removed, as the engineer directed; checked: 36 directives, 35 kept, 1 less precise, 0 lost, 1 repair, restoring that the recording question is asked through the selection UI; re-checked: 36 directives, 36 kept, 0 less precise, 0 lost
 - 2026-11-07, revised: the second option reads *amend the previous work session record* and names that record in a few words, and a direct instruction is to write or amend; checked: 40 directives, 40 kept, 0 less precise, 0 lost
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Sat Nov 7 2026 the second option read *append the previous work session record*, and did not name the record. The engineer settled that it reads *amend*, since bringing a record up to date changes more than its end, and that it names the record in a few words.
 
@@ -113,7 +116,7 @@ Related:
 - the record-a-rules-authorship-in-a-provenance-footer rule — the footer's format
 - the present-every-prompt-to-the-engineer-through-the-selection-ui rule — why every prompt goes through the selection UI
 - the the-log-holds-one-file-per-entry-with-a-one-line-title rule
-- the observations rule
+- the notes rule
 - the the-logs-directory-holds-the-contemporaneous-historical-records rule — the contemporaneous, historical records this sits among
 
 ---
@@ -177,3 +180,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 8:54:41 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:26:13 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 11:56:50 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

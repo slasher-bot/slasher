@@ -12,7 +12,7 @@ Where a record carries a canonical `**State:**` line, its **filename** ends with
 
 **It reaches every record that carries a state line** — an implementation record, whether an experiment or a feature, and an item. Each convention fixes its own words, and this rule fixes only where the word is rendered.
 
-**Every item and every implementation record carries a suffix.** Each carries a state line from the moment it is written, and the in-progress state of each is **Active**. A name with no suffix is a defect, because a missing suffix and an oversight look the same. **An observation's suffix is always `-RECORDED`**, since that is its one state.
+**Every item and every implementation record carries a suffix.** Each carries a state line from the moment it is written, and the in-progress state of each is **Active**. A name with no suffix is a defect, because a missing suffix and an oversight look the same. **A note's suffix is always `-RECORDED`**, since that is its one state.
 
 **The file's contents are unchanged.** The state is the `**State:**` line and nothing else, and the file still ends with its provenance footer. A suffix in the contents would put the same value in two places inside one artifact, for no reader who is asking for it there.
 
@@ -53,7 +53,7 @@ When the state changes, rename it again. When a reversible state word is taken b
 4. Each convention fixes its own state words. This rule fixes only where the word is rendered.
 5. Every item and every implementation record carries a suffix. Each carries a state line from the moment it is written, and the in-progress state of each is **Active**.
 6. A name with no suffix is a defect.
-7. An observation's suffix is always `-RECORDED`.
+7. A note's suffix is always `-RECORDED`.
 8. The file's contents are unchanged. Add no suffix to any file's contents.
 9. The state inside the file is the `**State:**` line and nothing else.
 10. The file still ends with its provenance footer.
@@ -86,8 +86,11 @@ When the state changes, rename it again. When a reversible state word is taken b
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 - 2026-11-09, revised: any state but Open, Active, and Recorded can be taken back; not re-checked
 - 2026-11-09, checked: 28 directives, 26 kept, 2 less precise, 0 lost, 1 repair: the state a record returns to is an example, not a closed list; re-checked: 28 directives, 26 kept, 2 less precise, 0 lost. Left less precise: that a reference is not an openable path, and that a record without a state line takes no suffix, both implied
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Mon Nov 9 2026 the reversible words were Realized, Deferred, Discontinued, Open, and a work item's Done.
 
@@ -145,3 +148,4 @@ Changed by Scott Bellware on Thu Oct 29 2026 at 6:34:30 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:33 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:03 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

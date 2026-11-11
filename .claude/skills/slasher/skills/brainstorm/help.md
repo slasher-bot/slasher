@@ -10,6 +10,6 @@ BRAINSTORMING
   /brainstorm <kind>               Brainstorm and record it in an item of
                                    that kind
                                    <kind>: idea, work, plan, design,
-                                   aspiration, goal, observation, mistake,
+                                   aspiration, goal, note, mistake,
                                    or problem
   /brainstorm help                 Print this command's help

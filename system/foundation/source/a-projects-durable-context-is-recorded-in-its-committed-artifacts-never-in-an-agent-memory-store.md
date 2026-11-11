@@ -2,7 +2,7 @@
 
 **Every piece of context meant to survive a session is written into `slasher/`.** The rules bind it, the working directories hold it, and git carries it. An agent memory store is not one of those places, and nothing that belongs in one of them is held in a store instead.
 
-**The artifacts are the ones this package already defines.** A binding convention is a rule in `slasher/local/rules/`. A decision is a one-line entry in `slasher/local/logs/log/`. Thinking that has not stabilized is an observation in `slasher/local/items/`. An item is where the project's planning goes. Postponed work is a deferred item, and what the project stopped doing is suspended. Each has its own convention, and between them they hold what a project knows about itself.
+**The artifacts are the ones this package already defines.** A binding convention is a rule in `slasher/local/rules/`. A decision is a one-line entry in `slasher/local/logs/log/`. Thinking that has not stabilized is a note in `slasher/local/items/`. An item is where the project's planning goes. Postponed work is a deferred item, and what the project stopped doing is suspended. Each has its own convention, and between them they hold what a project knows about itself.
 
 **What this forbids is a store standing in for one of them.** A note about how this project's code is arranged, what was decided last week, or which approach was rejected belongs in an artifact. Holding it anywhere else is holding it where nobody reviews it.
 
@@ -20,7 +20,7 @@ It drifts, and its drift is silent. A note written in June contradicts a rule wr
 
 The cost of forbidding it is real and is bounded to one case. That is the preference not yet worth a rule, and the rule named above is what answers it. Without that rule this one would trade a silent store for a silent loss, which is not an improvement.
 
-**How to apply:** write durable project context into the artifact whose convention covers it. A rule, a log entry, an observation, an item, or a suspended thing. Do not hold it in an agent memory store, and do not create one.
+**How to apply:** write durable project context into the artifact whose convention covers it. A rule, a log entry, a note, an item, or a suspended thing. Do not hold it in an agent memory store, and do not create one.
 
 Where a fact is about the engineer rather than the project, it is outside this rule. Where a preference is not yet a rule, ask about it at once rather than holding it.
 
@@ -31,7 +31,7 @@ Where a fact is about the engineer rather than the project, it is outside this r
 3. An agent memory store is not one of those places.
 4. Do not hold in a store anything that belongs in one of those places.
 5. A binding convention is a rule in `slasher/local/rules/`. A decision is a one-line entry in `slasher/local/logs/log/`.
-6. Thinking that has not stabilized is an observation in `slasher/local/items/`.
+6. Thinking that has not stabilized is a note in `slasher/local/items/`.
 7. The project's planning goes in an item.
 8. Postponed work is a deferred item.
 9. What the project stopped doing is suspended.
@@ -53,8 +53,11 @@ Where a fact is about the engineer rather than the project, it is outside this r
 - 2026-10-24, compressed: compression 0.42, change 0.66, solubility 44 → 68, clarity 0.41 → 0.61, 19 directives, 19 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 68 → 67, clarity 0.61 → 0.62; checked: 16 directives, 15 kept, 1 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 21 directives, 19 kept, 0 less precise, 2 lost, 2 repairs
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Sun Oct 25 2026 this rule was named project-context-lives-in-the-committed-artifacts and titled "A project's durable context lives in its committed artifacts, never in an agent memory store".
 
@@ -69,7 +72,7 @@ Related:
 - the ask-at-once-when-the-engineer-expresses-a-preference rule — what makes forbidding the store safe
 - the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule — the read-fresh premise, and where a binding convention goes
 - the the-log-holds-one-file-per-entry-with-a-one-line-title rule — where a decision goes
-- the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule — where thinking goes before it binds
+- the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule — where thinking goes before it binds
 - the a-project-does-not-name-its-downstream-consumers-in-its-own-files rule — the machine-scoped fact, and where it goes instead
 
 ---
@@ -99,3 +102,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 1:39:53 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

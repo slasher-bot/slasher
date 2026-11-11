@@ -81,8 +81,11 @@ Record the log's entries made during sessions as one file per entry in `slasher/
 - 2026-11-03, revised: /log-this writes an entry for the current work; checked: 27 directives, 27 kept, 0 less precise, 0 lost
 - 2026-11-09, revised: a bare /log writes an entry for the current work, and /log-this is its alias; not re-checked
 - 2026-11-09, revised: /log-this is removed; not re-checked
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 On Mon Nov 9 2026 `/log-this` was for a time an alias of a bare `/log`, until the engineer removed it.
 
@@ -106,7 +109,7 @@ Related:
 
 - the file-names rule — the shared filename convention
 - the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule — a new rule pairs with a log entry
-- the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule — its recording step logs too
+- the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule — its recording step logs too
 - the a-log-entry-is-written-for-an-item-on-creation-on-each-settled-resolution-and-on-a-change-of-state rule — an item, deferred work included, logs on creation and on each change of state
 - the the-logs-directory-holds-the-contemporaneous-historical-records rule — the contemporaneous, historical records this sits among
 - the a-record-may-be-categorized-with-square-bracket-tags rule — the `**Tags:**` line an entry carries, in the one form
@@ -154,3 +157,4 @@ Changed by Scott Bellware on Tue Nov 3 2026 at 10:38:55 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:06:44 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:07:53 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

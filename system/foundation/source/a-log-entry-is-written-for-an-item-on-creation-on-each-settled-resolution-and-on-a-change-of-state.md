@@ -12,7 +12,7 @@ An **item** in `slasher/local/items/` pairs with a one-line entry in `slasher/lo
 
 - **On creation.** That the item was recorded at all is itself a decision, and the entry records the item rather than the word.
 - **On each `Settled` resolution.** A dated resolution is the unit an item records decisions in, so each one is a decision the log carries.
-- **On a change of state.** The canonical `**State:**` line reaching any state word the the-items-directory-holds-one-file-per-item rule names is a decision: **Open**, **Active**, a concluding state such as **Realized**, **Done**, **Corrected**, **Resolved**, or **Completed**, or **Deferred**, **Suspended**, **Discontinued**, **Superseded**, **Abandoned**, or **Obsolete**. So is a state being taken back by resume. **A design and an observation are `Recorded` and never move**, so each takes a creation entry and no other.
+- **On a change of state.** The canonical `**State:**` line reaching any state word the the-items-directory-holds-one-file-per-item rule names is a decision: **Open**, **Active**, a concluding state such as **Realized**, **Done**, **Corrected**, **Resolved**, or **Completed**, or **Deferred**, **Suspended**, **Discontinued**, **Superseded**, **Abandoned**, or **Obsolete**. So is a state being taken back by resume. **A design and a note are `Recorded` and never move**, so each takes a creation entry and no other.
 
 ## What the entry says
 
@@ -36,7 +36,7 @@ An **item** in `slasher/local/items/` pairs with a one-line entry in `slasher/lo
 
 ## Why the obligation is stated here rather than in each convention
 
-**Three conventions state their own log entry in full, and the the-items-directory-holds-one-file-per-item rule points here.** The an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule, the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule each state the pairing inline. The the-items-directory-holds-one-file-per-item rule requires the record, its dated resolutions, and its footer, and names the entry only by pointing to this rule.
+**Three conventions state their own log entry in full, and the the-items-directory-holds-one-file-per-item rule points here.** The a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule, the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule each state the pairing inline. The the-items-directory-holds-one-file-per-item rule requires the record, its dated resolutions, and its footer, and names the entry only by pointing to this rule.
 
 **What reached the log anyway was the the-log-holds-one-file-per-entry-with-a-one-line-title rule's general trigger** — write an entry whenever a real decision is made, and when in doubt, log it. That is enough to produce the entries and not enough to make them reliable, since it rests on each writer reaching the same judgment about what counts.
 
@@ -64,7 +64,7 @@ Name the record in the entry, and say what happened to it. State what the record
 6. Write the entry on each change of the item's `**State:**` line.
 7. A change of state is the line reaching any state word the items rule names: Open, Active, a concluding state such as Realized, Done, Corrected, Resolved, or Completed, or Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete.
 8. A change of state is also the line taking a state back, by resume.
-9. A design and an observation are `Recorded` and never move, so each takes a creation entry only.
+9. A design and a note are `Recorded` and never move, so each takes a creation entry only.
 10. Do not log a completed checkbox task, because it carries out a direction already settled.
 11. Do not log prose that settles nothing either. Examples are reconciling a Background & Motivation section, correcting a summary, and rewording a section.
 12. The provenance footer records those unlogged changes.
@@ -78,7 +78,7 @@ Name the record in the entry, and say what happened to it. State what the record
 20. Carry the same into the commit subject the entry travels in: name the record, attribute what it settles to the record, and keep the mood. An entry corrected while its commit subject makes the same claim is half corrected.
 21. Fix no wording template. *X is recorded as an item, Open because …* and *X is realized* are forms in use.
 22. This rule states the obligation once, for every item.
-23. The an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule, the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule state their own entries.
+23. The a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule, the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule state their own entries.
 24. The the-items-directory-holds-one-file-per-item rule points here and keeps no second copy.
 25. The the-log-holds-one-file-per-entry-with-a-one-line-title rule's general trigger is to log whenever a real decision is made, and when in doubt. It rests on each writer's judgment, so it does not make the entries reliable.
 
@@ -97,8 +97,11 @@ Name the record in the entry, and say what happened to it. State what the record
 - 2026-11-09, revised: the Discontinued state, which the engineer added; not re-checked
 - 2026-11-09, revised: any state the items rule names, and any state taken back by resume, is a change of state; not re-checked
 - 2026-11-09, checked: 17 directives, 17 kept, 0 less precise, 0 lost
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Mon Nov 9 2026 the states that made a change of state were listed here, and only Realized, Deferred, Discontinued, Open, and a work item's Done were taken back.
 
@@ -119,7 +122,7 @@ Related:
 
 - the the-log-holds-one-file-per-entry-with-a-one-line-title rule — the entry's form, and the general trigger this makes specific
 - the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule — the entry a removal takes, which is the whole of that act
-- the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule, a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule — the three that already state their own pairing
+- the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule, a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule, and the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule — the three that already state their own pairing
 - the working-state-artifacts-carry-a-provenance-footer rule — the same shape, one obligation stated once across several conventions
 - the `git` package's write-subject-first-commit-messages and a-commit-message-states-that-a-task-is-done-never-that-it-is-marked-done rules — the grammar that is right for a change to the software and wrong for a record that settles one
 - the the-items-directory-holds-one-file-per-item rule — the record whose states an entry reports, and which this rule's name predates
@@ -179,3 +182,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 2:26:13 AM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:33 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:03 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
