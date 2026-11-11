@@ -1,7 +1,7 @@
 # The `test-tree` script is mandated by a rule and shipped by nothing, and `testing` as framed cannot ship it
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 `test-tree-command`'s How-to-apply reads: *"on a 'test tree' request, **run the durable tree script** and present its output."* The rule body says such a script *"makes the command reproducible across sessions rather than a rebuilt throwaway"* and points outside the system for one — *"(`constant`'s `test/automated/tree.rb` is one such implementation.)"*
 
@@ -24,3 +24,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

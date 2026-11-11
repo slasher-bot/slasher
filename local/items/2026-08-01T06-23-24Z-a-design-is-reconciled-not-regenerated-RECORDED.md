@@ -1,7 +1,7 @@
 # A design is reconciled against the records, not regenerated from them
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 **The question:** can `local/design/` be periodically updated from the other record types, the way a work-session record is reconstituted from the pertinent input records?
 
@@ -50,3 +50,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

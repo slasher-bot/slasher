@@ -1,7 +1,7 @@
 # Design and planning are process-centric; aspiration and intention are their human-centric corollaries, and a project could choose which mode it works under
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 ## The pairing
 
@@ -69,3 +69,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

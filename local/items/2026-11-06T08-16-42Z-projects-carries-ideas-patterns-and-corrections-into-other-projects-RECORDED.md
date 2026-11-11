@@ -1,7 +1,7 @@
 # Projects carries ideas, patterns, and corrections into other projects
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 **`/projects` would help move ideas, new patterns, and corrections from the project the session is in into other Waytide projects on the machine.** Today it only lists the projects in the machine's registry. It changes nothing and acts on no project listed, as the projects-lists-the-machines-registry-of-waytide-projects rule requires.
 
@@ -19,3 +19,4 @@ Until Fri Nov 6 2026 this item was tagged `[idea]`, with the state Open. The eng
 
 Authored by Scott Bellware on Fri Nov 6 2026 at 12:16:42 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 1:39:00 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

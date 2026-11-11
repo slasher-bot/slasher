@@ -1,7 +1,7 @@
 # The `git` package declares itself standalone and is not
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 `system/git/README.md` states: *"This is a standalone package: it includes no other packages."* The package's rules do not hold to that, in two separate ways.
 
@@ -25,3 +25,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT

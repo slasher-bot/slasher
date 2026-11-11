@@ -1,7 +1,7 @@
 # The verbose feature output required at every implementation hinge is unbounded, and it grows monotonically
 
 - **State:** Recorded
-- **Tags:** [observation]
+- **Tags:** [note]
 
 `show-feature-test-output-after-implementation-hinge` requires, at **every** implementation hinge, the **whole feature's** tests — *"every outcome built so far for the unit under development"* — run *"with verbose output so the context tree, `comment`/`detail` narration, and pass/fail are visible."* No bound of any kind is stated: not on length, not on the number of outcomes, and nothing on what to do when the output exceeds what can be read.
 
@@ -18,3 +18,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT
