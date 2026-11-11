@@ -37,9 +37,11 @@
 - **2026-11-11** — Forecast: no forecast, selected by the engineer.
 - **2026-11-11** — Plan: accepted by the engineer. `/next?` is left as it is, and the next rule keeps its name.
 - **2026-11-11** — Merge to master: selected by the engineer.
+- **2026-11-11** — Branch deletion and worktree removal: selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 1:14:37 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:15:34 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:15:49 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:16:14 PM PT
