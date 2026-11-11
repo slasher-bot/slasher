@@ -10,10 +10,11 @@ PROCESS
                                    next
   /.                               An alias of /recent
 
-  /next                            Proceed to the next step in the current
+  /proceed                         Proceed to the next step in the current
                                    multi-step process, or resume interrupted
                                    work
-  />>                              An alias of /next
+  />>                              An alias of /proceed
+  /next                            An alias of /proceed
   /next?                           "What are we doing?" or "what's next?"
                                    The next step in the current multi-step
                                    process, or the step that has been

@@ -24,6 +24,12 @@
 
 ## What happened
 
+- `/proceed` takes the next step of the work under way. `/next` and `/>>` are its aliases. `/next?` is unchanged.
+- The next rule keeps its name, and its body and compressed text name `/proceed`.
+- The command-table rule says that a command with two aliases names both, the shortcut first, as `/proceed, />>, /next`. The agent decided this wording.
+- The shortcuts table lists `/>>` against `/proceed`, and lists no row for `/next`, since `/next` is not a shortcut.
+- The automated suite passed: 46 tests.
+
 ## Confirmations
 
 - **2026-11-11** — Working location: branch and worktree, selected by the engineer.
@@ -34,3 +40,4 @@
 ---
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 1:14:37 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:15:34 PM PT
