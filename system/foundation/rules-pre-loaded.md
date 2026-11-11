@@ -423,17 +423,15 @@ Source: system/foundation/source/present-every-prompt-to-the-engineer-through-th
 
 Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-have-loaded.md
 
-**When the session-start read concludes, print the plugin's startup table, word for word.** It is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
-
-**After the startup table, run `/items 10`.** In the same response, below it, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
+**When the session-start read concludes, print the plugin's startup table, word for word, then the current line.** The startup table is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. The current line stands one blank line below it, and ends what the read prints: *Type /current for open and active work.* It names `/current`, which lists the current items, then the current features and experiments. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
 
 **The tables are built, not written here.** The plugin build joins the command table from each active package's rows, and writes the startup table's sentence from it, so a package that is not active adds no row. `/command-table`, `/;`, and `/commands` print the joined command table, and `/shortcuts` and `/sc` the shortcuts table, each as it stands and with no rule loaded. How a command's rows are written is the a-command-domain-carries-its-rows-of-the-command-table rule's, which loads when a command is written.
 
 **The agent prints the table, not the harness.** The harness renders its display as plain text, and the table needs markdown. That is the reason the package set stanza is the agent's too.
 
-**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The current items and implementations show the engineer where the work stands before they make the first request.
+**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The current line tells the engineer where to see the work under way, without the time a listing would take at the start of every session.
 
-**How to apply:** at the end of the session-start read, print the plugin's `command-table-startup.md` once, run `/items 10` below it, and then turn to the engineer's request or wait for one.
+**How to apply:** at the end of the session-start read, print the plugin's `command-table-startup.md` once, then the current line, and then turn to the engineer's request or wait for one.
 
 # The log holds one file per entry, with a one-line title
 

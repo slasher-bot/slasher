@@ -37,7 +37,6 @@ ITEMS
                                    List items in a state
                                    <state>: any item state, or "current"
                                    (Open and Active)
-  /item current                    List current items (/item list current)
 
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active
@@ -146,9 +145,10 @@ PROCESS
   These commands move the work under way along: take its next step, or say what
   was done and what's next.
 
-  /items [<n>]                     The current items, or the n most recent,
+  /items                           The current items (/item list current)
+  /current [<n>]                   The current items, or the n most recent,
                                    then the current features and experiments
-  /' [<n>]                         An alias of /items
+  /' [<n>]                         An alias of /current
   /recent                          Brief summary of recent work, and what's
                                    next
   /.                               An alias of /recent

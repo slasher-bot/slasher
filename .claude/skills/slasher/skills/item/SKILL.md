@@ -14,11 +14,10 @@ The engineer typed `/item $ARGUMENTS`.
    - **Ideas and goals:** `idea`, `improvement`, `correction`, `aspiration`, `goal`
    - **Work and plans:** `work`, `plan`, `design`
    - **Findings:** `observation`, `mistake`, `problem`
-   - **Other:** `list`, `current`, a state change, `help`
+   - **Other:** `list`, a state change, `help`
 5. **`new [<kind>]`**, or **`<kind>`** where the kind is not one of this command's subcommands: create an item tagged `[<kind>]`, or `[idea]` where no kind is named. Load the-items-directory-holds-one-file-per-item. The words after the kind are what the item says. Where none were typed, ask what it says.
 6. **`observation`**: record an observation. Load an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes.
 7. **`list <state>`**: list the items in that state. `current` means Open and Active. Load a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows. Where no state was typed, ask which.
-8. **`current`**: list the current items, as `list current` does.
-9. **A state change**, `start`, `complete`, `realize`, `done`, `defer`, `suspend`, `discontinue`, `obsolete`, `supersede`, `abandon`, or `resume`, followed by the item: change that item's state, as the root command of the same name does for an item. Load the-items-directory-holds-one-file-per-item. Where no item was named, or the words name more than one, ask which, through the selection interface. Where the item cannot take the state, say so, name the state its kind takes instead, and do nothing more.
-10. **`affirm`, `refute`, or `inconclusive`** maps to no state an item takes. Say so, name `complete`, which concludes an item in its kind's concluding state, and do nothing more.
-11. Any other first word that is not a kind is not guessed at. Say it is not one of this command's subcommands, and ask which is meant, as step 4 does.
+8. **A state change**, `start`, `complete`, `realize`, `done`, `defer`, `suspend`, `discontinue`, `obsolete`, `supersede`, `abandon`, or `resume`, followed by the item: change that item's state, as the root command of the same name does for an item. Load the-items-directory-holds-one-file-per-item. Where no item was named, or the words name more than one, ask which, through the selection interface. Where the item cannot take the state, say so, name the state its kind takes instead, and do nothing more.
+9. **`affirm`, `refute`, or `inconclusive`** maps to no state an item takes. Say so, name `complete`, which concludes an item in its kind's concluding state, and do nothing more.
+10. Any other first word that is not a kind is not guessed at. Say it is not one of this command's subcommands, and ask which is meant, as step 4 does.
