@@ -5,20 +5,23 @@ PROCESS
   /items [<n>]                     The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /items
-  /recent                          What was recently done, and what's next
+  /recent                          Brief summary of recent work, and what's
+                                   next
   /.                               An alias of /recent
 
   /next                            Proceed to the next step in the current
                                    multi-step process, or resume interrupted
                                    work
-  />                               An alias of /next
-  /next?                           The next step in the current multi-step
+  />>                              An alias of /next
+  /next?                           "What are we doing?" or "what's next?"
+                                   The next step in the current multi-step
                                    process, or the step that has been
-                                   interrupted
-  />?                              An alias of /next?
+                                   interrupted.
+  /?                               An alias of /next?
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
+  /! <request>                     An alias of /unattended
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
