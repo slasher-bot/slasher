@@ -25,6 +25,10 @@
 ## What happened
 
 - `/!` is a second alias of `/next`, beside `/>>`. The next rule already says that `/next` is the engineer saying *proceed*, so `/!` takes no rule of its own.
+- `/#` is the alias of `/unattended`, and `/%` the alias of `/estimate-confidence`. The new `/%` skill sits in `percent-sign`.
+- The next rule names none of its aliases, so it is unchanged. The plan named it, and the work did not need it.
+- The command-table rule says that a command with two aliases names both, in the order they were made, as `/next, />>, /!`. The agent decided this wording.
+- The automated suite passed: 46 tests.
 
 ## Confirmations
 
