@@ -14,7 +14,7 @@
 
 **A shortcut alias changes three files together.** Change its row in `command-table-header.md`, its row in `plugin/shortcuts.md`, and `plugin/command-table-startup.md` where it names the alias, in the same commit.
 
-**The startup table's four rows stand in `plugin/command-table-startup.md`.** The `/slasher help` row also names `/help`. The `/;` row also names `/commands`, and reads *Print the list of Slasher commands*. The `/.` row takes `/recent`'s description from the help. The `/'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand.
+**The startup table's four rows stand in `plugin/command-table-startup.md`.** A row names the command first and its shortcut alias after it, as `/recent, /.`, which is the reverse of the full table. The `/slasher help` row also names `/help`. The `/commands, /;` row reads *Print the list of Slasher commands*. The `/recent, /.` row takes `/recent`'s description from the help. The `/current, /'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand.
 
 **Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* The plugin build adds it.
 
@@ -32,3 +32,4 @@ Related:
 Authored by Scott Bellware on Tue Nov 10 2026 at 9:49:16 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:45:30 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:04:38 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:06:56 AM PT
