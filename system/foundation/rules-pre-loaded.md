@@ -423,7 +423,7 @@ Source: system/foundation/source/present-every-prompt-to-the-engineer-through-th
 
 Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-have-loaded.md
 
-**When the session-start read concludes, print the startup table, the sentence below it, and the help line, word for word.** Print them in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
+**When the session-start read concludes, print the startup table, the sentence below it, the help line, and the current line, word for word.** Print them in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
 
 | Command | Description |
 |---|---|
@@ -435,6 +435,8 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 The other commands are `/item`, `/items`, `/feature`, `/features`, `/experiment`, `/experiments`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/unattended`, `/log`, `/decision`, `/observation`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/shortcuts`, `/load`, and `/commands`.
 
 Type /help for all of Slasher's help, or /<command> help for one command's.
+
+Type /current for open and active work.
 
 **The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/;` row reads *Print the list of Slasher commands*, since the table `/;` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/current` beside it, as `/', /current`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/current` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>>`, `/?`, `/??`, `/#`, `/!`, and `/sc`. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
@@ -474,6 +476,8 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
 
+**The current line follows the startup table's help line:** *Type /current for open and active work.* It stands one blank line below the help line, and ends what the read prints. It names `/current`, which lists the current items, then the current features and experiments. The full table that `/command-table` prints takes no current line.
+
 **Each row is one command domain, except the `/slasher help`, `/unattended`, `/current`, `/features`, `/experiments`, `/recent`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/decision`, `/observation`, `/shortcuts`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/current`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own. `/decision` stands below the `/log` row. The rows of the commands with shortcut aliases stand at the top, as the paragraph on shortcut aliases sets out. `/features` is a root command of the FEATURES domain, and `/experiments` of the EXPERIMENTS domain. `/features` has a row below the `/feature` row, and `/experiments` below the `/experiment` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *These commands*, as the help does. No description opens with *This command*. Print no other root command, alias, or subcommand in the table. `/observation` and `/commands` are the only aliases with rows of their own. `/help` and `/command-table` itself have none.
 
 **A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/current`, `/.` of `/recent`, `/>>` of `/next`, `/?` of `/next?`, `/??` of `/clarify`, `/#` of `/estimate-confidence`, `/!` of `/unattended`, and `/;` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/;, /commands`, `/., /recent`, `/', /current`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
@@ -503,7 +507,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The full table gives one line for each domain but PHASE, and lines for `/next`, `/next?`, `/clarify`, and their aliases, so it shows the whole set at a glance.
 
-**How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, and then turn to the engineer's request or wait for one.
+**How to apply:** at the end of the session-start read, print the startup table, its sentence, the help line, and the current line as they stand here, once, and then turn to the engineer's request or wait for one.
 
 # The log holds one file per entry, with a one-line title
 
