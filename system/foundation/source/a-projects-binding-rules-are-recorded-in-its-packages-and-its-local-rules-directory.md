@@ -20,7 +20,7 @@ The project's **binding** rules are read at the start of every session and follo
 
 **How to apply:** at session start, run `slasher/system/foundation/load-rules.sh` and read its whole output: the packages' pre-loaded rules, the triggers of their on-demand rules, and their vocabularies, `slasher/local/rules/`, `slasher/local/vocabulary.md` where the project has one, and the journal. When a trigger's act comes up, load its rule and follow it before acting. Hold to them.
 
-When a new binding convention is set, write it in `slasher/local/rules/` in the format above and log it. When the project settles a term or a substitution of its own, write it in `slasher/local/vocabulary.md`. Do not write it as a rule. Prefer an observation over a rule when the thinking hasn't stabilized (see the observations rule).
+When a new binding convention is set, write it in `slasher/local/rules/` in the format above and log it. When the project settles a term or a substitution of its own, write it in `slasher/local/vocabulary.md`. Do not write it as a rule. Prefer a note over a rule when the thinking hasn't stabilized (see the notes rule).
 
 ## Compressed
 
@@ -87,7 +87,7 @@ When a new binding convention is set, write it in `slasher/local/rules/` in the 
 2. Add a matching one-line entry to `slasher/local/logs/log/`.
 3. Edit a rule that belongs to a system package in that package and re-publish it. Do not add it to `slasher/local/rules/`.
 4. When the project settles a term or a substitution of its own, write it in `slasher/local/vocabulary.md`. Do not write it as a rule.
-5. Prefer an observation over a rule when the thinking has not stabilized. See the observations rule.
+5. Prefer a note over a rule when the thinking has not stabilized. See the notes rule.
 
 ## Referencing a rule
 
@@ -113,8 +113,11 @@ When a new binding convention is set, write it in `slasher/local/rules/` in the 
 - 2026-10-29, revised: the compiled rules are one file per package and the read runs the loader, solubility 47 → 47, clarity 0.79 → 0.81; checked: 47 directives, 47 kept, 0 less precise, 0 lost
 - 2026-10-29, revised: on-demand rules, and what the loader prints, solubility 47 → 47, clarity 0.81 → 0.81; checked: 63 directives, 60 kept, 2 less precise, 1 lost, 1 repair, re-checked kept; the less precise directive left is that removing a rule is the only case that strands a citation
 - 2026-11-05, revised: a rule takes a trigger only where the trigger is safe; checked: 48 directives, 44 kept, 4 less precise, 0 lost, 2 repairs, to the safe-trigger point; re-checked: 48 directives, 46 kept, 2 less precise, 0 lost. Left less precise, untouched by this revision: that the project's vocabulary decides over every package's, which the vocabulary rule it names states, and that the vocabulary file may be absent
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Thu Nov 5 2026 any rule could take a trigger.
 
@@ -183,3 +186,4 @@ Changed by Scott Bellware on Wed Oct 28 2026 at 9:43:00 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 8:38:17 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:28 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

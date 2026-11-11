@@ -1,6 +1,6 @@
 ITEMS
-  Items hold the project's thinking: ideas, plans, designs, observations, and
-  work to be done, each with a state.
+  Items hold the project's thinking: ideas, plans, designs, notes, and work
+  to be done, each with a state.
 
   /item new [<kind>]               Create an item tagged [<kind>], or [idea]
                                    with no kind. Any kind may be named.
@@ -17,8 +17,7 @@ ITEMS
   /item design, /design            Create an item tagged [design]
   /item aspiration, /aspiration    Create an item tagged [aspiration]
   /item goal, /goal                Create an item tagged [goal]
-  /item observation, /observation, /observe
-                                   Record an observation
+  /item note, /note                Record a note
   /item mistake, /mistake          Create an item tagged [mistake]
   /item problem, /problem          Create an item tagged [problem]
   /item list <state>, /list <state>
@@ -48,8 +47,8 @@ ITEMS
 
   /item help                       Print this command's help
 
-  /observation help                Print this command's help
+  /note help                       Print this command's help
 
-  A bare /idea is /idea new. A bare /observation is /observation new.
+  A bare /idea is /idea new. A bare /note is /note new.
   A kind that is also a subcommand, such as list, is created with
   /item new list.

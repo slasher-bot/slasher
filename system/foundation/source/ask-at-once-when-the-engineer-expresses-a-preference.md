@@ -18,7 +18,7 @@ Each is genuine, and the selection carries those that apply:
 
 - **An amendment to an existing rule**, where a rule already covers the subject, changed in its own source with its History. It is offered only where such a rule exists.
 - **A new rule**, in `slasher/local/rules/`, with the matching `slasher/local/logs/log/` entry the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule requires.
-- **An observation**, in `slasher/local/items/`, where the thinking has not stabilized. The an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule prefers this where there is doubt. Writing a rule later is cheap, and retracting a premature rule is not.
+- **A note**, in `slasher/local/items/`, where the thinking has not stabilized. The a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule prefers this where there is doubt. Writing a rule later is cheap, and retracting a premature rule is not.
 - **Neither**, where the engineer does not want it recorded. It is a real answer, and it is taken without argument.
 
 **A preference the engineer declined to record is not asked about again in the same session.** The answer was given.
@@ -31,7 +31,7 @@ Each is genuine, and the selection carries those that apply:
 
 Interrupting is the cost, and it is one selection. Deferring the ask to the end of the task costs the wording, which is the part worth keeping, and leaves a deficiency the engineer has pointed out standing in the meantime.
 
-**How to apply:** where the engineer states how the work should be done, stop and ask through the selection interface. Offer an amendment to the rule that covers it where there is one, a new rule, an observation, and neither. Where it corrects what you just did, fix that too. Record their words rather than a paraphrase, and write the log entry with the rule per the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule.
+**How to apply:** where the engineer states how the work should be done, stop and ask through the selection interface. Offer an amendment to the rule that covers it where there is one, a new rule, a note, and neither. Where it corrects what you just did, fix that too. Record their words rather than a paraphrase, and write the log entry with the rule per the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule.
 
 Do not ask about an instruction that governs only the artifact at hand. Do not ask a second time about a preference the engineer has declined to record. Do not put a preference off: work the engineer wants deferred, they record as an idea.
 
@@ -53,7 +53,7 @@ Do not ask about an instruction that governs only the artifact at hand. Do not a
 1. Each candidate is genuine, and the selection carries only those that apply.
 2. An amendment to an existing rule, offered only where a rule covers the subject. It is made in that rule's source, with its History.
 3. A new rule, in `slasher/local/rules/`, with the matching `slasher/local/logs/log/` entry.
-4. An observation in `slasher/local/items/`, where the thinking has not stabilized. It is preferred where there is doubt.
+4. A note in `slasher/local/items/`, where the thinking has not stabilized. It is preferred where there is doubt.
 5. Neither, where the engineer does not want the preference recorded. It is taken without argument.
 6. Do not ask again in the same session about a preference the engineer declined to record.
 7. Record the engineer's own words, not a paraphrase or the agent's reading of them from memory.
@@ -67,8 +67,11 @@ Do not ask about an instruction that governs only the artifact at hand. Do not a
 - 2026-10-27, re-checked: 22 directives, 9 kept, 12 less precise, 1 lost, 14 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 69 → 72, clarity 0.67 → 0.80; checked: 17 directives, 17 kept, 0 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 19 directives, 18 kept, 1 less precise, 0 lost, 1 repair
+- 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
 Until Sun Oct 25 2026 this rule was named ask-at-once-when-a-preference-is-expressed.
 
@@ -87,7 +90,7 @@ Related:
 - the a-projects-durable-context-is-recorded-in-its-committed-artifacts-never-in-an-agent-memory-store rule — the store this replaces, and which depends on this one
 - the present-every-prompt-to-the-engineer-through-the-selection-ui rule — the interface the ask uses
 - the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule — the rule and its log entry
-- the an-observation-is-a-working-hypothesis-whose-one-state-recorded-never-changes rule — the softer landing, preferred where there is doubt
+- the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule — the softer landing, preferred where there is doubt
 - the `language` package's an-answer-is-a-list-and-prose-must-justify-itself rule — the preference stated three times before it was written
 
 ---
@@ -116,3 +119,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 1:33:07 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 1:39:15 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:45:17 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT

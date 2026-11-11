@@ -237,7 +237,7 @@ Source: system/foundation/source/a-projects-binding-rules-are-recorded-in-its-pa
 2. Add a matching one-line entry to `slasher/local/logs/log/`.
 3. Edit a rule that belongs to a system package in that package and re-publish it. Do not add it to `slasher/local/rules/`.
 4. When the project settles a term or a substitution of its own, write it in `slasher/local/vocabulary.md`. Do not write it as a rule.
-5. Prefer an observation over a rule when the thinking has not stabilized. See the observations rule.
+5. Prefer a note over a rule when the thinking has not stabilized. See the notes rule.
 
 ## Referencing a rule
 
@@ -263,7 +263,7 @@ Source: system/foundation/source/a-projects-durable-context-is-recorded-in-its-c
 3. An agent memory store is not one of those places.
 4. Do not hold in a store anything that belongs in one of those places.
 5. A binding convention is a rule in `slasher/local/rules/`. A decision is a one-line entry in `slasher/local/logs/log/`.
-6. Thinking that has not stabilized is an observation in `slasher/local/items/`.
+6. Thinking that has not stabilized is a note in `slasher/local/items/`.
 7. The project's planning goes in an item.
 8. Postponed work is a deferred item.
 9. What the project stopped doing is suspended.
@@ -395,7 +395,7 @@ Source: system/foundation/source/ask-at-once-when-the-engineer-expresses-a-prefe
 1. Each candidate is genuine, and the selection carries only those that apply.
 2. An amendment to an existing rule, offered only where a rule covers the subject. It is made in that rule's source, with its History.
 3. A new rule, in `slasher/local/rules/`, with the matching `slasher/local/logs/log/` entry.
-4. An observation in `slasher/local/items/`, where the thinking has not stabilized. It is preferred where there is doubt.
+4. A note in `slasher/local/items/`, where the thinking has not stabilized. It is preferred where there is doubt.
 5. Neither, where the engineer does not want the preference recorded. It is taken without argument.
 6. Do not ask again in the same session about a preference the engineer declined to record.
 7. Record the engineer's own words, not a paraphrase or the agent's reading of them from memory.
@@ -557,7 +557,7 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 9. Each section points inline to the durable records that step produced.
 10. **Takeaways**: the settled conclusions, compressed to a few bullets.
 11. **Glossary**: the terms settled during the work session, each with its literal definition.
-12. **Where the durable records live**: pointers to the rules, observations, log entries, experiments, and code the work session produced.
+12. **Where the durable records live**: pointers to the rules, notes, log entries, experiments, and code the work session produced.
 13. Optionally, a **reflective closing note** on the work session itself.
 14. A **provenance footer**: the record ends with the `Authored by … / Changed by …` footer, like every working-state artifact.
 15. The footer follows the working-state-artifacts-carry-a-provenance-footer rule and the record-a-rules-authorship-in-a-provenance-footer format.
