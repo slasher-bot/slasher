@@ -38,26 +38,26 @@ MANIFEST
 
 (cd "$repository" && system/foundation/build-marketplace-plugin.sh foundation) > /dev/null
 
-# Observation ----------------------------------------------------------------
+# Writes a manifest naming the package ---------------------------------------
 
 manifest=$(cat "$repository/plugins/foundation/.claude-plugin/plugin.json")
 
-[ "$manifest" = "$(control_manifest_text)" ] || fail "" "found:" "$manifest"
+[ "$manifest" = "$(control_manifest_text)" ] || fail "Writes a manifest naming the package" "found:" "$manifest"
 
-# Observation ----------------------------------------------------------------
+# Copies the package's skills ------------------------------------------------
 
 skills_difference=$(diff -r \
   "$repository/system/foundation/skills" \
   "$repository/plugins/foundation/skills" || true)
 
-[ -z "$skills_difference" ] || fail "" "found:" "$skills_difference"
+[ -z "$skills_difference" ] || fail "Copies the package's skills" "found:" "$skills_difference"
 
-# Observation ----------------------------------------------------------------
+# Copies the package's hooks -------------------------------------------------
 
 hooks_difference=$(diff -r \
   "$repository/system/foundation/plugin/hooks" \
   "$repository/plugins/foundation/hooks" || true)
 
-[ -z "$hooks_difference" ] || fail "" "found:" "$hooks_difference"
+[ -z "$hooks_difference" ] || fail "Copies the package's hooks" "found:" "$hooks_difference"
 
 echo "0 failed, 0 aborted"
