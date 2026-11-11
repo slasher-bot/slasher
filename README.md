@@ -16,6 +16,7 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 - **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
 - **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one.
 - **Domain conventions.** Packages for language, testing, git, and versioning.
+- **Email.** An optional package, `imap`, fetches IMAP mail and Gmail labels into the project, with each credential kept in the macOS Keychain.
 - **Machinery.** The installer, package sets, a session-start hook, a status line, and commands.
 
 ## Install Slasher
