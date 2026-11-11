@@ -9,6 +9,8 @@ LANGUAGE
   /??                              An alias of /clarify
 
   /expand                          Expand the previous answer
+  /brief [<request>]               Answer the request in brief, or give the
+                                   previous answer again in brief
 
   /reserve <word>                  Reserve a word, in six steps
 
