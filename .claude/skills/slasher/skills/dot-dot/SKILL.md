@@ -1,6 +1,6 @@
 ---
 name: ".."
-description: Put the last question the engineer escaped again. An alias of /ask-again.
+description: Repeat the agent's previous multiple-choice question. An alias of /ask-again.
 disable-model-invocation: true
 ---
 

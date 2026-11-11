@@ -9,4 +9,4 @@
 | `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/!, /unattended` | Carry out a request on the agent's own, after a plan is accepted |
-| `/.., /ask-again` | Put the last question the engineer escaped again |
+| `/.., /ask-again` | Repeat the agent's previous multiple-choice question |
