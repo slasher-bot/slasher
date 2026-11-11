@@ -18,7 +18,7 @@ Present the genuine candidates you find. Never invent an option to reach two, an
 
 Reserve plain prose for statements, reports, and explanations that are **not** asking the engineer to choose.
 
-**Where the engineer escapes a selection, do not put it again on your own.** The engineer escapes it by refusing it, by stopping it to clarify, or by interrupting it. Say where the work stopped, and wait. Put the question again only when the engineer asks for it, or after a clarification the engineer asked for. The question the work reaches next is still put without waiting.
+**Where the engineer escapes a selection, do not put it again on your own.** The engineer escapes it by refusing it, by stopping it to clarify, or by interrupting it. Say where the work stopped, and wait. Put the question again only when the engineer asks for it, as with `/ask-again` or `/..`, or after a clarification the engineer asked for. The question the work reaches next is still put without waiting.
 
 **As the engineer stated it:** Desist from presenting the selection UI in a loop automatically. It doesn't provide opportunity for the user to digest. And: I want the original question put to the user automatically, but not the repeat of the question if the user escapes the selection UI.
 
@@ -35,7 +35,7 @@ Reserve plain prose for statements, reports, and explanations that are **not** a
 9. Where there is one genuine candidate, offer it and its negative, labelled *Something else — say what to change*. The negative is a real answer, not an invented option.
 10. This applies whenever you would ask the engineer to decide or answer. That includes a design decision, a "which approach", a confirmation to proceed or commit, and a clarification between interpretations.
 11. Keep plain prose for statements, reports, and explanations that do not ask the engineer to choose.
-12. Where the engineer escapes a selection, by refusing it, stopping it to clarify, or interrupting it, do not put it again on your own. Say where the work stopped, and wait. Put it again when the engineer asks, or after a clarification they asked for. Put the next question the work reaches without waiting.
+12. Where the engineer escapes a selection, by refusing it, stopping it to clarify, or interrupting it, do not put it again on your own. Say where the work stopped, and wait. Put it again when the engineer asks, as with `/ask-again` or `/..`, or after a clarification they asked for. Put the next question the work reaches without waiting.
 
 ## Compression
 
@@ -46,6 +46,7 @@ Reserve plain prose for statements, reports, and explanations that are **not** a
 - 2026-10-29, revised: the `Explain` option and every statement about the free-text option are removed, at the engineer's direction; checked: 17 directives, 16 kept, 1 less precise, 0 lost; what is not kept was left out on purpose, in this revision or an earlier one, or is stated in the pre-loaded present-every-prompt-to-the-engineer-through-the-selection-ui rule
 - 2026-11-10, revised: the negative reads *Something else — say what to change*, at the engineer's direction; not re-checked
 - 2026-11-10, revised: an escaped selection is not put again unasked, at the engineer's direction; not re-checked
+- 2026-11-11, revised: `/ask-again` and `/..` are named as how the engineer asks; not re-checked
 
 ## History
 
@@ -63,6 +64,7 @@ Related:
 
 - the `design-by-efferent` package's the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming and the-actuation-gate-offers-candidate-actuations-as-options rules — the gates this is the mechanism for, and the fuller account of why a gate offers alternatives rather than a single proposal
 - its vocabulary — where **mean-bias** is defined
+- the ask-again-puts-the-last-escaped-question-again rule — how the engineer asks for an escaped question again
 
 ---
 
@@ -97,3 +99,4 @@ Changed by Scott Bellware on Thu Oct 29 2026 at 1:34:54 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 1:40:05 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:06:08 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 6:32:55 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:30:49 AM PT

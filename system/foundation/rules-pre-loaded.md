@@ -417,7 +417,7 @@ Source: system/foundation/source/present-every-prompt-to-the-engineer-through-th
 9. Where there is one genuine candidate, offer it and its negative, labelled *Something else — say what to change*. The negative is a real answer, not an invented option.
 10. This applies whenever you would ask the engineer to decide or answer. That includes a design decision, a "which approach", a confirmation to proceed or commit, and a clarification between interpretations.
 11. Keep plain prose for statements, reports, and explanations that do not ask the engineer to choose.
-12. Where the engineer escapes a selection, by refusing it, stopping it to clarify, or interrupting it, do not put it again on your own. Say where the work stopped, and wait. Put it again when the engineer asks, or after a clarification they asked for. Put the next question the work reaches without waiting.
+12. Where the engineer escapes a selection, by refusing it, stopping it to clarify, or interrupting it, do not put it again on your own. Say where the work stopped, and wait. Put it again when the engineer asks, as with `/ask-again` or `/..`, or after a clarification they asked for. Put the next question the work reaches without waiting.
 
 # The command domain table prints when the rules have loaded
 
