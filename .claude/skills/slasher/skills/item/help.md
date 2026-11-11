@@ -25,7 +25,6 @@ ITEMS
                                    List items in a state
                                    <state>: any item state, or "current"
                                    (Open and Active)
-  /item current, /current          List current items (/item list current)
 
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active

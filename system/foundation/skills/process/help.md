@@ -5,6 +5,8 @@ PROCESS
   /items [<n>]                     The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /items
+  /items current                   The current items alone (/item list current)
+  /current                         An alias of /items current
   /recent                          Brief summary of recent work, and what's
                                    next
   /.                               An alias of /recent
