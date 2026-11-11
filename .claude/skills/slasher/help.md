@@ -5,8 +5,10 @@ Usage: /<command> [<subcommand>] [<arguments>]
        except where a bare command has its own meaning, shown below.
        A bare /slasher offers topics to learn about. /command-table prints
        the command domain table, one line for each command domain, and
-       /commands and /? are aliases of /command-table. /slasher help
-       prints this help, and /help is an alias of /slasher help.
+       /commands and /; are aliases of /command-table. /shortcuts
+       prints the shortcuts table, and /sc is an alias of /shortcuts.
+       /slasher help prints this help, and /help is an alias of
+       /slasher help.
 
 ITEMS
   Items hold the project's thinking: ideas, plans, designs, observations, and
@@ -147,20 +149,23 @@ PROCESS
   /items [<n>]                     The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /items
-  /recent                          What was recently done, and what's next
+  /recent                          Brief summary of recent work, and what's
+                                   next
   /.                               An alias of /recent
 
   /next                            Proceed to the next step in the current
                                    multi-step process, or resume interrupted
                                    work
-  />                               An alias of /next
-  /next?                           The next step in the current multi-step
+  />>                              An alias of /next
+  /next?                           "What are we doing?" or "what's next?"
+                                   The next step in the current multi-step
                                    process, or the step that has been
-                                   interrupted
-  />?                              An alias of /next?
+                                   interrupted.
+  /?                               An alias of /next?
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
+  /! <request>                     An alias of /unattended
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
@@ -261,7 +266,7 @@ LANGUAGE
   /clarify                         Explain the previous answer again using
                                    what the agent knows of the engineer's
                                    understanding
-  /<                               An alias of /clarify
+  /??                              An alias of /clarify
 
   /expand                          Expand the previous answer
 

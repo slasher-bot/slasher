@@ -20,6 +20,14 @@
 
 **How to apply:** on `/estimate-confidence` or `/#`, estimate the figures for the rest of the work under way, print them with their sentences, add the warning line where it applies, list what drives the two figures, and stop.
 
+## History
+
+Until Tue Nov 10 2026, for part of that day, the command's alias was `/???`. The engineer changed it to `/#`.
+
+Until Tue Nov 10 2026, for part of that day, the command's alias was `/??`. The engineer replaced it with `/???`.
+
+Until Tue Nov 10 2026 the command's alias was `/#`. The engineer removed it, and `/??` is its alias.
+
 Related:
 
 - the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule — the figures, as they are first asked at the start of the work
@@ -28,3 +36,6 @@ Related:
 ---
 
 Authored by Scott Bellware on Sun Nov 8 2026 at 2:30:48 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:37:43 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:22 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT

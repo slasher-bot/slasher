@@ -1,76 +1,50 @@
 # The command domain table prints when the rules have loaded
 
-**When the session-start read concludes, print the startup table, the sentence below it, and the help line, word for word.** Print them in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
+**When the session-start read concludes, print the plugin's startup table, word for word.** It is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
 
-| Command | Description |
-|---|---|
-| `/slasher help, /help` | Print the help of every Slasher command |
-| `/?` | Print the list of Slasher commands |
-| `/., /recent` | Says what was recently done, and what's next. |
-| `/', /items` | Lists the current items, features, and experiments. |
+**After the startup table, run `/items 10`.** In the same response, below it, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
 
-The other commands are `/item`, `/items`, `/feature`, `/features`, `/experiment`, `/experiments`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/unattended`, `/estimate-confidence`, `/log`, `/decision`, `/observation`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/load`, and `/commands`.
-
-Type /help for all of Slasher's help, or /<command> help for one command's.
-
-**The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/?` row reads *Print the list of Slasher commands*, since the table `/?` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>`, `/<`, and `/#`. When a row is added to the full table or removed from it, change the sentence in the same commit.
-
-**The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
-
-| Command | Description |
-|---|---|
-| `/slasher help` | Print the help of every Slasher command |
-| `/?, /commands` | Print this table |
-| `/., /recent` | Says what was recently done, and what's next. |
-| `/', /items` | Lists the current items, then the current features and experiments. |
-| `/>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
-| `/>?, /next?` | The next step in the current multi-step process, or the step that has been interrupted |
-| `/<, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
-| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
-| `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
-| `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
-| `/features` | Lists the current features. |
-| `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
-| `/experiments` | Lists the current experiments. |
-| `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
-| `/unattended` | Carry out a request on the agent's own, after a plan is accepted |
-| `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |
-| `/decision` | Log a decision, tagged [decision] |
-| `/observation` | Record an observation |
-| `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
-| `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
-| `/test` | These commands run the project's tests and report on them. |
-| `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
-| `/release` | Presents the candidates for a package's next version, for the engineer to choose. |
-| `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
-| `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
-| `/load` | Loads the rules now, without waiting for the first prompt. |
-
-Type /help for all of Slasher's help, or /<command> help for one command's.
-
-**Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
-
-**Each row is one command domain, except the `/slasher help`, `/unattended`, `/items`, `/features`, `/experiments`, `/recent`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/decision`, `/observation`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own. `/unattended` stands below the `/process` row, and `/decision` below the `/log` row. The rows of the commands with shortcut aliases stand at the top, as the paragraph on shortcut aliases sets out. `/features` is a root command of the FEATURES domain, and `/experiments` of the EXPERIMENTS domain. `/features` has a row below the `/feature` row, and `/experiments` below the `/experiment` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *These commands*, as the help does. No description opens with *This command*. Print no other root command, alias, or subcommand in the table. `/observation` and `/commands` are the only aliases with rows of their own. `/help` and `/command-table` itself have none.
-
-**After the startup table, its sentence, and the help line, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
-
-**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>` of `/next`, `/>?` of `/next?`, `/<` of `/clarify`, `/#` of `/estimate-confidence`, and `/?` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/?, /commands`, `/., /recent`, `/', /items`, `/>, /next`, `/>?, /next?`, `/<, /clarify`, and `/#, /estimate-confidence`.
-
-**The PHASE domain has no row.** `/slasher help` still gives its help, and so does `/phase help`.
-
-**The first row names `/slasher help`, which prints the help of every Slasher command.** It names no command domain.
-
-**`/command-table` prints the full table.** It prints the full table and the help line below it, word for word, and nothing else: no startup table, no sentence, no `/items 10`, and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain, and has no row. `/commands` and `/?` are aliases of `/command-table`, and the help header names them. `/?` and `/commands` share the second row.
+**The tables are built, not written here.** The plugin build joins the command table from each active package's rows, and writes the startup table's sentence from it, so a package that is not active adds no row. `/command-table`, `/;`, and `/commands` print the joined command table, and `/shortcuts` and `/sc` the shortcuts table, each as it stands and with no rule loaded. How a command's rows are written is the a-command-domain-carries-its-rows-of-the-command-table rule's, which loads when a command is written.
 
 **The agent prints the table, not the harness.** The harness renders its display as plain text, and the table needs markdown. That is the reason the package set stanza is the agent's too.
 
-**Keep the table in line with the help.** When a domain's heading, its help command, or its description changes in the help text, change this table in the same commit.
+**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The current items and implementations show the engineer where the work stands before they make the first request.
 
-**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/?` prints the full table, and `/slasher help` gives the detail. The full table gives one line for each domain but PHASE, and lines for `/next`, `/next?`, `/clarify`, and their aliases, so it shows the whole set at a glance. The current items and implementations show the engineer where the work stands before they make the first request.
-
-**How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
+**How to apply:** at the end of the session-start read, print the plugin's `command-table-startup.md` once, run `/items 10` below it, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026 this rule wrote out the startup table, its sentence, the full command table, and the shortcuts table, with the conventions for every row. The engineer settled that each package carries its rows and the build joins them. The tables moved into the packages and the plugin build, and the conventions for a row moved into the a-command-domain-carries-its-rows-of-the-command-table rule.
+
+Until Tue Nov 10 2026 `/unattended` had no shortcut alias, and its row stood below the `/process` row. The engineer made `/!` its alias, and its row moved up among the shortcut rows.
+
+Until Tue Nov 10 2026, for part of that day, `/???` was the alias of `/estimate-confidence`. The engineer changed it to `/#`.
+
+Until Tue Nov 10 2026 the `/recent` description was *Says what was recently done, and what's next.* The engineer changed it to *Brief summary of recent work, and what's next.*
+
+Until Tue Nov 10 2026, for part of that day, the `/next?` row's description ended with *Equivalent to "what are we doing?" or "what's next?"*. The engineer moved the two questions to its start.
+
+Until Tue Nov 10 2026, for part of that day, `/shortcuts` and `/sc` had no row in the full table. The engineer added one just above the `/load` row.
+
+Until Tue Nov 10 2026 there was no shortcuts table, and no `/shortcuts` or `/sc` command.
+
+Until Tue Nov 10 2026, for part of that day, `/??` was the alias of `/estimate-confidence`, and `/>` the alias of `/clarify`. The engineer replaced them with `/???` and `/??`.
+
+Until Tue Nov 10 2026 the `/next?` row's description ended at *the step that has been interrupted*. The engineer added *Equivalent to "what are we doing?" or "what's next?"*.
+
+Until Tue Nov 10 2026 `/#` was an alias of `/estimate-confidence`, beside `/??`. The engineer removed it.
+
+Until Mon Nov 9 2026 `/<` was the alias of `/clarify`. The engineer replaced it with `/>`.
+
+Until Mon Nov 9 2026, for part of that day, `/>` was the alias of `/next` again. The engineer replaced it with `/>>`.
+
+Until Mon Nov 9 2026, for part of that day, `/???` was the alias of `/command-table`. The engineer changed it to `/;`.
+
+Until Mon Nov 9 2026, for part of that day, `/>>` was the alias of `/next`, and `/>` an alias of `/next?` beside `/?`. The engineer changed `/>>` to `/>`, so `/>` takes the next step and `/?` alone names it.
+
+Until Mon Nov 9 2026 `/?` was the alias of `/command-table`, and `/next?` and `/estimate-confidence` had one shortcut alias each, `/>` and `/#`. The engineer settled `/???` for the table, `/?` for what's next, and `/??` for the estimate, and kept `/>` and `/#` beside them.
+
+Until Mon Nov 9 2026 `/>` was the alias of `/next`, and `/>?` the alias of `/next?`. The engineer settled that `/>>` is the alias of `/next`, and `/>` the alias of `/next?`.
 
 On Mon Nov 9 2026 the `/', /items` row stood for a time below the `/item` row, until the engineer restored it below the `/., /recent` row.
 
@@ -257,3 +231,20 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 12:52:41 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 1:02:10 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 1:05:30 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 1:09:02 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 11:36:17 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 11:41:08 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 11:42:14 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 11:44:49 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 11:46:25 PM PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 11:47:11 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:37:27 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:41:04 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:22 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:45:39 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:48:20 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:51:43 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:52:54 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:53:54 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:21:33 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 9:48:54 PM PT

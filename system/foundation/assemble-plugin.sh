@@ -77,5 +77,69 @@ if [ -f "$plugin/help-header.md" ] && [ -f "$plugin/help-order" ]; then
       cat "$help"
     done
   } > "$plugin/help.md"
-  rm -f "$plugin/help-header.md" "$plugin/help-order"
 fi
+
+# The command table /command-table prints: the header's rows, then each skill's rows in the order
+# help-order lists, then the rows of any skill the list does not name, in name order, then the
+# help line. A skill carries its domain's rows in command-table-rows.md, so a package that is not
+# active adds none.
+if [ -f "$plugin/command-table-header.md" ] && [ -f "$plugin/help-order" ]; then
+  {
+    cat "$plugin/command-table-header.md"
+    listed=" "
+    while IFS= read -r name; do
+      [ -n "$name" ] || continue
+      listed="$listed$name "
+      [ -f "$plugin/skills/$name/command-table-rows.md" ] || continue
+      cat "$plugin/skills/$name/command-table-rows.md"
+    done < "$plugin/help-order"
+    for rows in "$plugin"/skills/*/command-table-rows.md; do
+      [ -f "$rows" ] || continue
+      name=${rows%/command-table-rows.md}
+      name=${name##*/}
+      case "$listed" in *" $name "*) continue ;; esac
+      cat "$rows"
+    done
+    echo
+    echo "Type /help for all of Slasher's help, or /<command> help for one command's."
+  } > "$plugin/command-table.md"
+fi
+
+# The startup table the session-start read prints: its own rows, then a sentence naming, in the
+# command table's order, every command whose name the startup rows leave out, then the help line.
+# A shortcut alias, whose name starts with no letter, is left out of the sentence too.
+if [ -f "$plugin/command-table-startup.md" ] && [ -f "$plugin/command-table.md" ]; then
+  startup=$(cat "$plugin/command-table-startup.md")
+  shown=$(printf '%s\n' "$startup" | awk -F'|' 'NR > 2 { print $2 }' | tr ',' '\n' | tr -d ' `')
+  others=$(awk -F'|' 'NR > 2 && /^\|/ { print $2 }' "$plugin/command-table.md" |
+    tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | tr -d '`' |
+    grep '^/[A-Za-z]' | while IFS= read -r name; do
+      printf '%s\n' "$shown" | grep -qxF -- "$(printf '%s' "$name" | tr -d ' ')" || printf '%s\n' "$name"
+    done)
+  sentence=$(printf '%s\n' "$others" | awk '
+    { names[++n] = "`" $0 "`" }
+    END {
+      if (n == 0) exit
+      line = "The other commands are "
+      for (i = 1; i <= n; i++) {
+        if (i > 1) line = line (n == 2 ? " " : ", ")
+        if (i == n && n > 1) line = line "and "
+        line = line names[i]
+      }
+      print line "."
+    }')
+  {
+    printf '%s\n' "$startup"
+    if [ -n "$sentence" ]; then
+      echo
+      printf '%s\n' "$sentence"
+    fi
+    echo
+    echo "Type /help for all of Slasher's help, or /<command> help for one command's."
+  } > "$plugin/command-table-startup.md"
+fi
+
+# The header, the list, and each skill's rows are what the help and the table are built from, not
+# part of the plugin, so they are removed once both are written.
+rm -f "$plugin/help-header.md" "$plugin/help-order" "$plugin/command-table-header.md"
+rm -f "$plugin"/skills/*/command-table-rows.md

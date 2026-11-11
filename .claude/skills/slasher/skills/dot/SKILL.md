@@ -1,6 +1,6 @@
 ---
 name: "."
-description: Say what was recently done, and what's next. An alias of /recent.
+description: Brief summary of recent work, and what's next. An alias of /recent.
 disable-model-invocation: true
 ---
 

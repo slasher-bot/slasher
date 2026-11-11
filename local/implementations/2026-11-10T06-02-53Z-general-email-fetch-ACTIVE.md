@@ -37,7 +37,8 @@
    - **Outcomes:** `/email fetch` fetches an account by its name, every account on a host, or every IMAP account with no argument, and a bare `/email` is the same. `/email list` lists the accounts by name, host, and login, without credentials. An unnamed account's mail goes under its host and login. The `imap` package's first rule keeps credentials out of the chat. The tests are named.
 **As the engineer later stated it:** "I'll proceed with the expanded command table work as another phase here". It goes after email commands, and carries the work item `2026-11-10T18-55-12Z-command-table-printing-is-optimized`.
 
-4. **Command table** — a package contributes its own rows to the command table, as `imap` contributes `/email`, and the table's printing is optimized, perhaps split into separate rules. Branch `feature/worktree/general-email-fetch.command-table`. No forecast.
+4. **Command table** — a package contributes its own rows to the command table, as `imap` contributes `/email`, and the table's printing is optimized, perhaps split into separate rules. Branch `feature/worktree/general-email-fetch.command-table`. No forecast. Started from `30d0f817`, on the feature's branch. Master was merged into it first. Completed, with no forecast, and merged into the feature's branch.
+   - **Outcomes:** each command domain carries its rows of the command table beside its skill, and the plugin build joins the active packages' rows in the help's order, so `imap` contributes `/email`. The build writes the startup table's sentence. The table commands print the built tables, loading no rule. The command table rule is split into a short session-start rule and an on-demand rule for writing a row. A test keeps each row in step with its help. The README's copy of the table is kept by hand.
 5. **Packaging and installation** — the `imap` package is packaged and installed. Branch `feature/worktree/general-email-fetch.packaging-and-installation`. No forecast.
 
 ## Confirmations
@@ -71,3 +72,5 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 7:04:20 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 7:04:57 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:18:29 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:29:59 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 8:30:36 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:41:12 PM PT

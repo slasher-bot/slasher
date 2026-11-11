@@ -470,6 +470,103 @@ The engineer asked for the coverage question to be clarified, then chose to add 
 
 - **Outcome:** no check is left unnamed. The automated suite passes, 39 of 39.
 
+## Phase: Command table — outcome 1, the build joins the command table
+
+The engineer settled the approach in the work item it carries: each package carries its rows, the build joins them in the help's order, and the startup table is generated. Master was merged into the phase's branch first, since the branch's tables predated the day's changes. The rows files were made from the current tables.
+
+### Cycle 63 — Actuation
+
+- **Hinge:** how the test runs the build.
+- **Options:** `assemble-plugin.sh`, run as it is in a temporary project. Something else.
+- **Decision / chat:** the build, run as it is.
+
+### Cycle 64 — Observation
+
+- **Hinge:** what the test reads from the built plugin.
+- **Options:** the whole `command-table.md`. A package's row is present.
+- **Decision / chat:** the whole table, the recommended option.
+
+### Cycle 65 — Controls
+
+- **Hinge:** what the project holds for the build to join.
+- **Options:** a header of one row, a help order listing some-cart then some-receipt, their rows written in the other order on disk, and a some-payment row in a package the package set deactivates. Something else.
+- **Decision / chat:** two domains out of order, one deactivated.
+
+### Cycle 66 — Implementation
+
+- **Hinge:** how the joining comes about.
+- **Options:** one batch, confidence 85%. Red, green, refactor, confidence 90%.
+- **Decision / chat:** one batch.
+- **Outcome:** `assemble-plugin.sh` writes `command-table.md` from the header, each skill's rows in the help's order, any unlisted skill's in name order, and the help line, and removes the rows files from the built plugin. The built table matches today's full table, with the `/email` row after `/language`. The automated suite passes, 40 of 40.
+
+## Phase: Command table — outcome 2, the build writes the startup table's sentence
+
+### Cycle 67 — Actuation
+
+- **Hinge:** how the test runs the build.
+- **Options:** the build, run as it is. Something else.
+- **Decision / chat:** the build, run as it is.
+
+### Cycle 68 — Observation
+
+- **Hinge:** what the test reads from `command-table-startup.md`.
+- **Options:** the whole startup text. The sentence alone.
+- **Decision / chat:** the engineer interrupted, asked for the question again, and selected the sentence alone. The question's preview had first named a deactivated package's command in the sentence, which was corrected when it was put again.
+
+### Cycle 69 — Controls
+
+- **Hinge:** what the project holds, so the sentence shows what it leaves out.
+- **Options:** startup rows naming `/slasher help` and `/help`, a header row `/;, /commands`, and two domains. Something else.
+- **Decision / chat:** a startup row, a shortcut, and two domains. The sentence names `/commands`, `/some-cart`, and `/some-receipt`.
+
+### Cycle 70 — Implementation
+
+- **Hinge:** how the build writes the sentence.
+- **Options:** one batch, confidence 80%. Red, green, refactor, confidence 85%.
+- **Decision / chat:** one batch.
+- **Outcome:** the build names every command in the joined table's first column, in order, except those the startup rows name and the shortcut aliases, whose names start with no letter. It writes the startup rows, the sentence, and the help line to `command-table-startup.md`. `/sc` starts with a letter, so the sentence now names it, where the written sentence did not. The automated suite passes, 41 of 41.
+
+## Phase: Command table — outcome 3, the rows are kept in step with the help
+
+The command table rule was split before this outcome: the session-start rule prints the plugin's startup table, and an on-demand rule holds the conventions for a row. The table commands print the plugin's built tables.
+
+### Cycle 71 — Actuation
+
+- **Hinge:** what the consistency test reads.
+- **Options:** the packages' source files. The built plugin.
+- **Decision / chat:** the packages' source files, the recommended option.
+
+### Cycle 72 — Observation
+
+- **Hinge:** what the test checks. A survey found nine domains matching, three differing only as the row rule requires, with *This command* dropped, and `/test` drifted.
+- **Options:** rows exist and match, with *This command* dropped. Rows exist.
+- **Decision / chat:** rows exist and match, the recommended option.
+
+### Cycle 73 — Controls
+
+- **Hinge:** how the test knows `/phase` takes no row.
+- **Options:** list phase in the test. An empty rows file for phase.
+- **Decision / chat:** the engineer stopped the question to clarify it, then selected listing phase in the test, the recommended option.
+
+### Cycle 74 — Implementation
+
+- **Hinge:** which text `/test`'s help and row both carry.
+- **Options:** the help's, confidence 90%. The row's, confidence 85%.
+- **Decision / chat:** the help's. The README's copy of the table took it too.
+- **Outcome:** `test/automated/command-table-rows.sh` passes. The automated suite passes, 42 of 42.
+
+## The naming of the command table phase's tests
+
+**Unattended.** The engineer asked for the three tests to be named with `/unattended name the three tests`, and accepted the agent's plan. The agent chose each name for what its check establishes, as the engineer's earlier names do.
+
+| Test | Names | Reasoning |
+|---|---|---|
+| `assemble-plugin/command-table.sh` | Joins the active packages' rows in the help's order | One comparison proves the joining, the order, and the deactivated package's row left out |
+| `assemble-plugin/command-table-startup.sh` | Names every command the startup rows leave out | The sentence's whole job, the shortcut aliases left out with them |
+| `command-table-rows.sh` | Every command domain has rows. Each row's description is its help's | The two things the row rule asks to be kept in step by hand |
+
+- **Outcome:** no check is left unnamed. The automated suite passes, 42 of 42.
+
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:38:06 PM PT
@@ -489,3 +586,7 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 7:48:13 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 7:56:48 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:12:40 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:22:02 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 9:18:28 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 9:25:57 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:32:11 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:39:18 PM PT
