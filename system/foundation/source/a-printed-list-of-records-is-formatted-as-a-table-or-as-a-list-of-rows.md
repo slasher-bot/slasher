@@ -76,6 +76,8 @@ A list of items takes the ordinal and no SHA columns:
 
 **Each command takes an optional number, *n*, and then lists only the *n* most recently created current records of its kind.** A record's recency is its handle. The records listed keep the order of the full list, oldest first, and their ordinals count from 1. `/features 3` lists the three most recently created current features.
 
+**Each command takes `current` too, as `/items` does, and it changes nothing.** `/features current` lists what `/features` lists, and `/features current 3` what `/features 3` lists.
+
 **Where none of its kind is current, the list is one line:** *No current feature.* for `/features`, and *No current experiment.* for `/experiments`.
 
 **Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Open, Active, and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
@@ -160,9 +162,10 @@ A list of items takes the ordinal and no SHA columns:
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
 3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
 4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
-5. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
-6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
-7. A number given to the command does not change these counts.
+5. Each command takes `current` too, as `/items` does. `/features current` does what `/features` does, and `/features current 3` what `/features 3` does.
+6. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
+7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
+8. A number given to the command does not change these counts.
 
 ## Keep every column short
 
@@ -196,8 +199,11 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-09, revised: a current implementation is Open, Active, or Suspended; not re-checked
 - 2026-11-09, checked: 61 directives, 60 kept, 1 less precise, 0 lost. Left less precise: the kind column's example for [work], which the general instruction produces
 - 2026-11-10, revised: the command is `/current`, in place of `/items`, a term swap the engineer settled; not re-checked
+- 2026-11-11, revised: `/features` and `/experiments` take `current`, at the engineer's direction; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 `/features` and `/experiments` took no `current`, which `/items` took.
 
 Until Tue Nov 10 2026 the command that lists the current items and implementations was `/items`. The engineer gave that list to `/current`, and made a bare `/items` list the current items alone.
 
@@ -276,3 +282,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 10:53:56 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:13:39 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:50:34 AM PT

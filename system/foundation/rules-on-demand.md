@@ -281,9 +281,10 @@ A list of items takes the ordinal and no SHA columns:
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
 3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
 4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
-5. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
-6. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
-7. A number given to the command does not change these counts.
+5. Each command takes `current` too, as `/items` does. `/features current` does what `/features` does, and `/features current 3` what `/features 3` does.
+6. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
+7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
+8. A number given to the command does not change these counts.
 
 ## Keep every column short
 
