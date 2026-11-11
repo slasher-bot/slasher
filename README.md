@@ -54,10 +54,6 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/', /current` | Lists the current items, then the current features and experiments. |
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/?, /next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
-| `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
-| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
-| `/!, /unattended` | Carry out a request on the agent's own, after a plan is accepted |
-| `/.., /ask-again` | Repeat the agent's previous multiple-choice question |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/features` | Lists the current features. |
@@ -75,6 +71,10 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
+| `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
+| `/.., /ask-again` | Repeat the agent's previous multiple-choice question |
+| `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
+| `/!, /unattended` | Carry out a request on the agent's own, after a plan is accepted |
 | `/sc, /shortcuts` | Print the shortcuts table |
 | `/load` | Loads the rules now, without waiting for the first prompt. |
 
