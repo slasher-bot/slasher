@@ -58,7 +58,7 @@ folders=$(ls "$project/slasher/local/email/work-mail")
 files=$(ls "$project/slasher/local/email/work-mail/some-label" 2>/dev/null || true)
 
 [ "$folders" = "fetch.toml
-some-label" ] || fail "" "folders:" "$folders"
-[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "" "files:" "$files"
+some-label" ] || fail "Fetches only the folders the fetch file lists" "folders:" "$folders"
+[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Writes the label's message to its local folder" "files:" "$files"
 
 echo "0 failed, 0 aborted"

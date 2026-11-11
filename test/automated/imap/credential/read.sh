@@ -33,6 +33,6 @@ credential=$(IMAP_KEYCHAIN="$keychain" system/imap/credential.sh read some-host)
 
 # Observation ----------------------------------------------------------------
 
-[ "$credential" = "$control_credential" ] || fail "" "credential:" "$credential"
+[ "$credential" = "$control_credential" ] || fail "Is the credential stored for the host" "credential:" "$credential"
 
 echo "0 failed, 0 aborted"

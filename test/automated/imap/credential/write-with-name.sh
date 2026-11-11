@@ -35,6 +35,6 @@ printf '%s' "$control_credential" | system/imap/credential.sh write some-host so
 
 credential=$(system/imap/credential.sh read --name some-name)
 
-[ "$credential" = "$control_credential" ] || fail "" "credential:" "$credential"
+[ "$credential" = "$control_credential" ] || fail "Stores the credential under the name" "credential:" "$credential"
 
 echo "0 failed, 0 aborted"

@@ -38,6 +38,6 @@ credential=$(system/imap/credential.sh read --name slasher-test)
 
 # Observation ----------------------------------------------------------------
 
-[ "$credential" = "$control_credential" ] || fail "" "credential:" "$credential"
+[ "$credential" = "$control_credential" ] || fail "Stores and reads the credential in the login keychain" "credential:" "$credential"
 
 echo "0 failed, 0 aborted"

@@ -34,6 +34,6 @@ credential=$(system/imap/credential.sh read --name some-name)
 
 # Observation ----------------------------------------------------------------
 
-[ "$credential" = "$control_credential" ] || fail "" "credential:" "$credential"
+[ "$credential" = "$control_credential" ] || fail "Is the credential stored under the name" "credential:" "$credential"
 
 echo "0 failed, 0 aborted"
