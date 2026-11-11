@@ -24,7 +24,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, the alias first, as `/., /recent`. Their order is `/;, /commands`, `/., /recent`, `/', /current`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, the alias first, as `/., /recent`. Their order is `/;, /commands`, `/., /recent`, `/', /current`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, `/!, /unattended`, and `/.., /ask-again`.
 
 **The help's order is the table's order.** `plugin/help-order` lists the domains in the order the help and the table both follow. A domain it does not list follows, in name order. Add a new domain to it where its row belongs.
 
@@ -740,6 +740,28 @@ Lines 1–6 below are the opening statements, which come before any section head
 12. The entry notes that it was recorded as an observation, and why it is not yet a rule.
 13. Never change an observation's state.
 14. Where the thinking moves, write a later observation and leave the earlier one as written.
+
+# Ask-again puts the last escaped question again
+
+Source: system/foundation/source/ask-again-puts-the-last-escaped-question-again.md
+
+Trigger: When the engineer types `/ask-again` or `/..`, or asks for the last question again
+
+**Trigger:** When the engineer types `/ask-again` or `/..`, or asks for the last question again
+
+**`/ask-again` puts the last question the engineer escaped again, through the selection interface.** The engineer escapes a question by refusing it, by stopping it to clarify, or by interrupting it. The agent does not put an escaped question again on its own, so `/ask-again` is how the engineer asks for it. `/..` is its shortcut alias.
+
+**As the engineer stated it:** Ask Again shourtcut
+
+**The question is put again as it was asked.** Its text, its options, and their descriptions are the same. A question that carried the decision marker carries it again, so its answer is logged as a process question.
+
+**Where the conversation since has changed a candidate, the question carries the change.** A clarification the engineer asked for can show that an option was wrong, or that one was missing. Put the question with the options as they now stand, and say in one sentence what changed.
+
+**Where no question was escaped, say so, and put nothing.** Do not put again a question the engineer answered. Do not reach back past the last escaped question to an earlier one.
+
+**Why:** an escaped question is not put again unasked, so that the engineer has time to digest it. The engineer then needs a short way to say *I am ready, ask me again*. A fixed command keeps that request from being read as something else.
+
+**How to apply:** on `/ask-again` or `/..`, find the last question the engineer escaped. Put it again through the selection interface, as it was asked, with any change the conversation since has made to its candidates. Where none was escaped, say so.
 
 # Brainstorming records points as they are said, and organizes them at the end
 

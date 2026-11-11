@@ -2,6 +2,7 @@
 |---|---|---|
 | `/'` | `/current` | Lists the current items and implementations |
 | `/.` | `/recent` | Brief summary of recent work, and what's next |
+| `/..` | `/ask-again` | Puts the last question the engineer escaped again |
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
 | `/??` | `/clarify` | Explains the previous answer again |

@@ -9,6 +9,7 @@
 | `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/#, /estimate-confidence` | The agent's confidence of proceeding unattended from where the work stands |
 | `/!, /unattended` | Carry out a request on the agent's own, after a plan is accepted |
+| `/.., /ask-again` | Put the last question the engineer escaped again |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, observations, and work to be done, each with a state. |
 | `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
 | `/features` | Lists the current features. |

@@ -8,7 +8,7 @@
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, the alias first, as `/., /recent`. Their order is `/;, /commands`, `/., /recent`, `/', /current`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, the alias first, as `/., /recent`. Their order is `/;, /commands`, `/., /recent`, `/', /current`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, `/!, /unattended`, and `/.., /ask-again`.
 
 **The help's order is the table's order.** `plugin/help-order` lists the domains in the order the help and the table both follow. A domain it does not list follows, in name order. Add a new domain to it where its row belongs.
 
@@ -33,3 +33,4 @@ Authored by Scott Bellware on Tue Nov 10 2026 at 9:49:16 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:45:30 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:04:38 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:06:56 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:30:49 AM PT
