@@ -70,7 +70,7 @@ Related:
 
 - the `design-by-efferent` package's the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming and the-actuation-gate-offers-candidate-actuations-as-options rules — the gates this is the mechanism for, and the fuller account of why a gate offers alternatives rather than a single proposal
 - its vocabulary — where **mean-bias** is defined
-- the ask-again-puts-the-last-escaped-question-again rule — how the engineer asks for an escaped question again
+- the ask-again-puts-the-last-question-again rule — how the engineer asks for a question again
 
 ---
 
@@ -108,3 +108,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 6:32:55 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:30:49 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:33:27 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:37:48 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:48:44 AM PT
