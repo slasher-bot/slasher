@@ -190,6 +190,141 @@ The engineer asked how to test the credential script against their own macOS key
 - **Hinge:** none, beyond confirming the test passes against the code as it is. The test is interactive, so the engineer ran it.
 - **Outcome:** `test/interactive/imap/credential/login-keychain.sh`. The engineer's run ended `0 failed, 0 aborted`, and the item was removed.
 
+## Phase: Mailbox fetch — outcome 1, the inbox is fetched into the project
+
+The engineer settled the phase's design before the first hinge: Python on its standard library, RCC's message layout with the ISO-8601-UTC prefix, a repeat fetch skipping the UIDs in the file names, and `slasher/local/email/` or `~/.local/share/slasher/email/<project>/` as the destination.
+
+### Cycle 27 — Actuation
+
+- **Hinge:** how a use site fetches a mailbox into the project.
+- **Options:** the credential's name and a folder. The credential's name, with INBOX by default. The host and a folder.
+- **Decision / chat:** the engineer stopped the question and stated: "It should be by name, but should fetch INBOX and sent messages by default." Put again as one candidate, `system/imap/fetch.py work-mail`, it was accepted. The sent folder is found by the IMAP marker for sent mail, and written to `Sent/`.
+
+### Cycle 28 — Observation
+
+- **Hinge:** what the test reads after fetching the inbox.
+- **Options:** the file's name. The file's contents. Both.
+- **Decision / chat:** both: the one file is named `2026-01-01T00-00-00Z-1-some-subject.txt`, and holds the headers and body.
+
+### Cycle 29 — Controls
+
+- **Hinge:** what IMAP server the automated test fetches from.
+- **Options:** a local test server, reached through `IMAP_PORT` and `IMAP_TLS=no`, which use sites leave unset. A real mailbox, in an interactive test.
+- **Decision / chat:** a local test server: `test/automated/imap/controls/server.py`, holding one control message, `message.eml`, and accepting one login.
+
+### Cycle 30 — Implementation
+
+- **Hinge:** how `system/imap/fetch.py` comes about.
+- **Options:** one batch, confidence 75%. Red, green, refactor, confidence 85%.
+- **Decision / chat:** one batch.
+- **Outcome:** `fetch.py <name>` reads the item's host and login from the Keychain by name and its credential through `credential.sh`, then fetches the inbox and any folder the server marks as sent mail, skipping UIDs already in the folder. The test's cleanup first ended the test with status 143, because `set -e` stopped it at the server's `wait`. The cleanup was corrected. The automated suite passes, 31 of 31.
+
+## Phase: Mailbox fetch — outcome 2, a fetch file lists the folders and labels
+
+The engineer asked the agent to choose the next outcome. The agent chose the fetch file, since the sent folder and the repeat fetch are already in the script, so their tests would be coverage, which is the engineer's decision.
+
+### Cycle 31 — Actuation
+
+- **Hinge:** how the fetch is run with a fetch file.
+- **Options:** unchanged, `slasher/system/imap/fetch.py work-mail`, with the fetch file found beside the mailbox's folders. Something else.
+- **Decision / chat:** unchanged.
+
+### Cycle 32 — Observation
+
+- **Hinge:** what the test checks after fetching with a fetch file that lists one label.
+- **Options:** only the listed folder appeared. The label's message is in it. Both.
+- **Decision / chat:** the engineer stopped the question twice and asked for it to be clarified twice. Put a third time in plain terms, both was selected, the recommended option.
+
+### Cycle 33 — Controls
+
+- **Hinge:** how the label and the fetch file are set up.
+- **Options:** the test server gains `--folder`, serving `Some Label` beside an empty INBOX, and the test writes a fetch file listing `Some Label` into `some-label`. Something else.
+- **Decision / chat:** the label folder and the fetch file.
+
+### Cycle 34 — Implementation
+
+- **Hinge:** how reading the fetch file comes about.
+- **Options:** one batch, confidence 85%. Red, green, refactor, confidence 90%.
+- **Decision / chat:** one batch.
+- **Outcome:** where the mailbox's folder holds a `fetch.toml`, its folders replace the inbox and sent defaults. A source of `inbox` or `sent` is the server's own, and any other is fetched as a folder of that name. Every folder is selected by its quoted name. The automated suite passes, 32 of 32.
+
+## Phase: Mailbox fetch — outcome 3, a private mailbox goes to the private store
+
+### Cycle 35 — Actuation
+
+- **Hinge:** how the fetch is run for a private mailbox.
+- **Options:** unchanged, with the fetch file looked for in the project and then in the private store. Something else.
+- **Decision / chat:** unchanged.
+
+### Cycle 36 — Observation
+
+- **Hinge:** what the test checks after fetching a private mailbox.
+- **Options:** the message is in the private store and the project has no email folder. The message is in the private store.
+- **Decision / chat:** in the private store, not the project, the recommended option.
+
+### Cycle 37 — Controls
+
+- **Hinge:** how the test gives the fetch a private store without writing to the engineer's own.
+- **Options:** `XDG_DATA_HOME`. `HOME`.
+- **Decision / chat:** the engineer stopped the question and asked how other tests did it. The installer's tests run the installer with `HOME` set to a temporary folder, and nothing in the project uses `XDG_DATA_HOME`. Put again, `HOME`, as the other tests do, was selected, the recommended option. Only the fetch is run with it.
+
+### Cycle 38 — Implementation
+
+- **Hinge:** how the private store comes about.
+- **Options:** one batch, confidence 85%. Red, green, refactor, confidence 90%.
+- **Decision / chat:** one batch.
+- **Outcome:** the fetch looks for the fetch file in the project, then under `$HOME/.local/share/slasher/email/<project>/<name>/`, the project being the project folder's name. One that says `store = "private"` has the messages written there. The automated suite passes, 33 of 33.
+
+## Phase: Mailbox fetch — coverage of the sent folder and the repeat fetch
+
+The engineer chose to cover both behaviors already in the script before ending the phase. As coverage, each implementation hinge is degenerate: the test is run against the code as it is.
+
+### Cycle 39 — Sent folder: actuation
+
+- **Hinge:** how the sent-folder test runs the fetch.
+- **Options:** unchanged, with no fetch file. Something else.
+- **Decision / chat:** unchanged.
+
+### Cycle 40 — Sent folder: controls
+
+- **Hinge:** how the test server presents a sent folder.
+- **Options:** a folder marked as sent mail and named `[Gmail]/Sent Mail`, which shows the marker is used rather than the name. A marked folder named `Sent`.
+- **Decision / chat:** the engineer stopped the question and asked it again, then asked for it to be clarified. After the clarification, which recommended the Gmail name, the engineer selected `Sent`. The test server gained `--sent`.
+
+### Cycle 41 — Sent folder: observation
+
+- **Hinge:** what the test checks.
+- **Options:** the message in `Sent/`. Something else.
+- **Decision / chat:** the message in `Sent/`.
+
+### Cycle 42 — Sent folder: implementation
+
+- **Hinge:** degenerate. The test passed against the code as it is.
+- **Outcome:** `test/automated/imap/fetch-sent.sh`. The automated suite passes, 34 of 34.
+
+### Cycle 43 — Repeat fetch: actuation
+
+- **Hinge:** how the test recreates the earlier fetch.
+- **Options:** a placeholder file in the folder, then one fetch. Two fetches.
+- **Decision / chat:** the engineer stopped the question three times and asked for it to be clarified twice. Then the engineer directed that a selection the engineer escapes is not put again on the agent's own, and the selection rule was amended. Asked again on request, the placeholder file was selected, the recommended option.
+
+### Cycle 44 — Repeat fetch: observation
+
+- **Hinge:** what the test checks after the one fetch.
+- **Options:** the folder still holds the one file, and the file still holds the placeholder. The file still holds the placeholder.
+- **Decision / chat:** one file, unchanged, the recommended option.
+
+### Cycle 45 — Repeat fetch: controls
+
+- **Hinge:** the placeholder file.
+- **Options:** `2026-01-01T00-00-00Z-1-some-subject.txt` holding `some placeholder`, written before the fetch. Something else.
+- **Decision / chat:** the placeholder file.
+
+### Cycle 46 — Repeat fetch: implementation
+
+- **Hinge:** degenerate. The test passed against the code as it is.
+- **Outcome:** `test/automated/imap/fetch-again.sh`. The automated suite passes, 35 of 35.
+
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:38:06 PM PT
@@ -199,3 +334,7 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 11:23:55 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:00:42 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:02:44 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:12:40 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:58:55 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 12:26:55 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 12:56:48 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 6:35:14 PM PT

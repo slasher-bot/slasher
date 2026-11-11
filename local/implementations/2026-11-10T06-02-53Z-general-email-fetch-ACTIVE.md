@@ -28,7 +28,8 @@
 
 1. **Keychain credentials** — the macOS Keychain implementation: a credential is stored in and read from the Keychain. Branch `feature/worktree/general-email-fetch.keychain-credentials`. No forecast. Started from `99ea1898`, on the feature's branch. Completed, with no forecast, and merged into the feature's branch.
    - **Outcomes:** a credential is read by its host or by its name, written from standard input with an optional name, and a read of a missing credential fails. The tests are named at the feature's close.
-2. **Mailbox fetch** — an IMAP mailbox is fetched into the project, with its credential read from the Keychain. Branch `feature/worktree/general-email-fetch.mailbox-fetch`. No forecast.
+2. **Mailbox fetch** — an IMAP mailbox is fetched into the project, with its credential read from the Keychain. Branch `feature/worktree/general-email-fetch.mailbox-fetch`. No forecast. Started from `6fc6dc0a`, on the feature's branch. Completed, with no forecast, and merged into the feature's branch.
+   - **Outcomes:** a mailbox is fetched by its credential's name, the inbox and the sent folder by default, into the project or the private store. A fetch file lists folders and Gmail labels. A repeat fetch skips messages already fetched. The `imap` package has its README and LICENSE, and is not in the default package set. The tests are named at the feature's close.
 
 ## Confirmations
 
@@ -54,3 +55,5 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 10:25:56 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 10:28:57 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:03:13 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:16:52 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:33:57 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 6:54:04 PM PT
