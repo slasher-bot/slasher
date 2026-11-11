@@ -12,5 +12,9 @@ release
 package
 language
 email
+clarify
+ask-again
+estimate-confidence
+unattended
 shortcuts
 load
