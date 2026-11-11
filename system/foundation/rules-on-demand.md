@@ -24,9 +24,9 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias. Their order is `/commands, /;`, `/recent, /.`, `/current, /'`, `/next, />>`, and `/next?, /?`.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias. Their order is `/commands, /;`, `/recent, /.`, `/current, /'`, `/proceed, />>, /next`, and `/next?, /?`.
 
-**A row with a shortcut alias names the command first and the alias after it, as `/recent, /.`.** This holds in the full table and in the startup table alike.
+**A row with a shortcut alias names the command first and the alias after it, as `/recent, /.`.** A command with two aliases names both, the shortcut first, as `/proceed, />>, /next`. This holds in the full table and in the startup table alike.
 
 **The help's order is the table's order.** `plugin/help-order` lists the domains in the order the help and the table both follow. A domain it does not list follows, in name order. Add a new domain to it where its row belongs.
 
@@ -890,14 +890,14 @@ Trigger: When the engineer types `/estimate-confidence` or `/#`, or asks for the
 
 Source: system/foundation/source/next-takes-the-next-step-of-the-work-under-way.md
 
-Trigger: When the engineer types `/next` or `/next?`, or asks what is next
+Trigger: When the engineer types `/proceed`, `/next`, or `/next?`, or asks what is next
 
-1. `/next?` asks what the next step is, as the engineer asking *What's next?* would. `/next` takes it, as the engineer saying *proceed* would.
-2. The work under way is any work with steps still to take: a plan's tasks, an implementation's phases, an outcome's design hinges, a list of steps the agent gave, a procedure part done. Interrupted work is still under way, and `/next` resumes it where it stopped. The next step is the first not yet taken.
+1. `/next?` asks what the next step is, as the engineer asking *What's next?* would. `/proceed` takes it, as the engineer saying *proceed* would. `/next` and `/>>` are aliases of `/proceed`.
+2. The work under way is any work with steps still to take: a plan's tasks, an implementation's phases, an outcome's design hinges, a list of steps the agent gave, a procedure part done. Interrupted work is still under way, and `/proceed` resumes it where it stopped. The next step is the first not yet taken.
 3. On `/next?`, name the next step, or the step where interrupted work stopped, and what it would do, in a sentence or two, and do not take it.
-4. On `/next`, take the next step and nothing beyond it, then stop.
+4. On `/proceed`, take the next step and nothing beyond it, then stop.
 5. Follow the work the conversation is on. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
-6. `/next` does not stand in for a decision a rule leaves to the engineer, such as affirming an experiment, committing on `master`, or deleting a branch. It brings the step to that decision, and asks it as the step's rule says.
+6. `/proceed` does not stand in for a decision a rule leaves to the engineer, such as affirming an experiment, committing on `master`, or deleting a branch. It brings the step to that decision, and asks it as the step's rule says.
 
 # Package refresh and install run foundation's scripts
 
