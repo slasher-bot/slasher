@@ -36,9 +36,11 @@
 - **2026-11-11** — Forecast: no forecast, selected by the engineer.
 - **2026-11-11** — Plan: accepted by the engineer. `/brief` sits in the `language` package beside `/expand`, and a bare `/brief` gives the previous answer again in brief.
 - **2026-11-11** — Merge to master: selected by the engineer.
+- **2026-11-11** — Branch deletion and worktree removal: selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 3:07:58 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 3:09:27 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 3:13:48 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 3:15:52 PM PT
