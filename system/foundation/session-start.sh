@@ -259,7 +259,16 @@ if [ -n "$declaration" ]; then
 
   declared=$(attribute 'Package set')
   active=$(attribute 'Packages')
-  inactive=$(attribute 'Inactive')
+
+  # The Packages line is authoritative, so what is inactive is every installed package it does
+  # not name. The Inactive line records what was installed and not active when the set was
+  # declared, and a package installed since is on neither line, so the line is not read here.
+  inactive=$(
+    printf '%s\n' "$packages" | while read -r package; do
+      printf '%s\n' "$active" | tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' |
+        grep -qx "$package" || printf '%s\n' "$package"
+    done | tr '\n' ',' | sed 's|,$||; s|,|, |g'
+  )
 
   # Both of the first two are required. A record naming a set but resolving to nothing would
   # deactivate everything, which no engineer means by declaring one, so it is treated as no

@@ -108,14 +108,25 @@ if [ "$1" = "--package" ]; then
   exit 0
 fi
 
-# The packages the project's latest package set deactivates, one name per line. A project with no
-# declaration has none.
+# The packages the project's latest package set makes active, one name per line. The Packages line
+# is authoritative: every installed package it does not name is deactivated, including one
+# installed after the set was declared, which the Inactive line cannot name. A declaration without
+# both a Package set line and a Packages line is not a declaration, and a project with none has
+# every package active.
 declaration=$(ls "$local"/*-package-set.md 2>/dev/null | sort | tail -1)
-deactivated=
+declared_active=
 if [ -n "$declaration" ]; then
-  deactivated=$(sed -n 's|^[[:space:]]*-\{0,1\}[[:space:]]*\*\*Inactive:\*\*[[:space:]]*\(.*\)$|\1|p' "$declaration" |
-    head -1 | tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^none$' || true)
+  attribute() {
+    sed -n "s|^[[:space:]]*-\{0,1\}[[:space:]]*\*\*$1:\*\*[[:space:]]*\(.*\)$|\1|p" "$declaration" | head -1
+  }
+  if [ -n "$(attribute 'Package set')" ]; then
+    declared_active=$(attribute 'Packages' | tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$' || true)
+  fi
 fi
+
+is_deactivated() {
+  [ -n "$declared_active" ] && ! printf '%s\n' "$declared_active" | grep -qx "$1"
+}
 
 # A deactivated package's rules are not printed. Its name is, with the command that loads it.
 print_deactivated() {
@@ -127,7 +138,7 @@ print_deactivated() {
 }
 
 for package in "$system/foundation" $(ls -d "$system"/*/ | sed 's|/$||' | grep -v "^$system/foundation$" | sort); do
-  if printf '%s\n' "$deactivated" | grep -qx "${package##*/}"; then
+  if is_deactivated "${package##*/}"; then
     print_deactivated "$package"
     continue
   fi

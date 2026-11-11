@@ -212,6 +212,20 @@ set_output=$(cd "$set_project" && system/foundation/load-rules.sh)
 
 [ "$set_output" = "$(control_deactivated_output)" ] || fail "Prints a deactivated package's name and the command that loads it, in place of its rules" "output:" "$set_output"
 
+# Deactivates a package installed after the declaration, which its Packages line does not name -------
+
+mkdir -p "$set_project/system/later"
+echo some-later-rules > "$set_project/system/later/rules-pre-loaded.md"
+
+later_output=$(cd "$set_project" && system/foundation/load-rules.sh)
+
+case "$later_output" in
+  *"===== DEACTIVATED: system/later ====="*) ;;
+  *) fail "Deactivates a package installed after the declaration, which its Packages line does not name" "output:" "$later_output" ;;
+esac
+
+rm -rf "$set_project/system/later"
+
 # Prints a named package's rules, on-demand triggers, and vocabulary --------------------------------
 
 cat > "$set_project/system/other/rules-on-demand.md" <<'RULES'
