@@ -44,4 +44,12 @@ manifest=$(cat "$repository/plugins/foundation/.claude-plugin/plugin.json")
 
 [ "$manifest" = "$(control_manifest_text)" ] || fail "" "found:" "$manifest"
 
+# Observation ----------------------------------------------------------------
+
+skills_difference=$(diff -r \
+  "$repository/system/foundation/skills" \
+  "$repository/plugins/foundation/skills" || true)
+
+[ -z "$skills_difference" ] || fail "" "found:" "$skills_difference"
+
 echo "0 failed, 0 aborted"
