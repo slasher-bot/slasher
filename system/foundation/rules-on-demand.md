@@ -30,7 +30,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A shortcut alias changes three files together.** Change its row in `command-table-header.md`, its row in `plugin/shortcuts.md`, and `plugin/command-table-startup.md` where it names the alias, in the same commit.
 
-**The startup table's four rows stand in `plugin/command-table-startup.md`.** The `/slasher help` row also names `/help`. The `/;` row reads *Print the list of Slasher commands*. The `/.` row takes `/recent`'s description from the help. The `/'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand.
+**The startup table's four rows stand in `plugin/command-table-startup.md`.** The `/slasher help` row also names `/help`. The `/;` row also names `/commands`, and reads *Print the list of Slasher commands*. The `/.` row takes `/recent`'s description from the help. The `/'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand.
 
 **Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* The plugin build adds it.
 
