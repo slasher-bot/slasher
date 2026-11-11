@@ -3,9 +3,9 @@ PROCESS
   was done and what's next.
 
   /items                           The current items (/item list current)
-  /'                               An alias of /items
   /current [<n>]                   The current items, or the n most recent,
                                    then the current features and experiments
+  /' [<n>]                         An alias of /current
   /recent                          Brief summary of recent work, and what's
                                    next
   /.                               An alias of /recent
