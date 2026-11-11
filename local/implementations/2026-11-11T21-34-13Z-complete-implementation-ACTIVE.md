@@ -24,6 +24,10 @@
 
 ## What happened
 
+- The implementation-hinge rule and the hinge-cycle rule name the first candidate a complete implementation. The first label reads *One batch (Agent generates complete implementation - Confidence: 85%)*.
+- The engineer's quoted words, the History sections, the logs, and the loop records keep "full implementation".
+- The automated suite passed: 46 tests.
+
 ## Confirmations
 
 - **2026-11-11** — Request: "Do #4 unattended", typed by the engineer. The plan was accepted by the engineer.
@@ -34,3 +38,4 @@
 ---
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 1:34:13 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:34:53 PM PT
