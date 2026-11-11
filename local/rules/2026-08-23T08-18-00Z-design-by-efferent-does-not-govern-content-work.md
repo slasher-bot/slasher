@@ -4,6 +4,12 @@
 
 **What content work is:** work whose product is prose or pages rather than code. A rule file, a record, a README, and the material of a site are each content. Writing the scripts and rules that *govern* content is not — that is ordinary work on this system, and DBE governs it as it always did.
 
+## Code in this project is held to it less strictly
+
+**Design By Efferent applies less strictly to the code of Slasher itself than to a consuming project's code.** The hinges still run for this project's scripts, but where a hinge's ceremony would cost more than the decision is worth here, the engineer may set it aside, and the agent does not hold the work to it. A consuming project is held to the method in full.
+
+**As the engineer stated it:** Design by efferent doesn't apply as strictly to the work on Slasher itself. It applies more to consuming projects.
+
 ## Why a rule and not a mechanism
 
 **A project can switch a package off by declaring a set that leaves it out**, per the a-project-declares-which-installed-packages-are-active rule. This repository keeps design-by-efferent active, since the core keeps the method, so this rule is what holds it off content work here.
@@ -48,6 +54,10 @@ Where a piece of work is both — a rule that governs content, a script that bui
 5. Do not put the five hinges to the engineer, do not open a loop record, settle no actuation before the work, and do not ask attended or unattended.
 6. Where a piece of work is both, such as a rule that governs content or a script that builds a site, Design By Efferent governs the code half and this rule reaches the prose.
 
+## Code in this project
+
+1. Design By Efferent applies less strictly to Slasher's own code than to a consuming project's. The engineer may set a hinge's ceremony aside here. A consuming project is held to the method in full.
+
 ## The package stays active
 
 1. This repository keeps design-by-efferent active. This rule is what holds it off content work here.
@@ -65,6 +75,7 @@ Where a piece of work is both — a rule that governs content, a script that bui
 ## Compression
 
 - 2026-10-29, compressed: 4800 → 1512 characters; checked: 28 directives, 18 kept, 4 less precise, 6 lost; 3 repairs, re-checked: 23 directives, 18 kept, 2 less precise, 3 lost; what is still not kept was judged reasons or background
+- 2026-11-10, revised: the method applies less strictly to this project's own code, at the engineer's direction; not re-checked
 
 Related:
 
@@ -95,3 +106,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 6:57:51 PM PT
