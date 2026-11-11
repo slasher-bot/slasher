@@ -40,6 +40,9 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 
 ## What happened
 
+- **2026-11-11** — `build-marketplace-plugin.sh <package>` builds a package's plugin in `plugins/<package>/`: the package's skills, its hooks, and a manifest the script writes. Its test has three checks: *Writes a manifest naming the package*, *Copies the package's skills*, and *Copies the package's hooks*. The skills and hooks checks are coverage, added at the engineer's selection, since the build already copied both.
+- **2026-11-11** — The copied hooks run scripts from the project's own `slasher/system/` or `system/`. A project that installs the plugin from the marketplace without Slasher's installer has neither, so its hooks do nothing.
+
 ## Confirmations
 
 - **2026-11-11** — Working location: branch and worktree, selected by the engineer.
@@ -47,6 +50,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11** — Forecast: no forecast, selected by the engineer.
 - **2026-11-11** — Kind: changed from a feature to an experiment, at the engineer's direction. The branch `feature/worktree/third-party-marketplace` was renamed `experiment/worktree/third-party-marketplace`, and its worktree moved from `../slasher-feature-worktree-third-party-marketplace` to `../slasher-experiment-worktree-third-party-marketplace`.
 - **2026-11-11** — Forecast: changed from no forecast to a stated forecast, at the engineer's direction.
+- **2026-11-11** — Test names: *Writes a manifest naming the package*, *Copies the package's skills*, and *Copies the package's hooks*, selected by the agent under `/unattended`. Each names what its check establishes, as a behavior, in the verb-first form the other shell tests use, such as *Retags an observation as a note*. None starts with *Is*, since only the manifest check compares a value, and the three read as one set.
 
 ---
 
@@ -55,3 +59,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:02 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:46:14 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:05 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:09:35 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 3:14:03 PM PT
