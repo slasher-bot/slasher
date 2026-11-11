@@ -20,7 +20,7 @@ Foundation also provides the project-wide **status report** command, a whole-pro
 
 **`/projects` lists the machine's registry of Slasher projects, and carries out an instruction in another project** (`projects-lists-the-registry-and-carries-out-an-instruction-in-another-project`), **`/package refresh` and `/package install` run foundation's scripts in the current project** (`package-refresh-and-install-run-foundations-scripts`), and **the skills reach a project as a plugin called Slasher and named `slasher`**, assembled from the active packages' skills (`the-slasher-skills-are-delivered-as-a-plugin-named-slasher`).
 
-**`/next?` names the next step of the work under way, and `/proceed` takes it** (`next-takes-the-next-step-of-the-work-under-way`), in place of asking *What's next?* and saying *proceed*. Neither decides anything the rules leave to the engineer.
+**`/next?` names the next step of the work under way, and `/next` takes it** (`next-takes-the-next-step-of-the-work-under-way`), in place of asking *What's next?* and saying *proceed*. Neither decides anything the rules leave to the engineer.
 
 **Brainstorming records points as they are said, and organizes them at the end** (`brainstorming-records-points-as-they-are-said-and-organizes-them-at-the-end`). Each point goes word for word to a collection file outside the repository, and at the end the agent reframes them into an item.
 
