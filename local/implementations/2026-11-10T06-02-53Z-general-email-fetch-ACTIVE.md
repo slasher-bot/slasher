@@ -33,8 +33,12 @@
 
 **As the engineer later stated it:** "Two new phases: Email commands. Packaging and installation"
 
-3. **Email commands** — Slasher commands for the email fetch. Branch `feature/worktree/general-email-fetch.email-commands`. No forecast.
-4. **Packaging and installation** — the `imap` package is packaged and installed. Branch `feature/worktree/general-email-fetch.packaging-and-installation`. No forecast.
+3. **Email commands** — Slasher commands for the email fetch. Branch `feature/worktree/general-email-fetch.email-commands`. No forecast. Started from `f217eab3`, on the feature's branch. Completed, with no forecast, and merged into the feature's branch.
+   - **Outcomes:** `/email fetch` fetches an account by its name, every account on a host, or every IMAP account with no argument, and a bare `/email` is the same. `/email list` lists the accounts by name, host, and login, without credentials. An unnamed account's mail goes under its host and login. The `imap` package's first rule keeps credentials out of the chat. The tests are named.
+**As the engineer later stated it:** "I'll proceed with the expanded command table work as another phase here". It goes after email commands, and carries the work item `2026-11-10T18-55-12Z-command-table-printing-is-optimized`.
+
+4. **Command table** — a package contributes its own rows to the command table, as `imap` contributes `/email`, and the table's printing is optimized, perhaps split into separate rules. Branch `feature/worktree/general-email-fetch.command-table`. No forecast.
+5. **Packaging and installation** — the `imap` package is packaged and installed. Branch `feature/worktree/general-email-fetch.packaging-and-installation`. No forecast.
 
 ## Confirmations
 
@@ -44,6 +48,7 @@
 - **2026-11-09** — Neither phase states a forecast, selected by the engineer when the phases were added.
 - **2026-11-10** — The engineer certified the Keychain credentials by a final visual inspection: a credential written by the script to the login keychain was seen in Keychain Access, and read back by name and by host. **As the engineer stated it:** "I've certified the feature by final visual inspection".
 - **2026-11-10** — Neither of the two later phases states a forecast, selected by the engineer when they were added.
+- **2026-11-10** — The command table phase goes after email commands, states no forecast, and carries the work item on the command table's printing, selected by the engineer when it was added.
 
 ## Prior work
 
@@ -63,3 +68,6 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 11:16:52 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:33:57 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 6:54:04 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 7:04:20 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:04:57 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 8:18:29 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 8:29:59 PM PT

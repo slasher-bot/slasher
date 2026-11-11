@@ -345,6 +345,131 @@ Each test's checks were named by the engineer, one test at a time, from candidat
 
 - **Outcome:** no check is left unnamed. The automated suite passes, 35 of 35.
 
+## Phase: Email commands — outcome 1, every account on a host is fetched
+
+The engineer settled the commands before the first hinge: `/email fetch <name>|<host>`, a bare `/email` and a bare `/email fetch` fetching every account, `/email list`, and `/email help`. An account with no name goes under its host and its login.
+
+### Cycle 47 — Actuation
+
+- **Hinge:** how a use site fetches every account on a host.
+- **Options:** the host in the name's place, `fetch.py imap.example.com`, taken as a name where an account has that name and otherwise as a host. The host marked, `fetch.py --host imap.example.com`.
+- **Decision / chat:** the host in the name's place. The engineer interrupted after selecting it, asked for the question again, and selected it again.
+
+### Cycle 48 — Observation
+
+- **Hinge:** what the test checks with two accounts on the host.
+- **Options:** each account's inbox holds its message. Both accounts' folders exist.
+- **Decision / chat:** each account's inbox holds its message, the recommended option.
+
+### Cycle 49 — Controls
+
+- **Hinge:** how two accounts on one host are set up.
+- **Options:** two credentials for 127.0.0.1, `some-mail` and `some-other-mail`, and the test server accepting both logins with `--login`. Something else.
+- **Decision / chat:** two logins, one test server.
+
+### Cycle 50 — Implementation
+
+- **Hinge:** how the fetch by host comes about.
+- **Options:** one batch, confidence 80%. Red, green, refactor, confidence 85%.
+- **Decision / chat:** one batch.
+- **Outcome:** `fetch.py` lists the keychain's password items with `security dump-keychain`, which shows no credential, and takes its argument as a name where an item has that label, otherwise as a host. Each account is fetched in turn, to its name's folder, or under its host and login where it has no name. The automated suite passes, 36 of 36.
+
+## Phase: Email commands — outcome 2, a fetch with no argument fetches every account
+
+### Cycle 51 — Actuation
+
+- **Hinge:** how a use site fetches every account.
+- **Options:** `fetch.py` with no argument, as a bare `/email` and a bare `/email fetch` run it. Something else.
+- **Decision / chat:** no argument.
+
+### Cycle 52 — Observation
+
+- **Hinge:** what the test checks with two accounts on different hosts.
+- **Options:** each account's inbox holds its message. Both accounts' folders exist.
+- **Decision / chat:** each account's inbox holds its message, the recommended option.
+
+### Cycle 53 — Controls
+
+- **Hinge:** how two accounts on different hosts are set up with one test server.
+- **Options:** hosts 127.0.0.1 and localhost, both reaching the one server. Two test servers, which would need a port per account.
+- **Decision / chat:** 127.0.0.1 and localhost.
+
+### Cycle 54 — Implementation
+
+- **Hinge:** how fetching every account comes about. In the login keychain, every password item would include other applications' items.
+- **Options:** one batch, confidence 85%, fetching only items `credential.sh` marks with `imap` as their kind. Red, green, refactor, confidence 90%.
+- **Decision / chat:** one batch.
+- **Outcome:** `credential.sh write` gives each item `imap` as its kind, and `fetch.py` with no argument fetches every item of that kind. A credential written before this has no kind, and is fetched only by its name or host. The automated suite passes, 37 of 37.
+
+## Phase: Email commands — outcome 3, the accounts are listed
+
+### Cycle 55 — Actuation
+
+- **Hinge:** how a use site lists the accounts.
+- **Options:** a list script, `list.py`, beside `fetch.py`. A `list` command in `credential.sh`.
+- **Decision / chat:** a list script.
+
+### Cycle 56 — Observation
+
+- **Hinge:** what the test reads from what `list.py` prints.
+- **Options:** one line per account, name, host, and login separated by tabs, sorted by name. A markdown table.
+- **Decision / chat:** one line per account, tab-separated. The `/email` skill turns the lines into a table.
+
+### Cycle 57 — Controls
+
+- **Hinge:** how the accounts are set up for the test.
+- **Options:** two accounts written with `credential.sh`, and one password item written directly with `security`, as another application would. Two accounts alone.
+- **Decision / chat:** two accounts and one other item, which the list must leave out.
+
+### Cycle 58 — Implementation
+
+- **Hinge:** how `list.py` comes about.
+- **Options:** one batch, confidence 85%. Red, green, refactor, confidence 90%.
+- **Decision / chat:** one batch.
+- **Outcome:** `list.py` uses `fetch.py`'s reading of the Keychain items, takes the items marked as IMAP accounts, and prints each as name, host, and login. Importing `fetch.py` first wrote a compiled copy beside it, which the script now prevents. The automated suite passes, 38 of 38.
+
+## Phase: Email commands — an unnamed account, covered, and a defect it found
+
+The engineer asked for the coverage question to be clarified, then chose to add the test, the recommended option.
+
+### Cycle 59 — Actuation
+
+- **Hinge:** how the test fetches the unnamed account.
+- **Options:** by its host. With every account.
+- **Decision / chat:** by its host, `fetch.py 127.0.0.1`.
+
+### Cycle 60 — Observation
+
+- **Hinge:** what the test checks.
+- **Options:** the message under `127.0.0.1/some-user/INBOX/`. Something else.
+- **Decision / chat:** the message under host and login.
+
+### Cycle 61 — Controls
+
+- **Hinge:** the unnamed credential.
+- **Options:** one credential for 127.0.0.1 and some-user, written without `--name`. Something else.
+- **Decision / chat:** one unnamed credential.
+
+### Cycle 62 — Implementation
+
+- **Hinge:** the coverage test failed: the message went to `127.0.0.1/INBOX/`. The Keychain names an item after its host where it is given no name, so the fetch took the account as named. The hinge became how an unnamed account is told apart.
+- **Options:** a name equal to the host means none, confidence 85%. The write marks a given name in the item's comment, confidence 80%.
+- **Decision / chat:** a name equal to the host means none. An account deliberately named the same as its host is taken as unnamed too.
+- **Outcome:** `keychain_items` takes a label equal to the host as no name, for the fetch and the list alike. The automated suite passes, 39 of 39.
+
+## The naming of the email commands phase's tests
+
+**Unattended.** The engineer asked for the tests to be named with `/! name the tests`, and accepted the agent's plan. The agent chose each name, following the names the engineer chose for the earlier tests: a fetch check names what is fetched, and a listing check names what is listed.
+
+| Test | Names | Reasoning |
+|---|---|---|
+| `fetch-by-host.sh` | Fetches the host's first account. Fetches the host's second account | Each check proves one of the host's accounts was fetched |
+| `fetch-every-account.sh` | Fetches the account on the first host. Fetches the account on the second host | The two accounts differ by host, which is what the test varies |
+| `list.sh` | Lists each IMAP account by name, host, and login | The check is the whole listing, and the other application's item is left out of it |
+| `fetch-unnamed-account.sh` | Writes the message under the host and login | Matches the fetch test's form, and names the folder the test proves |
+
+- **Outcome:** no check is left unnamed. The automated suite passes, 39 of 39.
+
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:38:06 PM PT
@@ -359,3 +484,8 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 12:26:55 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 12:56:48 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 6:35:14 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 7:02:36 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:42:20 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:48:13 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:56:48 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 8:12:40 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 8:22:02 PM PT

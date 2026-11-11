@@ -7,8 +7,9 @@
 #
 # Reads the credential stored in the Keychain for an IMAP host, or
 # by its name, and prints it. Or writes the credential given on standard
-# input, replacing one already stored. IMAP_KEYCHAIN names a keychain
-# file to use in place of the login keychain.
+# input, replacing one already stored, with imap as its kind, which marks
+# it as an IMAP account. IMAP_KEYCHAIN names a keychain file to use in
+# place of the login keychain.
 set -e
 
 command=$1
@@ -32,7 +33,7 @@ case "$command" in
     else
       set --
     fi
-    security add-generic-password -U -s "$host" -a "$user" "$@" \
+    security add-generic-password -U -s "$host" -a "$user" -D imap "$@" \
       -w "$credential" ${IMAP_KEYCHAIN:+"$IMAP_KEYCHAIN"}
     ;;
 esac

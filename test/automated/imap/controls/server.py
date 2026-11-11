@@ -7,6 +7,9 @@
 # Usage:
 #
 #   test/automated/imap/controls/server.py <port> <user> <password> [--folder <folder> [--sent]] <message.eml>...
+#   test/automated/imap/controls/server.py <port> --login <user> <password> [--login <user> <password>]... [--folder <folder> [--sent]] <message.eml>...
+#
+# With --login, it accepts each login given, and serves the same messages to each.
 #
 # It serves one connection at a time, in plain text, on 127.0.0.1, until
 # it is stopped. It answers only the commands the fetch sends.
@@ -16,9 +19,16 @@ import socketserver
 import sys
 
 port = int(sys.argv[1])
-user = sys.argv[2]
-password = sys.argv[3]
-paths = sys.argv[4:]
+arguments = sys.argv[2:]
+logins = {}
+if arguments[:1] == ["--login"]:
+    while arguments[:1] == ["--login"]:
+        logins[arguments[1]] = arguments[2]
+        arguments = arguments[3:]
+else:
+    logins[arguments[0]] = arguments[1]
+    arguments = arguments[2:]
+paths = arguments
 folder = "INBOX"
 if paths[:1] == ["--folder"]:
     folder = paths[1]
@@ -58,7 +68,7 @@ class Session(socketserver.StreamRequestHandler):
                 self.send(f"{tag} OK CAPABILITY completed\r\n")
             elif command == "LOGIN":
                 given_user, _, given_password = arguments.partition(" ")
-                if quoted(given_user) == user and quoted(given_password) == password:
+                if logins.get(quoted(given_user)) == quoted(given_password):
                     self.send(f"{tag} OK LOGIN completed\r\n")
                 else:
                     self.send(f"{tag} NO LOGIN failed\r\n")

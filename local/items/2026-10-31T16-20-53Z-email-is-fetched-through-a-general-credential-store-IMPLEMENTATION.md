@@ -26,6 +26,12 @@
   - The command does not change. `fetch.py <name>` fetches exactly the folders the fetch file lists, where there is one.
   - A mailbox whose `store` is `private` keeps its fetch file in the private store, at `~/.local/share/slasher/email/<project>/<name>/fetch.toml`, so its label names are not committed.
   - Gmail is reached with an app password, stored with `credential.sh write`. A message with two fetched labels is fetched into both folders.
+- **2026-11-10** — The email commands are `/email fetch <name>|<host>`, `/email list`, and `/email help`. **As the engineer stated it:** "The commands should be: email fetch <name>|<host>, email list, email help". A credential is not stored through a command.
+- **2026-11-10** — `/email fetch <host>` fetches every account whose credential has that host, each following its own fetch file. A host such as Gmail's may hold many accounts, and each is fetched. **As the engineer stated it:** "For the accounts that have that host, it fetches all of them, and follows the rules in the fetch file. It may retrieve may accounts, eg: if there are many at gmail".
+- **2026-11-10** — `/email list` lists the accounts, each by its name, host, and login. It shows no credential. **As the engineer stated it:** "The "/email list" shows the list of accounts. It doesn't show credentials."
+- **2026-11-10** — A bare `/email` is an alias of `/email fetch`. **As the engineer stated it:** "Also, a bare "/email" is an alias for "/email fetch"".
+- **2026-11-10** — `/email fetch` with no name or host, and so a bare `/email`, fetches every account in the Keychain, each following its own fetch file.
+- **2026-11-10** — An account whose credential has no name has its mail, and its fetch file, under its host and its login, as in `slasher/local/email/imap.gmail.com/you@gmail.com/INBOX/`.
 
 **Implementation:** the feature `2026-11-10T06-02-53Z-general-email-fetch` carries this idea's work.
 
@@ -45,3 +51,9 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 11:38:38 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:40:06 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:40:56 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 12:10:03 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:08:45 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:10:06 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:11:22 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:12:28 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:12:47 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:13:24 PM PT

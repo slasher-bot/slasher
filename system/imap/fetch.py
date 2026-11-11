@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 # Usage:
 #
-#   slasher/system/imap/fetch.py <name>
+#   slasher/system/imap/fetch.py [<name>|<host>]
 #
-# Fetches the IMAP mailbox whose credential is stored in the Keychain under
-# <name> into the project, under slasher/local/email/<name>/. Where that
+# Fetches the IMAP account whose credential is stored in the Keychain under
+# <name>, or every account whose host is <host>, into the project, under
+# slasher/local/email/<name>/. An account with no name goes under
+# slasher/local/email/<host>/<login>/. With no argument, every IMAP account
+# is fetched. Where that
 # folder holds a fetch.toml, the folders it lists are fetched, each into its
 # local folder. A fetch.toml may instead be in the private store, under
 # ~/.local/share/slasher/email/<project>/<name>/, and one that says
@@ -40,23 +43,50 @@ def keychain_arguments():
     return [keychain] if keychain else []
 
 
-def item_attributes(name):
-    """The host and the login stored on the Keychain item named <name>."""
+def keychain_items():
+    """Each password item in the keychain, as its label, host, and login.
+    The listing shows no credential."""
     output = subprocess.run(
-        ["security", "find-generic-password", "-l", name, *keychain_arguments()],
+        ["security", "dump-keychain", *keychain_arguments()],
         capture_output=True, text=True, check=True,
     ).stdout
-    host = re.search(r'"svce"<blob>="(.*)"', output).group(1)
-    user = re.search(r'"acct"<blob>="(.*)"', output).group(1)
-    return host, user
+    items = []
+    for block in output.split("keychain: ")[1:]:
+        if 'class: "genp"' not in block:
+            continue
+        def attribute(pattern):
+            match = re.search(pattern + r'<blob>="(.*)"', block)
+            return match.group(1) if match else None
+        host = attribute(r'"svce"')
+        user = attribute(r'"acct"')
+        if host and user:
+            # The Keychain names an item after its host where it is given no
+            # name, so a name equal to the host is taken as none.
+            label = attribute(r"0x00000007 ")
+            if label == host:
+                label = None
+            items.append({"label": label, "host": host, "user": user, "kind": attribute(r'"desc"')})
+    return items
 
 
-def read_credential(name):
-    credential_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "credential.sh")
-    return subprocess.run(
-        [credential_script, "read", "--name", name],
-        capture_output=True, text=True, check=True,
-    ).stdout.rstrip("\n")
+def accounts(argument=None):
+    """The accounts the argument names: the one with that name, or every
+    account whose host it is. With no argument, every IMAP account, which
+    credential.sh marks with imap as its kind."""
+    items = keychain_items()
+    if argument is None:
+        return [item for item in items if item["kind"] == "imap"]
+    named = [item for item in items if item["label"] == argument]
+    return named or [item for item in items if item["host"] == argument]
+
+
+def read_credential(account):
+    if account["label"]:
+        credential_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "credential.sh")
+        command = [credential_script, "read", "--name", account["label"]]
+    else:
+        command = ["security", "find-generic-password", "-s", account["host"], "-a", account["user"], "-w", *keychain_arguments()]
+    return subprocess.run(command, capture_output=True, text=True, check=True).stdout.rstrip("\n")
 
 
 def connect(host):
@@ -89,15 +119,16 @@ def fetch_file(directory):
         return tomllib.load(file)
 
 
-def mailbox(local, name):
+def mailbox(local, account):
     """The mailbox's fetch file, and the folder its messages go to. The
     fetch file is looked for in the project, then in the private store. Where
     it says store = "private", the messages go to the private store, under
     the project folder's name."""
-    in_project = os.path.join(local, "email", name)
+    folder = account["label"] or os.path.join(account["host"], account["user"])
+    in_project = os.path.join(local, "email", folder)
     in_private = os.path.join(
         os.environ["HOME"], ".local", "share", "slasher", "email",
-        os.path.basename(os.getcwd()), name,
+        os.path.basename(os.getcwd()), folder,
     )
     for directory in (in_project, in_private):
         listing = fetch_file(directory)
@@ -230,22 +261,33 @@ def fetch(imap, folder, directory):
     return fetched
 
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: slasher/system/imap/fetch.py <name>", file=sys.stderr)
-        return 2
-    name = sys.argv[1]
-    local = "slasher/local" if os.path.isdir("slasher/local") else "local"
-    host, user = item_attributes(name)
-    imap = connect(host)
-    imap.login(user, read_credential(name))
+def fetch_account(local, account):
+    imap = connect(account["host"])
+    imap.login(account["user"], read_credential(account))
     try:
-        listing, destination = mailbox(local, name)
+        listing, destination = mailbox(local, account)
         for folder, local_folder in folders(imap, listing):
             count = fetch(imap, folder, os.path.join(destination, local_folder))
-            print(f"{local_folder}: {count} fetched")
+            print(f"{account['label'] or account['user']} {local_folder}: {count} fetched")
     finally:
         imap.logout()
+
+
+def main():
+    if len(sys.argv) > 2:
+        print("Usage: slasher/system/imap/fetch.py [<name>|<host>]", file=sys.stderr)
+        return 2
+    local = "slasher/local" if os.path.isdir("slasher/local") else "local"
+    argument = sys.argv[1] if len(sys.argv) == 2 else None
+    found = accounts(argument)
+    if not found:
+        if argument is None:
+            print("No IMAP account is stored", file=sys.stderr)
+        else:
+            print(f"No account is named {argument}, or has it as its host", file=sys.stderr)
+        return 1
+    for account in found:
+        fetch_account(local, account)
     return 0
 
 
