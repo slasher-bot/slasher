@@ -1,6 +1,6 @@
 | Shortcut | Command | Does |
 |---|---|---|
-| `/'` | `/items` | Lists the current items and implementations |
+| `/'` | `/current` | Lists the current items and implementations |
 | `/.` | `/recent` | Brief summary of recent work, and what's next |
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |

@@ -24,7 +24,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, the alias first, as `/., /recent`. Their order is `/;, /commands`, `/., /recent`, `/', /items`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, the alias first, as `/., /recent`. Their order is `/;, /commands`, `/., /recent`, `/', /current`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
 
 **The help's order is the table's order.** `plugin/help-order` lists the domains in the order the help and the table both follow. A domain it does not list follows, in name order. Add a new domain to it where its row belongs.
 
@@ -223,7 +223,7 @@ Trigger: When starting a phase of an experiment or a feature, or when the engine
 
 Source: system/foundation/source/a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows.md
 
-Trigger: When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/features`, or `/experiments`
+Trigger: When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, or `/experiments`
 
 1. When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence. A table presents the fields in headed columns. Rows present one record to a line, with its fields in sequence and no columns. A list is called a table only where it is formatted as columns.
 2. This applies to any record type. That includes items, implementation records, log entries, loop records, work session records, migration records, journal entries, and commits.
@@ -262,16 +262,16 @@ A list of items takes the ordinal and no SHA columns:
 1. A list of items may be asked for by state, and lists the items whose `**State:**` line reads that state.
 2. `current` asks for the Open and Active items together. It is not a state, and it leaves out Suspended items.
 
-## The items command
+## The current command
 
-1. `/items` lists the current items, then, under a heading of their own, the current implementations.
+1. `/current` lists the current items, then, under a heading of their own, the current implementations.
 2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
-5. In the items table `/items` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
-6. `/items` takes an optional number *n*, as in `/items 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
+5. In the items table `/current` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
+6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
 7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
-8. A number given to `/items` does not change these counts.
+8. A number given to `/current` does not change these counts.
 
 ## The features and experiments commands
 

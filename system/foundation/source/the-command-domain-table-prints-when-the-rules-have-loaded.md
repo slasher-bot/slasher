@@ -1,18 +1,24 @@
 # The command domain table prints when the rules have loaded
 
-**When the session-start read concludes, print the plugin's startup table, word for word.** It is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
-
-**After the startup table, run `/items 10`.** In the same response, below it, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
+**When the session-start read concludes, print the plugin's startup table, word for word, then the current line.** The startup table is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. The current line stands one blank line below it, and ends what the read prints: *Type /current for open and active work.* It names `/current`, which lists the current items, then the current features and experiments. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
 
 **The tables are built, not written here.** The plugin build joins the command table from each active package's rows, and writes the startup table's sentence from it, so a package that is not active adds no row. `/command-table`, `/;`, and `/commands` print the joined command table, and `/shortcuts` and `/sc` the shortcuts table, each as it stands and with no rule loaded. How a command's rows are written is the a-command-domain-carries-its-rows-of-the-command-table rule's, which loads when a command is written.
 
 **The agent prints the table, not the harness.** The harness renders its display as plain text, and the table needs markdown. That is the reason the package set stanza is the agent's too.
 
-**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The current items and implementations show the engineer where the work stands before they make the first request.
+**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The current line tells the engineer where to see the work under way, without the time a listing would take at the start of every session.
 
-**How to apply:** at the end of the session-start read, print the plugin's `command-table-startup.md` once, run `/items 10` below it, and then turn to the engineer's request or wait for one.
+**How to apply:** at the end of the session-start read, print the plugin's `command-table-startup.md` once, then the current line, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026 the help line ended what the read prints. The engineer added the current line below it.
+
+Until Tue Nov 10 2026, for part of that day, `/'` was an alias of `/items`, and its rows named `/items` and read *Lists the current items.* The engineer made `/'` an alias of `/current`.
+
+Until Tue Nov 10 2026 the `/', /items` rows read *Lists the current items, features, and experiments.* in the startup table and *Lists the current items, then the current features and experiments.* in the full table, and the shortcuts table's `/'` row read *Lists the current items and implementations*. The engineer made a bare `/items` list the current items alone, and gave the list of current items and implementations to `/current`.
+
+Until Tue Nov 10 2026 the read ran `/items 10` after the help line, and printed the ten most recently created current items and the current implementations. The engineer removed it, because it made the start of a session take too much time.
 
 Until Tue Nov 10 2026 this rule wrote out the startup table, its sentence, the full command table, and the shortcuts table, with the conventions for every row. The engineer settled that each package carries its rows and the build joins them. The tables moved into the packages and the plugin build, and the conventions for a row moved into the a-command-domain-carries-its-rows-of-the-command-table rule.
 
@@ -169,7 +175,6 @@ Related:
 - the the-startup-display-prints-as-the-session-starts rule — the display the harness prints ahead of the read
 - the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — what the agent prints at the start, and what it does not
 - the the-slasher-skills-are-delivered-as-a-plugin-named-slasher rule — the plugin whose help the table follows
-- the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule — what `/items 10` prints
 
 ---
 
@@ -248,3 +253,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 10:53:54 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:21:33 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 9:48:54 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:45:30 PM PT

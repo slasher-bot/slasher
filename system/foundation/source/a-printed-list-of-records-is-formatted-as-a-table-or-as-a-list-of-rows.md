@@ -1,6 +1,6 @@
 # A printed list of records is formatted as a table or as a list of rows
 
-**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/features`, or `/experiments`
+**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, or `/experiments`
 
 **When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence.** A table presents the fields in headed columns. Rows present one record to a line, its fields in sequence, with no columns. **A list is called a table only where it is formatted as columns.** That reaches any record — items, implementation records, log entries, loop records, work session records, migration records, journal entries, and commits.
 
@@ -38,21 +38,21 @@ A list of items takes the ordinal and no SHA columns:
 
 **As the engineer stated it:** remove suspended from current.
 
-## The items command
+## The current command
 
-**`/items` lists the current items, then the current implementations.** The items are the ones `current` asks for, Open and Active. The implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
+**`/current` lists the current items, then the current implementations.** The items are the ones `current` asks for, Open and Active. The implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
 
-**The items table printed by `/items` takes a kind column, between the title and the state.** It names the kind each of the item's tags gives, written as a word, not as a tag: *Idea* for `[idea]`, *Work* for `[work]`, and *Legal matter* for `[legal-matter]`. Where the item carries several tags, it names each, separated by commas. Other lists of items take no kind column unless it is asked for.
+**The items table printed by `/current` takes a kind column, between the title and the state.** It names the kind each of the item's tags gives, written as a word, not as a tag: *Idea* for `[idea]`, *Work* for `[work]`, and *Legal matter* for `[legal-matter]`. Where the item carries several tags, it names each, separated by commas. Other lists of items take no kind column unless it is asked for.
 
 **As the engineer stated it:** Include the item kind in the table printed by "/current"
 
-**`/items` takes an optional number, *n*, and then lists only the *n* most recent current items.** An item's recency is its handle, the time it was created. The items listed keep the order of the full list, oldest first, and their ordinals count from 1. The number does not reach the current implementations, which are listed in full. `/items 5` lists the five most recently created current items.
+**`/current` takes an optional number, *n*, and then lists only the *n* most recent current items.** An item's recency is its handle, the time it was created. The items listed keep the order of the full list, oldest first, and their ordinals count from 1. The number does not reach the current implementations, which are listed in full. `/current 5` lists the five most recently created current items.
 
 **As the engineer stated it:** The "/current" command should optionally take a number that is the **n-most** recent items
 
 **As the engineer stated it:** Don't print the kind as its tag. eg: for "[idea]", print in the table, "Idea"
 
-**Below the items table, `/items` counts the items it leaves out, by state.** The counts sit under the heading *Other items*, as one comma-separated sentence, as in `47 Realized, 18 Recorded, 12 Abandoned`. Each state other than Open and Active that some item holds is named once, with its count. The states run from the largest count to the smallest. A Suspended item is counted here like any other, which is the treatment a hidden record already takes. A number given to `/items` does not change the counts, since they count the items whose state is not current, not the current items the number leaves out.
+**Below the items table, `/current` counts the items it leaves out, by state.** The counts sit under the heading *Other items*, as one comma-separated sentence, as in `47 Realized, 18 Recorded, 12 Abandoned`. Each state other than Open and Active that some item holds is named once, with its count. The states run from the largest count to the smallest. A Suspended item is counted here like any other, which is the treatment a hidden record already takes. A number given to `/current` does not change the counts, since they count the items whose state is not current, not the current items the number leaves out.
 
 **As the engineer stated it:** At the bottom of the table that prints by "/items", print a summary of how many other of the other iten types there are
 
@@ -72,7 +72,7 @@ A list of items takes the ordinal and no SHA columns:
 
 **`/features` lists the current features, and `/experiments` lists the current experiments.** A current feature or experiment is one whose `**State:**` line reads Open, Active, or Suspended, as with the current implementations `/items` lists. A record's kind is the word its title opens with, as in `Feature — The current command` or `Experiment — Rules files flattening`.
 
-**Each row is an ordinal, the record's handle, its title, and its state.** The list takes the ordinal and no SHA columns, as a list of items does, since each command does for its kind what `/items` does for items. The title is the record's own.
+**Each row is an ordinal, the record's handle, its title, and its state.** The list takes the ordinal and no SHA columns, as a list of items does, since each command does for its kind what `/current` does for items. The title is the record's own.
 
 **Each command takes an optional number, *n*, and then lists only the *n* most recently created current records of its kind.** A record's recency is its handle. The records listed keep the order of the full list, oldest first, and their ordinals count from 1. `/features 3` lists the three most recently created current features.
 
@@ -143,16 +143,16 @@ A list of items takes the ordinal and no SHA columns:
 1. A list of items may be asked for by state, and lists the items whose `**State:**` line reads that state.
 2. `current` asks for the Open and Active items together. It is not a state, and it leaves out Suspended items.
 
-## The items command
+## The current command
 
-1. `/items` lists the current items, then, under a heading of their own, the current implementations.
+1. `/current` lists the current items, then, under a heading of their own, the current implementations.
 2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
-5. In the items table `/items` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
-6. `/items` takes an optional number *n*, as in `/items 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
+5. In the items table `/current` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
+6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
 7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
-8. A number given to `/items` does not change these counts.
+8. A number given to `/current` does not change these counts.
 
 ## The features and experiments commands
 
@@ -195,8 +195,11 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-09, revised: `/features` and `/experiments` list the current records of their kind, with an optional number and counts of the other states, as the features and experiments commands; checked: 48 directives, 47 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: the example *Work* for `[work]`, as before
 - 2026-11-09, revised: a current implementation is Open, Active, or Suspended; not re-checked
 - 2026-11-09, checked: 61 directives, 60 kept, 1 less precise, 0 lost. Left less precise: the kind column's example for [work], which the general instruction produces
+- 2026-11-10, revised: the command is `/current`, in place of `/items`, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Tue Nov 10 2026 the command that lists the current items and implementations was `/items`. The engineer gave that list to `/current`, and made a bare `/items` list the current items alone.
 
 Until Mon Nov 9 2026 a current implementation was Active or Suspended, since an implementation took no Open state.
 
@@ -272,3 +275,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 11:55:17 AM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 10:53:56 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:13:39 PM PT
