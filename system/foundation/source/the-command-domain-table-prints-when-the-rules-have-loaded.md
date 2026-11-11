@@ -7,13 +7,13 @@
 | `/slasher help, /help` | Print the help of every Slasher command |
 | `/;` | Print the list of Slasher commands |
 | `/., /recent` | Brief summary of recent work, and what's next. |
-| `/', /items` | Lists the current items. |
+| `/', /current` | Lists the current items, features, and experiments. |
 
 The other commands are `/item`, `/items`, `/feature`, `/features`, `/experiment`, `/experiments`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/unattended`, `/log`, `/decision`, `/observation`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/shortcuts`, `/load`, and `/commands`.
 
 Type /help for all of Slasher's help, or /<command> help for one command's.
 
-**The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/;` row reads *Print the list of Slasher commands*, since the table `/;` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items.*, the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>>`, `/?`, `/??`, `/#`, `/!`, and `/sc`. When a row is added to the full table or removed from it, change the sentence in the same commit.
+**The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/;` row reads *Print the list of Slasher commands*, since the table `/;` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/current` beside it, as `/', /current`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/current` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>>`, `/?`, `/??`, `/#`, `/!`, and `/sc`. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
 **The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
 
@@ -22,7 +22,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/slasher help` | Print the help of every Slasher command |
 | `/;, /commands` | Print this table |
 | `/., /recent` | Brief summary of recent work, and what's next. |
-| `/', /items` | Lists the current items. |
+| `/', /current` | Lists the current items, then the current features and experiments. |
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/?, /next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
@@ -51,15 +51,15 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* It stands one blank line below the startup table's sentence, and one blank line below the full table. It names `/help`, the alias of `/slasher help`, which prints the help of every Slasher command.
 
-**Each row is one command domain, except the `/slasher help`, `/unattended`, `/items`, `/features`, `/experiments`, `/recent`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/decision`, `/observation`, `/shortcuts`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own. `/decision` stands below the `/log` row. The rows of the commands with shortcut aliases stand at the top, as the paragraph on shortcut aliases sets out. `/features` is a root command of the FEATURES domain, and `/experiments` of the EXPERIMENTS domain. `/features` has a row below the `/feature` row, and `/experiments` below the `/experiment` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *These commands*, as the help does. No description opens with *This command*. Print no other root command, alias, or subcommand in the table. `/observation` and `/commands` are the only aliases with rows of their own. `/help` and `/command-table` itself have none.
+**Each row is one command domain, except the `/slasher help`, `/unattended`, `/current`, `/features`, `/experiments`, `/recent`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/decision`, `/observation`, `/shortcuts`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/current`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own. `/decision` stands below the `/log` row. The rows of the commands with shortcut aliases stand at the top, as the paragraph on shortcut aliases sets out. `/features` is a root command of the FEATURES domain, and `/experiments` of the EXPERIMENTS domain. `/features` has a row below the `/feature` row, and `/experiments` below the `/experiment` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *These commands*, as the help does. No description opens with *This command*. Print no other root command, alias, or subcommand in the table. `/observation` and `/commands` are the only aliases with rows of their own. `/help` and `/command-table` itself have none.
 
-**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>>` of `/next`, `/?` of `/next?`, `/??` of `/clarify`, `/#` of `/estimate-confidence`, `/!` of `/unattended`, and `/;` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/;, /commands`, `/., /recent`, `/', /items`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
+**A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/current`, `/.` of `/recent`, `/>>` of `/next`, `/?` of `/next?`, `/??` of `/clarify`, `/#` of `/estimate-confidence`, `/!` of `/unattended`, and `/;` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/;, /commands`, `/., /recent`, `/', /current`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
 
 **`/shortcuts` prints the shortcuts table, and `/sc` is its alias.** It prints the table below, word for word, and nothing else. Each row names a shortcut alias, the command it stands for, and what it does. `/shortcuts` and `/sc` belong to no command domain. They share a row in the full table, just above the `/load` row. When a shortcut alias is added, removed, or changed, change this table in the same commit.
 
 | Shortcut | Command | Does |
 |---|---|---|
-| `/'` | `/items` | Lists the current items |
+| `/'` | `/current` | Lists the current items and implementations |
 | `/.` | `/recent` | Brief summary of recent work, and what's next |
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
@@ -83,6 +83,8 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 **How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026, for part of that day, `/'` was an alias of `/items`, and its rows named `/items` and read *Lists the current items.* The engineer made `/'` an alias of `/current`.
 
 Until Tue Nov 10 2026 the `/', /items` rows read *Lists the current items, features, and experiments.* in the startup table and *Lists the current items, then the current features and experiments.* in the full table, and the shortcuts table's `/'` row read *Lists the current items and implementations*. The engineer made a bare `/items` list the current items alone, and gave the list of current items and implementations to `/current`.
 
@@ -320,3 +322,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:21:33 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 9:20:49 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:13:49 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:16:53 PM PT
