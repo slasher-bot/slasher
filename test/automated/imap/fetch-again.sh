@@ -54,7 +54,7 @@ printf '%s' "some placeholder" > "$project/slasher/local/email/work-mail/INBOX/2
 files=$(ls "$project/slasher/local/email/work-mail/INBOX")
 message=$(cat "$project/slasher/local/email/work-mail/INBOX/$files")
 
-[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "" "files:" "$files"
-[ "$message" = "some placeholder" ] || fail "" "message:" "$message"
+[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Writes no second copy" "files:" "$files"
+[ "$message" = "some placeholder" ] || fail "Leaves the fetched message's file unchanged" "message:" "$message"
 
 echo "0 failed, 0 aborted"

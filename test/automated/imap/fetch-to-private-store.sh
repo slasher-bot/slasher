@@ -59,7 +59,7 @@ TOML
 
 files=$(ls "$home/.local/share/slasher/email/some-project/work-mail/INBOX" 2>/dev/null || true)
 
-[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "" "files:" "$files"
-[ ! -e "$project/slasher/local/email" ] || fail "" "in the project:" "$(ls -R "$project/slasher/local/email")"
+[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Writes the message to the private store" "files:" "$files"
+[ ! -e "$project/slasher/local/email" ] || fail "Writes nothing to the project" "in the project:" "$(ls -R "$project/slasher/local/email")"
 
 echo "0 failed, 0 aborted"

@@ -325,6 +325,26 @@ The engineer chose to cover both behaviors already in the script before ending t
 - **Hinge:** degenerate. The test passed against the code as it is.
 - **Outcome:** `test/automated/imap/fetch-again.sh`. The automated suite passes, 35 of 35.
 
+## The naming of the tests
+
+Each test's checks were named by the engineer, one test at a time, from candidates the agent put. The engineer stated that a test is named when its loop completes, not when the feature closes, and that Design By Efferent applies less strictly to Slasher's own code.
+
+| Test | Names |
+|---|---|
+| `credential/read.sh` | Is the credential stored for the host |
+| `credential/write.sh` | Stores the credential for the host |
+| `credential/read-by-name.sh` | Is the credential stored under the name |
+| `credential/write-with-name.sh` | Stores the credential under the name |
+| `credential/read-without-stored-credential.sh` | Fails, named by the rule for a test of an error |
+| `fetch.sh` | Writes the message to the inbox folder. Writes the message's headers and body |
+| `fetch-with-fetch-file.sh` | Fetches only the folders the fetch file lists. Writes the label's message to its local folder |
+| `fetch-to-private-store.sh` | Writes the message to the private store. Writes nothing to the project |
+| `fetch-sent.sh` | Writes the sent mail to the Sent folder |
+| `fetch-again.sh` | Writes no second copy. Leaves the fetched message's file unchanged |
+| `test/interactive/imap/credential/login-keychain.sh` | Stores and reads the credential in the login keychain |
+
+- **Outcome:** no check is left unnamed. The automated suite passes, 35 of 35.
+
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:38:06 PM PT
@@ -338,3 +358,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 11:58:55 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 12:26:55 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 12:56:48 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 6:35:14 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 7:02:36 PM PT

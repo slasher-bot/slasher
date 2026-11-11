@@ -60,7 +60,7 @@ some body"
 files=$(ls "$project/slasher/local/email/work-mail/INBOX")
 message=$(cat "$project/slasher/local/email/work-mail/INBOX/$files")
 
-[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "" "files:" "$files"
-[ "$message" = "$control_message_text" ] || fail "" "message:" "$message"
+[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Writes the message to the inbox folder" "files:" "$files"
+[ "$message" = "$control_message_text" ] || fail "Writes the message's headers and body" "message:" "$message"
 
 echo "0 failed, 0 aborted"

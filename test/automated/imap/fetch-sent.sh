@@ -50,6 +50,6 @@ export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no
 
 files=$(ls "$project/slasher/local/email/work-mail/Sent" 2>/dev/null || true)
 
-[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "" "files:" "$files"
+[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Writes the sent mail to the Sent folder" "files:" "$files"
 
 echo "0 failed, 0 aborted"
