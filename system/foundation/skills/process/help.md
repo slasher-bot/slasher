@@ -14,7 +14,6 @@ PROCESS
                                    multi-step process, or resume interrupted
                                    work
   />>                              An alias of /next
-  /!                               An alias of /next
   /next?                           "What are we doing?" or "what's next?"
                                    The next step in the current multi-step
                                    process, or the step that has been
@@ -23,7 +22,7 @@ PROCESS
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
-  /# <request>                     An alias of /unattended
+  /! <request>                     An alias of /unattended
 
   /ask-again                       Repeat the agent's previous multiple-choice
                                    question
@@ -31,6 +30,6 @@ PROCESS
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
-  /%                               An alias of /estimate-confidence
+  /#                               An alias of /estimate-confidence
 
   /process help                    Print this command's help

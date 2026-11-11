@@ -29,6 +29,7 @@
 - The next rule names none of its aliases, so it is unchanged. The plan named it, and the work did not need it.
 - The command-table rule says that a command with two aliases names both, in the order they were made, as `/next, />>, /!`. The agent decided this wording.
 - The automated suite passed: 46 tests.
+- **2026-11-11** — The shortcut changes are reverted, at the engineer's direction, since `/>>` already proceeds. `/!` is again the alias of `/unattended`, and `/#` of `/estimate-confidence`. `/%` is removed. The idea is Abandoned.
 
 ## Confirmations
 
@@ -45,3 +46,4 @@
 Authored by Scott Bellware on Wed Nov 11 2026 at 12:57:41 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:25 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:55 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:03:18 PM PT
