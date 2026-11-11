@@ -38,8 +38,10 @@
 - **2026-11-11** — Forecast: no forecast, selected by the agent. The request states no expectation to test.
 - **2026-11-11** — `/!` is an alias of `/next`, selected by the agent and stated in the accepted plan. The next rule names `/next` as the engineer saying *proceed*, which is what the item asks `/!` to say.
 - **2026-11-11** — Merge to master: selected by the engineer.
+- **2026-11-11** — Branch deletion and worktree removal: selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 12:57:41 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:25 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:55 PM PT
