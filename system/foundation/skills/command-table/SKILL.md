@@ -7,4 +7,4 @@ disable-model-invocation: true
 The engineer typed `/command-table $ARGUMENTS`.
 
 1. Where the first word is `help`, say that this command takes no `help`, and that `/slasher help` prints the help of every Slasher command. Do nothing more.
-2. Otherwise, print the command domain table. From the project root, run `slasher/system/foundation/load-rules.sh the-command-domain-table-prints-when-the-rules-have-loaded`. Where the project has no `slasher/` directory, run `system/foundation/load-rules.sh` with the same rule name. Print the full table in the rule it prints, and the help line below it, word for word, and nothing else. Do not run `/items`.
+2. Otherwise, print the text of `command-table.md`, in the plugin's root directory, two levels above this skill's directory, exactly as it stands, and nothing else. It is the command table, which the plugin build joins from each active package's rows. Load no rule, and do not run `/items`.

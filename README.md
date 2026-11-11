@@ -16,6 +16,7 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 - **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
 - **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one.
 - **Domain conventions.** Packages for language, testing, git, and versioning.
+- **Email.** An optional package, `imap`, fetches IMAP mail and Gmail labels into the project, with each credential kept in the macOS Keychain.
 - **Machinery.** The installer, package sets, a session-start hook, a status line, and commands.
 
 ## Install Slasher
@@ -67,11 +68,12 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/observation` | Record an observation |
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
-| `/test` | These commands run the project's tests and report on them. |
+| `/test` | These commands run the project's tests, or other compliance routines, quality checks, and report on them. |
 | `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
 | `/release` | Presents the candidates for a package's next version, for the engineer to choose. |
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
+| `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/sc, /shortcuts` | Print the shortcuts table |
 | `/load` | Loads the rules now, without waiting for the first prompt. |
 
