@@ -430,13 +430,13 @@ Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-
 | `/slasher help, /help` | Print the help of every Slasher command |
 | `/;` | Print the list of Slasher commands |
 | `/., /recent` | Brief summary of recent work, and what's next. |
-| `/', /items` | Lists the current items, features, and experiments. |
+| `/', /items` | Lists the current items. |
 
 The other commands are `/item`, `/items`, `/feature`, `/features`, `/experiment`, `/experiments`, `/recent`, `/process`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/unattended`, `/log`, `/decision`, `/observation`, `/journal`, `/brainstorm`, `/test`, `/projects`, `/release`, `/package`, `/language`, `/shortcuts`, `/load`, and `/commands`.
 
 Type /help for all of Slasher's help, or /<command> help for one command's.
 
-**The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/;` row reads *Print the list of Slasher commands*, since the table `/;` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items, features, and experiments.*, a shorter form of the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>>`, `/?`, `/??`, `/#`, `/!`, and `/sc`. When a row is added to the full table or removed from it, change the sentence in the same commit.
+**The startup table is the full table abridged.** Its four rows stand as written here, and are not copied from the full table. The `/slasher help` row also names its alias `/help`. The `/;` row reads *Print the list of Slasher commands*, since the table `/;` prints is the full table, not this one. The `/.` row names `/recent` beside it, as `/., /recent`, and takes the description `/recent` has in the help, without *This command*. When that description changes, change the startup table in the same commit. The `/'` row names `/items` beside it, as `/', /items`, and reads *Lists the current items.*, the description `/items` has in the help. The sentence below it names, in the full table's order, every command and alias whose row the startup table leaves out, except the aliases `/>>`, `/?`, `/??`, `/#`, `/!`, and `/sc`. When a row is added to the full table or removed from it, change the sentence in the same commit.
 
 **The full table is the command domain table.** `/command-table` prints it, and the startup read does not.
 
@@ -445,7 +445,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 | `/slasher help` | Print the help of every Slasher command |
 | `/;, /commands` | Print this table |
 | `/., /recent` | Brief summary of recent work, and what's next. |
-| `/', /items` | Lists the current items, then the current features and experiments. |
+| `/', /items` | Lists the current items. |
 | `/>>, /next` | Proceed to the next step in the current multi-step process, or resume interrupted work |
 | `/?, /next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/??, /clarify` | Explain the previous answer again using what the agent knows of the engineer's understanding |
@@ -482,7 +482,7 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 | Shortcut | Command | Does |
 |---|---|---|
-| `/'` | `/items` | Lists the current items and implementations |
+| `/'` | `/items` | Lists the current items |
 | `/.` | `/recent` | Brief summary of recent work, and what's next |
 | `/>>` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
