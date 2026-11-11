@@ -52,4 +52,12 @@ skills_difference=$(diff -r \
 
 [ -z "$skills_difference" ] || fail "" "found:" "$skills_difference"
 
+# Observation ----------------------------------------------------------------
+
+hooks_difference=$(diff -r \
+  "$repository/system/foundation/plugin/hooks" \
+  "$repository/plugins/foundation/hooks" || true)
+
+[ -z "$hooks_difference" ] || fail "" "found:" "$hooks_difference"
+
 echo "0 failed, 0 aborted"
