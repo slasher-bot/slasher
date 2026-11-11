@@ -168,6 +168,6 @@ RECORD
 
 worktreed_implementation=$(cd "$worktreed_project" && system/foundation/current-implementation.sh)
 
-[ "$worktreed_implementation" = "$control_worktree_branch" ] || fail "" "found:" "$worktreed_implementation"
+[ "$worktreed_implementation" = "$control_worktree_branch" ] || fail "Prints the branch of an implementation recorded only in another worktree" "found:" "$worktreed_implementation"
 
 echo "0 failed, 0 aborted"

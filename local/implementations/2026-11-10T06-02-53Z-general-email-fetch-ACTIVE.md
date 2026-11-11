@@ -39,7 +39,10 @@
 
 4. **Command table** — a package contributes its own rows to the command table, as `imap` contributes `/email`, and the table's printing is optimized, perhaps split into separate rules. Branch `feature/worktree/general-email-fetch.command-table`. No forecast. Started from `30d0f817`, on the feature's branch. Master was merged into it first. Completed, with no forecast, and merged into the feature's branch.
    - **Outcomes:** each command domain carries its rows of the command table beside its skill, and the plugin build joins the active packages' rows in the help's order, so `imap` contributes `/email`. The build writes the startup table's sentence. The table commands print the built tables, loading no rule. The command table rule is split into a short session-start rule and an on-demand rule for writing a row. A test keeps each row in step with its help. The README's copy of the table is kept by hand.
-5. **Packaging and installation** — the `imap` package is packaged and installed. Branch `feature/worktree/general-email-fetch.packaging-and-installation`. No forecast.
+5. **Packaging and installation** — the `imap` package is packaged and installed. Branch `feature/worktree/general-email-fetch.packaging-and-installation`. No forecast. Started from `544bd4db`, on the feature's branch.
+   - **Scope:** `imap` installed by name, with an interactive test. Refresh, activation, and deactivation handle it, each tested. The installer or `imap`'s own `install-dependencies.sh` checks for macOS and Python 3.11 or later. The package repository `slasher-bot/imap` is created, and the package published to it from this feature.
+   - **Completed,** with no forecast, and merged into the feature's branch.
+   - **Outcomes:** the scripts check their requirements when they run, since `install-dependencies.sh` is not run by the installer. `slasher-bot/imap` is created and holds the published package. `imap` installs by name, confirmed by the engineer's interactive run. Deactivation and refresh are covered. The `/email` row arrives in an install once foundation is republished after the feature merges.
 
 ## Confirmations
 
@@ -50,6 +53,7 @@
 - **2026-11-10** — The engineer certified the Keychain credentials by a final visual inspection: a credential written by the script to the login keychain was seen in Keychain Access, and read back by name and by host. **As the engineer stated it:** "I've certified the feature by final visual inspection".
 - **2026-11-10** — Neither of the two later phases states a forecast, selected by the engineer when they were added.
 - **2026-11-10** — The command table phase goes after email commands, states no forecast, and carries the work item on the command table's printing, selected by the engineer when it was added.
+- **2026-11-10** — The packaging and installation phase's scope, selected by the engineer, includes creating the package repository `slasher-bot/imap` and publishing the package to it from this feature. That is the exception to the local rule that a package is published from `master`, put to the engineer through the selection interface, as the rule asks where an implementation's intent is about publishing.
 
 ## Prior work
 
@@ -74,3 +78,6 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 8:18:29 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:29:59 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:30:36 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:41:12 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:55 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:46:21 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:38:41 PM PT

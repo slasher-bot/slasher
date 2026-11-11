@@ -567,6 +567,126 @@ The command table rule was split before this outcome: the session-start rule pri
 
 - **Outcome:** no check is left unnamed. The automated suite passes, 42 of 42.
 
+## Phase: Packaging and installation — outcome 1, the requirements are checked when the scripts run
+
+The engineer settled the phase's scope, the publish exception included. `install-dependencies.sh` turned out to be a script run by hand, not by the installer, and the engineer chose to check the requirements when the scripts run, the recommended option.
+
+### Cycle 75 — Actuation
+
+- **Hinge:** how the test runs the credential script where `security` is not found.
+- **Options:** with `PATH=/bin`, which holds `sh` but not `security`. Something else.
+- **Decision / chat:** a PATH without `/usr/bin`.
+
+### Cycle 76 — Observation
+
+- **Hinge:** what the test checks.
+- **Options:** it fails, and its message names `security` and macOS. It fails.
+- **Decision / chat:** fails, naming what is missing, the recommended option.
+
+### Cycle 77 — Controls
+
+- **Hinge:** what the test sets up.
+- **Options:** the PATH alone. Something else.
+- **Decision / chat:** the PATH alone.
+
+### Cycle 78 — Implementation
+
+- **Hinge:** how the scripts check their requirements.
+- **Options:** one batch, confidence 85%. Red, green, refactor, confidence 90%.
+- **Decision / chat:** one batch.
+- **Outcome:** `credential.sh` stops with a message naming macOS's `security` command where it is not found. `fetch.py` and `list.py` stop with a message where Python is older than 3.11, before importing what needs it. That check is untested, since no older Python is on this machine. The automated suite passes, 43 of 43.
+
+## Phase: Packaging and installation — outcome 2, imap is installed by name
+
+The package repository `slasher-bot/imap` was created, its description's *IMAP* capitalized at the engineer's direction, and the package published to it from the feature, under the engineer's exception. The published foundation predates the command table phase, so an install does not yet bring the `/email` row.
+
+### Cycle 79 — Actuation
+
+- **Hinge:** how the interactive test installs `imap` by name.
+- **Options:** the curl install, `sh install default imap`, in a temporary git project. Something else.
+- **Decision / chat:** the curl install, default and imap.
+
+### Cycle 80 — Observation
+
+- **Hinge:** what the test checks, given the published foundation does not join rows.
+- **Options:** the scripts and the command now, the row once foundation is republished. All three, failing on the row until then.
+- **Decision / chat:** scripts and command now, row later, the recommended option.
+
+### Cycle 81 — Controls
+
+- **Hinge:** what the test sets up.
+- **Options:** a git project in a temporary folder, fetched over SSH. Something else.
+- **Decision / chat:** a git project in a temporary folder.
+
+### Cycle 82 — Implementation
+
+- **Hinge:** degenerate. The installer already takes a package by name, and the package is published. The test is interactive, so the engineer ran it.
+- **Outcome:** `test/interactive/imap/install.sh`. The engineer's run ended `0 failed, 0 aborted`.
+
+## Phase: Packaging and installation — coverage of deactivation and refresh
+
+Both are mechanisms that already exist, tested here for `imap`, so each implementation hinge is degenerate. The refresh reads `SLASHER_ORIGIN`, so it is tested without the network.
+
+### Cycle 83 — Deactivated: actuation
+
+- **Hinge:** how the test acts once a package-set record names `imap` inactive.
+- **Options:** the plugin build. Something else.
+- **Decision / chat:** the plugin build.
+
+### Cycle 84 — Deactivated: observation
+
+- **Hinge:** what the test checks in the built plugin.
+- **Options:** no `/email` command and no row. No `/email` command.
+- **Decision / chat:** no command and no row, the recommended option.
+
+### Cycle 85 — Deactivated: controls
+
+- **Hinge:** what the project holds.
+- **Options:** foundation and `imap` copied in, with a record whose Inactive line names `imap`. Something else.
+- **Decision / chat:** foundation's plugin and `imap`, `imap` inactive.
+
+### Cycle 86 — Deactivated: implementation
+
+- **Hinge:** degenerate. The test passed against the code as it is.
+- **Outcome:** `test/automated/imap/deactivated.sh`. The automated suite passes, 44 of 44.
+
+### Cycle 87 — Refreshed: actuation
+
+- **Hinge:** how the test refreshes `imap`.
+- **Options:** by name, from a local origin. Every package, from a local origin.
+- **Decision / chat:** by name, from a local origin.
+
+### Cycle 88 — Refreshed: observation
+
+- **Hinge:** what the test checks.
+- **Options:** the origin's newer file arrives. The refresh reports `imap`.
+- **Decision / chat:** the newer file arrives, the recommended option.
+
+### Cycle 89 — Refreshed: controls
+
+- **Hinge:** the origin and the installed project.
+- **Options:** a local `imap.git` installed with `git subtree`, then changed. Something else.
+- **Decision / chat:** a local imap repository, installed then changed.
+
+### Cycle 90 — Refreshed: implementation
+
+- **Hinge:** degenerate. The test passed against the code as it is.
+- **Outcome:** `test/automated/imap/refreshed.sh`. The automated suite passes, 45 of 45.
+
+## The naming of the packaging and installation phase's tests
+
+**Unattended.** The engineer asked for the tests to be named with `/unattended name the tests`, and accepted the agent's plan. The agent chose each name for what its check establishes. The plan also named the one unnamed check outside the feature, the status line's worktree case, for the section heading its test already carried.
+
+| Test | Names | Reasoning |
+|---|---|---|
+| `imap/credential/read-without-security.sh` | Fails. Names macOS's security command as missing | The message is checked because it alone says why the script failed |
+| `test/interactive/imap/install.sh` | Installs the imap scripts. Installs the /email command | The two things an install by name brings today, the row coming with foundation's republish |
+| `imap/deactivated.sh` | Leaves out the /email command. Leaves out the /email row | What deactivation removes from the built plugin |
+| `imap/refreshed.sh` | Brings the package's newer files | The README stands for any file the origin changed |
+| `current-implementation.sh` | Prints the branch of an implementation recorded only in another worktree | The heading its section already carried |
+
+- **Outcome:** no check in the suite is left unnamed. The automated suite passes, 45 of 45.
+
 ---
 
 Authored by Scott Bellware on Mon Nov 9 2026 at 10:38:06 PM PT
@@ -590,3 +710,7 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 9:18:28 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 9:25:57 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:32:11 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:39:18 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 10:58:52 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:51 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:30:20 PM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:37:18 PM PT
