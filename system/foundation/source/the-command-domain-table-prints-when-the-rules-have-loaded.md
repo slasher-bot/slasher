@@ -53,8 +53,6 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **Each row is one command domain, except the `/slasher help`, `/unattended`, `/items`, `/features`, `/experiments`, `/recent`, `/next`, `/next?`, `/clarify`, `/estimate-confidence`, `/decision`, `/observation`, `/shortcuts`, and `/commands` rows.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. The row names the domain's help command, and its description is the one under that heading. The help command is the command `/<command> help` runs on to print the domain's help. For a domain with no root command of its own name, it is the skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE. `/items`, `/recent`, `/next`, `/next?`, `/unattended`, and `/estimate-confidence` are root commands of the PROCESS domain, `/clarify` of the LANGUAGE domain, and `/decision` of the LOG domain. Each has a row of its own. `/decision` stands below the `/log` row. The rows of the commands with shortcut aliases stand at the top, as the paragraph on shortcut aliases sets out. `/features` is a root command of the FEATURES domain, and `/experiments` of the EXPERIMENTS domain. `/features` has a row below the `/feature` row, and `/experiments` below the `/experiment` row. `/observation`, an alias of `/item observation` in the ITEM domain, has a row below the `/decision` row. Write each row as it stands here. A description may open with *These commands*, as the help does. No description opens with *This command*. Print no other root command, alias, or subcommand in the table. `/observation` and `/commands` are the only aliases with rows of their own. `/help` and `/command-table` itself have none.
 
-**After the startup table, its sentence, and the help line, run `/items 10`.** In the same response, below them, print the ten most recently created current items and the current implementations, as the `/items` command prints them. Head the items *10 most recent items*. Where the project has no items directory, print nothing in place of it. A read run again after a compaction runs no `/items 10`, for the same reason it prints no table.
-
 **A shortcut alias shares its command's row, ahead of the command.** `/'` is an alias of `/items`, `/.` of `/recent`, `/>>` of `/next`, `/?` of `/next?`, `/??` of `/clarify`, `/#` of `/estimate-confidence`, `/!` of `/unattended`, and `/;` of `/command-table`. Their rows stand directly below the `/slasher help` row, where the alias rows stood, in this order: `/;, /commands`, `/., /recent`, `/', /items`, `/>>, /next`, `/?, /next?`, `/??, /clarify`, `/#, /estimate-confidence`, and `/!, /unattended`.
 
 **`/shortcuts` prints the shortcuts table, and `/sc` is its alias.** It prints the table below, word for word, and nothing else. Each row names a shortcut alias, the command it stands for, and what it does. `/shortcuts` and `/sc` belong to no command domain. They share a row in the full table, just above the `/load` row. When a shortcut alias is added, removed, or changed, change this table in the same commit.
@@ -74,17 +72,19 @@ Type /help for all of Slasher's help, or /<command> help for one command's.
 
 **The first row names `/slasher help`, which prints the help of every Slasher command.** It names no command domain.
 
-**`/command-table` prints the full table.** It prints the full table and the help line below it, word for word, and nothing else: no startup table, no sentence, no `/items 10`, and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain, and has no row. `/commands` and `/;` are aliases of `/command-table`, and the help header names them. `/;` and `/commands` share the second row.
+**`/command-table` prints the full table.** It prints the full table and the help line below it, word for word, and nothing else: no startup table, no sentence, and no package set stanza. The engineer asks for it to see the commands again during a session. `/command-table` belongs to no command domain, and has no row. `/commands` and `/;` are aliases of `/command-table`, and the help header names them. `/;` and `/commands` share the second row.
 
 **The agent prints the table, not the harness.** The harness renders its display as plain text, and the table needs markdown. That is the reason the package set stanza is the agent's too.
 
 **Keep the table in line with the help.** When a domain's heading, its help command, or its description changes in the help text, change this table in the same commit.
 
-**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The full table gives one line for each domain but PHASE, and lines for `/next`, `/next?`, `/clarify`, and their aliases, so it shows the whole set at a glance. The current items and implementations show the engineer where the work stands before they make the first request.
+**Why:** the engineer sees the commands at the moment they can start using them. The startup table is small, so the start of a session fits on the screen. Its sentence still names every command, `/;` prints the full table, and `/slasher help` gives the detail. The full table gives one line for each domain but PHASE, and lines for `/next`, `/next?`, `/clarify`, and their aliases, so it shows the whole set at a glance.
 
-**How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, run `/items 10` below them, and then turn to the engineer's request or wait for one.
+**How to apply:** at the end of the session-start read, print the startup table and its sentence as they stand here, once, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Tue Nov 10 2026 the read ran `/items 10` after the help line, and printed the ten most recently created current items and the current implementations. The engineer removed it, because it made the start of a session take too much time.
 
 Until Tue Nov 10 2026 `/unattended` had no shortcut alias, and its row stood below the `/process` row. The engineer made `/!` its alias, and its row moved up among the shortcut rows.
 
@@ -239,7 +239,6 @@ Related:
 - the the-startup-display-prints-as-the-session-starts rule — the display the harness prints ahead of the read
 - the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — what the agent prints at the start, and what it does not
 - the the-slasher-skills-are-delivered-as-a-plugin-named-slasher rule — the plugin whose help the table follows
-- the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule — what `/items 10` prints
 
 ---
 
@@ -317,3 +316,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 10:52:54 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:53:54 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:21:33 AM PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 9:20:49 PM PT
