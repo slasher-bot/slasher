@@ -1,6 +1,6 @@
 ---
 name: ask-again
-description: Put the last question the engineer escaped again.
+description: Repeat the agent's previous multiple-choice question.
 disable-model-invocation: true
 ---
 

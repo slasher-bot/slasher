@@ -24,8 +24,8 @@ PROCESS
                                    after a plan is proposed
   /! <request>                     An alias of /unattended
 
-  /ask-again                       Put the last question the engineer escaped
-                                   again
+  /ask-again                       Repeat the agent's previous multiple-choice
+                                   question
   /..                              An alias of /ask-again
 
   /estimate-confidence             The agent's confidence of proceeding
