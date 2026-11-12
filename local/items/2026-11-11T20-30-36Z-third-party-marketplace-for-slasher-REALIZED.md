@@ -1,6 +1,6 @@
 # Third-party marketplace for Slasher
 
-- **State:** Implementation
+- **State:** Realized
 - **Tags:** [idea]
 - **Implementation:** the experiment `2026-11-11T20-33-36Z-third-party-marketplace`
 
@@ -68,3 +68,4 @@ Authored by Scott Bellware on Wed Nov 11 2026 at 12:30:36 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:31:20 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:33:36 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:02 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:39:12 PM PT

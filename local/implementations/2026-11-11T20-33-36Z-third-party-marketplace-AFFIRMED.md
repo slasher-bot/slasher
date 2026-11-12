@@ -10,7 +10,7 @@
 
 ## State
 
-- **State:** Active
+- **State:** Affirmed
 
 ## Setup
 
@@ -76,6 +76,9 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11** — Forecast: changed from no forecast to a stated forecast, at the engineer's direction.
 - **2026-11-11** — Test names: *Writes a manifest naming the package*, *Copies the package's skills*, and *Copies the package's hooks*, selected by the agent under `/unattended`. Each names what its check establishes, as a behavior, in the verb-first form the other shell tests use, such as *Retags an observation as a note*. None starts with *Is*, since only the manifest check compares a value, and the three read as one set.
 - **2026-11-12** — Test names: *Copies only the install skill*, *Carries no hooks*, *Copies the installer*, *Writes a listing of the plugin in the slasher marketplace*, and *Lists each set's packages, then the packages outside every set*, selected by the agent under `/unattended`. Each names what its check establishes, as a behavior, in the verb-first form the earlier names use. None starts with *Is*, since each names a behavior rather than a value compared.
+- **2026-11-12** — Verdict: concluded with an engineer's verdict, Affirmed, declared by the engineer: "Conclude the experiment as affirmed".
+- **2026-11-12** — Merge: `master` was merged into the branch, with the conflicts in `README.md` and `slasher-install` resolved to the branch's side, since `master`'s side was the same installer rename the branch held. The branch then merged into `master` as `24280c04`, after the automated tests passed. The experiment's log entries were written on `master` as it ran, so the project's log already holds them.
+- **2026-11-12** — Branch deletion: selected by the engineer. The worktree is removed and the local branch deleted. The branch on GitHub is deleted once `master` is pushed.
 
 ---
 
@@ -103,3 +106,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 1:46:52 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 2:12:32 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 2:20:23 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 2:31:24 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:39:12 PM PT
