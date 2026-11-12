@@ -5,12 +5,12 @@
 # whose SessionStart hook and status line print the session-start notice.
 # Fetch it into the root of the consuming project and run it from there:
 #
-#   curl -O https://raw.githubusercontent.com/slasher-bot/slasher/master/install
-#   sh install                          the default set
-#   sh install content                  a package set
-#   sh install foundation git           packages by name
+#   curl -O https://raw.githubusercontent.com/slasher-bot/slasher/master/slasher-install
+#   sh slasher-install                  the default set
+#   sh slasher-install content          a package set
+#   sh slasher-install foundation git   packages by name
 #
-# `sh install`, not `./install`, and this is the one script here written that way. It is
+# `sh slasher-install`, not `./slasher-install`, and this is the one script here written that way. It is
 # committed executable like every other, but it is also the only one delivered by `curl`,
 # which transfers content and not file metadata — so the copy a developer runs is never
 # executable, whatever mode the original carries. Every other script reaches a project inside

@@ -2,14 +2,14 @@
 
 Every shell script in this repository is **runnable as itself** — `./report-direct-commits.sh`, never `sh report-direct-commits.sh`.
 
-**A script is not required to carry `.sh`, and one does not.** `install` dropped it on 2026-08-23. A script is a command, and `./install` reads as one where `./install.sh` reads as a file being run. What this rule asks for is the bit and the shebang, and neither depends on the name. Where the text below says `.sh`, read it as *shell script*. Two things together make it so, and each is required: the bit and the shebang, below. **One script is documented with an `sh` prefix even so**, because the copy an engineer runs is not the file this repository holds. The delivery section states when that applies and why the bit is set on it regardless.
+**A script is not required to carry `.sh`, and one does not.** `slasher-install`, then named `install`, dropped it on 2026-08-23. A script is a command, and `./slasher-install` reads as one where `./slasher-install.sh` reads as a file being run. What this rule asks for is the bit and the shebang, and neither depends on the name. Where the text below says `.sh`, read it as *shell script*. Two things together make it so, and each is required: the bit and the shebang, below. **One script is documented with an `sh` prefix even so**, because the copy an engineer runs is not the file this repository holds. The delivery section states when that applies and why the bit is set on it regardless.
 
 - **The executable bit is set**, and it is set at the moment the file is created rather than the moment someone notices. Git records the bit in the file's mode, so the check is `git ls-files -s` reporting **`100755`** rather than `100644`.
 - **The file opens with a shebang** naming the interpreter — `#!/bin/sh` for every script here. Without it the bit alone leaves the interpreter to the invoking shell.
 
 **This reaches every shell script Slasher ships**, which is what makes it a rule about the system rather than about one repository's tidiness. Three kinds of script are authored here and they are covered alike:
 
-- **The tools at the root** — `report-direct-commits.sh` and `compile.sh` are authoring tools, run by whoever maintains Slasher, in this repository. **`install` sits beside them and is not one**: a consuming project fetches it, which is what makes it the one script here an engineer runs from somewhere other than a clone of this repository. That is the whole reason the delivery section below exists.
+- **The tools at the root** — `report-direct-commits.sh` and `compile.sh` are authoring tools, run by whoever maintains Slasher, in this repository. **`slasher-install` sits beside them and is not one**: a consuming project fetches it, which is what makes it the one script here an engineer runs from somewhere other than a clone of this repository. That is the whole reason the delivery section below exists.
 - **The scripts inside the packages**, and `foundation`'s in particular — `install.sh`, `refresh-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, and `read-consuming-projects.sh`, and each `install-dependencies.sh` a package carries. These are **installed into every consuming project** and run there, so a missing executable bit committed here arrives broken on every machine that installs the package. That is the case where the cost is not local, and it is the reason the rule is worth having rather than assuming.
 - **The tests in `test/`** — `test/automated/` and `test/interactive/`, run from this repository's root.
 
@@ -44,7 +44,7 @@ Any string containing a slash already says that. So `slasher/system/foundation/r
 - **`git clone` and `git subtree` carry the file's mode.** A script that reaches an engineer either way arrives executable and is invoked as itself, naming no interpreter — as `./name.sh` or in the path form, whichever the section above gives it. Every script here but the `curl`-fetched one is in this case.
 - **`curl` carries content and not file metadata.** An HTTP response body is bytes. The mode is a filesystem attribute and is not in it, so `curl` writes a new file at the default permissions and the copy is **never** executable, whatever the original's mode. A script delivered this way takes a usage line of **`sh name.sh`**, in its own header and everywhere its install is documented.
 
-**`install` is the only script in that second case**, being the one a project fetches before it has anything installed to deliver it. Its usage line is `sh install`, and the root `README.md` matches. It was `install-all.sh` until 2026-08-23.
+**`slasher-install` is the only script in that second case**, being the one a project fetches before it has anything installed to deliver it. Its usage line is `sh slasher-install`, and the root `README.md` matches. It was `install` until 2026-11-12, renamed so a download into a project cannot overwrite a file of the project's own, and `install-all.sh` until 2026-08-23.
 
 **Why the bit stays set on a script nobody can receive it from.** Two reasons. It is correct in this repository, where the file is cloned like any other and is run as itself by whoever maintains Slasher. And the delivery is not permanent. A script fetched by `curl` today may be delivered by some other means later. A file left `644` because one path stripped the bit would then arrive broken by a path that would have carried it.
 
@@ -76,7 +76,7 @@ Where the script is run by the harness rather than by a person, record its invoc
 ## What it reaches
 
 1. It reaches every shell script authored in this repository.
-2. The root authoring tools, `report-direct-commits.sh` and `compile.sh`, run in this repository. And `install`, also at the root, which is not an authoring tool: a consuming project fetches it.
+2. The root authoring tools, `report-direct-commits.sh` and `compile.sh`, run in this repository. And `slasher-install`, also at the root, which is not an authoring tool: a consuming project fetches it.
 3. The package scripts, including `foundation`'s `install.sh`, `refresh-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `read-consuming-projects.sh`, and each package's `install-dependencies.sh`.
 4. The tests in `test/automated/` and `test/interactive/`.
 5. It does not reach a script a consuming project writes for itself. This is a local rule, not a `foundation` rule. A consuming project wanting it adopts it as its own local rule.
@@ -96,7 +96,7 @@ Where the script is run by the harness rather than by a person, record its invoc
 1. Set the bit on every shell script, without exception, including one fetched with `curl`.
 2. A script delivered by `git clone` or `git subtree` arrives executable and its usage line names no interpreter.
 3. A script delivered by `curl` arrives never executable, so its usage line is `sh name.sh`.
-4. `install` is the only `curl`-delivered script. Its usage line is `sh install`, and the root `README.md` matches.
+4. `slasher-install` is the only `curl`-delivered script. Its usage line is `sh slasher-install`, and the root `README.md` matches.
 
 ## Review
 
@@ -105,6 +105,7 @@ Where the script is run by the harness rather than by a person, record its invoc
 ## Compression
 
 - 2026-10-29, compressed: 9925 → 3020 characters; checked: 37 directives, 32 kept, 2 less precise, 3 lost; 3 repairs, re-checked: 37 directives, 32 kept, 5 less precise, 0 lost; what is still not kept was judged reasons or background
+- 2026-11-12, revised: `install` is named `slasher-install`, a name the engineer settled; not re-checked
 
 Related:
 
@@ -132,3 +133,4 @@ Changed by Scott Bellware on Tue Oct 20 2026 at 9:46:42 PM PT
 Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:09 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:48:58 AM PT

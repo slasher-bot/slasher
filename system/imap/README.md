@@ -24,7 +24,7 @@ local = "some-label"
 
 **It needs macOS and Python 3.11 or later.** The Keychain is reached with macOS's `security` command, and the fetch is Python on its standard library. A Gmail mailbox is reached with an app password, since Gmail's IMAP does not take the account's own password.
 
-**It is not in the default package set.** A project that fetches email installs it by name, as in `sh install default imap`.
+**It is not in the default package set.** A project that fetches email installs it by name, as in `sh slasher-install default imap`.
 
 This is a standalone package: it includes no other packages.
 
