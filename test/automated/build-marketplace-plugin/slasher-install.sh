@@ -49,20 +49,20 @@ manifest=$(cat "$repository/plugins/slasher-install/.claude-plugin/plugin.json")
 
 [ "$manifest" = "$(control_manifest_text)" ] || fail "Writes a manifest naming the package" "found:" "$manifest"
 
-# Observation ----------------------------------------------------------------
+# Copies only the install skill ----------------------------------------------
 
 skills=$(ls "$repository/plugins/slasher-install/skills")
 
-[ "$skills" = "install" ] || fail "" "found:" "$skills"
+[ "$skills" = "install" ] || fail "Copies only the install skill" "found:" "$skills"
 
-# Observation ----------------------------------------------------------------
+# Carries no hooks -----------------------------------------------------------
 
-[ ! -e "$repository/plugins/slasher-install/hooks" ] || fail "" "found:" "$(ls "$repository/plugins/slasher-install/hooks")"
+[ ! -e "$repository/plugins/slasher-install/hooks" ] || fail "Carries no hooks" "found:" "$(ls "$repository/plugins/slasher-install/hooks")"
 
-# Observation ----------------------------------------------------------------
+# Copies the installer -------------------------------------------------------
 
 installer="$repository/plugins/slasher-install/slasher-install"
 
-cmp -s "$repository/slasher-install" "$installer" || fail "" "found:" "$(ls "$repository/plugins/slasher-install")"
+cmp -s "$repository/slasher-install" "$installer" || fail "Copies the installer" "found:" "$(ls "$repository/plugins/slasher-install")"
 
 echo "0 failed, 0 aborted"

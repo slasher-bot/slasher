@@ -46,10 +46,10 @@ LISTING
 
 (cd "$repository" && system/foundation/build-marketplace-listing.sh slasher-install) > /dev/null
 
-# Observation ----------------------------------------------------------------
+# Writes a listing of the plugin in the slasher marketplace ------------------
 
 listing=$(cat "$repository/.claude-plugin/marketplace.json")
 
-[ "$listing" = "$(control_listing_text)" ] || fail "" "found:" "$listing"
+[ "$listing" = "$(control_listing_text)" ] || fail "Writes a listing of the plugin in the slasher marketplace" "found:" "$listing"
 
 echo "0 failed, 0 aborted"
