@@ -37,6 +37,8 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **The plugins:** one plugin to a package, each depending on `foundation`. A bundle plugin, `slasher`, depends on the default set, so one install brings them all.
 - **The first step:** a marketplace listing the `foundation` plugin alone, added from the worktree's local path, to try the install end to end before anything is pushed.
 - **The plugin's root:** a built directory. A script assembles `plugins/foundation/` from the package, as `assemble-plugin.sh` does today, the build is committed, and `marketplace.json` names `./plugins/foundation`.
+- **2026-11-11 — The plugin installs Slasher, rather than carrying the rules.** Selected by the engineer on the agent's recommendation, after the trial showed `/foundation:log` stop without the rule loader. A plugin command runs Slasher's installer, which puts `slasher/system/` into the project. Where the project is not a git repository, the agent asks before running `git init`, since the installer refuses to prompt when it is not run in a terminal.
+- **2026-11-11 — The installer is downloaded from GitHub, by a new `/install` command.** Selected by the engineer. `/install` loads no rule, since it runs where none is installed yet. It downloads `install` from `slasher-bot/slasher`'s `master` and runs it. `/package install` stays as it is, for a project that already has Slasher.
 
 ## What happened
 
@@ -63,3 +65,5 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:05 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:09:35 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 3:14:03 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:05:43 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:10:12 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:16:33 PM PT
