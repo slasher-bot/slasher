@@ -5,9 +5,9 @@
   },
   "plugins": [
     {
-      "name": "foundation",
-      "source": "./plugins/foundation",
-      "description": "The commands of Slasher's foundation package"
+      "name": "slasher",
+      "source": "./plugins/slasher",
+      "description": "Installs Slasher into a project"
     }
   ]
 }
