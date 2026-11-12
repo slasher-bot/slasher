@@ -44,6 +44,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-12 — The marketplace lists one plugin, named `slasher`.** Selected by the engineer. It carries `/install`, typed `/slasher:install`, and is installed as `slasher@slasher`. It replaces the plan of one plugin per package and a bundle, since every package's plugin but foundation's would be a manifest alone. The engineer chose to try it despite sharing its name with the project's own `slasher` plugin, to see what Claude Code does with the two. Plugins for the Ruby and IMAP packages are likely later.
 - **2026-11-12 — A package defines a marketplace plugin by its manifest.** Selected by the engineer at the implementation hinge. Foundation holds `marketplace/slasher/plugin.json`. `build-marketplace-plugin.sh <plugin>` and `build-marketplace-listing.sh <plugin>` find a plugin by that file, so a Ruby or IMAP plugin is defined in its own package, and foundation's scripts do not name it.
 - **2026-11-12 — The marketplace plugin is named `slasher-install`.** Selected by the engineer, after the plugin named `slasher` took the place of the project's own `slasher` plugin. It is installed as `slasher-install@slasher`, and its command is `/slasher-install:install`. The marketplace keeps the name `slasher`.
+- **2026-11-12 — The installer is named `slasher-install`.** Selected by the engineer, since `/install` downloads it into the project's root, where a file of the project's own named `install` would be overwritten. The repository's root `install` is renamed on the experiment's branch, with the README, the shell-scripts rule, the imap README, and the interactive tests. `/install` downloads `slasher-install` from GitHub's `master`, so the download fails until the rename is merged and pushed.
 
 ## What happened
 
@@ -85,3 +86,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:04:51 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:01:13 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:41:41 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:49:23 AM PT
