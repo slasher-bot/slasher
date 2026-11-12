@@ -34,6 +34,7 @@ control_manifest_text() {
 MANIFEST
 }
 
+[ "$(ls "$repository/system/foundation/skills" | wc -l)" -gt 1 ] || { echo "Precondition: the package has skills besides install"; echo "0 failed, 1 aborted"; exit 1; }
 [ -d "$repository/system/foundation/plugin/hooks" ] || { echo "Precondition: the package has hooks"; echo "0 failed, 1 aborted"; exit 1; }
 
 # Actuation ------------------------------------------------------------------
@@ -46,13 +47,11 @@ manifest=$(cat "$repository/plugins/foundation/.claude-plugin/plugin.json")
 
 [ "$manifest" = "$(control_manifest_text)" ] || fail "Writes a manifest naming the package" "found:" "$manifest"
 
-# Copies the package's skills ------------------------------------------------
+# Observation ----------------------------------------------------------------
 
-skills_difference=$(diff -r \
-  "$repository/system/foundation/skills" \
-  "$repository/plugins/foundation/skills" || true)
+skills=$(ls "$repository/plugins/foundation/skills")
 
-[ -z "$skills_difference" ] || fail "Copies the package's skills" "found:" "$skills_difference"
+[ "$skills" = "install" ] || fail "" "found:" "$skills"
 
 # Observation ----------------------------------------------------------------
 
