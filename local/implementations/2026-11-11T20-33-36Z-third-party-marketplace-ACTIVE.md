@@ -39,6 +39,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **The plugin's root:** a built directory. A script assembles `plugins/foundation/` from the package, as `assemble-plugin.sh` does today, the build is committed, and `marketplace.json` names `./plugins/foundation`.
 - **2026-11-11 — The plugin installs Slasher, rather than carrying the rules.** Selected by the engineer on the agent's recommendation, after the trial showed `/foundation:log` stop without the rule loader. A plugin command runs Slasher's installer, which puts `slasher/system/` into the project. Where the project is not a git repository, the agent asks before running `git init`, since the installer refuses to prompt when it is not run in a terminal.
 - **2026-11-11 — The installer is downloaded from GitHub, by a new `/install` command.** Selected by the engineer. `/install` loads no rule, since it runs where none is installed yet. It downloads `install` from `slasher-bot/slasher`'s `master` and runs it. `/package install` stays as it is, for a project that already has Slasher.
+- **2026-11-12 — The marketplace plugin carries no hooks.** Selected by the engineer on the agent's recommendation, after the startup display printed twice. Before `/install` the hooks do nothing, and after it the installed project's own plugin runs them, so a copy in the marketplace plugin only runs each hook a second time.
 
 ## What happened
 
@@ -70,3 +71,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 9:05:43 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:10:12 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:16:33 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:27:33 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 9:51:15 AM PT
