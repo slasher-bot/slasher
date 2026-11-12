@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/build-marketplace-listing/slasher.sh
+#   test/automated/build-marketplace-listing/slasher-install.sh
 #
 # Run from the repository root.
 set -e
@@ -33,8 +33,8 @@ control_listing_text() {
   },
   "plugins": [
     {
-      "name": "slasher",
-      "source": "./plugins/slasher",
+      "name": "slasher-install",
+      "source": "./plugins/slasher-install",
       "description": "Installs Slasher into a project"
     }
   ]
@@ -44,7 +44,7 @@ LISTING
 
 # Actuation ------------------------------------------------------------------
 
-(cd "$repository" && system/foundation/build-marketplace-listing.sh slasher) > /dev/null
+(cd "$repository" && system/foundation/build-marketplace-listing.sh slasher-install) > /dev/null
 
 # Observation ----------------------------------------------------------------
 

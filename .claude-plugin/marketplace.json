@@ -5,8 +5,8 @@
   },
   "plugins": [
     {
-      "name": "slasher",
-      "source": "./plugins/slasher",
+      "name": "slasher-install",
+      "source": "./plugins/slasher-install",
       "description": "Installs Slasher into a project"
     }
   ]

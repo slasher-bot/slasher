@@ -4,7 +4,7 @@
 #   system/foundation/build-marketplace-plugin.sh <plugin>
 #
 # Run from the repository root. A package defines a marketplace plugin by holding its manifest
-# at marketplace/<plugin>/plugin.json, as foundation holds marketplace/slasher/plugin.json. The
+# at marketplace/<plugin>/plugin.json, as foundation holds marketplace/slasher-install/plugin.json. The
 # plugin is that manifest and the package's install skill, where it has one. It carries no other
 # command and no hooks: a project gets them from the Slasher that /install puts there, and a
 # second copy here would show each command twice and run each hook twice.
