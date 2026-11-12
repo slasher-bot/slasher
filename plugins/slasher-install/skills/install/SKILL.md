@@ -17,4 +17,5 @@ This skill loads no rule. It is the command that puts the rules into a project, 
 6. Download the installer from Slasher's repository: `curl -fsSO https://raw.githubusercontent.com/slasher-bot/slasher/master/slasher-install`.
 7. Run `sh slasher-install`, followed by the words typed, which name a package set or packages. With none, it installs the default set. Where it cannot fetch the packages over SSH, run it again as `SLASHER_ORIGIN=https://github.com/slasher-bot sh slasher-install`, with the same words.
 8. Remove the downloaded `slasher-install` file.
-9. Report what the installer printed: the packages installed and the files it placed. Say that Slasher's rules load when Claude Code is restarted in this project.
+9. Where `.claude/settings.json` has no `statusLine` key, add one, and change nothing else in the file: `"statusLine": { "type": "command", "command": "slasher/system/foundation/statusline.sh" }`. The installer leaves an existing settings file alone, and enabling this plugin for the project writes one before the installer runs. Where the file already has a `statusLine`, leave it, and say that Slasher's status line is not set.
+10. Report what the installer printed: the packages installed and the files it placed. Say that Slasher's rules load when Claude Code is restarted in this project.
