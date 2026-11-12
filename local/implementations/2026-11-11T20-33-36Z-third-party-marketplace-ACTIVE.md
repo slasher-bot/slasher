@@ -52,6 +52,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11** — After the restart, each command appeared once, though the project then held both the marketplace's `foundation` plugin and the installer's `slasher` plugin. The startup display printed twice, once for each plugin's `SessionStart` hook.
 - **2026-11-12** — The engineer reinstalled the hookless `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. The startup display printed once, and the reinstall worked.
 - **2026-11-12** — The engineer found every command listed under both `slasher:` and `foundation:` in the scratch project.
+- **2026-11-12** — The engineer reinstalled the install-only `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. Each command appeared once, under `slasher:`, with only `/foundation:install` under `foundation:`.
 
 ## Confirmations
 
@@ -77,3 +78,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 9:27:33 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 9:51:15 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 9:56:30 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 10:04:51 AM PT
