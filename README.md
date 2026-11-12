@@ -26,19 +26,19 @@ Slasher's packages are installed using `git subtree`. Each package is its own su
 Install all of Slasher's packages at once with:
 
 ```
-curl -O https://raw.githubusercontent.com/slasher-bot/slasher/master/install
-sh install
+curl -O https://raw.githubusercontent.com/slasher-bot/slasher/master/slasher-install
+sh slasher-install
 ```
 
-The `install` script installs and refreshes packages. It optionally takes a list of names that contains either the names of packages, or a named _package set_. With no arguments it installs the default set of packages.
+The `slasher-install` script installs and refreshes packages. It optionally takes a list of names that contains either the names of packages, or a named _package set_. With no arguments it installs the default set of packages.
 
-The script fetches the packages over SSH. Where no SSH key is registered, run it as `SLASHER_ORIGIN=https://github.com/slasher-bot sh install`.
+The script fetches the packages over SSH. Where no SSH key is registered, run it as `SLASHER_ORIGIN=https://github.com/slasher-bot sh slasher-install`.
 
 ### Warning
 
 Execute the install script using `sh`:
 
-`sh install`
+`sh slasher-install`
 
 The file is committed as an executable, but `curl` transfers content and not file metadata. The copy it writes is not executable, whatever mode the original carries. Every other script here is invoked as itself, because every other script reaches a project by `git subtree`, which does preserve the mode.
 

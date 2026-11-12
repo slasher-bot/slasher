@@ -59,7 +59,7 @@ git push git@github.com:slasher-bot/<package>.git publish-tmp:master
 git branch -D publish-tmp
 ```
 
-`report-direct-commits.sh` handles the repository before its first publish on its own. It reports `no master … — skipped` and carries on, so it needs no change when a package is added. `install` does: its package sets are written into the script, where the direct-commit check discovers packages by finding READMEs.
+`report-direct-commits.sh` handles the repository before its first publish on its own. It reports `no master … — skipped` and carries on, so it needs no change when a package is added. `slasher-install` does: its package sets are written into the script, where the direct-commit check discovers packages by finding READMEs.
 
 **If a push is rejected, stop — do not force yet.** A rejection means the component repo diverged, which the downstream-only rule forbids but does not prevent. Do not discard what is there. The remedy, in order:
 
