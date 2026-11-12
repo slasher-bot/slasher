@@ -37,7 +37,7 @@ claude plugin install slasher-install@slasher
 Then install Slasher into the project:
 
 ```sh
-claude slasher-install:install
+claude "/slasher-install:install"
 ```
 
 Where the directory is not yet a git repository, it asks before creating one.
