@@ -14,7 +14,7 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 - **A design method with the engineer in control at decision points.** Design By Efferent: the agent stops at the decisions that matter and offers options, never a single proposal.
 - **Human in the loop, or fully automated.** When a feature or experiment starts, the engineer chooses how much autonomy the agent is given.
 - **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
-- **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one.
+- **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one. Journal entries can be private, and those are stored outside of the project.
 - **Domain conventions.** Packages for language, testing, git, and versioning.
 - **Email.** An optional package, `imap`, fetches IMAP mail and Gmail labels into the project, with each credential kept in the macOS Keychain.
 - **Machinery.** The installer, package sets, a session-start hook, a status line, and commands.
@@ -25,20 +25,36 @@ Slasher's packages are installed using `git subtree`. Each package is its own su
 
 ### From the plugin marketplace
 
-In Claude Code, in the project's directory, add Slasher's marketplace and install its installer plugin:
+The marketplace plugin is an installer plugin that installs and initializes Slasher.
 
-```
-/plugin marketplace add slasher-bot/slasher
-/plugin install slasher-install@slasher
+In a terminal session (not Claude Code) in the project's directory, add Slasher's marketplace and install its installer plugin:
+
+```sh
+claude plugin marketplace add slasher-bot/slasher
+claude plugin install slasher-install@slasher
 ```
 
 Then install Slasher into the project:
 
-```
-/slasher-install:install
+```sh
+claude slasher-install:install
 ```
 
-It offers the package sets and the packages outside them, installs the ones selected, and sets Slasher's status line. Where the directory is not yet a git repository, it asks before creating one. Restart Claude Code in the project afterward, and Slasher's rules load.
+Where the directory is not yet a git repository, it asks before creating one.
+
+It offers the package sets and the packages outside them, installs the ones selected, and sets Slasher's status line.
+
+Start Claude Code once the installation is complete:
+
+```sh
+claude
+```
+
+Or, to start Claude Code with Slasher loaded:
+
+```sh
+claude "/load"
+```
 
 ### Without the plugin
 
