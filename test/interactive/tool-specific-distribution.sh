@@ -51,11 +51,11 @@ git -C "$control_ruby_project" commit --quiet --allow-empty -m "Repository is in
 
 # The default distribution installs seven packages ------------------------------
 
-cp "$repository/install" "$control_base_project/install"
+cp "$repository/slasher-install" "$control_base_project/slasher-install"
 
 (
   cd "$control_base_project"
-  SLASHER_ORIGIN="$control_origin" sh install >/dev/null 2>&1
+  SLASHER_ORIGIN="$control_origin" sh slasher-install >/dev/null 2>&1
 )
 
 base_packages=$(cd "$control_base_project/slasher/system" && ls)

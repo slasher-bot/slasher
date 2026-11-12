@@ -33,7 +33,7 @@ git -C "$project" init -q
 
 # Actuation ------------------------------------------------------------------
 
-(cd "$project" && sh "$repository/install" default imap) > /dev/null
+(cd "$project" && sh "$repository/slasher-install" default imap) > /dev/null
 
 # Observation ----------------------------------------------------------------
 
