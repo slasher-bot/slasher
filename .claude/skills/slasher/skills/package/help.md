@@ -6,6 +6,7 @@ PACKAGES
   /package deactivate <package>    Deactivate an installed package
   /package refresh [<package>...]  Refresh installed packages
   /package install                 Install Slasher
+  /install [<set or packages>]     Install Slasher where it is not installed
 
   /package-set                     Show the active package set
   /package-set <set or packages>   Declare the package set

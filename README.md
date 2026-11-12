@@ -23,18 +23,37 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 
 Slasher's packages are installed using `git subtree`. Each package is its own subtree, which allows the packages to be refreshed from the source.
 
-Install all of Slasher's packages at once with:
+### From the plugin marketplace
+
+In Claude Code, in the project's directory, add Slasher's marketplace and install its installer plugin:
+
+```
+/plugin marketplace add slasher-bot/slasher
+/plugin install slasher-install@slasher
+```
+
+Then install Slasher into the project:
+
+```
+/slasher-install:install
+```
+
+It offers the package sets and the packages outside them, installs the ones selected, and sets Slasher's status line. Where the directory is not yet a git repository, it asks before creating one. Restart Claude Code in the project afterward, and Slasher's rules load.
+
+### Without the plugin
+
+Install all of Slasher's packages at once from a terminal, in the project's directory:
 
 ```
 curl -O https://raw.githubusercontent.com/slasher-bot/slasher/master/slasher-install
 sh slasher-install
 ```
 
-The `slasher-install` script installs and refreshes packages. It optionally takes a list of names that contains either the names of packages, or a named _package set_. With no arguments it installs the default set of packages.
+The `slasher-install` script installs and refreshes packages. `sh slasher-install --list` prints the package sets and the packages outside them. It optionally takes a list of names that contains either the names of packages, or a named _package set_. With no arguments it installs the default set of packages.
 
 The script fetches the packages over SSH. Where no SSH key is registered, run it as `SLASHER_ORIGIN=https://github.com/slasher-bot sh slasher-install`.
 
-### Warning
+#### Warning
 
 Execute the install script using `sh`:
 
