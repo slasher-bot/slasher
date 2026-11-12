@@ -64,6 +64,8 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-12** — The engineer installed `slasher-install@slasher` with `--scope project` into a new, empty scratch project and ran `/slasher-install:install`. It ran `git init` at the engineer's selection, downloaded `slasher-install` from GitHub, and installed the default package set, the project's own `slasher` plugin, `AGENTS.md`, and `CLAUDE.md`. It did not set the status line: `.claude/settings.json` already existed, holding only `enabledPlugins`, so the installer left it unchanged.
 - **2026-11-12** — The engineer rebuilt the scratch project empty, installed the rebuilt `slasher-install@slasher` with `--scope project`, ran `/slasher-install:install`, and restarted Claude Code. Slasher installed, and the status line showed it.
 - **2026-11-12** — The engineer rebuilt the scratch project empty, installed the rebuilt `slasher-install@slasher` with `--scope project`, and ran `/slasher-install:install`. It offered the package sets and the packages outside them, and installed from the installer the plugin carries, with no download. The install worked.
+- **2026-11-12** — Adding the marketplace from GitHub, as `slasher-bot/slasher#experiment/worktree/third-party-marketplace`, was refused at first. Adding the worktree's folder had recorded `slasher` under `extraKnownMarketplaces` in the engineer's user settings, with the folder as its source, and removing the marketplace left that record. Claude Code refuses a marketplace whose source does not match its record. The agent changed the record's source to GitHub at the engineer's selection, and the marketplace was added from GitHub. The record was then removed, at the engineer's direction.
+- **2026-11-12** — The engineer rebuilt the scratch project empty, installed `slasher-install@slasher` from the GitHub marketplace with `--scope project`, ran `/slasher-install:install`, and restarted Claude Code. The install succeeded.
 
 ## Confirmations
 
@@ -100,3 +102,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 1:41:34 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:46:52 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 2:12:32 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 2:20:23 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:31:24 PM PT
