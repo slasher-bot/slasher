@@ -72,6 +72,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11** — Kind: changed from a feature to an experiment, at the engineer's direction. The branch `feature/worktree/third-party-marketplace` was renamed `experiment/worktree/third-party-marketplace`, and its worktree moved from `../slasher-feature-worktree-third-party-marketplace` to `../slasher-experiment-worktree-third-party-marketplace`.
 - **2026-11-11** — Forecast: changed from no forecast to a stated forecast, at the engineer's direction.
 - **2026-11-11** — Test names: *Writes a manifest naming the package*, *Copies the package's skills*, and *Copies the package's hooks*, selected by the agent under `/unattended`. Each names what its check establishes, as a behavior, in the verb-first form the other shell tests use, such as *Retags an observation as a note*. None starts with *Is*, since only the manifest check compares a value, and the three read as one set.
+- **2026-11-12** — Test names: *Copies only the install skill*, *Carries no hooks*, *Copies the installer*, *Writes a listing of the plugin in the slasher marketplace*, and *Lists each set's packages, then the packages outside every set*, selected by the agent under `/unattended`. Each names what its check establishes, as a behavior, in the verb-first form the earlier names use. None starts with *Is*, since each names a behavior rather than a value compared.
 
 ---
 
@@ -96,3 +97,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 1:28:02 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:32:28 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:41:34 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:46:52 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:12:32 PM PT
