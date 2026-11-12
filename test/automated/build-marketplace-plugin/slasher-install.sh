@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/build-marketplace-plugin/slasher.sh
+#   test/automated/build-marketplace-plugin/slasher-install.sh
 #
 # Run from the repository root.
 set -e
@@ -27,7 +27,7 @@ cp -R system/foundation "$repository/system/foundation"
 control_manifest_text() {
   cat <<'MANIFEST'
 {
-  "name": "slasher",
+  "name": "slasher-install",
   "displayName": "Slasher",
   "description": "Installs Slasher into a project"
 }
@@ -39,22 +39,22 @@ MANIFEST
 
 # Actuation ------------------------------------------------------------------
 
-(cd "$repository" && system/foundation/build-marketplace-plugin.sh slasher) > /dev/null
+(cd "$repository" && system/foundation/build-marketplace-plugin.sh slasher-install) > /dev/null
 
 # Writes a manifest naming the package ---------------------------------------
 
-manifest=$(cat "$repository/plugins/slasher/.claude-plugin/plugin.json")
+manifest=$(cat "$repository/plugins/slasher-install/.claude-plugin/plugin.json")
 
 [ "$manifest" = "$(control_manifest_text)" ] || fail "Writes a manifest naming the package" "found:" "$manifest"
 
 # Observation ----------------------------------------------------------------
 
-skills=$(ls "$repository/plugins/slasher/skills")
+skills=$(ls "$repository/plugins/slasher-install/skills")
 
 [ "$skills" = "install" ] || fail "" "found:" "$skills"
 
 # Observation ----------------------------------------------------------------
 
-[ ! -e "$repository/plugins/slasher/hooks" ] || fail "" "found:" "$(ls "$repository/plugins/slasher/hooks")"
+[ ! -e "$repository/plugins/slasher-install/hooks" ] || fail "" "found:" "$(ls "$repository/plugins/slasher-install/hooks")"
 
 echo "0 failed, 0 aborted"
