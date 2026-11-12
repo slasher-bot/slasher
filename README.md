@@ -25,7 +25,7 @@ Slasher's packages are installed using `git subtree`. Each package is its own su
 
 ### From the plugin marketplace
 
-The marketplace plugin is an installer plugin that installs and initializes Slasher.
+The marketplace plugin is an installer plugin that installs and initializes Slasher. The installer plugin delegates to Slasher's installation and setup scripts (see below).
 
 In a terminal session (not Claude Code) in the project's directory, add Slasher's marketplace and install its installer plugin:
 
