@@ -33,8 +33,8 @@ LISTING
 
 listing=$(cd "$project" && sh "$repository/slasher-install" --list)
 
-# Observation ----------------------------------------------------------------
+# Lists each set's packages, then the packages outside every set -------------
 
-[ "$listing" = "$(control_listing_text)" ] || fail "" "found:" "$listing"
+[ "$listing" = "$(control_listing_text)" ] || fail "Lists each set's packages, then the packages outside every set" "found:" "$listing"
 
 echo "0 failed, 0 aborted"
