@@ -46,6 +46,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-12 — The marketplace plugin is named `slasher-install`.** Selected by the engineer, after the plugin named `slasher` took the place of the project's own `slasher` plugin. It is installed as `slasher-install@slasher`, and its command is `/slasher-install:install`. The marketplace keeps the name `slasher`.
 - **2026-11-12 — The installer is named `slasher-install`.** Selected by the engineer, since `/install` downloads it into the project's root, where a file of the project's own named `install` would be overwritten. The repository's root `install` is renamed on the experiment's branch, with the README, the shell-scripts rule, the imap README, and the interactive tests. `/install` downloads `slasher-install` from GitHub's `master`, so the download fails until the rename is merged and pushed.
 - **2026-11-12 — `/install` adds the status line where the installer leaves it out.** Selected by the engineer on the agent's recommendation, after the clean install in the scratch project left the status line unset. Installing `slasher-install` with `--scope project` writes `.claude/settings.json` before `/install` runs, and the installer does not edit an existing settings file. After the installer runs, `/install` adds the `statusLine` key where the file has none, and changes nothing else in it.
+- **2026-11-12 — The plugin install is elaborated to a full install, in three additions.** Selected by the engineer on the agent's recommendation, after the clean install proved the basics. First, the plugin carries the installer, so `/install` downloads nothing and runs the installer of the plugin's own version. Second, `/install` with nothing typed after it offers the package sets and the packages, including those outside the default set, through the selection interface. Third, the README gives the marketplace as the way to install Slasher, and keeps the `curl` install as the alternative. The packages stay out of the plugin: they are added and refreshed with `git subtree`, and a copy in the plugin would be a second source with nothing to refresh it.
 
 ## What happened
 
@@ -92,3 +93,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 11:41:41 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:49:23 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:28:02 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:32:28 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 1:41:34 PM PT
