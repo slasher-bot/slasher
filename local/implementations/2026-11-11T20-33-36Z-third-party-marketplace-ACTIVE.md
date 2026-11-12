@@ -49,6 +49,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11** — The engineer added the worktree as a marketplace in a project without Slasher, and installed `foundation@slasher` from it. The install worked. `/foundation:log` stopped at its first step: the skill runs `slasher/system/foundation/load-rules.sh`, and the project has neither the loader nor the rules. The plugin carries skills and hooks, and no rule loader or rule files.
 - **2026-11-11** — In the scratch project, the engineer reinstalled `foundation@slasher` from the rebuilt marketplace and ran `/foundation:install`. Slasher installed, and a log entry was then written there.
 - **2026-11-11** — After the restart, each command appeared once, though the project then held both the marketplace's `foundation` plugin and the installer's `slasher` plugin. The startup display printed twice, once for each plugin's `SessionStart` hook.
+- **2026-11-12** — The engineer reinstalled the hookless `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. The startup display printed once, and the reinstall worked.
 
 ## Confirmations
 
@@ -72,3 +73,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 9:10:12 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:16:33 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:27:33 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 9:51:15 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 9:56:30 AM PT
