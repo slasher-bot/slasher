@@ -46,6 +46,8 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11** — The copied hooks run scripts from the project's own `slasher/system/` or `system/`. A project that installs the plugin from the marketplace without Slasher's installer has neither, so its hooks do nothing.
 - **2026-11-11** — `claude plugin validate` passes on the worktree's built marketplace, with three warnings: no marketplace description, and no plugin version or author.
 - **2026-11-11** — The engineer added the worktree as a marketplace in a project without Slasher, and installed `foundation@slasher` from it. The install worked. `/foundation:log` stopped at its first step: the skill runs `slasher/system/foundation/load-rules.sh`, and the project has neither the loader nor the rules. The plugin carries skills and hooks, and no rule loader or rule files.
+- **2026-11-11** — In the scratch project, the engineer reinstalled `foundation@slasher` from the rebuilt marketplace and ran `/foundation:install`. Slasher installed, and a log entry was then written there.
+- **2026-11-11** — After the restart, each command appeared once, though the project then held both the marketplace's `foundation` plugin and the installer's `slasher` plugin. The startup display printed twice, once for each plugin's `SessionStart` hook.
 
 ## Confirmations
 
@@ -67,3 +69,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 3:14:03 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:05:43 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:10:12 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:16:33 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:27:33 PM PT
