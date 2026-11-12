@@ -63,6 +63,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-12** — The engineer replaced `foundation@slasher` with `slasher@slasher` in the scratch project, with `--scope project`, and restarted Claude Code. The startup display did not print, and Slasher's commands did not appear in tab completion. The marketplace's `slasher` plugin took the place of the project's own `slasher` plugin, which carries the commands and the hooks.
 - **2026-11-12** — The engineer installed `slasher-install@slasher` with `--scope project` into a new, empty scratch project and ran `/slasher-install:install`. It ran `git init` at the engineer's selection, downloaded `slasher-install` from GitHub, and installed the default package set, the project's own `slasher` plugin, `AGENTS.md`, and `CLAUDE.md`. It did not set the status line: `.claude/settings.json` already existed, holding only `enabledPlugins`, so the installer left it unchanged.
 - **2026-11-12** — The engineer rebuilt the scratch project empty, installed the rebuilt `slasher-install@slasher` with `--scope project`, ran `/slasher-install:install`, and restarted Claude Code. Slasher installed, and the status line showed it.
+- **2026-11-12** — The engineer rebuilt the scratch project empty, installed the rebuilt `slasher-install@slasher` with `--scope project`, and ran `/slasher-install:install`. It offered the package sets and the packages outside them, and installed from the installer the plugin carries, with no download. The install worked.
 
 ## Confirmations
 
@@ -98,3 +99,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 1:32:28 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:41:34 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 1:46:52 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 2:12:32 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:20:23 PM PT
