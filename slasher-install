@@ -9,6 +9,7 @@
 #   sh slasher-install                  the default set
 #   sh slasher-install content          a package set
 #   sh slasher-install foundation git   packages by name
+#   sh slasher-install --list           the sets and packages it can install
 #
 # `sh slasher-install`, not `./slasher-install`, and this is the one script here written that way. It is
 # committed executable like every other, but it is also the only one delivered by `curl`,
@@ -27,6 +28,42 @@ set -e
 #   SLASHER_ORIGIN=https://github.com/slasher-bot <this script>
 #
 origin=${SLASHER_ORIGIN:-git@github.com:slasher-bot}
+
+# A package set is a named list of packages. `default` is the set a project gets when it names
+# nothing, and it is one named set among others rather than a special case in the code.
+#
+# A set is written here, which is the only place a script can read one today. Where a set should
+# live so that a person reads it too is not settled — see the item *A content project is a named
+# package set*.
+set_names="default content"
+
+# The packages outside every set. A project installs one by naming it.
+other_packages="imap ext/ruby-lang"
+
+set_packages() {
+  case $1 in
+    default)
+      printf '%s' "foundation language testing git versioning design-by-efferent journal"
+      ;;
+    content)
+      printf '%s' "foundation language git versioning journal"
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
+# `--list` prints each set with its packages, then the packages outside every set, and installs
+# nothing. It runs ahead of the repository check, so /install can offer the packages before it
+# asks whether to create a repository.
+if [ "$1" = "--list" ]; then
+  for name in $set_names; do
+    echo "$name: $(set_packages "$name")"
+  done
+  echo "other: $other_packages"
+  exit 0
+fi
 
 # Slasher is installed with `git subtree`, so there has to be a repository to install into.
 # Rather than refusing outright, offer to make one — a developer running this in a directory
@@ -106,26 +143,6 @@ add() {
   fi
 
   git subtree pull --prefix "$prefix" "$repo" master --squash
-}
-
-# A package set is a named list of packages. `default` is the set a project gets when it names
-# nothing, and it is one named set among others rather than a special case in the code.
-#
-# A set is written here, which is the only place a script can read one today. Where a set should
-# live so that a person reads it too is not settled — see the item *A content project is a named
-# package set*.
-set_packages() {
-  case $1 in
-    default)
-      printf '%s' "foundation language testing git versioning design-by-efferent journal"
-      ;;
-    content)
-      printf '%s' "foundation language git versioning journal"
-      ;;
-    *)
-      return 1
-      ;;
-  esac
 }
 
 # The repository a package publishes to is its installed path with the slashes flattened to
