@@ -22,6 +22,8 @@ trap 'rm -rf "$repository"' EXIT
 mkdir -p "$repository/system"
 cp -R system/foundation "$repository/system/foundation"
 
+printf '#!/bin/sh\necho some installer\n' > "$repository/slasher-install"
+
 # The text is read from a function rather than a heredoc inside $(…): macOS /bin/sh joins a line
 # ending in a backslash to the next one there.
 control_manifest_text() {
@@ -56,5 +58,11 @@ skills=$(ls "$repository/plugins/slasher-install/skills")
 # Observation ----------------------------------------------------------------
 
 [ ! -e "$repository/plugins/slasher-install/hooks" ] || fail "" "found:" "$(ls "$repository/plugins/slasher-install/hooks")"
+
+# Observation ----------------------------------------------------------------
+
+installer="$repository/plugins/slasher-install/slasher-install"
+
+cmp -s "$repository/slasher-install" "$installer" || fail "" "found:" "$(ls "$repository/plugins/slasher-install")"
 
 echo "0 failed, 0 aborted"
