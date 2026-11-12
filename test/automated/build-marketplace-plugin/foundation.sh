@@ -34,6 +34,8 @@ control_manifest_text() {
 MANIFEST
 }
 
+[ -d "$repository/system/foundation/plugin/hooks" ] || { echo "Precondition: the package has hooks"; echo "0 failed, 1 aborted"; exit 1; }
+
 # Actuation ------------------------------------------------------------------
 
 (cd "$repository" && system/foundation/build-marketplace-plugin.sh foundation) > /dev/null
@@ -52,12 +54,8 @@ skills_difference=$(diff -r \
 
 [ -z "$skills_difference" ] || fail "Copies the package's skills" "found:" "$skills_difference"
 
-# Copies the package's hooks -------------------------------------------------
+# Observation ----------------------------------------------------------------
 
-hooks_difference=$(diff -r \
-  "$repository/system/foundation/plugin/hooks" \
-  "$repository/plugins/foundation/hooks" || true)
-
-[ -z "$hooks_difference" ] || fail "Copies the package's hooks" "found:" "$hooks_difference"
+[ ! -e "$repository/plugins/foundation/hooks" ] || fail "" "found:" "$(ls "$repository/plugins/foundation/hooks")"
 
 echo "0 failed, 0 aborted"
