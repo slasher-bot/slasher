@@ -40,6 +40,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11 — The plugin installs Slasher, rather than carrying the rules.** Selected by the engineer on the agent's recommendation, after the trial showed `/foundation:log` stop without the rule loader. A plugin command runs Slasher's installer, which puts `slasher/system/` into the project. Where the project is not a git repository, the agent asks before running `git init`, since the installer refuses to prompt when it is not run in a terminal.
 - **2026-11-11 — The installer is downloaded from GitHub, by a new `/install` command.** Selected by the engineer. `/install` loads no rule, since it runs where none is installed yet. It downloads `install` from `slasher-bot/slasher`'s `master` and runs it. `/package install` stays as it is, for a project that already has Slasher.
 - **2026-11-12 — The marketplace plugin carries no hooks.** Selected by the engineer on the agent's recommendation, after the startup display printed twice. Before `/install` the hooks do nothing, and after it the installed project's own plugin runs them, so a copy in the marketplace plugin only runs each hook a second time.
+- **2026-11-12 — The marketplace plugin carries only `/install`.** Selected by the engineer on the agent's recommendation, after the scratch project showed every command under both `slasher:` and `foundation:`. Before `/install` the other commands stop at their first step, and after it the installed project's own plugin carries them.
 
 ## What happened
 
@@ -50,6 +51,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11** — In the scratch project, the engineer reinstalled `foundation@slasher` from the rebuilt marketplace and ran `/foundation:install`. Slasher installed, and a log entry was then written there.
 - **2026-11-11** — After the restart, each command appeared once, though the project then held both the marketplace's `foundation` plugin and the installer's `slasher` plugin. The startup display printed twice, once for each plugin's `SessionStart` hook.
 - **2026-11-12** — The engineer reinstalled the hookless `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. The startup display printed once, and the reinstall worked.
+- **2026-11-12** — The engineer found every command listed under both `slasher:` and `foundation:` in the scratch project.
 
 ## Confirmations
 
@@ -74,3 +76,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 9:16:33 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 9:27:33 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 9:51:15 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 9:56:30 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 AM PT
