@@ -1,0 +1,13 @@
+{
+  "name": "slasher",
+  "owner": {
+    "name": "slasher-bot"
+  },
+  "plugins": [
+    {
+      "name": "foundation",
+      "source": "./plugins/foundation",
+      "description": "The commands of Slasher's foundation package"
+    }
+  ]
+}
