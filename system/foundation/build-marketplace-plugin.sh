@@ -3,8 +3,9 @@
 #
 #   system/foundation/build-marketplace-plugin.sh <package>
 #
-# Run from the repository root. The plugin is the package's skills/, its
-# plugin/hooks/ where it has one, and a manifest written here.
+# Run from the repository root. The plugin is the package's skills/ and a manifest written here.
+# It carries no hooks: a project gets them from the Slasher that /install puts there, and a
+# second copy here would run each hook twice.
 set -e
 
 package="$1"
@@ -18,7 +19,6 @@ rm -rf "$plugin"
 mkdir -p "$plugin/.claude-plugin"
 
 [ -d "$source/skills" ] && cp -R "$source/skills" "$plugin/skills"
-[ -d "$source/plugin/hooks" ] && cp -R "$source/plugin/hooks" "$plugin/hooks"
 
 cat > "$plugin/.claude-plugin/plugin.json" <<MANIFEST
 {
