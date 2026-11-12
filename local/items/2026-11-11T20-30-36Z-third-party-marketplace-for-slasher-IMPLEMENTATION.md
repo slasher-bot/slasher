@@ -1,7 +1,8 @@
 # Third-party marketplace for Slasher
 
-- **State:** Open
+- **State:** Implementation
 - **Tags:** [idea]
+- **Implementation:** the experiment `2026-11-11T20-33-36Z-third-party-marketplace`
 
 **Slasher is distributed through a third-party marketplace of its own.** A third-party marketplace is one Anthropic does not run: a git repository holding a `.claude-plugin/marketplace.json` that lists the plugin, which a user adds with `/plugin marketplace add`.
 
@@ -65,3 +66,5 @@ The agent read the current Claude Code documentation on plugins and marketplaces
 
 Authored by Scott Bellware on Wed Nov 11 2026 at 12:30:36 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:31:20 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:33:36 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:02 PM PT

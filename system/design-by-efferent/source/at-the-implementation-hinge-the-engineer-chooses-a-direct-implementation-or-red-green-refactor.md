@@ -4,10 +4,10 @@
 
 At the **implementation hinge** — the fourth of the five — the agent puts two candidates to the engineer:
 
-1. **A full implementation** — the code that satisfies the test, written directly.
+1. **A complete implementation** — the code that satisfies the test, written directly.
 2. **An implementation that lets the test fail**, and then the complete **red, green, refactor** cycle.
 
-**The two options carry these labels, word for word, in this order, with the agent's own figures:** *One batch (Agent generates full implementation - Confidence: 85%)*, then *Controlled and calibrated increments (Red, Green, Refactor - Confidence: 90%)*.
+**The two options carry these labels, word for word, in this order, with the agent's own figures:** *One batch (Agent generates complete implementation - Confidence: 85%)*, then *Controlled and calibrated increments (Red, Green, Refactor - Confidence: 90%)*.
 
 **Each label ends with the agent's confidence in that option**, inside the parentheses after a dash. The confidence is 100% minus the option's rework risk, computed and not estimated.
 
@@ -41,12 +41,12 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 
 **Why:** whether to drive a unit's implementation through a failing test is a judgment about that unit. It turns on how confident the design is, whether the test's discrimination is in doubt, and whether the shape wants working out under a red. It is subtle, in that it cannot be read off the code, and load-bearing, in that the implementation follows from it. That is a hinge's definition, and it belongs at the hinge where the implementation is decided rather than as a procedure attached to every one. Offering it as one of two candidates puts the engineer in the position the gates exist to create. They compare real alternatives rather than ratifying a single proposal.
 
-**How to apply:** at the implementation hinge for a unit's **first** implementation, offer the two candidates through the selection UI. They are the full implementation, and the red/green/refactor cycle. Where the cycle is chosen, write the red only if its cause reaches no stable test. Run the suite, then green, then refactor. Do not offer the cycle when covering behavior that already exists. Do not present a failing implementation as an option merely to reach the two-option floor.
+**How to apply:** at the implementation hinge for a unit's **first** implementation, offer the two candidates through the selection UI. They are the complete implementation, and the red/green/refactor cycle. Where the cycle is chosen, write the red only if its cause reaches no stable test. Run the suite, then green, then refactor. Do not offer the cycle when covering behavior that already exists. Do not present a failing implementation as an option merely to reach the two-option floor.
 
 ## Compressed
 
 1. At the implementation hinge, the fourth of the five, put two candidates to the engineer through the selection UI.
-2. The first candidate is **a full implementation**: code that satisfies the test, written directly.
+2. The first candidate is **a complete implementation**: code that satisfies the test, written directly.
 3. The second candidate is **an implementation that lets the test fail**, followed by the complete **red, green, refactor** cycle.
 4. Both candidates answer the hinge's question: *how does this implementation come about*.
 5. Treat the cycle as a design judgment about this unit, not a procedure applied to every unit.
@@ -92,7 +92,7 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 
 ## The labels
 
-1. Label the first option *One batch (Agent generates full implementation - Confidence: 85%)*, and the second *Controlled and calibrated increments (Red, Green, Refactor - Confidence: 90%)*, word for word but for the figures, in that order.
+1. Label the first option *One batch (Agent generates complete implementation - Confidence: 85%)*, and the second *Controlled and calibrated increments (Red, Green, Refactor - Confidence: 90%)*, word for word but for the figures, in that order.
 2. Open each option's description with the agent's own estimate, as *Rework risk: 30% (how likely it is that you will have to redo what this produces.)*. The labels' words stay as fixed.
 3. Each label's figure is the agent's confidence in that option: 100% minus the option's rework risk, computed.
 
@@ -106,8 +106,11 @@ But it does not excuse the search. Where a hinge has a real second implementatio
 - 2026-11-08, revised: each option's description opens with the agent's rework risk estimate, at the engineer's direction; not re-checked
 - 2026-11-09, revised: each label ends with the agent's confidence in that option, at the engineer's direction; not re-checked
 - 2026-11-09, revised: the first label is *One batch (Agent generates full implementation - Confidence: 85%)*, and the second takes the same form, at the engineer's direction; not re-checked
+- 2026-11-11, revised: the first candidate is a complete implementation, not a full implementation, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Wed Nov 11 2026 the first candidate was named a full implementation, and the first label read *One batch (Agent generates full implementation - Confidence: 85%)*. The engineer renamed it a complete implementation.
 
 Until Mon Nov 9 2026 the labels carried no confidence figure, and the first read *One batch, increased rework risk (agent generates full implementation)*.
 
@@ -160,3 +163,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 2:08:26 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 2:15:41 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 11:26:02 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 11:28:31 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:34:22 PM PT

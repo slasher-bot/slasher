@@ -8,9 +8,9 @@
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias. Their order is `/commands, /;`, `/recent, /.`, `/current, /'`, `/next, />>`, and `/next?, /?`.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias. Their order is `/commands, /;`, `/recent, /.`, `/current, /'`, `/next, /proceed, />>`, and `/next?, /?`.
 
-**A row with a shortcut alias names the command first and the alias after it, as `/recent, /.`.** This holds in the full table and in the startup table alike.
+**A row with a shortcut alias names the command first and the alias after it, as `/recent, /.`.** A command with an alias and a shortcut names the alias, then the shortcut last, as `/next, /proceed, />>`. This holds in the full table and in the startup table alike.
 
 **The help's order is the table's order.** `plugin/help-order` lists the domains in the order the help and the table both follow. A domain it does not list follows, in name order. Add a new domain to it where its row belongs.
 
@@ -25,6 +25,10 @@
 **How to apply:** when you write or change a command, its help, or a shortcut alias, change its row in its domain's `command-table-rows.md`, or foundation's plugin files for the top rows and the shortcuts, and run `./compile.sh` so the plugin's tables are rebuilt.
 
 ## History
+
+Until Wed Nov 11 2026 the top rows named `/next, />>`, where they now name `/next, /proceed, />>`. For part of that day they named `/proceed, />>, /next`, and a command with two aliases named the shortcut first.
+
+For part of Wed Nov 11 2026, `/!` was an alias of `/next`, `/#` the alias of `/unattended`, and `/%` the alias of `/estimate-confidence`, and a command with two aliases named both. The engineer reverted it, since `/>>` already proceeds.
 
 Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
@@ -53,3 +57,7 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:55 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:33:27 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:37:48 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:58:17 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:03:09 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:15:04 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:20:46 PM PT
