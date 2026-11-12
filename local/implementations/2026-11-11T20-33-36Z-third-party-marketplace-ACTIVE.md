@@ -41,6 +41,8 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-11 — The installer is downloaded from GitHub, by a new `/install` command.** Selected by the engineer. `/install` loads no rule, since it runs where none is installed yet. It downloads `install` from `slasher-bot/slasher`'s `master` and runs it. `/package install` stays as it is, for a project that already has Slasher.
 - **2026-11-12 — The marketplace plugin carries no hooks.** Selected by the engineer on the agent's recommendation, after the startup display printed twice. Before `/install` the hooks do nothing, and after it the installed project's own plugin runs them, so a copy in the marketplace plugin only runs each hook a second time.
 - **2026-11-12 — The marketplace plugin carries only `/install`.** Selected by the engineer on the agent's recommendation, after the scratch project showed every command under both `slasher:` and `foundation:`. Before `/install` the other commands stop at their first step, and after it the installed project's own plugin carries them.
+- **2026-11-12 — The marketplace lists one plugin, named `slasher`.** Selected by the engineer. It carries `/install`, typed `/slasher:install`, and is installed as `slasher@slasher`. It replaces the plan of one plugin per package and a bundle, since every package's plugin but foundation's would be a manifest alone. The engineer chose to try it despite sharing its name with the project's own `slasher` plugin, to see what Claude Code does with the two. Plugins for the Ruby and IMAP packages are likely later.
+- **2026-11-12 — A package defines a marketplace plugin by its manifest.** Selected by the engineer at the implementation hinge. Foundation holds `marketplace/slasher/plugin.json`. `build-marketplace-plugin.sh <plugin>` and `build-marketplace-listing.sh <plugin>` find a plugin by that file, so a Ruby or IMAP plugin is defined in its own package, and foundation's scripts do not name it.
 
 ## What happened
 
@@ -79,3 +81,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 9:51:15 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 9:56:30 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:04:51 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:01:13 AM PT
