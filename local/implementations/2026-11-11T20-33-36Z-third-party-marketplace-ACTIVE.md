@@ -42,6 +42,8 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 
 - **2026-11-11** — `build-marketplace-plugin.sh <package>` builds a package's plugin in `plugins/<package>/`: the package's skills, its hooks, and a manifest the script writes. Its test has three checks: *Writes a manifest naming the package*, *Copies the package's skills*, and *Copies the package's hooks*. The skills and hooks checks are coverage, added at the engineer's selection, since the build already copied both.
 - **2026-11-11** — The copied hooks run scripts from the project's own `slasher/system/` or `system/`. A project that installs the plugin from the marketplace without Slasher's installer has neither, so its hooks do nothing.
+- **2026-11-11** — `claude plugin validate` passes on the worktree's built marketplace, with three warnings: no marketplace description, and no plugin version or author.
+- **2026-11-11** — The engineer added the worktree as a marketplace in a project without Slasher, and installed `foundation@slasher` from it. The install worked. `/foundation:log` stopped at its first step: the skill runs `slasher/system/foundation/load-rules.sh`, and the project has neither the loader nor the rules. The plugin carries skills and hooks, and no rule loader or rule files.
 
 ## Confirmations
 
@@ -60,3 +62,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 12:46:14 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:05 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:09:35 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 3:14:03 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:05:43 PM PT
