@@ -43,6 +43,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-12 — The marketplace plugin carries only `/install`.** Selected by the engineer on the agent's recommendation, after the scratch project showed every command under both `slasher:` and `foundation:`. Before `/install` the other commands stop at their first step, and after it the installed project's own plugin carries them.
 - **2026-11-12 — The marketplace lists one plugin, named `slasher`.** Selected by the engineer. It carries `/install`, typed `/slasher:install`, and is installed as `slasher@slasher`. It replaces the plan of one plugin per package and a bundle, since every package's plugin but foundation's would be a manifest alone. The engineer chose to try it despite sharing its name with the project's own `slasher` plugin, to see what Claude Code does with the two. Plugins for the Ruby and IMAP packages are likely later.
 - **2026-11-12 — A package defines a marketplace plugin by its manifest.** Selected by the engineer at the implementation hinge. Foundation holds `marketplace/slasher/plugin.json`. `build-marketplace-plugin.sh <plugin>` and `build-marketplace-listing.sh <plugin>` find a plugin by that file, so a Ruby or IMAP plugin is defined in its own package, and foundation's scripts do not name it.
+- **2026-11-12 — The marketplace plugin is named `slasher-install`.** Selected by the engineer, after the plugin named `slasher` took the place of the project's own `slasher` plugin. It is installed as `slasher-install@slasher`, and its command is `/slasher-install:install`. The marketplace keeps the name `slasher`.
 
 ## What happened
 
@@ -55,6 +56,7 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 - **2026-11-12** — The engineer reinstalled the hookless `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. The startup display printed once, and the reinstall worked.
 - **2026-11-12** — The engineer found every command listed under both `slasher:` and `foundation:` in the scratch project.
 - **2026-11-12** — The engineer reinstalled the install-only `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. Each command appeared once, under `slasher:`, with only `/foundation:install` under `foundation:`.
+- **2026-11-12** — The engineer replaced `foundation@slasher` with `slasher@slasher` in the scratch project, with `--scope project`, and restarted Claude Code. The startup display did not print, and Slasher's commands did not appear in tab completion. The marketplace's `slasher` plugin took the place of the project's own `slasher` plugin, which carries the commands and the hooks.
 
 ## Confirmations
 
@@ -82,3 +84,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 9:56:30 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:04:51 AM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:01:13 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:41:41 AM PT
