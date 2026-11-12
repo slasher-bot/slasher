@@ -1,0 +1,105 @@
+# Experiment — Third-party marketplace
+
+**Tags:** [experiment]
+
+## Intent
+
+**As the engineer stated it:** "/feature start for #2", with the item chosen as `2026-11-11T20-30-36Z-third-party-marketplace-for-slasher`, which reads "Third-party marketplace for Slasher".
+
+**Slasher is distributed through a third-party marketplace of its own:** a git repository holding a `.claude-plugin/marketplace.json` that lists the Slasher plugin, which a user adds with `/plugin marketplace add`. The item holds what the Claude Code documentation says about marketplaces.
+
+## State
+
+- **State:** Active
+
+## Setup
+
+- **Tags:** [experiment]
+- **Upstream branch:** `master`
+- **Implementation branch:** `experiment/worktree/third-party-marketplace`
+- **Base:** `561bbb9a`, from `master`
+- **Working location:** branch and worktree, at `../slasher-experiment-worktree-third-party-marketplace`, chosen at the start.
+- **Participation:** attended, chosen at the start.
+- **Forecast:** stated, at the engineer's direction after the start. The verdict question is asked at the end.
+
+## Forecast
+
+**As the engineer stated it:** "The viability of publishing a plugin to Slasher's own marketplace will be exercized"
+
+**Publishing a plugin to Slasher's own marketplace is exercised, and the exercise shows whether it is viable.**
+
+## Design
+
+Settled by the engineer on 2026-11-11, before the first hinge.
+
+- **The plugin's role:** the entry point to install. The marketplace's plugin carries `/package install` and the hooks, and installing it is how a project gets Slasher, in place of the `curl` install. The packages still go into `slasher/system/`.
+- **The marketplace's repository:** `slasher-bot/slasher`, with `.claude-plugin/marketplace.json` at its root. A user adds it with `/plugin marketplace add slasher-bot/slasher`.
+- **The plugins:** one plugin to a package, each depending on `foundation`. A bundle plugin, `slasher`, depends on the default set, so one install brings them all.
+- **The first step:** a marketplace listing the `foundation` plugin alone, added from the worktree's local path, to try the install end to end before anything is pushed.
+- **The plugin's root:** a built directory. A script assembles `plugins/foundation/` from the package, as `assemble-plugin.sh` does today, the build is committed, and `marketplace.json` names `./plugins/foundation`.
+- **2026-11-11 — The plugin installs Slasher, rather than carrying the rules.** Selected by the engineer on the agent's recommendation, after the trial showed `/foundation:log` stop without the rule loader. A plugin command runs Slasher's installer, which puts `slasher/system/` into the project. Where the project is not a git repository, the agent asks before running `git init`, since the installer refuses to prompt when it is not run in a terminal.
+- **2026-11-11 — The installer is downloaded from GitHub, by a new `/install` command.** Selected by the engineer. `/install` loads no rule, since it runs where none is installed yet. It downloads `install` from `slasher-bot/slasher`'s `master` and runs it. `/package install` stays as it is, for a project that already has Slasher.
+- **2026-11-12 — The marketplace plugin carries no hooks.** Selected by the engineer on the agent's recommendation, after the startup display printed twice. Before `/install` the hooks do nothing, and after it the installed project's own plugin runs them, so a copy in the marketplace plugin only runs each hook a second time.
+- **2026-11-12 — The marketplace plugin carries only `/install`.** Selected by the engineer on the agent's recommendation, after the scratch project showed every command under both `slasher:` and `foundation:`. Before `/install` the other commands stop at their first step, and after it the installed project's own plugin carries them.
+- **2026-11-12 — The marketplace lists one plugin, named `slasher`.** Selected by the engineer. It carries `/install`, typed `/slasher:install`, and is installed as `slasher@slasher`. It replaces the plan of one plugin per package and a bundle, since every package's plugin but foundation's would be a manifest alone. The engineer chose to try it despite sharing its name with the project's own `slasher` plugin, to see what Claude Code does with the two. Plugins for the Ruby and IMAP packages are likely later.
+- **2026-11-12 — A package defines a marketplace plugin by its manifest.** Selected by the engineer at the implementation hinge. Foundation holds `marketplace/slasher/plugin.json`. `build-marketplace-plugin.sh <plugin>` and `build-marketplace-listing.sh <plugin>` find a plugin by that file, so a Ruby or IMAP plugin is defined in its own package, and foundation's scripts do not name it.
+- **2026-11-12 — The marketplace plugin is named `slasher-install`.** Selected by the engineer, after the plugin named `slasher` took the place of the project's own `slasher` plugin. It is installed as `slasher-install@slasher`, and its command is `/slasher-install:install`. The marketplace keeps the name `slasher`.
+- **2026-11-12 — The installer is named `slasher-install`.** Selected by the engineer, since `/install` downloads it into the project's root, where a file of the project's own named `install` would be overwritten. The repository's root `install` is renamed on the experiment's branch, with the README, the shell-scripts rule, the imap README, and the interactive tests. `/install` downloads `slasher-install` from GitHub's `master`, so the download fails until the rename is merged and pushed.
+- **2026-11-12 — `/install` adds the status line where the installer leaves it out.** Selected by the engineer on the agent's recommendation, after the clean install in the scratch project left the status line unset. Installing `slasher-install` with `--scope project` writes `.claude/settings.json` before `/install` runs, and the installer does not edit an existing settings file. After the installer runs, `/install` adds the `statusLine` key where the file has none, and changes nothing else in it.
+- **2026-11-12 — The plugin install is elaborated to a full install, in three additions.** Selected by the engineer on the agent's recommendation, after the clean install proved the basics. First, the plugin carries the installer, so `/install` downloads nothing and runs the installer of the plugin's own version. Second, `/install` with nothing typed after it offers the package sets and the packages, including those outside the default set, through the selection interface. Third, the README gives the marketplace as the way to install Slasher, and keeps the `curl` install as the alternative. The packages stay out of the plugin: they are added and refreshed with `git subtree`, and a copy in the plugin would be a second source with nothing to refresh it.
+- **2026-11-12 — The installer lists the package sets and packages that `/install` offers.** Selected by the engineer on the agent's recommendation. `slasher-install` gains a listing mode that prints its sets with their packages, and the packages outside every set. The list stays in one place, the installer, which the plugin carries.
+
+## What happened
+
+- **2026-11-11** — `build-marketplace-plugin.sh <package>` builds a package's plugin in `plugins/<package>/`: the package's skills, its hooks, and a manifest the script writes. Its test has three checks: *Writes a manifest naming the package*, *Copies the package's skills*, and *Copies the package's hooks*. The skills and hooks checks are coverage, added at the engineer's selection, since the build already copied both.
+- **2026-11-11** — The copied hooks run scripts from the project's own `slasher/system/` or `system/`. A project that installs the plugin from the marketplace without Slasher's installer has neither, so its hooks do nothing.
+- **2026-11-11** — `claude plugin validate` passes on the worktree's built marketplace, with three warnings: no marketplace description, and no plugin version or author.
+- **2026-11-11** — The engineer added the worktree as a marketplace in a project without Slasher, and installed `foundation@slasher` from it. The install worked. `/foundation:log` stopped at its first step: the skill runs `slasher/system/foundation/load-rules.sh`, and the project has neither the loader nor the rules. The plugin carries skills and hooks, and no rule loader or rule files.
+- **2026-11-11** — In the scratch project, the engineer reinstalled `foundation@slasher` from the rebuilt marketplace and ran `/foundation:install`. Slasher installed, and a log entry was then written there.
+- **2026-11-11** — After the restart, each command appeared once, though the project then held both the marketplace's `foundation` plugin and the installer's `slasher` plugin. The startup display printed twice, once for each plugin's `SessionStart` hook.
+- **2026-11-12** — The engineer reinstalled the hookless `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. The startup display printed once, and the reinstall worked.
+- **2026-11-12** — The engineer found every command listed under both `slasher:` and `foundation:` in the scratch project.
+- **2026-11-12** — The engineer reinstalled the install-only `foundation@slasher` in the scratch project with `--scope project`, and restarted Claude Code. Each command appeared once, under `slasher:`, with only `/foundation:install` under `foundation:`.
+- **2026-11-12** — The engineer replaced `foundation@slasher` with `slasher@slasher` in the scratch project, with `--scope project`, and restarted Claude Code. The startup display did not print, and Slasher's commands did not appear in tab completion. The marketplace's `slasher` plugin took the place of the project's own `slasher` plugin, which carries the commands and the hooks.
+- **2026-11-12** — The engineer installed `slasher-install@slasher` with `--scope project` into a new, empty scratch project and ran `/slasher-install:install`. It ran `git init` at the engineer's selection, downloaded `slasher-install` from GitHub, and installed the default package set, the project's own `slasher` plugin, `AGENTS.md`, and `CLAUDE.md`. It did not set the status line: `.claude/settings.json` already existed, holding only `enabledPlugins`, so the installer left it unchanged.
+- **2026-11-12** — The engineer rebuilt the scratch project empty, installed the rebuilt `slasher-install@slasher` with `--scope project`, ran `/slasher-install:install`, and restarted Claude Code. Slasher installed, and the status line showed it.
+- **2026-11-12** — The engineer rebuilt the scratch project empty, installed the rebuilt `slasher-install@slasher` with `--scope project`, and ran `/slasher-install:install`. It offered the package sets and the packages outside them, and installed from the installer the plugin carries, with no download. The install worked.
+- **2026-11-12** — Adding the marketplace from GitHub, as `slasher-bot/slasher#experiment/worktree/third-party-marketplace`, was refused at first. Adding the worktree's folder had recorded `slasher` under `extraKnownMarketplaces` in the engineer's user settings, with the folder as its source, and removing the marketplace left that record. Claude Code refuses a marketplace whose source does not match its record. The agent changed the record's source to GitHub at the engineer's selection, and the marketplace was added from GitHub. The record was then removed, at the engineer's direction.
+- **2026-11-12** — The engineer rebuilt the scratch project empty, installed `slasher-install@slasher` from the GitHub marketplace with `--scope project`, ran `/slasher-install:install`, and restarted Claude Code. The install succeeded.
+
+## Confirmations
+
+- **2026-11-11** — Working location: branch and worktree, selected by the engineer.
+- **2026-11-11** — Participation: Attended, selected by the engineer. Agent's confidence 60%, risk of redo 40%, It'll work 80%, Your approval 60%, attended confidence 85%. The warning was shown, and Attended was recommended.
+- **2026-11-11** — Forecast: no forecast, selected by the engineer.
+- **2026-11-11** — Kind: changed from a feature to an experiment, at the engineer's direction. The branch `feature/worktree/third-party-marketplace` was renamed `experiment/worktree/third-party-marketplace`, and its worktree moved from `../slasher-feature-worktree-third-party-marketplace` to `../slasher-experiment-worktree-third-party-marketplace`.
+- **2026-11-11** — Forecast: changed from no forecast to a stated forecast, at the engineer's direction.
+- **2026-11-11** — Test names: *Writes a manifest naming the package*, *Copies the package's skills*, and *Copies the package's hooks*, selected by the agent under `/unattended`. Each names what its check establishes, as a behavior, in the verb-first form the other shell tests use, such as *Retags an observation as a note*. None starts with *Is*, since only the manifest check compares a value, and the three read as one set.
+- **2026-11-12** — Test names: *Copies only the install skill*, *Carries no hooks*, *Copies the installer*, *Writes a listing of the plugin in the slasher marketplace*, and *Lists each set's packages, then the packages outside every set*, selected by the agent under `/unattended`. Each names what its check establishes, as a behavior, in the verb-first form the earlier names use. None starts with *Is*, since each names a behavior rather than a value compared.
+
+---
+
+Authored by Scott Bellware on Wed Nov 11 2026 at 12:33:36 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:02 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:46:14 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:05 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:09:35 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 3:14:03 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:05:43 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:10:12 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:16:33 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 9:27:33 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 9:51:15 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 9:56:30 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 10:04:51 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:01:13 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:41:41 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:49:23 AM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 1:28:02 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 1:32:28 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 1:41:34 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 1:46:52 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:12:32 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:20:23 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 2:31:24 PM PT

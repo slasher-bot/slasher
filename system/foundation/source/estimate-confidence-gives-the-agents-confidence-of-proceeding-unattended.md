@@ -22,6 +22,8 @@
 
 ## History
 
+For part of Wed Nov 11 2026, the command's alias was `/%`. The engineer reverted it to `/#`.
+
 Until Tue Nov 10 2026, for part of that day, the command's alias was `/???`. The engineer changed it to `/#`.
 
 Until Tue Nov 10 2026, for part of that day, the command's alias was `/??`. The engineer replaced it with `/???`.
@@ -39,3 +41,5 @@ Authored by Scott Bellware on Sun Nov 8 2026 at 2:30:48 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:37:43 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:43:22 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:58:17 PM PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 1:03:09 PM PT

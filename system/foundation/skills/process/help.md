@@ -11,8 +11,10 @@ PROCESS
   /.                               An alias of /recent
 
   /next                            Proceed to the next step in the current
-                                   multi-step process, or resume interrupted
-                                   work
+                                   multi-step process or with the action
+                                   that the agent is suggesting, or resume
+                                   interrupted work
+  /proceed                         An alias of /next
   />>                              An alias of /next
   /next?                           "What are we doing?" or "what's next?"
                                    The next step in the current multi-step
