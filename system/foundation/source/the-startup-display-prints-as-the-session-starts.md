@@ -67,7 +67,7 @@ Slasher's rules will load on the first prompt, or enter: /load
 The loading part prints on the session's first prompt. First the loading line:
 
 ```
-Slasher is pre-loading its rules...
+Slasher is pre-loading its rules... this could take a minute
 ```
 
 Then **one blank line**, then the block, which ends the loading part:
@@ -212,7 +212,7 @@ Slasher's rules will load on the first prompt, or enter: /load
 53. The loading part opens with the loading line, which names the wait for the read:
 
 ```
-Slasher is pre-loading its rules...
+Slasher is pre-loading its rules... this could take a minute
 ```
 
 54. Then one blank line, then the block, which ends the loading part:
@@ -272,8 +272,11 @@ Slasher is pre-loading its rules...
 - 2026-11-07, revised: the tagline reads *The engineer decides. The agent generates. Humanity rules.* again, wording the engineer gave; not re-checked
 - 2026-11-08, revised: the session-start part is not printed after a compaction, as point 60; not re-checked
 - 2026-11-08, revised: the title reads *Slasher: Human in the Loop Harness*, wording the engineer gave; not re-checked
+- 2026-11-12, revised: the loading line reads *Slasher is pre-loading its rules... this could take a minute*, wording the engineer gave; not re-checked
 
 ## History
+
+Until Thu Nov 12 2026 the loading line read *Slasher is pre-loading its rules...*
 
 Until Sun Nov 8 2026 the title read *Slasher: Human in the Loop AI*, and the root `README.md`'s title read *Human in the Loop AI*.
 
@@ -388,3 +391,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 6:15:12 PM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 6:20:24 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 5:25:11 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 11:05:51 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 10:39:02 PM PT

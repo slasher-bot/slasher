@@ -37,7 +37,7 @@ control_loading_text() {
   cat <<'DISPLAY'
 
 
-Slasher is pre-loading its rules...
+Slasher is pre-loading its rules... this could take a minute
 
      __      /
     /  \    /
