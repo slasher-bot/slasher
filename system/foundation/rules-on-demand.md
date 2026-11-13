@@ -748,13 +748,13 @@ Trigger: When writing or revising an item in slasher/local/items/ that sequences
 
 Source: system/foundation/source/anything-given-to-private-is-recorded-only-in-the-private-directory.md
 
-Trigger: When the engineer types `/private`, or asks to write, read, or list a private record
+Trigger: When the engineer types `/private`, or asks to write, read, or list a private record, or starts or ends a private session
 
-**Trigger:** When the engineer types `/private`, or asks to write, read, or list a private record
+**Trigger:** When the engineer types `/private`, or asks to write, read, or list a private record, or starts or ends a private session
 
 1. A private record is a record the engineer keeps for a project outside the project's repository. It is not committed with the project.
 2. Anything given to `/private` is recorded only in the private directory. Nothing of it is written into the project.
-3. A private record is a document, an item, a log entry, or a journal entry.
+3. A private record is a document, an item, a log entry, or a journal entry. In a private session, it is also a work session record, an implementation record, or a loop record.
 4. Its contents are what the engineer directs. Write the engineer's words, or what the engineer asks the agent to write. Add nothing on your own initiative.
 
 ## The private directory
@@ -769,6 +769,9 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 | item | `~/.local/share/slasher/items/<project>/` |
 | log entry | `~/.local/share/slasher/log/<project>/` |
 | journal entry | `~/.local/share/slasher/journal/<project>/` |
+| work session record | `~/.local/share/slasher/work-sessions/<project>/` |
+| implementation record | `~/.local/share/slasher/implementations/<project>/` |
+| loop record | `~/.local/share/slasher/loops/<project>/` |
 
 4. One file in a project's directory is one record.
 5. No directory has a `<username>` directory. The private directory belongs to one user.
@@ -780,7 +783,22 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 2. **`item <words>`**: write a private item.
 3. **`log <words>`**: write a private log entry.
 4. **`journal <words>`**: write a private journal entry, by the journal package's private-journal-convention, as `/journal private` does.
-5. Words that are not a subcommand and not a path to an existing file are not guessed at. Say so, and ask which subcommand is meant, through the selection interface.
+5. **`session <instruction>`**: start a private session, and carry out the instruction in it.
+6. **`session end`**: end the private session.
+7. Words that are not a subcommand and not a path to an existing file are not guessed at. Say so, and ask which subcommand is meant, through the selection interface.
+
+## A private session
+
+1. `/private session <instruction>` starts a private session. It lasts until the session ends, or until `/private session end`.
+2. In a private session, every record the agent writes goes to the private directory, in the directory for its kind, and never into the project. That holds for a record the engineer asks for and for a record a rule asks for.
+3. A record is a file under `slasher/local/` that a rule tells the agent to write: an item, a log entry, a journal entry, a work session record, an implementation record, or a loop record.
+4. Carry out the instruction after `session` in the private session. Where no instruction was typed, start the private session and wait for the engineer's request.
+5. When the private session starts, say once that the session's records go to the private directory. Say it again when it ends.
+6. A file that is not a record still changes in the project, as the work asks. Code, a test, a rule, a vocabulary, a README, and a skill are not records.
+7. The log-entry hook still writes into the project's log. In a private session, move each entry it writes to the private log directory, before anything is committed.
+8. Commit no record written in a private session, and log nothing in the project about the private session.
+9. A record that already exists in the project stays there. Do not change its state or its content in a private session. Where the work asks for that change, say so, and ask, through the selection interface, whether to end the private session first.
+10. A private session does not reach another session. A record written in another session at the same time goes into the project as usual.
 
 ## A private record's shape
 
@@ -788,11 +806,12 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 2. **An item** takes an item's shape: the ISO-8601-UTC prefix, the state suffix, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
 3. **A log entry** takes a log entry's shape: the ISO-8601-UTC prefix and a one-line title, with a `**Tags:**` line or a body where it needs one.
 4. **A journal entry** takes the shape the private-journal-convention gives it.
-5. Where a file of that name is already there, ask, through the selection interface, whether to replace it or to use another name.
+5. **A work session record, an implementation record, or a loop record** takes the shape its own rule gives it, with no log entry in the project and no commit.
+6. Where a file of that name is already there, ask, through the selection interface, whether to replace it or to use another name.
 
 ## Only on the engineer's command
 
-1. Write, read, or list a private record only when the engineer asks for it.
+1. Write, read, or list a private record only when the engineer asks for it. A private session is the engineer's request for every record the session writes.
 2. `/private read` reads the record the engineer names. `/private list` lists the project's private records, of every kind or of the kind named.
 3. Do not read a private record at session start.
 4. Do not read one to answer a question, unless the engineer names it.
@@ -819,7 +838,7 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 
 **Why:** an engineer has material about a project that is not for the project's repository: a draft not ready to share, a note about a person, an idea not ready to be seen, or a document from someone else. Kept in the repository, it is committed and read by every reader. Kept anywhere else, the agent cannot find it. One command that records only in a fixed directory per project, read only on command, keeps it at hand without publishing it.
 
-**How to apply:** when the engineer types `/private`, record what was given in the project's directory for its kind under `~/.local/share/slasher/`. Do only the act asked for, write nothing into the project, log nothing, and commit nothing.
+**How to apply:** when the engineer types `/private`, record what was given in the project's directory for its kind under `~/.local/share/slasher/`. Do only the act asked for, write nothing into the project, log nothing, and commit nothing. In a private session, write every record there until the session or the private session ends.
 
 # Ask-again puts the last question again
 

@@ -85,6 +85,7 @@ A word taken out of use with **nothing in its place**. This is not a substitutio
 13. **free-text option** — the answer the selection interface supplies beside the options, where the engineer answers outside the option set.
 14. STE for free-text option: absent as a compound. `option (n)` is not approved and gives ALTERNATIVE (n). `FREE (adj)` is approved in an unrelated sense. `text` is absent. Technical noun, ETE human-computer interaction.
 15. **private record** — a record the engineer keeps for a project outside the project's repository, under `~/.local/share/slasher/`, in one directory for each kind and project: a document, an item, a log entry, or a journal entry. Anything given to `/private` is a private record. It is not committed, and the agent writes, reads, or lists one only on the engineer's command. **Private** means kept out of the repository and out of the session-start read, and nothing more: a record the agent writes or reads still passes through the session. It differs from a working-state artifact, which is committed with the project.
+16. **private session** — the part of a session from `/private session` until the session ends, or until `/private session end`. In a private session, every record the agent writes goes to the private directory, and none goes into the project. A file that is not a record, such as code or a rule, still changes in the project.
 
 ## Substitutions
 
