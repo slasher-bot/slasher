@@ -31,6 +31,7 @@
 - **2026-11-12** — Plan: accepted by the engineer.
 - **2026-11-12** — Trial: the engineer tried `/private session` in another session, and it works.
 - **2026-11-12** — Conclusion: Completed, merged into `master`, selected by the engineer.
+- **2026-11-12** — Branch deletion: the worktree is removed and `feature/worktree/private-session` is deleted, selected by the engineer.
 
 ---
 
