@@ -109,6 +109,7 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |
+| `/idk` | Say "I don't know" to the agent's last question, so it explains the question and asks it again |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |
 | `/estimate-confidence, /%` | The agent's confidence of proceeding unattended from where the work stands |
 | `/unattended, /#` | Carry out a request on the agent's own, after a plan is accepted |
