@@ -10,7 +10,7 @@
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -29,7 +29,10 @@
 - **2026-11-12** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-12** — Forecast: No forecast, selected by the engineer.
 - **2026-11-12** — Plan: accepted by the engineer.
+- **2026-11-12** — Trial: the engineer tried `/private session` in another session, and it works.
+- **2026-11-12** — Conclusion: Completed, merged into `master`, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Thu Nov 12 2026 at 11:12:07 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:21:59 PM PT
