@@ -248,6 +248,13 @@ TESTS
   /test tree, /test-tree           Run the suite and print its context tree
   /test help                       Print this command's help
 
+PUSH
+  This command pushes the current branch to its remote, and never forces.
+
+  /push                            Push the current branch to its upstream
+  /p                               An alias of /push
+  /push help                       Print this command's help
+
 PROJECTS
   This command lists the Slasher projects registered on this machine. The list
   helps move ideas, new patterns, and corrections into other projects.

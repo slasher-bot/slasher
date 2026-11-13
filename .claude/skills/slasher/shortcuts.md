@@ -9,3 +9,4 @@
 | `/#` | `/estimate-confidence` | Gives the agent's confidence of proceeding unattended |
 | `/!` | `/unattended` | Carries out a request on the agent's own, after a plan is accepted |
 | `/;` | `/command-table` | Prints the command table |
+| `/p` | `/push` | Pushes the current branch to its remote |

@@ -14,9 +14,10 @@ One rule governs how a commit is **read** rather than how it is made:
 
 - **A SHA names the work, not the commit**. When the engineer names a commit by its SHA, they are asking about the substance it carries — the item, the implementation, the rule, the change to the code. Not the commit message, the file list, or the log entry. Those are the answer when the question is about the commit itself, or when the commit's whole content is a git operation.
 
-One rule governs a branch operation rather than a commit:
+Two rules govern a branch operation rather than a commit:
 
 - **Announce a branch switch in a bordered block**. A switch changes what every path in the repository means, and it is the one operation whose effect is invisible in every later report. The block gives the branch left, the branch reached, and why, inside a border that ordinary output cannot be mistaken for. A hook in the Slasher plugin reports each switch a shell command makes, so the block does not depend on the agent remembering the rule.
+- **`/push` pushes the current branch to its remote**, and `/p` is its shortcut. It sets an upstream branch where there is none, never forces, and stops where the remote refuses the push rather than pulling or rebasing to make it go through.
 
 This is a standalone package: it includes no other packages.
 
