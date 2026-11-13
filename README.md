@@ -110,8 +110,8 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |
-| `/estimate-confidence, /#` | The agent's confidence of proceeding unattended from where the work stands |
-| `/unattended, /!` | Carry out a request on the agent's own, after a plan is accepted |
+| `/estimate-confidence, /%` | The agent's confidence of proceeding unattended from where the work stands |
+| `/unattended, /#` | Carry out a request on the agent's own, after a plan is accepted |
 | `/shortcuts, /sc` | Print the shortcuts table |
 | `/load` | Loads the rules now, without waiting for the first prompt. |
 
