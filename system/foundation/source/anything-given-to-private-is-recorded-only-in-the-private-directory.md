@@ -50,6 +50,16 @@
 9. A record that already exists in the project stays there. Do not change its state or its content in a private session. Where the work asks for that change, say so, and ask, through the selection interface, whether to end the private session first.
 10. A private session does not reach another session. A record written in another session at the same time goes into the project as usual.
 
+## A private session times out
+
+1. A private session times out when 4 minutes pass with no prompt from the engineer.
+2. The plugin's hook on each prompt keeps the time. `/private session` writes the session's state file, in `~/.local/state/slasher/private-sessions/`, named for the session. Each prompt in the private session writes its time there. `/private session end` removes the file.
+3. Where a prompt comes more than 4 minutes after the last one, the hook tells the agent so. Before anything else, ask the engineer, through the selection interface, whether to continue the private session or end it.
+4. The options are **Continue** and **End**. Continue keeps the private session, and its 4 minutes count from the prompt that brought the question.
+5. End ends the private session: delete the state file the hook names, and say that the session's records go into the project again.
+6. Then take up the prompt that brought the question, under what the engineer selected.
+7. The question carries no decision marker, and nothing about it is logged.
+
 ## A private record's shape
 
 1. **A document** keeps the name of the file given. It takes no datetime prefix, no state suffix, and no provenance footer.
@@ -92,8 +102,9 @@
 
 ## History
 
-1. Until Thu Nov 12 2026, `/private` recorded only what was given to it. It had no private session.
-2. Until Thu Nov 12 2026, the rule named the project's directory for the project's repository directory and did not say which directory that is in a git worktree. A record written from a worktree was put in a directory named for the worktree.
+1. Until Thu Nov 12 2026, a private session had no time limit.
+2. Until Thu Nov 12 2026, `/private` recorded only what was given to it. It had no private session.
+3. Until Thu Nov 12 2026, the rule named the project's directory for the project's repository directory and did not say which directory that is in a git worktree. A record written from a worktree was put in a directory named for the worktree.
 
 Related:
 
@@ -110,3 +121,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 10:21:02 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:22:47 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:29:33 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:13:01 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:46:17 PM PT
