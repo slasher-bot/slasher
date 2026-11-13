@@ -10,7 +10,7 @@
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -28,6 +28,7 @@
 - Two interactive tests are added: `test/interactive/smtp/install.sh` installs smtp by name with imap, and `test/interactive/smtp/send.sh <name> <address>` sends one real message.
 - The direct-commit check found none. The automated suite passed: 58 tests.
 - The public repository `slasher-bot/smtp` is created, and the split of `system/smtp`, `4db5ac9e`, is its `master`.
+- The two interactive tests were not run. The install by name and a send through a real account are untried.
 
 ## Confirmations
 
@@ -36,8 +37,11 @@
 - **2026-11-13** — Forecast: no forecast, selected by the engineer.
 - **2026-11-13** — Publish from the feature: selected by the engineer. Creating the repository `slasher-bot/smtp` and publishing the package to it from this feature is the exception to the local rule that a package is published from `master`, since the feature's intent is the publish.
 - **2026-11-13** — Plan: accepted by the engineer.
+- **2026-11-13** — Merge to master, and publishing every package whose published copy is behind `master`, without running the two interactive tests: directed by the engineer. **As the engineer stated it:** "Procede with the publish without passing these inspections. I want to get everything resolving publically first."
+- **2026-11-13** — Branch deletion and worktree removal: directed by the engineer in the same instruction.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 12:31:25 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 12:33:05 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 12:40:54 AM PT
