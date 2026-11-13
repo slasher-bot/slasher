@@ -16,7 +16,7 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 - **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
 - **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one. Journal entries can be private, and those are stored outside of the project.
 - **Domain conventions.** Packages for language, testing, git, and versioning.
-- **Email.** An optional package, `imap`, fetches IMAP mail and Gmail labels into the project, with each credential kept in the macOS Keychain.
+- **Email.** An optional package, `imap`, fetches IMAP mail and Gmail labels into the project, with each credential kept in the macOS Keychain. Another, `smtp`, sends a message through the same account, after the engineer confirms it.
 - **Machinery.** The installer, package sets, a session-start hook, a status line, and commands.
 
 ## Install Slasher
@@ -108,6 +108,7 @@ Type `/help` for the full list, or `/<command> help` for an individual command.
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
+| `/smtp` | These commands send email through an account whose credential is kept in the macOS Keychain, the same credential the imap package fetches with. |
 | `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/idk` | Say "I don't know" to the agent's last question, so it explains the question and asks it again |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |
