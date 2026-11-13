@@ -38,6 +38,16 @@ A list of items takes the ordinal and no SHA columns:
 
 **As the engineer stated it:** remove suspended from current.
 
+## The items command
+
+**`/items` lists every item, whatever its state, oldest first.** Each row is an ordinal, the item's handle, its title, and its state. The list takes no SHA columns and no kind column, as other lists of items do.
+
+**A hidden record is counted rather than listed**, under the a-status-report-prints-a-fixed-whole-project-report rule. A Suspended item is left out of the rows, and a line below the table gives the count and the kind, as `1 suspended item`.
+
+**`/items current` lists the current items**, the Open and Active ones, as `/item list current` does.
+
+**As the engineer stated it:** The "/items" command should print all items. The "/items current" command should do what "/items" does presently.
+
 ## The current command
 
 **`/current` lists the current items, then the current implementations.** The items are the ones `current` asks for, Open and Active. The implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
@@ -157,6 +167,13 @@ A list of items takes the ordinal and no SHA columns:
 1. A list of items may be asked for by state, and lists the items whose `**State:**` line reads that state.
 2. `current` asks for the Open and Active items together. It is not a state, and it leaves out Suspended items.
 
+## The items command
+
+1. `/items` lists every item, whatever its state, oldest first.
+2. Present each item as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns and no kind column.
+3. A Suspended item is a hidden record, counted rather than listed, under the a-status-report-prints-a-fixed-whole-project-report rule. Leave it out of the rows. Below the table, print a line giving their count and kind, as `1 suspended item`.
+4. `/items current` lists the Open and Active items, as `/item list current` does.
+
 ## The current command
 
 1. `/current` lists the current items, then, under a heading of their own, the current implementations.
@@ -220,8 +237,11 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-10, revised: the command is `/current`, in place of `/items`, a term swap the engineer settled; not re-checked
 - 2026-11-11, revised: `/features` and `/experiments` take `current`, at the engineer's direction; not re-checked
 - 2026-11-13, revised: `/notes` lists every item tagged `[note]`, with an optional number, as the notes command; the notes command checked: 12 directives, 12 kept, 0 less precise, 0 lost, 0 repairs
+- 2026-11-13, revised: `/items` lists every item, and `/items current` the current ones, as the items command; the items command checked: 12 directives, 10 kept, 2 less precise, 0 lost, 1 repair. Left less precise: that `/items current` does what a bare `/items` did before, which point 4 carries by naming `/item list current`, the same list
 
 ## History
+
+Until Fri Nov 13 2026 a bare `/items` listed the current items, which `/items current` now lists, and no command listed every item.
 
 Until Fri Nov 13 2026 there was no `/notes` command, and this rule named no list of notes.
 
@@ -306,3 +326,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:13:39 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:50:34 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 2:56:24 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 3:39:16 PM PT
