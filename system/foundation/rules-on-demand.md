@@ -20,7 +20,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/clarify, /??`, `/idk`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /#`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, `/note` below `/decision`, `/notes` below `/note`, and `/packages` below `/package`, each in its domain's rows file. `/clarify, /??`, `/idk`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /#`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -1049,6 +1049,28 @@ Trigger: When the engineer asks to refresh or install Slasher's packages, as wit
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would overwrite with a consuming project's bootstrap.
 5. Say that a refreshed or installed rule is read at the next load of the rules: a session restart, or `load rules`.
+
+# Packages lists the installed packages
+
+Source: system/foundation/source/packages-lists-the-installed-packages.md
+
+Trigger: When the engineer types `/packages`, or asks which packages are installed
+
+**Trigger:** When the engineer types `/packages`, or asks which packages are installed
+
+**`/packages` lists every package installed in `slasher/system/`, one row each.** `foundation` comes first, since it defines the system, and the others follow by name. A package is a directory there that holds a `README.md`. Where the project has no `slasher/` directory, as in the Slasher authoring source, read `system/` instead.
+
+**Each row is the package's name, its state, and what it is.** The state is *Active* or *Deactivated*, as the latest package set declaration records it, per the a-project-declares-which-installed-packages-are-active rule. Where no set is declared, every package is Active. What it is is the first line of prose in the package's `README.md`, below its title, cut to its first sentence.
+
+**As the engineer stated it:** "/packages" command
+
+**Below the table, name the package set, as `package set: default`.** Where no set is declared, print nothing below the table.
+
+**Read the packages and the declaration when the command is typed, never from memory.** A package installed during the session is listed, whether its rules were read or not.
+
+**Why:** the engineer asks what is installed, and what each package does, without opening each README. `/package-set` answers which are active, and `/packages` answers what each one is.
+
+**How to apply:** on `/packages`, read the package directories and the latest package set declaration. Print a table of name, state, and the README's first sentence, `foundation` first, then the package set's name below it where one is declared.
 
 # Projects lists the registry, and carries out an instruction in another project
 

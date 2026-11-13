@@ -24,6 +24,7 @@
 | `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
 | `/release` | Presents the candidates for a package's next version, for the engineer to choose. |
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
+| `/packages` | List the installed packages, whether each is active, and what each is |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/smtp` | These commands send email through an account whose credential is kept in the macOS Keychain, the same credential the imap package fetches with. |
