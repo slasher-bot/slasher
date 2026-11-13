@@ -295,6 +295,8 @@ PACKAGES
 
   /packages                        List the installed packages, whether
                                    each is active, and what each is
+  /packages refresh [<package>...]
+                                   An alias of /package refresh
 
   /package help                    Print this command's help
 

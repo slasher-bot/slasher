@@ -1066,6 +1066,8 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 
 **Below the table, name the package set, as `package set: default`.** Where no set is declared, print nothing below the table.
 
+**`/packages refresh [<package>...]` does what `/package refresh` does.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. The words after `refresh` pass to it unchanged.
+
 **Read the packages and the declaration when the command is typed, never from memory.** A package installed during the session is listed, whether its rules were read or not.
 
 **Why:** the engineer asks what is installed, and what each package does, without opening each README. `/package-set` answers which are active, and `/packages` answers what each one is.
