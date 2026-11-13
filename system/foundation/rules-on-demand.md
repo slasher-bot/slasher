@@ -20,7 +20,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, and `/note` below `/decision`, each in its domain's rows file. `/clarify, /??`, `/ask-again, /aa`, `/estimate-confidence, /#`, `/unattended, /!`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, and `/note` below `/decision`, each in its domain's rows file. `/clarify, /??`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /#`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -960,11 +960,11 @@ Trigger: When about to edit a historical record (a log entry, work session recor
 
 Source: system/foundation/source/estimate-confidence-gives-the-agents-confidence-of-proceeding-unattended.md
 
-Trigger: When the engineer types `/estimate-confidence` or `/#`, or asks for the agent's confidence of proceeding unattended
+Trigger: When the engineer types `/estimate-confidence` or `/%`, or asks for the agent's confidence of proceeding unattended
 
-**Trigger:** When the engineer types `/estimate-confidence` or `/#`, or asks for the agent's confidence of proceeding unattended
+**Trigger:** When the engineer types `/estimate-confidence` or `/%`, or asks for the agent's confidence of proceeding unattended
 
-**`/estimate-confidence` gives the agent's confidence of finishing the work under way on its own, from where the work stands.** `/#` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
+**`/estimate-confidence` gives the agent's confidence of finishing the work under way on its own, from where the work stands.** `/%` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
 
 **Give five figures, each the agent's own estimate for this work, made when the command is typed.** Each figure is followed by its fixed sentence, in parentheses:
 
@@ -980,7 +980,7 @@ Trigger: When the engineer types `/estimate-confidence` or `/#`, or asks for the
 
 **Why:** the engineer can ask, at any point in the work, how far the agent could be trusted to go on alone, in the same terms the work was started in.
 
-**How to apply:** on `/estimate-confidence` or `/#`, estimate the figures for the rest of the work under way, print them with their sentences, add the warning line where it applies, list what drives the two figures, and stop.
+**How to apply:** on `/estimate-confidence` or `/%`, estimate the figures for the rest of the work under way, print them with their sentences, add the warning line where it applies, list what drives the two figures, and stop.
 
 # Idk answers the last question with "I don't know"
 
