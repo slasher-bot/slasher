@@ -1,6 +1,6 @@
 # A printed list of records is formatted as a table or as a list of rows
 
-**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, or `/experiments`
+**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, `/experiments`, or `/notes`
 
 **When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence.** A table presents the fields in headed columns. Rows present one record to a line, its fields in sequence, with no columns. **A list is called a table only where it is formatted as columns.** That reaches any record — items, implementation records, log entries, loop records, work session records, migration records, journal entries, and commits.
 
@@ -83,6 +83,18 @@ A list of items takes the ordinal and no SHA columns:
 **Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Open, Active, and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
 
 **As the engineer stated it:** Create a "/features" command and an "/experiments" command that does for them what the "/items" command does
+
+## The notes command
+
+**`/notes` lists every item tagged `[note]`, oldest first.** A note is Recorded when it is written and never changes state, so every note is listed, and no state is current or left out.
+
+**Each row is an ordinal, the note's handle, and its title.** The list takes no SHA columns, as a list of items does, and no state column, since every row would read Recorded.
+
+**`/notes` takes an optional number, *n*, and then lists only the *n* most recently created notes.** A note's recency is its handle. The notes listed keep the order of the full list, oldest first, and their ordinals count from 1. `/notes 3` lists the three most recently created notes.
+
+**Where no note exists, the list is one line:** *No note.*
+
+**As the engineer stated it:** A "/notes" command that lists the items tagged [note]
 
 ## Keep every column short
 
@@ -167,6 +179,13 @@ A list of items takes the ordinal and no SHA columns:
 7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
 8. A number given to the command does not change these counts.
 
+## The notes command
+
+1. `/notes` lists every item tagged `[note]`, oldest first.
+2. Present each note as one row: an ordinal, its handle, and its title. Give it no SHA columns and no state column.
+3. `/notes` takes an optional number *n*, as in `/notes 3`. It then lists only the *n* most recently created notes, by handle, oldest first, with ordinals from 1.
+4. Where no note exists, print the one line *No note.* in place of the rows.
+
 ## Keep every column short
 
 1. Keep every column short.
@@ -200,8 +219,11 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-09, checked: 61 directives, 60 kept, 1 less precise, 0 lost. Left less precise: the kind column's example for [work], which the general instruction produces
 - 2026-11-10, revised: the command is `/current`, in place of `/items`, a term swap the engineer settled; not re-checked
 - 2026-11-11, revised: `/features` and `/experiments` take `current`, at the engineer's direction; not re-checked
+- 2026-11-13, revised: `/notes` lists every item tagged `[note]`, with an optional number, as the notes command; the notes command checked: 12 directives, 12 kept, 0 less precise, 0 lost, 0 repairs
 
 ## History
+
+Until Fri Nov 13 2026 there was no `/notes` command, and this rule named no list of notes.
 
 Until Wed Nov 11 2026 `/features` and `/experiments` took no `current`, which `/items` took.
 
@@ -283,3 +305,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 10:13:39 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:50:34 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 2:56:24 PM PT
