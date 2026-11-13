@@ -24,6 +24,11 @@
 
 ## What happened
 
+- An automated test confirms a refresh brings an smtp change down, as imap's does.
+- Two interactive tests are added: `test/interactive/smtp/install.sh` installs smtp by name with imap, and `test/interactive/smtp/send.sh <name> <address>` sends one real message.
+- The direct-commit check found none. The automated suite passed: 58 tests.
+- The public repository `slasher-bot/smtp` is created, and the split of `system/smtp`, `4db5ac9e`, is its `master`.
+
 ## Confirmations
 
 - **2026-11-13** — Working location: branch and worktree, selected by the engineer.
@@ -35,3 +40,4 @@
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 12:31:25 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 12:33:05 AM PT
