@@ -16,6 +16,7 @@
 | `/decision` | Log a decision, tagged [decision] |
 | `/note` | Record a note |
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
+| `/private` | Anything given to /private is recorded only in the private directory, outside the project's repository, and is read only on command. |
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
 | `/test` | These commands run the project's tests, or other compliance routines, quality checks, and report on them. |
 | `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
