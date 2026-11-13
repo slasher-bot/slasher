@@ -31,7 +31,7 @@
 | `/idk` | Say "I don't know" to the agent's last question, so it explains the question and asks it again |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |
 | `/estimate-confidence, /%` | The agent's confidence of proceeding unattended from where the work stands |
-| `/unattended, /#` | Carry out a request on the agent's own, after a plan is accepted |
+| `/unattended, /!` | Carry out a request on the agent's own, after a plan is accepted |
 | `/shortcuts, /sc` | Print the shortcuts table |
 | `/load` | Loads the rules now, without waiting for the first prompt. |
 
