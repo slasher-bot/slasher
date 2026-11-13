@@ -25,7 +25,7 @@ control_listing_text() {
   cat <<'LISTING'
 default: foundation language testing git versioning design-by-efferent journal
 content: foundation language git versioning journal
-other: imap ext/ruby-lang
+other: imap smtp ext/ruby-lang
 LISTING
 }
 

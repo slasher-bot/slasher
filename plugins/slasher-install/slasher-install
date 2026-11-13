@@ -38,7 +38,7 @@ origin=${SLASHER_ORIGIN:-git@github.com:slasher-bot}
 set_names="default content"
 
 # The packages outside every set. A project installs one by naming it.
-other_packages="imap ext/ruby-lang"
+other_packages="imap smtp ext/ruby-lang"
 
 set_packages() {
   case $1 in
