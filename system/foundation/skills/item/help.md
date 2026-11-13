@@ -18,6 +18,7 @@ ITEMS
   /item aspiration, /aspiration    Create an item tagged [aspiration]
   /item goal, /goal                Create an item tagged [goal]
   /item note, /note                Record a note
+  /notes [<n>]                     List the notes, or the n most recent
   /item mistake, /mistake          Create an item tagged [mistake]
   /item problem, /problem          Create an item tagged [problem]
   /item list <state>, /list <state>
