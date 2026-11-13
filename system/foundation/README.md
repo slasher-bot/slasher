@@ -24,7 +24,7 @@ Foundation also provides the project-wide **status report** command, a whole-pro
 
 **Brainstorming records points as they are said, and organizes them at the end** (`brainstorming-records-points-as-they-are-said-and-organizes-them-at-the-end`). Each point goes word for word to a collection file outside the repository, and at the end the agent reframes them into an item.
 
-**Private documents are kept outside the repository** (`private-documents-are-kept-outside-the-repository`), in `~/.local/share/slasher/documents/<project>/`, one directory per project. `/document` writes, reads, lists, or moves one, and nothing else does. A private document is not committed, not read at session start, and not logged, and it moves into the project only on the engineer's confirmed command.
+**Anything given to `/private` is recorded only in the private directory** (`anything-given-to-private-is-recorded-only-in-the-private-directory`), under `~/.local/share/slasher/`, in one directory for each kind and project. It copies a file given by its path to the private directory, and writes a private item, log entry, or journal entry. A private record is not committed, not read at session start, and not logged, and it moves into the project only on the engineer's confirmed command.
 
 **A Slasher command takes its subcommand first, asks when it has none, and its domain takes `help`** (`a-command-takes-its-subcommand-first-asks-when-it-has-none-and-its-domain-takes-help`). An alias does exactly what the command it names does, and each subcommand hands its act to the rule that governs it.
 

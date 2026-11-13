@@ -744,6 +744,83 @@ Trigger: When writing or revising an item in slasher/local/items/ that sequences
 10. At implementation time, generate code only on the user's explicit instruction.
 11. Generate it in the increments the user chooses.
 
+# Anything given to `/private` is recorded only in the private directory
+
+Source: system/foundation/source/anything-given-to-private-is-recorded-only-in-the-private-directory.md
+
+Trigger: When the engineer types `/private`, or asks to write, read, or list a private record
+
+**Trigger:** When the engineer types `/private`, or asks to write, read, or list a private record
+
+1. A private record is a record the engineer keeps for a project outside the project's repository. It is not committed with the project.
+2. Anything given to `/private` is recorded only in the private directory. Nothing of it is written into the project.
+3. A private record is a document, an item, a log entry, or a journal entry.
+4. Its contents are what the engineer directs. Write the engineer's words, or what the engineer asks the agent to write. Add nothing on your own initiative.
+
+## The private directory
+
+1. Every private record is under one root, `~/.local/share/slasher/`. Per-machine settings stay under `~/.config/slasher/`, which this root does not share.
+2. Each kind has its own directory under the root, and each project has one directory in each kind's directory. The project's directory is named for the project's repository directory.
+3. In a git worktree, the project's directory is named for the main repository's directory, not the worktree's. Every worktree of a project and its main checkout use one directory. Read the name from the parent of `git rev-parse --path-format=absolute --git-common-dir`.
+
+| Kind | Directory |
+|---|---|
+| document | `~/.local/share/slasher/documents/<project>/` |
+| item | `~/.local/share/slasher/items/<project>/` |
+| log entry | `~/.local/share/slasher/log/<project>/` |
+| journal entry | `~/.local/share/slasher/journal/<project>/` |
+
+4. One file in a project's directory is one record.
+5. No directory has a `<username>` directory. The private directory belongs to one user.
+6. A directory may not exist, and its absence is ordinary. Make it when the first record of its kind for that project is written.
+
+## What `/private` records
+
+1. **A file path**, as in `/private notes/pricing.md`: copy that file to the private directory, into the project's documents directory there, with its name and content unchanged. The copy is a private document. The original stays where it is.
+2. **`item <words>`**: write a private item.
+3. **`log <words>`**: write a private log entry.
+4. **`journal <words>`**: write a private journal entry, by the journal package's private-journal-convention, as `/journal private` does.
+5. Words that are not a subcommand and not a path to an existing file are not guessed at. Say so, and ask which subcommand is meant, through the selection interface.
+
+## A private record's shape
+
+1. **A document** keeps the name of the file given. It takes no datetime prefix, no state suffix, and no provenance footer.
+2. **An item** takes an item's shape: the ISO-8601-UTC prefix, the state suffix, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
+3. **A log entry** takes a log entry's shape: the ISO-8601-UTC prefix and a one-line title, with a `**Tags:**` line or a body where it needs one.
+4. **A journal entry** takes the shape the private-journal-convention gives it.
+5. Where a file of that name is already there, ask, through the selection interface, whether to replace it or to use another name.
+
+## Only on the engineer's command
+
+1. Write, read, or list a private record only when the engineer asks for it.
+2. `/private read` reads the record the engineer names. `/private list` lists the project's private records, of every kind or of the kind named.
+3. Do not read a private record at session start.
+4. Do not read one to answer a question, unless the engineer names it.
+5. Do not offer to write a private record, or name the private directory as a place to put something.
+6. Log nothing in the project about a private record: not its creation, a change to it, its being read, or its move into the project. This holds where another rule asks for a log entry.
+7. A private item takes no log entry in the project when it is written or when its state changes.
+8. A private record takes no commit.
+9. Whether the private directory is under version control is the engineer's decision. Neither ask for it nor forbid it.
+
+## Moving a private record into the project
+
+1. A private record moves into the project only on the engineer's command.
+2. The engineer names where it goes. Where the engineer names no place, ask, through the selection interface.
+3. Before the move, name the record and its destination, and ask, through the selection interface, whether to move it. The move publishes it to every reader of the repository.
+4. Move the file with its content unchanged, and remove it from the private directory.
+5. It is then a file of the project. Where it goes under `slasher/local/`, it takes that directory's conventions from then on.
+6. A private journal entry moves by the private-journal-convention.
+7. Nothing else moves a private record. Do not offer to move one.
+
+## What private does not promise
+
+1. Private means kept out of the project's repository and out of the session-start read, and nothing more.
+2. It does not keep a record on the machine. A record the agent writes or reads is plain text in the session. It reaches the model provider, the local transcript, and any hook that is installed.
+
+**Why:** an engineer has material about a project that is not for the project's repository: a draft not ready to share, a note about a person, an idea not ready to be seen, or a document from someone else. Kept in the repository, it is committed and read by every reader. Kept anywhere else, the agent cannot find it. One command that records only in a fixed directory per project, read only on command, keeps it at hand without publishing it.
+
+**How to apply:** when the engineer types `/private`, record what was given in the project's directory for its kind under `~/.local/share/slasher/`. Do only the act asked for, write nothing into the project, log nothing, and commit nothing.
+
 # Ask-again puts the last question again
 
 Source: system/foundation/source/ask-again-puts-the-last-question-again.md
@@ -910,61 +987,6 @@ Trigger: When the engineer asks to refresh or install Slasher's packages, as wit
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would overwrite with a consuming project's bootstrap.
 5. Say that a refreshed or installed rule is read at the next load of the rules: a session restart, or `load rules`.
-
-# Private documents are kept outside the repository
-
-Source: system/foundation/source/private-documents-are-kept-outside-the-repository.md
-
-Trigger: When the engineer asks to write, read, list, or move a private document, as with `/document`
-
-**Trigger:** When the engineer asks to write, read, list, or move a private document, as with `/document`
-
-1. A private document is a document the engineer keeps for a project outside the project's repository. It is not committed with the project.
-2. It can be any document: a draft, notes, a reference, a letter, or a file the engineer gives.
-3. Its contents are what the engineer directs. Write the engineer's words, or what the engineer asks the agent to write. Add nothing on your own initiative.
-
-## The directory
-
-1. Every private document is under one root, `~/.local/share/slasher/documents/`. Per-machine settings stay under `~/.config/slasher/`, which this root does not share.
-2. Each project with private documents has one directory under the root, named for the project's repository directory, for example `~/.local/share/slasher/documents/some-project/`.
-3. One file in that directory is one document.
-4. The directory has no `<username>` directory. It belongs to one user.
-5. The directory may not exist, and its absence is ordinary. Make it when the first private document for that project is written.
-
-## A private document's name
-
-1. Use the name the engineer gives.
-2. Where the engineer gives none, name the document for what it is, dash-separated and lower-case, as in `cart-pricing-draft.md`.
-3. A private document takes no datetime prefix, no state suffix, and no provenance footer. It is not a working-state artifact.
-4. Where a file of that name is already there, ask, through the selection interface, whether to replace it or to use another name.
-
-## Only on the engineer's command
-
-1. Write, read, or list a private document only when the engineer asks for it.
-2. Do not read a private document at session start.
-3. Do not read one to answer a question, unless the engineer names it.
-4. Do not offer to write a private document, or name the directory as a place to put something.
-5. Log nothing about a private document: not its creation, a change to it, its being read, or its move into the project. This holds where another rule asks for a log entry.
-6. A private document takes no commit.
-7. Whether the directory is under version control is the engineer's decision. Neither ask for it nor forbid it.
-
-## Moving a private document into the project
-
-1. A private document moves into the project only on the engineer's command.
-2. The engineer names where it goes. Where the engineer names no place, ask, through the selection interface.
-3. Before the move, name the document and its destination, and ask, through the selection interface, whether to move it. The move publishes it to every reader of the repository.
-4. Move the file with its content unchanged, and remove it from the private directory.
-5. It is then a file of the project. Where it goes under `slasher/local/`, it takes that directory's conventions from then on.
-6. Nothing else moves a private document. Do not offer to move one.
-
-## What private does not promise
-
-1. Private means kept out of the project's repository and out of the session-start read, and nothing more.
-2. It does not keep a document on the machine. A document the agent writes or reads is plain text in the session. It reaches the model provider, the local transcript, and any hook that is installed.
-
-**Why:** an engineer has material about a project that is not for the project's repository: a draft not ready to share, a note about a person, or a document from someone else. Kept in the repository, it is committed and read by every reader. Kept anywhere else, the agent cannot find it. A fixed directory per project, read only on command, keeps it at hand without publishing it.
-
-**How to apply:** when the engineer asks to write, read, list, or move a private document, use the project's directory under `~/.local/share/slasher/documents/`. Do only the act asked for, log nothing, and commit nothing.
 
 # Projects lists the registry, and carries out an instruction in another project
 

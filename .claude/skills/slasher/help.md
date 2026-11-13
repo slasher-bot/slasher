@@ -206,16 +206,17 @@ JOURNAL
                                    (requires confirmation)
   /journal help                    Print this command's help
 
-DOCUMENT
-  Private documents are kept for the project outside its repository, and are
-  read only on command.
+PRIVATE
+  Anything given to /private is recorded only in the private directory,
+  outside the project's repository, and is read only on command.
 
-  /document new                    Write a private document
-  /document read <name>            Read a private document
-  /document list                   List the private documents
-  /document move <name>            Move a private document into the project
-                                   (requires confirmation)
-  /document help                   Print this command's help
+  /private <file path>             Copy the file to the private directory
+  /private item <words>            Write a private item
+  /private log <words>             Write a private log entry
+  /private journal <words>         Write a private journal entry
+  /private read <name>             Read a private record
+  /private list [<kind>]           List the private records
+  /private help                    Print this command's help
 
 BRAINSTORMING
   Brainstorming records points as they are said, freeform in no order, and
