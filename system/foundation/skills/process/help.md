@@ -30,6 +30,10 @@ PROCESS
                                    question
   /aa                              An alias of /ask-again
 
+  /idk [<words>]                   Say "I don't know" to the agent's last
+                                   question. The agent explains it, gives
+                                   its recommendation, and asks it again
+
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
   /#                               An alias of /estimate-confidence
