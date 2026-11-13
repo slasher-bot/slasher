@@ -84,6 +84,7 @@ A word taken out of use with **nothing in its place**. This is not a substitutio
 12. **responsibility** — what transfers: answerability for the next act in the work.
 13. **free-text option** — the answer the selection interface supplies beside the options, where the engineer answers outside the option set.
 14. STE for free-text option: absent as a compound. `option (n)` is not approved and gives ALTERNATIVE (n). `FREE (adj)` is approved in an unrelated sense. `text` is absent. Technical noun, ETE human-computer interaction.
+15. **private document** — a document the engineer keeps for a project outside the project's repository, in `~/.local/share/slasher/documents/<project>/`. It is not committed, and the agent reads, writes, lists, or moves one only on the engineer's command. **Private** means kept out of the repository and out of the session-start read, and nothing more: a document the agent writes or reads still passes through the session. It differs from a private journal entry, which is the writer's record of what they think, and from a working-state artifact, which is committed with the project.
 
 ## Substitutions
 
