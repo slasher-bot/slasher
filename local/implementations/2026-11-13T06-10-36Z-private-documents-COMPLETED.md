@@ -33,6 +33,7 @@
 - **2026-11-12** — Forecast: No forecast, selected by the engineer.
 - **2026-11-12** — Plan: the revised plan for `/private`, accepted by the engineer.
 - **2026-11-12** — Conclusion: Completed, merged into `master`, selected by the engineer as *Commit and complete*.
+- **2026-11-12** — Branch deletion: the worktree is removed and `feature/worktree/private-documents` is deleted, selected by the engineer.
 
 ---
 
