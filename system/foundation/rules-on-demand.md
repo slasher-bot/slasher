@@ -1068,11 +1068,25 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 
 **`/packages refresh [<package>...]` does what `/package refresh` does.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. The words after `refresh` pass to it unchanged.
 
+## One package
+
+**`/packages <package>` acts on one installed package.** Where an act follows the name, carry it out. Where none does, show the package's row from the table, then ask which act is meant, through the selection interface, with the acts the package can take now:
+
+- **refresh** — `/package refresh <package>`: refresh it from its repository, under the package-refresh-and-install-run-foundations-scripts rule.
+- **deactivate** — `/package deactivate <package>`, offered only where the package is Active.
+- **activate** — `/package activate <package>`, offered only where the package is Deactivated.
+
+**Activating or deactivating writes a new package set declaration**, under the a-project-declares-which-installed-packages-are-active rule, and takes effect at the next session. An act the package cannot take now, such as `activate` for an Active package, changes nothing, and the command says so.
+
+**Where the name is not an installed package, say so, and act on nothing.** Do not install it. Installing is `/install`.
+
+## Reading
+
 **Read the packages and the declaration when the command is typed, never from memory.** A package installed during the session is listed, whether its rules were read or not.
 
 **Why:** the engineer asks what is installed, and what each package does, without opening each README. `/package-set` answers which are active, and `/packages` answers what each one is.
 
-**How to apply:** on `/packages`, read the package directories and the latest package set declaration. Print a table of name, state, and the README's first sentence, `foundation` first, then the package set's name below it where one is declared.
+**How to apply:** on `/packages`, read the package directories and the latest package set declaration. Print a table of name, state, and the README's first sentence, `foundation` first, then the package set's name below it where one is declared. On `/packages <package>`, carry out the act named, or ask which, offering only the acts the package can take now.
 
 # Projects lists the registry, and carries out an instruction in another project
 
