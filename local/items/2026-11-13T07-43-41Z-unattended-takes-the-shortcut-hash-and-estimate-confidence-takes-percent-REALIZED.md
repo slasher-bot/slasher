@@ -1,6 +1,6 @@
 # `/unattended` takes the shortcut `/#`, and `/estimate-confidence` takes `/%`
 
-- **State:** Implementation
+- **State:** Realized
 - **Tags:** [idea]
 
 **The shortcut of `/unattended` changes from `/!` to `/#`, and the shortcut of `/estimate-confidence` changes from `/#` to `/%`.**
@@ -16,3 +16,4 @@
 Authored by Scott Bellware on Thu Nov 12 2026 at 11:43:41 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:45:04 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:49:06 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:50:05 PM PT
