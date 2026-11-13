@@ -257,6 +257,12 @@ place_settings_json() {
     echo "'SessionStart' entry that runs slasher/system/foundation/session-start.sh and the"
     echo "'UserPromptSubmit' entry that runs slasher/system/foundation/startup-display.sh. Keep"
     echo "'statusLine'. Remove 'hooks' itself if nothing is left in it."
+  elif [ -f .claude/settings.json ] && grep -q 'waytide/system/foundation/statusline.sh' .claude/settings.json; then
+    # Wired before Waytide was renamed Slasher. The script moved with waytide/, so the status
+    # line runs nothing until the command names the new path.
+    echo ".claude/settings.json runs the status line from waytide/system/foundation/statusline.sh,"
+    echo "which moved with waytide/. Change that command yourself to"
+    echo "slasher/system/foundation/statusline.sh."
   elif [ -f .claude/settings.json ] && grep -q 'foundation/statusline.sh' .claude/settings.json; then
     echo ".claude/settings.json already runs the Slasher status line — left unchanged."
   elif [ ! -f .claude/settings.json ]; then
@@ -294,8 +300,25 @@ place_plugin() {
 # copy of every package under slasher/system/, and every other move below reads slasher/local/.
 #
 # The same narrow semantics as the moves below: it moves only when waytide/ is present and
-# slasher/ absent, and anything else is reported and left alone. Plain mv rather than git mv, for
-# records that were never committed.
+# slasher/ absent, and anything else is reported and left alone.
+#
+# In a git repository the move is committed, because each package's subtree history is keyed by
+# its prefix, and migrate_packages adds the packages again under the new one, which needs the move
+# in history first. So a tree with uncommitted changes to tracked files is refused. git mv moves
+# the tracked files and carries an untracked one along without staging it. Outside a repository,
+# and for a waytide/ git does not track, a plain mv.
+# Change the project's .gitignore lines that name waytide/ to name slasher/, as part of the move.
+# A line that ignores a path under waytide/ stops matching once the folder moves, so what it kept
+# out of the repository, such as a journal kept in a repository of its own, would be taken in by
+# the next broad add. A leading ! or / is kept. Plain text, so unlike settings.json it is edited.
+migrate_gitignore() {
+  [ -f .gitignore ] || return 0
+  grep -q '^!\{0,1\}/\{0,1\}waytide/' .gitignore || return 0
+  sed 's|^\(!\{0,1\}/\{0,1\}\)waytide/|\1slasher/|' .gitignore > .gitignore.tmp
+  mv .gitignore.tmp .gitignore
+  echo "Changed .gitignore's waytide/ lines to slasher/."
+}
+
 migrate_layout() {
   [ -d waytide ] || return 0
 
@@ -305,7 +328,24 @@ migrate_layout() {
     return 0
   fi
 
-  mv waytide slasher
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1 &&
+     [ -n "$(git ls-files waytide | head -1)" ]; then
+    if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
+      echo "waytide/ is not moved: the working tree has uncommitted changes to tracked files."
+      echo "Commit or stash them, and run the installer again."
+      exit 1
+    fi
+    git mv waytide slasher
+    migrate_gitignore
+    [ -f .gitignore ] && git add .gitignore
+    git commit -q -m "waytide/ is moved to slasher/"
+    echo "Moved waytide/ to slasher/, and committed the move — Waytide is renamed Slasher."
+  else
+    mv waytide slasher
+    migrate_gitignore
+    echo "Moved waytide/ to slasher/ — Waytide is renamed Slasher."
+    echo "Commit the move."
+  fi
 
   # The installer may have been run as waytide/system/foundation/install.sh, so the folder it
   # runs from has just moved.
@@ -313,9 +353,45 @@ migrate_layout() {
     waytide/*) here="slasher/${here#waytide/}" ;;
     ./waytide/*) here="./slasher/${here#./waytide/}" ;;
   esac
+}
 
-  echo "Moved waytide/ to slasher/ — Waytide is renamed Slasher."
-  echo "Commit the move."
+# Add each package again under slasher/system/, where it was only ever added under
+# waytide/system/. git subtree finds a package's last pull by the prefix its squash commits name,
+# so after the move a pull under the new prefix fails with "was never added". Removing the package
+# and adding it again writes a squash commit for the new prefix. A package's repository is found
+# as refresh-packages.sh finds it: the README's **Repository:** line, or the path with each
+# slash as a dash. Each removal is committed, and the add commits itself.
+migrate_packages() {
+  [ -d slasher/system ] || return 0
+  git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return 0
+
+  packages=$(
+    cd slasher/system &&
+      find . -mindepth 2 -maxdepth 3 -name README.md |
+        sed 's|^\./||; s|/README\.md$||' |
+        sort
+  )
+
+  for package in $packages; do
+    if [ -n "$(git log -1 --format=%H --grep="^git-subtree-dir: slasher/system/$package\$")" ]; then
+      continue
+    fi
+    if [ -z "$(git log -1 --format=%H --grep="^git-subtree-dir: waytide/system/$package\$")" ]; then
+      continue
+    fi
+
+    repository=$(
+      sed -n 's|^[[:space:]]*\*\*Repository:\*\*[[:space:]]*\([A-Za-z0-9._-]*\).*|\1|p' \
+        "slasher/system/$package/README.md" 2>/dev/null |
+        head -1
+    )
+    [ -n "$repository" ] || repository=$(printf '%s' "$package" | tr '/' '-')
+
+    git rm -r -q "slasher/system/$package"
+    git commit -q -m "$package is removed, to be added again under slasher/system/"
+    git subtree add -q --prefix "slasher/system/$package" "$origin/$repository.git" master --squash
+    echo "Added $package again under slasher/system/, so a refresh finds it."
+  done
 }
 
 # Move this machine's waytide folders to the slasher names: the configuration under ~/.config,
@@ -511,6 +587,56 @@ migrate_note_tag() {
   fi
 }
 
+# Retag a project's work items [work]. A piece of work to be done was tagged [work-item] until
+# 2026-10-29, and the engineer settled then that the installer converts a project's items. Only the
+# Tags line changes. The same narrow semantics as migrate_note_tag.
+migrate_work_tag() {
+  items_dir="slasher/local/items"
+  [ -d "$items_dir" ] || return 0
+
+  migrated=0
+  for item in "$items_dir"/*.md; do
+    [ -f "$item" ] || continue
+    grep -q '^\(- \)\{0,1\}\*\*Tags:\*\*.*\[work-item\]' "$item" || continue
+    sed '/^\(- \)\{0,1\}\*\*Tags:\*\*/s/\[work-item\]/[work]/' "$item" > "$item.tmp"
+    mv "$item.tmp" "$item"
+    migrated=$((migrated + 1))
+  done
+
+  if [ "$migrated" -gt 0 ]; then
+    echo "Retagged $migrated item(s) from [work-item] to [work]."
+    echo "Commit the change."
+  fi
+}
+
+# Make a project's Open notes Recorded. A note's one state is Recorded, but an observation could
+# be Open before observations became notes on 2026-11-11, and migrate_note_tag retags it without
+# touching its state. So an item tagged [note] whose file ends -OPEN is renamed -RECORDED, and its
+# State line changes with it. The same narrow semantics as migrate_observation_state.
+migrate_note_state() {
+  items_dir="slasher/local/items"
+  [ -d "$items_dir" ] || return 0
+
+  migrated=0
+  for open in "$items_dir"/*-OPEN.md; do
+    [ -f "$open" ] || continue
+    grep -q '^\(- \)\{0,1\}\*\*Tags:\*\*.*\[note\]' "$open" || continue
+    recorded="${open%-OPEN.md}-RECORDED.md"
+    if [ -e "$recorded" ]; then
+      echo "Both $open and $recorded are present — neither is touched."
+      continue
+    fi
+    sed 's/^\(\(- \)\{0,1\}\*\*State:\*\*\) Open$/\1 Recorded/' "$open" > "$recorded"
+    rm "$open"
+    migrated=$((migrated + 1))
+  done
+
+  if [ "$migrated" -gt 0 ]; then
+    echo "Made $migrated note(s) Recorded — a note's one state."
+    echo "Commit the change."
+  fi
+}
+
 # 0. Print the bootstrap section and stop. Nothing is installed and nothing is placed,
 #    so this is safe to run anywhere, including from the authoring source. It exists so
 #    refresh-packages.sh can compare a project's AGENTS.md against the current text
@@ -526,6 +652,7 @@ migrate_machine
 
 # 1. Install (or refresh) the foundation rules — skipped in agents-md-only mode.
 if [ "$1" != "agents-md" ]; then
+  migrate_packages
   if [ ! -d "$prefix" ]; then
     git subtree add --prefix "$prefix" "$repo" master --squash
   fi
@@ -549,3 +676,5 @@ migrate_logs
 migrate_items
 migrate_observation_state
 migrate_note_tag
+migrate_note_state
+migrate_work_tag
