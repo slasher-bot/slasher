@@ -166,7 +166,7 @@ PROCESS
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
-  /! <request>                     An alias of /unattended
+  /# <request>                     An alias of /unattended
 
   /ask-again                       Repeat the agent's previous multiple-choice
                                    question
@@ -178,7 +178,7 @@ PROCESS
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
-  /#                               An alias of /estimate-confidence
+  /%                               An alias of /estimate-confidence
 
   /process help                    Print this command's help
 
