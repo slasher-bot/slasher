@@ -1,6 +1,6 @@
 # `/idk` says "I don't know" to the agent
 
-- **State:** Implementation
+- **State:** Realized
 - **Tags:** [idea]
 
 **`/idk` is a command that says "I don't know" to the agent.**
@@ -13,3 +13,4 @@
 
 Authored by Scott Bellware on Thu Nov 12 2026 at 11:35:48 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:44:03 PM PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:45:41 PM PT
