@@ -4,7 +4,7 @@
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/clarify, /??`, `/idk`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, `/note` below `/decision`, `/notes` below `/note`, and `/packages` below `/package`, each in its domain's rows file. `/clarify, /??`, `/idk`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -27,6 +27,8 @@
 ## History
 
 Until Fri Nov 13 2026 the shortcut of `/unattended` was `/#`, from Thu Nov 12 2026. The engineer changed it back to `/!`.
+
+Until Fri Nov 13 2026 `/packages` had no row of its own.
 
 Until Fri Nov 13 2026 `/notes` had no row of its own.
 
@@ -79,3 +81,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 11:48:54 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 12:01:15 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 2:56:41 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:01:31 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 3:02:14 PM PT

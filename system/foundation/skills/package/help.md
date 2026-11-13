@@ -11,4 +11,7 @@ PACKAGES
   /package-set                     Show the active package set
   /package-set <set or packages>   Declare the package set
 
+  /packages                        List the installed packages, whether
+                                   each is active, and what each is
+
   /package help                    Print this command's help
