@@ -1543,7 +1543,7 @@ Slasher's rules will load on the first prompt, or enter: /load
 53. The loading part opens with the loading line, which names the wait for the read:
 
 ```
-Slasher is pre-loading its rules...
+Slasher is pre-loading its rules... this could take a minute
 ```
 
 54. Then one blank line, then the block, which ends the loading part:
