@@ -10,24 +10,37 @@
 
 ## State
 
-- **State:** Open
+- **State:** Completed
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/load-line-omitted-when-started-with-load`
-- **Base:** recorded when the work starts
+- **Base:** `8f140228`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-load-line-omitted-when-started-with-load`, chosen at the start.
 - **Participation:** unattended, chosen at the start.
 - **Forecast:** none. The verdict question is not asked.
+
+## What happened
+
+- `started-with-load.sh` is new in `foundation`. It reads the command lines of the processes above it, nearest first, and stops at the first that is Claude Code: a word whose last path part is `claude`, or `claude-code/cli.js`. It succeeds where the prompt is `/load` or `/slasher:load` with no `help` after it, or `load rules`.
+- `session-start.sh` leaves out the load line where the script succeeds. Where it fails or is missing, the line prints.
+- In this session, started as `claude --chrome /load`, the script succeeds, and the session-start message ends with the install line.
+- The command line joins the arguments with spaces. A prompt that only mentions `/load` also leaves out the line.
+- The startup-display rule and the harness-announces rule say the load line is left out in this case. Their compressed texts are revised and not re-checked.
+- The test `test/automated/session-start-started-with-load.sh` runs the session-start script under a stand-in `claude` program, with seven outcomes. It failed before the change and passes after it.
+- The automated suite passed: 71 test files.
 
 ## Confirmations
 
 - **2026-11-14** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-14** — Participation: Unattended, selected by the engineer. Agent's confidence 72%, risk of redo 28%, It'll work 85%, Your approval 75%, attended confidence 88%. The warning was not shown, and Attended was not recommended.
 - **2026-11-14** — Forecast: No forecast, selected by the engineer.
+- **2026-11-14** — Plan: accepted by the engineer.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 3:16:58 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 3:17:32 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 3:19:58 PM PT

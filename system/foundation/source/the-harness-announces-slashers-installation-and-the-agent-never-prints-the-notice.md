@@ -65,7 +65,7 @@ The notice and the display are wired by the hooks of the Slasher plugin, in `.cl
 
   **What it does not do is verify the read.** Nothing here can: the hook runs before the session and cannot observe what the agent then does. It removes one specific excuse — the instruction being buried in a prose file the agent may not open — and no more. The verification remains what it has always been, the work honoring the rules.
 
-- **The notice has no close of its own.** It ends with what it reports: the install. The startup display's load line, printed after it in the same message, says when the rules load and that `/load` loads them now. See the the-startup-display-prints-as-the-session-starts rule.
+- **The notice has no close of its own.** It ends with what it reports: the install. The startup display's load line, printed after it in the same message, says when the rules load and that `/load` loads them now. It is left out where Claude Code was started with `/load`. See the the-startup-display-prints-as-the-session-starts rule.
 
   **Something the engineer types is required, whatever it says.** Nothing the hook supplies can execute on its own, since an agent produces nothing until the engineer speaks. So the read cannot happen before some first message exists. What the line settles is only what that first message should be.
 
@@ -174,7 +174,7 @@ Slasher installed at slasher/system/ — 5 packages: foundation, language, testi
 3. A directory carrying a `README.md` is a package, which tells a grouped package from the grouping directory above it.
 4. Nothing prints a fixed list.
 5. The notice reports the install and nothing more. It names no experiment or feature. The status line's second line shows one that has not concluded, and `/current` lists every one.
-6. The notice has no close of its own. It ends with what it reports. The startup display's load line, after it in the same message, says when the rules load and that `/load` loads them now.
+6. The notice has no close of its own. It ends with what it reports. The startup display's load line, after it in the same message, says when the rules load and that `/load` loads them now. It is left out where Claude Code was started with `/load`.
 7. Something the engineer types is required in any case, since the agent produces nothing until the engineer speaks.
 8. This gives up a contentless foil word whose only effect came through the hook's channel. So that channel is no longer testable from ordinary use.
 9. The trade of observability for legibility is deliberate.
@@ -309,8 +309,11 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 - 2026-11-09, revised: the second status line takes an Open implementation too; not re-checked
 - 2026-11-09, checked: 85 directives, 81 kept, 3 less precise, 1 lost. The directive left lost is when the rule applies, which its Trigger line carries. The three less precise are in text this revision did not change
 - 2026-11-14, revised: the notice reports the install and nothing more, and the open line is removed; checked: 134 directives, 129 kept, 4 less precise, 1 lost, 1 repair, naming `/current`; re-checked: 134 directives, 128 kept, 6 less precise, 0 lost. Left less precise, none touched by this revision: that the loading part reads from the startup display rule, that the instruction names nothing else beside the packages, that the compaction's summary does not hold the rules, the authoring source's `system/`, the removed `SLASHER_QUIET`, and that `session-start.sh instruction` prints the instruction alone, as plain text
+- 2026-11-14, revised: point 6 says the load line is left out where Claude Code was started with `/load`; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 the load line followed the notice at every session start, including one started with `/load`.
 
 Until Sat Nov 14 2026 the notice carried an open line, after a blank line below the install line. It named each experiment and feature that had not concluded, as `1 implementation open: refresh-after-publish (open)`. The engineer removed it, since the status line's second line shows the implementation under way.
 
@@ -469,3 +472,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 5:25:11 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 3:19:02 PM PT
