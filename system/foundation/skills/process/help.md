@@ -4,7 +4,7 @@ PROCESS
 
   /items                           Every item, whatever its state
   /items current                   The current items (/item list current)
-  /i                               An alias of /items
+  /i                               An alias of /items current
   /current [<n>]                   The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /current
