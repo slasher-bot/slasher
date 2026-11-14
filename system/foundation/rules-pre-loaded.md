@@ -284,7 +284,7 @@ Source: system/foundation/source/a-projects-durable-context-is-recorded-in-its-c
 
 Source: system/foundation/source/a-reply-that-writes-a-record-ends-with-the-records-path.md
 
-1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the record's full, absolute path, as the file now stands, alone on its own line. The path carries the state suffix where the record has one.
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the record's full, absolute path, as the file now stands, alone on its own line. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
 2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
 3. Put nothing around the path: no bullet, no backticks, no label, and no sentence.
 4. Where the reply wrote several records, give each path its own line at the end. Put the record the reply is about last, after its log entries and any other record written beside it. List a renamed record by its new path.
