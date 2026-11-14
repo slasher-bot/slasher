@@ -33,6 +33,9 @@ PROCESS
                                    question
   /aa                              An alias of /ask-again
 
+  /copy-last-line                  Copy the last line of the previous reply
+                                   to the clipboard
+
   /idk [<words>]                   Say "I don't know" to the agent's last
                                    question. The agent explains it, gives
                                    its recommendation, and asks it again
