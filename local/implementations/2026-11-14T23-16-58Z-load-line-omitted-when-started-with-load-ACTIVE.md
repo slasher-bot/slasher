@@ -10,14 +10,14 @@
 
 ## State
 
-- **State:** Open
+- **State:** Active
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/load-line-omitted-when-started-with-load`
-- **Base:** recorded when the work starts
+- **Base:** `8f140228`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-load-line-omitted-when-started-with-load`, chosen at the start.
 - **Participation:** unattended, chosen at the start.
 - **Forecast:** none. The verdict question is not asked.
@@ -27,7 +27,9 @@
 - **2026-11-14** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-14** — Participation: Unattended, selected by the engineer. Agent's confidence 72%, risk of redo 28%, It'll work 85%, Your approval 75%, attended confidence 88%. The warning was not shown, and Attended was not recommended.
 - **2026-11-14** — Forecast: No forecast, selected by the engineer.
+- **2026-11-14** — Plan: accepted by the engineer.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 3:16:58 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 3:17:32 PM PT
