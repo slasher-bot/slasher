@@ -10,16 +10,25 @@
 
 ## State
 
-- **State:** Open
+- **State:** Completed
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/brainstorm-item-kind`
+- **Base:** `09a6a5fa`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-brainstorm-item-kind`, chosen at the start.
 - **Participation:** unattended, chosen at the start.
 - **Forecast:** none. The verdict question is not asked.
+
+## What happened
+
+- `[brainstorm]` is an item kind that starts Recorded and stays Recorded.
+- A brainstorm begun with no kind ends by writing its reframed points to a new `[brainstorm]` item, and asks nothing about where they go. A brainstorm begun with a kind still writes that kind.
+- The brainstorm rule and the items rule say so, each with a History line. The BRAINSTORMING and ITEMS help match.
+- One fresh agent listed the directives before reading the compressed text, then checked them: 17 directives, 13 kept, 3 less precise, 1 lost, then 3 repairs. The brainstorming rule's stale Related entry for the end's question is removed.
+- The automated suite passed: 58 tests.
 
 ## Confirmations
 
@@ -27,7 +36,11 @@
 - **2026-11-13** — Plan: accepted by the engineer, including this record's commit on `master`.
 - **2026-11-13** — Working location: branch and worktree, selected by the agent.
 - **2026-11-13** — Forecast: no forecast, selected by the agent.
+- **2026-11-13** — Merge to master: selected by the engineer.
+- **2026-11-13** — Branch deletion and worktree removal: selected by the engineer, in the same selection as the merge.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 6:44:12 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 6:45:19 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 6:49:12 PM PT
