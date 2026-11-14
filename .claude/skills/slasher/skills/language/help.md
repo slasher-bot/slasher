@@ -12,6 +12,10 @@ LANGUAGE
   /brief [<request>]               Answer the request in brief, or give the
                                    previous answer again in brief
 
+  /reprint-and-review [<file>]     Print the draft as it now stands, then a
+                                   review of it
+  /rr [<file>]                     An alias of /reprint-and-review
+
   /reserve <word>                  Reserve a word, in six steps
 
   /ete [<text>]                    Say the previous answer, or the text, in
