@@ -10,14 +10,14 @@
 
 ## State
 
-- **State:** Open
+- **State:** Active
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/begin-start-end-conclude-harmonized`
-- **Base:** recorded when the work starts
+- **Base:** `f51e2345`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-begin-start-end-conclude-harmonized`, chosen at the start.
 - **Participation:** not asked. The work is content work, which the local rule on Design By Efferent and content work holds off the method.
 - **Forecast:** none. The verdict question is not asked.
@@ -31,3 +31,4 @@
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 3:32:59 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 3:58:41 PM PT
