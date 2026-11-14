@@ -35,6 +35,7 @@ PROCESS
 
   /copy-last-line                  Copy the last line of the previous reply
                                    to the clipboard
+  /cll                             An alias of /copy-last-line
 
   /idk [<words>]                   Say "I don't know" to the agent's last
                                    question. The agent explains it, gives
