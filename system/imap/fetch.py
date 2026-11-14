@@ -11,8 +11,11 @@
 # folder holds a fetch.toml, the folders it lists are fetched, each into its
 # local folder. A fetch.toml may instead be in the private store, under
 # ~/.local/share/slasher/email/<project>/<name>/, and one that says
-# store = "private" has the messages written there, out of the repository. Otherwise the inbox goes to INBOX/, and the folder the server
-# marks as sent mail goes to Sent/.
+# store = "private" has the messages written there, out of the repository.
+# One that says store = "project", or has no store line, has them written
+# into the project. Any other store is refused, and that account is not
+# fetched. Where there is no fetch file, the inbox goes to INBOX/, and the
+# folder the server marks as sent mail goes to Sent/.
 #
 # Each message is one text file, its headers then its body, named with the
 # message's date as an ISO-8601-UTC prefix, its UID, and its subject. Its
@@ -124,11 +127,19 @@ def fetch_file(directory):
         return tomllib.load(file)
 
 
+STORES = ("project", "private")
+
+
+class UnknownStore(Exception):
+    pass
+
+
 def mailbox(local, account):
     """The mailbox's fetch file, and the folder its messages go to. The
     fetch file is looked for in the project, then in the private store. Where
     it says store = "private", the messages go to the private store, under
-    the project folder's name."""
+    the project folder's name. Where it says store = "project", or has no
+    store line, they go to the project. Any other store is refused."""
     folder = account["label"] or os.path.join(account["host"], account["user"])
     in_project = os.path.join(local, "email", folder)
     in_private = os.path.join(
@@ -138,7 +149,10 @@ def mailbox(local, account):
     for directory in (in_project, in_private):
         listing = fetch_file(directory)
         if listing is not None:
-            return listing, in_private if listing.get("store") == "private" else in_project
+            store = listing.get("store", "project")
+            if store not in STORES:
+                raise UnknownStore(f'{folder}: store "{store}" is not "project" or "private"')
+            return listing, in_private if store == "private" else in_project
     return None, in_project
 
 
@@ -267,10 +281,10 @@ def fetch(imap, folder, directory):
 
 
 def fetch_account(local, account):
+    listing, destination = mailbox(local, account)
     imap = connect(account["host"])
     imap.login(account["user"], read_credential(account))
     try:
-        listing, destination = mailbox(local, account)
         for folder, local_folder in folders(imap, listing):
             count = fetch(imap, folder, os.path.join(destination, local_folder))
             print(f"{account['label'] or account['user']} {local_folder}: {count} fetched")
@@ -291,9 +305,14 @@ def main():
         else:
             print(f"No account is named {argument}, or has it as its host", file=sys.stderr)
         return 1
+    status = 0
     for account in found:
-        fetch_account(local, account)
-    return 0
+        try:
+            fetch_account(local, account)
+        except UnknownStore as error:
+            print(error, file=sys.stderr)
+            status = 1
+    return status
 
 
 if __name__ == "__main__":
