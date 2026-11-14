@@ -387,8 +387,17 @@ migrate_packages() {
     )
     [ -n "$repository" ] || repository=$(printf '%s' "$package" | tr '/' '-')
 
+    # A .DS_Store is ignored, so git rm leaves it, and the folder with it, and git subtree add
+    # then refuses a prefix that exists. Finder writes it, and it holds nothing of the package's.
+    find "slasher/system/$package" -name .DS_Store -delete
     git rm -r -q "slasher/system/$package"
     git commit -q -m "$package is removed, to be added again under slasher/system/"
+    if [ -e "slasher/system/$package" ]; then
+      echo "slasher/system/$package still holds files git does not track:"
+      find "slasher/system/$package" -type f
+      echo "Move or remove them, and run the installer again."
+      exit 1
+    fi
     git subtree add -q --prefix "slasher/system/$package" "$origin/$repository.git" master --squash
     echo "Added $package again under slasher/system/, so a refresh finds it."
   done
