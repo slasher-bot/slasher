@@ -310,14 +310,14 @@ A list of items takes the ordinal and no SHA columns:
 ## Listing items by state
 
 1. A list of items may be asked for by state, and lists the items whose `**State:**` line reads that state.
-2. `current` asks for the Open and Active items together. It is not a state, and it leaves out Suspended items.
+2. `current` asks for the Open, Active, and Implementation items together. It is not a state, and it leaves out Suspended items.
 
 ## The items command
 
 1. `/items` lists every item, whatever its state, oldest first.
 2. Present each item as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns and no kind column.
 3. A Suspended item is a hidden record, counted rather than listed, under the a-status-report-prints-a-fixed-whole-project-report rule. Leave it out of the rows. Below the table, print a line giving their count and kind, as `1 suspended item`.
-4. `/items current` lists the Open and Active items, as `/item list current` does.
+4. `/items current` lists the Open, Active, and Implementation items, as `/item list current` does.
 
 ## The current command
 
@@ -327,7 +327,7 @@ A list of items takes the ordinal and no SHA columns:
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. In the items table `/current` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
 6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
-7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
+7. Below the items table, under the heading *Other items*, print the count of each state other than Open, Active, and Implementation that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
 8. A number given to `/current` does not change these counts.
 
 ## The features and experiments commands
@@ -1470,7 +1470,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 61. Do not refuse to answer until the item is amended.
 62. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
 63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The implementations rule asks the same for an implementation concluded with no state named. *Complete that item* names its kind's concluding state.
-64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item, since the implementation is listed as current work in its place.
+64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is a current item, and its implementation is listed as current work too.
 65. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 
 # The log records why work was abandoned, and never says undone work was done
