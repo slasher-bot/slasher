@@ -43,7 +43,7 @@ Open with the **Question** or the **Intent**, then the setup:
 - **Active** — the work is in progress.
 - **Deferred** — kept to do later, with no one working toward it.
 - **Suspended** — paused, not ended.
-- **Discontinued** — stopped, with no plan to do it. It is not current work, so the list of current work and the session-start notice leave it out. What it recorded may be merged.
+- **Discontinued** — stopped, with no plan to do it. It is not current work, so the list of current work and the status line leave it out. What it recorded may be merged.
 - **Obsolete** — it lost its relevance over time, as the work moved past it with no one deciding.
 - **Superseded** — replaced by another implementation. The two records name the counterpart. An implementation can be superseded at any time, without first being suspended.
 - **Abandoned** — dropped before concluding, by decision. Not merged, and the record is kept.
@@ -134,7 +134,7 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
     - **Active**: the work is in progress.
     - **Deferred**: kept to do later, with no one working toward it.
     - **Suspended**: paused, not ended.
-    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the session-start notice leave it out. What it recorded may be merged.
+    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the status line leave it out. What it recorded may be merged.
     - **Obsolete**: it lost its relevance over time, with no one deciding.
     - **Superseded**: replaced by another implementation. Each of the two records names its counterpart. Supersede at any time, without suspending first.
     - **Abandoned**: dropped before concluding, by decision. It is not merged, and the record is kept.
@@ -196,8 +196,11 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 - 2026-11-09, revised: an item an implementation is created for takes Implementation, and follows it; not re-checked
 - 2026-11-09, checked: 70 directives, 67 kept, 2 less precise, 1 lost, 1 repair: the affirm, refute, and inconclusive commands are named; re-checked: 70 directives, 67 kept, 2 less precise, 1 lost. The directive left lost is when the rule applies, which its Trigger line carries
 - 2026-11-13, revised: an item already on `master` takes its implementation's state changes on `master` too; not re-checked
+- 2026-11-14, revised: a Discontinued implementation is left out of the status line, not the session-start notice; checked: 147 directives, 143 kept, 4 less precise, 0 lost. Left less precise, none touched by this revision: when the rule applies, which its Trigger line carries; the Obsolete definition's cause; that the item is renamed on `master`; and why records on `master` are kept current
 
 ## History
+
+Until Sat Nov 14 2026 a Discontinued implementation was named as left out of the session-start notice, which then reported the implementations that had not concluded.
 
 Until Fri Nov 13 2026 an item's state change for its implementation was made on the implementation's branch only, so `master` showed the item's earlier state until the branch merged.
 
@@ -226,7 +229,7 @@ Related:
 - the an-implementation-runs-on-a-branch-to-a-declared-end rule — the lifecycle this records
 - the a-record-may-be-categorized-with-square-bracket-tags rule — how a tag is written
 - the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule — the filename suffix the state line gives
-- the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the notice that reports an open implementation
+- the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the status line that names an open implementation
 - the design-by-efferent a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule — the design record for the same work, which names this one
 - the the-items-directory-holds-one-file-per-item rule — the other record that carries a state, and whose in-progress state is also Active
 
@@ -264,3 +267,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:40 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:19:24 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT

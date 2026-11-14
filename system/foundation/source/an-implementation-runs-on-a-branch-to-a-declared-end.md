@@ -120,9 +120,9 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **What the watch rests on, stated plainly:** the branch name, which the status line carries every turn, and a judgment of whether the work at hand serves the recorded question or intent. Only the first is mechanical, and a missed detection produces nothing at all — no alarm, no artifact, just the divergence. It is a practice, not a guarantee.
 
-**Under a worktree there is nothing to diverge and nothing to notice.** The main working tree stays on the upstream branch and the implementation leaves no trace in it, so the configuration that isolates best is the one that most easily loses track. That is what the **session-start notice** answers, reporting every implementation that has not concluded.
+**Under a worktree there is nothing to diverge and nothing to notice.** The main working tree stays on the upstream branch and the implementation leaves no trace in it, so the configuration that isolates best is the one that most easily loses track. That is what the status line's second line answers, naming the branch of an implementation that has not concluded, in any worktree.
 
-**There is no counterpart for work without a forecast.** Other work during it is ordinary rather than a problem, so there is nothing to detect. Work being forgotten is covered by the same notice.
+**There is no counterpart for work without a forecast.** Other work during it is ordinary rather than a problem, so there is nothing to detect. Work being forgotten is covered by the same line.
 
 **Why:** an experiment and a feature share one lifecycle: the branch, the working location, the participation decision, the declared end, the confirmations, the conclusion in the main working tree, and the confirmed branch deletion. What differs is the forecast, the verdict, the merge gate, the affirmation, the current-branch option, and the drift watch — and every one of those follows from whether the work is judged against a forecast. Whether it states one is decided at the start, and whether it is judged is decided at the end.
 
@@ -281,7 +281,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 3. Neither recourse ends the implementation, and the engineer's intent decides.
 4. The watch rests on the branch name in the status line and on a judgment of whether the work serves the recorded question or intent.
 5. The watch is a practice, not a guarantee.
-6. Under a worktree there is nothing to watch. The session-start notice reports every implementation that has not concluded.
+6. Under a worktree there is nothing to watch. The status line's second line names the branch of an implementation that has not concluded, in any worktree.
 7. Work without a forecast has no watch, since starting other work during it is ordinary.
 
 ## Compression
@@ -308,8 +308,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-09, revised: new creates the branch and writes the record Open, supersession needs no suspension, and any work can take a verdict word; not re-checked
 - 2026-11-09, checked: 103 directives, 102 kept, 1 less precise, 0 lost. Left less precise: that the verdict question goes through the selection interface, which its fixed options imply
 - 2026-11-13, revised: the first record is committed on the upstream branch before the implementation branch is created, and the branch's copy takes the later updates; the new points checked: 15 directives, 11 kept, 2 less precise, 2 lost, 2 repairs; re-checked: 9 directives, 7 kept, 1 less precise, 1 lost, 2 repairs, not re-checked after. Left lost: that the upstream branch shows the implementation as current while it runs, a reason, which stays in the body
+- 2026-11-14, revised: the status line's second line, not the session-start notice, answers a worktree's lack of trace; checked: 158 directives, 157 kept, 1 less precise, 0 lost, 1 repair, naming the branch and any worktree; re-checked: 158 directives, 158 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sat Nov 14 2026 the session-start notice reported every implementation that had not concluded, and this rule named it as what answers a worktree's lack of trace. The engineer removed that line from the notice.
 
 Until Fri Nov 13 2026 the first record was written on the implementation branch, and the upstream branch had no record of the implementation until the work merged.
 
@@ -345,7 +348,7 @@ Related:
 
 - the the-implementations-directory-holds-one-record-per-implementation rule — the record, the tags, and the state words
 - the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started and the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rules
-- the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the notice reporting what has not concluded
+- the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the status line naming the implementation under way
 - the `git` run-the-test-suite-after-changes-before-considering-whether-to-commit and announce-a-branch-switch-in-a-bordered-block rules
 - the a-phase-starts-by-stating-its-goal rule — what is said when a phase starts
 
@@ -398,3 +401,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 9:49:53 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:01:01 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:37:42 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT

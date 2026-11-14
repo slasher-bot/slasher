@@ -740,7 +740,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 3. Neither recourse ends the implementation, and the engineer's intent decides.
 4. The watch rests on the branch name in the status line and on a judgment of whether the work serves the recorded question or intent.
 5. The watch is a practice, not a guarantee.
-6. Under a worktree there is nothing to watch. The session-start notice reports every implementation that has not concluded.
+6. Under a worktree there is nothing to watch. The status line's second line names the branch of an implementation that has not concluded, in any worktree.
 7. Work without a forecast has no watch, since starting other work during it is ordinary.
 
 # An item that sequences work contains no code samples
@@ -1221,34 +1221,28 @@ Trigger: When changing the session-start notice, the startup display, the status
 
 ```
 Slasher installed at slasher/system/ — 5 packages: foundation, language, testing, design-by-efferent, git
-
-3 implementations open: gate-forecasting (no state recorded), shipped-test-tree-script (suspended), upload-retries (suspended)
 ```
 
 2. The install line enumerates what is on disk.
 3. A directory carrying a `README.md` is a package, which tells a grouped package from the grouping directory above it.
 4. Nothing prints a fixed list.
-5. The open line, after a blank line below the install line, names experiments and features that have not concluded, read from each record's `**State:**` line under `slasher/local/implementations/`.
-6. An implementation that is Affirmed, Refuted, Inconclusive, Completed, Abandoned, or Superseded has concluded, whatever its kind.
-7. One that is Active, Suspended, or carries no state line is reported.
-8. With nothing open, the open line is absent.
-9. The open line exists because an implementation must never be left silently open. One worked in a worktree leaves no trace in the main working tree.
-10. The notice has no close of its own. It ends with what it reports. The startup display's load line, after it in the same message, says when the rules load and that `/load` loads them now.
-11. Something the engineer types is required in any case, since the agent produces nothing until the engineer speaks.
-12. This gives up a contentless foil word whose only effect came through the hook's channel. So that channel is no longer testable from ordinary use.
-13. The trade of observability for legibility is deliberate.
-14. The notice says `installed`, never `loaded`.
-15. A hook runs before the session. It can observe that the packages are on disk and the configuration is live, and not that any rule was read.
-16. The read instruction describes what the session does next, and reports no read.
-17. Call it the session-start notice, not the load notice.
-18. The status line reports the system active, a claim about the configuration rather than the agent.
-19. The notice is plain text. The harness renders `systemMessage` literally, so markup reaches the engineer as punctuation.
-20. The notice carries no mark of its own. The startup display, which holds it, leads the same message, taken from `startup-display.sh message` (see the the-startup-display-prints-as-the-session-starts rule).
-21. Put no quotation marks, and no lone backslash, in anything the hook emits.
-22. `printf` interpolates the notice and the instruction into a JSON string with no escaping.
-23. A double quote ends the string, and a lone backslash begins an invalid escape.
-24. Either way the harness fails to parse the output, and the notice disappears with no error.
-25. After a compaction, one line stands in place of the startup display and the notice: `Context compacted. Slasher is reloading its rules.` It says what the session does next, and reports no read.
+5. The notice reports the install and nothing more. It names no experiment or feature. The status line's second line shows one that has not concluded, and `/current` lists every one.
+6. The notice has no close of its own. It ends with what it reports. The startup display's load line, after it in the same message, says when the rules load and that `/load` loads them now.
+7. Something the engineer types is required in any case, since the agent produces nothing until the engineer speaks.
+8. This gives up a contentless foil word whose only effect came through the hook's channel. So that channel is no longer testable from ordinary use.
+9. The trade of observability for legibility is deliberate.
+10. The notice says `installed`, never `loaded`.
+11. A hook runs before the session. It can observe that the packages are on disk and the configuration is live, and not that any rule was read.
+12. The read instruction describes what the session does next, and reports no read.
+13. Call it the session-start notice, not the load notice.
+14. The status line reports the system active, a claim about the configuration rather than the agent.
+15. The notice is plain text. The harness renders `systemMessage` literally, so markup reaches the engineer as punctuation.
+16. The notice carries no mark of its own. The startup display, which holds it, leads the same message, taken from `startup-display.sh message` (see the the-startup-display-prints-as-the-session-starts rule).
+17. Put no quotation marks, and no lone backslash, in anything the hook emits.
+18. `printf` interpolates the notice and the instruction into a JSON string with no escaping.
+19. A double quote ends the string, and a lone backslash begins an invalid escape.
+20. Either way the harness fails to parse the output, and the notice disappears with no error.
+21. After a compaction, one line stands in place of the startup display and the notice: `Context compacted. Slasher is reloading its rules.` It says what the session does next, and reports no read.
 
 ## The read instruction
 
@@ -1385,7 +1379,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
     - **Active**: the work is in progress.
     - **Deferred**: kept to do later, with no one working toward it.
     - **Suspended**: paused, not ended.
-    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the session-start notice leave it out. What it recorded may be merged.
+    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the status line leave it out. What it recorded may be merged.
     - **Obsolete**: it lost its relevance over time, with no one deciding.
     - **Superseded**: replaced by another implementation. Each of the two records names its counterpart. Supersede at any time, without suspending first.
     - **Abandoned**: dropped before concluding, by decision. It is not merged, and the record is kept.
