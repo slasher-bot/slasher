@@ -6,7 +6,7 @@ Email fetched from an IMAP mailbox into the project, with each mailbox's credent
 - **A mailbox is fetched by its credential's name, by its host, or with every account** (`fetch.py`). `fetch.py <name>` logs in with the host and login stored on the Keychain item, and fetches the inbox and the folder the server marks as sent mail into `slasher/local/email/<name>/INBOX/` and `Sent/`.
 - **Each message is one text file**: its headers, then its body, named with the message's date as an ISO-8601-UTC prefix, its UID, and its subject, as in `2026-11-10T22-03-00Z-1042-some-subject.txt`. Its attachments are files beside it. A message whose UID is already in a file name in the folder is not fetched again.
 - **A fetch file lists what a mailbox fetches** (`fetch.toml`, beside the mailbox's folders). Each `[[folder]]` names a `source` and the `local` folder it goes to. A source of `inbox` or `sent` is the server's own, and any other source is an IMAP folder or a Gmail label, which Gmail serves as a folder of that name.
-- **A mailbox may be kept out of the repository.** A fetch file that says `store = "private"`, kept in `~/.local/share/slasher/email/<project>/<name>/`, has the messages written there.
+- **A fetch file names where a mailbox's messages are stored.** `store = "project"` writes them into the project, in `slasher/local/email/<name>/`, and a fetch file with no `store` line is taken as one. `store = "private"`, in a fetch file kept in `~/.local/share/slasher/email/<project>/<name>/`, writes them there, out of the repository. A fetch file naming any other store is refused, and that mailbox is not fetched.
 
 ```toml
 store = "private"
