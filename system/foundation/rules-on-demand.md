@@ -321,13 +321,13 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The current command
 
-1. `/current` lists the current items, then, under a heading of their own, the current implementations.
+1. `/current` lists the Open and Active items, then, under a heading of their own, the current implementations. It leaves out Implementation items, whose work the implementations show. `/items current` still lists them.
 2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. In the items table `/current` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
-6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
-7. Below the items table, under the heading *Other items*, print the count of each state other than Open, Active, and Implementation that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
+6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
+7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Implementation and Suspended items here too.
 8. A number given to `/current` does not change these counts.
 
 ## The features and experiments commands

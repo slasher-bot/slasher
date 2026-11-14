@@ -50,7 +50,9 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The current command
 
-**`/current` lists the current items, then the current implementations.** The items are the ones `current` asks for, Open and Active. The implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
+**`/current` lists the current items, then the current implementations.** The items are the Open and Active ones. An Implementation item is left out, since the implementations below show the work it is under. The implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
+
+**As the engineer stated it:** When current items and implementations are printed together, as is the case with some commands, items in the Implementation state should not be printed. When current items are printed on their own, items in the Implementation state should be printed.
 
 **The items table printed by `/current` takes a kind column, between the title and the state.** It names the kind each of the item's tags gives, written as a word, not as a tag: *Idea* for `[idea]`, *Work* for `[work]`, and *Legal matter* for `[legal-matter]`. Where the item carries several tags, it names each, separated by commas. Other lists of items take no kind column unless it is asked for.
 
@@ -62,7 +64,7 @@ A list of items takes the ordinal and no SHA columns:
 
 **As the engineer stated it:** Don't print the kind as its tag. eg: for "[idea]", print in the table, "Idea"
 
-**Below the items table, `/current` counts the items it leaves out, by state.** The counts sit under the heading *Other items*, as one comma-separated sentence, as in `47 Realized, 18 Recorded, 12 Abandoned`. Each state other than Open, Active, and Implementation that some item holds is named once, with its count. The states run from the largest count to the smallest. A Suspended item is counted here like any other, which is the treatment a hidden record already takes. A number given to `/current` does not change the counts, since they count the items whose state is not current, not the current items the number leaves out.
+**Below the items table, `/current` counts the items it leaves out, by state.** The counts sit under the heading *Other items*, as one comma-separated sentence, as in `47 Realized, 18 Recorded, 12 Abandoned`. Each state other than Open and Active that some item holds is named once, with its count, Implementation included. The states run from the largest count to the smallest. A Suspended item is counted here like any other, which is the treatment a hidden record already takes. A number given to `/current` does not change the counts, since they count the items whose state is not current, not the current items the number leaves out.
 
 **As the engineer stated it:** At the bottom of the table that prints by "/items", print a summary of how many other of the other iten types there are
 
@@ -176,13 +178,13 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The current command
 
-1. `/current` lists the current items, then, under a heading of their own, the current implementations.
+1. `/current` lists the Open and Active items, then, under a heading of their own, the current implementations. It leaves out Implementation items, whose work the implementations show. `/items current` still lists them.
 2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. In the items table `/current` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
-6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created current items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
-7. Below the items table, under the heading *Other items*, print the count of each state other than Open, Active, and Implementation that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Suspended items here too.
+6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
+7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Implementation and Suspended items here too.
 8. A number given to `/current` does not change these counts.
 
 ## The features and experiments commands
@@ -238,9 +240,12 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-11, revised: `/features` and `/experiments` take `current`, at the engineer's direction; not re-checked
 - 2026-11-13, revised: `/notes` lists every item tagged `[note]`, with an optional number, as the notes command; the notes command checked: 12 directives, 12 kept, 0 less precise, 0 lost, 0 repairs
 - 2026-11-13, revised: `/items` lists every item, and `/items current` the current ones, as the items command; the items command checked: 12 directives, 10 kept, 2 less precise, 0 lost, 1 repair. Left less precise: that `/items current` does what a bare `/items` did before, which point 4 carries by naming `/item list current`, the same list
+- 2026-11-13, revised: `/current` leaves out Implementation items and counts them under Other items, as the current command; the current command checked: 24 directives, 19 kept, 2 less precise, 3 lost, 1 repair, not re-checked. Left less precise: the example *Work* for `[work]`, and the summary's heading, as before. Left lost: that `/current` replaced `/current-items`, an engineer's statement of a rename, not a directive of the command now
 - 2026-11-13, revised: current is Open, Active, and Implementation; not re-checked
 
 ## History
+
+Until Fri Nov 13 2026 `/current` listed Implementation items beside the implementations that work them.
 
 Until Fri Nov 13 2026 `current` asked for the Open and Active items, and left out an item in Implementation, whose implementation was listed in its place.
 
@@ -331,3 +336,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 12:50:34 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 2:56:24 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:39:16 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 4:59:30 PM PT
