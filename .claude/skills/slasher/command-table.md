@@ -26,6 +26,7 @@
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
 | `/packages` | List the installed packages, whether each is active, and what each is |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
+| `/reprint-and-review, /rr` | Print the draft as it now stands, then a review of it |
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/smtp` | These commands send email through an account whose credential is kept in the macOS Keychain, the same credential the imap package fetches with. |
 | `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |

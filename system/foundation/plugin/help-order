@@ -13,6 +13,7 @@ projects
 release
 package
 language
+reprint-and-review
 email
 smtp
 clarify
