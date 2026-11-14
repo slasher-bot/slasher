@@ -10,7 +10,7 @@
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -37,9 +37,12 @@
 - **2026-11-14** — Plan: accepted by the engineer. It refuses a `store` value other than `project` or `private`, which the agent added to the item's intent.
 - **2026-11-14** — Working location: branch only, selected by the agent. The change is small and touches one package, so a worktree adds nothing.
 - **2026-11-14** — Forecast: no forecast, selected by the agent. The intent states the behavior, and there is nothing to compare against.
+- **2026-11-14** — Merge to master: selected by the engineer.
+- **2026-11-14** — Branch deletion: selected by the engineer, in the same selection as the merge.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 9:01:25 AM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 9:05:57 AM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 9:07:04 AM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 9:13:43 AM PT
