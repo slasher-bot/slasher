@@ -10,14 +10,14 @@
 
 ## State
 
-- **State:** Open
+- **State:** Active
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/fetch-file-store-project`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `9932ddb8`, from `master`, the commit holding this record as first written
 - **Working location:** branch only, chosen at the start.
 - **Participation:** unattended, chosen at the start.
 - **Forecast:** none. The verdict question is not asked.
@@ -33,3 +33,4 @@
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 9:01:25 AM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 9:05:57 AM PT
