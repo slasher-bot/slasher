@@ -603,7 +603,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 
 ## The branch
 
-1. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`.
 2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
@@ -617,6 +617,9 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
 13. Make no git tag for the base.
 14. A later run branches from the recorded commit.
+15. Except on the current branch, `new` commits the first record, `Open`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the implementation branch from that commit.
+16. Make every later update to the record on the implementation branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
+17. Where the working location is the current branch, write the record there. There is no second copy.
 
 ## Phases
 

@@ -14,7 +14,11 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 ## The branch
 
-**`new` creates the branch, and writes the record `Open`.** `start` makes the record `Active` when the work starts.
+**`new` writes the record `Open`, then creates the branch.** `start` makes the record `Active` when the work starts.
+
+**The first record is committed on the upstream branch before the implementation branch is created.** `new` writes the record `Open`, with its log entry, and commits both on the upstream branch, `master` in the ordinary case. Then it creates the implementation branch from that commit. The implementation branch's copy of the record takes every update made during the work. Its first update records the base, the commit holding the first record, which that record cannot name itself. The upstream branch's copy stays as first written until the work merges, so the upstream branch shows the implementation as current while it runs. Where the working location is the current branch, the record is written there, and there is no second copy.
+
+**As the engineer stated it:** When an implementation starts, an initial implementation record should be recorded on master. Then the branch is made, and the branch's version takes updates added during the course of the implementation, but the initial record remains on master
 
 - **Name it `experiment/<subject>` or `feature/<subject>`**, matching the tag. `<subject>` is a short dash-separated, lower-case name of what is under test or what is being built, named literally. Add a `-run-<n>` suffix only where the work actually has multiple runs.
 - **Where the work has a worktree, the name carries `worktree/`** — `feature/worktree/<subject>` and `experiment/worktree/<subject>`. A branch checked out in a worktree cannot be checked out again in the main working tree, and nothing in `git branch` says which those are. The segment says it in the one listing where the question comes up.
@@ -140,7 +144,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## The branch
 
-1. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`.
 2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
@@ -154,6 +158,9 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
 13. Make no git tag for the base.
 14. A later run branches from the recorded commit.
+15. Except on the current branch, `new` commits the first record, `Open`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the implementation branch from that commit.
+16. Make every later update to the record on the implementation branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
+17. Where the working location is the current branch, write the record there. There is no second copy.
 
 ## Phases
 
@@ -300,8 +307,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-08, revised: a phase is asked a forecast when added and the verdict when complete, as an implementation is, at the engineer's direction; not re-checked
 - 2026-11-09, revised: new creates the branch and writes the record Open, supersession needs no suspension, and any work can take a verdict word; not re-checked
 - 2026-11-09, checked: 103 directives, 102 kept, 1 less precise, 0 lost. Left less precise: that the verdict question goes through the selection interface, which its fixed options imply
+- 2026-11-13, revised: the first record is committed on the upstream branch before the implementation branch is created, and the branch's copy takes the later updates; the new points checked: 15 directives, 11 kept, 2 less precise, 2 lost, 2 repairs; re-checked: 9 directives, 7 kept, 1 less precise, 1 lost, 2 repairs, not re-checked after. Left lost: that the upstream branch shows the implementation as current while it runs, a reason, which stays in the body
 
 ## History
+
+Until Fri Nov 13 2026 the first record was written on the implementation branch, and the upstream branch had no record of the implementation until the work merged.
 
 Until Mon Nov 9 2026 supersession ran through suspension, the record was written Active when the branch was created, and only work with a forecast could reach a verdict.
 
@@ -387,3 +397,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 9:42:51 PM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:49:53 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:01:01 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 4:37:42 PM PT
