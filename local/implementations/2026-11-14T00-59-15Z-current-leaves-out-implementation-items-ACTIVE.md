@@ -10,16 +10,25 @@
 
 ## State
 
-- **State:** Open
+- **State:** Active
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/current-leaves-out-implementation-items`
+- **Base:** `a28be771`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-current-leaves-out-implementation-items`, chosen at the start.
 - **Participation:** unattended, chosen at the start.
 - **Forecast:** none. The verdict question is not asked.
+
+## What happened
+
+- `/current`, `/'`, and `/c` list the Open and Active items, then the implementations. An Implementation item is left out, and counted under *Other items*.
+- `/items current` and `/i` still list Open, Active, and Implementation items.
+- The current-command section of the printed-list rule and its compressed text say so, with a History line.
+- The new compressed text was checked by a fresh lister and checker: 24 directives, 19 kept, 2 less precise, 3 lost, then 1 repair.
+- The automated suite passed: 58 tests.
 
 ## Confirmations
 
@@ -31,3 +40,4 @@
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 4:59:15 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 4:59:41 PM PT
