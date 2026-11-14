@@ -10,16 +10,23 @@
 
 ## State
 
-- **State:** Open
+- **State:** Active
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/written-record-path-last`
+- **Base:** `6d9746a8`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-written-record-path-last`, chosen at the start.
 - **Participation:** unattended, chosen at the start.
 - **Forecast:** none. The verdict question is not asked.
+
+## What happened
+
+- The foundation rule a-reply-that-writes-a-record-ends-with-the-records-path loads at session start. A reply that wrote a record ends with each record's full path, alone on its own line, the record the reply is about last.
+- One fresh agent listed the directives before reading the compressed text, then checked them: 12 directives, 9 kept, 2 less precise, 1 lost, then 2 repairs.
+- The automated suite passed: 58 tests.
 
 ## Confirmations
 
@@ -31,3 +38,4 @@
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 6:50:55 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 6:51:18 PM PT

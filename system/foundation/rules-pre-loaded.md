@@ -280,6 +280,18 @@ Source: system/foundation/source/a-projects-durable-context-is-recorded-in-its-c
 5. The harness's own working state is outside this rule. That is a cache, a transcript, or an index of the repository.
 6. Harness working state is not project context and is no substitute for an artifact.
 
+# A reply that writes a record ends with the record's path
+
+Source: system/foundation/source/a-reply-that-writes-a-record-ends-with-the-records-path.md
+
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the record's full, absolute path, as the file now stands, alone on its own line. The path carries the state suffix where the record has one.
+2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
+3. Put nothing around the path: no bullet, no backticks, no label, and no sentence.
+4. Where the reply wrote several records, give each path its own line at the end. Put the record the reply is about last, after its log entries and any other record written beside it. List a renamed record by its new path.
+5. Do not list a record the agent did not write, such as a log entry a hook writes.
+6. List a record written in a worktree by the worktree's path.
+7. A reply that wrote no record ends as it otherwise would.
+
 # A status report prints a fixed whole-project report
 
 Source: system/foundation/source/a-status-report-prints-a-fixed-whole-project-report.md
