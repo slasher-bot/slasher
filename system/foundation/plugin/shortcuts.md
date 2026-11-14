@@ -1,8 +1,7 @@
 | Shortcut | Command | Does |
 |---|---|---|
 | `/i` | `/items current` | Lists the current items |
-| `/'` | `/current` | Lists the current items and implementations |
-| `/c` | `/current` | Lists the current items and implementations |
+| `/'`, `/c` | `/current` | Lists the current items and implementations |
 | `/.` | `/recent` | Brief summary of recent work, and what's next |
 | `/aa` | `/ask-again` | Repeats the agent's previous multiple-choice question |
 | `/..` | `/next` | Takes the next step |
