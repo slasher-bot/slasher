@@ -3,7 +3,8 @@ BRAINSTORMING
   organizes them when the writer is done.
 
   /brainstorm, /brainstorm begin   Begin brainstorming
-  /brainstorm end                  End it, and organize what was said
+  /brainstorm end                  End it, and organize what was said into a
+                                   [brainstorm] item
   /brainstorm suspend              Suspend the brainstorm
   /brainstorm resume               Resume a brainstorm that has ended or is
                                    suspended
