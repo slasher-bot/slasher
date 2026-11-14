@@ -1367,6 +1367,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
     - **Inconclusive**: it ran and gave no clear verdict either way.
 12. The engineer concludes an implementation Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
 13. Where the implementation is created for an item, make the item Implementation, and name each record in the other. When the implementation is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
+    - Where the item is already on `master`, make each of these state changes on `master` too, not only on the implementation's branch. Commit the same item content and the same log entry on both, so the merge matches.
 14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 15. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
 

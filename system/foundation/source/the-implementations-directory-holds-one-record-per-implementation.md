@@ -61,6 +61,10 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Where the implementation is created for an item, the item takes `Implementation`**, and the two records name each other. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, the agent asks the engineer what state the item takes. See the the-items-directory-holds-one-file-per-item rule.
 
+**An item already on `master` takes each of these state changes on `master` too**, not only on the implementation's branch. Rename the item and write its log entry on `master`, with the same content as on the branch, so the two match when the branch merges. Contributors read `master`, so the items there show the state each item is in now.
+
+**As the engineer stated it:** The records already on master should be up to date, because contributors all have access to master, and will need to understand the correct and current state of items.
+
 **Any state but Open and Active can be taken back**, by `resume`, which returns the implementation to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 
 **Where the engineer asks for an implementation to be concluded and names no state, the state is put to the engineer through the selection interface.** Each concluding state the implementation can take is an option. The agent does not choose the state, and does not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
@@ -141,6 +145,7 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
     - **Inconclusive**: it ran and gave no clear verdict either way.
 12. The engineer concludes an implementation Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
 13. Where the implementation is created for an item, make the item Implementation, and name each record in the other. When the implementation is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
+    - Where the item is already on `master`, make each of these state changes on `master` too, not only on the implementation's branch. Commit the same item content and the same log entry on both, so the merge matches.
 14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
 15. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
 
@@ -190,8 +195,11 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 - 2026-11-09, revised: a record starts Open, takes Deferred and Obsolete, takes any concluding word, and is superseded without suspension, as the harmonized-states plan settles; not re-checked
 - 2026-11-09, revised: an item an implementation is created for takes Implementation, and follows it; not re-checked
 - 2026-11-09, checked: 70 directives, 67 kept, 2 less precise, 1 lost, 1 repair: the affirm, refute, and inconclusive commands are named; re-checked: 70 directives, 67 kept, 2 less precise, 1 lost. The directive left lost is when the rule applies, which its Trigger line carries
+- 2026-11-13, revised: an item already on `master` takes its implementation's state changes on `master` too; not re-checked
 
 ## History
+
+Until Fri Nov 13 2026 an item's state change for its implementation was made on the implementation's branch only, so `master` showed the item's earlier state until the branch merged.
 
 Until Mon Nov 9 2026 an implementation did not change the state of the item it was created for.
 
@@ -255,3 +263,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 2:59:48 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:40 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 4:19:24 PM PT
