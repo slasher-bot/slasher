@@ -33,6 +33,8 @@ ITEMS
   /notes [<n>]                     List the notes, or the n most recent
   /item mistake, /mistake          Create an item tagged [mistake]
   /item problem, /problem          Create an item tagged [problem]
+  /item brainstorm                 Create an item tagged [brainstorm]. A
+                                   brainstorm that names no kind ends as one
   /item list <state>, /list <state>
                                    List items in a state
                                    <state>: any item state, or "current"
@@ -237,7 +239,8 @@ BRAINSTORMING
   organizes them when the writer is done.
 
   /brainstorm, /brainstorm begin   Begin brainstorming
-  /brainstorm end                  End it, and organize what was said
+  /brainstorm end                  End it, and organize what was said into a
+                                   [brainstorm] item
   /brainstorm suspend              Suspend the brainstorm
   /brainstorm resume               Resume a brainstorm that has ended or is
                                    suspended

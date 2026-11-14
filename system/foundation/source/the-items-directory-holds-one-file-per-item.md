@@ -30,6 +30,7 @@
 - **`[goal]`** — an outcome the project means to reach, which other items serve. It names the end the work is for, and stays open until that end is reached or given up.
 - **`[problem]`** — something wrong or in the way, recorded before anyone knows what to do about it. It states the difficulty on its own, so that it is kept without a solution being named.
 - **`[mistake]`** — something done wrong, recorded with what went wrong and why. A problem may have no author. A mistake is an act that should have gone otherwise, and recording it keeps what was learned from it.
+- **`[brainstorm]`** — the points of a brainstorm begun with no kind, reframed, above the engineer's own words. It starts Recorded and stays Recorded, as a note does. See the brainstorming rule.
 - **`[note]`** and **`[work]`** — each has a rule of its own: the notes rule, and the work-item section below.
 
 **A kind takes the states every item takes**, and starts and concludes as the table under *The states* gives. Where its own rule says otherwise, as the notes rule and the work-item section do, that rule decides.
@@ -73,6 +74,7 @@ Every item carries a `**State:**` line, from the moment it is written. **Each ki
 | Problem | Open | Resolved |
 | Design | Recorded | does not change state |
 | Note | Recorded | does not change state |
+| Brainstorm | Recorded | does not change state |
 
 A kind the table does not name starts Open and concludes Realized, as an idea does.
 
@@ -175,7 +177,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 21. Create an item as a kind by tagging it with the kind's name. A kind needs no description beyond its name. A kind this rule does not list is as good as one it does. An item created with no kind is tagged `[idea]`.
 22. `[idea]` is a thought proposed and not yet settled. An idea proposes something new. `[improvement]` is a proposed change to something that already exists, not yet settled, and concludes Realized when the change exists. `[correction]` is a proposed change that puts right something that exists and is wrong. It carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Corrected` when the fix exists. An improvement changes something that is not wrong. `[rework]` is work to redo something already produced that turned out wrong, and carries `[rework]`, `[work]`, and `[correction]` together. Of the two, the first tag names which was asked for. `[design]` is settled direction, as dated Settled resolutions. `[plan]` is a sequence of work, as checkbox tasks stating behavior, with no code.
 23. `[aspiration]` is an outcome hoped for, written only where one was asked for. `[goal]` is an outcome the project means to reach, which other items serve, open until reached or given up.
-24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why.
+24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why. `[brainstorm]` is the points of a brainstorm begun with no kind, reframed, under the brainstorming rule.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
 26. An item may carry two optional lines, `**Waits for:**` and `**Priority:**`, and most items carry neither.
 27. `**Waits for:**` states what must finish before the item is actionable, and nothing more.
@@ -190,7 +192,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 36. Every item carries a `**State:**` line from the moment it is written, holding one of the words below and no other. Absence is not a state, and an item without the line is a defect.
 37. Start an idea, an improvement, a plan, a work item, a rework item, a correction, a mistake, and a problem **Open**. **Open** means the work has not started, whether its thinking is settled or not. A kind not named here starts Open and concludes Realized.
 38. Make an item **Active** when its work starts. **Active** is the in-progress state.
-39. Start a goal, an aspiration, a design, and a note **Recorded**. A design and a note stay Recorded. Make a goal or an aspiration Active from Recorded where the engineer asks, or leave it Recorded.
+39. Start a goal, an aspiration, a design, a note, and a brainstorm **Recorded**. A design, a note, and a brainstorm stay Recorded. Make a goal or an aspiration Active from Recorded where the engineer asks, or leave it Recorded.
 40. **Realized** — what it describes exists. An idea, an improvement, a plan, a goal, and an aspiration conclude Realized. A goal or an aspiration is Realized only when the engineer says so.
 41. **Deferred** — kept to do later, with no date and no one working toward it.
 42. An item merely waiting its turn is not **Deferred**. It carries `**Waits for:**` and whatever state its thinking has reached.
@@ -244,8 +246,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-09, checked: 98 directives, 90 kept, 7 less precise, 1 lost, 4 repairs: a correction concludes Corrected throughout, the first tag names which was asked for, an implementation is current work in place of its item, the conclusion prompt holds for an implementation too, and the Implementation points are renumbered 64 and 65; re-checked: 98 directives, 95 kept, 3 less precise, 0 lost. Left less precise, in text this revision did not change: that Discontinued means the same for an item, the name of the selection tool, and that a settled item in general is never regenerated
 - 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 - 2026-11-13, revised: an item in Implementation is a current item; not re-checked
+- 2026-11-13, revised: `[brainstorm]` is a kind that starts and stays Recorded; checked with the brainstorming rule, see its Compression section
 
 ## History
+
+Until Fri Nov 13 2026 there was no brainstorm kind of item.
 
 Until Fri Nov 13 2026 an item in Implementation was not a current item, since its implementation was listed as current work in its place.
 
@@ -355,3 +360,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 6:44:35 PM PT

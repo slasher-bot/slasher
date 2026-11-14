@@ -21,6 +21,8 @@ ITEMS
   /notes [<n>]                     List the notes, or the n most recent
   /item mistake, /mistake          Create an item tagged [mistake]
   /item problem, /problem          Create an item tagged [problem]
+  /item brainstorm                 Create an item tagged [brainstorm]. A
+                                   brainstorm that names no kind ends as one
   /item list <state>, /list <state>
                                    List items in a state
                                    <state>: any item state, or "current"

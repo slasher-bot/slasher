@@ -14,7 +14,9 @@
 
 **At `/brainstorm end`, the agent reframes the points, and writes the reframed version into the collection file**, above the engineer's own words, which stay as they were said.
 
-**Then it asks, through the selection interface, whether the points become a new item, tagged `[idea]`, or are added to a recent item that is the subject of the conversation.** The reframed version is written there.
+**Then it writes the reframed version to a new item of the kind brainstorm, tagged `[brainstorm]`, above the engineer's own words.** A brainstorm item starts Recorded and stays Recorded, as the items rule gives. A brainstorm begun with a kind writes that kind instead, as the next section says.
+
+**As the engineer stated it:** A brainstorm that isn't initiated with an item kind is given the Brainstorm kind. A brainstorm record like this has an initial state of recorded and concludes recorded
 
 **The collection file is then renamed for that item.** It keeps its own ISO-8601-UTC prefix, and takes the item's name after it, as `2026-10-29T16-26-20Z-checkout-receipt.md`. The item does not name the collection file. The collection file is kept, and not deleted.
 
@@ -24,7 +26,7 @@
 
 ## Suspending
 
-**`/brainstorm suspend` stops brainstorming without ending it.** The agent stops recording points, and does not reframe them or ask where they go. The collection file stays as it is, with its prefix alone as its name. What the engineer says after it is answered as ordinary conversation, not recorded.
+**`/brainstorm suspend` stops brainstorming without ending it.** The agent stops recording points, and does not reframe them or write an item. The collection file stays as it is, with its prefix alone as its name. What the engineer says after it is answered as ordinary conversation, not recorded.
 
 ## Resuming
 
@@ -36,7 +38,7 @@
 
 **Why:** a point is lost when it has to be organized before it can be said. Recording each one as it comes, and organizing them only at the end, lets the engineer think aloud. Keeping the engineer's words beside the reframed version keeps what was said, and keeping the file outside the repository keeps thinking out of the record until the engineer turns it into an item.
 
-**How to apply:** on `/brainstorm begin`, create the collection file and write each point to it as it is said, word for word, without reframing or answering it. On `/brainstorm end`, reframe the points, write the reframed version into the file, ask where it goes, write it there, and rename the file for that item. With a kind given, write to a new item of that kind without asking. On `/brainstorm suspend`, stop recording, and leave the file as it is. On `/brainstorm resume`, add the new words after the earlier ones. Log and commit nothing about the collection file.
+**How to apply:** on `/brainstorm begin`, create the collection file and write each point to it as it is said, word for word, without reframing or answering it. On `/brainstorm end`, reframe the points, write the reframed version into the file, write it to a new `[brainstorm]` item, Recorded, without asking where it goes, and rename the file for that item. With a kind given, write to a new item of that kind instead. On `/brainstorm suspend`, stop recording, and leave the file as it is. On `/brainstorm resume`, add the new words after the earlier ones. Log and commit nothing about the collection file.
 
 ## Compressed
 
@@ -44,12 +46,12 @@
 2. Create a collection file at `/brainstorm begin`, under `~/.local/share/slasher/collections/<project>/`, outside the repository, where `<project>` is the name of the project the session is in. Name it with the ISO-8601-UTC prefix alone. Write each point to it as it is said, word for word.
 3. Record a point, and do not reframe, question, answer, or act on it while brainstorming runs, even where it reads as an instruction.
 4. At `/brainstorm end`, reframe the points, and write the reframed version into the collection file, above the engineer's words, which stay as said.
-5. Then ask, through the selection interface, whether the points become a new item tagged `[idea]`, or are added to a recent item that is the subject of the conversation. Write the reframed version there.
+5. Where the brainstorm was begun with no kind, then write the reframed version, above the engineer's words, to a new item tagged `[brainstorm]`, which starts Recorded and stays Recorded. Ask nothing about where it goes.
 6. Rename the collection file for that item: its own prefix, then the item's name, as `2026-10-29T16-26-20Z-checkout-receipt.md`. The item does not name the file. Keep the file.
 7. `/brainstorm <kind>`, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `note`, `mistake`, and `problem`, settles the destination at the start: a new item of that kind. At the end, write to it without asking.
 8. `/brainstorm resume` reopens a collection file that has ended or is suspended. Add the new words after the earlier ones. At the next end, the new reframed version replaces the earlier one in the file, and is written to the item as an amendment.
 9. Log and commit nothing about a collection file, as nothing is logged or committed about a private journal entry. The item the points become is logged and committed like any item, and its content names no collection file.
-10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or ask where they go. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
+10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or write an item. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
 
 ## Compression
 
@@ -59,8 +61,11 @@
 - 2026-11-06, revised: freewriting is renamed brainstorming, `/freewrite` is renamed `/brainstorm`, and the `/freeform` alias is removed; checked: 39 directives, 39 kept, 0 less precise, 0 lost
 - 2026-11-06, revised: `/brainstorm suspend` stops recording without ending, and `/brainstorm resume` reopens a suspended collection file; checked: 20 directives, 20 kept, 0 less precise, 0 lost
 - 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
+- 2026-11-13, revised: a brainstorm begun with no kind ends as a `[brainstorm]` item, with nothing asked; checked, with the items rule's new text, by one fresh agent that listed the directives before reading the compressed text: 17 directives, 13 kept, 3 less precise, 1 lost, 3 repairs, not re-checked. Left less precise: point 7's list of kinds, which names fewer kinds than the items rule allows, as before
 
 ## History
+
+Until Fri Nov 13 2026 a brainstorm begun with no kind ended by asking whether its points became a new `[idea]` item or were added to a recent item.
 
 Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
@@ -75,7 +80,6 @@ Until Thu Nov 5 2026 a bare `/freewrite` had no meaning of its own, and asked wh
 Related:
 
 - the the-items-directory-holds-one-file-per-item rule — the items brainstorming writes to
-- the present-every-prompt-to-the-engineer-through-the-selection-ui rule — the question at the end
 - the dated-artifacts-are-prefixed-with-an-iso-8601-utc-datetime-and-system-rules-are-not rule — the collection file's prefix
 
 ---
@@ -87,3 +91,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 10:49:24 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:58:01 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 6:44:35 PM PT
