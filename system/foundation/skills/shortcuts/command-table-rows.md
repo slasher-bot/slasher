@@ -1,1 +1,1 @@
-| `/shortcuts, /sc` | Print the shortcuts table |
+| `/shortcuts, /sc, /:` | Print the shortcuts table |

@@ -2,7 +2,7 @@
 
 **When the session-start read concludes, print the plugin's startup table, word for word, then the current line.** The startup table is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. The current line stands one blank line below it, and ends what the read prints: *Type /current for open and active work.* It names `/current`, which lists the current items, then the current features and experiments. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
 
-**The tables are built, not written here.** The plugin build joins the command table from each active package's rows, and writes the startup table's sentence from it, so a package that is not active adds no row. `/command-table`, `/;`, and `/commands` print the joined command table, and `/shortcuts` and `/sc` the shortcuts table, each as it stands and with no rule loaded. How a command's rows are written is the a-command-domain-carries-its-rows-of-the-command-table rule's, which loads when a command is written.
+**The tables are built, not written here.** The plugin build joins the command table from each active package's rows, and writes the startup table's sentence from it, so a package that is not active adds no row. `/command-table`, `/;`, and `/commands` print the joined command table, and `/shortcuts`, `/sc`, and `/:` the shortcuts table, each as it stands and with no rule loaded. How a command's rows are written is the a-command-domain-carries-its-rows-of-the-command-table rule's, which loads when a command is written.
 
 **The agent prints the table, not the harness.** The harness renders its display as plain text, and the table needs markdown. That is the reason the package set stanza is the agent's too.
 
@@ -11,6 +11,8 @@
 **How to apply:** at the end of the session-start read, print the plugin's `command-table-startup.md` once, then the current line, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Fri Nov 13 2026 `/sc` was the only alias of `/shortcuts`. The engineer added `/:`.
 
 Until Tue Nov 10 2026 the help line ended what the read prints. The engineer added the current line below it.
 
@@ -254,3 +256,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:21:33 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 9:48:54 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:45:30 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 4:43:31 PM PT

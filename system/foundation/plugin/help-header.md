@@ -6,6 +6,6 @@ Usage: /<command> [<subcommand>] [<arguments>]
        A bare /slasher offers topics to learn about. /command-table prints
        the command domain table, one line for each command domain, and
        /commands and /; are aliases of /command-table. /shortcuts
-       prints the shortcuts table, and /sc is an alias of /shortcuts.
+       prints the shortcuts table, and /sc and /: are aliases of /shortcuts.
        /slasher help prints this help, and /help is an alias of
        /slasher help.
