@@ -7,9 +7,9 @@
 | `/..` | `/next` | Takes the next step |
 | `/?` | `/next?` | Names the next step |
 | `/??` | `/clarify` | Explains the previous answer again |
+| `/p` | `/push` | Pushes the current branch to its remote |
 | `/%` | `/estimate-confidence` | Gives the agent's confidence of proceeding unattended |
 | `/!` | `/unattended` | Carries out a request on the agent's own, after a plan is accepted |
 | `/rr` | `/reprint-and-review` | Prints the draft as it now stands, then a review of it |
 | `/;` | `/command-table` | Prints the command table |
 | `/sc`, `/:` | `/shortcuts` | Prints the shortcuts table |
-| `/p` | `/push` | Pushes the current branch to its remote |
