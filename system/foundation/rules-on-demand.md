@@ -1227,7 +1227,7 @@ Slasher installed at slasher/system/ — 5 packages: foundation, language, testi
 3. A directory carrying a `README.md` is a package, which tells a grouped package from the grouping directory above it.
 4. Nothing prints a fixed list.
 5. The notice reports the install and nothing more. It names no experiment or feature. The status line's second line shows one that has not concluded, and `/current` lists every one.
-6. The notice has no close of its own. It ends with what it reports. The startup display's load line, after it in the same message, says when the rules load and that `/load` loads them now.
+6. The notice has no close of its own. It ends with what it reports. The startup display's load line, after it in the same message, says when the rules load and that `/load` loads them now. It is left out where Claude Code was started with `/load`.
 7. Something the engineer types is required in any case, since the agent produces nothing until the engineer speaks.
 8. This gives up a contentless foil word whose only effect came through the hook's channel. So that channel is no longer testable from ordinary use.
 9. The trade of observability for legibility is deliberate.
@@ -1593,7 +1593,7 @@ Source: system/foundation/source/the-startup-display-prints-as-the-session-start
 
 Trigger: When a session starts, or the engineer types its first prompt, or when changing the startup display or its script
 
-1. The display prints verbatim in two parts. The session-start part prints as the session starts: the title and the copyright and license ahead of the session-start notice, and the load line after it, last. The loading part, the loading line and then the figure, prints on the session's first prompt, whatever it is. These five are always printed, in this file's order.
+1. The display prints verbatim in two parts. The session-start part prints as the session starts: the title and the copyright and license ahead of the session-start notice, and the load line after it, last. The loading part, the loading line and then the figure, prints on the session's first prompt, whatever it is. These five are printed, in this file's order. The load line is left out where Claude Code was started with `/load`.
 2. The package set is printed only where the project has declared one, after the loading part.
 3. The harness prints both parts. The agent prints none of them.
 4. As the session starts, the Slasher plugin's `SessionStart` hook runs `slasher/system/foundation/session-start.sh`, which prints the title and the copyright and license ahead of the session-start notice and the load line after it, in one `systemMessage`. It takes them from `startup-display.sh message` and `startup-display.sh load-line`, each of which prints its blocks alone.
@@ -1669,7 +1669,7 @@ Copyright © 2026 Scott Bellware
 Slasher's rules will load on the first prompt, or enter: /load
 ```
 
-51. The load line states that the rules load on the first prompt, whatever it is, and that `/load` loads them now. It names its subject, *Slasher's rules*, itself. The plugin that prints it carries the `/load` skill, so the command it names is always available.
+51. The load line states that the rules load on the first prompt, whatever it is, and that `/load` loads them now. It names its subject, *Slasher's rules*, itself. The plugin that prints it carries the `/load` skill, so the command it names is always available. `session-start.sh` leaves it out where `started-with-load.sh` finds that Claude Code was started with `/load` or `/slasher:load` with no `help` after it, or with `load rules`. Where the script finds no Claude Code process, the line prints.
 52. The session-start notice has no close of its own. The load line says what a close said.
 53. The loading part opens with the loading line, which names the wait for the read:
 

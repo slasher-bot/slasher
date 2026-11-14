@@ -219,8 +219,11 @@ else
     notice="${display}\\n\\n${notice}"
   fi
 
+  # The load line is left out where Claude Code was started with /load, as in `claude /load`,
+  # since the rules are already loading. started-with-load.sh fails wherever it cannot tell,
+  # and the line then prints.
   load_line=$(sh "$system/foundation/startup-display.sh" load-line 2>/dev/null)
-  if [ -n "$load_line" ]; then
+  if [ -n "$load_line" ] && ! sh "$system/foundation/started-with-load.sh" 2>/dev/null; then
     notice="${notice}\\n\\n${load_line}"
   fi
 fi
