@@ -23,6 +23,14 @@
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-14T16-36-12Z-a-fetch-file-takes-store-project`
 
+## What happened
+
+- `fetch.py` takes `store = "project"` and `store = "private"` by name. A fetch file with no `store` line is taken as `store = "project"`.
+- A fetch file naming any other store is reported, as `work-mail: store "some-store" is not "project" or "private"`. That account is not fetched, and the fetch exits 1.
+- The store is read before the fetch connects to the server.
+- The test of `store = "project"` is coverage: the fetch already wrote the messages into the project. The test of an unknown store failed before the change and passes after it.
+- The automated suite passed: 60 tests.
+
 ## Confirmations
 
 - **2026-11-14** — Participation: Unattended, selected by the engineer with `/!`. The question was not put. No figures were shown.
@@ -34,3 +42,4 @@
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 9:01:25 AM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 9:05:57 AM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 9:07:04 AM PT
