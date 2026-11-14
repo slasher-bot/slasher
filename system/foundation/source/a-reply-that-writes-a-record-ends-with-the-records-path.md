@@ -1,8 +1,10 @@
 # A reply that writes a record ends with the record's path
 
-**A reply in which the agent wrote a record ends with the record's full path, alone on its own line.** A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the absolute path of the file as it now stands, with its state suffix where it has one.
+**A reply in which the agent wrote a record ends with the record's full path, alone on its own line.** A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the absolute path of the file as it now stands, with its state suffix where it has one. Where the path is under the home folder, it starts with `~/` in place of the home folder, as `~/projects/checkout/slasher/local/items/…`.
 
 **As the engineer stated it:** After any record is written to disk, eg: item, implementation, rule, log, journal, etc, print the written file path and name to the screen. It should be the last line printed so that the user can /copy it to their clipboard, or open it in their editor.
+
+**As the engineer later stated it:** If the folder printed is the home folder, use the "~/" shortcut in the output
 
 **Each path is a line of its own, with nothing around it.** No bullet, no backticks, no label, and no sentence. The engineer copies the line or opens it in an editor as it is.
 
@@ -20,7 +22,7 @@
 
 ## Compressed
 
-1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the record's full, absolute path, as the file now stands, alone on its own line. The path carries the state suffix where the record has one.
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the record's full, absolute path, as the file now stands, alone on its own line. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
 2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
 3. Put nothing around the path: no bullet, no backticks, no label, and no sentence.
 4. Where the reply wrote several records, give each path its own line at the end. Put the record the reply is about last, after its log entries and any other record written beside it. List a renamed record by its new path.
@@ -31,6 +33,11 @@
 ## Compression
 
 - 2026-11-13, compressed: checked by one fresh agent that listed the directives before reading the compressed text: 12 directives, 9 kept, 2 less precise, 1 lost, 2 repairs, not re-checked
+- 2026-11-13, revised: a path under the home folder starts with `~/`, a change the engineer stated; not re-checked
+
+## History
+
+Until Fri Nov 13 2026 a path under the home folder was printed with the home folder written out.
 
 Related:
 
@@ -40,3 +47,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 6:58:00 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 6:53:12 PM PT
