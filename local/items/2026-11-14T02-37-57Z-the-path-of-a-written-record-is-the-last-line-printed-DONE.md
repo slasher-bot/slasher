@@ -1,6 +1,6 @@
 # The path of a written record is the last line printed
 
-- **State:** Implementation
+- **State:** Done
 - **Tags:** [work]
 
 **After the agent writes a record to disk, it prints the record's path and file name as the last line of its reply.** A record is an item, an implementation record, a rule, a log entry, a journal entry, or any other record. The last line is the path alone, so the engineer can copy it with `/copy` or open it in an editor.
@@ -13,3 +13,4 @@
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 6:37:57 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 6:50:55 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 6:52:08 PM PT
