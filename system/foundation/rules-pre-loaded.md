@@ -284,10 +284,10 @@ Source: system/foundation/source/a-projects-durable-context-is-recorded-in-its-c
 
 Source: system/foundation/source/a-reply-that-writes-a-record-ends-with-the-records-path.md
 
-1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the record's full, absolute path, as the file now stands, alone on its own line. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Recorded in:*, then a list of each record's full, absolute path, as the file now stands. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
 2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
-3. Write the path in backticks, so the terminal shows it in color. Put nothing else around it: no bullet, no label, and no sentence.
-4. Where the reply wrote several records, give each path its own line at the end. Put the record the reply is about last, after its log entries and any other record written beside it. List a renamed record by its new path.
+3. Write each path as a list item, `- ` and then the path in backticks, so the terminal shows it in color. Put nothing else on the line: no label, and no sentence.
+4. Where the reply wrote several records, give each path its own list item. Put the record the reply is about last, after its log entries and any other record written beside it. List a renamed record by its new path.
 5. Do not list a record the agent did not write, such as a log entry a hook writes.
 6. List a record written in a worktree by the worktree's path.
 7. A reply that wrote no record ends as it otherwise would.
