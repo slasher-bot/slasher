@@ -8,7 +8,7 @@
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias. Their order is `/commands, /;`, `/recent, /.`, `/current, /', /c`, `/next, /proceed, /..`, and `/next?, /?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` in the `git` package.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias. Their order is `/commands, /;`, `/recent, /.`, `/current, /', /c`, `/next, /proceed, /..`, and `/next?, /?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` in the `git` package, and `/reprint-and-review, /rr` in the `language` package.
 
 **A row with a shortcut alias names the command first and the alias after it, as `/recent, /.`.** A command with an alias and a shortcut names the alias, then the shortcut last, as `/next, /proceed, /..`. A command with two shortcuts names both, in the order they were given, as `/current, /', /c`. This holds in the full table and in the startup table alike.
 
@@ -25,6 +25,8 @@
 **How to apply:** when you write or change a command, its help, or a shortcut alias, change its row in its domain's `command-table-rows.md`, or foundation's plugin files for the top rows and the shortcuts, and run `./compile.sh` so the plugin's tables are rebuilt.
 
 ## History
+
+Until Fri Nov 13 2026 `/reprint-and-review` had no row.
 
 Until Fri Nov 13 2026 the `/current` rows named only `/'`. The engineer gave `/current` a second shortcut, `/c`.
 
@@ -85,3 +87,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 2:56:41 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:01:31 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:02:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:39:16 PM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 4:16:43 PM PT
