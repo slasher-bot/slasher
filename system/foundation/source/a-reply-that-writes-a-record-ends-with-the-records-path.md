@@ -1,0 +1,42 @@
+# A reply that writes a record ends with the record's path
+
+**A reply in which the agent wrote a record ends with the record's full path, alone on its own line.** A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the absolute path of the file as it now stands, with its state suffix where it has one.
+
+**As the engineer stated it:** After any record is written to disk, eg: item, implementation, rule, log, journal, etc, print the written file path and name to the screen. It should be the last line printed so that the user can /copy it to their clipboard, or open it in their editor.
+
+**Each path is a line of its own, with nothing around it.** No bullet, no backticks, no label, and no sentence. The engineer copies the line or opens it in an editor as it is.
+
+**Where the reply wrote several records, each path takes a line at the end.** The record the reply is about comes last. Its log entries, and any other record written beside it, come before it. A record changed by a rename is listed by its new path.
+
+**A record the agent did not write is not listed.** A log entry a hook writes, such as the one for a decision put through the selection interface, is the hook's.
+
+**A record written in a worktree is listed by the worktree's path**, since that is where the file is until the work merges.
+
+**A reply that wrote no record ends as it otherwise would.**
+
+**Why:** the engineer often wants to open the record just written, or to pass its path on. A path printed somewhere in the middle of a reply, or a name without its directory, has to be found and completed by hand. A full path on the last line is copied or opened at once.
+
+**How to apply:** before sending a reply, check whether it wrote a record. Where it did, end the reply with each record's full path on its own line, the record the reply is about last.
+
+## Compressed
+
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the record's full, absolute path, as the file now stands, alone on its own line. The path carries the state suffix where the record has one.
+2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
+3. Put nothing around the path: no bullet, no backticks, no label, and no sentence.
+4. Where the reply wrote several records, give each path its own line at the end. Put the record the reply is about last, after its log entries and any other record written beside it. List a renamed record by its new path.
+5. Do not list a record the agent did not write, such as a log entry a hook writes.
+6. List a record written in a worktree by the worktree's path.
+7. A reply that wrote no record ends as it otherwise would.
+
+## Compression
+
+- 2026-11-13, compressed: checked by one fresh agent that listed the directives before reading the compressed text: 12 directives, 9 kept, 2 less precise, 1 lost, 2 repairs, not re-checked
+
+Related:
+
+- the the-log-holds-one-file-per-entry-with-a-one-line-title rule — the log entries a reply writes
+- the a-process-question-and-its-answer-are-logged rule — the log entries a hook writes, which are not listed
+
+---
+
+Authored by Scott Bellware on Fri Nov 13 2026 at 6:58:00 PM PT
