@@ -83,7 +83,7 @@ A kind the table does not name starts Open and concludes Realized, as an idea do
 - **Active** — the work is in progress. An item becomes Active when its work starts, from Open, or from Recorded for a goal or an aspiration.
 - **Implementation** — the item turned into a feature or an experiment, which carries its work. The item and the implementation record name each other.
 
-**An item that turns into an implementation takes `Implementation`.** It takes it when the feature or the experiment is created for it. It follows the implementation: when the implementation is Completed or Affirmed, the item takes its kind's concluding state. When the implementation reaches any other concluding state, or is set aside, the agent asks the engineer what state the item takes. An item in Implementation is not a current item, since the implementation is listed as current work in its place.
+**An item that turns into an implementation takes `Implementation`.** It takes it when the feature or the experiment is created for it. It follows the implementation: when the implementation is Completed or Affirmed, the item takes its kind's concluding state. When the implementation reaches any other concluding state, or is set aside, the agent asks the engineer what state the item takes. An item in Implementation is a current item, and its implementation is listed as current work too.
 
 **As the engineer stated it:** When an item turns into an implementation, change its state to "implementation".
 
@@ -215,7 +215,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 61. Do not refuse to answer until the item is amended.
 62. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
 63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The implementations rule asks the same for an implementation concluded with no state named. *Complete that item* names its kind's concluding state.
-64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is not a current item, since the implementation is listed as current work in its place.
+64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is a current item, and its implementation is listed as current work too.
 65. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 
 ## Compression
@@ -243,8 +243,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-09, revised: the Implementation state, which the engineer added; not re-checked
 - 2026-11-09, checked: 98 directives, 90 kept, 7 less precise, 1 lost, 4 repairs: a correction concludes Corrected throughout, the first tag names which was asked for, an implementation is current work in place of its item, the conclusion prompt holds for an implementation too, and the Implementation points are renumbered 64 and 65; re-checked: 98 directives, 95 kept, 3 less precise, 0 lost. Left less precise, in text this revision did not change: that Discontinued means the same for an item, the name of the selection tool, and that a settled item in general is never regenerated
 - 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
+- 2026-11-13, revised: an item in Implementation is a current item; not re-checked
 
 ## History
+
+Until Fri Nov 13 2026 an item in Implementation was not a current item, since its implementation was listed as current work in its place.
 
 Until Wed Nov 11 2026 this rule named an observation, tagged `[observation]`, where it now names a note, tagged `[note]`.
 
@@ -351,3 +354,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 8:59:34 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
