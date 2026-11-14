@@ -15,6 +15,7 @@
 - **2026-11-14** — *Conclude* stays the word for reaching a final state, as in *the concluding states*. *End* is the plain verb, as in `/brainstorm end`. Selected by the engineer.
 - **2026-11-14** — A work item concludes Completed, not Done.
 - **2026-11-14** — `/done` is retired. `/complete` concludes a work item Completed, as it concludes a feature. Selected by the engineer.
+- **2026-11-14** — A rework item concludes Completed, not Done. **As the engineer stated it:** "Rework item should conclude Completed"
 
 **Implementation:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
 
@@ -23,3 +24,4 @@
 Authored by Scott Bellware on Sat Nov 14 2026 at 12:44:27 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:32:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:44:45 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 3:53:29 PM PT
