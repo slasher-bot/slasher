@@ -6,7 +6,7 @@ Usage: /<command> [<subcommand>] [<arguments>]
        A bare /slasher offers topics to learn about. /command-table prints
        the command domain table, one line for each command domain, and
        /commands and /; are aliases of /command-table. /shortcuts
-       prints the shortcuts table, and /sc is an alias of /shortcuts.
+       prints the shortcuts table, and /sc and /: are aliases of /shortcuts.
        /slasher help prints this help, and /help is an alias of
        /slasher help.
 
@@ -30,12 +30,13 @@ ITEMS
   /item aspiration, /aspiration    Create an item tagged [aspiration]
   /item goal, /goal                Create an item tagged [goal]
   /item note, /note                Record a note
+  /notes [<n>]                     List the notes, or the n most recent
   /item mistake, /mistake          Create an item tagged [mistake]
   /item problem, /problem          Create an item tagged [problem]
   /item list <state>, /list <state>
                                    List items in a state
                                    <state>: any item state, or "current"
-                                   (Open and Active)
+                                   (Open, Active, and Implementation)
 
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active
@@ -144,11 +145,13 @@ PROCESS
   These commands move the work under way along: take its next step, or say what
   was done and what's next.
 
-  /items                           The current items (/item list current)
-  /i                               An alias of /items
+  /items                           Every item, whatever its state
+  /items current                   The current items (/item list current)
+  /i                               An alias of /items current
   /current [<n>]                   The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /current
+  /c [<n>]                         An alias of /current
   /recent                          Brief summary of recent work, and what's
                                    next
   /.                               An alias of /recent
@@ -167,7 +170,7 @@ PROCESS
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
-  /# <request>                     An alias of /unattended
+  /! <request>                     An alias of /unattended
 
   /ask-again                       Repeat the agent's previous multiple-choice
                                    question
@@ -292,6 +295,14 @@ PACKAGES
   /package-set                     Show the active package set
   /package-set <set or packages>   Declare the package set
 
+  /packages                        List the installed packages, whether
+                                   each is active, and what each is
+  /packages refresh [<package>...]
+                                   An alias of /package refresh
+  /packages <package> [<act>]      Act on one package. <act>: refresh,
+                                   activate, or deactivate. With no act,
+                                   asks which
+
   /package help                    Print this command's help
 
 LANGUAGE
@@ -307,6 +318,10 @@ LANGUAGE
   /expand                          Expand the previous answer
   /brief [<request>]               Answer the request in brief, or give the
                                    previous answer again in brief
+
+  /reprint-and-review [<file>]     Print the draft as it now stands, then a
+                                   review of it
+  /rr [<file>]                     An alias of /reprint-and-review
 
   /reserve <word>                  Reserve a word, in six steps
 

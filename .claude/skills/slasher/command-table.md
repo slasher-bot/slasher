@@ -3,7 +3,7 @@
 | `/slasher help` | Print the help of every Slasher command |
 | `/commands, /;` | Print this table |
 | `/recent, /.` | Brief summary of recent work, and what's next. |
-| `/current, /'` | Lists the current items, then the current features and experiments. |
+| `/current, /', /c` | Lists the current items, then the current features and experiments. |
 | `/next, /proceed, /..` | Proceed to the next step in the current multi-step process or with the action that the agent is suggesting, or resume interrupted work |
 | `/next?, /?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, notes, and work to be done, each with a state. |
@@ -15,6 +15,7 @@
 | `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |
 | `/decision` | Log a decision, tagged [decision] |
 | `/note` | Record a note |
+| `/notes` | List the notes |
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
 | `/private` | Anything given to /private is recorded only in the private directory, outside the project's repository, and is read only on command. |
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
@@ -23,15 +24,17 @@
 | `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
 | `/release` | Presents the candidates for a package's next version, for the engineer to choose. |
 | `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
+| `/packages` | List the installed packages, whether each is active, and what each is |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
+| `/reprint-and-review, /rr` | Print the draft as it now stands, then a review of it |
 | `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/smtp` | These commands send email through an account whose credential is kept in the macOS Keychain, the same credential the imap package fetches with. |
 | `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/idk` | Say "I don't know" to the agent's last question, so it explains the question and asks it again |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |
 | `/estimate-confidence, /%` | The agent's confidence of proceeding unattended from where the work stands |
-| `/unattended, /#` | Carry out a request on the agent's own, after a plan is accepted |
-| `/shortcuts, /sc` | Print the shortcuts table |
+| `/unattended, /!` | Carry out a request on the agent's own, after a plan is accepted |
+| `/shortcuts, /sc, /:` | Print the shortcuts table |
 | `/load` | Loads the rules now, without waiting for the first prompt. |
 
 Type /help for all of Slasher's help, or /<command> help for one command's.

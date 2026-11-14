@@ -2,11 +2,13 @@ PROCESS
   These commands move the work under way along: take its next step, or say what
   was done and what's next.
 
-  /items                           The current items (/item list current)
-  /i                               An alias of /items
+  /items                           Every item, whatever its state
+  /items current                   The current items (/item list current)
+  /i                               An alias of /items current
   /current [<n>]                   The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /current
+  /c [<n>]                         An alias of /current
   /recent                          Brief summary of recent work, and what's
                                    next
   /.                               An alias of /recent
@@ -25,7 +27,7 @@ PROCESS
 
   /unattended <request>            Carry out the request on the agent's own,
                                    after a plan is proposed
-  /# <request>                     An alias of /unattended
+  /! <request>                     An alias of /unattended
 
   /ask-again                       Repeat the agent's previous multiple-choice
                                    question
