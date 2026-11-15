@@ -6,7 +6,7 @@ Test-first is the standing default for starting any task. Do not ask "shall I st
 
 **Attended or unattended** is a different question: it asks how often the loop **stops**, not what it builds, and nothing about the method is being confirmed or declined.
 
-A question with a genuinely situational answer is a decision rather than a settled default, so this rule's reasoning does not reach it. See the attended-or-unattended-is-chosen-when-the-work-is-started rule.
+A question with a genuinely situational answer is a decision rather than a settled default, so this rule's reasoning does not reach it. See the attended-or-unattended-is-chosen-when-the-work-is-created rule.
 
 **Why:** Asking confirms a settled default and spends a turn on a non-decision. The human's attention belongs at the hinges, which are the actuation and the solubility verdict. It does not belong on whether to follow the method itself. See the human-in-the-loop and DBE-as-design-tool rules. Re-asking the standing default is ceremony, the same failure DBE discontinues.
 
@@ -31,7 +31,7 @@ A question with a genuinely situational answer is a decision rather than a settl
 3. Attended or unattended is a different question. It asks how often the loop stops, not what it builds.
 4. The choice neither confirms nor declines the method.
 5. A question with a genuinely situational answer is a decision, not a settled default. This rule does not forbid asking it.
-6. See the attended-or-unattended-is-chosen-when-the-work-is-started rule.
+6. See the attended-or-unattended-is-chosen-when-the-work-is-created rule.
 
 ## Compression
 
@@ -54,7 +54,7 @@ Related:
 
 - the the-human-deliberates-the-hinges-never-the-pass-fail-bar rule
 - the DBE-as-design-tool rule
-- the attended-or-unattended-is-chosen-when-the-work-is-started rule — the cadence question this does not forbid
+- the attended-or-unattended-is-chosen-when-the-work-is-created rule — the cadence question this does not forbid
 
 ---
 
@@ -80,3 +80,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 4:25:02 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 7:16:55 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:08 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:17 PM PT

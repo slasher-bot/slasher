@@ -1,6 +1,6 @@
 # The implementations directory holds one record per implementation
 
-**Trigger:** When starting an experiment or feature, or writing or changing an implementation record
+**Trigger:** When creating or starting an experiment or feature, or writing or changing an implementation record
 
 `slasher/local/implementations/` holds **implementation records**: one file per implementation, carrying how it started, where it is being worked, and what became of it. An implementation is a bounded unit of work with a lifecycle, and the record is a persisted, dated artifact kept after it concludes.
 
@@ -10,7 +10,7 @@
 
 **As the engineer stated it:** change features and experiments so that both can have either an intent or a question. And: an intent can also bring a forecast and verdict.
 
-**Whether the work states a forecast is asked at the start, and whether it reaches a verdict is asked at its end. The lifecycle reads both.** The forecast question is put to the engineer at the start and recorded as a confirmation, beside the working location and the participation. Only work with a forecast is asked the verdict question, when its work is complete. Neither follows from the kind, or from whether the work opens with a question or an intent.
+**Whether the work states a forecast is asked when the implementation is created, and whether it reaches a verdict is asked at its end. The lifecycle reads both.** The forecast question is put to the engineer when the implementation is created and recorded as a confirmation, beside the working location and the participation. Only work with a forecast is asked the verdict question, when its work is complete. Neither follows from the kind, or from whether the work opens with a question or an intent.
 
 ## The record
 
@@ -20,8 +20,8 @@ Open with the **Question** or the **Intent**, then the setup:
 - the **upstream branch** it merges into — `master` or another topic branch
 - the **implementation branch**
 - its **base**
-- the **working location** chosen at the start
-- **whether it states a forecast**, asked at the start, and the forecast where it states one
+- the **working location** chosen when the implementation is created
+- **whether it states a forecast**, asked when the implementation is created, and the forecast where it states one
 - **whether it reaches a verdict**, asked at the end of work with a forecast
 - a **`**Tags:**`** line carrying `[experiment]` or `[feature]`
 
@@ -29,7 +29,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Work without a forecast states none of that.** There is no comparison against a forecast, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word, which any implementation can take.
 
-**Every record carries the confirmations the lifecycle required**, so the work's authority is auditable: the working-location selection at the start, the attended-or-unattended selection at the start, the forecast selection at the start, the verdict selection at the end where the work has a forecast, adding a worktree to work already under way, and branch deletion with worktree removal. **Work that reaches a verdict also records** the affirmation declaration, concluding a superseded one, and merging untested code.
+**Every record carries the confirmations the lifecycle required**, so the work's authority is auditable: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the implementation's creation, the verdict selection at the end where the work has a forecast, adding a worktree to work already under way, and branch deletion with worktree removal. **Work that reaches a verdict also records** the affirmation declaration, concluding a superseded one, and merging untested code.
 
 ## The state
 
@@ -85,7 +85,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 The same frontmatter-free markdown as rules — a `# Experiment — <name>` or `# Feature — <name>` title, then prose and tables. **The kind reads in the title and is stated as data in the `**Tags:**` line**, and a record whose title says one kind and whose tag says another is a defect in the record. The filename takes the ISO-8601-UTC prefix (see the file-names rule) and the state suffix. End the file with the provenance footer, and pair it with a log entry (see the a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
 
-**Why:** an experiment and a feature share one lifecycle. What differs between two implementations is whether the work is judged against a forecast, and that is a decision about this piece of work rather than about its kind. A forecast recorded at the start keeps a verdict possible, and the verdict is decided at the end, when the work has shown what it shows. The kind keeps naming what the work is.
+**Why:** an experiment and a feature share one lifecycle. What differs between two implementations is whether the work is judged against a forecast, and that is a decision about this piece of work rather than about its kind. A forecast recorded at creation keeps a verdict possible, and the verdict is decided at the end, when the work has shown what it shows. The kind keeps naming what the work is.
 
 **How to apply:** record every implementation here, tagged `[experiment]` or `[feature]`. Open with the question or the intent, then the branch topology, the working location, and whether it states a forecast. Forecast before the work where the engineer gives one, and record what happened against it. Record the verdict selection at the end, where the work has a forecast.
 
@@ -100,13 +100,13 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 6. The tags name what the work is. No rule reads them to decide how the work runs.
 7. Either kind opens with a question or an intent, whichever the work has.
-8. Whether the work states a forecast is asked at the start. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
+8. Whether the work states a forecast is asked when the implementation is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
 9. Whether the work reaches a verdict is asked at the end, of work with a forecast only, and recorded as a confirmation. The lifecycle reads both. Neither follows from the kind, or from whether the work opens with a question or an intent.
 
 ## The record
 
 1. Open with the **Question** or the **Intent**.
-2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the implementation branch, its base, the working location chosen at the start, and whether it states a forecast. Add whether it reaches a verdict at the end.
+2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the implementation branch, its base, the working location chosen when the implementation is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
 4. The setup also includes a `**Tags:**` line carrying `[experiment]` or `[feature]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
@@ -114,7 +114,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
 8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
-10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the start, and the verdict selection at the end where the work has a forecast.
+10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the implementation's creation, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
 12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded implementation, and merging untested code.
 
@@ -199,8 +199,11 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 - 2026-11-14, revised: a Discontinued implementation is left out of the status line, not the session-start notice; checked: 147 directives, 143 kept, 4 less precise, 0 lost. Left less precise, none touched by this revision: when the rule applies, which its Trigger line carries; the Obsolete definition's cause; that the item is renamed on `master`; and why records on `master` are kept current
 - 2026-11-14, revised: *start* replaces *begin*; not re-checked
 - 2026-11-14, revised: `start` creates an implementation Active where none is in place, as point 8 of the state; not re-checked
+- 2026-11-14, revised: the opening questions are asked when the implementation is created, not at the start; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 this rule said the opening questions were asked *at the start*, where it now says *when the implementation is created*. The begin, start, end, conclude work item settled that *start* means only the work starting.
 
 Until Sat Nov 14 2026 only `new` created an implementation. The begin, start, end, conclude work item settled that `start`, where no implementation is in place, creates one and writes it Active.
 
@@ -276,3 +279,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 4:19:24 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:56 PM PT

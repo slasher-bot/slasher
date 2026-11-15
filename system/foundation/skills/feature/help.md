@@ -25,5 +25,5 @@ FEATURES
   /feature help                    Print this command's help
 
   Either kind opens with a question or an intent. A forecast is
-  stated at the start where you give one, and the verdict is asked
+  stated when it is created, where you give one, and the verdict is asked
   when the work completes.

@@ -593,12 +593,12 @@ Trigger: When writing, revising, or creating a `vocabulary.md` file
 
 Source: system/foundation/source/an-implementation-runs-on-a-branch-to-a-declared-end.md
 
-Trigger: When starting, adding a worktree to, suspending, or concluding an experiment or feature implementation
+Trigger: When creating, starting, adding a worktree to, suspending, or concluding an experiment or feature implementation
 
 1. An implementation runs on its own branch, designed through the five hinges by DBE, to a declared state.
 2. It is never left silently open.
 3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
-4. Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule).
+4. Either kind opens with a question or an intent. A forecast is stated when the implementation is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule).
 5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
@@ -624,7 +624,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 ## Phases
 
 1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the implementation's.
-2. The record names the phases and their order at the start, and, as each phase starts, the commit it branched from.
+2. The record names the phases and their order when the implementation is created, and, as each phase starts, the commit it branched from.
 3. When a phase is added, ask whether it states a forecast, whatever its implementation chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the implementation's three options. A phase without a forecast is not asked.
 4. A phase's branch is the implementation's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
 5. Git refuses a slash here, because no branch can sit beneath another branch's name.
@@ -645,7 +645,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 
 ## The working location
 
-1. Put the working location through the selection interface at every start, with no default.
+1. Put the working location through the selection interface each time an implementation is created, with no default.
 2. Each option states what it creates:
 
 > **Branch only** — Create the branch and switch this working tree to it. At the conclusion this
@@ -680,12 +680,12 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 
 1. Put attended or unattended through the selection interface beside the working location.
 2. Attended is the default.
-3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule states why the two sit at one gate, and what changes between them.
+3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule states why the two sit at one gate, and what changes between them.
 4. Record both choices.
 
 ## The forecast and the verdict
 
-1. At the start, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
+1. When the implementation is created, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
 2. Do not ask it where the working location is the current branch. Work there states no forecast.
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
@@ -1336,7 +1336,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 
 Source: system/foundation/source/the-implementations-directory-holds-one-record-per-implementation.md
 
-Trigger: When starting an experiment or feature, or writing or changing an implementation record
+Trigger: When creating or starting an experiment or feature, or writing or changing an implementation record
 
 1. `slasher/local/implementations/` holds implementation records, one file per implementation.
 2. A record carries how the implementation started, where it is being worked, and what became of it.
@@ -1345,13 +1345,13 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
 5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 6. The tags name what the work is. No rule reads them to decide how the work runs.
 7. Either kind opens with a question or an intent, whichever the work has.
-8. Whether the work states a forecast is asked at the start. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
+8. Whether the work states a forecast is asked when the implementation is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
 9. Whether the work reaches a verdict is asked at the end, of work with a forecast only, and recorded as a confirmation. The lifecycle reads both. Neither follows from the kind, or from whether the work opens with a question or an intent.
 
 ## The record
 
 1. Open with the **Question** or the **Intent**.
-2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the implementation branch, its base, the working location chosen at the start, and whether it states a forecast. Add whether it reaches a verdict at the end.
+2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the implementation branch, its base, the working location chosen when the implementation is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
 4. The setup also includes a `**Tags:**` line carrying `[experiment]` or `[feature]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
@@ -1359,7 +1359,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
 8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
-10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the start, and the verdict selection at the end where the work has a forecast.
+10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the implementation's creation, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
 12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded implementation, and merging untested code.
 

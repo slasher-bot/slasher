@@ -34,7 +34,7 @@ Until Tue Nov 10 2026 the command's alias was `/#`. The engineer removed it, and
 
 Related:
 
-- the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule — the figures, as they are first asked at the start of the work
+- the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule — the figures, as they are first asked at the start of the work
 - the next-takes-the-next-step-of-the-work-under-way rule — how the work under way is found
 
 ---
@@ -46,3 +46,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 11:18:35 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 12:58:17 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:03:09 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:48:54 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:17 PM PT
