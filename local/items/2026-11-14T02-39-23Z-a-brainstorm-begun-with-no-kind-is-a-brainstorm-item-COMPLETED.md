@@ -1,6 +1,6 @@
 # A brainstorm begun with no kind is a brainstorm item
 
-- **State:** Done
+- **State:** Completed
 - **Tags:** [work]
 
 **A brainstorm begun with no item kind becomes an item of the kind brainstorm, tagged `[brainstorm]`.** A brainstorm item starts Recorded and stays Recorded, as a note does.
@@ -14,3 +14,4 @@
 Authored by Scott Bellware on Fri Nov 13 2026 at 6:39:23 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 6:44:12 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 6:49:12 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT

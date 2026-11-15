@@ -516,7 +516,7 @@ Source: system/foundation/source/the-migration-directory-holds-the-plans-for-mov
 9. An item sequences a build, against something this repository settled.
 10. A migration plan sequences a change to where existing content lives, or to the form it is written in. Across repositories, its increments land in two.
 11. Its order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed.
-12. Across repositories, the plan is not finished when this repository's part is done.
+12. Across repositories, the plan is not concluded when this repository's part is done.
 13. A migration may realize a settled item, or be mechanical enough to need none.
 14. A migration record is one document, not entries that accrue like the contemporaneous, historical records under `logs/`.
 15. Revise the record while the migration runs.
@@ -546,10 +546,10 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 9. The durable records are the binding rules (`slasher/system/`, `slasher/local/rules/`), the items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the implementation records (`slasher/local/implementations/`).
 10. The record points to the durable records throughout. It does not restate them.
 11. The record keeps the reasoning behind each fork in the work. It ties the durable records together as a narrative and keeps the arc.
-12. Write a record at the close of a work session that produced substantial dialogue, decisions, or discovery worth keeping as a narrative.
+12. Write a record at the end of a work session that produced substantial dialogue, decisions, or discovery worth keeping as a narrative.
 13. Write it when the engineer asks. Or propose it when the agent sees the work session has built up such work.
 14. A trivial work session needs no record. A record is not required for every session.
-15. Also propose it when the agent concludes a feature, an experiment, or a phase, or takes an item to Done, Realized, Abandoned, or Superseded.
+15. Also propose it when the agent concludes a feature, an experiment, or a phase, or takes an item to Completed, Realized, Abandoned, or Superseded.
 16. When the agent raises the question of recording, it asks through the AskUserQuestion selection UI, not as a prose question. The prompt offers three options, each naming a **work session record**: **write a new work session record**, **amend the previous work session record**, or **don't write a work session record**. The amend option names the previous record in a few words.
 17. The engineer's selection decides.
 18. The prompt says "work session", never the shortened "session".
@@ -561,7 +561,7 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 1. Title the record `# Work Session — <name> (<date>)`.
 2. Records written before 2026-08-03 are titled `# Session — …`. Keep those titles. Do not retitle them.
 3. The parts appear in the order below.
-4. **Opening summary**: a short paragraph naming what the work session was, as its arc. For example, it began as X, became Y, and ended with Z.
+4. **Opening summary**: a short paragraph naming what the work session was, as its arc. For example, it started as X, became Y, and ended with Z.
 5. **Framing note**: states that this is the communicable record, or guided tour. It states that the durable records it points to are the source of truth.
 6. **Chronological body**: numbered sections (`## 1.`, `## 2.`, …) walking the work session in order.
 7. Each section states what was asked and concluded at that step.

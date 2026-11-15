@@ -1,6 +1,6 @@
 # "Complete implementation", rather than "Full implementation"
 
-**State:** Done
+**State:** Completed
 
 **Tags:** [work]
 
@@ -13,3 +13,4 @@ The term stands in the at-the-implementation-hinge-the-engineer-chooses-a-direct
 Authored by Scott Bellware on Wed Nov 11 2026 at 1:16:17 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:34:13 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 2:09:56 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT

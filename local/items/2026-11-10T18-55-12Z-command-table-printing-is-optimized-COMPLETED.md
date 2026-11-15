@@ -1,6 +1,6 @@
 # Command table printing is optimized
 
-- **State:** Done
+- **State:** Completed
 - **Tags:** [work]
 
 **As the engineer stated it:** Optimize command table printing. Maybe split into separate rules.
@@ -24,3 +24,4 @@ Authored by Scott Bellware on Tue Nov 10 2026 at 10:55:12 AM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:18:29 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 8:35:37 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:43:43 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT

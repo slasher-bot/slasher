@@ -646,6 +646,33 @@ migrate_note_state() {
   fi
 }
 
+# Make a project's Done items Completed. A work item and a rework item concluded Done until
+# 2026-11-14, when Completed, the word a feature and an experiment conclude with, took its place.
+# So an item whose file ends -DONE is renamed -COMPLETED, and its State line changes with it. The
+# same narrow semantics as migrate_note_state.
+migrate_work_state() {
+  items_dir="slasher/local/items"
+  [ -d "$items_dir" ] || return 0
+
+  migrated=0
+  for done in "$items_dir"/*-DONE.md; do
+    [ -f "$done" ] || continue
+    completed="${done%-DONE.md}-COMPLETED.md"
+    if [ -e "$completed" ]; then
+      echo "Both $done and $completed are present — neither is touched."
+      continue
+    fi
+    sed 's/^\(\(- \)\{0,1\}\*\*State:\*\*\) Done$/\1 Completed/' "$done" > "$completed"
+    rm "$done"
+    migrated=$((migrated + 1))
+  done
+
+  if [ "$migrated" -gt 0 ]; then
+    echo "Made $migrated item(s) Completed — a work item's concluding state, which was Done."
+    echo "Commit the change."
+  fi
+}
+
 # 0. Print the bootstrap section and stop. Nothing is installed and nothing is placed,
 #    so this is safe to run anywhere, including from the authoring source. It exists so
 #    refresh-packages.sh can compare a project's AGENTS.md against the current text
@@ -687,3 +714,4 @@ migrate_observation_state
 migrate_note_tag
 migrate_note_state
 migrate_work_tag
+migrate_work_state

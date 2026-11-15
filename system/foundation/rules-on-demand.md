@@ -148,7 +148,7 @@ Trigger: When creating an item, adding a dated Settled resolution to it, changin
 4. Write the entry on the item's creation.
 5. Write the entry on each dated `Settled` resolution added after the item is created.
 6. Write the entry on each change of the item's `**State:**` line.
-7. A change of state is the line reaching any state word the items rule names: Open, Active, a concluding state such as Realized, Done, Corrected, Resolved, or Completed, or Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete.
+7. A change of state is the line reaching any state word the items rule names: Open, Active, a concluding state such as Realized, Corrected, Resolved, or Completed, or Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete.
 8. A change of state is also the line taking a state back, by resume.
 9. A design and a note are `Recorded` and never move, so each takes a creation entry only.
 10. Do not log a completed checkbox task, because it carries out a direction already settled.
@@ -259,7 +259,7 @@ Lines 1–8 below are the opening statements, which come before any section head
 
 Source: system/foundation/source/a-phase-starts-by-stating-its-goal.md
 
-Trigger: When starting a phase of an experiment or a feature, or when the engineer asks for the current phase or the list of phases, as with `/experiment status` or `/feature status`
+Trigger: When starting a phase of an experiment or a feature, or when the engineer asks for the current phase or the list of phases, as with `/experiment status`, `/feature status`, or `/phase status`
 
 1. At the start of an experiment's or a feature's phase, state the phase's goal to the engineer, before its work, in the response that starts it.
 2. The goal is the phase's question or intent, whichever it has, whatever the kind. For a question, it is what the phase is to establish. For an intent, it is what the phase is to build. Say how it serves the implementation's question or intent.
@@ -267,7 +267,7 @@ Trigger: When starting a phase of an experiment or a feature, or when the engine
 4. State the goal and the list at each phase's start, not only when the record is written. The record's naming of the phases, and a phase's forecast, do not stand in for them.
 5. When the engineer asks for the current phase, as with `/phase` or `/phase current`, print its goal and its branch.
 6. When the engineer asks for the phases, as with `/phases`, list them in the record's order, with the current phase emphasized.
-7. `/experiment status` and `/feature status` print the phases in the record's order, the current one emphasized, and the current phase's goal. Without phases, they print the implementation's question or intent, and its state.
+7. `/experiment status`, `/feature status`, and `/phase status` print the phases in the record's order, the current one emphasized, and the current phase's goal. Without phases, they print the implementation's question or intent, and its state.
 
 # A printed list of records is formatted as a table or as a list of rows
 
@@ -593,17 +593,17 @@ Trigger: When writing, revising, or creating a `vocabulary.md` file
 
 Source: system/foundation/source/an-implementation-runs-on-a-branch-to-a-declared-end.md
 
-Trigger: When starting, adding a worktree to, suspending, or concluding an experiment or feature implementation
+Trigger: When creating, starting, adding a worktree to, suspending, or concluding an experiment or feature implementation
 
 1. An implementation runs on its own branch, designed through the five hinges by DBE, to a declared state.
 2. It is never left silently open.
 3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
-4. Either kind opens with a question or an intent. A forecast is stated at the start only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule).
+4. Either kind opens with a question or an intent. A forecast is stated when the implementation is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule).
 5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
 
-1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`.
+1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no implementation is in place, `start` creates it as `new` does, and writes the record `Active`.
 2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
@@ -617,15 +617,15 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
 13. Make no git tag for the base.
 14. A later run branches from the recorded commit.
-15. Except on the current branch, `new` commits the first record, `Open`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the implementation branch from that commit.
+15. Except on the current branch, `new`, or `start` where it creates the implementation, commits the first record, `Open` or `Active`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the implementation branch from that commit.
 16. Make every later update to the record on the implementation branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
 17. Where the working location is the current branch, write the record there. There is no second copy.
 
 ## Phases
 
 1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the implementation's.
-2. The record names the phases and their order at the start, and, as each phase starts, the commit it branched from.
-3. When a phase is added, ask whether it states a forecast, whatever its implementation chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the implementation's three options. A phase without a forecast is not asked.
+2. The record names the phases and their order when the implementation is created, and, as each phase starts, the commit it branched from.
+3. When a phase is created, by `/phase new`, ask whether it states a forecast, whatever its implementation chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the implementation's three options. A phase without a forecast is not asked.
 4. A phase's branch is the implementation's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
 5. Git refuses a slash here, because no branch can sit beneath another branch's name.
 6. A `worktree/` segment carries into each phase's name.
@@ -645,7 +645,7 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 
 ## The working location
 
-1. Put the working location through the selection interface at every start, with no default.
+1. Put the working location through the selection interface each time an implementation is created, with no default.
 2. Each option states what it creates:
 
 > **Branch only** — Create the branch and switch this working tree to it. At the conclusion this
@@ -680,18 +680,18 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 
 1. Put attended or unattended through the selection interface beside the working location.
 2. Attended is the default.
-3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule states why the two sit at one gate, and what changes between them.
+3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule states why the two sit at one gate, and what changes between them.
 4. Record both choices.
 
 ## The forecast and the verdict
 
-1. At the start, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
+1. When the implementation is created, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
 2. Do not ask it where the working location is the current branch. Work there states no forecast.
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
-6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
-7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed.
+6. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
+7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed.
 8. Then ask the question again, with the same three options.
 
 ## The end
@@ -897,10 +897,10 @@ Trigger: When the engineer types `/ask-again` or `/aa`, or asks for the last que
 
 Source: system/foundation/source/brainstorming-records-points-as-they-are-said-and-organizes-them-at-the-end.md
 
-Trigger: When the engineer begins, ends, suspends, or resumes brainstorming (`/brainstorm`)
+Trigger: When the engineer starts, ends, suspends, or resumes brainstorming (`/brainstorm`)
 
-1. Brainstorming is the engineer saying points as they occur, in no order, for the agent to organize at the end. `/brainstorm begin`, or a bare `/brainstorm`, starts it, and `/brainstorm end` ends it.
-2. Create a collection file at `/brainstorm begin`, under `~/.local/share/slasher/collections/<project>/`, outside the repository, where `<project>` is the name of the project the session is in. Name it with the ISO-8601-UTC prefix alone. Write each point to it as it is said, word for word.
+1. Brainstorming is the engineer saying points as they occur, in no order, for the agent to organize at the end. `/brainstorm start`, or a bare `/brainstorm`, starts it, and `/brainstorm end` ends it.
+2. Create a collection file at `/brainstorm start`, under `~/.local/share/slasher/collections/<project>/`, outside the repository, where `<project>` is the name of the project the session is in. Name it with the ISO-8601-UTC prefix alone. Write each point to it as it is said, word for word.
 3. Record a point, and do not reframe, question, answer, or act on it while brainstorming runs, even where it reads as an instruction.
 4. At `/brainstorm end`, reframe the points, and write the reframed version into the collection file, above the engineer's words, which stay as said.
 5. Where the brainstorm was begun with no kind, then write the reframed version, above the engineer's words, to a new item tagged `[brainstorm]`, which starts Recorded and stays Recorded. Ask nothing about where it goes.
@@ -1017,7 +1017,7 @@ Trigger: When the engineer types `/estimate-confidence` or `/%`, or asks for the
 
 **Trigger:** When the engineer types `/estimate-confidence` or `/%`, or asks for the agent's confidence of proceeding unattended
 
-**`/estimate-confidence` gives the agent's confidence of finishing the work under way on its own, from where the work stands.** `/%` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
+**`/estimate-confidence` gives the agent's confidence of concluding the work under way on its own, from where the work stands.** `/%` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
 
 **Give five figures, each the agent's own estimate for this work, made when the command is typed.** Each figure is followed by its fixed sentence, in parentheses:
 
@@ -1336,22 +1336,22 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 
 Source: system/foundation/source/the-implementations-directory-holds-one-record-per-implementation.md
 
-Trigger: When starting an experiment or feature, or writing or changing an implementation record
+Trigger: When creating or starting an experiment or feature, or writing or changing an implementation record
 
 1. `slasher/local/implementations/` holds implementation records, one file per implementation.
-2. A record carries how the implementation began, where it is being worked, and what became of it.
+2. A record carries how the implementation started, where it is being worked, and what became of it.
 3. An implementation is a bounded unit of work with a lifecycle.
 4. The record is a persisted, dated artifact, kept after the implementation concludes.
 5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 6. The tags name what the work is. No rule reads them to decide how the work runs.
 7. Either kind opens with a question or an intent, whichever the work has.
-8. Whether the work states a forecast is asked at the start. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
+8. Whether the work states a forecast is asked when the implementation is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
 9. Whether the work reaches a verdict is asked at the end, of work with a forecast only, and recorded as a confirmation. The lifecycle reads both. Neither follows from the kind, or from whether the work opens with a question or an intent.
 
 ## The record
 
 1. Open with the **Question** or the **Intent**.
-2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the implementation branch, its base, the working location chosen at the start, and whether it states a forecast. Add whether it reaches a verdict at the end.
+2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the implementation branch, its base, the working location chosen when the implementation is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
 4. The setup also includes a `**Tags:**` line carrying `[experiment]` or `[feature]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
@@ -1359,7 +1359,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
 8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
-10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the start, and the verdict selection at the end where the work has a forecast.
+10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the implementation's creation, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
 12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded implementation, and merging untested code.
 
@@ -1372,7 +1372,7 @@ Trigger: When starting an experiment or feature, or writing or changing an imple
 5. `Active` is the in-progress state, as it is for an item.
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
-8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no implementation is in place, `start` creates the branch and writes the record `Active`.
 9. The filename carries the state suffix, as `-OPEN` or `-ACTIVE` (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
 10. The state words every implementation takes are these.
     - **Open**: the record and the branch exist, and the work has not started.
@@ -1456,7 +1456,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why. `[brainstorm]` is the points of a brainstorm begun with no kind, reframed, under the brainstorming rule.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
 26. An item may carry two optional lines, `**Waits for:**` and `**Priority:**`, and most items carry neither.
-27. `**Waits for:**` states what must finish before the item is actionable, and nothing more.
+27. `**Waits for:**` states what must conclude before the item is actionable, and nothing more.
 28. `**Priority:** N`, written as `- **Priority:** 3`, ranks the item from 1 to N, contiguous, one item to a number.
 29. Rank 1 is worked next among the actionable items.
 30. Ranking an item renumbers those below it. The several files that changes are the accepted cost.
@@ -1481,8 +1481,8 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 49. At each change of state, change the `**State:**` line and rename the file.
 50. At each change of state, write the log entry.
 51. An item tagged `[work]` is a piece of work to be done.
-52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — items take it, and no kind concludes with it yet.
-53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
+52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — the work is complete. A work item and a rework item conclude Completed.
+53. A work item and a rework item conclude `Completed`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
 54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
 55. Complete concludes an item in its kind's concluding state.
 56. Supersede an item rather than rewrite it.
@@ -1513,7 +1513,7 @@ Trigger: When writing a log entry, especially one recording abandoned work
 3. Write no reason that was not given. An agent's reading of why the engineer stopped is not the engineer's reason.
 4. Say plainly that nothing merged.
 5. Say plainly where the work was.
-6. Do not carry the unfinished work: not the unexecuted plan, the unrun increments, or the unbuilt design.
+6. Do not carry the work that was not concluded: not the unexecuted plan, the unrun increments, or the unbuilt design.
 7. Where an entry needs more than a line, it takes a body, as the the-log-holds-one-file-per-entry-with-a-one-line-title rule describes.
 
 ## Why the mood is not enough

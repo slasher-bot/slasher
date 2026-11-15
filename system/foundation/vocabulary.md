@@ -10,7 +10,7 @@ The foundation package's vocabulary: the terms it defines and the word substitut
 
 **These are the terms most easily confused, and they are confused because nothing has stated them beside each other.** They differ in *what is set aside*, *where it goes*, and *what brings it back*.
 
-- **deferred** — work identified mid-task and postponed until the current task finishes. It is an ordinary **item** in `slasher/local/items/` carrying a `**Waits for:**` line, and it may carry a `**Priority:**` rank. A deferred item is *waiting its turn*. **STE: absent from the STE dictionary. Technical noun, ETE engineering, design, process, and method.**
+- **deferred** — work identified mid-task and postponed until the current task concludes. It is an ordinary **item** in `slasher/local/items/` carrying a `**Waits for:**` line, and it may carry a `**Priority:**` rank. A deferred item is *waiting its turn*. **STE: absent from the STE dictionary. Technical noun, ETE engineering, design, process, and method.**
 - **suspended** — something the project **stopped doing** and set aside rather than deleted: a rule that became ceremony, a procedure nobody runs. The thing is **removed**, with a log entry tagged `[suspended]` naming what it cost and what else changed. A suspended thing is *not waiting its turn* — the project has stopped, and the entry states why. **STE: absent. `suspend (v)` is not approved and gives HANG (v), which is physical. Technical noun, ETE engineering, process, and method.**
 - **out of scope** — what a **design deliberately excludes**. It is neither queued nor set aside. It is a boundary the design draws around itself, recorded in its trailing **Out of Scope / Deferred** section so a reader knows the omission was chosen rather than overlooked. **STE: absent from the STE dictionary. Technical noun, ETE engineering, design, process, and method.**
 
@@ -64,7 +64,7 @@ A word taken out of use with **nothing in its place**. This is not a substitutio
 ## The three ways of saying "not now"
 
 1. They differ in what is set aside, where it goes, and what brings it back. **Deferred** is not yet, **suspended** is no longer, **out of scope** is not here.
-2. **deferred** — work identified mid-task and postponed until the current task finishes. It is an ordinary item in `slasher/local/items/` with a `**Waits for:**` line, and it may carry a `**Priority:**` rank. It waits its turn.
+2. **deferred** — work identified mid-task and postponed until the current task concludes. It is an ordinary item in `slasher/local/items/` with a `**Waits for:**` line, and it may carry a `**Priority:**` rank. It waits its turn.
 3. **suspended** — something the project stopped doing and set aside rather than deleted, such as a rule that became ceremony or a procedure nobody runs. The thing is removed, with a log entry tagged `[suspended]` naming what it cost, what else changed, and why the project stopped. It does not wait its turn.
 4. **out of scope** — what a design deliberately excludes. It is neither queued nor set aside. It is a boundary the design draws around itself, recorded in its trailing **Out of Scope / Deferred** section so the omission reads as chosen.
 

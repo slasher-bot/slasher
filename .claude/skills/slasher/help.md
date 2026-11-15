@@ -43,9 +43,9 @@ ITEMS
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active
   /item complete, /complete        -> the kind's concluding state:
-                                   Realized, Done, Corrected, or Resolved
+                                   Realized, Completed, Corrected, or
+                                   Resolved
   /item realize, /realize          -> Realized
-  /item done, /done                -> Done ([work] and [rework] items)
   /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
   /item discontinue, /discontinue  -> Discontinued (no plan to do it)
@@ -75,7 +75,8 @@ FEATURES
   /feature new                     Create its branch and an Open record
   /feature new with phases         Create it, asking for its phases
   /feature status                  Phases, current phase, and its goal
-  /feature start, /start           Open -> Active
+  /feature start, /start           Open -> Active, or, where none is
+                                   Open, create one Active
   /feature complete, /complete     -> Completed, or asks which state
                                    where there is a forecast
   /feature affirm, /affirm         -> Affirmed (engineer's declaration only)
@@ -94,7 +95,7 @@ FEATURES
   /feature help                    Print this command's help
 
   Either kind opens with a question or an intent. A forecast is
-  stated at the start where you give one, and the verdict is asked
+  stated when it is created, where you give one, and the verdict is asked
   when the work completes.
 
 EXPERIMENTS
@@ -104,7 +105,8 @@ EXPERIMENTS
   /experiment new                  Create its branch and an Open record
   /experiment new with phases      Create it, asking for its phases
   /experiment status               Phases, current phase, and its goal
-  /experiment start, /start        Open -> Active
+  /experiment start, /start        Open -> Active, or, where none is
+                                   Open, create one Active
   /experiment complete, /complete  -> Completed, or asks which state
                                    where there is a forecast
   /experiment affirm, /affirm      -> Affirmed (engineer's declaration only)
@@ -128,7 +130,9 @@ PHASE
   its own sub branch.
 
   /phase, /phase current           The current phase, its goal, and its branch
-  /phase add <name>                Add a phase after the last
+  /phase status                    The phases, the current one emphasized,
+                                   and its goal
+  /phase new <name>                Create a phase after the last
   /phase start                     Start the next phase
   /phase complete                  -> Completed, merged into the implementation
   /phase affirm                    -> Affirmed (engineer's declaration only)
@@ -136,7 +140,7 @@ PHASE
                                    not realized)
   /phase inconclusive              -> Inconclusive
 
-  Whether a phase states a forecast is asked when it is added.
+  Whether a phase states a forecast is asked when it is created.
   A phase with one is asked the verdict question when it completes.
 
   /phases                          List the phases, the current one emphasized
@@ -242,7 +246,7 @@ BRAINSTORMING
   Brainstorming records points as they are said, freeform in no order, and
   organizes them when the writer is done.
 
-  /brainstorm, /brainstorm begin   Begin brainstorming
+  /brainstorm, /brainstorm start   Start brainstorming
   /brainstorm end                  End it, and organize what was said into a
                                    [brainstorm] item
   /brainstorm suspend              Suspend the brainstorm
