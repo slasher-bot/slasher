@@ -48,6 +48,8 @@
 
 - **2026-11-15** — The package set, selected by the engineer: `imap` and `smtp` are active here too, by a new declaration, `default, +prose, +imap, +smtp`. The declaration before it left them inactive, and the plugin build then left `/email` and `/smtp` out.
 
+- **2026-11-15** — The command name: the command is `/review` again, not `/suggest`, although Claude Code's built-in code-review command takes `/review`. Where it does, the command is typed `/slasher:review`. **As the engineer stated it:** Change "/suggest" to "/review"
+
 ## What happened
 
 - Claude Code 2.1.325 has a built-in code-review skill whose alias is `review`, described as *Review the current diff or a PR for bugs and cleanups*. Typing `/review` reaches that skill, not this one. The plugin's command is reached as `/slasher:review`.
@@ -78,3 +80,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 12:01:06 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:23:57 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:25:38 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:31:11 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 12:32:30 PM PT

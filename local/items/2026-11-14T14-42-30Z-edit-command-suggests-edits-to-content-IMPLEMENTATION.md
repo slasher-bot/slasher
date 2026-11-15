@@ -15,6 +15,8 @@
 
 **Settled 2026-11-15:** the command is `/suggest` again, not `/review`, since Claude Code's built-in code-review command takes `/review`. The engineer selected `/suggest` over keeping `/review`, `/revise`, and `/proofread`.
 
+**Settled 2026-11-15:** the command is `/review` again, not `/suggest`, although Claude Code's built-in code-review command takes `/review`. Where it does, the command is typed `/slasher:review`. **As the engineer stated it:** Change "/suggest" to "/review"
+
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 6:42:30 AM PT
@@ -23,3 +25,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:40:02 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:42:08 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:56:21 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:31:11 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 12:32:30 PM PT

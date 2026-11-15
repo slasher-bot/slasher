@@ -16,7 +16,7 @@ release
 package
 language
 reprint-and-review
-suggest
+review
 email
 smtp
 clarify
