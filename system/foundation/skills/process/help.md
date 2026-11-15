@@ -33,9 +33,8 @@ PROCESS
                                    question
   /aa                              An alias of /ask-again
 
-  /copy-last-line                  Copy the last line of the previous reply
-                                   to the clipboard
-  /cll                             An alias of /copy-last-line
+  /copy-record                     Copy the path of the previous reply's
+                                   principal record to the clipboard
 
   /idk [<words>]                   Say "I don't know" to the agent's last
                                    question. The agent explains it, gives

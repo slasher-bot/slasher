@@ -12,7 +12,7 @@
 
 **As the engineer later stated it:** Change "Recorded in:" to "Records:"
 
-**The list opens with the line *Records:*, and each path is a list item of its own, written `- ` and then the path in backticks.** The backticks make the terminal show the path in color, as a file path is usually shown. Nothing else goes on the line: no label, and no sentence. `/copy-last-line` copies the path without the dash and the backticks.
+**The list opens with the line *Records:*, and each path is a list item of its own, written `- ` and then the path in backticks.** The backticks make the terminal show the path in color, as a file path is usually shown. Nothing else goes on the line: no label, and no sentence. `/copy-record` copies the principal record's path without the dash and the backticks.
 
 **As the engineer later stated it:** Instead of proactively printing out the filepaths of the records written after an operation, only print them if the records command is issued. However, the principal record should always be printed. The principal record is the one that is the subject of the operation, ie: an item is written if the operation operates on an item, etc.
 
@@ -52,6 +52,7 @@
 - 2026-11-15, revised: `/records show` prints the previous reply's records line again, as point 8; not re-checked
 - 2026-11-15, revised: a reply ends with its principal record alone, and `/records show` prints every record it wrote, as points 1, 4, and 8, a change the engineer stated; not re-checked
 - 2026-11-15, revised: the heading reads *Records:*, a change the engineer stated; not re-checked
+- 2026-11-15, revised: `/copy-record` replaces `/copy-last-line`, a body sentence only; not re-checked
 
 ## History
 
@@ -81,3 +82,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 7:01:18 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:45:26 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:52:17 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:56:47 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 8:12:57 PM PT

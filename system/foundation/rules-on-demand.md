@@ -910,15 +910,15 @@ Trigger: When the engineer starts, ends, suspends, or resumes brainstorming (`/b
 9. Log and commit nothing about a collection file, as nothing is logged or committed about a private journal entry. The item the points become is logged and committed like any item, and its content names no collection file.
 10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or write an item. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
 
-# Copy-last-line copies the last line of the previous reply
+# Copy-record copies the previous reply's principal record path
 
-Source: system/foundation/source/copy-last-line-copies-the-last-line-of-the-previous-reply.md
+Source: system/foundation/source/copy-record-copies-the-previous-replys-principal-record-path.md
 
-Trigger: When the engineer types `/copy-last-line` or `/cll`, or asks for the last line of the output to be copied
+Trigger: When the engineer types `/copy-record`, or asks for the path of the record just written to be copied
 
-**Trigger:** When the engineer types `/copy-last-line` or `/cll`, or asks for the last line of the output to be copied
+**Trigger:** When the engineer types `/copy-record`, or asks for the path of the record just written to be copied
 
-**`/copy-last-line` copies the last line of the agent's previous reply to the clipboard.** `/cll` is its shortcut alias. The last line is the last line that is not blank, as it was written, with its markdown left as it is, except that a line that is wholly a path in backticks, alone or as a list item, is copied as the bare path, without the dash and the backticks. Where that reply ended with a record's path, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it, the path is what is copied.
+**`/copy-record` copies the path of the previous reply's principal record to the clipboard.** The principal record is the record that reply's operation was about, the one its *Records:* list gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. The path is copied bare, as the file now stands, with no dash and no backticks, and with `~/` in place of the home folder.
 
 **As the engineer stated it:** Add a "/copy-last-line" command that copies the last line of output to the clipboard
 
@@ -926,15 +926,19 @@ Trigger: When the engineer types `/copy-last-line` or `/cll`, or asks for the la
 
 **As the engineer later stated it:** Proceed with both of those changes, of a record's path written in backticks, and copied without them
 
-**Copy it with the platform's clipboard command:** `pbcopy` on macOS, and `wl-copy` or `xclip -selection clipboard` on Linux. Copy the line without a trailing newline. Where no clipboard command is found, say so, and print the line so the engineer can copy it by hand.
+**As the engineer later stated it:** Change "/copy-last-line" to "/copy-record". Remove the "/cll" command.
 
-**Then say what was copied, in one line, with the line itself.** Do not copy anything else, and do not copy the reply that reports the copy.
+**Copy it with the platform's clipboard command:** `pbcopy` on macOS, and `wl-copy` or `xclip -selection clipboard` on Linux. Copy the path without a trailing newline. Where no clipboard command is found, say so, and print the path so the engineer can copy it by hand.
 
-**Where there is no previous reply, say so, and copy nothing.**
+**Where the previous reply had more than one principal record, ask which to copy**, through the selection interface, each path an option.
 
-**Why:** Claude Code's `/copy` copies the whole of the last reply. A record's path, or one command, is usually the line the engineer wants, and it sits on the last line by design.
+**Then say what was copied, in one line, with the path itself.** Copy nothing else.
 
-**How to apply:** on `/copy-last-line` or `/cll`, take the last line that is not blank from the previous reply, drop the list item's dash and the backticks where the line is a path in backticks, copy it with the clipboard command without a trailing newline, and report it in one line.
+**Where the previous reply wrote no record, or had no principal record, say so, and copy nothing.** Where there is no previous reply, say so too.
+
+**Why:** the engineer often wants to open the record just written, or to pass its path on. Claude Code's `/copy` copies the whole of the last reply, and the record's path is the one line wanted.
+
+**How to apply:** on `/copy-record`, take the previous reply's principal record, copy its bare path with the clipboard command without a trailing newline, and report it in one line.
 
 # Dated artifacts are prefixed with an ISO 8601 UTC datetime, and system rules are not
 
