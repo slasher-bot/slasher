@@ -22,6 +22,7 @@
 - **Participation:** attended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-14T14-42-30Z-edit-command-suggests-edits-to-content`
+- **Item:** `2026-11-14T14-43-02Z-a-content-package-for-content-editing-rules-and-commands`, joined on 2026-11-15, selected by the engineer
 
 ## Decisions
 
@@ -62,3 +63,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:53:29 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:55:05 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:56:21 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:57:48 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:58:18 AM PT
