@@ -44,6 +44,10 @@
 
 - **2026-11-15** — Installation, selected by the engineer: the installer's `content` set includes `prose`, and the `default` set does not. This repository takes `prose` up, by a new package-set declaration, `default, +prose`.
 
+## What happened
+
+- Claude Code 2.1.325 has a built-in code-review skill whose alias is `review`, described as *Review the current diff or a PR for bugs and cleanups*. Typing `/review` reaches that skill, not this one. The plugin's command is reached as `/slasher:review`.
+
 ## Confirmations
 
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
@@ -70,3 +74,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:57:48 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:58:18 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:01:06 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:23:57 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 12:25:38 PM PT
