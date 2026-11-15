@@ -14,9 +14,9 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 ## The branch
 
-**`new` writes the record `Open`, then creates the branch.** `start` makes the record `Active` when the work starts.
+**`new` writes the record `Open`, then creates the branch.** `start` makes the record `Active` when the work starts. Where no implementation is in place, `start` creates it as `new` does, and writes the record `Active`.
 
-**The first record is committed on the upstream branch before the implementation branch is created.** `new` writes the record `Open`, with its log entry, and commits both on the upstream branch, `master` in the ordinary case. Then it creates the implementation branch from that commit. The implementation branch's copy of the record takes every update made during the work. Its first update records the base, the commit holding the first record, which that record cannot name itself. The upstream branch's copy stays as first written until the work merges, so the upstream branch shows the implementation as current while it runs. Where the working location is the current branch, the record is written there, and there is no second copy.
+**The first record is committed on the upstream branch before the implementation branch is created.** `new` writes the record `Open`, or `start` writes it `Active` where it creates the implementation, with its log entry, and commits both on the upstream branch, `master` in the ordinary case. Then it creates the implementation branch from that commit. The implementation branch's copy of the record takes every update made during the work. Its first update records the base, the commit holding the first record, which that record cannot name itself. The upstream branch's copy stays as first written until the work merges, so the upstream branch shows the implementation as current while it runs. Where the working location is the current branch, the record is written there, and there is no second copy.
 
 **As the engineer stated it:** When an implementation starts, an initial implementation record should be recorded on master. Then the branch is made, and the branch's version takes updates added during the course of the implementation, but the initial record remains on master
 
@@ -144,7 +144,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## The branch
 
-1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`.
+1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no implementation is in place, `start` creates it as `new` does, and writes the record `Active`.
 2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
@@ -158,7 +158,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
 13. Make no git tag for the base.
 14. A later run branches from the recorded commit.
-15. Except on the current branch, `new` commits the first record, `Open`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the implementation branch from that commit.
+15. Except on the current branch, `new`, or `start` where it creates the implementation, commits the first record, `Open` or `Active`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the implementation branch from that commit.
 16. Make every later update to the record on the implementation branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
 17. Where the working location is the current branch, write the record there. There is no second copy.
 
@@ -310,8 +310,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-13, revised: the first record is committed on the upstream branch before the implementation branch is created, and the branch's copy takes the later updates; the new points checked: 15 directives, 11 kept, 2 less precise, 2 lost, 2 repairs; re-checked: 9 directives, 7 kept, 1 less precise, 1 lost, 2 repairs, not re-checked after. Left lost: that the upstream branch shows the implementation as current while it runs, a reason, which stays in the body
 - 2026-11-14, revised: the status line's second line, not the session-start notice, answers a worktree's lack of trace; checked: 158 directives, 157 kept, 1 less precise, 0 lost, 1 repair, naming the branch and any worktree; re-checked: 158 directives, 158 kept, 0 less precise, 0 lost
 - 2026-11-14, revised: work *concludes* in a state, where it *ended* in one, as point 6 of the forecast and the verdict; not re-checked
+- 2026-11-14, revised: `start` creates an implementation Active where none is in place, as points 1 and 15 of the branch; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 only `new` created an implementation. The begin, start, end, conclude work item settled that `start`, where no implementation is in place, creates one and writes it Active.
 
 Until Sat Nov 14 2026 this rule said work *ends* Completed, Affirmed, Refuted, or Inconclusive, where it now says *concludes*. The begin, start, end, conclude work item settled *conclude* as the word for reaching a final state.
 
@@ -406,3 +409,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:37:42 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT

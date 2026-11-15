@@ -35,7 +35,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **The state sits on a canonical `**State:**` line**, carrying one word and nothing else — `- **State:** Suspended`. It is written with the record, and changes as the record reaches another word. That line is the only authoritative statement of the state: the same words run through a record's prose freely, and nothing else in the file can be read as the state.
 
-**`new` creates the branch and writes the record `Open`.** `start` makes it `Active`, the in-progress state, as it is for an item. Absence is not a state, and a record without a line is a defect.
+**`new` creates the branch and writes the record `Open`.** `start` makes it `Active`, the in-progress state, as it is for an item. Where no implementation is in place, `start` creates the branch and writes the record `Active`. Absence is not a state, and a record without a line is a defect.
 
 **The state words every implementation takes:**
 
@@ -89,7 +89,7 @@ The same frontmatter-free markdown as rules — a `# Experiment — <name>` or `
 
 **How to apply:** record every implementation here, tagged `[experiment]` or `[feature]`. Open with the question or the intent, then the branch topology, the working location, and whether it states a forecast. Forecast before the work where the engineer gives one, and record what happened against it. Record the verdict selection at the end, where the work has a forecast.
 
-Write the state line as `Open` when `new` writes the record, make it `Active` when the work starts, and update it as the state changes. Record each confirmation the lifecycle requires.
+Write the state line as `Open` when `new` writes the record, or as `Active` when `start` writes it, make it `Active` when the work starts, and update it as the state changes. Record each confirmation the lifecycle requires.
 
 ## Compressed
 
@@ -127,7 +127,7 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 5. `Active` is the in-progress state, as it is for an item.
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
-8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`.
+8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no implementation is in place, `start` creates the branch and writes the record `Active`.
 9. The filename carries the state suffix, as `-OPEN` or `-ACTIVE` (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
 10. The state words every implementation takes are these.
     - **Open**: the record and the branch exist, and the work has not started.
@@ -198,8 +198,11 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 - 2026-11-13, revised: an item already on `master` takes its implementation's state changes on `master` too; not re-checked
 - 2026-11-14, revised: a Discontinued implementation is left out of the status line, not the session-start notice; checked: 147 directives, 143 kept, 4 less precise, 0 lost. Left less precise, none touched by this revision: when the rule applies, which its Trigger line carries; the Obsolete definition's cause; that the item is renamed on `master`; and why records on `master` are kept current
 - 2026-11-14, revised: *start* replaces *begin*; not re-checked
+- 2026-11-14, revised: `start` creates an implementation Active where none is in place, as point 8 of the state; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 only `new` created an implementation. The begin, start, end, conclude work item settled that `start`, where no implementation is in place, creates one and writes it Active.
 
 Until Sat Nov 14 2026 this rule said *begin* where it now says *start*. The begin, start, end, conclude work item settled *start* and *end* as the standard words for beginning and ending work.
 
@@ -272,3 +275,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:19:24 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT

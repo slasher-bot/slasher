@@ -20,5 +20,6 @@ The engineer typed `/experiment $ARGUMENTS`.
 7. **`status`**: show the experiment's phases, its current phase, and that phase's goal. Load a-phase-starts-by-stating-its-goal.
 8. **A change of state**, `start`, `complete`, `affirm`, `refute`, `inconclusive`, `defer`, `suspend`, `discontinue`, `obsolete`, `supersede`, `abandon`, or `resume`: change the experiment's state, as the root command of the same name does for an experiment. Load an-implementation-runs-on-a-branch-to-a-declared-end and the-implementations-directory-holds-one-record-per-implementation. `affirm` is the engineer's declaration only, so the skill acts on it only when the engineer typed it.
 9. **`realize`** maps to no state an experiment takes. Say so, name `complete`, which concludes an experiment, and do nothing more.
-10. Steps 7 and 8 act on the experiment the conversation is on. Where that is not clear, or more than one experiment is open, ask which, through the selection interface.
-11. Any other first word is not guessed at. Say it is not one of this command's subcommands, and ask which is meant, as step 4 does.
+10. **`start`** where no experiment is Open: create an experiment as `new` does, and write its record Active. The words after it, where any were typed, state its intent or question.
+11. Steps 7 and 8 act on the experiment the conversation is on. Where that is not clear, or more than one experiment is open, ask which, through the selection interface.
+12. Any other first word is not guessed at. Say it is not one of this command's subcommands, and ask which is meant, as step 4 does.

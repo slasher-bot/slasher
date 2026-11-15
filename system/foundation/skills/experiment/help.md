@@ -5,7 +5,8 @@ EXPERIMENTS
   /experiment new                  Create its branch and an Open record
   /experiment new with phases      Create it, asking for its phases
   /experiment status               Phases, current phase, and its goal
-  /experiment start, /start        Open -> Active
+  /experiment start, /start        Open -> Active, or, where none is
+                                   Open, create one Active
   /experiment complete, /complete  -> Completed, or asks which state
                                    where there is a forecast
   /experiment affirm, /affirm      -> Affirmed (engineer's declaration only)
