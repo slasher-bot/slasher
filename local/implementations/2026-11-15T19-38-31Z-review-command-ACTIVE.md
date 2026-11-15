@@ -1,4 +1,4 @@
-# Feature — A suggest command suggests edits to content, and accept or reject settles them
+# Feature — A review command suggests edits to content, and accept or reject settles them
 
 **Tags:** [feature]
 
@@ -16,9 +16,9 @@
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
-- **Implementation branch:** `feature/worktree/suggest-command`
+- **Implementation branch:** `feature/worktree/review-command`
 - **Base:** `99ada0e4`, from `master`, the commit holding this record as first written
-- **Working location:** branch and worktree, at `../slasher-feature-worktree-suggest-command`, chosen when the feature was created.
+- **Working location:** branch and worktree, at `../slasher-feature-worktree-review-command`, chosen when the feature was created.
 - **Participation:** attended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-14T14-42-30Z-edit-command-suggests-edits-to-content`
@@ -35,6 +35,8 @@
 
 - **2026-11-15** — Accepting, selected by the engineer: `/suggest accept` shows the changed passages as they would read, then asks through the selection interface whether to write them to the file.
 
+- **2026-11-15** — The command is `/review`, not `/suggest`: `/review`, `/review accept`, and `/review reject`. Every earlier decision holds under the new name. Claude Code's built-in `/review` may shadow it, which is checked when the skill is written. **As the engineer stated it:** Change "/suggest" to "/review"
+
 ## Confirmations
 
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
@@ -43,6 +45,8 @@
 - **2026-11-15** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-15** — Participation: Attended, selected by the engineer. Agent's confidence 55%, risk of redo 45%, It'll work 85%, Your approval 55%, attended confidence 90%. The warning was shown, and Attended was recommended.
 - **2026-11-15** — Forecast: No forecast, selected by the engineer.
+
+- **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from suggest-command to review-command, selected by the engineer. The branch was `feature/worktree/suggest-command`.
 
 ---
 
@@ -54,3 +58,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:45:39 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:48:02 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:53:29 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:55:05 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:56:21 AM PT
