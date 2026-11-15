@@ -1,8 +1,8 @@
-# The record command copies, prints, or opens the previous reply's principal record
+# The record command copies, prints, or opens the most recent principal record
 
 **Trigger:** When the engineer types `/record`, or asks for the record just written to be copied, printed, or opened
 
-**`/record` acts on the previous reply's principal record.** The principal record is the record that reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. `/record copy` copies its path, `/record print` prints its contents, and `/record open` opens it. A bare `/record` asks which, through the selection interface.
+**`/record` acts on the most recent principal record: that of the latest reply that had one, however many replies have passed since.** A reply that wrote no record, such as a `/records show` or a `/record print`, leaves it as it was. The principal record is the record a reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. `/record copy` copies its path, `/record print` prints its contents, and `/record open` opens it. A bare `/record` asks which, through the selection interface.
 
 **As the engineer stated it:** Add a "/copy-last-line" command that copies the last line of output to the clipboard
 
@@ -16,6 +16,8 @@
 
 **As the engineer later stated it:** Consolidate "/copy-record" and "/open-record" in a "/record" command, with the subcommands "copy", "print", and "open"
 
+**As the engineer later stated it:** The "/record" command should work on the most recent principal record, even if the previous reply wrote no record
+
 **`/record copy` copies the record's full, absolute path to the clipboard**, as the file now stands, with no dash and no backticks. Copy it with the platform's clipboard command: `pbcopy` on macOS, and `wl-copy` or `xclip -selection clipboard` on Linux. Copy the path without a trailing newline. Where no clipboard command is found, say so, and print the path so the engineer can copy it by hand.
 
 **`/record print` prints the record's contents in the chat**, as the file now stands, under a line naming its path from the project root. Print the contents as they are, with nothing added and nothing left out.
@@ -24,15 +26,17 @@
 
 **After a copy or an open, say what was copied or opened, in one line, with the record's path.** Act on nothing else.
 
-**Where the previous reply had more than one principal record, ask which**, through the selection interface, each path an option.
+**Where that reply had more than one principal record, ask which**, through the selection interface, each path an option.
 
-**Where the previous reply wrote no record, or had no principal record, say so, and act on nothing.** Where there is no previous reply, say so too.
+**Where no reply in the session has had a principal record, say so, and act on nothing.**
 
 **Why:** the engineer often wants to pass on, read, or edit the record just written. Claude Code's `/copy` copies the whole of the last reply, and finding a file to read or open it takes a search. One command acting on the principal record saves both.
 
-**How to apply:** on `/record`, take the previous reply's principal record, and copy its path, print its contents, or open it, as the subcommand says.
+**How to apply:** on `/record`, take the most recent principal record, and copy its path, print its contents, or open it, as the subcommand says.
 
 ## History
+
+Until Sun Nov 15 2026 this rule was named the-record-command-copies-prints-or-opens-the-previous-replys-principal-record, and `/record` acted only on the previous reply's principal record. Where that reply wrote none, it acted on nothing.
 
 Until Sun Nov 15 2026 this rule was named copy-record-copies-the-previous-replys-principal-record-path, and its command `/copy-record` copied the path alone. The rule open-record-opens-the-previous-replys-principal-record, with its command `/open-record`, opened the record. `/record` took the place of both, and `/record print` was added.
 
@@ -59,3 +63,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 7:01:18 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:12:49 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:26:05 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:51:48 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 8:59:07 PM PT
