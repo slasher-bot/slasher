@@ -16,6 +16,9 @@
 - **2026-11-14** — A work item concludes Completed, not Done.
 - **2026-11-14** — `/done` is retired. `/complete` concludes a work item Completed, as it concludes a feature. Selected by the engineer.
 - **2026-11-14** — A rework item concludes Completed, not Done. **As the engineer stated it:** "Rework item should conclude Completed"
+- **2026-11-14** — A feature has `start` and no `new`. `/feature start` creates the feature, its record and its branch, asks the start's questions, and makes it Active. **As the engineer stated it:** "Feature should have \"start\" but not \"new\""
+- **2026-11-14** — An experiment follows a feature: `/experiment start` creates and starts it, and `/experiment new` is removed. Selected by the engineer.
+- **2026-11-14** — Open is dropped as a state of a feature or an experiment, which is Active from the moment it is created. Items keep Open. Selected by the engineer.
 
 **Implementation:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
 
@@ -25,3 +28,4 @@ Authored by Scott Bellware on Sat Nov 14 2026 at 12:44:27 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:32:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:44:45 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:53:29 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:25:27 PM PT
