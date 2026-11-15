@@ -23,6 +23,10 @@
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-14T14-42-30Z-edit-command-suggests-edits-to-content`
 
+## Decisions
+
+- **2026-11-15** — The command is `/suggest`, not `/edit`: `/suggest`, `/suggest accept`, and `/suggest reject`. **As the engineer stated it:** It should be "/suggest" rather than "/edit"
+
 ## Confirmations
 
 - **2026-11-15** — Creation: `/feature start`, with no feature Open, so the feature was created Active.
@@ -34,3 +38,4 @@
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 11:38:31 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:38:47 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:40:02 AM PT

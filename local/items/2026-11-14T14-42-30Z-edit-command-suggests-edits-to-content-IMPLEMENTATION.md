@@ -9,7 +9,10 @@
 
 **Implementation:** `2026-11-15T19-38-31Z-edit-command`
 
+**Settled 2026-11-15:** the command is `/suggest`, not `/edit`: `/suggest`, `/suggest accept`, and `/suggest reject`. **As the engineer stated it:** It should be "/suggest" rather than "/edit"
+
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 6:42:30 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:38:31 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:40:02 AM PT
