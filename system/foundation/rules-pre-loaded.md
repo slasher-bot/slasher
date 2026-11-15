@@ -291,6 +291,7 @@ Source: system/foundation/source/a-reply-that-writes-a-record-ends-with-the-reco
 5. Do not list a record the agent did not write, such as a log entry a hook writes.
 6. List a record written in a worktree by the worktree's path.
 7. A reply that wrote no record ends as it otherwise would.
+8. `/records show`, or a bare `/records`, prints the previous reply's records line again, in the same form, each path as the file now stands. Where the previous reply wrote no record, say so, and print no list. Its own reply carries no records line.
 
 # A status report prints a fixed whole-project report
 

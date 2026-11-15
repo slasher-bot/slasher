@@ -210,6 +210,14 @@ LOG
 
   /log help                        Print this command's help
 
+RECORDS
+  The records line ends a reply that wrote a record, listing the full path of
+  each record it wrote.
+
+  /records, /records show          Print the previous reply's records line
+                                   again
+  /records help                    Print this command's help
+
 JOURNAL
   The journal is the writer's own record of what they think, either stored with
   the project or kept in a private journal.
