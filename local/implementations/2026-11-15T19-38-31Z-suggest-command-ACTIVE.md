@@ -27,6 +27,8 @@
 
 - **2026-11-15** — The command is `/suggest`, not `/edit`: `/suggest`, `/suggest accept`, and `/suggest reject`. **As the engineer stated it:** It should be "/suggest" rather than "/edit"
 
+- **2026-11-15** — The use site, selected by the engineer: `/suggest <words naming the content>` names the content, and a bare `/suggest` acts on the content the conversation is on. Suggestions are numbered. `/suggest accept 1 3` and `/suggest reject 2` settle some of them. A bare `/suggest accept` or `/suggest reject` settles all of them.
+
 ## Confirmations
 
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
@@ -42,3 +44,4 @@ Authored by Scott Bellware on Sun Nov 15 2026 at 11:38:31 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:38:47 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:40:02 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:42:08 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:45:39 AM PT
