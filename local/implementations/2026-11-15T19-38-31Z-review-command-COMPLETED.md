@@ -10,7 +10,7 @@
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -52,6 +52,10 @@
 
 ## What happened
 
+- The `prose` package carries the `/review` command: its rule, its skill, its help, and its command-table row. REVIEW follows REPRINT-AND-REVIEW in the help.
+- `/review` suggests numbered edits and changes nothing. `/review accept` shows the result and writes it on the engineer's selection. `/review reject` drops suggestions. Pending suggestions are kept.
+- The installer's `content` set includes `prose`. This repository declares every installed package active.
+- The automated suite passed: 72 test files.
 - Claude Code 2.1.325 has a built-in code-review skill whose alias is `review`, described as *Review the current diff or a PR for bugs and cleanups*. Typing `/review` reaches that skill, not this one. The plugin's command is reached as `/slasher:review`.
 
 ## Confirmations
@@ -62,6 +66,7 @@
 - **2026-11-15** — Forecast: No forecast, selected by the engineer.
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from suggest-command to review-command, selected by the engineer. The branch was `feature/worktree/suggest-command`.
+- **2026-11-15** — Conclusion: Completed, with the merge to master, selected by the engineer. The work states no forecast.
 
 ---
 
@@ -81,3 +86,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 12:23:57 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:25:38 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:31:11 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:32:30 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 12:34:45 PM PT
