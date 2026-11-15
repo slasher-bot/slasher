@@ -206,15 +206,6 @@ LOG
 
   /log help                        Print this command's help
 
-RECORDS
-  The records line ends a reply that wrote a record, with the full path of the
-  record it is about.
-
-  /records, /records show          Print every record the previous reply
-                                   wrote. A reply prints its principal
-                                   record alone
-  /records help                    Print this command's help
-
 RECORD
   This command prints or copies the path of, prints, or opens the most recent
   principal record: the record of the latest reply that wrote one.
@@ -224,6 +215,15 @@ RECORD
   /record print                    Print the record's contents
   /record open                     Open the record in its default application
   /record help                     Print this command's help
+
+RECORDS
+  The records line ends a reply that wrote a record, with the full path of the
+  record it is about.
+
+  /records, /records show          Print every record the previous reply
+                                   wrote. A reply prints its principal
+                                   record alone
+  /records help                    Print this command's help
 
 JOURNAL
   The journal is the writer's own record of what they think, either stored with
