@@ -35,6 +35,7 @@
 - `/phase new` replaces `/phase add`.
 - `/phase status` prints what `/feature status` prints.
 - `/brainstorm` keeps `start` and no `new`. A work session *ends*, where the work sessions rule said it closes.
+- *Conclude* replaces *finish* in nine rules and the foundation vocabulary.
 - The automated suite passed: 72 test files.
 
 ## Confirmations
@@ -53,3 +54,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:49 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:42 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:24:16 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:31:57 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:53 PM PT
