@@ -2,7 +2,7 @@
 
 Rules and commands for working on content: prose written for people to read, such as a page, a README, an article, or a draft.
 
-- **The review command suggests numbered edits to content, and accept or reject settles them** (`the-review-command-suggests-numbered-edits-and-accept-or-reject-settles-them`). `/review` suggests edits and changes nothing. Each suggestion shows the original text, the suggested text, and a reason. `/review accept` shows the result and writes it only on the engineer's selection. `/review reject` drops suggestions. A suggestion stays pending until one of the two settles it.
+- **The suggest command suggests numbered edits to content, and accept or reject settles them** (`the-suggest-command-suggests-numbered-edits-and-accept-or-reject-settles-them`). `/suggest` suggests edits and changes nothing. Each suggestion shows the original text, the suggested text, and a reason. `/suggest accept` shows the result and writes it only on the engineer's selection. `/suggest reject` drops suggestions. A suggestion stays pending until one of the two settles it.
 
 **What this package deliberately does not hold.** The rules for Slasher's own prose stay in the `language` package. That package governs how the agent and the records write. This package governs work on the engineer's content.
 

@@ -44,19 +44,21 @@
 
 - **2026-11-15** — Installation, selected by the engineer: the installer's `content` set includes `prose`, and the `default` set does not. This repository takes `prose` up, by a new package-set declaration, `default, +prose`.
 
+- **2026-11-15** — The command name, selected by the engineer: the command is `/suggest` again, not `/review`, since Claude Code's built-in code-review command takes `/review`. The engineer selected `/suggest` over keeping `/review`, `/revise`, and `/proofread`.
+
+- **2026-11-15** — The package set, selected by the engineer: `imap` and `smtp` are active here too, by a new declaration, `default, +prose, +imap, +smtp`. The declaration before it left them inactive, and the plugin build then left `/email` and `/smtp` out.
+
 ## What happened
 
 - Claude Code 2.1.325 has a built-in code-review skill whose alias is `review`, described as *Review the current diff or a PR for bugs and cleanups*. Typing `/review` reaches that skill, not this one. The plugin's command is reached as `/slasher:review`.
 
 ## Confirmations
 
-- **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
-
 - **2026-11-15** — Creation: `/feature start`, with no feature Open, so the feature was created Active.
 - **2026-11-15** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-15** — Participation: Attended, selected by the engineer. Agent's confidence 55%, risk of redo 45%, It'll work 85%, Your approval 55%, attended confidence 90%. The warning was shown, and Attended was recommended.
 - **2026-11-15** — Forecast: No forecast, selected by the engineer.
-
+- **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from suggest-command to review-command, selected by the engineer. The branch was `feature/worktree/suggest-command`.
 
 ---
@@ -75,3 +77,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:58:18 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:01:06 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:23:57 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:25:38 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 12:31:11 PM PT
