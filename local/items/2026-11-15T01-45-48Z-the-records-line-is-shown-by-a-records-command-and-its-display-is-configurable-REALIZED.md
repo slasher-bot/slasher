@@ -1,6 +1,6 @@
 # The records line is shown by a /records command, and its display is configurable
 
-- **State:** Implementation
+- **State:** Realized
 - **Tags:** [idea]
 
 **The records line, the *Recorded in:* list of the records a reply has written, is shown by a `/records` command, whose base command is `/records show`. How the records line is displayed is configurable, and can vary.**
@@ -25,3 +25,4 @@ It supersedes `2026-11-15T00-45-53Z-configurable-variable-display-of-records-rec
 Authored by Scott Bellware on Sat Nov 14 2026 at 5:45:48 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:38:40 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:45:04 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 7:47:06 PM PT

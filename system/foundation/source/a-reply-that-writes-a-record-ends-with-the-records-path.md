@@ -20,6 +20,10 @@
 
 **A reply that wrote no record ends as it otherwise would.**
 
+**`/records show` prints the previous reply's records line again**, the *Recorded in:* heading and its list, in the same form. A bare `/records` does the same. Each path is the file as it now stands, so a record renamed since is listed by its new path. Where the previous reply wrote no record, say so, and print no list. `/records show` writes nothing, so its own reply carries no records line.
+
+**As the engineer stated it:** "/records" command. It shows the records line. The base command is "/records show"
+
 **Why:** the engineer often wants to open the record just written, or to pass its path on. A path printed somewhere in the middle of a reply, or a name without its directory, has to be found and completed by hand. A full path on the last line is copied or opened at once.
 
 **How to apply:** before sending a reply, check whether it wrote a record. Where it did, end the reply with each record's full path on its own line, the record the reply is about last.
@@ -33,6 +37,7 @@
 5. Do not list a record the agent did not write, such as a log entry a hook writes.
 6. List a record written in a worktree by the worktree's path.
 7. A reply that wrote no record ends as it otherwise would.
+8. `/records show`, or a bare `/records`, prints the previous reply's records line again, in the same form, each path as the file now stands. Where the previous reply wrote no record, say so, and print no list. Its own reply carries no records line.
 
 ## Compression
 
@@ -40,8 +45,11 @@
 - 2026-11-13, revised: a path under the home folder starts with `~/`, a change the engineer stated; not re-checked
 - 2026-11-13, revised: the path is written in backticks, so the terminal shows it in color, a change the engineer directed; not re-checked
 - 2026-11-13, revised: the paths are a list under the heading *Recorded in:*, a change the engineer directed; not re-checked
+- 2026-11-15, revised: `/records show` prints the previous reply's records line again, as point 8; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 the records line could not be printed again.
 
 Until Fri Nov 13 2026 each path stood on a line of its own, with no heading and no bullet.
 
@@ -60,3 +68,4 @@ Authored by Scott Bellware on Fri Nov 13 2026 at 6:58:00 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 6:53:12 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 7:00:12 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 7:01:18 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 7:45:26 PM PT
