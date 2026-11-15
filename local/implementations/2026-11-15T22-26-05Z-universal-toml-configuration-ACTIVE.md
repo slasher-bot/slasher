@@ -17,7 +17,7 @@
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/universal-toml-configuration`
-- **Base:** recorded on the implementation branch, since it is the commit holding this record as first written
+- **Base:** `5df76a68`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-universal-toml-configuration`, chosen when the feature was created.
 - **Participation:** unattended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
@@ -33,3 +33,4 @@
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 2:26:05 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 2:26:06 PM PT
