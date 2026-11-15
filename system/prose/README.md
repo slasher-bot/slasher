@@ -3,7 +3,7 @@
 Rules and commands for working on content: prose written for people to read, such as a page, a README, an article, or a draft.
 
 - **The review command suggests numbered edits to content, and accept or reject settles them** (`the-review-command-suggests-numbered-edits-and-accept-or-reject-settles-them`). `/review` suggests edits and changes nothing. Each suggestion shows the original text, the suggested text, and a reason. `/review accept` shows the result and writes it only on the engineer's selection. `/review reject` drops suggestions. A suggestion stays pending until one of the two settles it.
-- **Print-and-review prints the draft and a review of it** (`print-and-review-prints-the-draft-and-a-review-of-it`). `/print-and-review`, or `/rr`, prints the draft as it now stands, then a numbered list of findings. `/review help` lists both commands.
+- **Print-and-review prints the draft and a review of it** (`print-and-review-prints-the-draft-and-a-review-of-it`). `/print-and-review`, or `/pr`, prints the draft as it now stands, then a numbered list of findings. `/review help` lists both commands.
 
 **What this package deliberately does not hold.** The rules for Slasher's own prose stay in the `language` package. That package governs how the agent and the records write. This package governs work on the engineer's content.
 

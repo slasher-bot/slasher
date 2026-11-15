@@ -8,7 +8,7 @@
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, and `/next?`. Their order is `/commands, /;`, `/recent, /?`, `/current, /', /c`, `/next, /proceed, /.`, and `/next?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` in the `git` package, and `/print-and-review, /rr` in the `prose` package.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, and `/next?`. Their order is `/commands, /;`, `/recent, /?`, `/current, /', /c`, `/next, /proceed, /.`, and `/next?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` in the `git` package, and `/print-and-review, /pr` in the `prose` package.
 
 **A row with a shortcut alias names the command first and the alias after it, as `/recent, /?`.** A command with an alias and a shortcut names the alias, then the shortcut last, as `/next, /proceed, /.`. A command with two shortcuts names both, in the order they were given, as `/current, /', /c`. This holds in the full table and in the startup table alike.
 
@@ -25,6 +25,8 @@
 **How to apply:** when you write or change a command, its help, or a shortcut alias, change its row in its domain's `command-table-rows.md`, or foundation's plugin files for the top rows and the shortcuts, and run `./compile.sh` so the plugin's tables are rebuilt.
 
 ## History
+
+Until Sun Nov 15 2026 the shortcut of `/print-and-review` was `/rr`. The engineer changed it to `/pr`.
 
 Until Sun Nov 15 2026 the `/print-and-review, /rr` row was the `/reprint-and-review, /rr` row. The engineer renamed the command.
 
@@ -100,3 +102,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 4:43:31 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 1:29:39 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 3:09:34 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 3:12:02 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 3:14:22 PM PT

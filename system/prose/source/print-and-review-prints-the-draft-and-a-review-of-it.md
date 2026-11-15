@@ -1,12 +1,14 @@
 # Print-and-review prints the draft and a review of it
 
-**Trigger:** When the engineer types `/print-and-review` or `/rr`, or asks for the draft to be printed and reviewed
+**Trigger:** When the engineer types `/print-and-review` or `/pr`, or asks for the draft to be printed and reviewed
 
-**`/print-and-review` prints the draft as it now stands, then a review of it.** `/rr` is its shortcut alias. The draft is the text the conversation is working on, such as an article, a page, a message, or a rule, with every change made to it so far. `/rr <file>` names a file, and the draft is that file's text.
+**`/print-and-review` prints the draft as it now stands, then a review of it.** `/pr` is its shortcut alias. The draft is the text the conversation is working on, such as an article, a page, a message, or a rule, with every change made to it so far. `/pr <file>` names a file, and the draft is that file's text.
 
 **As the engineer stated it:** "/reprint-and-review" command with a "/rr" shortcut alias. This is useful typically in content editing when working a draft of a text. It asks the agent to reprint the text so far, and to follow it with a review or critique.
 
 **As the engineer later stated it:** Change "/reprint-and-review" to "/print-and-review"
+
+**As the engineer later stated it:** Change "/rr" to "/pr"
 
 **The draft is printed whole and unchanged.** Print it as it stands, in a fenced block where it is markdown or code, so its form is seen as written. Do not correct it while printing it.
 
@@ -20,9 +22,11 @@
 
 **Why:** a draft worked on in conversation is changed a piece at a time, and its whole is not seen again until it is asked for. Seeing the whole and a critique of it together lets the engineer judge the next change against the text as it is, not as remembered.
 
-**How to apply:** on `/print-and-review` or `/rr`, find the draft, or read the file named. Print it whole and unchanged. Then give a numbered list of findings, each quoting its passage, naming what is wrong, and suggesting the change. Change nothing.
+**How to apply:** on `/print-and-review` or `/pr`, find the draft, or read the file named. Print it whole and unchanged. Then give a numbered list of findings, each quoting its passage, naming what is wrong, and suggesting the change. Change nothing.
 
 ## History
+
+Until Sun Nov 15 2026 the shortcut of `/print-and-review` was `/rr`. The engineer changed it to `/pr`.
 
 Until Sun Nov 15 2026 the command was `/reprint-and-review`, and this rule was the reprint-and-review-prints-the-draft-and-a-review-of-it rule. The engineer renamed it `/print-and-review`.
 
@@ -38,3 +42,4 @@ Related:
 Authored by Scott Bellware on Fri Nov 13 2026 at 4:16:43 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 3:09:34 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 3:12:02 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 3:14:22 PM PT

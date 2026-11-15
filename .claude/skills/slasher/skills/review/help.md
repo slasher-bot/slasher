@@ -13,6 +13,6 @@ REVIEW
 
   /print-and-review [<file>]       Print the draft as it now stands, then a
                                    review of it
-  /rr [<file>]                     An alias of /print-and-review
+  /pr [<file>]                     An alias of /print-and-review
 
   /review help                     Print this command's help

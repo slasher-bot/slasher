@@ -1,1 +1,1 @@
-| `/print-and-review, /rr` | Print the draft as it now stands, then a review of it |
+| `/print-and-review, /pr` | Print the draft as it now stands, then a review of it |
