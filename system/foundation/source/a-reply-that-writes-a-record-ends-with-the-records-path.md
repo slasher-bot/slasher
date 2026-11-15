@@ -1,6 +1,6 @@
 # A reply that writes a record ends with the record's path
 
-**A reply in which the agent wrote a record ends with the path of its principal record, under the heading *Recorded in:*, as a list item, in backticks.** The principal record is the record the reply's operation is about: the item, where the operation acts on an item, the implementation record, where it acts on a feature or an experiment, the rule, where it changes a rule, and so on. The other records the reply wrote, such as its log entries, are printed only on `/records show`. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the absolute path of the file as it now stands, with its state suffix where it has one. Where the path is under the home folder, it starts with `~/` in place of the home folder, as `~/projects/checkout/slasher/local/items/…`.
+**A reply in which the agent wrote a record ends with the path of its principal record, under the heading *Records:*, as a list item, in backticks.** The principal record is the record the reply's operation is about: the item, where the operation acts on an item, the implementation record, where it acts on a feature or an experiment, the rule, where it changes a rule, and so on. The other records the reply wrote, such as its log entries, are printed only on `/records show`. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the absolute path of the file as it now stands, with its state suffix where it has one. Where the path is under the home folder, it starts with `~/` in place of the home folder, as `~/projects/checkout/slasher/local/items/…`.
 
 **As the engineer stated it:** After any record is written to disk, eg: item, implementation, rule, log, journal, etc, print the written file path and name to the screen. It should be the last line printed so that the user can /copy it to their clipboard, or open it in their editor.
 
@@ -10,7 +10,9 @@
 
 **As the engineer later stated it:** Write each filepath line as a "-" bullet list item, and print the heading "Recorded in:" above the list
 
-**The list opens with the line *Recorded in:*, and each path is a list item of its own, written `- ` and then the path in backticks.** The backticks make the terminal show the path in color, as a file path is usually shown. Nothing else goes on the line: no label, and no sentence. `/copy-last-line` copies the path without the dash and the backticks.
+**As the engineer later stated it:** Change "Recorded in:" to "Records:"
+
+**The list opens with the line *Records:*, and each path is a list item of its own, written `- ` and then the path in backticks.** The backticks make the terminal show the path in color, as a file path is usually shown. Nothing else goes on the line: no label, and no sentence. `/copy-last-line` copies the path without the dash and the backticks.
 
 **As the engineer later stated it:** Instead of proactively printing out the filepaths of the records written after an operation, only print them if the records command is issued. However, the principal record should always be printed. The principal record is the one that is the subject of the operation, ie: an item is written if the operation operates on an item, etc.
 
@@ -22,7 +24,7 @@
 
 **A reply that wrote no record ends as it otherwise would.**
 
-**`/records show` prints every record the previous reply wrote**, the *Recorded in:* heading and its list, in the same form, the principal record last, after its log entries and any other record written beside it. A bare `/records` does the same. Each path is the file as it now stands, so a record renamed since is listed by its new path. Where the previous reply wrote no record, say so, and print no list. `/records show` writes nothing, so its own reply carries no records line.
+**`/records show` prints every record the previous reply wrote**, the *Records:* heading and its list, in the same form, the principal record last, after its log entries and any other record written beside it. A bare `/records` does the same. Each path is the file as it now stands, so a record renamed since is listed by its new path. Where the previous reply wrote no record, say so, and print no list. `/records show` writes nothing, so its own reply carries no records line.
 
 **As the engineer stated it:** "/records" command. It shows the records line. The base command is "/records show"
 
@@ -32,7 +34,7 @@
 
 ## Compressed
 
-1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Recorded in:*, then the full, absolute path of its principal record, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Records:*, then the full, absolute path of its principal record, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
 2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
 3. Write each path as a list item, `- ` and then the path in backticks, so the terminal shows it in color. Put nothing else on the line: no label, and no sentence.
 4. Where the operation is about more than one record, list each, each path its own list item. List a renamed record by its new path. Where no record written is the subject of the operation, print no records line.
@@ -49,8 +51,11 @@
 - 2026-11-13, revised: the paths are a list under the heading *Recorded in:*, a change the engineer directed; not re-checked
 - 2026-11-15, revised: `/records show` prints the previous reply's records line again, as point 8; not re-checked
 - 2026-11-15, revised: a reply ends with its principal record alone, and `/records show` prints every record it wrote, as points 1, 4, and 8, a change the engineer stated; not re-checked
+- 2026-11-15, revised: the heading reads *Records:*, a change the engineer stated; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 the heading read *Recorded in:*.
 
 Until Sun Nov 15 2026 a reply ended with every record it wrote, the record it was about last, and `/records show` printed that list again.
 
@@ -75,3 +80,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 7:00:12 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 7:01:18 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:45:26 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:52:17 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 7:56:47 PM PT
