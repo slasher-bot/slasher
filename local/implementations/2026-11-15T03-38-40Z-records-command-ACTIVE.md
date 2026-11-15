@@ -17,7 +17,7 @@
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/records-command`
-- **Base:** the commit on `master` holding this record as first written
+- **Base:** `0e18dc0b`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-records-command`, chosen when the feature was created.
 - **Participation:** not asked. The work is content work, which the local rule on Design By Efferent and content work holds off the method.
 - **Forecast:** none. The verdict question is not asked.
@@ -32,3 +32,4 @@
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 7:38:40 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 7:38:41 PM PT
