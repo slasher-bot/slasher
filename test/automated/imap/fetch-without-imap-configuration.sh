@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/imap/fetch-with-fetch-file.sh
+#   test/automated/imap/fetch-without-imap-configuration.sh
 #
 # Run from the repository root.
 set -e
@@ -16,6 +16,7 @@ fail() {
 
 # Imap
 #   Fetch
+#     Without IMAP configuration
 
 # Controls -------------------------------------------------------------------
 
@@ -26,14 +27,14 @@ trap 'security delete-keychain "$keychain"; rm -rf "$directory"' EXIT
 
 project="$directory/some-project"
 mkdir -p "$project/slasher/system/imap" "$project/slasher/local"
-cp system/imap/credential.sh system/imap/fetch.py "$project/slasher/system/imap/"
+cp system/imap/credential.sh system/imap/email_configuration.py system/imap/fetch.py "$project/slasher/system/imap/"
 
 port=$(python3 -c 'import socket; s = socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')
 
 control_credential="some credential"
 printf '%s' "$control_credential" | IMAP_KEYCHAIN="$keychain" system/imap/credential.sh write 127.0.0.1 some-user --name work-mail
 
-test/automated/imap/controls/server.py "$port" some-user "$control_credential" --folder "Some Label" test/automated/imap/controls/message.eml &
+test/automated/imap/controls/server.py "$port" some-user "$control_credential" test/automated/imap/controls/message.eml &
 server=$!
 trap 'status=$?; kill "$server"; wait "$server" 2>/dev/null || true; security delete-keychain "$keychain"; rm -rf "$directory"; exit $status' EXIT
 
@@ -42,10 +43,9 @@ until python3 -c "import socket; socket.create_connection(('127.0.0.1', $port)).
 export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no
 
 mkdir -p "$project/slasher/local/email/work-mail"
-cat > "$project/slasher/local/email/work-mail/fetch.toml" <<'TOML'
-[[folder]]
-source = "Some Label"
-local = "some-label"
+cat > "$project/slasher/local/email/work-mail/slasher-email.toml" <<'TOML'
+[smtp]
+host = "some-host.invalid"
 TOML
 
 # Actuation ------------------------------------------------------------------
@@ -54,11 +54,8 @@ TOML
 
 # Observation ----------------------------------------------------------------
 
-folders=$(ls "$project/slasher/local/email/work-mail")
-files=$(ls "$project/slasher/local/email/work-mail/some-label" 2>/dev/null || true)
+files=$(ls "$project/slasher/local/email/work-mail/INBOX")
 
-[ "$folders" = "fetch.toml
-some-label" ] || fail "Fetches only the folders the fetch file lists" "folders:" "$folders"
-[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Writes the label's message to its local folder" "files:" "$files"
+[ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Fetches the inbox where the email configuration lists no folder" "files:" "$files"
 
 echo "0 failed, 0 aborted"

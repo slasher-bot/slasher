@@ -16,7 +16,7 @@ fail() {
 
 # Imap
 #   Fetch
-#     When the fetch file names an unknown store
+#     When the email configuration names an unknown store
 
 # Controls -------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ trap 'security delete-keychain "$keychain"; rm -rf "$directory"' EXIT
 
 project="$directory/some-project"
 mkdir -p "$project/slasher/system/imap" "$project/slasher/local"
-cp system/imap/credential.sh system/imap/fetch.py "$project/slasher/system/imap/"
+cp system/imap/credential.sh system/imap/email_configuration.py system/imap/fetch.py "$project/slasher/system/imap/"
 
 port=$(python3 -c 'import socket; s = socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')
 
@@ -43,10 +43,11 @@ until python3 -c "import socket; socket.create_connection(('127.0.0.1', $port)).
 export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no
 
 mkdir -p "$project/slasher/local/email/work-mail"
-cat > "$project/slasher/local/email/work-mail/fetch.toml" <<'TOML'
+cat > "$project/slasher/local/email/work-mail/slasher-email.toml" <<'TOML'
+[imap]
 store = "some-store"
 
-[[folder]]
+[[imap.folder]]
 source = "inbox"
 local = "INBOX"
 TOML

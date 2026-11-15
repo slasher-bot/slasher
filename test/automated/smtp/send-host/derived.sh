@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/smtp/send-host.sh
+#   test/automated/smtp/send-host/derived.sh
 #
 # Run from the repository root.
 set -e
@@ -17,6 +17,7 @@ fail() {
 # Smtp
 #   Send
 #     Host
+#       Derived
 
 # Controls -------------------------------------------------------------------
 

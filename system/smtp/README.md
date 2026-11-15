@@ -3,7 +3,7 @@
 Email sent through an SMTP account, with its credential read from the macOS Keychain, where the `imap` package keeps it.
 
 - **A message is sent by its account's name** (`send.py`). `send.py <name> <message-file>` reads the host and the login stored on the Keychain item with that name, and the credential with the `imap` package's `credential.sh`. One Keychain item serves both the fetch and the send.
-- **The SMTP host comes from the account's IMAP host.** A leading `imap.` is replaced by `smtp.`, so `imap.gmail.com` gives `smtp.gmail.com`. Any other host is used as it is. The send connects with TLS on port 465.
+- **The SMTP host is the one the account's email configuration names, or comes from the account's IMAP host.** The `[smtp]` table's `host` in the account's `slasher-email.toml`, the file the `imap` package reads too, names it. Where it names none, a leading `imap.` in the IMAP host is replaced by `smtp.`, so `imap.gmail.com` gives `smtp.gmail.com`, and any other host is used as it is. The send connects with TLS on port 465.
 - **A message file holds headers, then a blank line, then the body**, as a fetched message does. A line of dashes at the start of the body, as a fetched message has, is left out. The message goes to every To, Cc, and Bcc recipient, from the login. A From header with the login is added where the file has none, and the Bcc header is left out of the message sent.
 
 ```

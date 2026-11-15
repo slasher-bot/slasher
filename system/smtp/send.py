@@ -10,9 +10,11 @@
 # start of the body, as a fetched message has, is left out.
 #
 # The login is read from the Keychain item, and the credential with the
-# imap package's credential.sh. The SMTP host is the item's host with a
-# leading imap. replaced by smtp., as imap.example.com gives
-# smtp.example.com. Any other host is used as it is.
+# imap package's credential.sh. The SMTP host is the host the [smtp] table of
+# the account's slasher-email.toml names, read with the imap package's
+# email_configuration.py. Where it names none, the SMTP host is the item's
+# host with a leading imap. replaced by smtp., as imap.example.com gives
+# smtp.example.com, and any other host is used as it is.
 #
 # The message goes to every To, Cc, and Bcc recipient, from the login. A
 # From header with the login is added where the file has none. The Bcc
@@ -37,6 +39,10 @@ import smtplib
 import socket
 import ssl
 import subprocess
+
+sys.dont_write_bytecode = True
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "imap"))
+import email_configuration
 
 
 def keychain_arguments():
@@ -69,7 +75,11 @@ def credential(name):
     ).stdout.rstrip("\n")
 
 
-def smtp_host(imap_host):
+def smtp_host(name, imap_host):
+    configuration = email_configuration.configuration(name) or {}
+    configured = configuration.get("smtp", {}).get("host")
+    if configured:
+        return configured
     if imap_host.startswith("imap."):
         return "smtp." + imap_host[len("imap."):]
     return imap_host
@@ -113,7 +123,7 @@ def main():
         sys.exit(f"The message in {path} names no recipient in its To, Cc, or Bcc headers.")
     del parsed["Bcc"]
 
-    host = smtp_host(imap_host)
+    host = smtp_host(name, imap_host)
     with connection(host) as server:
         server.login(login, credential(name))
         server.send_message(parsed, from_addr=login, to_addrs=to)

@@ -2,7 +2,7 @@
 
 **Trigger:** When the engineer asks for email to be fetched or for the email accounts to be listed, as with `/email`, `/email fetch`, or `/email list`
 
-**`/email fetch` fetches IMAP accounts into the project.** `/email fetch <name>` fetches the account with that name. `/email fetch <host>` fetches every account whose host it is, as a Gmail host can hold many. `/email fetch` with nothing after it fetches every IMAP account, and a bare `/email` is the same. Each account follows its own fetch file, where it has one. The act is the package's `fetch.py`, run from the project root: `slasher/system/imap/fetch.py [<name>|<host>]`, or `system/imap/fetch.py` where the project has no `slasher/` directory. Report how many messages each account's folders took, as the script prints them, and where they went. Where the script fails, report its message and do nothing more.
+**`/email fetch` fetches IMAP accounts into the project.** `/email fetch <name>` fetches the account with that name. `/email fetch <host>` fetches every account whose host it is, as a Gmail host can hold many. `/email fetch` with nothing after it fetches every IMAP account, and a bare `/email` is the same. Each account follows the `[imap]` table of its own email configuration, `slasher-email.toml`, where it has one. The act is the package's `fetch.py`, run from the project root: `slasher/system/imap/fetch.py [<name>|<host>]`, or `system/imap/fetch.py` where the project has no `slasher/` directory. Report how many messages each account's folders took, as the script prints them, and where they went. Where the script fails, report its message and do nothing more.
 
 **`/email list` lists the accounts, and never a credential.** The act is the package's `list.py`, run the same way. It prints one account to a line: its name, its host, and its login, separated by tabs. Present them as a table of those three columns. An account with no name shows an empty name.
 
@@ -12,6 +12,10 @@
 
 **How to apply:** on `/email`, `/email fetch`, or `/email list`, run the package's script from the project root, and report what it printed. Give the engineer the credential command to run themselves when they want an account stored.
 
+## History
+
+Until Sun Nov 15 2026 an account's fetch was configured by its fetch file, `fetch.toml`. The engineer replaced it with `slasher-email.toml`, one file for the `imap` and the `smtp` packages.
+
 Related:
 
 - the `foundation` package's present-every-prompt-to-the-engineer-through-the-selection-ui rule, where an account is to be chosen
@@ -19,3 +23,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Tue Nov 10 2026 at 7:58:43 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 2:46:08 PM PT

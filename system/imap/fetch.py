@@ -8,14 +8,14 @@
 # slasher/local/email/<name>/. An account with no name goes under
 # slasher/local/email/<host>/<login>/. With no argument, every IMAP account
 # is fetched. Where that
-# folder holds a fetch.toml, the folders it lists are fetched, each into its
-# local folder. A fetch.toml may instead be in the private store, under
-# ~/.local/share/slasher/email/<project>/<name>/, and one that says
-# store = "private" has the messages written there, out of the repository.
-# One that says store = "project", or has no store line, has them written
-# into the project. Any other store is refused, and that account is not
-# fetched. Where there is no fetch file, the inbox goes to INBOX/, and the
-# folder the server marks as sent mail goes to Sent/.
+# folder holds a slasher-email.toml, the folders its [imap] table lists are
+# fetched, each into its local folder. A slasher-email.toml may instead be in
+# the private store, under ~/.local/share/slasher/email/<project>/<name>/, and
+# one whose [imap] table says store = "private" has the messages written
+# there, out of the repository. One that says store = "project", or has no
+# store line, has them written into the project. Any other store is refused,
+# and that account is not fetched. Where no folder is listed, the inbox goes
+# to INBOX/, and the folder the server marks as sent mail goes to Sent/.
 #
 # Each message is one text file, its headers then its body, named with the
 # message's date as an ISO-8601-UTC prefix, its UID, and its subject. Its
@@ -41,9 +41,11 @@ import os
 import re
 import ssl
 import subprocess
-import tomllib
 from datetime import datetime, timezone
 from email.header import decode_header, make_header
+
+sys.dont_write_bytecode = True
+import email_configuration
 
 
 def keychain_arguments():
@@ -117,16 +119,6 @@ def sent(imap):
     return []
 
 
-def fetch_file(directory):
-    """The fetch file in a mailbox's folder, read as TOML, or None where
-    the folder holds none."""
-    path = os.path.join(directory, "fetch.toml")
-    if not os.path.isfile(path):
-        return None
-    with open(path, "rb") as file:
-        return tomllib.load(file)
-
-
 STORES = ("project", "private")
 
 
@@ -134,35 +126,31 @@ class UnknownStore(Exception):
     pass
 
 
-def mailbox(local, account):
-    """The mailbox's fetch file, and the folder its messages go to. The
-    fetch file is looked for in the project, then in the private store. Where
-    it says store = "private", the messages go to the private store, under
-    the project folder's name. Where it says store = "project", or has no
-    store line, they go to the project. Any other store is refused."""
+def mailbox(account):
+    """The [imap] table of the account's email configuration, and the folder
+    its messages go to. Where the table says store = "private", the messages
+    go to the private store. Where it says store = "project", or has no store
+    line, or there is no configuration, they go to the project. Any other
+    store is refused."""
     folder = account["label"] or os.path.join(account["host"], account["user"])
-    in_project = os.path.join(local, "email", folder)
-    in_private = os.path.join(
-        os.environ["HOME"], ".local", "share", "slasher", "email",
-        os.path.basename(os.getcwd()), folder,
-    )
-    for directory in (in_project, in_private):
-        listing = fetch_file(directory)
-        if listing is not None:
-            store = listing.get("store", "project")
-            if store not in STORES:
-                raise UnknownStore(f'{folder}: store "{store}" is not "project" or "private"')
-            return listing, in_private if store == "private" else in_project
-    return None, in_project
+    configuration = email_configuration.configuration(folder) or {}
+    imap = configuration.get("imap", {})
+    store = imap.get("store", "project")
+    if store not in STORES:
+        raise UnknownStore(f'{folder}: store "{store}" is not "project" or "private"')
+    if store == "private":
+        return imap, email_configuration.private_folder(folder)
+    return imap, email_configuration.project_folder(folder)
 
 
 def folders(imap, listing):
     """The folders to fetch, each with the local folder it goes to: the ones
-    the fetch file lists, or the inbox and the sent mail where it has none."""
-    if listing is None:
+    the [imap] table lists, or the inbox and the sent mail where it lists
+    none."""
+    if not listing.get("folder"):
         return [("INBOX", "INBOX"), *sent(imap)]
     found = []
-    for folder in listing.get("folder", []):
+    for folder in listing["folder"]:
         source = folder["source"]
         if source == "inbox":
             found.append(("INBOX", folder["local"]))
@@ -280,8 +268,8 @@ def fetch(imap, folder, directory):
     return fetched
 
 
-def fetch_account(local, account):
-    listing, destination = mailbox(local, account)
+def fetch_account(account):
+    listing, destination = mailbox(account)
     imap = connect(account["host"])
     imap.login(account["user"], read_credential(account))
     try:
@@ -296,7 +284,6 @@ def main():
     if len(sys.argv) > 2:
         print("Usage: slasher/system/imap/fetch.py [<name>|<host>]", file=sys.stderr)
         return 2
-    local = "slasher/local" if os.path.isdir("slasher/local") else "local"
     argument = sys.argv[1] if len(sys.argv) == 2 else None
     found = accounts(argument)
     if not found:
@@ -308,7 +295,7 @@ def main():
     status = 0
     for account in found:
         try:
-            fetch_account(local, account)
+            fetch_account(account)
         except UnknownStore as error:
             print(error, file=sys.stderr)
             status = 1

@@ -27,7 +27,7 @@ trap 'security delete-keychain "$keychain"; rm -rf "$directory"' EXIT
 
 project="$directory/some-project"
 mkdir -p "$project/slasher/system/imap" "$project/slasher/local"
-cp system/imap/credential.sh system/imap/fetch.py "$project/slasher/system/imap/"
+cp system/imap/credential.sh system/imap/email_configuration.py system/imap/fetch.py "$project/slasher/system/imap/"
 
 port=$(python3 -c 'import socket; s = socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')
 

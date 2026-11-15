@@ -1,0 +1,24 @@
+# Accept the plan? — Accept, selected by the engineer
+
+**Tags:** [decision]
+
+The question, put through the selection interface:
+
+> Accept the plan?
+>
+> 1. Name the file slasher-email.toml. It sits where fetch.toml sits now: slasher/local/email/<name>/, or the private store.
+> 2. Give it two tables. [imap] holds store and the [[imap.folder]] entries. [smtp] holds host, which replaces the host that send.py derives.
+> 3. Write the test first: a send through a slasher-email.toml whose [smtp] host names an unreachable host.
+> 4. Add email_configuration.py to the imap package. It finds and reads slasher-email.toml, in the project and then in the private store.
+> 5. Change fetch.py to read [imap] from slasher-email.toml through email_configuration.py. fetch.py no longer reads fetch.toml.
+> 6. Change send.py to read [smtp] host through email_configuration.py, and keep the derived host where none is given.
+> 7. Conform the fetch tests to slasher-email.toml.
+> 8. Change the imap and smtp READMEs and rules to name slasher-email.toml.
+> 9. Run the suite.
+
+The options:
+
+- **Accept** — The agent makes the decisions and generates through.
+- **Revise** — Say what to change. The agent revises the plan and shows it again.
+
+The engineer's answer: **Accept**

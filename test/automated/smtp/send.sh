@@ -26,7 +26,7 @@ trap 'security delete-keychain "$keychain"; rm -rf "$directory"' EXIT
 
 project="$directory/some-project"
 mkdir -p "$project/slasher/system/imap" "$project/slasher/system/smtp"
-cp system/imap/credential.sh "$project/slasher/system/imap/"
+cp system/imap/credential.sh system/imap/email_configuration.py "$project/slasher/system/imap/"
 cp system/smtp/send.py "$project/slasher/system/smtp/"
 cp test/automated/smtp/controls/message.eml "$project/some-message.eml"
 
