@@ -51,7 +51,7 @@
 Related:
 
 - the present-every-prompt-to-the-engineer-through-the-selection-ui rule — the question `/review accept` asks before it writes
-- the reprint-and-review-prints-the-draft-and-a-review-of-it rule — a review of a draft, which suggests no numbered edits
+- the print-and-review-prints-the-draft-and-a-review-of-it rule — a review of a draft, which suggests no numbered edits
 
 ---
 

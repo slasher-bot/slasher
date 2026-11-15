@@ -15,7 +15,7 @@ projects
 release
 package
 language
-reprint-and-review
+print-and-review
 review
 email
 smtp
