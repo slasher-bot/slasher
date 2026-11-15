@@ -1554,7 +1554,7 @@ Trigger: When the engineer types `/record`, or asks for the record just written 
 
 **Trigger:** When the engineer types `/record`, or asks for the record just written to be copied, printed, or opened
 
-**`/record` acts on the most recent principal record: that of the latest reply that had one, however many replies have passed since.** A reply that wrote no record, such as a `/records show` or a `/record print`, leaves it as it was. The principal record is the record a reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. `/record copy` copies its path, `/record print` prints its contents, and `/record open` opens it. A bare `/record` asks which, through the selection interface.
+**`/record` acts on the most recent principal record: that of the latest reply that had one, however many replies have passed since.** A reply that wrote no record, such as a `/records show` or a `/record print`, leaves it as it was. The principal record is the record a reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. `/record copy` copies its path, `/record print` prints its contents, and `/record open` opens it. A bare `/record` prints its path.
 
 **As the engineer stated it:** Add a "/copy-last-line" command that copies the last line of output to the clipboard
 
@@ -1570,6 +1570,10 @@ Trigger: When the engineer types `/record`, or asks for the record just written 
 
 **As the engineer later stated it:** The "/record" command should work on the most recent principal record, even if the previous reply wrote no record
 
+**As the engineer later stated it:** A bare "/record" command prints the filepath of the most recent principal record
+
+**A bare `/record` prints the record's path from the project root**, as the file now stands, in backticks, as a records line gives it. Print nothing else.
+
 **`/record copy` copies the record's full, absolute path to the clipboard**, as the file now stands, with no dash and no backticks. Copy it with the platform's clipboard command: `pbcopy` on macOS, and `wl-copy` or `xclip -selection clipboard` on Linux. Copy the path without a trailing newline. Where no clipboard command is found, say so, and print the path so the engineer can copy it by hand.
 
 **`/record print` prints the record's contents in the chat**, as the file now stands, under a line naming its path from the project root. Print the contents as they are, with nothing added and nothing left out.
@@ -1584,7 +1588,7 @@ Trigger: When the engineer types `/record`, or asks for the record just written 
 
 **Why:** the engineer often wants to pass on, read, or edit the record just written. Claude Code's `/copy` copies the whole of the last reply, and finding a file to read or open it takes a search. One command acting on the principal record saves both.
 
-**How to apply:** on `/record`, take the most recent principal record, and copy its path, print its contents, or open it, as the subcommand says.
+**How to apply:** on `/record`, take the most recent principal record, and print its path, copy its path, print its contents, or open it, as the subcommand says. With no subcommand, print its path.
 
 # The Slasher skills are delivered as a plugin named slasher
 
