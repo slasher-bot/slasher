@@ -17,7 +17,7 @@
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/edit-command`
-- **Base:** recorded on the implementation branch, since it is the commit holding this record as first written
+- **Base:** `99ada0e4`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-edit-command`, chosen when the feature was created.
 - **Participation:** attended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
@@ -33,3 +33,4 @@
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 11:38:31 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:38:47 AM PT
