@@ -42,6 +42,8 @@
 
 - **2026-11-15** — The package name, selected by the engineer: the package is named `prose`, at `system/prose/`, not `content`. The installer already has a package set named `content`, and `slasher-install content` resolves to the set, so a package of that name could not be installed by name. The engineer selected renaming the package, then the name `prose`.
 
+- **2026-11-15** — Installation, selected by the engineer: the installer's `content` set includes `prose`, and the `default` set does not. This repository takes `prose` up, by a new package-set declaration, `default, +prose`.
+
 ## Confirmations
 
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
@@ -67,3 +69,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:56:21 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:57:48 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:58:18 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:01:06 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 12:23:57 PM PT

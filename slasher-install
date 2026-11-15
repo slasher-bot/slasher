@@ -46,7 +46,7 @@ set_packages() {
       printf '%s' "foundation language testing git versioning design-by-efferent journal"
       ;;
     content)
-      printf '%s' "foundation language git versioning journal"
+      printf '%s' "foundation language git versioning journal prose"
       ;;
     *)
       return 1
