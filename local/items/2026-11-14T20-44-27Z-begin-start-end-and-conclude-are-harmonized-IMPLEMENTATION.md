@@ -23,6 +23,7 @@
 - **2026-11-14** — The rules say a feature's or an experiment's location, forecast, and attended-or-unattended questions are asked when it is created, not "at the start". *Start* means only the work starting. Selected by the engineer.
 - **2026-11-15** — `/phase new` replaces `/phase add`, so a phase is created by `new`, as a feature and an experiment are. **As the engineer stated it:** "phase add should be phase new"
 - **2026-11-15** — `/phase` has a `status` subcommand, which prints what `/feature status` and `/experiment status` print: the phases in order, the current one emphasized, and the current phase's goal. **As the engineer stated it:** "The \"/phase\" command should also have a \"status\" subcommand". What it prints was selected by the engineer.
+- **2026-11-15** — `/brainstorm` has `start` and no `new`. `/brainstorm start` creates a brainstorm and starts it, as `/feature start` does where no feature is Open. **As the engineer stated it:** "\"/brainstorm\" has start"
 
 **Implementation:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
 
@@ -37,3 +38,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:32:36 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:34 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:02 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:23:40 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:27:33 PM PT
