@@ -23,6 +23,14 @@
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-15T01-45-48Z-the-records-line-is-shown-by-a-records-command-and-its-display-is-configurable`
 
+## What happened
+
+- The engineer settled that `/records show` prints the previous reply's records line, and dropped the configurable display.
+- `/records show`, or a bare `/records`, prints the previous reply's records line again, in the same form. Where that reply wrote no record, it says so.
+- The rule a-reply-that-writes-a-record-ends-with-the-records-path says so, and the `records` skill in `foundation` hands the act to it.
+- RECORDS follows LOG in the help and the command table.
+- The automated suite passed: 72 test files.
+
 ## Confirmations
 
 - **2026-11-15** — Creation: `/feature start`, with no feature Open, so the feature was created Active.
@@ -33,3 +41,4 @@
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 7:38:40 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 7:38:41 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 7:46:43 PM PT
