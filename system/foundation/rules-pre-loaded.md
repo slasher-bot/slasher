@@ -546,7 +546,7 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 9. The durable records are the binding rules (`slasher/system/`, `slasher/local/rules/`), the items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the implementation records (`slasher/local/implementations/`).
 10. The record points to the durable records throughout. It does not restate them.
 11. The record keeps the reasoning behind each fork in the work. It ties the durable records together as a narrative and keeps the arc.
-12. Write a record at the close of a work session that produced substantial dialogue, decisions, or discovery worth keeping as a narrative.
+12. Write a record at the end of a work session that produced substantial dialogue, decisions, or discovery worth keeping as a narrative.
 13. Write it when the engineer asks. Or propose it when the agent sees the work session has built up such work.
 14. A trivial work session needs no record. A record is not required for every session.
 15. Also propose it when the agent concludes a feature, an experiment, or a phase, or takes an item to Completed, Realized, Abandoned, or Superseded.
