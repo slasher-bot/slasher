@@ -3,6 +3,8 @@ PHASE
   its own sub branch.
 
   /phase, /phase current           The current phase, its goal, and its branch
+  /phase status                    The phases, the current one emphasized,
+                                   and its goal
   /phase new <name>                Create a phase after the last
   /phase start                     Start the next phase
   /phase complete                  -> Completed, merged into the implementation
