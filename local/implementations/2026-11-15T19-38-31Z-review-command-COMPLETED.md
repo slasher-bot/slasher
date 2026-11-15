@@ -67,6 +67,7 @@
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from suggest-command to review-command, selected by the engineer. The branch was `feature/worktree/suggest-command`.
 - **2026-11-15** — Conclusion: Completed, with the merge to master, selected by the engineer. The work states no forecast.
+- **2026-11-15** — Branch deletion and worktree removal: selected by the engineer.
 
 ---
 
@@ -87,3 +88,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 12:25:38 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:31:11 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:32:30 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:34:45 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 1:21:57 PM PT
