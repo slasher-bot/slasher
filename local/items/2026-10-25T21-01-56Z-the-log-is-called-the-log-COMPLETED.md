@@ -1,6 +1,6 @@
 # The log is called the log, not the decision log
 
-- **State:** Done
+- **State:** Completed
 - **Tags:** [work]
 
 **The record under `waytide/local/logs/log/` is named "the log" wherever a rule or document names it, and no longer "the decision log".** Its entries record more than decisions. An item recorded, a batch compressed, and a rule suspended each take an entry, and none of them is a decision. The engineer's own decisions are now marked within the log by the `[decision]` tag, so "decision log" names the whole log after one tag in it.
@@ -23,3 +23,4 @@ As the engineer first stated it: "Work item: It's just a log, rather than a deci
 Authored by Scott Bellware on Sun Oct 25 2026 at 2:01:56 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 2:42:24 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:09 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT

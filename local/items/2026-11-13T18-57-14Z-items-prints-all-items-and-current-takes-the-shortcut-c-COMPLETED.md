@@ -1,6 +1,6 @@
 # `/items` prints all items, `/items current` prints the current ones, and `/current` takes the shortcut `/c`
 
-- **State:** Done
+- **State:** Completed
 - **Tags:** [work]
 
 - `/items` prints every item, whatever its state.
@@ -16,3 +16,4 @@
 Authored by Scott Bellware on Fri Nov 13 2026 at 10:57:14 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:39:32 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:58:19 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT

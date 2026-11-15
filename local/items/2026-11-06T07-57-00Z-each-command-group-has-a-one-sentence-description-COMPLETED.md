@@ -1,6 +1,6 @@
 # Each command group has a one-sentence description
 
-- **State:** Done
+- **State:** Completed
 - **Tags:** [work]
 
 **Each command group gets a short, one-sentence description of what its commands are for.** The sentence goes in two places:
@@ -54,3 +54,4 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 11:57:51 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:01:18 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:30:35 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 1:03:42 AM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT
