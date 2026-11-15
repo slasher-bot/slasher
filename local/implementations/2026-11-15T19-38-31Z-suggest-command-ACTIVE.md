@@ -31,6 +31,8 @@
 
 - **2026-11-15** — The display, selected by the engineer: each numbered suggestion has a short heading, then the original text, the suggested text, and a one-line reason, each on its own line.
 
+- **2026-11-15** — Pending suggestions, selected by the engineer: when `/suggest` runs again, the new suggestions are added after the ones still pending, and the numbering continues. No pending suggestion is lost.
+
 ## Confirmations
 
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
@@ -48,3 +50,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:40:02 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:42:08 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:45:39 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:48:02 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:53:29 AM PT
