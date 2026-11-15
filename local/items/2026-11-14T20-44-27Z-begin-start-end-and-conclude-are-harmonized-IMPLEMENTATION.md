@@ -25,6 +25,7 @@
 - **2026-11-15** — `/phase` has a `status` subcommand, which prints what `/feature status` and `/experiment status` print: the phases in order, the current one emphasized, and the current phase's goal. **As the engineer stated it:** "The \"/phase\" command should also have a \"status\" subcommand". What it prints was selected by the engineer.
 - **2026-11-15** — `/brainstorm` has `start` and no `new`. `/brainstorm start` creates a brainstorm and starts it, as `/feature start` does where no feature is Open. **As the engineer stated it:** "\"/brainstorm\" has start"
 - **2026-11-15** — A work session *ends*. The rules say a work session's end, not its close. **As the engineer stated it:** "The work session should be \"end\""
+- **2026-11-15** — *Conclude* replaces *finish*, as in *a piece of work concluded*. **As the engineer stated it:** "Use conclude instead of finish"
 
 **Implementation:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
 
@@ -41,3 +42,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:02 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:23:40 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:27:33 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:31:24 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:02 PM PT
