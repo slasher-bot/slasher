@@ -1,6 +1,6 @@
 ---
 name: records
-description: Print the previous reply's records line again.
+description: Print every record the previous reply wrote.
 argument-hint: "[show | help]"
 disable-model-invocation: true
 ---
