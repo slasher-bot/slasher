@@ -7,11 +7,11 @@
 
 **As the engineer stated it:** "/edit" command. It tells the agent to suggest edits to content. "/edit accept" tells the agent to incorporate the suggest edits. "/edit reject" tells the agent to not incorporate the agent's sugested edits.
 
-**Settled 2026-11-15:** the command is `/review`, not `/suggest`: `/review`, `/review accept`, and `/review reject`. **As the engineer stated it:** Change "/suggest" to "/review"
-
 **Implementation:** `2026-11-15T19-38-31Z-review-command`
 
 **Settled 2026-11-15:** the command is `/suggest`, not `/edit`: `/suggest`, `/suggest accept`, and `/suggest reject`. **As the engineer stated it:** It should be "/suggest" rather than "/edit"
+
+**Settled 2026-11-15:** the command is `/review`, not `/suggest`: `/review`, `/review accept`, and `/review reject`. **As the engineer stated it:** Change "/suggest" to "/review"
 
 ---
 
