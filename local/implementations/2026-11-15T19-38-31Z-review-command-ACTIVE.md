@@ -37,6 +37,8 @@
 
 - **2026-11-15** — The command is `/review`, not `/suggest`: `/review`, `/review accept`, and `/review reject`. Every earlier decision holds under the new name. Claude Code's built-in `/review` may shadow it, which is checked when the skill is written. **As the engineer stated it:** Change "/suggest" to "/review"
 
+- **2026-11-15** — The package, selected by the engineer: a new `content` package, at `system/content/`, carries the `/review` command's rule and skill.
+
 ## Confirmations
 
 - **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
@@ -59,3 +61,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 11:48:02 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:53:29 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:55:05 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:56:21 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:57:48 AM PT
