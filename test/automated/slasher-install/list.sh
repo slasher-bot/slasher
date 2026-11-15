@@ -24,7 +24,7 @@ trap 'rm -rf "$project"' EXIT
 control_listing_text() {
   cat <<'LISTING'
 default: foundation language testing git versioning design-by-efferent journal
-content: foundation language git versioning journal
+content: foundation language git versioning journal prose
 other: imap smtp ext/ruby-lang
 LISTING
 }
