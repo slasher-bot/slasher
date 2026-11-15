@@ -8,8 +8,8 @@ Source: system/design-by-efferent/source/advance-one-outcome-at-a-time-and-stop-
 4. Do not batch-generate multiple test files in one pass.
 5. Generate one outcome's test, then stop at its gate.
 6. Proceed only on the human's go. Under unattended work, the loop does not stop at the gates. It still advances one outcome at a time.
-7. Finishing the work means naming the test.
-8. A test left with an empty, unnamed outcome context is unfinished.
+7. Concluding the work means naming the test.
+8. A test left with an empty, unnamed outcome context is not concluded.
 9. The closing step ascribes the test's name.
 10. Name one test at a time.
 11. At the naming gate, present candidate outcome-context names, as every hinge presents its candidates. The AI does not name the test on its own.
@@ -18,7 +18,7 @@ Source: system/design-by-efferent/source/advance-one-outcome-at-a-time-and-stop-
 14. After each test, stop at each of its hinges (see the the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rule) and wait.
 15. Under unattended work, chosen at the start, the agent decides each hinge itself and does not stop (see the attended-or-unattended-is-chosen-when-the-work-is-created rule).
 16. Never write several test files at once, in either mode.
-17. To finish an unnamed test, present candidate names as options through the selection UI.
+17. To conclude an unnamed test, present candidate names as options through the selection UI.
 18. Then apply the name the human chose or dictated.
 
 # DBE is a design tool, not a testing ritual

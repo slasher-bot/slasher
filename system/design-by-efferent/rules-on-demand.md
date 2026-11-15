@@ -377,7 +377,7 @@ end
 12. Name the test only at the end of the feature.
 13. Add the outcome `context` each observation establishes at that time, giving the test-structure rule's "one inner `context` per outcome" structure.
 14. This naming step is the seam where the next feature starts.
-15. A feature in progress carries bare unnamed asserts. A finished feature carries named outcome contexts.
+15. A feature in progress carries bare unnamed asserts. A concluded feature carries named outcome contexts.
 16. The first gate's hinge is the actuation's shape and the truth of the one observation, not how outcomes are named or divided.
 17. Before writing the file, settle the actuation, the observation, and the controls.
 18. Do not write the implementation in the first turn.

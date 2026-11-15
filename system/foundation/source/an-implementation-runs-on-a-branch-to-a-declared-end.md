@@ -110,7 +110,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **Do not offer to conclude, affirm, refute, or merge it.** Not as a next step, not as an option among others, and not as a precondition for something else. The precondition form is the one that slips through: *this cannot be published until it merges* states a true fact and points at the ending. Report what is settled and what is open, and stop there.
 
-**The length of work with a forecast is the engineer's judgment** and is not readable from how much work the branch holds. An agent that has just finished a stretch of work sees a natural stopping point where the engineer sees a question still open. The prompt would arrive at the moment the agent's view is narrowest.
+**The length of work with a forecast is the engineer's judgment** and is not readable from how much work the branch holds. An agent that has just concluded a stretch of work sees a natural stopping point where the engineer sees a question still open. The prompt would arrive at the moment the agent's view is narrowest.
 
 **This does not reach work without a forecast**, which has no verdict to press toward and whose completion is the ordinary conclusion of main-line work.
 
@@ -313,8 +313,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-14, revised: `start` creates an implementation Active where none is in place, as points 1 and 15 of the branch; not re-checked
 - 2026-11-14, revised: the opening questions are asked when the implementation is created, not at the start; not re-checked
 - 2026-11-15, revised: a phase is created by `/phase new`, where it was added, as point 3 of the phases; not re-checked
+- 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 this rule said *finish* where it now says *conclude*. The begin, start, end, conclude work item settled that *conclude* replaces *finish*.
 
 Until Sun Nov 15 2026 a phase was added, by `/phase add`. The begin, start, end, conclude work item settled `/phase new`, so a phase is created by `new`, as a feature and an experiment are.
 
@@ -418,3 +421,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:56 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:11 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT

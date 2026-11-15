@@ -1017,7 +1017,7 @@ Trigger: When the engineer types `/estimate-confidence` or `/%`, or asks for the
 
 **Trigger:** When the engineer types `/estimate-confidence` or `/%`, or asks for the agent's confidence of proceeding unattended
 
-**`/estimate-confidence` gives the agent's confidence of finishing the work under way on its own, from where the work stands.** `/%` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
+**`/estimate-confidence` gives the agent's confidence of concluding the work under way on its own, from where the work stands.** `/%` is its alias. The work is the one the conversation is on, found as `/next?` finds it. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
 
 **Give five figures, each the agent's own estimate for this work, made when the command is typed.** Each figure is followed by its fixed sentence, in parentheses:
 
@@ -1456,7 +1456,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why. `[brainstorm]` is the points of a brainstorm begun with no kind, reframed, under the brainstorming rule.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
 26. An item may carry two optional lines, `**Waits for:**` and `**Priority:**`, and most items carry neither.
-27. `**Waits for:**` states what must finish before the item is actionable, and nothing more.
+27. `**Waits for:**` states what must conclude before the item is actionable, and nothing more.
 28. `**Priority:** N`, written as `- **Priority:** 3`, ranks the item from 1 to N, contiguous, one item to a number.
 29. Rank 1 is worked next among the actionable items.
 30. Ranking an item renumbers those below it. The several files that changes are the accepted cost.
@@ -1513,7 +1513,7 @@ Trigger: When writing a log entry, especially one recording abandoned work
 3. Write no reason that was not given. An agent's reading of why the engineer stopped is not the engineer's reason.
 4. Say plainly that nothing merged.
 5. Say plainly where the work was.
-6. Do not carry the unfinished work: not the unexecuted plan, the unrun increments, or the unbuilt design.
+6. Do not carry the work that was not concluded: not the unexecuted plan, the unrun increments, or the unbuilt design.
 7. Where an entry needs more than a line, it takes a body, as the the-log-holds-one-file-per-entry-with-a-one-line-title rule describes.
 
 ## Why the mood is not enough

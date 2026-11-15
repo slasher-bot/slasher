@@ -516,7 +516,7 @@ Source: system/foundation/source/the-migration-directory-holds-the-plans-for-mov
 9. An item sequences a build, against something this repository settled.
 10. A migration plan sequences a change to where existing content lives, or to the form it is written in. Across repositories, its increments land in two.
 11. Its order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed.
-12. Across repositories, the plan is not finished when this repository's part is done.
+12. Across repositories, the plan is not concluded when this repository's part is done.
 13. A migration may realize a settled item, or be mechanical enough to need none.
 14. A migration record is one document, not entries that accrue like the contemporaneous, historical records under `logs/`.
 15. Revise the record while the migration runs.

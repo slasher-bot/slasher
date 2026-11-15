@@ -37,7 +37,7 @@
 
 ## Two optional lines any item may carry
 
-**`**Waits for:**` states what must finish before the item is actionable.** That is the whole of what it does. It does not say what to work next.
+**`**Waits for:**` states what must conclude before the item is actionable.** That is the whole of what it does. It does not say what to work next.
 
 **`**Priority:**` holds a rank** — `- **Priority:** 3`. Ranks are 1 through N, contiguous, one item per number, and rank 1 is worked next among the items that are actionable.
 
@@ -179,7 +179,7 @@ Change the state as the item reaches another word, renaming the file with it, an
 24. `[problem]` is something wrong or in the way, recorded without a solution named. `[mistake]` is an act that should have gone otherwise, recorded with what went wrong and why. `[brainstorm]` is the points of a brainstorm begun with no kind, reframed, under the brainstorming rule.
 25. A kind takes the states every item takes, except where its own rule says otherwise.
 26. An item may carry two optional lines, `**Waits for:**` and `**Priority:**`, and most items carry neither.
-27. `**Waits for:**` states what must finish before the item is actionable, and nothing more.
+27. `**Waits for:**` states what must conclude before the item is actionable, and nothing more.
 28. `**Priority:** N`, written as `- **Priority:** 3`, ranks the item from 1 to N, contiguous, one item to a number.
 29. Rank 1 is worked next among the actionable items.
 30. Ranking an item renumbers those below it. The several files that changes are the accepted cost.
@@ -247,8 +247,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-13, revised: an item in Implementation is a current item; not re-checked
 - 2026-11-13, revised: `[brainstorm]` is a kind that starts and stays Recorded; checked with the brainstorming rule, see its Compression section
 - 2026-11-14, revised: a work item and a rework item conclude Completed, not Done, as the table and points 52 and 53; not re-checked
+- 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 this rule said *finish* where it now says *conclude*. The begin, start, end, conclude work item settled that *conclude* replaces *finish*.
 
 Until Sat Nov 14 2026 a work item and a rework item concluded `Done`, and no kind of item concluded Completed. The begin, start, end, conclude work item settled Completed, the word a feature and an experiment conclude with.
 
@@ -364,3 +367,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 6:44:35 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:34 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT

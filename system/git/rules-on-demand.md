@@ -14,7 +14,7 @@ Trigger: When writing a commit message
 | `Log: mark Task 9 done (already passing)` | `Log: Task 9 is done (already passing)` |
 | `mark the predicate task complete` | `the predicate task is done` |
 
-5. Phrase finished work as the task being done. Say "Task N is done" or "X is complete".
+5. Phrase concluded work as the task being done. Say "Task N is done" or "X is complete".
 6. This applies to the commit subject and the commit body.
 7. Prose addressed to the user follows the same preference.
 8. In prose addressed to the user, state the plain fact. Do not describe the act of marking it.

@@ -86,7 +86,7 @@ end
 12. Name the test only at the end of the feature.
 13. Add the outcome `context` each observation establishes at that time, giving the test-structure rule's "one inner `context` per outcome" structure.
 14. This naming step is the seam where the next feature starts.
-15. A feature in progress carries bare unnamed asserts. A finished feature carries named outcome contexts.
+15. A feature in progress carries bare unnamed asserts. A concluded feature carries named outcome contexts.
 16. The first gate's hinge is the actuation's shape and the truth of the one observation, not how outcomes are named or divided.
 17. Before writing the file, settle the actuation, the observation, and the controls.
 18. Do not write the implementation in the first turn.
@@ -104,8 +104,11 @@ end
 - 2026-10-24, compressed: compression 0.19, change 0.52, solubility 44 → 59, clarity 0.61 → 0.76, 24 directives, 24 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 59 → 61, clarity 0.76 → 0.76; checked: 21 directives, 21 kept, 0 less precise, 0 lost
 - 2026-11-14, revised: *start* replaces *begin*; not re-checked
+- 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 this rule said *finish* where it now says *conclude*. The begin, start, end, conclude work item settled that *conclude* replaces *finish*.
 
 Until Sat Nov 14 2026 this rule said *begin* where it now says *start*. The begin, start, end, conclude work item settled *start* and *end* as the standard words for beginning and ending work.
 
@@ -141,3 +144,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 3:45:31 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:08 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:17 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
