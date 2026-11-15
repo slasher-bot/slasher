@@ -68,7 +68,7 @@ Source: system/design-by-efferent/source/test-first-is-the-default-so-never-ask-
 3. Do not otherwise put the test-first decision to the human.
 4. The answer is always yes unless told otherwise.
 5. If the human wants a task started another way, they will give a different instruction.
-6. When the next task is clear, begin it test-first without asking.
+6. When the next task is clear, start it test-first without asking.
 7. You may offer the next-task selection if useful.
 8. Never frame the next-task selection as a test-first/not question.
 9. Deviate from test-first only on an explicit instruction to do so.

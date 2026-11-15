@@ -343,7 +343,7 @@ Trigger: When starting a feature by writing its first test file
 
 1. Start a feature by writing a test file, not implementation.
 2. The first turn produces that test file and nothing more.
-3. The first turn begins at the first gate, where responsibility first transfers to the human.
+3. The first turn starts at the first gate, where responsibility first transfers to the human.
 4. The first gate puts down only the actuation and an unnamed assert.
 5. Bind the actuation to an explaining variable.
 6. State any inputs just above the actuation, via controls or literals.
@@ -376,7 +376,7 @@ end
 11. Once the shell is implemented, leave the test unnamed through the rest of the feature's development.
 12. Name the test only at the end of the feature.
 13. Add the outcome `context` each observation establishes at that time, giving the test-structure rule's "one inner `context` per outcome" structure.
-14. This naming step is the seam where the next feature begins.
+14. This naming step is the seam where the next feature starts.
 15. A feature in progress carries bare unnamed asserts. A finished feature carries named outcome contexts.
 16. The first gate's hinge is the actuation's shape and the truth of the one observation, not how outcomes are named or divided.
 17. Before writing the file, settle the actuation, the observation, and the controls.

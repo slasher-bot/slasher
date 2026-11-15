@@ -549,7 +549,7 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 12. Write a record at the close of a work session that produced substantial dialogue, decisions, or discovery worth keeping as a narrative.
 13. Write it when the engineer asks. Or propose it when the agent sees the work session has built up such work.
 14. A trivial work session needs no record. A record is not required for every session.
-15. Also propose it when the agent concludes a feature, an experiment, or a phase, or takes an item to Done, Realized, Abandoned, or Superseded.
+15. Also propose it when the agent concludes a feature, an experiment, or a phase, or takes an item to Completed, Realized, Abandoned, or Superseded.
 16. When the agent raises the question of recording, it asks through the AskUserQuestion selection UI, not as a prose question. The prompt offers three options, each naming a **work session record**: **write a new work session record**, **amend the previous work session record**, or **don't write a work session record**. The amend option names the previous record in a few words.
 17. The engineer's selection decides.
 18. The prompt says "work session", never the shortened "session".
@@ -561,7 +561,7 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 1. Title the record `# Work Session — <name> (<date>)`.
 2. Records written before 2026-08-03 are titled `# Session — …`. Keep those titles. Do not retitle them.
 3. The parts appear in the order below.
-4. **Opening summary**: a short paragraph naming what the work session was, as its arc. For example, it began as X, became Y, and ended with Z.
+4. **Opening summary**: a short paragraph naming what the work session was, as its arc. For example, it started as X, became Y, and ended with Z.
 5. **Framing note**: states that this is the communicable record, or guided tour. It states that the durable records it points to are the source of truth.
 6. **Chronological body**: numbered sections (`## 1.`, `## 2.`, …) walking the work session in order.
 7. Each section states what was asked and concluded at that step.

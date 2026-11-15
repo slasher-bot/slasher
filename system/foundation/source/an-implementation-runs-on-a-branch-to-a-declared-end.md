@@ -78,9 +78,9 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 **At the start, ask whether the work states a forecast, beside the working location and the participation, and record the answer as a confirmation.** A forecast is what is expected to happen, stated before the work. Its two options read *No forecast*, then *State a forecast*, in that order. Where the engineer states one, write it in the record. Where the working location is the current branch, do not ask: work there states none. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 
-**At the end, ask the verdict question of work with a forecast, and of no other work.** It is asked when the work is complete, through the selection interface, and recorded as a confirmation. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it Affirmed, Refuted, or Inconclusive instead.
+**At the end, ask the verdict question of work with a forecast, and of no other work.** It is asked when the work is complete, through the selection interface, and recorded as a confirmation. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it Affirmed, Refuted, or Inconclusive instead.
 
-**A third option reads *What's a verdict?*** Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed. The question is then asked again, with the same three options.
+**A third option reads *What's a verdict?*** Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed. The question is then asked again, with the same three options.
 
 **The verdict waits for the end because what the work shows is known only then.** A forecast keeps the verdict possible without deciding it.
 
@@ -231,8 +231,8 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
-6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
-7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed.
+6. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
+7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed.
 8. Then ask the question again, with the same three options.
 
 ## The end
@@ -309,8 +309,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-09, checked: 103 directives, 102 kept, 1 less precise, 0 lost. Left less precise: that the verdict question goes through the selection interface, which its fixed options imply
 - 2026-11-13, revised: the first record is committed on the upstream branch before the implementation branch is created, and the branch's copy takes the later updates; the new points checked: 15 directives, 11 kept, 2 less precise, 2 lost, 2 repairs; re-checked: 9 directives, 7 kept, 1 less precise, 1 lost, 2 repairs, not re-checked after. Left lost: that the upstream branch shows the implementation as current while it runs, a reason, which stays in the body
 - 2026-11-14, revised: the status line's second line, not the session-start notice, answers a worktree's lack of trace; checked: 158 directives, 157 kept, 1 less precise, 0 lost, 1 repair, naming the branch and any worktree; re-checked: 158 directives, 158 kept, 0 less precise, 0 lost
+- 2026-11-14, revised: work *concludes* in a state, where it *ended* in one, as point 6 of the forecast and the verdict; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 this rule said work *ends* Completed, Affirmed, Refuted, or Inconclusive, where it now says *concludes*. The begin, start, end, conclude work item settled *conclude* as the word for reaching a final state.
 
 Until Sat Nov 14 2026 the session-start notice reported every implementation that had not concluded, and this rule named it as what answers a worktree's lack of trace. The engineer removed that line from the notice.
 
@@ -402,3 +405,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:01:01 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:37:42 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT

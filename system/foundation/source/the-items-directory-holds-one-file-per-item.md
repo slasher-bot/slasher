@@ -23,7 +23,7 @@
 - **`[idea]`** — a thought about what the work could be, proposed and not yet settled.
 - **`[improvement]`** — a proposed change to something that already exists, not yet settled. An idea proposes something new. An improvement concludes Realized when the change exists.
 - **`[correction]`** — a proposed change that puts right something that exists and is wrong, such as a false statement in a rule. An improvement changes something that is not wrong. A correction carries `[correction]`, `[work]`, and `[rework]` together, and concludes `Corrected` when the fix exists.
-- **`[rework]`** — work to redo something already produced that turned out wrong. A rework item carries `[rework]`, `[work]`, and `[correction]` together: it is a correction, and a piece of work to be done. As a work item it concludes `Done`. A correction and a rework item carry the same three tags. The first tag names which was asked for, and decides how the item concludes.
+- **`[rework]`** — work to redo something already produced that turned out wrong. A rework item carries `[rework]`, `[work]`, and `[correction]` together: it is a correction, and a piece of work to be done. As a work item it concludes `Completed`. A correction and a rework item carry the same three tags. The first tag names which was asked for, and decides how the item concludes.
 - **`[design]`** — settled direction, recorded as dated **Settled** resolutions.
 - **`[plan]`** — a sequence of work, with checkbox tasks stating behavior and no code.
 - **`[aspiration]`** — an outcome hoped for, written only where an aspiration was asked for.
@@ -69,7 +69,7 @@ Every item carries a `**State:**` line, from the moment it is written. **Each ki
 |---|---|---|
 | Idea, improvement, plan | Open | Realized |
 | Goal, aspiration | Recorded | Realized, only when the engineer says so |
-| Work item, rework | Open | Done |
+| Work item, rework | Open | Completed |
 | Correction, mistake | Open | Corrected |
 | Problem | Open | Resolved |
 | Design | Recorded | does not change state |
@@ -92,10 +92,9 @@ A kind the table does not name starts Open and concludes Realized, as an idea do
 **The concluding states, by kind:**
 
 - **Realized** — what the item describes exists. A goal or an aspiration is Realized only when the engineer says so.
-- **Done** — the work is done. A work item and a rework item take it.
 - **Corrected** — what was wrong is put right. A correction and a mistake take it.
 - **Resolved** — the problem no longer stands. A problem takes it.
-- **Completed** — the work is complete. Items take it, though no kind of item concludes with it yet.
+- **Completed** — the work is complete. A work item and a rework item take it.
 
 **The states every item that changes state takes:**
 
@@ -114,7 +113,7 @@ A kind the table does not name starts Open and concludes Realized, as an idea do
 
 **Any state but Open, Active, and Recorded can be taken back**, by resume. That includes every concluding state, and Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned. Resume returns the item to Open or to Active, as the engineer's words say. Where they do not say which, the agent asks.
 
-**An item that carries two kind tags concludes as the kind its tags decide.** An item tagged both `[idea]` and `[design]` concludes as an idea. A correction and a rework item carry the same three tags, and the first tag decides: a correction concludes `Corrected`, and a rework item `Done`.
+**An item that carries two kind tags concludes as the kind its tags decide.** An item tagged both `[idea]` and `[design]` concludes as an idea. A correction and a rework item carry the same three tags, and the first tag decides: a correction concludes `Corrected`, and a rework item `Completed`.
 
 **An item whose work is done on an experiment's branch concludes when the work is done**, in its kind's concluding state. It does not wait for the experiment to merge. The item names the branch the work is on.
 
@@ -126,13 +125,13 @@ A kind the table does not name starts Open and concludes Realized, as an idea do
 
 ## A work item
 
-**An item tagged `[work]` is a piece of work to be done, and it concludes as `Done`.** This rule names the tag and says what follows.
+**An item tagged `[work]` is a piece of work to be done, and it concludes as `Completed`.** This rule names the tag and says what follows.
 
-- **Done** — the work is done. It takes the place of `Realized`, which a work item does not take.
+- **Completed** — the work is complete. It takes the place of `Realized`, which a work item does not take.
 - **A work item takes the states every item that changes state takes**, as the list above gives.
-- **A rework item is a work item**, and concludes `Done`. **A correction carries `[work]` too**, and concludes `Corrected`, since its first tag decides.
+- **A rework item is a work item**, and concludes `Completed`. **A correction carries `[work]` too**, and concludes `Corrected`, since its first tag decides.
 
-**Why:** a work item describes something to do rather than something to exist, so *realized* misstates its end. *Done* says what happened to it.
+**Why:** a work item describes something to do rather than something to exist, so *realized* misstates its end. *Completed* says what happened to it, and it is the word a feature and an experiment conclude with too.
 
 ## Supersession
 
@@ -205,8 +204,8 @@ Change the state as the item reaches another word, renaming the file with it, an
 49. At each change of state, change the `**State:**` line and rename the file.
 50. At each change of state, write the log entry.
 51. An item tagged `[work]` is a piece of work to be done.
-52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — items take it, and no kind concludes with it yet.
-53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
+52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — the work is complete. A work item and a rework item conclude Completed.
+53. A work item and a rework item conclude `Completed`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
 54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
 55. Complete concludes an item in its kind's concluding state.
 56. Supersede an item rather than rewrite it.
@@ -247,8 +246,11 @@ Change the state as the item reaches another word, renaming the file with it, an
 - 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 - 2026-11-13, revised: an item in Implementation is a current item; not re-checked
 - 2026-11-13, revised: `[brainstorm]` is a kind that starts and stays Recorded; checked with the brainstorming rule, see its Compression section
+- 2026-11-14, revised: a work item and a rework item conclude Completed, not Done, as the table and points 52 and 53; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 a work item and a rework item concluded `Done`, and no kind of item concluded Completed. The begin, start, end, conclude work item settled Completed, the word a feature and an experiment conclude with.
 
 Until Fri Nov 13 2026 there was no brainstorm kind of item.
 
@@ -361,3 +363,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 6:44:35 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:34 PM PT

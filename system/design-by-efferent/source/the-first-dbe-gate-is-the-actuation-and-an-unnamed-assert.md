@@ -2,7 +2,7 @@
 
 **Trigger:** When starting a feature by writing its first test file
 
-Start a feature by writing a test file, not implementation. The first turn produces that file and nothing more. It begins at the **first gate**, where responsibility first transfers to the human, and the file is assembled once the three test hinges are accepted — not before them, unless the engineer chose unattended work at the start.
+Start a feature by writing a test file, not implementation. The first turn produces that file and nothing more. It starts at the **first gate**, where responsibility first transfers to the human, and the file is assembled once the three test hinges are accepted — not before them, unless the engineer chose unattended work at the start.
 
 What the first gate puts down is small and fixed:
 
@@ -36,13 +36,13 @@ The assertion is made against an **explaining variable** — a named local whose
 
 **Naming the outcome is deferred to the end.** The **shell of the cradle** is the actuation and its unnamed assert. Once it is implemented, the test is left unnamed through the rest of the feature's development. Only **at the end** does the work come back and **name the test**. The outcome `context` each observation establishes is added then. That is the "one inner `context` per outcome" structure of the test-structure rule.
 
-In practice this closing step is the seam where the next feature begins. So a feature in progress carries bare unnamed asserts, and a feature left behind carries named outcome contexts. The first gate deliberately withholds that naming, so its hinge stays the shape of the actuation and the truth of the one observation. It is not about how outcomes are named or carved up.
+In practice this closing step is the seam where the next feature starts. So a feature in progress carries bare unnamed asserts, and a feature left behind carries named outcome contexts. The first gate deliberately withholds that naming, so its hinge stays the shape of the actuation and the truth of the one observation. It is not about how outcomes are named or carved up.
 
 **Why:** The first turn is where the unit is designed from the efferent side. The actuation is the first efferent reference, and writing it before any implementation forces the interface to be designed from the use site. See the DBE-as-design-tool rule.
 
 Keeping the first gate to the actuation and a single unnamed assert keeps that gate's hinge undiluted. It is the actuation's shape and the observed truth, with no premature commitment to an outcome taxonomy. Asserting against an explaining variable keeps the test reading as a statement of the concern rather than a mechanical check. Binding it to the actuation result keeps the efferent view in the frame.
 
-**How to apply:** When beginning a feature, settle the actuation, the observation, and the controls, then write only the test file this turn. Nest one `context` per folder segment. Actuate the unit under test and bind the result to an explaining variable. Write one bare unnamed `test` block asserting that variable. Do not name an inner outcome context yet. Do not write the implementation, and do not pause to run the inevitably-failing test.
+**How to apply:** When starting a feature, settle the actuation, the observation, and the controls, then write only the test file this turn. Nest one `context` per folder segment. Actuate the unit under test and bind the result to an explaining variable. Write one bare unnamed `test` block asserting that variable. Do not name an inner outcome context yet. Do not write the implementation, and do not pause to run the inevitably-failing test.
 
 **Acceptance is separate gates, not one.** The *content* of turn one is as above. The human accepts it in separate hinges: **actuation, then observation, then controls**. The implementation is the fourth hinge, and the naming is the fifth, at the feature's close.
 
@@ -52,7 +52,7 @@ Each is proposed and accepted before the next, per the the-hinge-cycle-is-actuat
 
 1. Start a feature by writing a test file, not implementation.
 2. The first turn produces that test file and nothing more.
-3. The first turn begins at the first gate, where responsibility first transfers to the human.
+3. The first turn starts at the first gate, where responsibility first transfers to the human.
 4. The first gate puts down only the actuation and an unnamed assert.
 5. Bind the actuation to an explaining variable.
 6. State any inputs just above the actuation, via controls or literals.
@@ -85,7 +85,7 @@ end
 11. Once the shell is implemented, leave the test unnamed through the rest of the feature's development.
 12. Name the test only at the end of the feature.
 13. Add the outcome `context` each observation establishes at that time, giving the test-structure rule's "one inner `context` per outcome" structure.
-14. This naming step is the seam where the next feature begins.
+14. This naming step is the seam where the next feature starts.
 15. A feature in progress carries bare unnamed asserts. A finished feature carries named outcome contexts.
 16. The first gate's hinge is the actuation's shape and the truth of the one observation, not how outcomes are named or divided.
 17. Before writing the file, settle the actuation, the observation, and the controls.
@@ -103,8 +103,11 @@ end
 
 - 2026-10-24, compressed: compression 0.19, change 0.52, solubility 44 → 59, clarity 0.61 → 0.76, 24 directives, 24 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 59 → 61, clarity 0.76 → 0.76; checked: 21 directives, 21 kept, 0 less precise, 0 lost
+- 2026-11-14, revised: *start* replaces *begin*; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 this rule said *begin* where it now says *start*. The begin, start, end, conclude work item settled *start* and *end* as the standard words for beginning and ending work.
 
 Until Sun Oct 25 2026 this rule was named dbe-first-turn-test-file and titled "DBE, first turn: the first gate is the actuation and an unnamed assert".
 
@@ -136,3 +139,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:33 PM PT
 Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:09 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 3:45:31 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:08 PM PT

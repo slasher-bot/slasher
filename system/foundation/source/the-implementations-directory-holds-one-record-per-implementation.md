@@ -2,7 +2,7 @@
 
 **Trigger:** When starting an experiment or feature, or writing or changing an implementation record
 
-`slasher/local/implementations/` holds **implementation records**: one file per implementation, carrying how it began, where it is being worked, and what became of it. An implementation is a bounded unit of work with a lifecycle, and the record is a persisted, dated artifact kept after it concludes.
+`slasher/local/implementations/` holds **implementation records**: one file per implementation, carrying how it started, where it is being worked, and what became of it. An implementation is a bounded unit of work with a lifecycle, and the record is a persisted, dated artifact kept after it concludes.
 
 **Two kinds, and a tag says which.** An **experiment** is tagged `[experiment]` and a **feature** is tagged `[feature]`. The tags are the ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule). **They name what the work is, and no rule reads them to decide how it runs.**
 
@@ -94,7 +94,7 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 ## Compressed
 
 1. `slasher/local/implementations/` holds implementation records, one file per implementation.
-2. A record carries how the implementation began, where it is being worked, and what became of it.
+2. A record carries how the implementation started, where it is being worked, and what became of it.
 3. An implementation is a bounded unit of work with a lifecycle.
 4. The record is a persisted, dated artifact, kept after the implementation concludes.
 5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
@@ -197,8 +197,11 @@ Write the state line as `Open` when `new` writes the record, make it `Active` wh
 - 2026-11-09, checked: 70 directives, 67 kept, 2 less precise, 1 lost, 1 repair: the affirm, refute, and inconclusive commands are named; re-checked: 70 directives, 67 kept, 2 less precise, 1 lost. The directive left lost is when the rule applies, which its Trigger line carries
 - 2026-11-13, revised: an item already on `master` takes its implementation's state changes on `master` too; not re-checked
 - 2026-11-14, revised: a Discontinued implementation is left out of the status line, not the session-start notice; checked: 147 directives, 143 kept, 4 less precise, 0 lost. Left less precise, none touched by this revision: when the rule applies, which its Trigger line carries; the Obsolete definition's cause; that the item is renamed on `master`; and why records on `master` are kept current
+- 2026-11-14, revised: *start* replaces *begin*; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 this rule said *begin* where it now says *start*. The begin, start, end, conclude work item settled *start* and *end* as the standard words for beginning and ending work.
 
 Until Sat Nov 14 2026 a Discontinued implementation was named as left out of the session-start notice, which then reported the implementations that had not concluded.
 
@@ -268,3 +271,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:19:24 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT

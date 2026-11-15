@@ -10,7 +10,7 @@ A question with a genuinely situational answer is a decision rather than a settl
 
 **Why:** Asking confirms a settled default and spends a turn on a non-decision. The human's attention belongs at the hinges, which are the actuation and the solubility verdict. It does not belong on whether to follow the method itself. See the human-in-the-loop and DBE-as-design-tool rules. Re-asking the standing default is ceremony, the same failure DBE discontinues.
 
-**How to apply:** When the next task is clear, begin it test-first without asking. Offer the next-task selection if useful, but never frame it as a test-first/not question. Deviate from test-first only on an explicit instruction to do so.
+**How to apply:** When the next task is clear, start it test-first without asking. Offer the next-task selection if useful, but never frame it as a test-first/not question. Deviate from test-first only on an explicit instruction to do so.
 
 ## Compressed
 
@@ -19,7 +19,7 @@ A question with a genuinely situational answer is a decision rather than a settl
 3. Do not otherwise put the test-first decision to the human.
 4. The answer is always yes unless told otherwise.
 5. If the human wants a task started another way, they will give a different instruction.
-6. When the next task is clear, begin it test-first without asking.
+6. When the next task is clear, start it test-first without asking.
 7. You may offer the next-task selection if useful.
 8. Never frame the next-task selection as a test-first/not question.
 9. Deviate from test-first only on an explicit instruction to do so.
@@ -38,8 +38,11 @@ A question with a genuinely situational answer is a decision rather than a settl
 - 2026-10-24, compressed: compression 0.13, change 0.43, solubility 77 → 78, clarity 0.71 → 0.70, 12 directives, 12 kept, 0 less precise, 0 lost, after 2 repairs, re-checked kept
 - 2026-10-27, re-checked: 11 directives, 11 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 78 → 82, clarity 0.70 → 0.74; checked: 8 directives, 8 kept, 0 less precise, 0 lost
+- 2026-11-14, revised: *start* replaces *begin*; not re-checked
 
 ## History
+
+Until Sat Nov 14 2026 this rule said *begin* where it now says *start*. The begin, start, end, conclude work item settled *start* and *end* as the standard words for beginning and ending work.
 
 Until Sun Oct 25 2026 this rule was named never-ask-to-start-test-first and titled "Never ask whether to start a task test-first — test-first is the default".
 
@@ -76,3 +79,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:25:53 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 4:25:02 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 7:16:55 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:08 PM PT

@@ -19,6 +19,6 @@ The engineer typed `/feature $ARGUMENTS`.
 6. **`new with phases`**: create the feature as `new` does, and ask for its phases. Load a-phase-starts-by-stating-its-goal too.
 7. **`status`**: show the feature's phases, its current phase, and that phase's goal. Load a-phase-starts-by-stating-its-goal.
 8. **A change of state**, `start`, `complete`, `affirm`, `refute`, `inconclusive`, `defer`, `suspend`, `discontinue`, `obsolete`, `supersede`, `abandon`, or `resume`: change the feature's state, as the root command of the same name does for a feature. Load an-implementation-runs-on-a-branch-to-a-declared-end and the-implementations-directory-holds-one-record-per-implementation. `affirm` is the engineer's declaration only, so the skill acts on it only when the engineer typed it.
-9. **`realize` or `done`** maps to no state a feature takes. Say so, name `complete`, which concludes a feature, and do nothing more.
+9. **`realize`** maps to no state a feature takes. Say so, name `complete`, which concludes a feature, and do nothing more.
 10. Steps 7 and 8 act on the feature the conversation is on. Where that is not clear, or more than one feature is open, ask which, through the selection interface.
 11. Any other first word is not guessed at. Say it is not one of this command's subcommands, and ask which is meant, as step 4 does.

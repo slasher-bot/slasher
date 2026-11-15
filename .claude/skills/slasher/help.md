@@ -43,9 +43,9 @@ ITEMS
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active
   /item complete, /complete        -> the kind's concluding state:
-                                   Realized, Done, Corrected, or Resolved
+                                   Realized, Completed, Corrected, or
+                                   Resolved
   /item realize, /realize          -> Realized
-  /item done, /done                -> Done ([work] and [rework] items)
   /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
   /item discontinue, /discontinue  -> Discontinued (no plan to do it)
@@ -242,7 +242,7 @@ BRAINSTORMING
   Brainstorming records points as they are said, freeform in no order, and
   organizes them when the writer is done.
 
-  /brainstorm, /brainstorm begin   Begin brainstorming
+  /brainstorm, /brainstorm start   Start brainstorming
   /brainstorm end                  End it, and organize what was said into a
                                    [brainstorm] item
   /brainstorm suspend              Suspend the brainstorm

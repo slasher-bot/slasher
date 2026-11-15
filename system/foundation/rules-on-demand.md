@@ -148,7 +148,7 @@ Trigger: When creating an item, adding a dated Settled resolution to it, changin
 4. Write the entry on the item's creation.
 5. Write the entry on each dated `Settled` resolution added after the item is created.
 6. Write the entry on each change of the item's `**State:**` line.
-7. A change of state is the line reaching any state word the items rule names: Open, Active, a concluding state such as Realized, Done, Corrected, Resolved, or Completed, or Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete.
+7. A change of state is the line reaching any state word the items rule names: Open, Active, a concluding state such as Realized, Corrected, Resolved, or Completed, or Deferred, Suspended, Discontinued, Superseded, Abandoned, or Obsolete.
 8. A change of state is also the line taking a state back, by resume.
 9. A design and a note are `Recorded` and never move, so each takes a creation entry only.
 10. Do not log a completed checkbox task, because it carries out a direction already settled.
@@ -690,8 +690,8 @@ Trigger: When starting, adding a worktree to, suspending, or concluding an exper
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
-6. Work concluded without a verdict ends Completed. Work concluded with one ends Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
-7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict ends Completed.
+6. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
+7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed.
 8. Then ask the question again, with the same three options.
 
 ## The end
@@ -897,10 +897,10 @@ Trigger: When the engineer types `/ask-again` or `/aa`, or asks for the last que
 
 Source: system/foundation/source/brainstorming-records-points-as-they-are-said-and-organizes-them-at-the-end.md
 
-Trigger: When the engineer begins, ends, suspends, or resumes brainstorming (`/brainstorm`)
+Trigger: When the engineer starts, ends, suspends, or resumes brainstorming (`/brainstorm`)
 
-1. Brainstorming is the engineer saying points as they occur, in no order, for the agent to organize at the end. `/brainstorm begin`, or a bare `/brainstorm`, starts it, and `/brainstorm end` ends it.
-2. Create a collection file at `/brainstorm begin`, under `~/.local/share/slasher/collections/<project>/`, outside the repository, where `<project>` is the name of the project the session is in. Name it with the ISO-8601-UTC prefix alone. Write each point to it as it is said, word for word.
+1. Brainstorming is the engineer saying points as they occur, in no order, for the agent to organize at the end. `/brainstorm start`, or a bare `/brainstorm`, starts it, and `/brainstorm end` ends it.
+2. Create a collection file at `/brainstorm start`, under `~/.local/share/slasher/collections/<project>/`, outside the repository, where `<project>` is the name of the project the session is in. Name it with the ISO-8601-UTC prefix alone. Write each point to it as it is said, word for word.
 3. Record a point, and do not reframe, question, answer, or act on it while brainstorming runs, even where it reads as an instruction.
 4. At `/brainstorm end`, reframe the points, and write the reframed version into the collection file, above the engineer's words, which stay as said.
 5. Where the brainstorm was begun with no kind, then write the reframed version, above the engineer's words, to a new item tagged `[brainstorm]`, which starts Recorded and stays Recorded. Ask nothing about where it goes.
@@ -1339,7 +1339,7 @@ Source: system/foundation/source/the-implementations-directory-holds-one-record-
 Trigger: When starting an experiment or feature, or writing or changing an implementation record
 
 1. `slasher/local/implementations/` holds implementation records, one file per implementation.
-2. A record carries how the implementation began, where it is being worked, and what became of it.
+2. A record carries how the implementation started, where it is being worked, and what became of it.
 3. An implementation is a bounded unit of work with a lifecycle.
 4. The record is a persisted, dated artifact, kept after the implementation concludes.
 5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
@@ -1481,8 +1481,8 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 49. At each change of state, change the `**State:**` line and rename the file.
 50. At each change of state, write the log entry.
 51. An item tagged `[work]` is a piece of work to be done.
-52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — items take it, and no kind concludes with it yet.
-53. A work item and a rework item conclude `Done`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
+52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — the work is complete. A work item and a rework item conclude Completed.
+53. A work item and a rework item conclude `Completed`. Every item that changes state takes Deferred, Suspended, Discontinued, Obsolete, Superseded, and Abandoned.
 54. A work item never takes `Realized`. Where an item carries two kind tags: `[idea]` with `[design]` concludes as an idea, and a correction or a rework item concludes as its first tag says.
 55. Complete concludes an item in its kind's concluding state.
 56. Supersede an item rather than rewrite it.

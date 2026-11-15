@@ -31,9 +31,9 @@ ITEMS
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active
   /item complete, /complete        -> the kind's concluding state:
-                                   Realized, Done, Corrected, or Resolved
+                                   Realized, Completed, Corrected, or
+                                   Resolved
   /item realize, /realize          -> Realized
-  /item done, /done                -> Done ([work] and [rework] items)
   /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
   /item discontinue, /discontinue  -> Discontinued (no plan to do it)
