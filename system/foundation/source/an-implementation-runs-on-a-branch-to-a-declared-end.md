@@ -30,7 +30,7 @@ An implementation is bounded work with a lifecycle. It runs on a branch created 
 
 ## An implementation in phases
 
-**An experiment or a feature may run in phases.** Each phase is a question or an intent of its own that serves the implementation's. The record names the phases and their order when the implementation is created, and, as each phase starts, the commit it branched from. **Whether a phase states a forecast is asked when it is added**, whatever its implementation chose, with the options the implementation's forecast question has: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work, and a phase without one states none. **A phase with a forecast is asked the verdict question when its work is complete**, with the implementation's three options. A phase without one concludes Completed, unasked. **As the engineer stated it:** chosen per phase.
+**An experiment or a feature may run in phases.** Each phase is a question or an intent of its own that serves the implementation's. The record names the phases and their order when the implementation is created, and, as each phase starts, the commit it branched from. **Whether a phase states a forecast is asked when it is created, by `/phase new`**, whatever its implementation chose, with the options the implementation's forecast question has: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work, and a phase without one states none. **A phase with a forecast is asked the verdict question when its work is complete**, with the implementation's three options. A phase without one concludes Completed, unasked. **As the engineer stated it:** chosen per phase.
 
 **As the engineer stated it:** features should have phases as well.
 
@@ -166,7 +166,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the implementation's.
 2. The record names the phases and their order when the implementation is created, and, as each phase starts, the commit it branched from.
-3. When a phase is added, ask whether it states a forecast, whatever its implementation chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the implementation's three options. A phase without a forecast is not asked.
+3. When a phase is created, by `/phase new`, ask whether it states a forecast, whatever its implementation chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the implementation's three options. A phase without a forecast is not asked.
 4. A phase's branch is the implementation's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
 5. Git refuses a slash here, because no branch can sit beneath another branch's name.
 6. A `worktree/` segment carries into each phase's name.
@@ -312,8 +312,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-14, revised: work *concludes* in a state, where it *ended* in one, as point 6 of the forecast and the verdict; not re-checked
 - 2026-11-14, revised: `start` creates an implementation Active where none is in place, as points 1 and 15 of the branch; not re-checked
 - 2026-11-14, revised: the opening questions are asked when the implementation is created, not at the start; not re-checked
+- 2026-11-15, revised: a phase is created by `/phase new`, where it was added, as point 3 of the phases; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 a phase was added, by `/phase add`. The begin, start, end, conclude work item settled `/phase new`, so a phase is created by `new`, as a feature and an experiment are.
 
 Until Sat Nov 14 2026 this rule said the opening questions were asked *at the start*, where it now says *when the implementation is created*. The begin, start, end, conclude work item settled that *start* means only the work starting.
 
@@ -414,3 +417,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:56 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:11 PM PT
