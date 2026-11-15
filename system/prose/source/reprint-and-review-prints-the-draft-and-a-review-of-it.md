@@ -20,6 +20,10 @@
 
 **How to apply:** on `/reprint-and-review` or `/rr`, find the draft, or read the file named. Print it whole and unchanged. Then give a numbered list of findings, each quoting its passage, naming what is wrong, and suggesting the change. Change nothing.
 
+## History
+
+Until Sun Nov 15 2026 this rule was in the `language` package, and `/language help` listed `/reprint-and-review` and `/rr`. The engineer moved it to the `prose` package, and `/review help` lists them.
+
 Related:
 
 - the an-answer-is-a-list-and-prose-must-justify-itself rule — the review is a numbered list, its numbers handles
@@ -28,3 +32,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 4:16:43 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 3:09:34 PM PT

@@ -10,4 +10,9 @@ REVIEW
                                    no numbers, every pending suggestion
   /review reject [<n> ...]         Drop the suggestions. With no numbers,
                                    every pending suggestion
+
+  /reprint-and-review [<file>]     Print the draft as it now stands, then a
+                                   review of it
+  /rr [<file>]                     An alias of /reprint-and-review
+
   /review help                     Print this command's help
