@@ -22,6 +22,7 @@
 - **2026-11-14** — The three resolutions above, that a feature and an experiment have `start` and no `new`, and no Open state, are reversed. A feature and an experiment keep `new`, which creates the implementation Open. `start` makes an Open implementation Active. Where no implementation is in place, `start` creates it and writes it Active. **As the engineer stated it:** "Reversal: Implementations have a new command, and they are open at that point. But if start is issued without first having an implementation in place, it starts the implementation in the active state."
 - **2026-11-14** — The rules say a feature's or an experiment's location, forecast, and attended-or-unattended questions are asked when it is created, not "at the start". *Start* means only the work starting. Selected by the engineer.
 - **2026-11-15** — `/phase new` replaces `/phase add`, so a phase is created by `new`, as a feature and an experiment are. **As the engineer stated it:** "phase add should be phase new"
+- **2026-11-15** — `/phase` has a `status` subcommand, which prints what `/feature status` and `/experiment status` print: the phases in order, the current one emphasized, and the current phase's goal. **As the engineer stated it:** "The \"/phase\" command should also have a \"status\" subcommand". What it prints was selected by the engineer.
 
 **Implementation:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
 
@@ -35,3 +36,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:25:27 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:32:36 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:34 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:02 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:23:40 PM PT
