@@ -910,36 +910,6 @@ Trigger: When the engineer starts, ends, suspends, or resumes brainstorming (`/b
 9. Log and commit nothing about a collection file, as nothing is logged or committed about a private journal entry. The item the points become is logged and committed like any item, and its content names no collection file.
 10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or write an item. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
 
-# Copy-record copies the previous reply's principal record path
-
-Source: system/foundation/source/copy-record-copies-the-previous-replys-principal-record-path.md
-
-Trigger: When the engineer types `/copy-record`, or asks for the path of the record just written to be copied
-
-**Trigger:** When the engineer types `/copy-record`, or asks for the path of the record just written to be copied
-
-**`/copy-record` copies the path of the previous reply's principal record to the clipboard.** The principal record is the record that reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. The path copied is the full, absolute path of the file as it now stands, though the records line prints it from the project root. It is copied with no dash and no backticks.
-
-**As the engineer stated it:** Add a "/copy-last-line" command that copies the last line of output to the clipboard
-
-**As the engineer later stated it:** Give the "/copy-last-line" command the alias "/cll"
-
-**As the engineer later stated it:** Proceed with both of those changes, of a record's path written in backticks, and copied without them
-
-**As the engineer later stated it:** Change "/copy-last-line" to "/copy-record". Remove the "/cll" command.
-
-**Copy it with the platform's clipboard command:** `pbcopy` on macOS, and `wl-copy` or `xclip -selection clipboard` on Linux. Copy the path without a trailing newline. Where no clipboard command is found, say so, and print the path so the engineer can copy it by hand.
-
-**Where the previous reply had more than one principal record, ask which to copy**, through the selection interface, each path an option.
-
-**Then say what was copied, in one line, with the path itself.** Copy nothing else.
-
-**Where the previous reply wrote no record, or had no principal record, say so, and copy nothing.** Where there is no previous reply, say so too.
-
-**Why:** the engineer often wants to open the record just written, or to pass its path on. Claude Code's `/copy` copies the whole of the last reply, and the record's path is the one line wanted.
-
-**How to apply:** on `/copy-record`, take the previous reply's principal record, copy its bare path with the clipboard command without a trailing newline, and report it in one line.
-
 # Dated artifacts are prefixed with an ISO 8601 UTC datetime, and system rules are not
 
 Source: system/foundation/source/dated-artifacts-are-prefixed-with-an-iso-8601-utc-datetime-and-system-rules-are-not.md
@@ -1077,30 +1047,6 @@ Trigger: When the engineer types `/next`, `/next`, or `/next?`, or asks what is 
 4. On `/next`, take the next step and nothing beyond it, then stop. Where the agent is suggesting an action, one its last response offered, that action is the next step.
 5. Follow the work the conversation is on. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
 6. `/next` does not stand in for a decision or declaration a rule leaves to the engineer, such as affirming an experiment, committing on `master`, or deleting a branch. It brings the step to that decision, and asks it as the step's rule says.
-
-# Open-record opens the previous reply's principal record
-
-Source: system/foundation/source/open-record-opens-the-previous-replys-principal-record.md
-
-Trigger: When the engineer types `/open-record`, or asks for the record just written to be opened
-
-**Trigger:** When the engineer types `/open-record`, or asks for the record just written to be opened
-
-**`/open-record` opens the previous reply's principal record in the application the system has registered for its kind of file.** The principal record is the record that reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. The record is opened by its full, absolute path, as the file now stands.
-
-**As the engineer stated it:** Create a "/open-record" command that opens the last record with the registered application
-
-**Open it with the platform's command:** `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand.
-
-**Where the previous reply had more than one principal record, ask which to open**, through the selection interface, each path an option.
-
-**Then say what was opened, in one line, with the record's path from the project root.** Open nothing else.
-
-**Where the previous reply wrote no record, or had no principal record, say so, and open nothing.** Where there is no previous reply, say so too.
-
-**Why:** the engineer often wants to read or edit the record just written. Opening it in the application the system has registered, such as an editor for markdown, saves finding the file and opening it by hand.
-
-**How to apply:** on `/open-record`, take the previous reply's principal record, open its absolute path with the platform's open command, and report it in one line.
 
 # Package refresh and install run foundation's scripts
 
@@ -1599,6 +1545,44 @@ Trigger: When the engineer types `/recent`, or asks what was recently done and w
 6. Read the log, the commits, and the records when the command is typed, never from memory. A record the status report rule hides is counted rather than listed.
 7. Head the part that gives the next step *What's next*, not *What is next*.
 8. Number the list of what was recently done from 1, not with bullets. Give the part that gives the next step bullets, not numbers.
+
+# The record command copies, prints, or opens the previous reply's principal record
+
+Source: system/foundation/source/the-record-command-copies-prints-or-opens-the-previous-replys-principal-record.md
+
+Trigger: When the engineer types `/record`, or asks for the record just written to be copied, printed, or opened
+
+**Trigger:** When the engineer types `/record`, or asks for the record just written to be copied, printed, or opened
+
+**`/record` acts on the previous reply's principal record.** The principal record is the record that reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. `/record copy` copies its path, `/record print` prints its contents, and `/record open` opens it. A bare `/record` asks which, through the selection interface.
+
+**As the engineer stated it:** Add a "/copy-last-line" command that copies the last line of output to the clipboard
+
+**As the engineer later stated it:** Give the "/copy-last-line" command the alias "/cll"
+
+**As the engineer later stated it:** Proceed with both of those changes, of a record's path written in backticks, and copied without them
+
+**As the engineer later stated it:** Change "/copy-last-line" to "/copy-record". Remove the "/cll" command.
+
+**As the engineer later stated it:** Create a "/open-record" command that opens the last record with the registered application
+
+**As the engineer later stated it:** Consolidate "/copy-record" and "/open-record" in a "/record" command, with the subcommands "copy", "print", and "open"
+
+**`/record copy` copies the record's full, absolute path to the clipboard**, as the file now stands, with no dash and no backticks. Copy it with the platform's clipboard command: `pbcopy` on macOS, and `wl-copy` or `xclip -selection clipboard` on Linux. Copy the path without a trailing newline. Where no clipboard command is found, say so, and print the path so the engineer can copy it by hand.
+
+**`/record print` prints the record's contents in the chat**, as the file now stands, under a line naming its path from the project root. Print the contents as they are, with nothing added and nothing left out.
+
+**`/record open` opens the record in the application the system has registered for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand.
+
+**After a copy or an open, say what was copied or opened, in one line, with the record's path.** Act on nothing else.
+
+**Where the previous reply had more than one principal record, ask which**, through the selection interface, each path an option.
+
+**Where the previous reply wrote no record, or had no principal record, say so, and act on nothing.** Where there is no previous reply, say so too.
+
+**Why:** the engineer often wants to pass on, read, or edit the record just written. Claude Code's `/copy` copies the whole of the last reply, and finding a file to read or open it takes a search. One command acting on the principal record saves both.
+
+**How to apply:** on `/record`, take the previous reply's principal record, and copy its path, print its contents, or open it, as the subcommand says.
 
 # The Slasher skills are delivered as a plugin named slasher
 

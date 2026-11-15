@@ -33,9 +33,11 @@ PROCESS
                                    question
   /aa                              An alias of /ask-again
 
-  /copy-record                     Copy the path of the previous reply's
+  /record copy                     Copy the path of the previous reply's
                                    principal record to the clipboard
-  /open-record                     Open the previous reply's principal
+  /record print                    Print the previous reply's principal
+                                   record
+  /record open                     Open the previous reply's principal
                                    record in its registered application
 
   /idk [<words>]                   Say "I don't know" to the agent's last
