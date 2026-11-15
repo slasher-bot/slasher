@@ -32,6 +32,7 @@
 - The 13 Done items in this project are Completed, and `install.sh` renames Done items in a consuming project. The migration record `2026-11-15T00-02-23Z-done-items-become-completed` says how.
 - The engineer settled that a feature and an experiment have `start` and no `new`, and no Open state, then reversed it. `new` still creates an implementation Open. Where no feature or experiment is Open, `start` creates one and writes it Active, in both implementation rules and in `/feature` and `/experiment`.
 - The implementation rules say the opening questions are asked when the implementation is created, not at the start. The attended rule is renamed attended-or-unattended-is-chosen-when-the-work-is-created.
+- `/phase new` replaces `/phase add`.
 - The automated suite passed: 72 test files.
 
 ## Confirmations
@@ -47,3 +48,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 3:58:41 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:04:42 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:42 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:49 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:42 PM PT
