@@ -26,6 +26,7 @@
 - **2026-11-15** — `/brainstorm` has `start` and no `new`. `/brainstorm start` creates a brainstorm and starts it, as `/feature start` does where no feature is Open. **As the engineer stated it:** "\"/brainstorm\" has start"
 - **2026-11-15** — A work session *ends*. The rules say a work session's end, not its close. **As the engineer stated it:** "The work session should be \"end\""
 - **2026-11-15** — *Conclude* replaces *finish*, as in *a piece of work concluded*. **As the engineer stated it:** "Use conclude instead of finish"
+- **2026-11-15** — Goals, aspirations, designs, notes, and brainstorms keep starting Recorded. Designs, notes, and brainstorms stay Recorded. **As the engineer stated it:** "It stays as it is"
 
 **Implementation:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
 
@@ -43,3 +44,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 5:23:40 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:27:33 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:31:24 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:02 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:41:41 PM PT
