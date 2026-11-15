@@ -2,7 +2,7 @@
 
 **Trigger:** When the engineer types `/copy-record`, or asks for the path of the record just written to be copied
 
-**`/copy-record` copies the path of the previous reply's principal record to the clipboard.** The principal record is the record that reply's operation was about, the one its *Records:* list gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. The path is copied bare, as the file now stands, with no dash and no backticks, and with `~/` in place of the home folder.
+**`/copy-record` copies the path of the previous reply's principal record to the clipboard.** The principal record is the record that reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. The path copied is the full, absolute path of the file as it now stands, though the records line prints it from the project root. It is copied with no dash and no backticks.
 
 **As the engineer stated it:** Add a "/copy-last-line" command that copies the last line of output to the clipboard
 
@@ -26,6 +26,8 @@
 
 ## History
 
+Until Sun Nov 15 2026 the path was copied with `~/` in place of the home folder.
+
 Until Sun Nov 15 2026 this rule was named copy-last-line-copies-the-last-line-of-the-previous-reply. Its command was `/copy-last-line`, with the shortcut alias `/cll`, and it copied the last line of the previous reply that was not blank.
 
 Until Fri Nov 13 2026 only a line wholly in backticks was copied without them, and a list item was copied with its dash.
@@ -45,3 +47,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 6:57:57 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 7:00:12 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 7:01:18 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:12:49 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 8:26:05 PM PT

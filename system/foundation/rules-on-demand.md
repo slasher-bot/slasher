@@ -918,7 +918,7 @@ Trigger: When the engineer types `/copy-record`, or asks for the path of the rec
 
 **Trigger:** When the engineer types `/copy-record`, or asks for the path of the record just written to be copied
 
-**`/copy-record` copies the path of the previous reply's principal record to the clipboard.** The principal record is the record that reply's operation was about, the one its *Records:* list gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. The path is copied bare, as the file now stands, with no dash and no backticks, and with `~/` in place of the home folder.
+**`/copy-record` copies the path of the previous reply's principal record to the clipboard.** The principal record is the record that reply's operation was about, the one its records line gives, as the a-reply-that-writes-a-record-ends-with-the-records-path rule has it. The path copied is the full, absolute path of the file as it now stands, though the records line prints it from the project root. It is copied with no dash and no backticks.
 
 **As the engineer stated it:** Add a "/copy-last-line" command that copies the last line of output to the clipboard
 

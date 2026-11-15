@@ -1,6 +1,6 @@
 # A reply that writes a record ends with the record's path
 
-**A reply in which the agent wrote a record ends with the path of its principal record, under the heading *Record:*, in backticks.** The principal record is the record the reply's operation is about: the item, where the operation acts on an item, the implementation record, where it acts on a feature or an experiment, the rule, where it changes a rule, and so on. The other records the reply wrote, such as its log entries, are printed only on `/records show`. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the absolute path of the file as it now stands, with its state suffix where it has one. Where the path is under the home folder, it starts with `~/` in place of the home folder, as `~/projects/checkout/slasher/local/items/…`.
+**A reply in which the agent wrote a record ends with the path of its principal record, under the heading *Record:*, in backticks.** The principal record is the record the reply's operation is about: the item, where the operation acts on an item, the implementation record, where it acts on a feature or an experiment, the rule, where it changes a rule, and so on. The other records the reply wrote, such as its log entries, are printed only on `/records show`. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the file's path from the project root, as it now stands, with its state suffix where it has one, as `slasher/local/items/…`. A path from the project root is short enough that it seldom wraps. `/copy-record` copies the absolute path.
 
 **As the engineer stated it:** After any record is written to disk, eg: item, implementation, rule, log, journal, etc, print the written file path and name to the screen. It should be the last line printed so that the user can /copy it to their clipboard, or open it in their editor.
 
@@ -16,7 +16,9 @@
 
 **As the engineer later stated it:** the whole filepath should continue to be indented as if it were a bullet. That means a soft break across a line starts the new line with the same level of indentation
 
-**One record is printed under the heading *Record:*, as a blockquote: `> ` then the path in backticks, with no dash.** The terminal shows a bar at the left in place of a bullet, and a path that wraps keeps its indent on every line. A list item is the only other form that keeps the indent, and it shows a bullet. **Two or more are printed under the heading *Records:*, each path a list item of its own, written `- ` and then the path in backticks.** The backticks make the terminal show the path in color, as a file path is usually shown. Nothing else goes on the line: no label, and no sentence. `/copy-record` copies the principal record's path without the dash and the backticks.
+**As the engineer later stated it:** The blockquote isn't right. Then, of printing each path from the project root so it seldom wraps: Let's try option #5
+
+**One record is printed under the heading *Record:*, on a line of its own, indented two spaces where a list item's dash would stand, then the path in backticks, with no dash.** The indent is two non-breaking spaces, since the terminal's markdown drops ordinary leading spaces. A path that wraps starts its next line at the left edge, which the short path makes rare. **Two or more are printed under the heading *Records:*, each path a list item of its own, written `- ` and then the path in backticks.** The backticks make the terminal show the path in color, as a file path is usually shown. Nothing else goes on the line: no label, and no sentence. `/copy-record` copies the principal record's path without the dash and the backticks.
 
 **As the engineer later stated it:** Instead of proactively printing out the filepaths of the records written after an operation, only print them if the records command is issued. However, the principal record should always be printed. The principal record is the one that is the subject of the operation, ie: an item is written if the operation operates on an item, etc.
 
@@ -24,7 +26,7 @@
 
 **A record the agent did not write is not listed.** A log entry a hook writes, such as the one for a decision put through the selection interface, is the hook's.
 
-**A record written in a worktree is listed by the worktree's path**, since that is where the file is until the work merges.
+**A record written in a worktree is listed by its path from the project root through the worktree**, as `../checkout-feature-worktree-receipt/slasher/local/…`, since that is where the file is until the work merges.
 
 **A reply that wrote no record ends as it otherwise would.**
 
@@ -38,12 +40,12 @@
 
 ## Compressed
 
-1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Record:*, then the full, absolute path of its principal record, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Record:*, then the path of its principal record from the project root, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. The path carries the state suffix where the record has one. `/copy-record` copies the absolute path.
 2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
-3. Write one record under *Record:*, as a blockquote, `> ` then the path in backticks, with no dash. Write two or more under *Records:*, each a list item, `- ` and then the path in backticks. The backticks make the terminal show the path in color. Put nothing else on the line: no label, and no sentence.
+3. Write one record under *Record:*, indented two non-breaking spaces, with no dash, then the path in backticks. Write two or more under *Records:*, each a list item, `- ` and then the path in backticks. The backticks make the terminal show the path in color. Put nothing else on the line: no label, and no sentence.
 4. Where the operation is about more than one record, list each, each path its own list item. List a renamed record by its new path. Where no record written is the subject of the operation, print no records line.
 5. Do not list a record the agent did not write, such as a log entry a hook writes.
-6. List a record written in a worktree by the worktree's path.
+6. List a record written in a worktree by its path from the project root through the worktree.
 7. A reply that wrote no record ends as it otherwise would.
 8. `/records show`, or a bare `/records`, prints every record the previous reply wrote, in the same form, each path as the file now stands, the principal record last, after its log entries and any other record written beside it. Where the previous reply wrote no record, say so, and print no list. Its own reply carries no records line.
 
@@ -59,8 +61,11 @@
 - 2026-11-15, revised: `/copy-record` replaces `/copy-last-line`, a body sentence only; not re-checked
 - 2026-11-15, revised: one record is printed under *Record:*, indented, with no dash, as points 1 and 3, a change the engineer stated; not re-checked
 - 2026-11-15, revised: one record is printed as a blockquote, so a wrapped path keeps its indent, as point 3, the form the engineer selected; not re-checked
+- 2026-11-15, revised: each path is printed from the project root, and one record is indented with no dash, as points 1, 3, and 6, the option the engineer selected; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 each path was the absolute path, with `~/` in place of the home folder. For part of that day one record was printed as a blockquote.
 
 On Sun Nov 15 2026, for part of the day, one record was printed indented two spaces with no dash, and a path that wrapped started its next line at the left edge.
 
@@ -95,3 +100,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 7:56:47 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:12:57 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:18:07 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:21:27 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 8:25:58 PM PT
