@@ -34,6 +34,7 @@
 - The implementation rules say the opening questions are asked when the implementation is created, not at the start. The attended rule is renamed attended-or-unattended-is-chosen-when-the-work-is-created.
 - `/phase new` replaces `/phase add`.
 - `/phase status` prints what `/feature status` prints.
+- `/brainstorm` keeps `start` and no `new`. A work session *ends*, where the work sessions rule said it closes.
 - The automated suite passed: 72 test files.
 
 ## Confirmations
@@ -51,3 +52,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:42 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:49 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:42 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:24:16 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 5:31:57 PM PT
