@@ -5,6 +5,5 @@ RECORD
   /record                          Ask whether to copy, print, or open it
   /record copy                     Copy the record's path to the clipboard
   /record print                    Print the record's contents
-  /record open                     Open the record in its registered
-                                   application
+  /record open                     Open the record in its default application
   /record help                     Print this command's help

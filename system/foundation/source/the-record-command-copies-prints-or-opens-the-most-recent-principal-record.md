@@ -22,7 +22,7 @@
 
 **`/record print` prints the record's contents in the chat**, as the file now stands, under a line naming its path from the project root. Print the contents as they are, with nothing added and nothing left out.
 
-**`/record open` opens the record in the application the system has registered for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand.
+**`/record open` opens the record in the default application for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand.
 
 **After a copy or an open, say what was copied or opened, in one line, with the record's path.** Act on nothing else.
 
@@ -35,6 +35,8 @@
 **How to apply:** on `/record`, take the most recent principal record, and copy its path, print its contents, or open it, as the subcommand says.
 
 ## History
+
+Until Sat Nov 14 2026 `/record open` was said to open the record in the application the system has registered for its kind of file.
 
 Until Sun Nov 15 2026 this rule was named the-record-command-copies-prints-or-opens-the-previous-replys-principal-record, and `/record` acted only on the previous reply's principal record. Where that reply wrote none, it acted on nothing.
 
@@ -64,3 +66,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 8:12:49 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:26:05 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:51:48 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:59:07 PM PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 9:10:14 PM PT

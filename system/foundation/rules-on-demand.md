@@ -1574,7 +1574,7 @@ Trigger: When the engineer types `/record`, or asks for the record just written 
 
 **`/record print` prints the record's contents in the chat**, as the file now stands, under a line naming its path from the project root. Print the contents as they are, with nothing added and nothing left out.
 
-**`/record open` opens the record in the application the system has registered for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand.
+**`/record open` opens the record in the default application for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand.
 
 **After a copy or an open, say what was copied or opened, in one line, with the record's path.** Act on nothing else.
 
