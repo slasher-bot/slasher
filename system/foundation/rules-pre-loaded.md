@@ -284,9 +284,9 @@ Source: system/foundation/source/a-projects-durable-context-is-recorded-in-its-c
 
 Source: system/foundation/source/a-reply-that-writes-a-record-ends-with-the-records-path.md
 
-1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Records:*, then the full, absolute path of its principal record, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Record:*, then the full, absolute path of its principal record, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. The path carries the state suffix where the record has one. Under the home folder, write `~/` in place of the home folder.
 2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
-3. Write each path as a list item, `- ` and then the path in backticks, so the terminal shows it in color. Put nothing else on the line: no label, and no sentence.
+3. Write one record under *Record:*, indented two spaces, with no dash, then the path in backticks. Write two or more under *Records:*, each a list item, `- ` and then the path in backticks. The backticks make the terminal show the path in color. Put nothing else on the line: no label, and no sentence.
 4. Where the operation is about more than one record, list each, each path its own list item. List a renamed record by its new path. Where no record written is the subject of the operation, print no records line.
 5. Do not list a record the agent did not write, such as a log entry a hook writes.
 6. List a record written in a worktree by the worktree's path.
