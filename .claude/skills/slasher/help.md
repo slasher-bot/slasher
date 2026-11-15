@@ -182,12 +182,6 @@ PROCESS
                                    question
   /aa                              An alias of /ask-again
 
-  /record copy                     Copy the path of the most recent
-                                   principal record to the clipboard
-  /record print                    Print the most recent principal record
-  /record open                     Open the most recent principal record in
-                                   its registered application
-
   /idk [<words>]                   Say "I don't know" to the agent's last
                                    question. The agent explains it, gives
                                    its recommendation, and asks it again
@@ -220,6 +214,17 @@ RECORDS
                                    wrote. A reply prints its principal
                                    record alone
   /records help                    Print this command's help
+
+RECORD
+  This command copies the path of, prints, or opens the most recent principal
+  record: the record of the latest reply that wrote one.
+
+  /record                          Ask whether to copy, print, or open it
+  /record copy                     Copy the record's path to the clipboard
+  /record print                    Print the record's contents
+  /record open                     Open the record in its registered
+                                   application
+  /record help                     Print this command's help
 
 JOURNAL
   The journal is the writer's own record of what they think, either stored with

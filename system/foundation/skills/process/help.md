@@ -33,12 +33,6 @@ PROCESS
                                    question
   /aa                              An alias of /ask-again
 
-  /record copy                     Copy the path of the most recent
-                                   principal record to the clipboard
-  /record print                    Print the most recent principal record
-  /record open                     Open the most recent principal record in
-                                   its registered application
-
   /idk [<words>]                   Say "I don't know" to the agent's last
                                    question. The agent explains it, gives
                                    its recommendation, and asks it again
