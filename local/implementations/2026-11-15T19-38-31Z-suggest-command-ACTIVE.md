@@ -1,4 +1,4 @@
-# Feature — An edit command suggests edits to content, and accept or reject settles them
+# Feature — A suggest command suggests edits to content, and accept or reject settles them
 
 **Tags:** [feature]
 
@@ -16,9 +16,9 @@
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
-- **Implementation branch:** `feature/worktree/edit-command`
+- **Implementation branch:** `feature/worktree/suggest-command`
 - **Base:** `99ada0e4`, from `master`, the commit holding this record as first written
-- **Working location:** branch and worktree, at `../slasher-feature-worktree-edit-command`, chosen when the feature was created.
+- **Working location:** branch and worktree, at `../slasher-feature-worktree-suggest-command`, chosen when the feature was created.
 - **Participation:** attended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-14T14-42-30Z-edit-command-suggests-edits-to-content`
@@ -28,6 +28,8 @@
 - **2026-11-15** — The command is `/suggest`, not `/edit`: `/suggest`, `/suggest accept`, and `/suggest reject`. **As the engineer stated it:** It should be "/suggest" rather than "/edit"
 
 ## Confirmations
+
+- **2026-11-15** — Rename: the branch, the worktree, and this record are renamed from edit-command to suggest-command, selected by the engineer. The branch was `feature/worktree/edit-command`.
 
 - **2026-11-15** — Creation: `/feature start`, with no feature Open, so the feature was created Active.
 - **2026-11-15** — Working location: Branch and worktree, selected by the engineer.
@@ -39,3 +41,4 @@
 Authored by Scott Bellware on Sun Nov 15 2026 at 11:38:31 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:38:47 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:40:02 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:42:08 AM PT
