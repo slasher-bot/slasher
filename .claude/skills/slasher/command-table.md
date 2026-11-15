@@ -16,7 +16,7 @@
 | `/decision` | Log a decision, tagged [decision] |
 | `/note` | Record a note |
 | `/notes` | List the notes |
-| `/record` | Prints or copies the path of, prints, or opens the most recent principal record: the record of the latest reply that wrote one. |
+| `/record` | These commands print or copy the path of, print, or open the most recent principal record, and open any record by name. |
 | `/records` | The records line ends a reply that wrote a record, with the full path of the record it is about. |
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
 | `/private` | Anything given to /private is recorded only in the private directory, outside the project's repository, and is read only on command. |

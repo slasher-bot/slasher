@@ -1,1 +1,1 @@
-| `/record` | Prints or copies the path of, prints, or opens the most recent principal record: the record of the latest reply that wrote one. |
+| `/record` | These commands print or copy the path of, print, or open the most recent principal record, and open any record by name. |
