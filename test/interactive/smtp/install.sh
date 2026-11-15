@@ -39,6 +39,6 @@ git -C "$project" init -q
 
 [ -x "$project/slasher/system/smtp/send.py" ] || fail "Installs the smtp script" "send.py:" "$(ls -l "$project/slasher/system/smtp" 2>&1)"
 [ -x "$project/slasher/system/imap/credential.sh" ] || fail "Installs the imap credential script it reads with" "credential.sh:" "$(ls -l "$project/slasher/system/imap" 2>&1)"
-[ -f "$project/.claude/skills/slasher/skills/smtp/SKILL.md" ] || fail "Installs the /smtp command" "skills:" "$(ls "$project/.claude/skills/slasher/skills" 2>&1)"
+grep -qF "/email send" "$project/.claude/skills/slasher/skills/email/help.md" || fail "Lists /email send in the email help" "help:" "$(cat "$project/.claude/skills/slasher/skills/email/help.md" 2>&1)"
 
 echo "0 failed, 0 aborted"

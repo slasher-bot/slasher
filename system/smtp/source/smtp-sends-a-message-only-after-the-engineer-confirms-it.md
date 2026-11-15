@@ -1,8 +1,8 @@
 # Smtp sends a message only after the engineer confirms it
 
-**Trigger:** When the engineer asks for an email to be sent, as with `/smtp send`
+**Trigger:** When the engineer asks for an email to be sent, as with `/email send`
 
-**`/smtp send <name> <message-file>` sends the message in the file through the account with that name.** The account is the Keychain item the `imap` package stores, so one credential serves the fetch and the send. The act is the package's `send.py`, run from the project root: `slasher/system/smtp/send.py <name> <message-file>`, or `system/smtp/send.py` where the project has no `slasher/` directory. Where the name or the file is missing, ask for it through the free-text option.
+**`/email send <name> <message-file>` sends the message in the file through the account with that name.** The account is the Keychain item the `imap` package stores, so one credential serves the fetch and the send. The act is the package's `send.py`, run from the project root: `slasher/system/smtp/send.py <name> <message-file>`, or `system/smtp/send.py` where the project has no `slasher/` directory. Where the name or the file is missing, ask for it through the free-text option.
 
 **Every send waits for the engineer's confirmation.** Before running `send.py`, read the message file and show the account's name and the message's From, To, Cc, Bcc, and Subject lines, and the first lines of its body. Where the file has no From line, show the account's login as the From, as the send adds it. Then ask through the selection interface, with the options *Send* and *Do not send*. Run `send.py` only on *Send*. A confirmation covers one message, once. A message sent again is confirmed again, and unattended work does not skip the confirmation.
 
@@ -12,7 +12,11 @@
 
 **Why:** a message sent cannot be taken back, and it reaches people outside the project. Receiving changes only the project's own files. That difference is why sending is a package of its own, and why each send waits for the engineer, even where the agent works unattended.
 
-**How to apply:** on `/smtp send`, read the message file, show its account and headers, and ask *Send* or *Do not send*. On *Send*, run `send.py` from the project root, and report what it printed.
+**How to apply:** on `/email send`, read the message file, show its account and headers, and ask *Send* or *Do not send*. On *Send*, run `send.py` from the project root, and report what it printed.
+
+## History
+
+Until Sun Nov 15 2026 the command was `/smtp send`, the smtp package's own. The engineer moved it under `/email`, as `/email send`, and removed `/smtp`.
 
 Related:
 
@@ -22,3 +26,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 12:24:04 AM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 3:25:32 PM PT

@@ -30,8 +30,7 @@
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/print-and-review, /pr` | Print the draft as it now stands, then a review of it |
 | `/review` | Suggests numbered edits to content, and accept or reject settles them. |
-| `/email` | These commands fetch IMAP email into the project, and list the accounts whose credentials are kept in the macOS Keychain. |
-| `/smtp` | These commands send email through an account whose credential is kept in the macOS Keychain, the same credential the imap package fetches with. |
+| `/email` | These commands fetch IMAP email into the project, send a message, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |
 | `/idk` | Say "I don't know" to the agent's last question, so it explains the question and asks it again |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |

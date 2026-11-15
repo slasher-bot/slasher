@@ -13,7 +13,7 @@ Subject: The receipt for your order
 Your order is paid, and your receipt is attached.
 ```
 
-**The `/smtp` command sends a message, and the engineer confirms every send** (`smtp-sends-a-message-only-after-the-engineer-confirms-it`). `/smtp send <name> <message-file>` shows the message's account and headers, and sends it only when the engineer selects *Send*. Unattended work does not skip the confirmation. A credential is stored by the engineer in their own terminal, never through the chat.
+**The `/email send` command sends a message, and the engineer confirms every send** (`smtp-sends-a-message-only-after-the-engineer-confirms-it`). The `imap` package's `/email` command carries it, and this package carries no command of its own. `/email send <name> <message-file>` shows the message's account and headers, and sends it only when the engineer selects *Send*. Unattended work does not skip the confirmation. A credential is stored by the engineer in their own terminal, never through the chat.
 
 **Sending is a package of its own, apart from `imap`.** A message sent cannot be taken back, and it reaches people outside the project, where a fetch changes only the project's own files. A project that only reads its mail installs `imap` alone.
 
