@@ -1,6 +1,6 @@
 # The installer fails silently where a project already has an AGENTS.md
 
-- **State:** Implementation
+- **State:** Resolved
 - **Tags:** [problem]
 
 **Installing Slasher into a project that already has an `AGENTS.md` leaves the `AGENTS.md` unchanged, and says nothing.** The Slasher bootstrap is not added, so the rules do not load, and nothing tells the engineer why.
@@ -30,3 +30,4 @@ Authored by Scott Bellware on Sun Nov 15 2026 at 4:38:17 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 4:47:41 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 5:21:45 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 5:28:08 PM PT
