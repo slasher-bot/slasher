@@ -17,7 +17,7 @@
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/existing-agents-md-install`
-- **Base:** recorded on the implementation branch, since it is the commit holding this record as first written
+- **Base:** `e52d2155`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-existing-agents-md-install`, chosen when the feature was created.
 - **Participation:** attended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
@@ -33,3 +33,4 @@
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
