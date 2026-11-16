@@ -194,9 +194,10 @@ PROCESS
                                    question
   /aa                              An alias of /ask-again
 
-  /idk [<words>]                   Say "I don't know" to the agent's last
-                                   question. The agent explains it, gives
-                                   its recommendation, and asks it again
+  /pros-and-cons [<words>]         Give each option of the agent's last
+                                   question with its pros and cons. Then
+                                   /ask-again puts the question again
+  /??                              An alias of /pros-and-cons
 
   /estimate-confidence             The agent's confidence of proceeding
                                    unattended from where the work stands
@@ -363,11 +364,6 @@ LANGUAGE
   These commands work on language: reserving a word, ETE, Slasher's
   implementation of STE and its extensions, and clarifying language, often the
   agent's.
-
-  /clarify                         Explain the previous answer again using
-                                   what the agent knows of the engineer's
-                                   understanding
-  /??                              An alias of /clarify
 
   /expand                          Expand the previous answer
   /brief [<request>]               Answer the request in brief, or give the

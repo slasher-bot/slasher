@@ -1,6 +1,6 @@
 # A pros and cons command for the last question
 
-**State:** Implementation
+**State:** Realized
 
 **Tags:** [idea]
 
@@ -12,3 +12,4 @@ A Pros and Cons command that refers to the last question. It pairs with ask-agai
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 10:03:02 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:09:55 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 3:13:15 PM PT

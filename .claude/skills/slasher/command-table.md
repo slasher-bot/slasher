@@ -32,8 +32,7 @@
 | `/print-and-review, /pr` | Print the draft as it now stands, then a review of it |
 | `/review` | Suggests numbered edits to content, and accept or reject settles them. |
 | `/email` | These commands fetch IMAP email into the project, send a message, and list the accounts whose credentials are kept in the macOS Keychain. |
-| `/clarify, /??` | Explain the previous answer again using what the agent knows of the engineer's understanding |
-| `/idk` | Say "I don't know" to the agent's last question, so it explains the question and asks it again |
+| `/pros-and-cons, /??` | Give each option of the agent's last question with its pros and cons |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |
 | `/estimate-confidence, /%` | The agent's confidence of proceeding unattended from where the work stands |
 | `/unattended, /!` | Carry out a request on the agent's own, after a plan is accepted |
