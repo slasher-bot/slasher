@@ -69,6 +69,8 @@ The `slasher-install` script installs and refreshes packages. `sh slasher-instal
 
 The script fetches the packages over SSH. Where no SSH key is registered, run it as `SLASHER_ORIGIN=https://github.com/slasher-bot sh slasher-install`.
 
+Where the project already has an `AGENTS.md`, the script asks before adding Slasher's section to it. `sh slasher-install --append-agents-md` adds it without asking.
+
 #### Warning
 
 Execute the install script using `sh`:

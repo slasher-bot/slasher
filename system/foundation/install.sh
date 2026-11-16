@@ -19,6 +19,10 @@
 #     Place the bootstrap files only, foundation already being installed. The composite
 #     install-all.sh uses this, so the bootstrap logic lives in one place rather than two.
 #
+#   slasher/system/foundation/install.sh [agents-md] --append-agents-md
+#     As above, and where the project already has an AGENTS.md without the bootstrap,
+#     append the bootstrap to it without asking.
+#
 #   slasher/system/foundation/install.sh bootstrap
 #     Print the AGENTS.md bootstrap section and exit, placing nothing. refresh-packages.sh
 #     compares it against the project's AGENTS.md, so the text has one source here.
@@ -110,6 +114,12 @@ place_agents_md() {
     # No root AGENTS.md yet — creating one takes nothing away, so do it directly.
     bootstrap > AGENTS.md
     echo "Created AGENTS.md with the Slasher bootstrap."
+  elif [ "$append_agents_md" = yes ]; then
+    # An AGENTS.md you maintain already exists, and the answer to append was given in
+    # advance, with --append-agents-md, so nothing is asked.
+    printf '\n' >> AGENTS.md
+    bootstrap >> AGENTS.md
+    echo "Appended the Slasher bootstrap to AGENTS.md, as --append-agents-md asked."
   else
     # An AGENTS.md you maintain already exists. Explain the effect, show the exact
     # text, and ask before touching it — never append silently.
@@ -130,7 +140,7 @@ place_agents_md() {
     echo
     if [ ! -t 0 ]; then
       echo "Not running interactively, so AGENTS.md was NOT modified."
-      echo "Re-run this in a terminal to be prompted, or paste the section above yourself."
+      agents_md_unanswered=yes
       return 0
     fi
     printf 'Append this to your AGENTS.md now? [y/N] '
@@ -682,6 +692,16 @@ if [ "$1" = "bootstrap" ]; then
   exit 0
 fi
 
+# --append-agents-md answers in advance the question asked where the project already has an
+# AGENTS.md: append the bootstrap to it.
+append_agents_md=no
+agents_md_unanswered=no
+for argument in "$@"; do
+  case $argument in
+    --append-agents-md) append_agents_md=yes ;;
+  esac
+done
+
 # Carry a project's waytide/ to slasher/ before anything reads or writes either.
 migrate_layout
 migrate_machine
@@ -715,3 +735,13 @@ migrate_note_tag
 migrate_note_state
 migrate_work_tag
 migrate_work_state
+
+# 4. An existing AGENTS.md left unchanged because no one was there to answer leaves the rules
+#    unloaded, so the run says so last, where it is seen, and fails.
+if [ "$agents_md_unanswered" = yes ]; then
+  echo
+  echo "AGENTS.md was NOT modified, so Slasher's rules will not load."
+  echo "Run it again with --append-agents-md to append the bootstrap,"
+  echo "or in a terminal to be asked."
+  exit 1
+fi
