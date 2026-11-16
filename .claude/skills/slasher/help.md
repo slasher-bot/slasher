@@ -315,7 +315,7 @@ RELEASE
   /release                         Choose the next version
   /release help                    Print this command's help
 
-PACKAGES
+PACKAGE
   These commands manage the installed packages: which are active, refreshing
   them, and installing Slasher.
 
@@ -330,7 +330,7 @@ PACKAGES
 
   /package help                    Print this command's help
 
-INSTALLED PACKAGES
+PACKAGES
   These commands list the installed packages, refresh them, and act on one
   package.
 
