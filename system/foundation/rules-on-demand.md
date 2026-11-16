@@ -800,16 +800,17 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 2. **`item <words>`**: write a private item.
 3. **`log <words>`**: write a private log entry.
 4. **`journal <words>`**: write a private journal entry, by the journal package's private-journal-convention, as `/journal private` does.
-5. **`session <instruction>`**: start a private session, and carry out the instruction in it.
-6. **`session end`**: end the private session.
-7. Words that are not a subcommand and not a path to an existing file are not guessed at. Say so, and ask which subcommand is meant, through the selection interface.
+5. **Nothing**, a bare `/private`: start a private session, and wait for the engineer's request.
+6. **`session <instruction>`**: start a private session, and carry out the instruction in it.
+7. **`end`**, or **`session end`**: end the private session.
+8. Words that are not a subcommand and not a path to an existing file are not guessed at. Say so, and ask which subcommand is meant, through the selection interface.
 
 ## A private session
 
-1. `/private session <instruction>` starts a private session. It lasts until the session ends, or until `/private session end`.
+1. A bare `/private`, or `/private session <instruction>`, starts a private session. It lasts until the session ends, or until `/private end` or `/private session end`.
 2. In a private session, every record the agent writes goes to the private directory, in the directory for its kind, and never into the project. That holds for a record the engineer asks for and for a record a rule asks for.
 3. A record is a file under `slasher/local/` that a rule tells the agent to write: an item, a log entry, a journal entry, a work session record, an implementation record, or a loop record.
-4. Carry out the instruction after `session` in the private session. Where no instruction was typed, start the private session and wait for the engineer's request.
+4. Carry out the instruction after `session` in the private session. Where no instruction was typed, or the `/private` was bare, start the private session and wait for the engineer's request.
 5. When the private session starts, say once that the session's records go to the private directory. Say it again when it ends.
 6. A file that is not a record still changes in the project, as the work asks. Code, a test, a rule, a vocabulary, a README, and a skill are not records.
 7. The log-entry hook still writes into the project's log. In a private session, move each entry it writes to the private log directory, before anything is committed.
@@ -820,7 +821,7 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 ## A private session times out
 
 1. A private session times out when 4 minutes pass with no prompt from the engineer.
-2. The plugin's hook on each prompt keeps the time. `/private session` writes the session's state file, in `~/.local/state/slasher/private-sessions/`, named for the session. Each prompt in the private session writes its time there. `/private session end` removes the file.
+2. The plugin's hook on each prompt keeps the time. A bare `/private`, or `/private session`, writes the session's state file, in `~/.local/state/slasher/private-sessions/`, named for the session. Each prompt in the private session writes its time there. `/private end`, or `/private session end`, removes the file.
 3. Where a prompt comes more than 4 minutes after the last one, the hook tells the agent so. Before anything else, ask the engineer, through the selection interface, whether to continue the private session or end it.
 4. The options are **Continue** and **End**. Continue keeps the private session, and its 4 minutes count from the prompt that brought the question.
 5. End ends the private session: delete the state file the hook names, and say that the session's records go into the project again.
