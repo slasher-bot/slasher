@@ -1,14 +1,14 @@
-# Compare Slasher's prose utilities with Claude's own doc-edit
+# Compare Slasher's prose utilities with the doc-edit skill
 
 **State:** Active
 
 **Tags:** [work]
 
-Compare Slasher's prose utilities with Claude's own doc-edit.
+Compare Slasher's prose utilities with the doc-edit skill.
 
 ## Comparison, Mon Nov 16 2026
 
-Slasher's prose package holds two commands: `/review`, which suggests numbered edits that `/review accept` or `/review reject` settles, and `/print-and-review`, or `/pr`, which prints the draft whole and then a numbered list of findings. Claude's doc-edit is a skill that walks a document paragraph by paragraph, then sentence by sentence, giving feedback and no rewrites.
+Slasher's prose package holds two commands: `/review`, which suggests numbered edits that `/review accept` or `/review reject` settles, and `/print-and-review`, or `/pr`, which prints the draft whole and then a numbered list of findings. doc-edit is the engineer's own skill, built in a Claude desktop session on Thu May 14 2026 and synced to Claude Code from the engineer's account. It walks a document paragraph by paragraph, then sentence by sentence, giving feedback and no rewrites.
 
 ### What each does that the other does not
 
@@ -37,3 +37,4 @@ Slasher's prose package holds two commands: `/review`, which suggests numbered e
 Authored by Scott Bellware on Mon Nov 16 2026 at 12:00:50 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:15:53 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:16:16 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 3:19:44 PM PT
