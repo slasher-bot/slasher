@@ -1,6 +1,6 @@
 # A question's code examples are shown in the chat before the selection
 
-- **State:** Open
+- **State:** Implementation
 - **Tags:** [work]
 
 **Where a question put through the selection interface has code examples, each example is shown in the chat first, as a labeled fenced code block, and the selection follows with the same labels.** The selection interface renders no markdown, so code in an option's description loses its highlighting and its line breaks. The chat renders markdown. The cost is that the code no longer sits directly beneath the option's label.
@@ -17,7 +17,10 @@
 
 The image they posted is beside this item: [`2026-11-13T22-41-29Z-a-questions-code-examples-are-shown-in-the-chat-before-the-selection.png`](2026-11-13T22-41-29Z-a-questions-code-examples-are-shown-in-the-chat-before-the-selection.png).
 
+**Implementation:** `2026-11-16T00-25-10Z-question-code-examples-in-chat`
+
 ---
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 2:41:29 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 2:43:26 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 4:25:10 PM PT
