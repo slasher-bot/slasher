@@ -17,7 +17,7 @@
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/question-code-examples-in-chat`
-- **Base:** recorded on the implementation branch, since it is the commit holding this record as first written
+- **Base:** `c1e8e602`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-question-code-examples-in-chat`, chosen when the feature was created.
 - **Participation:** unattended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
@@ -33,3 +33,4 @@
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:25:10 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 4:25:10 PM PT
