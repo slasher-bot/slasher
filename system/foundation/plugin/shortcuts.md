@@ -9,6 +9,7 @@
 | `/%` | `/estimate-confidence` | Gives the agent's confidence of proceeding unattended |
 | `/!` | `/unattended` | Carries out a request on the agent's own, after a plan is accepted |
 | `/p` | `/push` | Pushes the current branch to its remote |
+| `/cp` | `/commit-and-push` | Commits the work, then pushes the current branch |
 | `/pr` | `/print-and-review` | Prints the draft as it now stands, then a review of it |
 | `/;` | `/command-table` | Prints the command table |
 | `/sc`, `/:` | `/shortcuts` | Prints the shortcuts table |
