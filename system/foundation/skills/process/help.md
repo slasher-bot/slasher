@@ -12,6 +12,8 @@ PROCESS
   /recent                          Brief summary of recent work, and what's
                                    next
   /?                               An alias of /recent
+  /status [<record>]               The status of the work under way, or of
+                                   the item, feature, or experiment named
 
   /next                            Proceed to the next step in the current
                                    multi-step process or with the action
