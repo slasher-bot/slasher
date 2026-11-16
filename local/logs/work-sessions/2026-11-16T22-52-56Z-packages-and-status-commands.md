@@ -1,6 +1,6 @@
 # Work Session — The packages and status commands (2026-11-16)
 
-This work session started by recording four items, then took up two work items in turn. The `/packages` command became a command domain of its own, with its own help, and `update` replaced `refresh` in every package command. A `status` subcommand for `/item` followed, then the same report for features and experiments, and a root `/status` command that finds the work under way. It ended with a feature that lets a bare `/private` start a private session and `/private end` end it.
+This work session started by recording four items, then took up two work items in turn. The `/packages` command became a command domain of its own, with its own help, and `update` replaced `refresh` in every package command. A `status` subcommand for `/item` followed, then the same report for features and experiments, and a root `/status` command that finds the work under way. Then a feature let a bare `/private` start a private session and `/private end` end it. It ended with a feature that replaced `/idk` and `/clarify` with a pros and cons command.
 
 This is the communicable record of the work session, a guided tour. The items, rules, and log entries it points to are the source of truth.
 
@@ -54,6 +54,14 @@ The engineer started a feature for the idea "`/private` and `/private end`", and
 - Item: `2026-11-16T07-18-52Z-private-and-private-end`, Realized
 - Rule: the anything-given-to-private-is-recorded-only-in-the-private-directory rule
 
+## 8. `/pros-and-cons`, rather than `/idk` and `/clarify`
+
+The engineer started the idea "A pros and cons command for the last question" as a feature, in a worktree, unattended, and accepted the plan. The engineer had asked for the pros and cons of several questions during the day, and the command makes that a command: it leads with the trade between the options, gives each option's pros and cons as lists of facts, and puts nothing again, since `/ask-again` does. `/??` became its alias. `/idk` was removed, replaced by the new command, and `/clarify` was suspended. The engineer concluded the feature Completed, and it merged to `master`. The automated suite passed: 80 test files.
+
+- Implementation record: `2026-11-16T23-09-55Z-pros-and-cons-command`, Completed
+- Item: `2026-11-16T06-03-02Z-a-pros-and-cons-command-for-the-last-question`, Realized
+- Rule: the pros-and-cons-gives-each-option-of-the-last-question-with-its-pros-and-cons rule
+
 ## Takeaways
 
 - A command that needs its own `help` becomes a command domain of its own.
@@ -62,6 +70,7 @@ The engineer started a feature for the idea "`/private` and `/private end`", and
 - A status report names the record, then gives its state, what exists, and what is left. For an implementation, its phases come first.
 - `/status` finds the work under way without the engineer naming its kind.
 - A bare `/private` starts a private session, and `/private end` ends it.
+- `/pros-and-cons`, or `/??`, weighs the last question's options, and `/ask-again` puts the question again.
 
 ## Glossary
 
@@ -73,7 +82,8 @@ The engineer started a feature for the idea "`/private` and `/private end`", and
 ## Where the durable records live
 
 - Rules, in `system/foundation/source/`: packages-lists-the-installed-packages, a-command-domain-carries-its-rows-of-the-command-table, package-refresh-and-install-run-foundations-scripts, item-status-reports-an-items-state-what-exists-and-what-is-left, implementation-status-reports-its-phases-its-state-what-exists-and-what-is-left, status-reports-on-the-work-under-way-or-the-record-named
-- Items, in `local/items/`: the seven named above
+- Items, in `local/items/`: the eight named above
+- The feature record for the pros and cons command, in `local/implementations/`
 - The feature and loop records for `/private` and `/private end`, in `local/implementations/` and `local/logs/loops/`
 - Log entries, in `local/logs/log/`, from `2026-11-16T05-27-01Z` to `2026-11-16T22-52-47Z`
 - Commits: `8b0d8bc9` through `af0f4a79` on `master`
@@ -82,3 +92,4 @@ The engineer started a feature for the idea "`/private` and `/private end`", and
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 2:52:56 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:07:55 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 3:14:12 PM PT
