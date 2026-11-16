@@ -23,6 +23,10 @@
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-16T00-38-17Z-the-installer-fails-silently-where-a-project-already-has-an-agents-md`
 
+## Decisions
+
+- **2026-11-15** — The fix, selected by the engineer after `/idk`: the installer takes an explicit answer for an existing `AGENTS.md`. Without one, and with no terminal, it stops and exits non-zero, naming the choice. `/install` puts the choice to the engineer through the selection interface, then runs the installer again with the answer.
+
 ## Confirmations
 
 - **2026-11-15** — Creation: `/feature start`, with no feature Open, so the feature was created Active.
@@ -34,3 +38,4 @@
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 5:02:54 PM PT
