@@ -11,12 +11,4 @@ PACKAGES
   /package-set                     Show the active package set
   /package-set <set or packages>   Declare the package set
 
-  /packages                        List the installed packages, whether
-                                   each is active, and what each is
-  /packages refresh [<package>...]
-                                   An alias of /package refresh
-  /packages <package> [<act>]      Act on one package. <act>: refresh,
-                                   activate, or deactivate. With no act,
-                                   asks which
-
   /package help                    Print this command's help

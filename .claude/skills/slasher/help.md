@@ -328,6 +328,12 @@ PACKAGES
   /package-set                     Show the active package set
   /package-set <set or packages>   Declare the package set
 
+  /package help                    Print this command's help
+
+INSTALLED PACKAGES
+  These commands list the installed packages, refresh them, and act on one
+  package.
+
   /packages                        List the installed packages, whether
                                    each is active, and what each is
   /packages refresh [<package>...]
@@ -336,7 +342,7 @@ PACKAGES
                                    activate, or deactivate. With no act,
                                    asks which
 
-  /package help                    Print this command's help
+  /packages help                   Print this command's help
 
 LANGUAGE
   These commands work on language: reserving a word, ETE, Slasher's

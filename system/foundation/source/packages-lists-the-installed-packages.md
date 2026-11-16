@@ -12,6 +12,8 @@
 
 **`/packages refresh [<package>...]` does what `/package refresh` does.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. The words after `refresh` pass to it unchanged.
 
+**`/packages` is a command domain of its own, and `/packages help` prints its help.** The help lists `/packages`, `/packages refresh`, and `/packages <package>`. `/package help` does not list them.
+
 ## One package
 
 **`/packages <package>` acts on one installed package.** Where an act follows the name, carry it out. Where none does, show the package's row from the table, then ask which act is meant, through the selection interface, with the acts the package can take now:
@@ -34,6 +36,8 @@
 
 ## History
 
+Until Mon Nov 16 2026 `/packages` was a command of the `/package` domain and took no `help`. `/package help` listed it.
+
 Until Fri Nov 13 2026 `/packages` took no package name.
 
 Until Fri Nov 13 2026 `/packages` took no subcommand.
@@ -49,3 +53,4 @@ Related:
 Authored by Scott Bellware on Fri Nov 13 2026 at 3:02:14 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:18:09 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:19:28 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 12:41:19 PM PT
