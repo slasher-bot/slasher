@@ -100,11 +100,13 @@ foundation  →  (nothing — the base every other package builds on)
 - **`git subtree` can only place files inside a package directory.** So a tool a consuming project runs has to live in some package. There is nowhere else for it to be delivered.
 - **It has to be a package that is always there.** Foundation is the only one — every other package includes it, so a project running Slasher at all has foundation.
 
-So `install.sh`, `refresh-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, and `read-consuming-projects.sh` are here. The **authoring** tools are not. `install-all.sh` and `report-direct-commits.sh` sit unpackaged at the root of the composite repository. Only the composite publishes, and a consuming project never runs them.
+So `install.sh`, `refresh-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `read-consuming-projects.sh`, and `read-project-setting.sh` are here. The **authoring** tools are not. `install-all.sh` and `report-direct-commits.sh` sit unpackaged at the root of the composite repository. Only the composite publishes, and a consuming project never runs them.
 
 **`read-consuming-projects.sh` is packaged because it is not an authoring tool**, though it sat with them until 2026-08-07. It reports the Slasher projects **on this machine**, reading a per-machine registry at `~/.config/slasher/consuming-projects.toml`. So it is **machine-scoped** where the rest of this package is project-scoped. The engineer who wants it is anyone who installed Slasher into more than one project, rather than whoever maintains Slasher.
 
 The authoring tools run **against the packages**. This one runs **beside projects**, which is a third position the earlier classification had no slot for. It detects nothing about a project's condition, reaches no network, and takes no action on what it finds. It also names no consuming project in its own source: the list is in the registry, outside any repository, per the `a-project-does-not-name-its-downstream-consumers-in-its-own-files` rule.
+
+**`read-project-setting.sh` reads one project's own entry in the same registry**: a `[[project]]` table whose `path` is the project's root, as in `journal = "private"`. A setting kept there is per machine, and leaves nothing in the project's files.
 
 **Being installed into every project means a copy per project, and one registry.** Each copy reads the same file and reports the same set, so an engineer runs whichever copy is nearest rather than the right one.
 
