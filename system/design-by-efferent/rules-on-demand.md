@@ -397,13 +397,13 @@ Source: system/design-by-efferent/source/the-hinge-cycle-is-actuation-observatio
 Trigger: When starting the DBE loop on an outcome, before the first hinge
 
 1. Building the initial implementation of an outcome runs a cycle of five hinges, in the order below.
-2. Hand each hinge to the human separately. Get it accepted before moving to the next.
+2. Hand each hinge to the human separately, through the selection UI. Do not slip one hinge in under another's gate. Get it accepted before moving to the next.
 3. **Actuation** is the unit's efferent shape: name, arguments, arity, return.
 4. **Observation** is what is asserted about the result. That covers value-equality vs. identity vs. a raised error, and what the explaining variable is compared against.
 5. What the test reads is the side effect the actuation produces. A returned value is one such effect, a case rather than the rule.
 6. An actuation that returns nothing still produces an effect somewhere. One that returns a value frequently produces others beside it.
 7. The observation hinge asks which effect the test reads, and how it reads it. It does not assume the return.
-8. **Controls** are the example constants the test is built from. That covers control form, nested vs. top-level, inner constants, Array vs. Hash seeding, and literals vs. controls.
+8. **Controls** are the example constants the test is built from. That covers control form, nested vs. top-level, inner constants, Array vs. Hash seeding, and literals vs. controls. The controls are a hinge in their own right, and their example must discriminate.
 9. **Implementation** is the code that satisfies the test.
 10. The implementation hinge always has two candidates. One is the complete implementation written directly. The other is the red/green/refactor cycle (see the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule).
 11. **Naming** is the outcome `context` that names what the observation establishes (the test's name).
@@ -420,11 +420,11 @@ Trigger: When starting the DBE loop on an outcome, before the first hinge
 22. Settle the outcome taxonomy deliberately, as a design artifact. Do not treat it as a label applied after the fact.
 23. Where a hinge has genuinely distinct options, present them as options.
 24. Never pass a hinge without the human's acceptance.
-25. An option is the artifact, not a label for it. It is the line that would be written, shown as it would be written.
+25. An option is the artifact, not a label for it. It is the line that would be written, shown as it would be written. Where it runs past one line, show it in the chat under a label and in the option's preview, as the `foundation` present-every-prompt-to-the-engineer-through-the-selection-ui rule shows a code example. The option takes the label, and the artifact's key line as its description.
 26. For example, the option reads `assert(retries == 3)` or `Controls::Upload.example(client: control_client, retries: 3)`.
 27. A gloss may follow an option where the difference between two candidates is not visible in the code alone.
 28. A label standing in place of the artifact is not an option. For example, `Accept — assert the returned count against 3` is not an option.
-29. A hinge with one candidate is not an "accept" prompt. It shows that candidate as its option, exactly as a hinge with three shows three.
+29. A hinge with one candidate is not an "accept" prompt. It shows that candidate as its option, exactly as a hinge with three shows three. Do not search for, or manufacture, a second candidate to reach two or to avoid the look of a foregone conclusion.
 30. Selecting the lone candidate is the acceptance. Nothing about the single case changes the form.
 31. This generalizes the the-actuation-gate-offers-candidate-actuations-as-options rule, which states the same mechanism at the first gate.
 32. What goes on screen at each hinge is the each-hinge-displays-the-actuation-as-its-anchor-and-the-contexts-once rule. That is the actuation as the anchor, and the contexts shown once.

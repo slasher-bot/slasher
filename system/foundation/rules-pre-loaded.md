@@ -432,6 +432,12 @@ Source: system/foundation/source/present-every-prompt-to-the-engineer-through-th
 11. Keep plain prose for statements, reports, and explanations that do not ask the engineer to choose.
 12. Where the engineer escapes a selection, by refusing it, stopping it to clarify, or interrupting it, do not put it again on your own. Say where the work stopped, and wait. Put it again when the engineer asks, as with `/ask-again` or `/aa`, or after a clarification they asked for. Put the next question the work reaches without waiting.
 
+## Code examples
+
+1. Where a question has code examples, print each one in the chat before the selection, in a fenced code block with a language tag, its indentation kept, under a short label.
+2. Put the selection in the same response. Each option's label is its example's label, and its description is the example's key line, the line that tells it apart from the others.
+3. Where the question is single-select, also put each example in its option's preview, since text printed before a question may not be on screen while it is open.
+
 # The command domain table prints when the rules have loaded
 
 Source: system/foundation/source/the-command-domain-table-prints-when-the-rules-have-loaded.md
