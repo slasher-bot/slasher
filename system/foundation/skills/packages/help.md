@@ -1,12 +1,11 @@
 PACKAGES
-  These commands list the installed packages, refresh them, and act on one
+  These commands list the installed packages, update them, and act on one
   package.
 
   /packages                        List the installed packages, whether
                                    each is active, and what each is
-  /packages refresh [<package>...]
-                                   An alias of /package refresh
-  /packages <package> [<act>]      Act on one package. <act>: refresh,
+  /packages update [<package>...]  An alias of /package update
+  /packages <package> [<act>]      Act on one package. <act>: update,
                                    activate, or deactivate. With no act,
                                    asks which
 

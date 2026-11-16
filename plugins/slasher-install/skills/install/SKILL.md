@@ -10,7 +10,7 @@ The engineer typed `/install $ARGUMENTS`.
 This skill loads no rule. It is the command that puts the rules into a project, so it runs where they are not yet installed. Work from the project root, the directory the session is in.
 
 1. Where the first word is `help`, say that this command takes no `help`, and that `/package help` prints the help of its command domain. Do nothing more.
-2. Where `slasher/system/foundation/` exists, say that Slasher is already installed here, and that `/package refresh` brings its packages up to date. Do nothing more.
+2. Where `slasher/system/foundation/` exists, say that Slasher is already installed here, and that `/package update` brings its packages up to date. Do nothing more.
 3. Where `system/foundation/` exists and `slasher/system/` does not, this is the Slasher authoring source. Say that Slasher is not installed here, and do nothing more.
 4. Where the directory is not a git repository, ask through the selection interface whether to run `git init` here, naming the directory: *Initialize a git repository here* or *Don't install*. Slasher's installer adds its packages with `git subtree`, which needs a repository. On *Don't install*, do nothing more. Otherwise run `git init`.
 5. Where the repository has uncommitted changes to tracked files, say that `git subtree` installs only into a working tree with none, and do nothing more.

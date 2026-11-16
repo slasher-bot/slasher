@@ -26,8 +26,8 @@
 | `/commit-and-push, /cp` | Commits the work, then pushes the current branch. |
 | `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
 | `/release` | Presents the candidates for a package's next version, for the engineer to choose. |
-| `/package` | These commands manage the installed packages: which are active, refreshing them, and installing Slasher. |
-| `/packages` | These commands list the installed packages, refresh them, and act on one package. |
+| `/package` | These commands manage the installed packages: which are active, updating them, and installing Slasher. |
+| `/packages` | These commands list the installed packages, update them, and act on one package. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
 | `/print-and-review, /pr` | Print the draft as it now stands, then a review of it |
 | `/review` | Suggests numbered edits to content, and accept or reject settles them. |

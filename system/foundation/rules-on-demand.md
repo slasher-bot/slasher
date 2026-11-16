@@ -1052,9 +1052,9 @@ Trigger: When the engineer types `/next`, `/next`, or `/next?`, or asks what is 
 
 Source: system/foundation/source/package-refresh-and-install-run-foundations-scripts.md
 
-Trigger: When the engineer asks to refresh or install Slasher's packages, as with `/package refresh` or `/package install`
+Trigger: When the engineer asks to refresh or install Slasher's packages, as with `/package update` or `/package install`
 
-1. `/package refresh [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them.
+1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them.
 2. `/package install` installs Slasher into the project the session is in. Run foundation's `install.sh` from that project's root. The installer asks before changing a file the project already has.
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would overwrite with a Slasher project's bootstrap.
@@ -1076,15 +1076,15 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 
 **Below the table, name the package set, as `package set: default`.** Where no set is declared, print nothing below the table.
 
-**`/packages refresh [<package>...]` does what `/package refresh` does.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. The words after `refresh` pass to it unchanged.
+**`/packages update [<package>...]` does what `/package update` does.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. The words after `update` pass to it unchanged.
 
-**`/packages` is a command domain of its own, and `/packages help` prints its help.** The help lists `/packages`, `/packages refresh`, and `/packages <package>`. `/package help` does not list them.
+**`/packages` is a command domain of its own, and `/packages help` prints its help.** The help lists `/packages`, `/packages update`, and `/packages <package>`. `/package help` does not list them.
 
 ## One package
 
 **`/packages <package>` acts on one installed package.** Where an act follows the name, carry it out. Where none does, show the package's row from the table, then ask which act is meant, through the selection interface, with the acts the package can take now:
 
-- **refresh** — `/package refresh <package>`: refresh it from its repository, under the package-refresh-and-install-run-foundations-scripts rule.
+- **update** — `/package update <package>`: refresh it from its repository, under the package-refresh-and-install-run-foundations-scripts rule.
 - **deactivate** — `/package deactivate <package>`, offered only where the package is Active.
 - **activate** — `/package activate <package>`, offered only where the package is Deactivated.
 
