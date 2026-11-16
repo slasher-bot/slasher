@@ -4,7 +4,10 @@ FEATURES
 
   /feature new                     Create its branch and an Open record
   /feature new with phases         Create it, asking for its phases
-  /feature status                  Phases, current phase, and its goal
+  /feature status [<feature>]      Phases, state, what exists, and
+                                   what is left. <feature>: a number
+                                   from the last list, a datetime, or
+                                   words from the title
   /feature start, /start           Open -> Active, or, where none is
                                    Open, create one Active
   /feature complete, /complete     -> Completed, or asks which state
