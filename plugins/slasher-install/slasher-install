@@ -10,6 +10,9 @@
 #   sh slasher-install content          a package set
 #   sh slasher-install foundation git   packages by name
 #   sh slasher-install --list           the sets and packages it can install
+#   sh slasher-install --append-agents-md
+#                                       append the bootstrap to an existing AGENTS.md
+#                                       without asking, beside any names
 #
 # `sh slasher-install`, not `./slasher-install`, and this is the one script here written that way. It is
 # committed executable like every other, but it is also the only one delivered by `curl`,
@@ -46,7 +49,7 @@ set_packages() {
       printf '%s' "foundation language testing git versioning design-by-efferent journal"
       ;;
     content)
-      printf '%s' "foundation language git versioning journal"
+      printf '%s' "foundation language git versioning journal prose"
       ;;
     *)
       return 1
@@ -160,6 +163,18 @@ package_repository() {
   esac
 }
 
+# --append-agents-md is not a name. It answers in advance the question install.sh asks where the
+# project already has an AGENTS.md, so it is taken out of the names and passed on.
+agents_md_answer=
+names=
+for name in "$@"; do
+  case $name in
+    --append-agents-md) agents_md_answer=--append-agents-md ;;
+    *) names="${names}${names:+ }${name}" ;;
+  esac
+done
+set -- $names
+
 # The arguments are a list of names, and a name is a package set or a package. With no arguments
 # the list is the one name `default`.
 if [ $# -eq 0 ]; then
@@ -182,4 +197,4 @@ done
 # Activate the system: place the project-root AGENTS.md. Foundation is
 # installed above, so run its AGENTS.md-only mode (it won't re-add itself).
 # The bootstrap logic lives only in slasher/system/foundation/install.sh — not duplicated here.
-slasher/system/foundation/install.sh agents-md
+slasher/system/foundation/install.sh agents-md $agents_md_answer
