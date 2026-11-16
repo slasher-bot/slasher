@@ -17,7 +17,7 @@
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/commit-and-push-command`
-- **Base:** recorded on the implementation branch, since it is the commit holding this record as first written
+- **Base:** `293ae6c5`, from `master`, the commit holding this record as first written
 - **Working location:** branch only, chosen when the feature was created.
 - **Participation:** unattended, chosen when the feature was created.
 - **Forecast:** none. The verdict question is not asked.
@@ -33,3 +33,4 @@
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:08:27 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 4:08:27 PM PT
