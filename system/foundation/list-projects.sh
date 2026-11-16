@@ -1,6 +1,6 @@
 #!/bin/sh
 # Read the Slasher projects on this machine — the projects that have installed
-# the Slasher packages — and print the actionable set, one path per line.
+# the Slasher packages — and print them, one path per line.
 #
 # Run from the root of any project that has installed Slasher. This script lives
 # inside the package, so it is invoked by its path from that root:
@@ -13,10 +13,6 @@
 # Slasher into more than one project, not only whoever maintains Slasher. The
 # authoring tools at the composite root run against the packages; this runs
 # beside projects, which is a third position and the reason it is here.
-#
-# "All Slasher projects" means the projects that are not excluded. An excluded
-# path is not printed, not marked, and not counted; nothing is done to it, which
-# is what excluding it does. So this output and that phrase are the same list.
 #
 # It only reads. It detects nothing about a project's condition — not what is
 # installed, not what is behind, not whether a tree is clean — reaches no
@@ -39,53 +35,37 @@ registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/projects.toml}
 
 # --- The registry ----------------------------------------------------------
 #
-# The accepted subset of TOML, and nothing else:
-#
-#   included = [
-#     "~/projects",           # a trailing comment is allowed
-#     "~/work/some-project",
-#   ]
-#
-#   excluded = [
-#     "~/projects/old-clone",
-#   ]
+# Each Slasher project is one [[project]] entry, and the registry is nothing
+# else:
 #
 #   [[project]]
-#   path = "~/projects/some-project"
+#   path = "~/projects/some-project"   # a trailing comment is allowed
 #   journal = "private"
 #
-# Blank lines and full-line comments are ignored. A path is a quoted string
-# alone on its line, with an optional trailing comma. Both keys are optional.
+# Blank lines and full-line comments are ignored. An entry's lines are a name,
+# =, and a quoted string. Its path is the project's root, and a leading ~ is
+# this machine's home directory. Its other lines are the project's own
+# settings, which read-project-setting.sh reads, and none of them is read here.
 #
-# A [[project]] table is one project's own settings, which
-# read-project-setting.sh reads. Its lines are a name, =, and a quoted string,
-# and none of them is read here. As in TOML, every line after a table header
-# belongs to the table, so included and excluded come before the first
-# [[project]] table.
-#
-# TOML permits more than this — an inline array on one line, multi-line strings,
-# other keys — and none of it is read here. Anything outside the subset is
-# REFUSED, naming the line that caused it, and never skipped: a registry read in
-# part would report a partial set as though it were the whole one, which is the
-# silent failure this script exists to remove.
+# Anything outside this form is REFUSED, naming the line that caused it, and
+# never skipped: a registry read in part would report a partial set as though it
+# were the whole one. That includes the included and excluded lists an earlier
+# registry used to name the folders to search. Each project is now named by its
+# own entry.
 
 if [ ! -f "$registry" ]; then
   echo "No registry at $registry" >&2
   echo >&2
-  echo "Create it, naming the directories to walk:" >&2
+  echo "Create it, with an entry for each project:" >&2
   echo >&2
-  echo "  included = [" >&2
-  echo "    \"~/projects\"," >&2
-  echo "  ]" >&2
+  echo "  [[project]]" >&2
+  echo "  path = \"~/projects/some-project\"" >&2
   exit 1
 fi
 
-included=$(mktemp)
-excluded=$(mktemp)
-found=$(mktemp)
-trap 'rm -f "$included" "$excluded" "$found"' EXIT
+paths=$(mktemp)
+trap 'rm -f "$paths"' EXIT
 
-key=""
 in_project=""
 line_number=0
 
@@ -93,9 +73,10 @@ refuse() {
   echo "$registry, line $line_number: $1" >&2
   echo "  $line" >&2
   echo >&2
-  echo "The accepted form is a quoted path alone on its line, inside" >&2
-  echo "included = [ or excluded = [ and closed by ]. See the comments at the" >&2
-  echo "top of this script for the whole of what is read." >&2
+  echo "Each project is a [[project]] entry, with its root as its path:" >&2
+  echo >&2
+  echo "  [[project]]" >&2
+  echo "  path = \"~/projects/some-project\"" >&2
   exit 1
 }
 
@@ -109,70 +90,34 @@ while IFS= read -r line || [ -n "$line" ]; do
     '' | '#'*)
       continue
       ;;
+    '[[project]]')
+      in_project=yes
+      continue
+      ;;
+    included* | excluded*)
+      refuse "the included and excluded lists are not read; name each project in a [[project]] entry"
+      ;;
   esac
 
-  if [ "$trimmed" = "[[project]]" ] && [ -z "$key" ]; then
-    in_project=yes
-    continue
+  if [ -z "$in_project" ]; then
+    refuse "expected [[project]]"
   fi
 
-  if [ -n "$in_project" ]; then
-    case $trimmed in
-      included* | excluded*)
-        refuse "included and excluded come before the first [[project]] table" ;;
-    esac
-
-    if ! printf '%s' "$trimmed" | grep -q '^[A-Za-z0-9_-]\{1,\}[[:space:]]*=[[:space:]]*"[^"]*"$'; then
-      refuse "expected a name = \"value\" line in a [[project]] table"
-    fi
-
-    continue
-  fi
-
-  if [ -z "$key" ]; then
-    case $trimmed in
-      included* | excluded*)
-        name=${trimmed%%[![:alpha:]]*}
-        rest=$(printf '%s' "$trimmed" | sed "s/^$name[[:space:]]*//")
-
-        case $rest in
-          '=['*)
-            rest=$(printf '%s' "$rest" | sed 's/^=[[:space:]]*//')
-            ;;
-          '='*)
-            rest=$(printf '%s' "$rest" | sed 's/^=[[:space:]]*//')
-            ;;
-          *)
-            refuse "expected $name = [" ;;
-        esac
-
-        if [ "$rest" != "[" ]; then
-          refuse "expected the array to open with [ alone; an inline array is not read"
-        fi
-
-        key=$name
-        ;;
-      *)
-        refuse "expected included = [, excluded = [, or [[project]]" ;;
-    esac
-
-    continue
-  fi
-
-  if [ "$trimmed" = "]" ]; then
-    key=""
-    continue
-  fi
-
-  # A quoted path, an optional trailing comma, an optional trailing comment.
-  path=$(
+  # A name, =, a quoted string, and an optional trailing comment.
+  name=$(
     printf '%s' "$trimmed" |
-      sed -n 's/^"\([^"]*\)"[[:space:]]*,\{0,1\}[[:space:]]*\(#.*\)\{0,1\}$/\1/p'
+      sed -n 's/^\([A-Za-z0-9_-]\{1,\}\)[[:space:]]*=[[:space:]]*"[^"]*"[[:space:]]*\(#.*\)\{0,1\}$/\1/p'
   )
 
-  if [ -z "$path" ]; then
-    refuse "expected a quoted path, or ] to close $key"
+  if [ -z "$name" ]; then
+    refuse "expected a name = \"value\" line in a [[project]] entry"
   fi
+
+  if [ "$name" != "path" ]; then
+    continue
+  fi
+
+  path=$(printf '%s' "$trimmed" | sed 's/^[^"]*"\([^"]*\)".*$/\1/')
 
   # A leading ~ is this machine's home directory. Nothing else is expanded.
   case $path in
@@ -180,91 +125,37 @@ while IFS= read -r line || [ -n "$line" ]; do
     '~/'*) path=$HOME${path#\~} ;;
   esac
 
-  # Trailing slashes would defeat the prefix test the exclusions use.
+  # A trailing slash would make one project read as two.
   while [ "$path" != "/" ] && [ "${path%/}" != "$path" ]; do
     path=${path%/}
   done
 
-  case $key in
-    included) printf '%s\n' "$path" >> "$included" ;;
-    excluded) printf '%s\n' "$path" >> "$excluded" ;;
-  esac
+  printf '%s\n' "$path" >> "$paths"
 done < "$registry"
 
-if [ -n "$key" ]; then
-  echo "$registry: $key = [ is never closed by ]" >&2
-  exit 1
-fi
-
-# --- Discovery -------------------------------------------------------------
+# --- The projects ----------------------------------------------------------
 #
-# A Slasher project is a git repository whose root holds slasher/system/ —
-# the discriminator refresh-packages.sh already applies, reused rather than
-# defined a second time. This repository is excluded by it without a special
-# case: the authoring source holds system/foundation with no wrapper.
-#
-# Each included path is walked, and the path itself is tested before anything
-# beneath it, so a path that IS a Slasher project is found at depth zero and a
-# path that CONTAINS them is walked. Nothing distinguishes the two kinds of
-# entry, because nothing has to.
-#
-# A found project is not descended into: a Slasher project does not hold
-# another one, and pruning keeps the walk off its history and its dependencies.
+# A Slasher project is a git repository whose root holds slasher/system/ — the
+# discriminator refresh-packages.sh already applies, reused rather than defined
+# a second time. This repository is not one: the authoring source holds
+# system/foundation with no wrapper. An entry whose path is not a Slasher
+# project is reported and skipped, and the others are still listed.
 
-while IFS= read -r root; do
-  if [ ! -d "$root" ]; then
-    echo "Not a directory, skipped: $root" >&2
-    continue
-  fi
+listed=0
 
-  find "$root" -type d -path '*/slasher/system' -prune -print 2>/dev/null |
-    while IFS= read -r match; do
-      project=${match%/slasher/system}
+sort -u "$paths" -o "$paths"
 
-      # .git is a directory in an ordinary clone and a file in a worktree.
-      if [ -e "$project/.git" ]; then
-        printf '%s\n' "$project" >> "$found"
-      fi
-    done
-done < "$included"
-
-# --- The actionable set ----------------------------------------------------
-#
-# An excluded path removes the project at it and every project beneath it, so
-# excluding a directory excludes what it contains rather than only itself.
-
-actionable=0
-
-if [ -s "$found" ]; then
-  sort -u "$found" | while IFS= read -r project; do
-    skip=""
-
-    if [ -s "$excluded" ]; then
-      while IFS= read -r exclusion; do
-        if [ "$project" = "$exclusion" ] || [ "${project#"$exclusion"/}" != "$project" ]; then
-          skip=yes
-          break
-        fi
-      done < "$excluded"
-    fi
-
-    if [ -z "$skip" ]; then
-      printf '%s\n' "$project"
-    fi
-  done > "$found.actionable"
-
-  actionable=$(wc -l < "$found.actionable" | tr -d '[:space:]')
-  cat "$found.actionable"
-  rm -f "$found.actionable"
-fi
-
-# Nothing found and everything excluded are different states with different
-# remedies, so they are not reported with one message: the first sends the
-# engineer to the included paths, the second to the exclusions.
-if [ "$actionable" -eq 0 ]; then
-  if [ -s "$found" ]; then
-    echo "Every Slasher project found is excluded by $registry" >&2
+# Read from the file rather than a pipe, so the count is not lost in a subshell.
+while IFS= read -r project; do
+  # .git is a directory in an ordinary clone and a file in a worktree.
+  if [ -d "$project/slasher/system" ] && [ -e "$project/.git" ]; then
+    printf '%s\n' "$project"
+    listed=$((listed + 1))
   else
-    echo "No Slasher projects found under the included paths in $registry" >&2
+    echo "Not a Slasher project, skipped: $project" >&2
   fi
+done < "$paths"
+
+if [ "$listed" -eq 0 ]; then
+  echo "No Slasher projects are listed in $registry" >&2
 fi

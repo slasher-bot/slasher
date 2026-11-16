@@ -17,9 +17,8 @@
 #   journal = "private"
 #
 # A value is a quoted string alone on its line. A leading ~ in a path is this
-# machine's home directory. Every other line of the registry, such as the
-# included and excluded arrays, is outside any [[project]] table and is not
-# read here.
+# machine's home directory. Whether the registry is in the form list-projects.sh
+# accepts is that script's concern, not this one's.
 #
 # Where the project has no entry, the entry has no such key, or no registry
 # exists, it prints nothing and succeeds. A machine without the setting is the

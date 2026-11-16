@@ -32,9 +32,11 @@ mkdir -p "$control_other_project/slasher/system"
 git init -q "$control_other_project"
 
 cat > "$registry/projects.toml" <<REGISTRY
-included = [
-  "$registry/projects",
-]
+[[project]]
+path = "$control_project"
+
+[[project]]
+path = "$control_other_project"
 REGISTRY
 
 # Actuation ------------------------------------------------------------------
