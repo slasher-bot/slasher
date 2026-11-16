@@ -1,6 +1,6 @@
 # Convert consuming projects to project entries that replace the lists
 
-**State:** Active
+**State:** Realized
 
 **Tags:** [idea]
 
@@ -25,3 +25,4 @@ Authored by Scott Bellware on Sun Nov 15 2026 at 11:20:02 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:07:29 AM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:08:49 AM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:15:09 AM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 12:20:55 PM PT
