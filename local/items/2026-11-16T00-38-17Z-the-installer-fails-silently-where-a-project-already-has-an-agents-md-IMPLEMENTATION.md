@@ -20,6 +20,8 @@ The failure was reproduced in a test project holding its own `AGENTS.md`, by run
 5. `/install` runs `slasher-install` through the agent, so standard input is never a terminal there. Every `/install` into a project with an `AGENTS.md` leaves it unchanged. The `install` skill says nothing of the warning.
 6. Run in a terminal, as `sh slasher-install`, the installer asks whether to append the bootstrap.
 
+**A note, 2026-11-15:** an existing `CLAUDE.md` that does not import `AGENTS.md` is skipped the same way. With no terminal, the installer prints that it was not modified, and goes on. The feature for this item does not change that.
+
 **Implementation:** `2026-11-16T00-59-24Z-existing-agents-md-install`
 
 ---
@@ -27,3 +29,4 @@ The failure was reproduced in a test project holding its own `AGENTS.md`, by run
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:38:17 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 4:47:41 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 5:21:45 PM PT
