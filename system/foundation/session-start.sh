@@ -22,8 +22,8 @@
 # Never let a notice break a session start.
 set +e
 
-# Locate the system: slasher/system/ in a consuming project, system/
-# in the Slasher authoring source. Checked in that order — a consuming project
+# Locate the system: slasher/system/ in a Slasher project, system/
+# in the Slasher authoring source. Checked in that order — a Slasher project
 # may have a system/ directory of its own.
 if [ -d slasher/system ]; then
   system=slasher/system
@@ -72,7 +72,7 @@ fi
 notice=$(printf 'Slasher installed at %s/ — %s %s: %s' \
   "$system" "$count" "$noun" "$list")
 
-# Locate the project's own working state: slasher/local/ in a consuming project,
+# Locate the project's own working state: slasher/local/ in a Slasher project,
 # local/ in the Slasher authoring source — the same two-layout check the packages get.
 if [ -d slasher/local ]; then
   own=slasher/local
@@ -105,7 +105,7 @@ fi
 # being corrected. A project with no local rules yet is the ordinary case, not an error, and a
 # fixed instruction is one string rather than one per project layout.
 #
-# The path defaults to the consuming-project layout, which is what an install produces; the
+# The path defaults to the layout of a Slasher project, which is what an install produces; the
 # authoring source is detected the same way the packages are.
 own_rules=${own:-slasher/local}
 

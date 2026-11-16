@@ -26,7 +26,7 @@ git subtree pull --prefix slasher/system/prose git@github.com:slasher-bot/prose.
 
 **Over HTTPS**, where no SSH key is registered, use `https://github.com/slasher-bot/prose.git` in place of the address above. A script takes `SLASHER_ORIGIN=https://github.com/slasher-bot` for the same reason.
 
-It depends on `foundation`. Install its dependencies from the root of the consuming project:
+It depends on `foundation`. Install its dependencies from the root of the Slasher project:
 
 ```
 slasher/system/prose/install-dependencies.sh

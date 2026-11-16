@@ -57,7 +57,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 
 - **A startup display, in two parts.** As the session starts, the session-start part frames the notice: the title and the copyright and license ahead of it, and the load line after it, last. The loading part, the loading line and then the figure, prints on the session's first prompt, whatever it is: the plugin's `UserPromptSubmit` hook runs `slasher/system/foundation/startup-display.sh` on every prompt, and it prints on the first only. Both read them from the the-startup-display-prints-as-the-session-starts rule, which governs the display.
 
-The notice and the display are wired by the hooks of the Slasher plugin, in `.claude/skills/slasher/`, which `install.sh` assembles in the consuming project. The status line is wired by a committed `.claude/settings.json`, which `install.sh` places too, because a plugin cannot set the main status line.
+The notice and the display are wired by the hooks of the Slasher plugin, in `.claude/skills/slasher/`, which `install.sh` assembles in the Slasher project. The status line is wired by a committed `.claude/settings.json`, which `install.sh` places too, because a plugin cannot set the main status line.
 
 - **The hook also carries the read instruction to the agent, on a separate channel.** The `SessionStart` hook emits two things, addressed to two different readers. The **notice** goes in `systemMessage`, which the harness renders for the engineer. The **instruction to read the rules** goes in `hookSpecificOutput.additionalContext`, which reaches the agent's context and is never displayed. They are not the same text, because they are not for the same reader. The engineer does not need an instruction addressed to the agent restated every session.
 
@@ -137,7 +137,7 @@ What it never silenced was the read instruction itself — quieting a display mu
 
 The two failures have one source: the party being announced was also the announcer. Moving the notice to the harness removes the dependence on agent compliance. It puts the message outside the response body, where it neither competes with an answer nor hides inside one. The ordering problem disappears with it. That is whether the notice precedes the first response, and a hook runs before the session rather than inside it.
 
-**How to apply:** wire the notice and the display through the Slasher plugin's `SessionStart` and `UserPromptSubmit` hooks, and the status line through `.claude/settings.json`, each pointing at its foundation script. `install.sh` does this for a consuming project. Never print a session-start notice as an agent.
+**How to apply:** wire the notice and the display through the Slasher plugin's `SessionStart` and `UserPromptSubmit` hooks, and the status line through `.claude/settings.json`, each pointing at its foundation script. `install.sh` does this for a Slasher project. Never print a session-start notice as an agent.
 
 Keep the mark out of the notice's own text — the startup display carries it, ahead of the notice, and the the-startup-display-prints-as-the-session-starts rule governs it. Keep the scripts reading the real directories rather than asserting a list. Keep the notice claiming **installation** rather than a load. The word has to stay inside what a pre-session hook can observe.
 
@@ -259,7 +259,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 
 1. The committed Slasher plugin, `.claude/skills/slasher/`, wires the notice and the display through its `SessionStart` and `UserPromptSubmit` hooks.
 2. A committed `.claude/settings.json` wires the status line, since a plugin cannot set the main status line.
-3. `install.sh` assembles the plugin and places `.claude/settings.json` in a consuming project.
+3. `install.sh` assembles the plugin and places `.claude/settings.json` in a Slasher project.
 4. `install.sh` warns when git ignores `.claude/settings.json` or the plugin and the file is not tracked, and prints how to correct it.
 5. The fix is `.claude/*` with `!.claude/settings.json` and `!.claude/skills/`, since git cannot re-include a file inside an excluded directory.
 6. The fix keeps `.claude/settings.local.json` ignored.
@@ -312,6 +312,8 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 - 2026-11-14, revised: point 6 says the load line is left out where Claude Code was started with `/load`; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
 Until Sat Nov 14 2026 the load line followed the notice at every session start, including one started with `/load`.
 
@@ -473,3 +475,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:19:02 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT

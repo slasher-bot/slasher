@@ -27,7 +27,7 @@ fail() {
   exit 1
 }
 
-# A scratch project in the consuming-project layout, which is what an install produces.
+# A scratch project in the layout of a Slasher project, which is what an install produces.
 project() {
   path="$tmp/$1"
   mkdir -p "$path/slasher/system/foundation" "$path/slasher/local"

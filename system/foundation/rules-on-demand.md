@@ -920,7 +920,7 @@ Trigger: When creating and naming a new file under slasher/local/ or a new rule 
 1. A dated artifact takes the datetime prefix. A dated artifact is something a project accrues over time, ordered by when it was made.
 2. The contemporaneous, historical records under `logs/` take it: the log (`logs/log/`), `logs/loops/`, and `logs/work-sessions/`.
 3. The work-artifact directories `items/`, `implementations/`, and `migration/` take it.
-4. A consuming project's own local rules, the ones it adds to its `slasher/local/rules/`, take it. A local rule is a dated decision in that project's history.
+4. A Slasher project's own local rules, the ones it adds to its `slasher/local/rules/`, take it. A local rule is a dated decision in that project's history.
 5. Prefix every new working-state artifact with the full `YYYY-MM-DDTHH-MM-SSZ-` UTC datetime.
 6. Prefix every local rule a project adds the same way.
 
@@ -1057,7 +1057,7 @@ Trigger: When the engineer asks to refresh or install Slasher's packages, as wit
 1. `/package refresh [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them.
 2. `/package install` installs Slasher into the project the session is in. Run foundation's `install.sh` from that project's root. The installer asks before changing a file the project already has.
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
-4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would overwrite with a consuming project's bootstrap.
+4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would overwrite with a Slasher project's bootstrap.
 5. Say that a refreshed or installed rule is read at the next load of the rules: a session restart, or `load rules`.
 
 # Packages lists the installed packages
@@ -1104,7 +1104,7 @@ Source: system/foundation/source/projects-lists-the-registry-and-carries-out-an-
 
 Trigger: When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -base`, `/projects -system`, or `/projects <name>`
 
-1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `read-consuming-projects.sh`, which reads `~/.config/slasher/consuming-projects.toml`, and print its report. Where there is no registry, say so.
+1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `list-projects.sh`, which reads `~/.config/slasher/index.toml`, and print its report. Where there is no registry, say so.
 2. `/projects -base <instruction>`, `/projects -system <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the base project, the machine's system project, or the registered project with that name.
 3. Resolve the target from the current project's root with `slasher/system/foundation/resolve-project.sh -base`, `-system`, or `<name>`, or `system/foundation/resolve-project.sh` where there is no `slasher/` directory. It prints the target's root.
 4. Where the script fails, report its message and do nothing more.
@@ -1286,7 +1286,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 
 1. The committed Slasher plugin, `.claude/skills/slasher/`, wires the notice and the display through its `SessionStart` and `UserPromptSubmit` hooks.
 2. A committed `.claude/settings.json` wires the status line, since a plugin cannot set the main status line.
-3. `install.sh` assembles the plugin and places `.claude/settings.json` in a consuming project.
+3. `install.sh` assembles the plugin and places `.claude/settings.json` in a Slasher project.
 4. `install.sh` warns when git ignores `.claude/settings.json` or the plugin and the file is not tracked, and prints how to correct it.
 5. The fix is `.claude/*` with `!.claude/settings.json` and `!.claude/skills/`, since git cannot re-include a file inside an excluded directory.
 6. The fix keeps `.claude/settings.local.json` ignored.

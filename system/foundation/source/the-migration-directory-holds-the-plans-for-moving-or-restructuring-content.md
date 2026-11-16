@@ -2,7 +2,7 @@
 
 `slasher/local/migration/` holds **migration records**: the execution plans for moving or restructuring content, and the record of how each move actually went. **A migration is a structural change**: content moved across a repository boundary, or the layout of a project's files changed within one. **A change to a norm or standard that existing content must be conformed to is a migration too**: a tag renamed, a term substituted, or a format changed, where records already written carry the old form.
 
-- **When to use:** content is to cross out of this repository or into it, or the structure it sits in is to change. A library extracted into its own repository, a body of work moved to a project that will own it, one repository split into several or several merged into one, or existing conventions migrated into an installed system. A directory renamed or regrouped, as the contemporaneous, historical records were grouped under `logs/`, or a set of files restructured, is a migration too. If content ends up under a different root, or in a different structure, it belongs here. So does a change to a norm or standard, such as the `[work-item]` tag becoming `[work]`, when existing content in this repository or in a consuming project has to be conformed to it.
+- **When to use:** content is to cross out of this repository or into it, or the structure it sits in is to change. A library extracted into its own repository, a body of work moved to a project that will own it, one repository split into several or several merged into one, or existing conventions migrated into an installed system. A directory renamed or regrouped, as the contemporaneous, historical records were grouped under `logs/`, or a set of files restructured, is a migration too. If content ends up under a different root, or in a different structure, it belongs here. So does a change to a norm or standard, such as the `[work-item]` tag becoming `[work]`, when existing content in this repository or in a Slasher project has to be conformed to it.
 - **What distinguishes it from an item that sequences work.** Such an item sequences a **build**, against something this repository settled. A migration plan sequences a change to **where existing content lives, or to the form it is written in**: the order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed. Across repositories, the increments land in two, and the plan is not concluded when this repository's part is done.
 - **The record stays after the content has moved.** This is the reason the directory is separate and the reason a migration record is not deleted on completion. When content moves, the trail of **where it went and why** is lost unless something here holds that trail. A reader asking what became of something finds the answer here, rather than having to know where to look next.
 - **Format:** the same frontmatter-free markdown as rules — a `# <title>`, then prose. State the **source and destination** outright — the repositories, or the old and new places within one — the **increments in order**, and what is true in between — what is duplicated, what is unavailable, and what is authoritative while the move is under way. Record what actually happened against the plan as the work proceeds.
@@ -23,7 +23,7 @@ Planning it where the content is before it moves puts the plan beside it. Keepin
 4. Plan a move here when content ends up under a different root, or in a different structure.
 5. Examples: a library extracted into its own repository, or work moved to a project that will own it.
 6. Further examples: one repository split into several, several merged into one, existing conventions migrated into an installed system, or a directory renamed or regrouped.
-7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a consuming project.
+7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project.
 8. Do not use an ordinary item for a migration.
 9. An item sequences a build, against something this repository settled.
 10. A migration plan sequences a change to where existing content lives, or to the form it is written in. Across repositories, its increments land in two.
@@ -52,6 +52,8 @@ Planning it where the content is before it moves puts the plan beside it. Keepin
 - 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
 
 ## History
+
+Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
 Until Sun Nov 15 2026 this rule said *finish* where it now says *conclude*. The begin, start, end, conclude work item settled that *conclude* replaces *finish*.
 
@@ -106,3 +108,4 @@ Changed by Scott Bellware on Thu Oct 29 2026 at 6:38:54 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT

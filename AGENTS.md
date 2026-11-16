@@ -12,19 +12,19 @@ Read `system/foundation/` first. It defines the system. The rules override defau
 
 `system/foundation/statusline.sh` keeps the system's presence in the status line for the rest of the session. It sits beside the working directory, the branch, and any uncommitted, untracked, or unpushed work. Neither can be silenced.
 
-In a consuming project `install.sh` places the plugin and the equivalent `.claude/settings.json`. Here in the source both are committed like this file.
+In a Slasher project `install.sh` places the plugin and the equivalent `.claude/settings.json`. Here in the source both are committed like this file.
 
 The `local/` directory holds this project's own working state. That is `logs/`, `items/`, `implementations/`, and `migration/`. They are worked with as their conventions describe, not read as binding rules at session start. **`logs/` groups the contemporaneous, historical records** — `logs/log/`, `logs/loops/`, and `logs/work-sessions/` — which sat directly under `local/` until 2026-08-18. **The deferred queue is gone** — work postponed mid-task is an ordinary item carrying a `**Waits for:**` line, and the queue's convention, its reserved tag, its session-start print, and its command were all suspended on 2026-08-25.
 
 **`local/journal/` is the exception, and it is read.** The `journal` package's the-journal-is-read-at-the-start-of-a-session-with-the-rules rule directs the read, after the rules and the vocabularies, oldest entry first. It binds nothing — see that package's a-journal-entry-is-read-and-never-followed rule. It was `local/diary/` until 2026-08-18, and the package that governs it was `diary`. Records already written keep that word, since a rename does not reach a historical record.
 
-**This repository drops the `slasher/` wrapper that a consuming project has.** There, the two directories sit under it — `slasher/system/` for the installed packages and `slasher/local/` for the project's own work. Here they are at the root, `system/` and `local/`, for the same reason the packages are. This *is* Slasher, so wrapping it in its own name says nothing. Every rule states the consuming-project path. Read `slasher/system/` as `system/` and `slasher/local/` as `local/` when applying one here.
+**This repository drops the `slasher/` wrapper that a Slasher project has.** There, the two directories sit under it — `slasher/system/` for the installed packages and `slasher/local/` for the project's own work. Here they are at the root, `system/` and `local/`, for the same reason the packages are. This *is* Slasher, so wrapping it in its own name says nothing. Every rule states the path in a Slasher project. Read `slasher/system/` as `system/` and `slasher/local/` as `local/` when applying one here.
 
 `local/migration/` is now defined by a rule, foundation's the-migration-directory-holds-the-plans-for-moving-or-restructuring-content rule. That rule makes it the place every Slasher project writes execution plans for transitions of content across a repository boundary. What it holds *here* is one such transition: the design and execution records of migrating `constant`'s rules into the Slasher packages. **Its files predate the convention** and keep their date-only names, since a datetime is not revised to a resolution it never had. New records take the ISO-8601-UTC prefix. `CONTRIBUTING.md` still points at its phase-B runbook for the publish procedure — a live procedure sitting in a historical record, which wants relocating.
 
-**Do not run `system/foundation/install.sh` in this repo.** It installs the packages into a *consuming* project and generates that project's `slasher/system/` AGENTS.md. Running it here would append the consuming-project bootstrap to this file.
+**Do not run `system/foundation/install.sh` in this repo.** It installs the packages into a Slasher project and generates that project's `slasher/system/` AGENTS.md. Running it here would append a Slasher project's bootstrap to this file.
 
-The root `CLAUDE.md` is a one-line `@AGENTS.md` import. Claude Code reads `CLAUDE.md`, not `AGENTS.md`, so the import is what makes this bootstrap load in a Claude Code session. In a consuming project `install.sh` places the same `CLAUDE.md` bridge alongside the generated `AGENTS.md`. Here in the source it is hand-maintained like this file.
+The root `CLAUDE.md` is a one-line `@AGENTS.md` import. Claude Code reads `CLAUDE.md`, not `AGENTS.md`, so the import is what makes this bootstrap load in a Claude Code session. In a Slasher project `install.sh` places the same `CLAUDE.md` bridge alongside the generated `AGENTS.md`. Here in the source it is hand-maintained like this file.
 Changed by Scott Bellware on Sun Aug 9 2026 at 6:06:52 PM PT
 Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
 Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
@@ -41,3 +41,4 @@ Changed by Scott Bellware on Mon Oct 12 2026 at 1:00:17 PM PT
 Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
 Changed by Scott Bellware on Tue Nov 3 2026 at 3:52:10 PM PT
 Changed by Scott Bellware on Wed Nov 4 2026 at 6:22:34 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:56 PM PT

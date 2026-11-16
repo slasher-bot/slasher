@@ -1,9 +1,9 @@
 #!/bin/sh
-# Install (or refresh) Slasher packages into a consuming project, then
+# Install (or refresh) Slasher packages into a Slasher project, then
 # activate the system by placing the project-root AGENTS.md, a CLAUDE.md that
 # imports it (Claude Code reads CLAUDE.md, not AGENTS.md), and a .claude/settings.json
 # whose SessionStart hook and status line print the session-start notice.
-# Fetch it into the root of the consuming project and run it from there:
+# Fetch it into the root of the Slasher project and run it from there:
 #
 #   curl -O https://raw.githubusercontent.com/slasher-bot/slasher/master/slasher-install
 #   sh slasher-install                  the default set
@@ -112,9 +112,9 @@ if [ ! -d .git ] && ! git rev-parse --git-dir >/dev/null 2>&1; then
   esac
 fi
 
-# The authoring source holds the packages at system/, with no slasher/ wrapper; a consuming
+# The authoring source holds the packages at system/, with no slasher/ wrapper; a Slasher
 # project holds them at slasher/system/. Installing here would add a second, installed copy of
-# every package beside the ones being written, and place a consuming project's bootstrap over
+# every package beside the ones being written, and place a Slasher project's bootstrap over
 # this repository's own. The same refusal is in refresh-packages.sh.
 if [ -d system/foundation ] && [ ! -d slasher/system ]; then
   echo "This is the Slasher authoring source, where the packages are written rather than" >&2

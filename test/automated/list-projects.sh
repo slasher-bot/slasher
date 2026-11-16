@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/read-consuming-projects.sh
+#   test/automated/list-projects.sh
 #
 # Run from the repository root.
 set -e
@@ -23,7 +23,7 @@ control_project="$registry/projects/some-project"
 mkdir -p "$control_project/slasher/system"
 git init -q "$control_project"
 
-cat > "$registry/consuming-projects.toml" <<REGISTRY
+cat > "$registry/index.toml" <<REGISTRY
 included = [
   "$registry/projects",
 ]
@@ -35,7 +35,7 @@ REGISTRY
 
 # Actuation ------------------------------------------------------------------
 
-projects=$(SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/read-consuming-projects.sh)
+projects=$(SLASHER_REGISTRY="$registry/index.toml" system/foundation/list-projects.sh)
 
 [ "$projects" = "$control_project" ] || fail "Lists the included projects" "projects:" "$projects"
 

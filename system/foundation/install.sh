@@ -6,7 +6,7 @@
 # a CLAUDE.md that imports it (Claude Code reads CLAUDE.md, not AGENTS.md), the Slasher plugin
 # in .claude/skills/slasher/, whose SessionStart hook prints the startup display and the
 # session-start notice, and a .claude/settings.json whose status line keeps the system on screen.
-# Run from the root of the consuming project. This script lives inside the package it
+# Run from the root of the Slasher project. This script lives inside the package it
 # installs, so once foundation is present it is invoked by its path from that root — not
 # as `./install.sh`, which would name a file in the project root that is not there.
 #

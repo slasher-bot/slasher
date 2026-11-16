@@ -6,7 +6,7 @@ How the packages are authored and published. If you only want to *use* a package
 
 **This composite repo is where all authoring happens.** It holds every package as a directory under `system/` (`system/foundation`, `system/testing`, …) under one shared history. Add or refine a rule here. A change spanning several packages is one atomic commit, since the packages live together. The whole rule set can be read, grepped, and consolidated in one place. This is the source of truth.
 
-**Each package also has its own repository** in the `slasher` org — `foundation`, `testing`, `git`, and so on. A grouped package's repository is its installed path with the slash flattened to a dash, so a grouped `ext/some-tool` gives `slasher/ext-some-tool`. A package may declare a different one, and the Ruby package does. Each holds a single package's files at its root. These are how a consuming project installs a package.
+**Each package also has its own repository** in the `slasher` org — `foundation`, `testing`, `git`, and so on. A grouped package's repository is its installed path with the slash flattened to a dash, so a grouped `ext/some-tool` gives `slasher/ext-some-tool`. A package may declare a different one, and the Ruby package does. Each holds a single package's files at its root. These are how a Slasher project installs a package.
 
 **One package is not authored here.** `ext/ruby-lang` moved out of this composite on 2026-08-21 and is authored in `slasher-bot/slasher-ruby` directly. Nothing splits into it, so it is not downstream-only and the rule below does not reach it. Its dependency is every package this composite holds, which is what makes installing it enough for a Ruby project. See the migration record *The Ruby package moves to `tools-ruby-lang`*.
 
@@ -72,12 +72,12 @@ The one-time distribution that first created the component repositories was reco
 
 ## Push-back (fallback only)
 
-The normal way to change a rule is to edit it in the composite repo and re-publish. Do **not** treat editing an installed package inside a consuming project as a routine authoring path.
+The normal way to change a rule is to edit it in the composite repo and re-publish. Do **not** treat editing an installed package inside a Slasher project as a routine authoring path.
 
-The one exception: you spot a fix while deep in a consuming project and don't want to lose it. Two ways to capture it, preferred first:
+The one exception: you spot a fix while deep in a Slasher project and don't want to lose it. Two ways to capture it, preferred first:
 
-1. **Make the fix in the composite repo** and `git subtree pull` it back down into the consuming project. Cleanest — the change originates where the source lives.
-2. **Push it back from the consuming project.** Commit the edit in the project's `slasher/system/testing/`, then:
+1. **Make the fix in the composite repo** and `git subtree pull` it back down into the Slasher project. Cleanest — the change originates where the source lives.
+2. **Push it back from the Slasher project.** Commit the edit in the project's `slasher/system/testing/`, then:
 
    ```
    git subtree push --prefix slasher/system/testing git@github.com:slasher-bot/testing.git master

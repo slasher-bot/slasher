@@ -1,11 +1,11 @@
 #!/bin/sh
-# Read the consuming projects on this machine — the projects that have installed
+# Read the Slasher projects on this machine — the projects that have installed
 # the Slasher packages — and print the actionable set, one path per line.
 #
 # Run from the root of any project that has installed Slasher. This script lives
 # inside the package, so it is invoked by its path from that root:
 #
-#   slasher/system/foundation/read-consuming-projects.sh
+#   slasher/system/foundation/list-projects.sh
 #
 # It is packaged rather than kept with the authoring tools because it is not one.
 # It is machine-scoped rather than project-scoped: it reports the Slasher projects
@@ -14,7 +14,7 @@
 # authoring tools at the composite root run against the packages; this runs
 # beside projects, which is a third position and the reason it is here.
 #
-# "All consuming projects" means the projects that are not excluded. An excluded
+# "All Slasher projects" means the projects that are not excluded. An excluded
 # path is not printed, not marked, and not counted; nothing is done to it, which
 # is what excluding it does. So this output and that phrase are the same list.
 #
@@ -25,7 +25,7 @@
 #
 # The registry it reads is per-machine and lives outside this repository:
 #
-#   ~/.config/slasher/consuming-projects.toml
+#   ~/.config/slasher/index.toml
 #
 # That placement is the foundation rule a-project-does-not-name-its-downstream-consumers-in-its-own-files: a
 # project does not name the projects that consume it, so this script is
@@ -35,7 +35,7 @@ set -e
 
 # Overridable so the script can be exercised against a registry written for a
 # test, without touching the engineer's own.
-registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/consuming-projects.toml}
+registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/index.toml}
 
 # --- The registry ----------------------------------------------------------
 #
@@ -198,17 +198,17 @@ fi
 
 # --- Discovery -------------------------------------------------------------
 #
-# A consuming project is a git repository whose root holds slasher/system/ —
+# A Slasher project is a git repository whose root holds slasher/system/ —
 # the discriminator refresh-packages.sh already applies, reused rather than
 # defined a second time. This repository is excluded by it without a special
 # case: the authoring source holds system/foundation with no wrapper.
 #
 # Each included path is walked, and the path itself is tested before anything
-# beneath it, so a path that IS a consuming project is found at depth zero and a
+# beneath it, so a path that IS a Slasher project is found at depth zero and a
 # path that CONTAINS them is walked. Nothing distinguishes the two kinds of
 # entry, because nothing has to.
 #
-# A found project is not descended into: a consuming project does not hold
+# A found project is not descended into: a Slasher project does not hold
 # another one, and pruning keeps the walk off its history and its dependencies.
 
 while IFS= read -r root; do
@@ -263,8 +263,8 @@ fi
 # engineer to the included paths, the second to the exclusions.
 if [ "$actionable" -eq 0 ]; then
   if [ -s "$found" ]; then
-    echo "Every consuming project found is excluded by $registry" >&2
+    echo "Every Slasher project found is excluded by $registry" >&2
   else
-    echo "No consuming projects found under the included paths in $registry" >&2
+    echo "No Slasher projects found under the included paths in $registry" >&2
   fi
 fi

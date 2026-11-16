@@ -21,7 +21,7 @@ project=$(mktemp -d)
 trap 'rm -rf "$registry" "$project"' EXIT
 
 mkdir -p "$project/system/foundation"
-cp system/foundation/resolve-project.sh system/foundation/read-consuming-projects.sh "$project/system/foundation/"
+cp system/foundation/resolve-project.sh system/foundation/list-projects.sh "$project/system/foundation/"
 
 control_project="$registry/some-projects/some-project"
 mkdir -p "$control_project/slasher/system"
@@ -31,7 +31,7 @@ control_other_project="$registry/some-other-projects/some-project"
 mkdir -p "$control_other_project/slasher/system"
 git init -q "$control_other_project"
 
-cat > "$registry/consuming-projects.toml" <<REGISTRY
+cat > "$registry/index.toml" <<REGISTRY
 included = [
   "$registry/some-projects",
   "$registry/some-other-projects",
@@ -40,7 +40,7 @@ REGISTRY
 
 # Actuation ------------------------------------------------------------------
 
-resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/consuming-projects.toml" system/foundation/resolve-project.sh some-project 2>/dev/null) && status=0 || status=$?
+resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/index.toml" system/foundation/resolve-project.sh some-project 2>/dev/null) && status=0 || status=$?
 
 # When more than one registered project has the name
 

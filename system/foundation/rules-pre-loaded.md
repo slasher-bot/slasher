@@ -166,7 +166,7 @@ Source: system/foundation/source/a-project-does-not-name-its-downstream-consumer
 
 ## Where the operational need goes instead
 
-1. Where a tool must reach the consuming projects, such as to survey or refresh them, it reads per-machine configuration outside the repository.
+1. Where a tool must reach the Slasher projects, such as to survey or refresh them, it reads per-machine configuration outside the repository.
 2. That configuration lives under `~/.config/`, not in a gitignored file inside the repository.
 3. Commit the tool. It names no consumer and only reads the configuration.
 
@@ -518,7 +518,7 @@ Source: system/foundation/source/the-migration-directory-holds-the-plans-for-mov
 4. Plan a move here when content ends up under a different root, or in a different structure.
 5. Examples: a library extracted into its own repository, or work moved to a project that will own it.
 6. Further examples: one repository split into several, several merged into one, existing conventions migrated into an installed system, or a directory renamed or regrouped.
-7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a consuming project.
+7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project.
 8. Do not use an ordinary item for a migration.
 9. An item sequences a build, against something this repository settled.
 10. A migration plan sequences a change to where existing content lives, or to the form it is written in. Across repositories, its increments land in two.
@@ -634,6 +634,6 @@ Source: system/foundation/source/work-in-a-downstream-project-is-never-offered-a
 3. Reporting what was done, after doing it.
 4. A report of work carried out is a result. A report of work not carried out is a prompt.
 5. To tell them apart, ask whether the sentence describes something that happened.
-6. Answering a question about downstream state, such as *Are the consuming projects up to date*, plainly and in full.
+6. Answering a question about downstream state, such as *Are the Slasher projects up to date*, plainly and in full.
 7. Raising downstream state unbidden stays forbidden.
 8. The session-start notice. The harness emits it, it reports only on the current project, and it names no other repository. See the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule.

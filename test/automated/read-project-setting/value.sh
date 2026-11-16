@@ -23,7 +23,7 @@ project="$parent/some-project"
 mkdir -p "$project/system/foundation"
 cp system/foundation/read-project-setting.sh "$project/system/foundation/"
 
-registry="$parent/consuming-projects.toml"
+registry="$parent/index.toml"
 cat > "$registry" <<TOML
 [[project]]
 path = "$parent/some-other-project"
