@@ -20,7 +20,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/clarify, /??`, `/idk`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc, /:`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/pros-and-cons, /??`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc, /:`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -1010,32 +1010,6 @@ Trigger: When the engineer types `/estimate-confidence` or `/%`, or asks for the
 
 **How to apply:** on `/estimate-confidence` or `/%`, estimate the figures for the rest of the work under way, print them with their sentences, add the warning line where it applies, list what drives the two figures, and stop.
 
-# Idk answers the last question with "I don't know"
-
-Source: system/foundation/source/idk-answers-the-last-question-with-i-dont-know.md
-
-Trigger: When the engineer types `/idk`, or answers the agent's question with "I don't know"
-
-**Trigger:** When the engineer types `/idk`, or answers the agent's question with "I don't know"
-
-**`/idk` answers the agent's last question with "I don't know".** The engineer cannot select an option, because they do not know enough to decide. `/idk` is not a selection. Do not take it as one, and do not choose an option for the engineer.
-
-**As the engineer stated it:** "/idk" command that says "I don't know" to the agent
-
-**The agent first explains the question.** Say in one or two plain sentences what the question decides. Then give each option in one line: what it does and what follows from it. Show an example where one makes the difference clear. Use no reserved term the engineer may not know without its plain meaning.
-
-**Words after `/idk` say what the engineer does not know.** `/idk what a partial refund is` asks about the partial refund. Answer those words first, then explain only what else the decision needs.
-
-**Then the agent gives its recommendation and its reason.** Name the option it recommends, and say in one sentence why. Where no option is better than another for this work, say so, and say what would make one better.
-
-**Then the agent puts the question again.** Put it through the selection interface, with its text and its options as they were. List the recommended option first, with *(Recommended)* after its label. A question that carried the decision marker carries it again.
-
-**Where no question has been put, say so, and put nothing.** Do not invent a question to answer.
-
-**Why:** a selection asks the engineer to decide, and the engineer cannot decide what they do not understand. Without a way to say so, the engineer guesses an option or stops the question. A guess records a decision the engineer did not make. A stopped question waits for `/ask-again`, and the engineer still does not know. `/idk` turns the gap into an explanation, so the engineer decides with the knowledge they need.
-
-**How to apply:** on `/idk`, find the last question put. Explain it and its options in plain words, answering any words typed after `/idk`. Give the recommendation and its reason. Put the question again through the selection interface, with the recommended option first. Where no question has been put, say so.
-
 # Implementation status reports its phases, its state, what exists, and what is left
 
 Source: system/foundation/source/implementation-status-reports-its-phases-its-state-what-exists-and-what-is-left.md
@@ -1188,6 +1162,32 @@ Trigger: When the engineer asks for the Slasher projects on this machine, or ask
 7. A commit in the target waits for the engineer's selection.
 8. With a target and no instruction, print the target's root, and act on nothing.
 9. Do not change the registry, `slasher.toml`, or `system-project.toml`. Write no project's name into the project the session is in.
+
+# Pros and cons gives each option of the last question with its pros and cons
+
+Source: system/foundation/source/pros-and-cons-gives-each-option-of-the-last-question-with-its-pros-and-cons.md
+
+Trigger: When the engineer types `/pros-and-cons` or `/??`, or asks for the pros and cons of the last question's options
+
+**Trigger:** When the engineer types `/pros-and-cons` or `/??`, or asks for the pros and cons of the last question's options
+
+**`/pros-and-cons` gives each option of the last question with its pros and cons.** The last question is the one the agent last put through the selection interface, answered or escaped. `/??` is its shortcut alias, and does exactly what it does. It is in the PROCESS command domain, so `/pros-and-cons help` says that the command takes no `help`, and names `/process help`.
+
+**As the engineer stated it:** A Pros and Cons command that refers to the last question. It pairs with ask-again.
+
+**The answer leads with the trade between the options, in a sentence or two.** It says what one option gains and the other gives up, in plain words. Then each option follows under its label, as the question showed it, with a **Pros** list and a **Cons** list.
+
+**Each pro and each con is a fact about what the option does or causes.** It could be false, and it names a concrete effect, such as a file changed, a case caught or missed, or work the engineer must do. It is not a judgment of the option, such as *simpler* or *cleaner*, where the fact behind the judgment can be given instead. Give the cons as plainly as the pros. An option that is the agent's recommendation gets no softer cons.
+
+**Words after the command say what the engineer wants weighed.** `/pros-and-cons the printed list` weighs that option first. Answer those words first, then give the rest.
+
+**Where the last question held several questions, give each one's options**, each under its own question. Where no question has been put, say so, and give nothing.
+
+**The command does not put the question again.** It answers, and stops. `/ask-again` puts the question again, once the engineer has weighed it. The two are used together: escape the question, read its pros and cons, then `/ask-again`.
+
+**Why:** a question asks the engineer to decide between options whose effects the option's description can only name. The engineer who cannot decide needs to see what each option gains and gives up, not the agent's account of the question or its preference. Facts the engineer can check let the engineer decide, where a recommendation asks the engineer to defer.
+
+**How to apply:** on `/pros-and-cons` or `/??`, find the last question. Lead with the trade between its options. Then give each option's pros and cons as lists of facts, answering any words typed after the command first. Put nothing again, and stop.
 
 # Record a rule's authorship in a provenance footer
 
