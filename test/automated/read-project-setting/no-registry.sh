@@ -23,7 +23,7 @@ project="$parent/some-project"
 mkdir -p "$project/system/foundation"
 cp system/foundation/read-project-setting.sh "$project/system/foundation/"
 
-registry="$parent/index.toml"
+registry="$parent/projects.toml"
 
 # Actuation ------------------------------------------------------------------
 

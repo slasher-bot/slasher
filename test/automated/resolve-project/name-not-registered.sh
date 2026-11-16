@@ -27,7 +27,7 @@ control_project="$registry/projects/some-project"
 mkdir -p "$control_project/slasher/system"
 git init -q "$control_project"
 
-cat > "$registry/index.toml" <<REGISTRY
+cat > "$registry/projects.toml" <<REGISTRY
 included = [
   "$registry/projects",
 ]
@@ -35,7 +35,7 @@ REGISTRY
 
 # Actuation ------------------------------------------------------------------
 
-resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/index.toml" system/foundation/resolve-project.sh some-missing-project 2>/dev/null) && status=0 || status=$?
+resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/projects.toml" system/foundation/resolve-project.sh some-missing-project 2>/dev/null) && status=0 || status=$?
 
 # When no registered project has the name
 

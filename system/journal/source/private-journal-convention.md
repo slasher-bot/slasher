@@ -22,7 +22,7 @@
 
 ## A project's journal can be private entirely
 
-**Where the project's own entry in the project registry carries `journal = "private"`, every entry is a private entry.** An entry started by `new entry` or `/journal` is then written as an entry started by one of the three commands is. The project registry is `~/.config/slasher/index.toml`, and a project's own entry is a `[[project]]` table whose `path` is the project's root:
+**Where the project's own entry in the project registry carries `journal = "private"`, every entry is a private entry.** An entry started by `new entry` or `/journal` is then written as an entry started by one of the three commands is. The project registry is `~/.config/slasher/projects.toml`, and a project's own entry is a `[[project]]` table whose `path` is the project's root:
 
 ```toml
 [[project]]
@@ -86,7 +86,7 @@ Move a private entry to the project journal only on the engineer's command, unch
 ## A project's journal private entirely
 
 1. Where the project's own entry in the project registry carries `journal = "private"`, every entry is a private entry, including one started by `new entry` or `/journal`.
-2. The project registry is `~/.config/slasher/index.toml`. A project's own entry is a `[[project]]` table whose `path` is the project's root.
+2. The project registry is `~/.config/slasher/projects.toml`. A project's own entry is a `[[project]]` table whose `path` is the project's root.
 
 ```toml
 [[project]]
@@ -157,3 +157,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 12:58:37 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 10:09:38 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:54:23 PM PT

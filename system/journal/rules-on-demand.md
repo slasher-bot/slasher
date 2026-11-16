@@ -151,7 +151,7 @@ Trigger: When the writer starts a private journal entry, directs a change to one
 ## A project's journal private entirely
 
 1. Where the project's own entry in the project registry carries `journal = "private"`, every entry is a private entry, including one started by `new entry` or `/journal`.
-2. The project registry is `~/.config/slasher/index.toml`. A project's own entry is a `[[project]]` table whose `path` is the project's root.
+2. The project registry is `~/.config/slasher/projects.toml`. A project's own entry is a `[[project]]` table whose `path` is the project's root.
 
 ```toml
 [[project]]

@@ -6,7 +6,7 @@
 # Run from the root of a Slasher project.
 #
 # Prints the value of <key> in the current project's own entry in the
-# machine's project registry, ~/.config/slasher/index.toml.
+# machine's project registry, ~/.config/slasher/projects.toml.
 # SLASHER_REGISTRY names another file in its place, so a test can use its own.
 #
 # A project's own entry is a [[project]] table whose path is the project's
@@ -29,7 +29,7 @@ set -e
 
 key=$1
 
-registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/index.toml}
+registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/projects.toml}
 
 if [ ! -f "$registry" ]; then
   exit 0

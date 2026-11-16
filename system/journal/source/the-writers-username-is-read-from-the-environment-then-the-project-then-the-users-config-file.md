@@ -32,7 +32,7 @@ The tail is always `slasher/user`; only the base directory varies:
 
 Tools agree on this **resolution rule**, not a raw path string.
 
-**`slasher` is the namespace because the file is Slasher's.** An `identity/` namespace, on the reasoning that the file holds identity and is reusable beyond one tool, would take a top-level name on every machine Slasher is installed on, for a file only Slasher reads. A tool outside Slasher has its own idea of what identity is and no reason to accept this one's. The namespace says what the file belongs to, and `~/.config/slasher/` already holds `index.toml`, which `foundation`'s `list-projects.sh` reads.
+**`slasher` is the namespace because the file is Slasher's.** An `identity/` namespace, on the reasoning that the file holds identity and is reusable beyond one tool, would take a top-level name on every machine Slasher is installed on, for a file only Slasher reads. A tool outside Slasher has its own idea of what identity is and no reason to accept this one's. The namespace says what the file belongs to, and `~/.config/slasher/` already holds `projects.toml`, which `foundation`'s `list-projects.sh` reads.
 
 ## The user file's format
 
@@ -47,7 +47,7 @@ display-name = "Scott Bellware"
 
 `username` is required, and this file is the only place the active writer is declared. `display-name` is optional. A file carrying the username alone is complete, and that writer shows as their username unless a project's `writers.toml` names them.
 
-**TOML matches the namespace.** `index.toml` and `writers.toml` are each TOML, so a tool reading this file reads no second format. The file is named `user` with no extension, so the format is not legible from the name. That cost is taken for the plainer name.
+**TOML matches the namespace.** `projects.toml` and `writers.toml` are each TOML, so a tool reading this file reads no second format. The file is named `user` with no extension, so the format is not legible from the name. That cost is taken for the plainer name.
 
 **`.current-user` is unchanged, and it is not TOML.** It holds the username only, on one line. Trim surrounding whitespace and a trailing newline on read, and allow `#` comment lines. It selects a writer for one checkout and carries no presentation.
 
@@ -252,3 +252,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 7:01:29 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:08 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 11:54:23 PM PT

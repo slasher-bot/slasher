@@ -31,7 +31,7 @@ control_other_project="$registry/some-other-projects/some-project"
 mkdir -p "$control_other_project/slasher/system"
 git init -q "$control_other_project"
 
-cat > "$registry/index.toml" <<REGISTRY
+cat > "$registry/projects.toml" <<REGISTRY
 included = [
   "$registry/some-projects",
   "$registry/some-other-projects",
@@ -40,7 +40,7 @@ REGISTRY
 
 # Actuation ------------------------------------------------------------------
 
-resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/index.toml" system/foundation/resolve-project.sh some-project 2>/dev/null) && status=0 || status=$?
+resolved=$(cd "$project" && SLASHER_REGISTRY="$registry/projects.toml" system/foundation/resolve-project.sh some-project 2>/dev/null) && status=0 || status=$?
 
 # When more than one registered project has the name
 
