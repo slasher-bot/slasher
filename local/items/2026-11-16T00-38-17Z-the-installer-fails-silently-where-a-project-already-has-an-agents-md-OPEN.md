@@ -9,6 +9,18 @@
 
 **As James Hughes stated it:** "I ran it on a repository where I've been doing work for a few months and it looks like it bailed out on modifying the exisitng AGENTS.md. I copied a slasher AGENTS.md to the project, and renamed it SLASHER.md and appended an @SLASHER.md to the bottom of my AGENTS.md and it seems to all be behaving as expected. But maybe there ought to be a warning there's an existing AGENTS.md? or prompt to append to the bottom of AGENTS.md? It was just a silent failure."
 
+## Test results, 2026-11-15
+
+The failure was reproduced in a test project holding its own `AGENTS.md`, by running `slasher/system/foundation/install.sh agents-md` with no terminal on standard input, as it runs when the agent runs it.
+
+1. The installer printed the bootstrap section, then *Not running interactively, so AGENTS.md was NOT modified.*
+2. It then created `CLAUDE.md` with `@AGENTS.md`, and `.claude/settings.json` with the status line, and exited with status 0.
+3. `AGENTS.md` was unchanged. `CLAUDE.md` imports it, but it carries no Slasher bootstrap, so the rules never load.
+4. The one warning line stands after about forty lines of bootstrap text, and success lines follow it.
+5. `/install` runs `slasher-install` through the agent, so standard input is never a terminal there. Every `/install` into a project with an `AGENTS.md` leaves it unchanged. The `install` skill says nothing of the warning.
+6. Run in a terminal, as `sh slasher-install`, the installer asks whether to append the bootstrap.
+
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:38:17 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 4:47:41 PM PT
