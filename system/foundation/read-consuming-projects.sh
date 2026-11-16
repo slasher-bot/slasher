@@ -50,8 +50,18 @@ registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/consuming-projects.toml}
 #     "~/projects/old-clone",
 #   ]
 #
+#   [[project]]
+#   path = "~/projects/some-project"
+#   journal = "private"
+#
 # Blank lines and full-line comments are ignored. A path is a quoted string
 # alone on its line, with an optional trailing comma. Both keys are optional.
+#
+# A [[project]] table is one project's own settings, which
+# read-project-setting.sh reads. Its lines are a name, =, and a quoted string,
+# and none of them is read here. As in TOML, every line after a table header
+# belongs to the table, so included and excluded come before the first
+# [[project]] table.
 #
 # TOML permits more than this — an inline array on one line, multi-line strings,
 # other keys — and none of it is read here. Anything outside the subset is
@@ -76,6 +86,7 @@ found=$(mktemp)
 trap 'rm -f "$included" "$excluded" "$found"' EXIT
 
 key=""
+in_project=""
 line_number=0
 
 refuse() {
@@ -99,6 +110,24 @@ while IFS= read -r line || [ -n "$line" ]; do
       continue
       ;;
   esac
+
+  if [ "$trimmed" = "[[project]]" ] && [ -z "$key" ]; then
+    in_project=yes
+    continue
+  fi
+
+  if [ -n "$in_project" ]; then
+    case $trimmed in
+      included* | excluded*)
+        refuse "included and excluded come before the first [[project]] table" ;;
+    esac
+
+    if ! printf '%s' "$trimmed" | grep -q '^[A-Za-z0-9_-]\{1,\}[[:space:]]*=[[:space:]]*"[^"]*"$'; then
+      refuse "expected a name = \"value\" line in a [[project]] table"
+    fi
+
+    continue
+  fi
 
   if [ -z "$key" ]; then
     case $trimmed in
@@ -124,7 +153,7 @@ while IFS= read -r line || [ -n "$line" ]; do
         key=$name
         ;;
       *)
-        refuse "expected included = [ or excluded = [" ;;
+        refuse "expected included = [, excluded = [, or [[project]]" ;;
     esac
 
     continue
