@@ -20,12 +20,20 @@
 # machine's home directory. Every other line of the registry, such as the
 # included and excluded arrays, is outside any [[project]] table and is not
 # read here.
+#
+# Where the project has no entry, the entry has no such key, or no registry
+# exists, it prints nothing and succeeds. A machine without the setting is the
+# ordinary case, not an error.
 
 set -e
 
 key=$1
 
 registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/consuming-projects.toml}
+
+if [ ! -f "$registry" ]; then
+  exit 0
+fi
 
 awk -v key="$key" -v root="$PWD" -v home="$HOME" '
   function trim(text) {

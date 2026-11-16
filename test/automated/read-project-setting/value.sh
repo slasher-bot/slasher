@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/read-project-setting.sh
+#   test/automated/read-project-setting/value.sh
 #
 # Run from the repository root.
 set -e
