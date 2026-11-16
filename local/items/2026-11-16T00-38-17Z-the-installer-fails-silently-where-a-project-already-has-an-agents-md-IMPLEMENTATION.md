@@ -1,6 +1,6 @@
 # The installer fails silently where a project already has an AGENTS.md
 
-- **State:** Open
+- **State:** Implementation
 - **Tags:** [problem]
 
 **Installing Slasher into a project that already has an `AGENTS.md` leaves the `AGENTS.md` unchanged, and says nothing.** The Slasher bootstrap is not added, so the rules do not load, and nothing tells the engineer why.
@@ -20,7 +20,10 @@ The failure was reproduced in a test project holding its own `AGENTS.md`, by run
 5. `/install` runs `slasher-install` through the agent, so standard input is never a terminal there. Every `/install` into a project with an `AGENTS.md` leaves it unchanged. The `install` skill says nothing of the warning.
 6. Run in a terminal, as `sh slasher-install`, the installer asks whether to append the bootstrap.
 
+**Implementation:** `2026-11-16T00-59-24Z-existing-agents-md-install`
+
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:38:17 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 4:47:41 PM PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
