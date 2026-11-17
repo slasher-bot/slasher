@@ -6,7 +6,7 @@
 2. In an unrecorded session, the agent writes no record anywhere: not in the project, and not in the private directory.
 3. That holds for a record the engineer asks for, and for a record a rule asks for.
 4. Carry out the instruction after `/unrecorded` in the session. Where there is none, start the session and wait for the engineer's request.
-5. `/unrecorded help` says that the command takes no `help`, and names `/private help`.
+5. `/unrecorded help` prints the help of the UNRECORDED command domain, whose help command `/unrecorded` is.
 
 **As the engineer stated it:** An "/unrecorded" command that mirrors "/private", but instead of routing records to the private directory, the records are not written at all.
 
@@ -49,6 +49,10 @@
 
 **How to apply:** on `/unrecorded`, say that nothing will be recorded, and then write no record until the session ends. Change files that are not records as the work asks. Ask before a change to an existing record, and before starting a feature or an experiment.
 
+## History
+
+1. Until Mon Nov 16 2026, `/unrecorded` was part of the PRIVATE command domain. `/unrecorded help` said that the command takes no `help`, and named `/private help`.
+
 Related:
 
 - the anything-given-to-private-is-recorded-only-in-the-private-directory rule — the private session this command mirrors
@@ -59,3 +63,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 10:42:15 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 10:55:07 PM PT

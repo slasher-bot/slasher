@@ -275,17 +275,25 @@ PRIVATE
                                    does
   /private read <name>             Read a private record
   /private list [<kind>]           List the private records
-  /unrecorded                      Start an unrecorded session, in which
-                                   no record is written anywhere
+
+  Starting a private session ends an unrecorded one, and the reverse.
+
+  /private help                    Print this command's help
+
+UNRECORDED
+  An unrecorded session writes no record anywhere, in the project or in the
+  private directory. Files that are not records still change.
+
+  /unrecorded                      Start an unrecorded session
   /unrecorded <instruction>        Carry out the instruction in an
                                    unrecorded session
   /unrecorded end                  End the unrecorded session. After 4
                                    minutes with no prompt, the agent asks
                                    whether to continue it or end it
 
-  Starting a private session ends an unrecorded one, and the reverse.
+  Starting an unrecorded session ends a private one, and the reverse.
 
-  /private help                    Print this command's help
+  /unrecorded help                 Print this command's help
 
 BRAINSTORMING
   Brainstorming records points as they are said, freeform in no order, and

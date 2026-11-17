@@ -751,7 +751,7 @@ Trigger: When the engineer types `/unrecorded`, or starts or ends an unrecorded 
 2. In an unrecorded session, the agent writes no record anywhere: not in the project, and not in the private directory.
 3. That holds for a record the engineer asks for, and for a record a rule asks for.
 4. Carry out the instruction after `/unrecorded` in the session. Where there is none, start the session and wait for the engineer's request.
-5. `/unrecorded help` says that the command takes no `help`, and names `/private help`.
+5. `/unrecorded help` prints the help of the UNRECORDED command domain, whose help command `/unrecorded` is.
 
 **As the engineer stated it:** An "/unrecorded" command that mirrors "/private", but instead of routing records to the private directory, the records are not written at all.
 

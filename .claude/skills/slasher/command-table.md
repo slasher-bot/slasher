@@ -20,6 +20,7 @@
 | `/records` | The records line ends a reply that wrote a record, with the full path of the record it is about. |
 | `/journal` | The journal is the writer's own record of what they think, either stored with the project or kept in a private journal. |
 | `/private` | Anything given to /private is recorded only in the private directory, outside the project's repository, and is read only on command. |
+| `/unrecorded` | An unrecorded session writes no record anywhere, in the project or in the private directory. Files that are not records still change. |
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
 | `/test` | These commands run the project's tests, or other compliance routines, quality checks, and report on them. |
 | `/push, /p` | These commands commit the work and push the current branch to its remote, and never force. |
