@@ -31,4 +31,5 @@ script=$system/foundation/process-question-log.sh
 [ -x "$script" ] || exit 0
 [ -d "$local/logs/log" ] || exit 0
 
-exec "$script" "$local/logs/log"
+# An unrecorded session writes no log entry. Its state is kept beside the private session's.
+exec "$script" "$local/logs/log" "$HOME/.local/state/slasher/unrecorded-sessions"

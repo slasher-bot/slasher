@@ -17,4 +17,14 @@ PRIVATE
                                    does
   /private read <name>             Read a private record
   /private list [<kind>]           List the private records
+  /unrecorded                      Start an unrecorded session, in which
+                                   no record is written anywhere
+  /unrecorded <instruction>        Carry out the instruction in an
+                                   unrecorded session
+  /unrecorded end                  End the unrecorded session. After 4
+                                   minutes with no prompt, the agent asks
+                                   whether to continue it or end it
+
+  Starting a private session ends an unrecorded one, and the reverse.
+
   /private help                    Print this command's help
