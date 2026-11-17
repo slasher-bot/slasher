@@ -207,6 +207,20 @@ if [ -f "$installer" ] && grep -q '"\$1" = "bootstrap"' "$installer"; then
   fi
 fi
 
+# The migrations of the installer just pulled run next, so one update brings both the new packages
+# and what they ask of the project's own files. Only the pulled installer knows its migrations.
+# An installer predating the migrate mode would treat the request as an install, so it is never
+# invoked on a guess. The mode asks nothing and prints only what it changed, and its changes are
+# left uncommitted for the engineer to commit with the update.
+if [ -f "$installer" ] && grep -q '"\$1" = "migrate"' "$installer"; then
+  migrated=$(sh "$installer" migrate < /dev/null 2>&1) || true
+  if [ -n "$migrated" ]; then
+    echo
+    echo "The installer's migrations changed the project's files. Commit them with the update:"
+    printf '%s\n' "$migrated" | sed 's/^/  /'
+  fi
+fi
+
 if [ ! -f AGENTS.md ] || ! grep -qx "$import_line" AGENTS.md; then
   cat <<BOOTSTRAP
 

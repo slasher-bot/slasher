@@ -118,7 +118,7 @@ The authoring tools run **against the packages**. This one runs **beside project
 
 **The bootstrap lives in `slasher/SLASHER.md`, which only Slasher writes.** The project's `AGENTS.md` holds its own text and one line, `@slasher/SLASHER.md`, that imports it. `install.sh` writes Slasher's file whole, and adds the line once, asking first where the project already has an `AGENTS.md`. Nothing in the project's `AGENTS.md` is compared or rewritten after that.
 
-**`refresh-packages.sh` rewrites `slasher/SLASHER.md` from the installed foundation**, since no `git subtree pull` reaches a file outside the packages. It asks the installer for the text only where the installer is known to answer, and never invokes one that would treat the request as an install. It then says where `AGENTS.md` lacks the line.
+**`refresh-packages.sh` rewrites `slasher/SLASHER.md` from the installed foundation**, since no `git subtree pull` reaches a file outside the packages. It asks the installer for the text only where the installer is known to answer, and never invokes one that would treat the request as an install. It then says where `AGENTS.md` lacks the line. It then runs `install.sh migrate`, the migrations of the installer it just pulled, so one update brings both the new packages and what they ask of the project's own files. That mode asks nothing, places nothing the project has not got, and prints only what it changed.
 
 Until Mon Nov 16 2026 the bootstrap was a section of the project's `AGENTS.md`, from `## Slasher` to the end of the file, and the update compared that span with the installed bootstrap. A project's own text below the section made the two differ for good, and the remedy was to edit the file by hand.
 

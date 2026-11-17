@@ -2,7 +2,7 @@
 
 **Trigger:** When the engineer asks to refresh or install Slasher's packages, as with `/package update` or `/package install`
 
-**`/package update [<package>...]` refreshes the installed packages from their repositories.** It runs foundation's `refresh-packages.sh`, with the packages named, or with none to refresh every one. It reports each package that moved and the rule files that changed in it, as the script prints them. It rewrites `slasher/SLASHER.md`, the bootstrap, from the installed foundation, and says where the project's `AGENTS.md` lacks the line `@slasher/SLASHER.md` that imports it.
+**`/package update [<package>...]` refreshes the installed packages from their repositories.** It runs foundation's `refresh-packages.sh`, with the packages named, or with none to refresh every one. It reports each package that moved and the rule files that changed in it, as the script prints them. It rewrites `slasher/SLASHER.md`, the bootstrap, from the installed foundation, and says where the project's `AGENTS.md` lacks the line `@slasher/SLASHER.md` that imports it. It then runs the migrations of the installer it just pulled, which ask nothing, and reports what they changed, left uncommitted for the engineer to commit with the update.
 
 **A refresh runs in the project the session is in, and in no other.** Refreshing another project is the engineer's to ask for there, per the work-in-a-downstream-project-is-never-offered-and-its-pending-state-is-not-reported rule.
 
@@ -16,7 +16,7 @@
 
 ## Compressed
 
-1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`.
+1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`. It runs the pulled installer's migrations, which ask nothing, reports what they changed, and leaves their changes uncommitted, for the engineer to commit with the update.
 2. `/package install` installs Slasher into the project the session is in. Run foundation's `install.sh` from that project's root. The installer asks before changing a file the project already has.
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would change, and where it would write a Slasher project's bootstrap.
@@ -29,8 +29,11 @@
 - 2026-11-04, revised: the typed command `load slasher` is `load rules`, a term swap the engineer settled; not re-checked
 - 2026-11-16, revised: the command `/package refresh` is `/package update`, a term swap the engineer settled; not re-checked
 - 2026-11-16, revised: the update rewrites `slasher/SLASHER.md` and checks `AGENTS.md` for its import line, which the engineer settled; checked: 18 directives, 17 kept, 1 less precise, 0 lost, 1 repair: pass on what each script reports and do not guess at its work; re-checked: 18 directives, 18 kept, 0 less precise, 0 lost
+- 2026-11-16, revised: the update runs the pulled installer's migrations, which the engineer asked for; checked: 18 directives, 16 kept, 1 less precise, 1 lost, 2 repairs: the migrations ask nothing, and their changes are left uncommitted for the engineer; re-checked: 18 directives, 17 kept, 1 less precise, 0 lost. The source decides the less precise one kept: it forbids guessing at the script's work, as the compressed text does, and an earlier check counted it kept
 
 ## History
+
+Until Mon Nov 16 2026 the update ran no migration. The installer's migrations ran only when `install.sh agents-md` was run after it.
 
 Until Mon Nov 16 2026 the update compared the Slasher section of the project's `AGENTS.md` with the installed bootstrap, and said to regenerate it by hand where the two differed.
 
@@ -53,3 +56,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 1:08:22 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:21:51 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:53:29 PM PT

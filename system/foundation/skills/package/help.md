@@ -4,7 +4,8 @@ PACKAGE
 
   /package activate <package>      Activate an installed package
   /package deactivate <package>    Deactivate an installed package
-  /package update [<package>...]   Update installed packages
+  /package update [<package>...]   Update installed packages, and run
+                                   the migrations they bring
   /package install                 Install Slasher
   /install [<set or packages>]     Install Slasher where it is not installed
 

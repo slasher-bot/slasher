@@ -20,12 +20,18 @@
 #     install-all.sh uses this, so the bootstrap logic lives in one place rather than two.
 #
 #   slasher/system/foundation/install.sh [agents-md] --append-agents-md
-#     As above, and where the project already has an AGENTS.md without the bootstrap,
-#     append the bootstrap to it without asking.
+#     As above, and where the project already has an AGENTS.md without the import line,
+#     append the line to it without asking.
+#
+#   slasher/system/foundation/install.sh migrate
+#     Run the migrations only: the record migrations, and the replacement of an AGENTS.md
+#     section that is Slasher's alone with the import line. Asks nothing, places nothing a
+#     project has not got, and prints only what it changed. refresh-packages.sh runs it after
+#     a pull, with the installer it just pulled.
 #
 #   slasher/system/foundation/install.sh bootstrap
-#     Print the AGENTS.md bootstrap section and exit, placing nothing. refresh-packages.sh
-#     compares it against the project's AGENTS.md, so the text has one source here.
+#     Print the bootstrap and exit, placing nothing. refresh-packages.sh writes it to
+#     slasher/SLASHER.md, so the text has one source here.
 set -e
 
 # The origin foundation is fetched from. Override it to install over HTTPS where no SSH
@@ -130,7 +136,10 @@ place_agents_md() {
   fi
 
   if [ -f AGENTS.md ] && grep -qx "$import_line" AGENTS.md; then
-    echo "AGENTS.md already imports slasher/SLASHER.md — left unchanged."
+    [ "$migrate_only" = yes ] || echo "AGENTS.md already imports slasher/SLASHER.md — left unchanged."
+  elif [ ! -f AGENTS.md ] && [ "$migrate_only" = yes ]; then
+    # A migration changes what is there. Creating AGENTS.md is the install's to do.
+    :
   elif [ ! -f AGENTS.md ]; then
     # No root AGENTS.md yet — creating one takes nothing away, so do it directly.
     printf '%s\n' "$import_line" > AGENTS.md
@@ -159,6 +168,10 @@ place_agents_md() {
       echo "    $import_line"
     fi
     rm -f "$current" "$carried"
+  elif [ "$migrate_only" = yes ]; then
+    # An AGENTS.md you maintain, with no Slasher section. Adding the line needs your consent,
+    # which a migration does not ask for. refresh-packages.sh says the line is missing.
+    :
   elif [ "$append_agents_md" = yes ]; then
     # An AGENTS.md you maintain already exists, and the answer to append was given in
     # advance, with --append-agents-md, so nothing is asked.
@@ -778,6 +791,13 @@ if [ "$1" = "bootstrap" ]; then
   exit 0
 fi
 
+# migrate runs only the migrations: the record migrations, and the replacement of an AGENTS.md
+# section that is Slasher's alone. refresh-packages.sh runs it after a pull, with the installer it
+# just pulled, so one update brings both the new packages and their migrations. It asks nothing,
+# places nothing a project has not got, and prints only what it changed.
+migrate_only=no
+[ "$1" = "migrate" ] && migrate_only=yes
+
 # --append-agents-md answers in advance the question asked where the project already has an
 # AGENTS.md: append the bootstrap to it.
 append_agents_md=no
@@ -792,8 +812,8 @@ done
 migrate_layout
 migrate_machine
 
-# 1. Install (or refresh) the foundation rules — skipped in agents-md-only mode.
-if [ "$1" != "agents-md" ]; then
+# 1. Install (or refresh) the foundation rules — skipped in agents-md-only and migrate modes.
+if [ "$1" != "agents-md" ] && [ "$migrate_only" = no ]; then
   migrate_packages
   if [ ! -d "$prefix" ]; then
     git subtree add --prefix "$prefix" "$repo" master --squash
@@ -805,12 +825,17 @@ fi
 #    imports it so the bootstrap also reaches Claude Code sessions, that the plugin
 #    prints the startup display and the session-start notice, and that
 #    .claude/settings.json keeps the status line.
-place_slasher_md
-place_agents_md
-place_claude_md
-place_settings_json
-place_plugin
-warn_ignored_claude_files
+#    In migrate mode only the AGENTS.md migration runs, and it asks nothing.
+if [ "$migrate_only" = yes ]; then
+  place_agents_md
+else
+  place_slasher_md
+  place_agents_md
+  place_claude_md
+  place_settings_json
+  place_plugin
+  warn_ignored_claude_files
+fi
 
 # 3. Carry a project's own working state across the directory renames a rule change
 #    cannot reach.
