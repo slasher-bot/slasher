@@ -16,6 +16,8 @@
 
 **Suggest, and change nothing.** A suggestion leaves the content as it is. The content changes only when the engineer accepts a suggestion and selects writing it.
 
+**Suggestions are made by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule.** A suggestion is made only where a passage falls short of a criterion, and its reason opens with that criterion. Where nothing needs to change, say so in one line, and suggest nothing to fill the list.
+
 **Each suggestion is numbered, and shows the original, the suggested text, and a reason.** Give each suggestion a number, then a short heading that names the passage. Under the heading, give the original text, the suggested text, and a one-line reason, each on its own line:
 
 ```
@@ -23,13 +25,13 @@
 
    Original:  Thanks for your purchase!!
    Suggested: Thank you for your order.
-   Reason:    One exclamation mark is enough. "Order" matches the cart.
+   Reason:    Tone and voice. One exclamation mark is enough, and "order" matches the cart.
 
 2. Refund line
 
    Original:  Refunds may be possible in some cases.
    Suggested: You can return any item within 30 days for a refund.
-   Reason:    It states the policy and does not hedge.
+   Reason:    Precision. It states the policy and does not hedge.
 ```
 
 **A suggestion is pending until it is accepted or rejected.** A later `/review` adds its suggestions after the pending ones, and the numbering continues. A later `/review` drops no pending suggestion. A number is never used again in the same session, so a number always names one suggestion.
@@ -48,8 +50,14 @@
 
 **How to apply:** on `/review`, suggest numbered edits to the content named, or to the content the conversation is on, and change nothing. On `/review accept`, show the result of the accepted suggestions, and write it only on the engineer's selection. On `/review reject`, drop the suggestions named.
 
+## History
+
+Until Mon Nov 16 2026 a suggestion's reason named no criterion.
+
 Related:
 
+- the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule — the criteria each suggestion's reason names
+- the edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule — a rewrite asked for during a walk becomes a suggestion
 - the present-every-prompt-to-the-engineer-through-the-selection-ui rule — the question `/review accept` asks before it writes
 - the print-and-review-prints-the-draft-and-a-review-of-it rule — a review of a draft, which suggests no numbered edits
 
@@ -58,3 +66,4 @@ Related:
 Authored by Scott Bellware on Sun Nov 15 2026 at 12:02:19 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:29:39 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:32:30 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:08:58 PM PT
