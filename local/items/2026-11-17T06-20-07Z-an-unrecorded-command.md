@@ -1,6 +1,6 @@
 # An `/unrecorded` command
 
-**State:** Implementation
+**State:** Realized
 
 **Tags:** [idea]
 
@@ -61,3 +61,4 @@ Added Mon Nov 16 2026.
 Authored by Scott Bellware on Mon Nov 16 2026 at 10:20:07 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 10:33:32 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 10:37:31 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 10:48:03 PM PT

@@ -1,24 +1,33 @@
 #!/bin/sh
 # Usage:
 #
-#   process-question-log.sh <log-directory>
+#   process-question-log.sh <log-directory> [<unrecorded-sessions-directory>]
 #
 # Reads a PostToolUse event for AskUserQuestion on standard input. Where the agent marked the
 # selection as a process question, by setting metadata.source to "decision", writes one log entry
 # to <log-directory> for each question it asked, with the engineer's answer. A selection without
 # that marker is a mechanical question, and nothing is written for it.
 #
+# Where <unrecorded-sessions-directory> holds a state file for the event's session, the session
+# is unrecorded, and nothing is written for any question.
+#
 # The plugin's hooks/process-question-log runs this. See the
 # a-process-question-and-its-answer-are-logged rule.
 
-directory=${1:?usage: process-question-log.sh <log-directory>}
+directory=${1:?usage: process-question-log.sh <log-directory> [<unrecorded-sessions-directory>]}
+unrecorded_sessions=${2:-}
 
 exec python3 -c '
 import json, os, re, subprocess, sys
 
 directory = sys.argv[1]
+unrecorded_sessions = sys.argv[2]
 apostrophe = chr(39)
 event = json.load(sys.stdin)
+
+session_id = event.get("session_id") or ""
+if unrecorded_sessions and session_id and os.path.isfile(os.path.join(unrecorded_sessions, session_id)):
+    sys.exit(0)
 
 tool_input = event.get("tool_input") or {}
 if (tool_input.get("metadata") or {}).get("source") != "decision":
@@ -66,4 +75,4 @@ for question in questions:
 
     with open(path, "w") as entry:
         entry.write("\n".join(lines) + "\n")
-' "$directory"
+' "$directory" "$unrecorded_sessions"
