@@ -275,7 +275,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 ## What this costs
 
 1. The mechanism works only where a harness loads a plugin from `.claude/skills/` and reads `.claude/settings.json`.
-2. Elsewhere the system loads through the `AGENTS.md` bootstrap, silently.
+2. Elsewhere the system loads through the bootstrap in `slasher/SLASHER.md`, which the project's `AGENTS.md` imports, silently.
 3. A setting that disables hooks silences it too.
 4. A newly placed plugin or `.claude/settings.json` may not take effect until the harness reloads.
 
@@ -310,8 +310,11 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 - 2026-11-09, checked: 85 directives, 81 kept, 3 less precise, 1 lost. The directive left lost is when the rule applies, which its Trigger line carries. The three less precise are in text this revision did not change
 - 2026-11-14, revised: the notice reports the install and nothing more, and the open line is removed; checked: 134 directives, 129 kept, 4 less precise, 1 lost, 1 repair, naming `/current`; re-checked: 134 directives, 128 kept, 6 less precise, 0 lost. Left less precise, none touched by this revision: that the loading part reads from the startup display rule, that the instruction names nothing else beside the packages, that the compaction's summary does not hold the rules, the authoring source's `system/`, the removed `SLASHER_QUIET`, and that `session-start.sh instruction` prints the instruction alone, as plain text
 - 2026-11-14, revised: point 6 says the load line is left out where Claude Code was started with `/load`; not re-checked
+- 2026-11-16, revised: the bootstrap is in `slasher/SLASHER.md`, a name the engineer settled; not re-checked
 
 ## History
+
+Until Mon Nov 16 2026 the bootstrap was a section of the project's `AGENTS.md`, where it now is `slasher/SLASHER.md`, which `AGENTS.md` imports.
 
 Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
@@ -476,3 +479,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:19:02 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:21:51 PM PT

@@ -11,7 +11,8 @@
 #   sh slasher-install foundation git   packages by name
 #   sh slasher-install --list           the sets and packages it can install
 #   sh slasher-install --append-agents-md
-#                                       append the bootstrap to an existing AGENTS.md
+#                                       append the line that imports the bootstrap
+#                                       to an existing AGENTS.md
 #                                       without asking, beside any names
 #
 # `sh slasher-install`, not `./slasher-install`, and this is the one script here written that way. It is

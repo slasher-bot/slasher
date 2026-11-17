@@ -176,64 +176,44 @@ what changed before the next one, since the agent's conventions have moved.
 BINDING
 fi
 
-# The bootstrap is not a package, so no subtree pull touches it, and it falls behind the
-# packages it activates. This used to print a reminder saying so; on 2026-08-06 every
-# Slasher project's bootstrap was found stale anyway, which is what a reminder is worth.
-# So it is checked rather than mentioned: the refresh is the moment the drift is created,
-# and it is the moment nobody has to remember.
-bootstrap_state=unchecked
+# The bootstrap is not a package, so no subtree pull touches it. It lives in slasher/SLASHER.md,
+# which only Slasher writes, so the update rewrites it whole from the installed foundation. The
+# project's AGENTS.md holds only the line that imports it, and is never compared or rewritten.
 installer="slasher/system/foundation/install.sh"
+import_line='@slasher/SLASHER.md'
 
 # The installer is asked for the bootstrap text rather than parsed for it, but only when
 # it is known to answer. An installer predating the `bootstrap` subcommand treats the
 # argument as an ordinary run and starts installing, so it is never invoked on a guess.
-if [ -f AGENTS.md ] && [ -f "$installer" ] && grep -q '"\$1" = "bootstrap"' "$installer"; then
+if [ -f "$installer" ] && grep -q '"\$1" = "bootstrap"' "$installer"; then
   current=$(mktemp)
-  carried=$(mktemp)
-  trap 'rm -f "$current" "$carried"' EXIT
+  trap 'rm -f "$current"' EXIT
 
   sh "$installer" bootstrap > "$current" 2>/dev/null || true
 
-  # AGENTS.md may hold the project's own content above the section, so only the section
-  # is compared.
-  sed -n '/^## Slasher$/,$p' AGENTS.md > "$carried"
-
-  # An empty result means the installer answered with nothing, which is not agreement.
-  # Reporting a match on a comparison that did not happen is the one outcome worth
-  # ruling out, since it would report the drift as absent.
+  # An empty result means the installer answered with nothing, so nothing is written over the
+  # file that is there.
   if [ ! -s "$current" ]; then
-    bootstrap_state=unchecked
-  elif cmp -s "$current" "$carried"; then
-    bootstrap_state=current
+    echo
+    echo "slasher/SLASHER.md was NOT rewritten: the installed installer printed no bootstrap."
+  elif [ -f slasher/SLASHER.md ] && cmp -s "$current" slasher/SLASHER.md; then
+    echo
+    echo "slasher/SLASHER.md matches the installed foundation's bootstrap."
   else
-    bootstrap_state=stale
+    cp "$current" slasher/SLASHER.md
+    echo
+    echo "slasher/SLASHER.md is rewritten from the installed foundation's bootstrap. Commit it"
+    echo "with the update."
   fi
 fi
 
-if [ "$bootstrap_state" = stale ]; then
-  cat <<'BOOTSTRAP'
+if [ ! -f AGENTS.md ] || ! grep -qx "$import_line" AGENTS.md; then
+  cat <<BOOTSTRAP
 
-The root AGENTS.md does not match the bootstrap the installed foundation now generates.
-It is not a package, so no refresh reaches it, and it activates the system the packages
-above were just refreshed into. To regenerate it, delete AGENTS.md's Slasher section and
-run `slasher/system/foundation/install.sh agents-md`.
-BOOTSTRAP
-elif [ "$bootstrap_state" = current ]; then
-  cat <<'BOOTSTRAP'
-
-The root AGENTS.md matches the installed foundation's bootstrap. .claude/settings.json is
-not a package either, and is checked only for the startup display hook; if the
-session-start hook or status line stops working, `slasher/system/foundation/install.sh
-agents-md` places it again.
-BOOTSTRAP
-else
-  cat <<'BOOTSTRAP'
-
-The root AGENTS.md was NOT checked against the installed foundation's bootstrap — either
-there is no AGENTS.md, or the installed installer cannot print the bootstrap for
-comparison. It is not a package, so no refresh reaches it, and it may be behind the
-packages just refreshed. To regenerate it, delete AGENTS.md's Slasher section and run
-`slasher/system/foundation/install.sh agents-md`.
+The root AGENTS.md does not hold the line $import_line, so an agent that reads
+AGENTS.md is not told to read Slasher's bootstrap. Run
+\`slasher/system/foundation/install.sh agents-md\` to add it. Where AGENTS.md holds a Slasher
+section from before the bootstrap moved, the installer says how to replace it.
 BOOTSTRAP
 fi
 

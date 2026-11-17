@@ -1132,11 +1132,12 @@ Source: system/foundation/source/package-refresh-and-install-run-foundations-scr
 
 Trigger: When the engineer asks to refresh or install Slasher's packages, as with `/package update` or `/package install`
 
-1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them.
+1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`.
 2. `/package install` installs Slasher into the project the session is in. Run foundation's `install.sh` from that project's root. The installer asks before changing a file the project already has.
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
-4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would overwrite with a Slasher project's bootstrap.
+4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would change, and where it would write a Slasher project's bootstrap.
 5. Say that a refreshed or installed rule is read at the next load of the rules: a session restart, or `load rules`.
+6. Pass on what each script reports. Do not guess at the work it does.
 
 # Packages lists the installed packages
 
@@ -1436,7 +1437,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 ## What this costs
 
 1. The mechanism works only where a harness loads a plugin from `.claude/skills/` and reads `.claude/settings.json`.
-2. Elsewhere the system loads through the `AGENTS.md` bootstrap, silently.
+2. Elsewhere the system loads through the bootstrap in `slasher/SLASHER.md`, which the project's `AGENTS.md` imports, silently.
 3. A setting that disables hooks silences it too.
 4. A newly placed plugin or `.claude/settings.json` may not take effect until the harness reloads.
 

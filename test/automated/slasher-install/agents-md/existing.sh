@@ -44,7 +44,7 @@ control_existing_text > "$project/AGENTS.md"
 git -C "$project" add AGENTS.md
 git -C "$project" commit -q -m "some commit"
 
-control_agents_md_text=$(control_existing_text; echo; system/foundation/install.sh bootstrap)
+control_agents_md_text=$(control_existing_text; echo; echo "@slasher/SLASHER.md")
 
 # Actuation ------------------------------------------------------------------
 

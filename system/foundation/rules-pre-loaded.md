@@ -20,7 +20,7 @@ Source: system/foundation/source/a-packages-vocabulary-holds-its-terms-and-the-m
 ## A project's own vocabulary binds
 
 1. `slasher/local/vocabulary.md` is read at session start, with `slasher/system/` and `slasher/local/rules/`. That read makes it binding.
-2. `session-start.sh` names it in the read instruction. The `AGENTS.md` bootstrap names it too.
+2. `session-start.sh` names it in the read instruction. The bootstrap in `slasher/SLASHER.md` names it too.
 3. It is optional, and its absence is not a defect.
 
 ## Specialization is not conflict
