@@ -747,13 +747,16 @@ Trigger: When the engineer types `/unrecorded`, or starts or ends an unrecorded 
 
 **Trigger:** When the engineer types `/unrecorded`, or starts or ends an unrecorded session
 
-1. A bare `/unrecorded`, or `/unrecorded <instruction>`, starts an unrecorded session. It lasts until the session ends, or until `/unrecorded end`.
-2. In an unrecorded session, the agent writes no record anywhere: not in the project, and not in the private directory.
-3. That holds for a record the engineer asks for, and for a record a rule asks for.
-4. Carry out the instruction after `/unrecorded` in the session. Where there is none, start the session and wait for the engineer's request.
-5. `/unrecorded help` prints the help of the UNRECORDED command domain, whose help command `/unrecorded` is.
+1. A bare `/unrecorded` starts an unrecorded session. It lasts until the session ends, or until `/unrecorded end`.
+2. `/unrecorded <instruction>` starts an unrecorded session, carries out the instruction in it, and then ends it. The session ends when the reply that carries out the instruction is done, as `/unrecorded end` ends it.
+3. In an unrecorded session, the agent writes no record anywhere: not in the project, and not in the private directory.
+4. That holds for a record the engineer asks for, and for a record a rule asks for.
+5. Carry out the instruction after `/unrecorded` in the session, then end it. Where there is none, start the session and wait for the engineer's request.
+6. `/unrecorded help` prints the help of the UNRECORDED command domain, whose help command `/unrecorded` is.
 
 **As the engineer stated it:** An "/unrecorded" command that mirrors "/private", but instead of routing records to the private directory, the records are not written at all.
+
+**As the engineer later stated it:** When the "/unrecorded <instruction>" form is used, then unrecorded session ends upon comletion of the instruction
 
 ## What is not written
 
@@ -775,7 +778,7 @@ Trigger: When the engineer types `/unrecorded`, or starts or ends an unrecorded 
 
 ## The session
 
-1. When the session starts, say once that nothing in it will be recorded. Say it again when it ends.
+1. When the session starts, say once that nothing in it will be recorded. Say it again when it ends. A session started with an instruction says both in the one reply.
 2. A reply in the session prints no *Record:* line, since it wrote no record.
 3. Where the work would change an existing record's content or state, say so, and ask, through the selection interface, whether to end the session first. Do not change the record in the session.
 4. Before starting a feature or an experiment, ask, through the selection interface, whether to end the session first. An implementation without its record would be left silently open.
@@ -792,7 +795,7 @@ Trigger: When the engineer types `/unrecorded`, or starts or ends an unrecorded 
 
 **Why:** some work is not worth a record, and some should leave none: an exploration the engineer will discard, or a question asked only to think aloud. A private session keeps records out of the repository but still writes them. An unrecorded session writes none, so there is nothing to find, move, or delete afterwards.
 
-**How to apply:** on `/unrecorded`, say that nothing will be recorded, and then write no record until the session ends. Change files that are not records as the work asks. Ask before a change to an existing record, and before starting a feature or an experiment.
+**How to apply:** on `/unrecorded`, say that nothing will be recorded, and then write no record until the session ends. On `/unrecorded <instruction>`, carry out the instruction, then end the session in the same reply: delete its state file, and say that records are written again. Change files that are not records as the work asks. Ask before a change to an existing record, and before starting a feature or an experiment.
 
 # Anything given to `/private` is recorded only in the private directory
 

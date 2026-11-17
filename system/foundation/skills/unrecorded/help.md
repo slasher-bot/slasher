@@ -3,8 +3,8 @@ UNRECORDED
   private directory. Files that are not records still change.
 
   /unrecorded                      Start an unrecorded session
-  /unrecorded <instruction>        Carry out the instruction in an
-                                   unrecorded session
+  /unrecorded <instruction>        Carry out the instruction unrecorded,
+                                   then end the unrecorded session
   /unrecorded end                  End the unrecorded session. After 4
                                    minutes with no prompt, the agent asks
                                    whether to continue it or end it

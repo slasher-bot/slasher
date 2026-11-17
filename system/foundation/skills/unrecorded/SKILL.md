@@ -11,4 +11,4 @@ The engineer typed `/unrecorded $ARGUMENTS`.
 2. Otherwise, load the rule that governs the act. From the project root, run `slasher/system/foundation/load-rules.sh an-unrecorded-session-writes-no-record`. Where the project has no `slasher/` directory, run `system/foundation/load-rules.sh` with the same rule name. Follow the rule it prints.
 3. **`end`**: end the unrecorded session.
 4. **Nothing typed**: start an unrecorded session, and wait for the engineer's request.
-5. **Any other words**: start an unrecorded session, and carry out the words as the engineer's instruction in it.
+5. **Any other words**: start an unrecorded session, carry out the words as the engineer's instruction in it, and then end it.
