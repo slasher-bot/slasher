@@ -44,11 +44,11 @@ control_observation_text > "$items_dir/$control_observation_name"
 
 (cd "$project" && HOME="$home" sh "$installer" agents-md) > /dev/null
 
-# Renames an Open note's file Recorded ---------------------------------------
+# Renames an Open note's file without its state -------------------------------
 
-recorded="$items_dir/2026-01-01T00-00-00Z-some-observation-RECORDED.md"
+recorded="$items_dir/2026-01-01T00-00-00Z-some-observation.md"
 
-[ -f "$recorded" ] || fail "Renames an Open note's file Recorded" "found:" "$(ls "$items_dir")"
+[ -f "$recorded" ] || fail "Renames an Open note's file without its state" "found:" "$(ls "$items_dir")"
 
 # Changes the note's State line to Recorded ----------------------------------
 

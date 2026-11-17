@@ -61,7 +61,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Where the implementation is created for an item, the item takes `Implementation`**, and the two records name each other. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, the agent asks the engineer what state the item takes. See the the-items-directory-holds-one-file-per-item rule.
 
-**An item already on `master` takes each of these state changes on `master` too**, not only on the implementation's branch. Rename the item and write its log entry on `master`, with the same content as on the branch, so the two match when the branch merges. Contributors read `master`, so the items there show the state each item is in now.
+**An item already on `master` takes each of these state changes on `master` too**, not only on the implementation's branch. Change the item's state line and write its log entry on `master`, with the same content as on the branch, so the two match when the branch merges. Contributors read `master`, so the items there show the state each item is in now.
 
 **As the engineer stated it:** The records already on master should be up to date, because contributors all have access to master, and will need to understand the correct and current state of items.
 
@@ -83,7 +83,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 ## Format
 
-The same frontmatter-free markdown as rules — a `# Experiment — <name>` or `# Feature — <name>` title, then prose and tables. **The kind reads in the title and is stated as data in the `**Tags:**` line**, and a record whose title says one kind and whose tag says another is a defect in the record. The filename takes the ISO-8601-UTC prefix (see the file-names rule) and the state suffix. End the file with the provenance footer, and pair it with a log entry (see the a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
+The same frontmatter-free markdown as rules — a `# Experiment — <name>` or `# Feature — <name>` title, then prose and tables. **The kind reads in the title and is stated as data in the `**Tags:**` line**, and a record whose title says one kind and whose tag says another is a defect in the record. The filename takes the ISO-8601-UTC prefix (see the file-names rule), and no state (see the a-records-file-name-carries-no-state rule). End the file with the provenance footer, and pair it with a log entry (see the a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
 
 **Why:** an experiment and a feature share one lifecycle. What differs between two implementations is whether the work is judged against a forecast, and that is a decision about this piece of work rather than about its kind. A forecast recorded at creation keeps a verdict possible, and the verdict is decided at the end, when the work has shown what it shows. The kind keeps naming what the work is.
 
@@ -128,7 +128,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
 8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no implementation is in place, `start` creates the branch and writes the record `Active`.
-9. The filename carries the state suffix, as `-OPEN` or `-ACTIVE` (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
+9. The filename carries no state (see the a-records-file-name-carries-no-state rule).
 10. The state words every implementation takes are these.
     - **Open**: the record and the branch exist, and the work has not started.
     - **Active**: the work is in progress.
@@ -175,7 +175,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 3. The kind reads in the title and is stated as data in the `**Tags:**` line.
 4. A record whose title and tag name different kinds is defective.
 5. The filename takes the ISO-8601-UTC prefix (see the file-names rule).
-6. The filename also takes the state suffix.
+6. The filename carries no state.
 7. End the file with the provenance footer.
 8. Pair the record with a log entry (see the a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
 
@@ -200,8 +200,11 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 - 2026-11-14, revised: *start* replaces *begin*; not re-checked
 - 2026-11-14, revised: `start` creates an implementation Active where none is in place, as point 8 of the state; not re-checked
 - 2026-11-14, revised: the opening questions are asked when the implementation is created, not at the start; not re-checked
+- 2026-11-16, revised: a file name carries no state, which the engineer settled; checked: 49 directives, 49 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Mon Nov 16 2026 an implementation record's file name ended with its state in upper case, as `-OPEN` or `-ACTIVE`, and an item already on `master` was renamed there at each state change.
 
 Until Sat Nov 14 2026 this rule said the opening questions were asked *at the start*, where it now says *when the implementation is created*. The begin, start, end, conclude work item settled that *start* means only the work starting.
 
@@ -237,7 +240,7 @@ Related:
 
 - the an-implementation-runs-on-a-branch-to-a-declared-end rule — the lifecycle this records
 - the a-record-may-be-categorized-with-square-bracket-tags rule — how a tag is written
-- the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule — the filename suffix the state line gives
+- the a-records-file-name-carries-no-state rule — a file name with no state
 - the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the status line that names an open implementation
 - the design-by-efferent a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule — the design record for the same work, which names this one
 - the the-items-directory-holds-one-file-per-item rule — the other record that carries a state, and whose in-progress state is also Active
@@ -280,3 +283,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:56 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT

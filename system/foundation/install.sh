@@ -683,6 +683,53 @@ migrate_work_state() {
   fi
 }
 
+# Take the state out of a project's record file names. An item's or an implementation record's
+# file name ended with its state in upper case, as -OPEN or -COMPLETED, until 2026-11-16, so a
+# state change renamed the file and broke every link to it. The State line is the only statement
+# of the state, and a rule change cannot rename a project's own files, so the installer does it.
+# A name is lower-case, so a last segment in upper case is the state.
+#
+# The same narrow semantics as the migrations above: a record moves only when its new name is
+# absent, and a clash is reported and left alone. Its content does not change. This runs after
+# them, since each of them finds a record by its suffix.
+migrate_record_names() {
+  migrated=0
+  for directory in slasher/local/items slasher/local/implementations; do
+    [ -d "$directory" ] || continue
+    for suffixed in "$directory"/*-*.md; do
+      [ -f "$suffixed" ] || continue
+      name=$(printf '%s\n' "$suffixed" | sed -n 's/-[A-Z][A-Z]*\.md$/.md/p')
+      [ -n "$name" ] || continue
+      # Two names that differ only in their state would take one name. Neither is moved.
+      stem=${name%.md}
+      siblings=0
+      for sibling in "$stem"-*.md; do
+        case ${sibling#"$stem"-} in
+          *[!A-Z]*.md|.md) ;;
+          *) siblings=$((siblings + 1)) ;;
+        esac
+      done
+      if [ "$siblings" -gt 1 ]; then
+        echo "More than one $stem-<STATE>.md is present — none is touched."
+        echo "Reconcile them, and keep one."
+        continue
+      fi
+      if [ -e "$name" ]; then
+        echo "Both $suffixed and $name are present — neither is touched."
+        echo "The name ending in a state is the old name. Reconcile the two and remove it."
+        continue
+      fi
+      mv "$suffixed" "$name"
+      migrated=$((migrated + 1))
+    done
+  done
+
+  if [ "$migrated" -gt 0 ]; then
+    echo "Renamed $migrated record(s) without the state at the end of the name — the State line alone holds it."
+    echo "Commit the rename."
+  fi
+}
+
 # 0. Print the bootstrap section and stop. Nothing is installed and nothing is placed,
 #    so this is safe to run anywhere, including from the authoring source. It exists so
 #    refresh-packages.sh can compare a project's AGENTS.md against the current text
@@ -735,6 +782,7 @@ migrate_note_tag
 migrate_note_state
 migrate_work_tag
 migrate_work_state
+migrate_record_names
 
 # 4. An existing AGENTS.md left unchanged because no one was there to answer leaves the rules
 #    unloaded, so the run says so last, where it is seen, and fails.

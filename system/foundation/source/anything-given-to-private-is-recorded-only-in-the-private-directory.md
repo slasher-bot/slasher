@@ -63,8 +63,8 @@
 
 ## A private record's shape
 
-1. **A document** keeps the name of the file given. It takes no datetime prefix, no state suffix, and no provenance footer.
-2. **An item** takes an item's shape: the ISO-8601-UTC prefix, the state suffix, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
+1. **A document** keeps the name of the file given. It takes no datetime prefix and no provenance footer.
+2. **An item** takes an item's shape: the ISO-8601-UTC prefix, a name with no state, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
 3. **A log entry** takes a log entry's shape: the ISO-8601-UTC prefix and a one-line title, with a `**Tags:**` line or a body where it needs one.
 4. **A journal entry** takes the shape the private-journal-convention gives it.
 5. **A work session record, an implementation record, or a loop record** takes the shape its own rule gives it, with no log entry in the project and no commit.
@@ -103,6 +103,8 @@
 
 ## History
 
+Until Mon Nov 16 2026 a private item's name took the state suffix.
+
 1. Until Mon Nov 16 2026, a bare `/private` asked what to record, and a private session was started only by `/private session` and ended only by `/private session end`.
 2. Until Thu Nov 12 2026, a private session had no time limit.
 3. Until Thu Nov 12 2026, `/private` recorded only what was given to it. It had no private session.
@@ -125,3 +127,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 10:29:33 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:13:01 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:46:17 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 2:56:31 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT

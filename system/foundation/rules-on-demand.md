@@ -228,7 +228,7 @@ Lines 1–8 below are the opening statements, which come before any section head
 
 1. A note carries `**State:** Recorded` from the moment it is written.
 2. It keeps that state for the rest of its life.
-3. Its filename ends `-RECORDED`.
+3. Its filename carries no state.
 4. It carries no `**Why this state:**` line.
 5. A note has no lifecycle.
 6. It is never realized, abandoned, obsolete, superseded, or suspended.
@@ -248,7 +248,7 @@ Lines 1–8 below are the opening statements, which come before any section head
 4. The file starts with a `# <title>`, then a `**State:** Recorded` line.
 5. Next comes a `**Tags:**` line carrying `[note]`, then the content in prose.
 6. The filename follows the ISO-8601-UTC prefix convention (see the file-names rule).
-7. The filename ends `-RECORDED`.
+7. The filename carries no state.
 8. **Provenance footer:** end the file with the `Authored by … / Changed by …` footer, like every working-state artifact.
 9. **Recording one:** add the file.
 10. Add a matching one-line entry to `slasher/local/logs/log/`, noting it was recorded as a note.
@@ -360,48 +360,6 @@ A list of items takes the ordinal and no SHA columns:
 2. This rule does not govern an answer that is not a list of records.
 3. The `language` package's an-answer-is-a-list-and-prose-must-justify-itself rule governs the form of an answer's list items. This rule governs only how a set of records is presented.
 
-# A record carrying a state line ends its filename with the state in upper case
-
-Source: system/foundation/source/a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case.md
-
-Trigger: When creating, renaming, changing the state of, or referencing an item or implementation record
-
-1. Where a record carries a canonical `**State:**` line, its filename ends with that state word in upper case.
-2. The state word is appended to the name with a dash, before the extension.
-
-```
-2026-07-27T07-09-02Z-the-feature-capability-REALIZED.md
-2026-08-05T19-37-06Z-ooda-terminology-REFUTED.md
-2026-08-06T04-32-50Z-ooda-mode-COMPLETED.md
-```
-
-3. This reaches every record that carries a state line: an implementation record, whether experiment or feature, and an item.
-4. Each convention fixes its own state words. This rule fixes only where the word is rendered.
-5. Every item and every implementation record carries a suffix. Each carries a state line from the moment it is written, and the in-progress state of each is **Active**.
-6. A name with no suffix is a defect.
-7. A note's suffix is always `-RECORDED`.
-8. The file's contents are unchanged. Add no suffix to any file's contents.
-9. The state inside the file is the `**State:**` line and nothing else.
-10. The file still ends with its provenance footer.
-
-## Upper case, and the exception it takes
-
-1. The suffix is the stated exception to the file-names rule's dash-separated, lower-case name.
-2. The upper case marks the state as not part of the record's subject. `…-ooda-terminology-REFUTED.md`, not `…-ooda-terminology-refuted.md`.
-3. The dash is the ordinary separator. Nothing else about the name changes.
-4. The ISO-8601-UTC prefix is untouched, so the directory still sorts chronologically.
-
-## The `**State:**` line stays the only authoritative statement
-
-1. The name is derived from the line. It changes only when the line changes.
-2. Where name and line disagree, the line is right and the name is stale.
-3. A state change renames the file, using `git mv`.
-4. When a reversible word is taken back, rename the file to the state the record returns to, such as **ACTIVE** or **OPEN**.
-5. Any state but Open, Active, and Recorded can be taken back by resume, as the the-items-directory-holds-one-file-per-item rule sets out.
-6. A reference to a record omits its state suffix and extension, and keeps the prefix and name. A rename then breaks no reference.
-7. A reader finds the record by that prefix and name.
-8. Leave historical records as written.
-
 # A record may be tagged with square-bracket tags
 
 Source: system/foundation/source/a-record-may-be-categorized-with-square-bracket-tags.md
@@ -415,6 +373,26 @@ Trigger: When adding a tag to a record or a list item
 5. Tags are optional and freeform. Add one when it is useful.
 6. Nothing checks tags, and there is no fixed list.
 7. Some tags have lifecycle states, such as `[experiment]`, `[feature]`, `[note]`, and `[work]`. Each one's own rule states its states.
+
+# A record's file name carries no state
+
+Source: system/foundation/source/a-records-file-name-carries-no-state.md
+
+Trigger: When creating, renaming, changing the state of, or referencing an item or implementation record
+
+1. An item's or an implementation record's file name carries no state.
+2. The name is the ISO-8601-UTC prefix, a dash-separated, lower-case name, and `.md`.
+
+```
+2026-07-27T07-09-02Z-the-cart-keeps-its-contents.md
+2026-08-05T19-37-06Z-the-receipt-shows-the-tax.md
+```
+
+3. The `**State:**` line inside the file is the only statement of the state.
+4. A state change edits the `**State:**` line and renames nothing. A record keeps one path for its whole life.
+5. Refer to a record by its path, or by its prefix and name.
+6. Leave a historical record that gives a path with a state as written. A reader finds the record by its prefix and name.
+7. `install.sh` takes the state off the end of a Slasher project's record names when its packages are updated or Slasher is installed. Where the name without it is taken, or two names differ only in their state, it renames neither, and says so. Content does not change.
 
 # A rule's compressed text is written in its source, checked against it, and its figures recorded below the body
 
@@ -830,8 +808,8 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 
 ## A private record's shape
 
-1. **A document** keeps the name of the file given. It takes no datetime prefix, no state suffix, and no provenance footer.
-2. **An item** takes an item's shape: the ISO-8601-UTC prefix, the state suffix, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
+1. **A document** keeps the name of the file given. It takes no datetime prefix and no provenance footer.
+2. **An item** takes an item's shape: the ISO-8601-UTC prefix, a name with no state, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
 3. **A log entry** takes a log entry's shape: the ISO-8601-UTC prefix and a one-line title, with a `**Tags:**` line or a body where it needs one.
 4. **A journal entry** takes the shape the private-journal-convention gives it.
 5. **A work session record, an implementation record, or a loop record** takes the shape its own rule gives it, with no log entry in the project and no commit.
@@ -931,10 +909,8 @@ Trigger: When creating and naming a new file under slasher/local/ or a new rule 
 3. Join the date and time with `T`. The trailing `Z` marks UTC.
 4. Write the time's colons as dashes, for filesystem safety, as in `2026-07-01T20-40-00Z-some-name.md`.
 5. The name is dash-separated and lower-case.
-6. The state suffix is the one exception to the lower case.
-7. A record carrying a canonical `**State:**` line ends its name with that state word in upper case, after a dash: `2026-08-05T19-37-06Z-ooda-terminology-REFUTED.md`.
-8. The suffix changes nothing else about the name, and leaves the prefix untouched.
-9. The a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule fixes the suffix.
+6. The name carries no state.
+7. The a-records-file-name-carries-no-state rule says so.
 
 ## What takes no prefix
 1. System rules do not take the prefix.
@@ -1450,7 +1426,7 @@ Trigger: When creating or starting an experiment or feature, or writing or chang
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
 8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no implementation is in place, `start` creates the branch and writes the record `Active`.
-9. The filename carries the state suffix, as `-OPEN` or `-ACTIVE` (see the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule).
+9. The filename carries no state (see the a-records-file-name-carries-no-state rule).
 10. The state words every implementation takes are these.
     - **Open**: the record and the branch exist, and the work has not started.
     - **Active**: the work is in progress.
@@ -1497,7 +1473,7 @@ Trigger: When creating or starting an experiment or feature, or writing or chang
 3. The kind reads in the title and is stated as data in the `**Tags:**` line.
 4. A record whose title and tag name different kinds is defective.
 5. The filename takes the ISO-8601-UTC prefix (see the file-names rule).
-6. The filename also takes the state suffix.
+6. The filename carries no state.
 7. End the file with the provenance footer.
 8. Pair the record with a log entry (see the a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
 
@@ -1509,11 +1485,11 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 
 1. `slasher/local/items/` holds the project's items, one file per item. Every record there is an item, and only an item.
 2. An item is the thinking that settles what the work should be and how it should go.
-3. Name the file with the ISO-8601-UTC prefix, ending in its state in upper case.
+3. Name the file with the ISO-8601-UTC prefix and a name. The name carries no state.
 4. Write the item as frontmatter-free markdown.
 5. Give it, in this order, a `# <title>`, a `**State:**` line, a `**Tags:**` line, and whatever the item has to say. A provenance footer ends it.
 6. Write a log entry when the item is created and at each change of its state.
-7. Put no code samples in an item.
+7. Put no code samples in an item that sequences work.
 8. Nothing else is required. Add no shape the thinking does not have.
 9. Where an item records decisions, record them as dated **Settled** resolutions.
 10. Where an item that settles things deliberately leaves something out, mark it in an **Out of Scope / Deferred** tail.
@@ -1555,7 +1531,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 46. **Obsolete** — it lost its relevance over time, as the work moved past it with no one deciding. Where a decision dropped it, it is **Abandoned**. Any item that changes state takes it.
 47. **Discontinued** — stopped, with no plan to do it. It is not current work, so the list of current items leaves it out. Deferred is kept to do later, and Discontinued has no plan to do it.
 48. Take back any state but Open, Active, and Recorded with resume, to Open or Active as the engineer's words say. Where they do not say which, ask. Conclude an item whose work is done on an experiment's branch when the work is done, in its kind's concluding state. Do not wait for the merge, and name the branch.
-49. At each change of state, change the `**State:**` line and rename the file.
+49. At each change of state, change the `**State:**` line. Do not rename the file.
 50. At each change of state, write the log entry.
 51. An item tagged `[work]` is a piece of work to be done.
 52. **Corrected** — what was wrong is put right. A correction and a mistake conclude Corrected. **Resolved** — the problem no longer stands. A problem concludes Resolved. **Completed** — the work is complete. A work item and a rework item conclude Completed.
@@ -1568,7 +1544,7 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 59. When amending, keep an outdated resolution's date and wording, and state what changed in a later resolution.
 60. Answer a question that runs against what an item settled, and record the change.
 61. Do not refuse to answer until the item is amended.
-62. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
+62. Reconcile a settled item; never regenerate it. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
 63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The implementations rule asks the same for an implementation concluded with no state named. *Complete that item* names its kind's concluding state.
 64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is a current item, and its implementation is listed as current work too.
 65. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
@@ -1650,7 +1626,7 @@ Trigger: When the engineer types `/open`, or asks for a record they name to be o
 
 1. An ordinal from the list of records printed last in the session, as `#3` or `3`, as in `/open #3` after `/items current`.
 2. A handle, the record's ISO-8601-UTC filename prefix, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
-3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents-OPEN.md`.
+3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents.md`.
 4. Words from the record's title or filename, as `/open cart contents`.
 
 **Where the words match one record, open it.** Name it before opening it, so an ordinal is confirmed: after an open, say what was opened, in one line, with the record's title and its path from the project root, in backticks. Act on nothing else.

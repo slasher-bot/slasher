@@ -23,7 +23,7 @@ cp system/foundation/current-implementation.sh "$project/system/foundation/"
 
 control_branch="feature/some-subject"
 
-cat > "$project/local/implementations/2026-01-01T00-00-00Z-some-subject-ACTIVE.md" <<RECORD
+cat > "$project/local/implementations/2026-01-01T00-00-00Z-some-subject.md" <<RECORD
 # Feature — Some intent
 
 - **State:** Active
@@ -45,7 +45,7 @@ trap 'rm -rf "$project" "$installed"' EXIT
 mkdir -p "$installed/slasher/system/foundation" "$installed/slasher/local/implementations"
 cp system/foundation/current-implementation.sh "$installed/slasher/system/foundation/"
 
-cat > "$installed/slasher/local/implementations/2026-01-01T00-00-00Z-some-subject-ACTIVE.md" <<RECORD
+cat > "$installed/slasher/local/implementations/2026-01-01T00-00-00Z-some-subject.md" <<RECORD
 # Feature — Some intent
 
 - **State:** Active
@@ -64,14 +64,14 @@ mkdir -p "$several/system/foundation" "$several/local/implementations"
 cp system/foundation/current-implementation.sh "$several/system/foundation/"
 
 # The receipt record is the older of the two, and its branch has the later commit.
-cat > "$several/local/implementations/2026-01-01T00-00-00Z-some-receipt-ACTIVE.md" <<'RECORD'
+cat > "$several/local/implementations/2026-01-01T00-00-00Z-some-receipt.md" <<'RECORD'
 # Feature — Some receipt
 
 - **State:** Active
 - **Implementation branch:** `feature/receipt`
 RECORD
 
-cat > "$several/local/implementations/2026-01-02T00-00-00Z-some-cart-ACTIVE.md" <<'RECORD'
+cat > "$several/local/implementations/2026-01-02T00-00-00Z-some-cart.md" <<'RECORD'
 # Feature — Some cart
 
 - **State:** Active
@@ -103,7 +103,7 @@ trap 'rm -rf "$project" "$installed" "$several" "$phased"' EXIT
 mkdir -p "$phased/system/foundation" "$phased/local/implementations"
 cp system/foundation/current-implementation.sh "$phased/system/foundation/"
 
-cat > "$phased/local/implementations/2026-01-01T00-00-00Z-some-receipt-ACTIVE.md" <<'RECORD'
+cat > "$phased/local/implementations/2026-01-01T00-00-00Z-some-receipt.md" <<'RECORD'
 # Feature — Some receipt
 
 - **State:** Active
@@ -133,7 +133,7 @@ cp system/foundation/current-implementation.sh "$opened/system/foundation/"
 
 control_open_branch="feature/some-cart"
 
-cat > "$opened/local/implementations/2026-01-01T00-00-00Z-some-cart-OPEN.md" <<RECORD
+cat > "$opened/local/implementations/2026-01-01T00-00-00Z-some-cart.md" <<RECORD
 # Feature — Some cart
 
 - **State:** Open
@@ -159,7 +159,7 @@ control_worktree_branch="feature/worktree/some-cart"
 git -C "$worktreed_project" worktree add -q -b "$control_worktree_branch" "$worktreed/some-cart"
 
 mkdir -p "$worktreed/some-cart/local/implementations"
-cat > "$worktreed/some-cart/local/implementations/2026-01-01T00-00-00Z-some-cart-ACTIVE.md" <<RECORD
+cat > "$worktreed/some-cart/local/implementations/2026-01-01T00-00-00Z-some-cart.md" <<RECORD
 # Feature — Some cart
 
 - **State:** Active

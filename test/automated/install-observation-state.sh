@@ -58,8 +58,8 @@ ITEM
 }
 
 control_observation_name=2026-01-01T00-00-00Z-some-observation-STATED.md
-control_observation_recorded_name=2026-01-01T00-00-00Z-some-observation-RECORDED.md
-control_other_item_name=2026-01-01T00-00-01Z-some-other-item-OPEN.md
+control_observation_recorded_name=2026-01-01T00-00-00Z-some-observation.md
+control_other_item_name=2026-01-01T00-00-01Z-some-other-item.md
 
 mkdir -p "$items_dir"
 control_observation_text > "$items_dir/$control_observation_name"
@@ -69,13 +69,13 @@ control_other_item_text > "$items_dir/$control_other_item_name"
 
 (cd "$project" && HOME="$home" sh "$installer" agents-md) > /dev/null
 
-# Renames a stated observation to recorded ----------------------------------
+# Renames a stated observation's file without its state -----------------------
 
 recorded_observation="$items_dir/$control_observation_recorded_name"
 stated_observation="$items_dir/$control_observation_name"
 
-[ -f "$recorded_observation" ] || fail "Renames a stated observation to recorded" "not present:" "$control_observation_recorded_name"
-[ ! -e "$stated_observation" ] || fail "Renames a stated observation to recorded" "still present:" "$control_observation_name"
+[ -f "$recorded_observation" ] || fail "Renames a stated observation's file without its state" "not present:" "$control_observation_recorded_name"
+[ ! -e "$stated_observation" ] || fail "Renames a stated observation's file without its state" "still present:" "$control_observation_name"
 
 # Changes the state line to recorded ----------------------------------------
 

@@ -1,0 +1,1 @@
+# A record's file name carries no state: the a-records-file-name-carries-no-state rule replaces the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule, and install.sh renames a Slasher project's records

@@ -21,7 +21,7 @@ trap 'rm -rf "$project" "$idle"' EXIT
 mkdir -p "$project/system/foundation" "$project/local/implementations"
 cp system/foundation/statusline.sh system/foundation/current-implementation.sh "$project/system/foundation/"
 
-cat > "$project/local/implementations/2026-01-01T00-00-00Z-some-subject-ACTIVE.md" <<'RECORD'
+cat > "$project/local/implementations/2026-01-01T00-00-00Z-some-subject.md" <<'RECORD'
 # Feature — Some intent
 
 - **State:** Active
@@ -45,7 +45,7 @@ idle=$(mktemp -d)
 mkdir -p "$idle/system/foundation" "$idle/local/implementations"
 cp system/foundation/statusline.sh system/foundation/current-implementation.sh "$idle/system/foundation/"
 
-cat > "$idle/local/implementations/2026-01-01T00-00-00Z-some-subject-COMPLETED.md" <<'RECORD'
+cat > "$idle/local/implementations/2026-01-01T00-00-00Z-some-subject.md" <<'RECORD'
 # Feature — Some intent
 
 - **State:** Completed
