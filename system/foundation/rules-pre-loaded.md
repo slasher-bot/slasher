@@ -280,6 +280,24 @@ Source: system/foundation/source/a-projects-durable-context-is-recorded-in-its-c
 5. The harness's own working state is outside this rule. That is a cache, a transcript, or an index of the repository.
 6. Harness working state is not project context and is no substitute for an artifact.
 
+# A project's local directory may be relocated by its registry entry
+
+Source: system/foundation/source/a-projects-local-directory-may-be-relocated-by-its-registry-entry.md
+
+1. `slasher/local/` in every rule means the project's local directory, wherever it is.
+2. By default it is `slasher/local/` in the project, or `local/` in the Slasher authoring source.
+3. A project's entry in `~/.config/slasher/projects.toml` may relocate it with the key `local`, as `local = "~/records/checkout"`. A leading `~` is the home directory, and a relative path is read from the project's root.
+4. Find the directory with `slasher/system/foundation/local-directory.sh`, run from the project's root. Every Slasher script finds it the same way, and the session-start instruction names it.
+5. A configured directory that does not exist stops with an error that names it. Nothing falls back to the default.
+6. Every worktree of a project uses the one relocated directory. Write a record once, there. No merge acts on it, and no record is written on `master` and then again on a branch.
+7. Commit a record in the git repository that holds the relocated directory. Where no git repository holds it, the record is not committed, and say so in the reply that wrote it.
+
+**As the engineer stated it:** A project's local directory can be located in any directory. When the local directory is not in its default location, it's configured in the project registry.
+
+**Why:** a project's own records need not live inside the project, as in a content project whose records belong elsewhere. The registry is per machine and outside every repository, so it can say where they are without the project naming that place.
+
+**How to apply:** where a rule names `slasher/local/…`, read it as the directory `local-directory.sh` prints. Write records there, and commit them in the repository that holds it, where one does.
+
 # A reply that writes a record ends with the record's path
 
 Source: system/foundation/source/a-reply-that-writes-a-record-ends-with-the-records-path.md

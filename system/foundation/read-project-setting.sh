@@ -15,6 +15,10 @@
 #   [[project]]
 #   path = "~/src/checkout"
 #   journal = "private"
+#   local = "~/records/checkout"
+#
+# The keys in use are journal, which makes the project's journal private, and local,
+# which relocates the project's local directory. local-directory.sh reads local.
 #
 # A value is a quoted string alone on its line. A leading ~ in a path is this
 # machine's home directory. Whether the registry is in the form list-projects.sh

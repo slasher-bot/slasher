@@ -19,15 +19,23 @@ set -e
 # system/ directory of its own.
 if [ -d slasher/system ]; then
   system=slasher/system
-  local=slasher/local
 else
   system=system
-  local=local
 fi
 
 plugin=.claude/skills/slasher
 
 [ -d "$system/foundation/plugin" ] || exit 0
+
+# The project's own directory is where local-directory.sh says. An installed foundation that
+# predates the script keeps it in slasher/local, or local in the authoring source.
+if [ -x "$system/foundation/local-directory.sh" ]; then
+  local=$("$system/foundation/local-directory.sh")
+elif [ "$system" = slasher/system ]; then
+  local=slasher/local
+else
+  local=local
+fi
 
 # A deactivated package's skills go with it. The packages are read from the latest package set's
 # Inactive line, as load-rules.sh reads them.

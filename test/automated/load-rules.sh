@@ -21,6 +21,7 @@ trap 'rm -rf "$project"' EXIT
 
 mkdir -p "$project/system/foundation" "$project/system/sample" "$project/local/rules" "$project/local/journal/some-writer"
 cp system/foundation/load-rules.sh "$project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$project/system/foundation/"
 
 echo some-foundation-rules > "$project/system/foundation/rules-pre-loaded.md"
 echo some-foundation-vocabulary > "$project/system/foundation/vocabulary.md"
@@ -178,6 +179,7 @@ trap 'rm -rf "$project" "$set_project"' EXIT
 
 mkdir -p "$set_project/system/foundation" "$set_project/system/sample" "$set_project/system/other" "$set_project/local"
 cp system/foundation/load-rules.sh "$set_project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$set_project/system/foundation/"
 
 echo some-foundation-rules > "$set_project/system/foundation/rules-pre-loaded.md"
 echo some-sample-rules > "$set_project/system/sample/rules-pre-loaded.md"
@@ -265,6 +267,7 @@ trap 'rm -rf "$project" "$set_project" "$compressed_project"' EXIT
 
 mkdir -p "$compressed_project/system/foundation" "$compressed_project/local/rules"
 cp system/foundation/load-rules.sh "$compressed_project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$compressed_project/system/foundation/"
 
 echo some-foundation-rules > "$compressed_project/system/foundation/rules-pre-loaded.md"
 
@@ -331,6 +334,7 @@ trap 'rm -rf "$project" "$set_project" "$compressed_project" "$plain_project"' E
 
 mkdir -p "$plain_project/system/foundation" "$plain_project/system/sample"
 cp system/foundation/load-rules.sh "$plain_project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$plain_project/system/foundation/"
 
 cat > "$plain_project/system/sample/rules-pre-loaded.md" <<'RULES'
 # Some rule e

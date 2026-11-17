@@ -454,21 +454,21 @@ migrate_machine() {
 # move is a plain mv rather than git mv, which would fail on records that were never
 # committed; git detects the rename when the engineer commits it.
 migrate_work_sessions() {
-  old_dir="slasher/local/sessions"
-  new_dir="slasher/local/work-sessions"
+  old_dir="$own/sessions"
+  new_dir="$own/work-sessions"
 
   if [ ! -d "$old_dir" ]; then
     return 0
   fi
 
   if [ -d "$new_dir" ]; then
-    echo "Both slasher/local/sessions/ and slasher/local/work-sessions/ are present — neither is touched."
-    echo "slasher/local/sessions/ is the old name. Move its records into work-sessions/ and remove it."
+    echo "Both $own/sessions/ and $own/work-sessions/ are present — neither is touched."
+    echo "$own/sessions/ is the old name. Move its records into work-sessions/ and remove it."
     return 0
   fi
 
   mv "$old_dir" "$new_dir"
-  echo "Renamed slasher/local/sessions/ to slasher/local/work-sessions/."
+  echo "Renamed $own/sessions/ to $own/work-sessions/."
   echo "Commit the rename."
 }
 
@@ -486,8 +486,8 @@ migrate_work_sessions() {
 # rather than git mv, for records that were never committed.
 migrate_logs() {
   for name in log loops work-sessions; do
-    old_dir="slasher/local/$name"
-    new_dir="slasher/local/logs/$name"
+    old_dir="$own/$name"
+    new_dir="$own/logs/$name"
 
     [ -d "$old_dir" ] || continue
 
@@ -497,7 +497,7 @@ migrate_logs() {
       continue
     fi
 
-    mkdir -p slasher/local/logs
+    mkdir -p "$own/logs"
     mv "$old_dir" "$new_dir"
     echo "Moved $old_dir/ to $new_dir/ — the contemporaneous, historical records are grouped under logs/."
     echo "Commit the move."
@@ -513,8 +513,8 @@ migrate_logs() {
 # rather than git mv, for records that were never committed. Each moved record that carries
 # no tag is then tagged [idea].
 migrate_items() {
-  old_dir="slasher/local/ideas"
-  new_dir="slasher/local/items"
+  old_dir="$own/ideas"
+  new_dir="$own/items"
 
   [ -d "$old_dir" ] || return 0
 
@@ -556,7 +556,7 @@ migrate_items() {
 # records that were never committed. This runs after migrate_items, so an observation still in
 # slasher/local/ideas/ is moved into items/ first.
 migrate_observation_state() {
-  items_dir="slasher/local/items"
+  items_dir="$own/items"
 
   [ -d "$items_dir" ] || return 0
 
@@ -586,7 +586,7 @@ migrate_observation_state() {
 # note on 2026-11-11, and a rule change cannot retag a project's own files, so the
 # installer does it. Only the Tags line changes, and the filename keeps -RECORDED.
 migrate_note_tag() {
-  items_dir="slasher/local/items"
+  items_dir="$own/items"
 
   [ -d "$items_dir" ] || return 0
 
@@ -610,7 +610,7 @@ migrate_note_tag() {
 # 2026-10-29, and the engineer settled then that the installer converts a project's items. Only the
 # Tags line changes. The same narrow semantics as migrate_note_tag.
 migrate_work_tag() {
-  items_dir="slasher/local/items"
+  items_dir="$own/items"
   [ -d "$items_dir" ] || return 0
 
   migrated=0
@@ -633,7 +633,7 @@ migrate_work_tag() {
 # touching its state. So an item tagged [note] whose file ends -OPEN is renamed -RECORDED, and its
 # State line changes with it. The same narrow semantics as migrate_observation_state.
 migrate_note_state() {
-  items_dir="slasher/local/items"
+  items_dir="$own/items"
   [ -d "$items_dir" ] || return 0
 
   migrated=0
@@ -661,7 +661,7 @@ migrate_note_state() {
 # So an item whose file ends -DONE is renamed -COMPLETED, and its State line changes with it. The
 # same narrow semantics as migrate_note_state.
 migrate_work_state() {
-  items_dir="slasher/local/items"
+  items_dir="$own/items"
   [ -d "$items_dir" ] || return 0
 
   migrated=0
@@ -694,7 +694,7 @@ migrate_work_state() {
 # them, since each of them finds a record by its suffix.
 migrate_record_names() {
   migrated=0
-  for directory in slasher/local/items slasher/local/implementations; do
+  for directory in "$own/items" "$own/implementations"; do
     [ -d "$directory" ] || continue
     for suffixed in "$directory"/*-*.md; do
       [ -f "$suffixed" ] || continue
@@ -774,15 +774,29 @@ warn_ignored_claude_files
 
 # 3. Carry a project's own working state across the directory renames a rule change
 #    cannot reach.
-migrate_work_sessions
-migrate_logs
-migrate_items
-migrate_observation_state
-migrate_note_tag
-migrate_note_state
-migrate_work_tag
-migrate_work_state
-migrate_record_names
+#    They act on the project's local directory, where local-directory.sh says. Where it fails, as
+#    for a relocated directory that does not exist, its message is printed and no migration runs.
+#    An installer run where the installed foundation predates local-directory.sh acts on
+#    slasher/local, the only place the directory could then be.
+if [ ! -x slasher/system/foundation/local-directory.sh ]; then
+  own=slasher/local
+  migrations=yes
+elif own=$(slasher/system/foundation/local-directory.sh); then
+  migrations=yes
+else
+  migrations=no
+fi
+if [ "$migrations" = yes ]; then
+  migrate_work_sessions
+  migrate_logs
+  migrate_items
+  migrate_observation_state
+  migrate_note_tag
+  migrate_note_state
+  migrate_work_tag
+  migrate_work_state
+  migrate_record_names
+fi
 
 # 4. An existing AGENTS.md left unchanged because no one was there to answer leaves the rules
 #    unloaded, so the run says so last, where it is seen, and fails.

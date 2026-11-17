@@ -26,6 +26,7 @@ project="$directory/some-project"
 system="$project/slasher/system"
 mkdir -p "$system/foundation/plugin" "$project/slasher/local"
 cp system/foundation/assemble-plugin.sh "$system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$system/foundation/"
 
 cat > "$system/foundation/plugin/command-table-header.md" <<'TABLE'
 | Command | Description |
