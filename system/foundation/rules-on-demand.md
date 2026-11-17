@@ -1132,7 +1132,7 @@ Source: system/foundation/source/package-refresh-and-install-run-foundations-scr
 
 Trigger: When the engineer asks to refresh or install Slasher's packages, as with `/package update` or `/package install`
 
-1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`.
+1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`. It runs the pulled installer's migrations, which ask nothing, reports what they changed, and leaves their changes uncommitted, for the engineer to commit with the update.
 2. `/package install` installs Slasher into the project the session is in. Run foundation's `install.sh` from that project's root. The installer asks before changing a file the project already has.
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would change, and where it would write a Slasher project's bootstrap.

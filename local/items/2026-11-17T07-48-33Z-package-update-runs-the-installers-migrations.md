@@ -1,6 +1,6 @@
 # `/package update` runs the migrations of the installer it pulls
 
-**State:** Implementation
+**State:** Completed
 
 **Tags:** [work]
 
@@ -29,3 +29,4 @@ Added Mon Nov 16 2026. Recommended by the agent, not settled.
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 11:48:33 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:50:01 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:59:35 PM PT
