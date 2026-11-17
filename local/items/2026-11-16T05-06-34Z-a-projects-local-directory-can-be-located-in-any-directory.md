@@ -1,6 +1,6 @@
 # A project's local directory can be located in any directory
 
-**State:** Implementation
+**State:** Realized
 
 **Tags:** [idea]
 
@@ -23,3 +23,4 @@ Changed by Scott Bellware on Mon Nov 16 2026 at 8:15:42 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 8:17:16 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 8:41:21 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 8:44:33 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 8:54:45 PM PT
