@@ -19,11 +19,14 @@ set -e
 # system/ directory of its own.
 if [ -d slasher/system ]; then
   system=slasher/system
-  local=slasher/local
 else
   system=system
-  local=local
 fi
+
+# The project's own directory is where local-directory.sh says: slasher/local or local by
+# default, or the directory the project's registry entry relocates it to. A relocated
+# directory that does not exist stops the read, with the script's message.
+local=$("$system/foundation/local-directory.sh") || exit 1
 
 # Given a rule's name, print that rule's entry alone: its title, source, any trigger, and its
 # compressed text. The on-demand rules are searched, then the pre-loaded ones. A line inside a

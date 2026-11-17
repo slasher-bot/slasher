@@ -16,11 +16,16 @@ project=${CLAUDE_PROJECT_DIR:-.}
 
 if [ -d "$project/slasher/system" ]; then
   system=$project/slasher/system
-  local=$project/slasher/local
 else
   system=$project/system
-  local=$project/local
 fi
+
+# The project's own directory is where local-directory.sh says, which may be outside the project.
+local=$(cd "$project" && "$system/foundation/local-directory.sh" 2>/dev/null) || exit 0
+case $local in
+  /*) ;;
+  *) local=$project/$local ;;
+esac
 
 script=$system/foundation/process-question-log.sh
 [ -x "$script" ] || exit 0

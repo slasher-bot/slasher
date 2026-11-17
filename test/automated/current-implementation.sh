@@ -20,6 +20,7 @@ project=$(mktemp -d)
 trap 'rm -rf "$project"' EXIT
 mkdir -p "$project/system/foundation" "$project/local/implementations"
 cp system/foundation/current-implementation.sh "$project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$project/system/foundation/"
 
 control_branch="feature/some-subject"
 
@@ -44,6 +45,7 @@ installed=$(mktemp -d)
 trap 'rm -rf "$project" "$installed"' EXIT
 mkdir -p "$installed/slasher/system/foundation" "$installed/slasher/local/implementations"
 cp system/foundation/current-implementation.sh "$installed/slasher/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$installed/slasher/system/foundation/"
 
 cat > "$installed/slasher/local/implementations/2026-01-01T00-00-00Z-some-subject.md" <<RECORD
 # Feature — Some intent
@@ -62,6 +64,7 @@ several=$(mktemp -d)
 trap 'rm -rf "$project" "$installed" "$several"' EXIT
 mkdir -p "$several/system/foundation" "$several/local/implementations"
 cp system/foundation/current-implementation.sh "$several/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$several/system/foundation/"
 
 # The receipt record is the older of the two, and its branch has the later commit.
 cat > "$several/local/implementations/2026-01-01T00-00-00Z-some-receipt.md" <<'RECORD'
@@ -102,6 +105,7 @@ phased=$(mktemp -d)
 trap 'rm -rf "$project" "$installed" "$several" "$phased"' EXIT
 mkdir -p "$phased/system/foundation" "$phased/local/implementations"
 cp system/foundation/current-implementation.sh "$phased/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$phased/system/foundation/"
 
 cat > "$phased/local/implementations/2026-01-01T00-00-00Z-some-receipt.md" <<'RECORD'
 # Feature — Some receipt
@@ -130,6 +134,7 @@ opened=$(mktemp -d)
 trap 'rm -rf "$project" "$installed" "$several" "$phased" "$opened"' EXIT
 mkdir -p "$opened/system/foundation" "$opened/local/implementations"
 cp system/foundation/current-implementation.sh "$opened/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$opened/system/foundation/"
 
 control_open_branch="feature/some-cart"
 
@@ -151,6 +156,7 @@ trap 'rm -rf "$project" "$installed" "$several" "$phased" "$opened" "$worktreed"
 worktreed_project="$worktreed/some-project"
 mkdir -p "$worktreed_project/system/foundation" "$worktreed_project/local/implementations"
 cp system/foundation/current-implementation.sh "$worktreed_project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$worktreed_project/system/foundation/"
 
 git -C "$worktreed_project" init -q -b master
 commit "$worktreed_project" "2026-01-01T00:00:00Z"

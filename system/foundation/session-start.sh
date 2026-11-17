@@ -74,13 +74,10 @@ notice=$(printf 'Slasher installed at %s/ — %s %s: %s' \
 
 # Locate the project's own working state: slasher/local/ in a Slasher project,
 # local/ in the Slasher authoring source — the same two-layout check the packages get.
-if [ -d slasher/local ]; then
-  own=slasher/local
-elif [ -d local ]; then
-  own=local
-else
-  own=
-fi
+# A relocated directory is named by its full path. Where local-directory.sh fails, as for a
+# relocated directory that does not exist, the notice still prints, and the default is named.
+own=$("$system/foundation/local-directory.sh" 2>/dev/null) || own=
+[ -z "$own" ] || [ -d "$own" ] || own=
 
 # The notice has no close of its own. The startup display's load line, printed after it, says
 # when the rules load and that /load loads them now. A close here said the same until

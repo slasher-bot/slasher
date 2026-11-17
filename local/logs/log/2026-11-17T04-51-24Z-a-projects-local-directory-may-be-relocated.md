@@ -1,0 +1,1 @@
+# A project's local directory may be relocated by its registry entry: the a-projects-local-directory-may-be-relocated-by-its-registry-entry rule, and local-directory.sh, which every Slasher script asks

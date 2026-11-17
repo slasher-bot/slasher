@@ -21,6 +21,7 @@ trap 'rm -rf "$project"' EXIT
 
 mkdir -p "$project/system/foundation"
 cp system/foundation/session-start.sh "$project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$project/system/foundation/"
 echo some-readme > "$project/system/foundation/README.md"
 
 control_event='{"session_id": "some-session", "hook_event_name": "SessionStart", "source": "compact"}'
@@ -67,6 +68,7 @@ trap 'rm -rf "$project" "$later_project"' EXIT
 
 mkdir -p "$later_project/system/foundation" "$later_project/system/later" "$later_project/local"
 cp system/foundation/session-start.sh "$later_project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$later_project/system/foundation/"
 echo some-readme > "$later_project/system/foundation/README.md"
 echo some-readme > "$later_project/system/later/README.md"
 
@@ -131,6 +133,7 @@ $control_load_line"
 # Carries the core rules after the read instruction ---------------------------------
 
 cp system/foundation/load-rules.sh "$project/system/foundation/"
+cp system/foundation/local-directory.sh system/foundation/read-project-setting.sh "$project/system/foundation/"
 mkdir -p "$project/system/sample"
 echo some-core-rule > "$project/system/foundation/core-rules"
 

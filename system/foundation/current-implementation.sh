@@ -6,12 +6,14 @@
 #
 #   slasher/system/foundation/current-implementation.sh
 
-# Locate the records, as the status line locates the system.
-if [ -d slasher/local ]; then
-  local=slasher/local
+# Locate the records, where local-directory.sh says. Where it fails, as for a relocated
+# directory that does not exist, nothing is current.
+if [ -d slasher/system ]; then
+  scripts=slasher/system/foundation
 else
-  local=local
+  scripts=system/foundation
 fi
+local=$("$scripts/local-directory.sh" 2>/dev/null) || exit 0
 
 recent=
 recent_time=-1
@@ -20,7 +22,12 @@ recent_time=-1
 # repository, so an implementation recorded only on its own branch is found.
 # One directory to a line, since a path may hold a space.
 directories="$local/implementations"
-worktrees=$(git worktree list --porcelain 2>/dev/null | sed -n 's/^worktree //p')
+# A relocated directory, which local-directory.sh names by its full path, is the one every
+# worktree uses, so no other worktree is read.
+case $local in
+  /*) worktrees= ;;
+  *) worktrees=$(git worktree list --porcelain 2>/dev/null | sed -n 's/^worktree //p') ;;
+esac
 newline='
 '
 old_ifs=$IFS
