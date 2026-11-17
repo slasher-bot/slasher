@@ -1,6 +1,6 @@
 # Compare Slasher's prose utilities with the doc-edit skill
 
-**State:** Active
+**State:** Completed
 
 **Tags:** [work]
 
@@ -38,3 +38,4 @@ Authored by Scott Bellware on Mon Nov 16 2026 at 12:00:50 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:15:53 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:16:16 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:19:44 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:22:14 PM PT
