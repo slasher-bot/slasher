@@ -1130,14 +1130,16 @@ Trigger: When the engineer types `/next`, `/next`, or `/next?`, or asks what is 
 
 Source: system/foundation/source/package-refresh-and-install-run-foundations-scripts.md
 
-Trigger: When the engineer asks to refresh or install Slasher's packages, as with `/package update` or `/package install`
+Trigger: When the engineer asks to refresh or install Slasher's packages, as with `/packages update`, `/package update`, or `/package install`
 
-1. `/package update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`. It runs the pulled installer's migrations, which ask nothing, reports what they changed, and leaves their changes uncommitted, for the engineer to commit with the update.
+1. `/packages update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`. It runs the pulled installer's migrations, which ask nothing, reports what they changed, and leaves their changes uncommitted, for the engineer to commit with the update.
 2. `/package install` installs Slasher into the project the session is in. Run foundation's `install.sh` from that project's root. The installer asks before changing a file the project already has.
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would change, and where it would write a Slasher project's bootstrap.
 5. Say that a refreshed or installed rule is read at the next load of the rules: a session restart, or `load rules`.
 6. Pass on what each script reports. Do not guess at the work it does.
+7. `/package update <package>` refreshes one package the same way. With no package named, ask which, through the selection interface, from the packages installed. With more than one named, it is `/packages update` with those names.
+8. Write `/packages update` wherever more than one package is updated, as in instructions to users. Write `/package update` only for one.
 
 # Packages lists the installed packages
 
@@ -1155,7 +1157,7 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 
 **Below the table, name the package set, as `package set: default`.** Where no set is declared, print nothing below the table.
 
-**`/packages update [<package>...]` does what `/package update` does.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. The words after `update` pass to it unchanged.
+**`/packages update [<package>...]` updates many packages.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. `/package update <package>` updates one.
 
 **`/packages` is a command domain of its own, and `/packages help` prints its help.** The help lists `/packages`, `/packages update`, and `/packages <package>`. `/package help` does not list them.
 

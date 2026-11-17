@@ -10,7 +10,7 @@
 
 **Below the table, name the package set, as `package set: default`.** Where no set is declared, print nothing below the table.
 
-**`/packages update [<package>...]` does what `/package update` does.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. The words after `update` pass to it unchanged.
+**`/packages update [<package>...]` updates many packages.** It refreshes the packages named, or every installed package, under the package-refresh-and-install-run-foundations-scripts rule. `/package update <package>` updates one.
 
 **`/packages` is a command domain of its own, and `/packages help` prints its help.** The help lists `/packages`, `/packages update`, and `/packages <package>`. `/package help` does not list them.
 
@@ -36,6 +36,8 @@
 
 ## History
 
+Until Tue Nov 17 2026 `/packages update` was an alias of `/package update`. The engineer made it the command for updating many packages.
+
 Until Mon Nov 16 2026 `/packages update` was `/packages refresh`, and the act on one package was `refresh`. The engineer renamed both `update`, with `/package refresh`.
 
 Until Mon Nov 16 2026 `/packages` was a command of the `/package` domain and took no `help`. `/package help` listed it.
@@ -57,3 +59,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 3:18:09 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:19:28 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 12:41:19 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 1:08:22 PM PT
+Changed by Scott Bellware on Tue Nov 17 2026 at 11:38:25 AM PT

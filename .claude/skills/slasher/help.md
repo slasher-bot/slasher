@@ -356,8 +356,9 @@ PACKAGE
 
   /package activate <package>      Activate an installed package
   /package deactivate <package>    Deactivate an installed package
-  /package update [<package>...]   Update installed packages, and run
-                                   the migrations they bring
+  /package update <package>        Update one installed package, and run
+                                   the migrations it brings. To update
+                                   many, /packages update
   /package install                 Install Slasher
   /install [<set or packages>]     Install Slasher where it is not installed
 
@@ -372,7 +373,9 @@ PACKAGES
 
   /packages                        List the installed packages, whether
                                    each is active, and what each is
-  /packages update [<package>...]  An alias of /package update
+  /packages update [<package>...]  Update every installed package, or
+                                   the packages named, and run the
+                                   migrations they bring
   /packages <package> [<act>]      Act on one package. <act>: update,
                                    activate, or deactivate. With no act,
                                    asks which
