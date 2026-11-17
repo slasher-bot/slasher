@@ -49,7 +49,7 @@ A package's `vocabulary.md` holds the terms that package defines and the word su
 ## A project's own vocabulary binds
 
 1. `slasher/local/vocabulary.md` is read at session start, with `slasher/system/` and `slasher/local/rules/`. That read makes it binding.
-2. `session-start.sh` names it in the read instruction. The `AGENTS.md` bootstrap names it too.
+2. `session-start.sh` names it in the read instruction. The bootstrap in `slasher/SLASHER.md` names it too.
 3. It is optional, and its absence is not a defect.
 
 ## Specialization is not conflict
@@ -63,8 +63,11 @@ A package's `vocabulary.md` holds the terms that package defines and the word su
 - 2026-10-27, re-checked: 35 directives, 31 kept, 3 less precise, 1 lost, 4 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 54 → 49, clarity 0.79 → 0.79; checked: 38 directives, 34 kept, 4 less precise, 0 lost, 1 repair, re-checked with 0 lost
 - 2026-11-05, revised: split, its writing part moved to the a-vocabulary-file-holds-terms-substitutions-and-discontinuations-and-each-word-is-approved-or-reserved rule; checked: 16 directives, 14 kept, 2 less precise, 0 lost, 2 repairs; re-checked: 16 directives, 15 kept, 1 less precise, 0 lost. Left less precise: where a substitution goes, which the writing rule states
+- 2026-11-16, revised: the bootstrap is in `slasher/SLASHER.md`, a name the engineer settled; not re-checked
 
 ## History
+
+Until Mon Nov 16 2026 the bootstrap that names the project's vocabulary was a section of the project's `AGENTS.md`.
 
 Until Thu Nov 5 2026 this rule also held what a vocabulary holds, that every word in one is approved or reserved, where a term goes, the project's vocabulary file's form, and how an entry says it narrows a term. The engineer had those split into the a-vocabulary-file-holds-terms-substitutions-and-discontinuations-and-each-word-is-approved-or-reserved rule, which loads when a vocabulary file is written.
 
@@ -112,3 +115,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:06 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:21:51 PM PT

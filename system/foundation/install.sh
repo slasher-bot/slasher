@@ -41,7 +41,7 @@ repo="$origin/foundation.git"
 # The directory this script runs from. migrate_layout updates it when it moves the directory.
 here=$(dirname "$0")
 
-# The bootstrap section written into the project-root AGENTS.md.
+# The bootstrap, written whole to slasher/SLASHER.md, which the project-root AGENTS.md imports.
 #
 # It does not name the planning directory, and that is deliberate. It named none while the
 # planning directories depended on a project's mode, and the mode mechanism was decommissioned
@@ -92,67 +92,106 @@ session start.
 EOF
 }
 
-# Ensure the project-root AGENTS.md activates the system. Creates it when
-# absent; when one already exists, asks before appending (never silently); does
-# nothing when it's already there. Idempotent.
+# The line in the project-root AGENTS.md that imports Slasher's own file. The bootstrap lives in
+# slasher/SLASHER.md, which only Slasher writes, so the project's AGENTS.md holds nothing of
+# Slasher's but this line, and nothing in it is compared or rewritten after install.
+import_line='@slasher/SLASHER.md'
+
+# Write the bootstrap to slasher/SLASHER.md, whole, on every run. The file is Slasher's alone.
+place_slasher_md() {
+  mkdir -p slasher
+  written=$(mktemp)
+  bootstrap > "$written"
+  if [ -f slasher/SLASHER.md ] && cmp -s "$written" slasher/SLASHER.md; then
+    rm -f "$written"
+    echo "slasher/SLASHER.md matches the bootstrap — left unchanged."
+  else
+    mv "$written" slasher/SLASHER.md
+    echo "Wrote the Slasher bootstrap to slasher/SLASHER.md."
+  fi
+}
+
+# Ensure the project-root AGENTS.md holds the line that imports slasher/SLASHER.md. Creates it
+# when absent. Where it holds a Slasher section from before the bootstrap moved, replaces the
+# section with the line only where the section is exactly the bootstrap, since otherwise the
+# project's own text may follow it and cannot be told apart. Where it holds no Slasher section,
+# asks before appending the line, never silently. Does nothing when the line is there.
 place_agents_md() {
   # An AGENTS.md written before Waytide was renamed Slasher carries a section naming
-  # waytide/system/. The section runs from its heading to the end of the file, the span
-  # refresh-packages.sh compares, so that span is replaced and the text above it is kept.
+  # waytide/system/, which runs from its heading to the end of the file. That span is replaced
+  # with the line, and the text above it is kept.
   if [ -f AGENTS.md ] && grep -q 'waytide/system/' AGENTS.md &&
      grep -q '^## Waytide$' AGENTS.md; then
     replaced=$(mktemp)
     sed '/^## Waytide$/,$d' AGENTS.md > "$replaced"
-    bootstrap >> "$replaced"
+    printf '%s\n' "$import_line" >> "$replaced"
     mv "$replaced" AGENTS.md
-    echo "Replaced AGENTS.md's Waytide section, which named waytide/system/."
+    echo "Replaced AGENTS.md's Waytide section with $import_line."
   fi
 
-  if [ -f AGENTS.md ] && grep -q 'slasher/system/' AGENTS.md; then
-    echo "AGENTS.md already points at slasher/system/ — left unchanged."
+  if [ -f AGENTS.md ] && grep -qx "$import_line" AGENTS.md; then
+    echo "AGENTS.md already imports slasher/SLASHER.md — left unchanged."
   elif [ ! -f AGENTS.md ]; then
     # No root AGENTS.md yet — creating one takes nothing away, so do it directly.
-    bootstrap > AGENTS.md
-    echo "Created AGENTS.md with the Slasher bootstrap."
+    printf '%s\n' "$import_line" > AGENTS.md
+    echo "Created AGENTS.md with $import_line."
+  elif grep -q '^## Slasher$' AGENTS.md; then
+    # The Slasher section of an AGENTS.md written before the bootstrap moved runs from its
+    # heading to the end of the file. Where that span is exactly the bootstrap, it is Slasher's
+    # alone, and becomes the line. Where it differs, the project's own text may follow the
+    # bootstrap, so nothing is changed.
+    current=$(mktemp)
+    carried=$(mktemp)
+    bootstrap > "$current"
+    sed -n '/^## Slasher$/,$p' AGENTS.md > "$carried"
+    if cmp -s "$current" "$carried"; then
+      replaced=$(mktemp)
+      sed '/^## Slasher$/,$d' AGENTS.md > "$replaced"
+      printf '%s\n' "$import_line" >> "$replaced"
+      mv "$replaced" AGENTS.md
+      echo "Replaced AGENTS.md's Slasher section with $import_line. The bootstrap is in slasher/SLASHER.md."
+    else
+      echo "AGENTS.md holds a Slasher section that differs from the bootstrap, so it was NOT modified."
+      echo "Slasher's text cannot be told apart from text of your own that may follow it."
+      echo "The bootstrap is now in slasher/SLASHER.md. Delete AGENTS.md's Slasher section, from"
+      echo "its '## Slasher' heading to the end of Slasher's text, and put this line in its place:"
+      echo
+      echo "    $import_line"
+    fi
+    rm -f "$current" "$carried"
   elif [ "$append_agents_md" = yes ]; then
     # An AGENTS.md you maintain already exists, and the answer to append was given in
     # advance, with --append-agents-md, so nothing is asked.
-    printf '\n' >> AGENTS.md
-    bootstrap >> AGENTS.md
-    echo "Appended the Slasher bootstrap to AGENTS.md, as --append-agents-md asked."
+    printf '\n%s\n' "$import_line" >> AGENTS.md
+    echo "Appended $import_line to AGENTS.md, as --append-agents-md asked."
   else
     # An AGENTS.md you maintain already exists. Explain the effect, show the exact
-    # text, and ask before touching it — never append silently.
+    # line, and ask before touching it — never append silently.
     echo "You already have an AGENTS.md at the project root."
     echo
-    echo "Appending the Slasher bootstrap will add a section that tells the agent,"
-    echo "at the start of every session, to read every rule file under slasher/system/ and slasher/local/rules/"
-    echo "(except each package's source/ directory and README.md),"
+    echo "Appending one line, $import_line, imports Slasher's bootstrap, which tells"
+    echo "the agent, at the start of every session, to read every rule file under slasher/system/"
+    echo "and slasher/local/rules/ (except each package's source/ directory and README.md),"
     echo "and slasher/local/vocabulary.md, and follow"
     echo "it. Those rules then OVERRIDE the agent's default behavior where they conflict"
     echo "(your explicit instructions still win). Your existing AGENTS.md content is left"
-    echo "exactly as it is; the section is added at the end, after a blank line."
-    echo
-    echo "Exact text to be appended:"
-    echo "----------------------------------------------------------------------"
-    bootstrap
-    echo "----------------------------------------------------------------------"
+    echo "exactly as it is; the line is added at the end, after a blank line, and Slasher"
+    echo "never changes AGENTS.md again. The bootstrap itself is in slasher/SLASHER.md."
     echo
     if [ ! -t 0 ]; then
       echo "Not running interactively, so AGENTS.md was NOT modified."
       agents_md_unanswered=yes
       return 0
     fi
-    printf 'Append this to your AGENTS.md now? [y/N] '
+    printf 'Append the line to your AGENTS.md now? [y/N] '
     read -r answer
     case "$answer" in
       [Yy] | [Yy][Ee][Ss])
-        printf '\n' >> AGENTS.md
-        bootstrap >> AGENTS.md
-        echo "Appended the Slasher bootstrap to AGENTS.md."
+        printf '\n%s\n' "$import_line" >> AGENTS.md
+        echo "Appended $import_line to AGENTS.md."
         ;;
       *)
-        echo "Left AGENTS.md unchanged. Paste the section above into it to activate the system."
+        echo "Left AGENTS.md unchanged. Add the line $import_line to it to activate the system."
         ;;
     esac
   fi
@@ -766,6 +805,7 @@ fi
 #    imports it so the bootstrap also reaches Claude Code sessions, that the plugin
 #    prints the startup display and the session-start notice, and that
 #    .claude/settings.json keeps the status line.
+place_slasher_md
 place_agents_md
 place_claude_md
 place_settings_json

@@ -39,6 +39,6 @@ control_old_section > "$project/AGENTS.md"
 # Replaces the AGENTS.md section that names waytide/ -------------------------
 
 ! grep -q 'waytide/system/' "$project/AGENTS.md" || fail "Replaces the AGENTS.md section that names waytide/" "still names waytide/system/"
-grep -q 'slasher/system/' "$project/AGENTS.md" || fail "Replaces the AGENTS.md section that names waytide/" "does not name slasher/system/"
+grep -qx '@slasher/SLASHER.md' "$project/AGENTS.md" || fail "Replaces the AGENTS.md section that names waytide/" "does not hold the line that imports slasher/SLASHER.md"
 
 echo "0 failed, 0 aborted"

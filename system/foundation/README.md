@@ -116,11 +116,11 @@ The authoring tools run **against the packages**. This one runs **beside project
 
 **`report-unrecognized-mode.sh` was decommissioned on 2026-08-18**, with the mode mechanism whose rule it read. It reported a mode rule in `slasher/local/rules/` naming a mode the installed rule no longer defined, and there is no such rule to read.
 
-**`refresh-packages.sh` also checks the bootstrap.** The root `AGENTS.md` is written by `install.sh`, belongs to no package, and is therefore the one activated file no `git subtree pull` can reach. So a refresh updates the packages beneath it and leaves it behind.
+**The bootstrap lives in `slasher/SLASHER.md`, which only Slasher writes.** The project's `AGENTS.md` holds its own text and one line, `@slasher/SLASHER.md`, that imports it. `install.sh` writes Slasher's file whole, and adds the line once, asking first where the project already has an `AGENTS.md`. Nothing in the project's `AGENTS.md` is compared or rewritten after that.
 
-The script used to print a reminder saying so. On 2026-08-06 every Slasher project's bootstrap was found stale anyway, which is what a reminder is worth. It now compares the section against what the installed installer generates, at the moment the drift is created.
+**`refresh-packages.sh` rewrites `slasher/SLASHER.md` from the installed foundation**, since no `git subtree pull` reaches a file outside the packages. It asks the installer for the text only where the installer is known to answer, and never invokes one that would treat the request as an install. It then says where `AGENTS.md` lacks the line.
 
-The comparison cannot always be made. There may be no `AGENTS.md`, or an installer predating the `bootstrap` subcommand it asks for. It then says the check did not happen rather than reporting agreement. It never invokes an installer that would treat the request as an install.
+Until Mon Nov 16 2026 the bootstrap was a section of the project's `AGENTS.md`, from `## Slasher` to the end of the file, and the update compared that span with the installed bootstrap. A project's own text below the section made the two differ for good, and the remedy was to edit the file by hand.
 
 Foundation carries an **`install.sh`**, which also has to activate the system. Run it from your project root:
 

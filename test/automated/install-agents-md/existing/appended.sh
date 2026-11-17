@@ -34,7 +34,7 @@ control_existing_text() {
 }
 control_existing_text > "$project/AGENTS.md"
 
-control_agents_md_text=$(control_existing_text; echo; system/foundation/install.sh bootstrap)
+control_agents_md_text=$(control_existing_text; echo; echo "@slasher/SLASHER.md")
 
 # Actuation ------------------------------------------------------------------
 
@@ -44,6 +44,6 @@ output=$(cd "$project" && HOME="$home" slasher/system/foundation/install.sh agen
 
 agents_md=$(cat "$project/AGENTS.md")
 
-[ "$agents_md" = "$control_agents_md_text" ] || fail "Appends the bootstrap after the existing text" "AGENTS.md:" "$agents_md"
+[ "$agents_md" = "$control_agents_md_text" ] || fail "Appends the line that imports slasher/SLASHER.md after the existing text" "AGENTS.md:" "$agents_md"
 
 echo "0 failed, 0 aborted"
