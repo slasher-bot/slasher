@@ -5,16 +5,16 @@ Rules and commands for working on content: prose written for people to read, suc
 - **The review command suggests numbered edits to content, and accept or reject settles them** (`the-review-command-suggests-numbered-edits-and-accept-or-reject-settles-them`). `/review` suggests edits and changes nothing. Each suggestion shows the original text, the suggested text, and a reason. `/review accept` shows the result and writes it only on the engineer's selection. `/review reject` drops suggestions. A suggestion stays pending until one of the two settles it.
 - **Print-and-review prints the draft and a review of it** (`print-and-review-prints-the-draft-and-a-review-of-it`). `/print-and-review`, or `/pr`, prints the draft as it now stands, then a numbered list of findings.
 - **Edit walks the content paragraph by paragraph, then sentence by sentence** (`edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence`). `/edit` numbers the paragraphs, shows each with its findings, and gives no rewrite unless asked. A rewrite asked for becomes a `/review` suggestion. `/review help` lists all three commands.
-- **Content is judged by named criteria for each paragraph and each sentence** (`content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence`). Each review names its criterion in each finding: four for a paragraph, three for a sentence. A clean passage is said to be clean.
+- **Content is judged by named criteria for each paragraph and each sentence** (`content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence`). Each review names its criterion in each finding: four for a paragraph, three for a sentence. A clean passage is said to be clean. The check on writing that draws the reader's conclusion is the `language` package's writing-states-the-evidence-and-the-reader-draws-the-conclusion rule, which is why this package includes `language`.
 
 **What this package deliberately does not hold.** The rules for Slasher's own prose stay in the `language` package. That package governs how the agent and the records write. This package governs work on the engineer's content.
 
 **Why it is called prose.** It names the material the package acts on. Not *content*: the installer already has a package set of that name, and a package of the same name could not be installed by name.
 
-Includes `foundation`.
+Includes `foundation`, `language`.
 
 ```
-prose  →  foundation
+prose  →  language  →  foundation
 ```
 
 ## Installing into a project
@@ -28,7 +28,7 @@ git subtree pull --prefix slasher/system/prose git@github.com:slasher-bot/prose.
 
 **Over HTTPS**, where no SSH key is registered, use `https://github.com/slasher-bot/prose.git` in place of the address above. A script takes `SLASHER_ORIGIN=https://github.com/slasher-bot` for the same reason.
 
-It depends on `foundation`. Install its dependencies from the root of the Slasher project:
+It depends on `language` and `foundation`. Install its dependencies from the root of the Slasher project:
 
 ```
 slasher/system/prose/install-dependencies.sh

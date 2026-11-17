@@ -30,6 +30,8 @@
 - The edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule and the `/edit` skill walk content by numbered paragraph, with `next`, `previous`, `p<n>`, `sentences`, and `print` as subcommands. Findings give no rewrite. A rewrite asked for becomes a `/review` suggestion, and `/edit` writes nothing itself. doc-edit's `commit` is not carried over.
 - `/edit` is in the REVIEW domain, in `/review help` and the `prose` README. It has no row of its own in the command table, since it has no shortcut alias.
 - The prose rules have no compressed text, so no check of one was due.
+- The writing-states-the-evidence-and-the-reader-draws-the-conclusion rule, in `language`, states the check on writing that draws the reader's conclusion once. The criteria rule uses it under tone and voice, and the an-answer-is-a-list-and-prose-must-justify-itself rule points to it for the forms that characterize the work. Its compressed text was checked: 50 directives, 49 kept, 1 less precise from before this change, 0 lost.
+- `prose` includes `language`, in its README and `install-dependencies.sh`, since its criteria rule cannot be applied without that rule.
 - The automated suite passed: 80 test files.
 - The doc-edit skill itself is synced from the engineer's claude.ai account, outside this repository, and is unchanged.
 
@@ -40,8 +42,10 @@
 - **2026-11-16** — Participation: Unattended, selected by the engineer. Agent's confidence 60%, risk of redo 40%, It'll work 85%, Your approval 62%, attended confidence 88%. The warning was shown, and Attended was recommended.
 - **2026-11-16** — Forecast: No forecast, selected by the engineer.
 - **2026-11-16** — Plan: Accept, selected by the engineer.
+- **2026-11-16** — The conclusion-drawing check is stated once, in `language`, and `prose` uses it, selected by the engineer after the agent recommended it.
 
 ---
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 6:07:24 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:10:15 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:17:29 PM PT

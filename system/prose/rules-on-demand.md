@@ -21,7 +21,7 @@ Trigger: When reviewing or editing content, as with `/review`, `/print-and-revie
 - **Readability**: it can be followed on a first read. A long sentence is not a fault. A tangled one is.
 - **Connection**: it follows from the sentence before it, with no missing or abrupt transition.
 
-**Writing that draws the reader's conclusion is a finding under tone and voice.** A passage such as *this shows that* or *clearly* tells the reader what to think where the evidence could speak for itself.
+**A passage that breaks the `language` package's writing-states-the-evidence-and-the-reader-draws-the-conclusion rule is a finding under tone and voice.**
 
 **Each finding names its criterion, what is wrong, and why it matters to the reader.** Judge the text by its kind and its reader: a personal essay and a business proposal hold different standards. Judge it by the writer's voice, not the agent's: a phrasing the agent would write differently is not a finding unless it is unclear.
 
