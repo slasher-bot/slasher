@@ -150,13 +150,14 @@ for package in "$system/foundation" $(ls -d "$system"/*/ | sed 's|/$||' | grep -
   print_compressed "$package/vocabulary.md"
 done
 
-for rule in $(ls "$local"/rules/*.md 2>/dev/null | sort); do
+# One path to a line, since a relocated local directory's path may hold a space.
+ls "$local"/rules/*.md 2>/dev/null | sort | while IFS= read -r rule; do
   print_compressed "$rule"
 done
 
 print_compressed "$local/vocabulary.md"
 
 # Oldest first across writers: sorted by the entry's file name, which leads with its datetime.
-for entry in $(ls "$local"/journal/*/*.md 2>/dev/null | awk -F/ '{ print $NF "\t" $0 }' | sort | cut -f2); do
+ls "$local"/journal/*/*.md 2>/dev/null | awk -F/ '{ print $NF "\t" $0 }' | sort | cut -f2 | while IFS= read -r entry; do
   print_file "$entry"
 done
