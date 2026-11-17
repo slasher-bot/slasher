@@ -1,6 +1,6 @@
 # Package refresh contests control of a project's AGENTS.md
 
-**State:** Implementation
+**State:** Resolved
 
 **Tags:** [problem]
 
@@ -64,3 +64,4 @@ Changed by Scott Bellware on Mon Nov 16 2026 at 11:00:37 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:09:37 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:14:56 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:15:50 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:31:06 PM PT
