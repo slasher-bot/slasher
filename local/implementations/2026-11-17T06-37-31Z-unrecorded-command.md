@@ -12,7 +12,7 @@ Realizes the item `2026-11-17T06-20-07Z-an-unrecorded-command`.
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -39,8 +39,10 @@ Realizes the item `2026-11-17T06-20-07Z-an-unrecorded-command`.
 - **2026-11-16** — Participation: Unattended, selected by the engineer. Agent's confidence 55%, risk of redo 45%, It'll work 80%, Your approval 55%, attended confidence 85%. The warning was shown, and Attended was recommended.
 - **2026-11-16** — Forecast: no forecast, selected by the engineer.
 - **2026-11-16** — Plan: accepted by the engineer.
+- **2026-11-16** — Conclusion: Completed, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 10:37:31 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 10:43:48 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 10:48:03 PM PT
