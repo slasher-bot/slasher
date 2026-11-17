@@ -44,11 +44,11 @@ control_work_text > "$items_dir/$control_work_name"
 
 (cd "$project" && HOME="$home" sh "$installer" agents-md) > /dev/null
 
-# Renames a Done item's file Completed ---------------------------------------
+# Renames a Done item's file without its state --------------------------------
 
-completed="$items_dir/2026-01-01T00-00-00Z-some-work-COMPLETED.md"
+completed="$items_dir/2026-01-01T00-00-00Z-some-work.md"
 
-[ -f "$completed" ] || fail "Renames a Done item's file Completed" "found:" "$(ls "$items_dir")"
+[ -f "$completed" ] || fail "Renames a Done item's file without its state" "found:" "$(ls "$items_dir")"
 
 # Changes the item's State line to Completed ---------------------------------
 

@@ -11,7 +11,7 @@ The prefix is an **ISO 8601 datetime normalized to UTC**, followed by a dash-sep
 
 **Format:** `YYYY-MM-DDTHH-MM-SSZ-<name>.md`. The date and time are joined by `T`, and the trailing `Z` marks UTC. The time's colons are written as dashes for filesystem safety, as in `2026-07-01T20-40-00Z-some-name.md`. The name is dash-separated and lower-case.
 
-**The state suffix is the one exception to the lower case.** A record carrying a canonical `**State:**` line ends its name with that state word in **upper case**, after a dash — `2026-08-05T19-37-06Z-ooda-terminology-REFUTED.md`. The case is what separates the state from the subject, so the name does not read as a record *about* something refuted. See the a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule, which fixes the suffix and states what it costs. Nothing else about the name changes, and the prefix is untouched.
+**The name carries no state.** An item's or an implementation record's name is the prefix and a dash-separated, lower-case name, with nothing after it. See the a-records-file-name-carries-no-state rule.
 
 **System rules do not take the prefix.** A rule in a distributed package (`foundation`, `language`, `testing`, …) is named by a dash-separated, lower-case name alone — `write-subject-first-commit-messages.md`, not `2026-…-subject-first-commit-messages.md`. A system rule is a curated, durable convention identified by *what it says*, not by when it was written. A datetime on it is noise and buries the rule's name.
 
@@ -41,10 +41,8 @@ That is the distinction between the two kinds of rule: a **system rule** ships i
 3. Join the date and time with `T`. The trailing `Z` marks UTC.
 4. Write the time's colons as dashes, for filesystem safety, as in `2026-07-01T20-40-00Z-some-name.md`.
 5. The name is dash-separated and lower-case.
-6. The state suffix is the one exception to the lower case.
-7. A record carrying a canonical `**State:**` line ends its name with that state word in upper case, after a dash: `2026-08-05T19-37-06Z-ooda-terminology-REFUTED.md`.
-8. The suffix changes nothing else about the name, and leaves the prefix untouched.
-9. The a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case rule fixes the suffix.
+6. The name carries no state.
+7. The a-records-file-name-carries-no-state rule says so.
 
 ## What takes no prefix
 1. System rules do not take the prefix.
@@ -57,8 +55,11 @@ That is the distinction between the two kinds of rule: a **system rule** ships i
 - 2026-10-24, compressed: compression 0.30, change 0.60, solubility 48 → 79, clarity 0.44 → 0.83, 13 directives, 13 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 79 → 79, clarity 0.83 → 0.83; checked: 10 directives, 10 kept, 0 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 14 directives, 13 kept, 0 less precise, 1 lost, 1 repair
+- 2026-11-16, revised: the name carries no state, so the state suffix is no longer an exception to the lower case, which the engineer settled; checked: 11 directives, 11 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Mon Nov 16 2026 a record carrying a `**State:**` line ended its name with that state word in upper case, after a dash, the one exception to the lower case.
 
 Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
@@ -100,3 +101,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:28 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT

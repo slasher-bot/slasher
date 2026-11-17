@@ -35,7 +35,7 @@ Some text.
 ITEM
 }
 
-control_work_name=2026-01-01T00-00-00Z-some-work-ACTIVE.md
+control_work_name=2026-01-01T00-00-00Z-some-work.md
 
 mkdir -p "$items_dir"
 control_work_text > "$items_dir/$control_work_name"

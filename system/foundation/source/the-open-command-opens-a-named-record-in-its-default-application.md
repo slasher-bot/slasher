@@ -10,7 +10,7 @@
 
 1. An ordinal from the list of records printed last in the session, as `#3` or `3`, as in `/open #3` after `/items current`.
 2. A handle, the record's ISO-8601-UTC filename prefix, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
-3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents-OPEN.md`.
+3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents.md`.
 4. Words from the record's title or filename, as `/open cart contents`.
 
 **Where the words match one record, open it.** Name it before opening it, so an ordinal is confirmed: after an open, say what was opened, in one line, with the record's title and its path from the project root, in backticks. Act on nothing else.
@@ -27,6 +27,10 @@
 
 **How to apply:** on `/open`, find the record the words name, and open it with the platform's command. Where the words name none, or more than one, say so or ask, as above.
 
+## History
+
+Until Mon Nov 16 2026 the example path ended with the record's state, `-OPEN`.
+
 Related:
 
 - the the-record-command-copies-prints-or-opens-the-most-recent-principal-record rule — `/record open`, which opens the most recent principal record
@@ -35,3 +39,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 9:54:46 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT

@@ -1,6 +1,6 @@
 # A reply that writes a record ends with the record's path
 
-**A reply in which the agent wrote a record ends with the path of its principal record, under the heading *Record:*, in backticks.** The principal record is the record the reply's operation is about: the item, where the operation acts on an item, the implementation record, where it acts on a feature or an experiment, the rule, where it changes a rule, and so on. The other records the reply wrote, such as its log entries, are printed only on `/records show`. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the file's path from the project root, as it now stands, with its state suffix where it has one, as `slasher/local/items/…`. A path from the project root is short enough that it seldom wraps. `/record copy` copies the absolute path.
+**A reply in which the agent wrote a record ends with the path of its principal record, under the heading *Record:*, in backticks.** The principal record is the record the reply's operation is about: the item, where the operation acts on an item, the implementation record, where it acts on a feature or an experiment, the rule, where it changes a rule, and so on. The other records the reply wrote, such as its log entries, are printed only on `/records show`. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk. The path is the file's path from the project root, as it now stands, as `slasher/local/items/…`. A path from the project root is short enough that it seldom wraps. `/record copy` copies the absolute path.
 
 **As the engineer stated it:** After any record is written to disk, eg: item, implementation, rule, log, journal, etc, print the written file path and name to the screen. It should be the last line printed so that the user can /copy it to their clipboard, or open it in their editor.
 
@@ -42,7 +42,7 @@
 
 ## Compressed
 
-1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Record:*, then the path of its principal record from the project root, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. The path carries the state suffix where the record has one. `/record copy` copies the absolute path.
+1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Record:*, then the path of its principal record from the project root, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. Write a printed path in the home folder with the `~/` shortcut. `/record copy` copies the absolute path alone, with no dash or backticks.
 2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
 3. Write one record under *Record:*, indented two non-breaking spaces, with no dash, then the path in backticks. End the heading line with a backslash, so no blank line stands between it and the path. Write two or more under *Records:*, each a list item, `- ` and then the path in backticks. The backticks make the terminal show the path in color. Put nothing else on the line: no label, and no sentence.
 4. Where the operation is about more than one record, list each, each path its own list item. List a renamed record by its new path. Where no record written is the subject of the operation, print no records line.
@@ -66,8 +66,11 @@
 - 2026-11-15, revised: each path is printed from the project root, and one record is indented with no dash, as points 1, 3, and 6, the option the engineer selected; not re-checked
 - 2026-11-15, revised: no blank line stands between *Record:* and the path, as point 3, a change the engineer stated; not re-checked
 - 2026-11-15, revised: `/record copy` replaces `/copy-record`; not re-checked
+- 2026-11-16, revised: the path carries no state suffix, since a file name carries no state, which the engineer settled; checked: 23 directives, 21 kept, 1 less precise, 1 lost, 2 repairs: the `~/` shortcut for a path in the home folder, and a copied path with no dash or backticks; re-checked: 23 directives, 23 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Mon Nov 16 2026 the path carried the record's state suffix where it had one.
 
 Until Sun Nov 15 2026 each path was the absolute path, with `~/` in place of the home folder. For part of that day one record was printed as a blockquote.
 
@@ -107,3 +110,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 8:21:27 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:25:58 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:27:34 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 8:51:48 PM PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT

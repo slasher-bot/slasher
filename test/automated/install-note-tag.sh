@@ -35,7 +35,7 @@ Some text.
 ITEM
 }
 
-control_note_name=2026-01-01T00-00-00Z-some-observation-RECORDED.md
+control_note_name=2026-01-01T00-00-00Z-some-observation.md
 
 mkdir -p "$items_dir"
 control_note_text > "$items_dir/$control_note_name"

@@ -19,7 +19,7 @@ Realizes the item `2026-11-16T05-29-10Z-remove-the-state-from-record-file-names`
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/record-names-without-state`
-- **Base:** recorded on the implementation branch
+- **Base:** `0b161e6d`, from `master`
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-record-names-without-state`, chosen at the start.
 - **Participation:** unattended, chosen at the start.
 - **Forecast:** none. The verdict question is not asked.

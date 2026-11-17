@@ -41,11 +41,11 @@ mkdir -p "$p/system/foundation"
 cp "$src/statusline.sh" "$src/current-implementation.sh" "$p/system/foundation/"
 echo x > "$p/system/foundation/README.md"
 git -C "$p" init -q -b master
-mkrecord "$p" local/implementations/2026-01-01T00-00-00Z-cart-COMPLETED.md "Cart" Completed feature/cart
+mkrecord "$p" local/implementations/2026-01-01T00-00-00Z-cart.md "Cart" Completed feature/cart
 save "$p" 2026-01-01T00:00:00Z
 show "1. Nothing current: the only record is Completed" "$p" system
 
-mkrecord "$p" local/implementations/2026-01-02T00-00-00Z-receipt-ACTIVE.md "Receipt" Active feature/receipt
+mkrecord "$p" local/implementations/2026-01-02T00-00-00Z-receipt.md "Receipt" Active feature/receipt
 save "$p" 2026-01-02T00:00:00Z
 git -C "$p" branch feature/receipt
 show "2. One feature Active, feature/receipt, with the working tree on master" "$p" system
@@ -55,7 +55,7 @@ at "$p" 2026-01-03T00:00:00Z
 show "3. Its phase tax-line under way, with the working tree on the phase branch" "$p" system
 
 git -C "$p" switch -q master
-mkrecord "$p" local/implementations/2026-01-04T00-00-00Z-discounts-SUSPENDED.md "Discounts" Suspended experiment/discounts
+mkrecord "$p" local/implementations/2026-01-04T00-00-00Z-discounts.md "Discounts" Suspended experiment/discounts
 save "$p" 2026-01-04T00:00:00Z
 git -C "$p" switch -q -c experiment/discounts
 at "$p" 2026-01-05T00:00:00Z
@@ -76,7 +76,7 @@ mkdir -p "$i/slasher/system/foundation"
 cp "$src/statusline.sh" "$src/current-implementation.sh" "$i/slasher/system/foundation/"
 echo x > "$i/slasher/system/foundation/README.md"
 git -C "$i" init -q -b master
-mkrecord "$i" slasher/local/implementations/2026-01-01T00-00-00Z-payment-ACTIVE.md "Payment" Active feature/payment
+mkrecord "$i" slasher/local/implementations/2026-01-01T00-00-00Z-payment.md "Payment" Active feature/payment
 save "$i" 2026-01-01T00:00:00Z
 git -C "$i" switch -q -c feature/payment
 at "$i" 2026-01-02T00:00:00Z

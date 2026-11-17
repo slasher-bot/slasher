@@ -104,9 +104,9 @@ control_settings_text() {
 SETTINGS
 }
 
-control_no_kind_name=2026-01-01T00-00-00Z-some-item-OPEN.md
-control_other_tag_name=2026-01-01T00-00-01Z-some-other-item-OPEN.md
-control_design_name=2026-01-01T00-00-02Z-some-design-ACTIVE.md
+control_no_kind_name=2026-01-01T00-00-00Z-some-item.md
+control_other_tag_name=2026-01-01T00-00-01Z-some-other-item.md
+control_design_name=2026-01-01T00-00-02Z-some-design.md
 
 mkdir -p "$project/slasher/local/ideas"
 control_no_kind_text > "$project/slasher/local/ideas/$control_no_kind_name"
