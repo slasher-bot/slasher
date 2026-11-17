@@ -6,7 +6,7 @@
 
 **Each package carries its own skills**, under `skills/` in the package: `skills/<command>/SKILL.md`, one directory per root command or alias. A skill belongs to the package whose rules it hands its act to. A command whose name cannot be a directory's, as `/.`, or whose directory would show as the same name as another's, as `/'` beside `/?`, takes a directory named for it in words, such as `dot` or `apostrophe`, and the skill's `name` field gives the command.
 
-**The plugin directory is assembled from foundation's `plugin/` directory and the active packages' skills.** `plugin/` holds the plugin's manifest and its hooks: the session-start hooks, which the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule governs, and the hook that reports a branch switch, which the `git` package's announce-a-branch-switch-in-a-bordered-block rule governs. `assemble-plugin.sh` copies it, then each active package's `skills/`, into `.claude/skills/slasher/`, and leaves out a deactivated package's. `install.sh` and `refresh-packages.sh` run it in a Slasher project, and `compile.sh` runs it in the Slasher authoring source. A package activated or deactivated takes its skills with it at the next assembly.
+**The plugin directory is assembled from foundation's `plugin/` directory and the active packages' skills.** `plugin/` holds the plugin's manifest and its hooks: the session-start hooks, which the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule governs, and the hook that reports a branch switch, which the `git` package's announce-a-branch-switch-in-a-bordered-block rule governs. `assemble-plugin.sh` copies it, then each active package's `skills/`, into `.claude/skills/slasher/`, and leaves out a deactivated package's. `install.sh` and `update-packages.sh` run it in a Slasher project, and `compile.sh` runs it in the Slasher authoring source. A package activated or deactivated takes its skills with it at the next assembly.
 
 **The plugin directory is committed with the project**, as `.claude/settings.json` is, so every engineer who clones the project has the skills and the hooks. It is assembled rather than edited: a change to a skill is made in its package, and reaches the plugin at the next install or refresh.
 
@@ -22,7 +22,7 @@
 
 1. The skills reach a project as one skills-directory plugin, called Slasher, at `.claude/skills/slasher/`, whose `.claude-plugin/plugin.json` gives `name` as `slasher`, the namespace, and `displayName` as `Slasher`, the name shown. A skill is typed `/slasher:<command>`, as in `/slasher:log`, or `/<command>` where no other command claims the name.
 2. Each package carries its own skills, as `skills/<command>/SKILL.md`, one directory per root command or alias. A skill belongs to the package whose rule it hands its act to. A command whose name cannot be a directory's, as `/.`, or whose directory would show as the same name as another's, as `/'` beside `/?`, takes a directory named for it in words, such as `dot` or `apostrophe`, and gives the command in the skill's `name` field.
-3. `assemble-plugin.sh` builds `.claude/skills/slasher/` from foundation's `plugin/` directory, which holds the manifest and the hooks, and the active packages' skills, leaving out a deactivated package's. `install.sh` and `refresh-packages.sh` run it, and `compile.sh` in the Slasher authoring source.
+3. `assemble-plugin.sh` builds `.claude/skills/slasher/` from foundation's `plugin/` directory, which holds the manifest and the hooks, and the active packages' skills, leaving out a deactivated package's. `install.sh` and `update-packages.sh` run it, and `compile.sh` in the Slasher authoring source.
 4. Commit the assembled directory, as `.claude/settings.json` is committed. Change a skill in its package, never in the assembled directory.
 5. A skill's body stays thin: it only reads the words typed, loads the rule governing the act with `load-rules.sh`, and follows it. Where a script already prints the instruction the act follows, the skill runs it and follows its output instead, as `/load` runs `session-start.sh instruction`.
 6. Each command domain's help command carries the domain's help, as `help.md` beside its `SKILL.md`: that domain's section of the help text. `/<command> help` prints it. A skill that is not its domain's help command carries no `help.md`.
@@ -46,8 +46,11 @@
 - 2026-11-07, revised: `/?` carries its act in its own body, the one skill that does, as the engineer directed; not re-checked
 - 2026-11-07, revised: a command whose name cannot be a directory's takes a directory named for it in words; not re-checked
 - 2026-11-07, revised: `/?` no longer carries its act in its own body, and a command whose directory would show as another's name takes a directory named in words; not re-checked
+- 2026-11-17, revised: the script `refresh-packages.sh` is `update-packages.sh`, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Tue Nov 17 2026 the script `update-packages.sh` was named `refresh-packages.sh`.
 
 Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
@@ -98,3 +101,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 2:34:55 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:40:29 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 2:46:44 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Tue Nov 17 2026 at 11:43:35 AM PT

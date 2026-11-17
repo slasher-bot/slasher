@@ -10,7 +10,7 @@ Every shell script in this repository is **runnable as itself** — `./report-di
 **This reaches every shell script Slasher ships**, which is what makes it a rule about the system rather than about one repository's tidiness. Three kinds of script are authored here and they are covered alike:
 
 - **The tools at the root** — `report-direct-commits.sh` and `compile.sh` are authoring tools, run by whoever maintains Slasher, in this repository. **`slasher-install` sits beside them and is not one**: a consuming project fetches it, which is what makes it the one script here an engineer runs from somewhere other than a clone of this repository. That is the whole reason the delivery section below exists.
-- **The scripts inside the packages**, and `foundation`'s in particular — `install.sh`, `refresh-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, and `read-consuming-projects.sh`, and each `install-dependencies.sh` a package carries. These are **installed into every consuming project** and run there, so a missing executable bit committed here arrives broken on every machine that installs the package. That is the case where the cost is not local, and it is the reason the rule is worth having rather than assuming.
+- **The scripts inside the packages**, and `foundation`'s in particular — `install.sh`, `update-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, and `read-consuming-projects.sh`, and each `install-dependencies.sh` a package carries. These are **installed into every consuming project** and run there, so a missing executable bit committed here arrives broken on every machine that installs the package. That is the case where the cost is not local, and it is the reason the rule is worth having rather than assuming.
 - **The tests in `test/`** — `test/automated/` and `test/interactive/`, run from this repository's root.
 
 **What it does not reach is a script a consuming project writes for itself.** This is a local rule of this repository, so it binds what is authored here and travels no further. A consuming project wanting the same convention adopts it as its own local rule. It could instead be a `foundation` rule, and so bind every project that installs Slasher. That was asked on 2026-08-06 and declined. The scripts Slasher ships are all authored here, so the rule already covers everything Slasher is responsible for.
@@ -28,12 +28,12 @@ Every shell script in this repository is **runnable as itself** — `./report-di
 Three forms are in use, and which one is correct is not a matter of taste:
 
 - **`./name.sh`** — for a script that sits in the directory the command is typed in. The authoring tools at this repository's root take this form.
-- **The path form** — the script's location written from the directory the command is typed in, as in `slasher/system/foundation/refresh-packages.sh`. A packaged script is run from a consuming project's **root** and lives several directories below it, so `./name.sh` there names a file that is not present and the command fails. The packaged scripts and the tests take this form.
+- **The path form** — the script's location written from the directory the command is typed in, as in `slasher/system/foundation/update-packages.sh`. A packaged script is run from a consuming project's **root** and lives several directories below it, so `./name.sh` there names a file that is not present and the command fails. The packaged scripts and the tests take this form.
 - **`sh name.sh`** — the `curl` case above, and the only form that names an interpreter.
 
 **`./` is not what makes a script self-executing, which is what the rule had confused.** The executable bit and the shebang are, and they are what the two requirements at the top of this rule ask for. The `./` prefix contributes nothing to it. It exists to tell the shell that the argument is a **path** rather than a name to look up on `PATH`.
 
-Any string containing a slash already says that. So `slasher/system/foundation/refresh-packages.sh` is exactly as self-executing as `./report-direct-commits.sh`. Neither names an interpreter, and `./` is simply what a path looks like when the file is in the current directory.
+Any string containing a slash already says that. So `slasher/system/foundation/update-packages.sh` is exactly as self-executing as `./report-direct-commits.sh`. Neither names an interpreter, and `./` is simply what a path looks like when the file is in the current directory.
 
 **A script nobody types carries an Invocation block instead.** `session-start.sh`, `startup-display.sh`, and `statusline.sh` are wired into `.claude/settings.json` by `install.sh` and run by the harness, so a usage line would name a command no engineer issues. Each records its invocation anyway, and says why: a script whose invocation is not written down is one nobody can reproduce when the wiring breaks.
 
@@ -77,7 +77,7 @@ Where the script is run by the harness rather than by a person, record its invoc
 
 1. It reaches every shell script authored in this repository.
 2. The root authoring tools, `report-direct-commits.sh` and `compile.sh`, run in this repository. And `slasher-install`, also at the root, which is not an authoring tool: a consuming project fetches it.
-3. The package scripts, including `foundation`'s `install.sh`, `refresh-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `read-consuming-projects.sh`, and each package's `install-dependencies.sh`.
+3. The package scripts, including `foundation`'s `install.sh`, `update-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `read-consuming-projects.sh`, and each package's `install-dependencies.sh`.
 4. The tests in `test/automated/` and `test/interactive/`.
 5. It does not reach a script a consuming project writes for itself. This is a local rule, not a `foundation` rule. A consuming project wanting it adopts it as its own local rule.
 
@@ -86,7 +86,7 @@ Where the script is run by the harness rather than by a person, record its invoc
 1. Every script opens with a usage line in its header, naming the command an engineer types.
 2. Write the command from the directory it is typed in.
 3. Write `./name.sh` for a script in the directory the command is typed in, as the tools at this repository's root are.
-4. Write the path form, as in `slasher/system/foundation/refresh-packages.sh`, for a packaged script, run from a consuming project's root, and for the tests.
+4. Write the path form, as in `slasher/system/foundation/update-packages.sh`, for a packaged script, run from a consuming project's root, and for the tests.
 5. Write `sh name.sh` only for a script delivered by `curl`, in its header and wherever its install is documented. It is the only form that names an interpreter.
 6. `name.sh` in these forms stands for the script's own name.
 7. A script run by the harness rather than typed, such as `session-start.sh`, `startup-display.sh`, and `statusline.sh`, carries an Invocation block in place of a usage line. It records what runs it and says why it is recorded.
@@ -134,3 +134,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:09 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:48:58 AM PT
+Changed by Scott Bellware on Tue Nov 17 2026 at 11:43:35 AM PT

@@ -26,11 +26,11 @@
 #   slasher/system/foundation/install.sh migrate
 #     Run the migrations only: the record migrations, and the replacement of an AGENTS.md
 #     section that is Slasher's alone with the import line. Asks nothing, places nothing a
-#     project has not got, and prints only what it changed. refresh-packages.sh runs it after
+#     project has not got, and prints only what it changed. update-packages.sh runs it after
 #     a pull, with the installer it just pulled.
 #
 #   slasher/system/foundation/install.sh bootstrap
-#     Print the bootstrap and exit, placing nothing. refresh-packages.sh writes it to
+#     Print the bootstrap and exit, placing nothing. update-packages.sh writes it to
 #     slasher/SLASHER.md, so the text has one source here.
 set -e
 
@@ -170,7 +170,7 @@ place_agents_md() {
     rm -f "$current" "$carried"
   elif [ "$migrate_only" = yes ]; then
     # An AGENTS.md you maintain, with no Slasher section. Adding the line needs your consent,
-    # which a migration does not ask for. refresh-packages.sh says the line is missing.
+    # which a migration does not ask for. update-packages.sh says the line is missing.
     :
   elif [ "$append_agents_md" = yes ]; then
     # An AGENTS.md you maintain already exists, and the answer to append was given in
@@ -421,7 +421,7 @@ migrate_layout() {
 # waytide/system/. git subtree finds a package's last pull by the prefix its squash commits name,
 # so after the move a pull under the new prefix fails with "was never added". Removing the package
 # and adding it again writes a squash commit for the new prefix. A package's repository is found
-# as refresh-packages.sh finds it: the README's **Repository:** line, or the path with each
+# as update-packages.sh finds it: the README's **Repository:** line, or the path with each
 # slash as a dash. Each removal is committed, and the add commits itself.
 migrate_packages() {
   [ -d slasher/system ] || return 0
@@ -784,7 +784,7 @@ migrate_record_names() {
 
 # 0. Print the bootstrap section and stop. Nothing is installed and nothing is placed,
 #    so this is safe to run anywhere, including from the authoring source. It exists so
-#    refresh-packages.sh can compare a project's AGENTS.md against the current text
+#    update-packages.sh can compare a project's AGENTS.md against the current text
 #    without parsing this script's source.
 if [ "$1" = "bootstrap" ]; then
   bootstrap
@@ -792,7 +792,7 @@ if [ "$1" = "bootstrap" ]; then
 fi
 
 # migrate runs only the migrations: the record migrations, and the replacement of an AGENTS.md
-# section that is Slasher's alone. refresh-packages.sh runs it after a pull, with the installer it
+# section that is Slasher's alone. update-packages.sh runs it after a pull, with the installer it
 # just pulled, so one update brings both the new packages and their migrations. It asks nothing,
 # places nothing a project has not got, and prints only what it changed.
 migrate_only=no

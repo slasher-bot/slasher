@@ -2,7 +2,7 @@
 
 **Trigger:** When the engineer asks to refresh or install Slasher's packages, as with `/packages update`, `/package update`, or `/package install`
 
-**`/packages update [<package>...]` refreshes the installed packages from their repositories.** It runs foundation's `refresh-packages.sh`, with the packages named, or with none to refresh every one. **`/package update <package>` refreshes one package the same way.** Where it names no package, it asks which, through the selection interface, from the packages installed. Where it names more than one, it is `/packages update` with those names. Write `/packages update` wherever more than one package is updated, as in instructions to users, and `/package update` only for one. It reports each package that moved and the rule files that changed in it, as the script prints them. It rewrites `slasher/SLASHER.md`, the bootstrap, from the installed foundation, and says where the project's `AGENTS.md` lacks the line `@slasher/SLASHER.md` that imports it. It then runs the migrations of the installer it just pulled, which ask nothing, and reports what they changed, left uncommitted for the engineer to commit with the update.
+**`/packages update [<package>...]` refreshes the installed packages from their repositories.** It runs foundation's `update-packages.sh`, with the packages named, or with none to refresh every one. **`/package update <package>` refreshes one package the same way.** Where it names no package, it asks which, through the selection interface, from the packages installed. Where it names more than one, it is `/packages update` with those names. Write `/packages update` wherever more than one package is updated, as in instructions to users, and `/package update` only for one. It reports each package that moved and the rule files that changed in it, as the script prints them. It rewrites `slasher/SLASHER.md`, the bootstrap, from the installed foundation, and says where the project's `AGENTS.md` lacks the line `@slasher/SLASHER.md` that imports it. It then runs the migrations of the installer it just pulled, which ask nothing, and reports what they changed, left uncommitted for the engineer to commit with the update.
 
 **A refresh runs in the project the session is in, and in no other.** Refreshing another project is the engineer's to ask for there, per the work-in-a-downstream-project-is-never-offered-and-its-pending-state-is-not-reported rule.
 
@@ -12,11 +12,11 @@
 
 **Why:** a refresh and an install are each a script that already does the work and reports it. A command that runs the script, in the right place, and passes on its report, keeps the engineer from typing a path and keeps the agent from guessing at the work the script does.
 
-**How to apply:** on `/packages update`, run `refresh-packages.sh` with the packages named, or none, and report what moved. On `/package update`, run it with the one package named. On `/package install`, run `install.sh` from the project's root, never in the authoring source. Say that the change is read at the next load of the rules. Act on no other project.
+**How to apply:** on `/packages update`, run `update-packages.sh` with the packages named, or none, and report what moved. On `/package update`, run it with the one package named. On `/package install`, run `install.sh` from the project's root, never in the authoring source. Say that the change is read at the next load of the rules. Act on no other project.
 
 ## Compressed
 
-1. `/packages update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `refresh-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`. It runs the pulled installer's migrations, which ask nothing, reports what they changed, and leaves their changes uncommitted, for the engineer to commit with the update.
+1. `/packages update [<package>...]` refreshes the installed packages from their repositories. Run foundation's `update-packages.sh` with the packages named, or none for every one. Report each package that moved and its changed rule files, as the script prints them. It rewrites `slasher/SLASHER.md` from the installed foundation, and says where `AGENTS.md` lacks the line `@slasher/SLASHER.md`. It runs the pulled installer's migrations, which ask nothing, reports what they changed, and leaves their changes uncommitted, for the engineer to commit with the update.
 2. `/package install` installs Slasher into the project the session is in. Run foundation's `install.sh` from that project's root. The installer asks before changing a file the project already has.
 3. Act only on the project the session is in. Refreshing or installing in another project is the engineer's to ask for there.
 4. Never run `/package install` in the Slasher authoring source, whose root `AGENTS.md` it would change, and where it would write a Slasher project's bootstrap.
@@ -33,8 +33,11 @@
 - 2026-11-16, revised: the update rewrites `slasher/SLASHER.md` and checks `AGENTS.md` for its import line, which the engineer settled; checked: 18 directives, 17 kept, 1 less precise, 0 lost, 1 repair: pass on what each script reports and do not guess at its work; re-checked: 18 directives, 18 kept, 0 less precise, 0 lost
 - 2026-11-16, revised: the update runs the pulled installer's migrations, which the engineer asked for; checked: 18 directives, 16 kept, 1 less precise, 1 lost, 2 repairs: the migrations ask nothing, and their changes are left uncommitted for the engineer; re-checked: 18 directives, 17 kept, 1 less precise, 0 lost. The source decides the less precise one kept: it forbids guessing at the script's work, as the compressed text does, and an earlier check counted it kept
 - 2026-11-17, revised: `/packages update` updates many packages and `/package update` one, which the engineer settled; checked: 23 directives, 21 kept, 2 less precise, 0 lost. Left less precise: running install.sh directly in the authoring source, as before, and naming `slasher/SLASHER.md` as the bootstrap, which point 1 does not need to act
+- 2026-11-17, revised: the script `refresh-packages.sh` is `update-packages.sh`, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Tue Nov 17 2026 the script `update-packages.sh` was named `refresh-packages.sh`.
 
 Until Tue Nov 17 2026 `/package update` updated the packages named, or every one, and `/packages update` was its alias. The engineer made `/packages update` the command for many packages, and `/package update` the command for one.
 
@@ -63,3 +66,4 @@ Changed by Scott Bellware on Mon Nov 16 2026 at 1:08:22 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:21:51 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:53:29 PM PT
 Changed by Scott Bellware on Tue Nov 17 2026 at 11:38:25 AM PT
+Changed by Scott Bellware on Tue Nov 17 2026 at 11:43:35 AM PT

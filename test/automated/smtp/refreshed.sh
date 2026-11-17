@@ -46,7 +46,7 @@ control_readme="some other readme"
 
 # Actuation ------------------------------------------------------------------
 
-(cd "$project" && SLASHER_ORIGIN="$origin" slasher/system/foundation/refresh-packages.sh smtp) > /dev/null
+(cd "$project" && SLASHER_ORIGIN="$origin" slasher/system/foundation/update-packages.sh smtp) > /dev/null
 
 # Observation ----------------------------------------------------------------
 

@@ -110,7 +110,7 @@ Source: system/foundation/source/a-project-declares-which-installed-packages-are
 3. The read is still unconditional. The declaration decides what it holds.
    Follow only the active packages' rules.
 4. Where the engineer reactivates a package during the session, run its command and follow its rules from then on. No restart is needed.
-5. `refresh-packages.sh` refreshes a deactivated package like any other, so nothing loaded is stale.
+5. `update-packages.sh` refreshes a deactivated package like any other, so nothing loaded is stale.
 
 ## What is printed
 

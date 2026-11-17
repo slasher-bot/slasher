@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/refresh-packages/missing-line.sh
+#   test/automated/update-packages/migrations.sh
 #
 # Run from the repository root.
 set -e
@@ -34,22 +34,19 @@ project="$directory/some-project"
 mkdir -p "$project/slasher/system"
 git -C "$project" init -q -b master
 cp -R system/foundation "$project/slasher/system/"
-printf '# Some project\n\nSome instructions.\n' > "$project/AGENTS.md"
+echo "@slasher/SLASHER.md" > "$project/AGENTS.md"
+mkdir -p "$project/slasher/local/items"
+echo "- **State:** Open" > "$project/slasher/local/items/2026-01-01T00-00-00Z-some-idea-OPEN.md"
 git -C "$project" add -A
 git -C "$project" commit -q -m "some commit"
 (cd "$project" && git subtree add -q --prefix slasher/system/sample "$origin/sample.git" master --squash) > /dev/null 2>&1
 
 # Actuation ------------------------------------------------------------------
 
-output=$(cd "$project" && SLASHER_ORIGIN="$origin" slasher/system/foundation/refresh-packages.sh sample)
+(cd "$project" && SLASHER_ORIGIN="$origin" slasher/system/foundation/update-packages.sh sample) > /dev/null
 
 # Observation ----------------------------------------------------------------
 
-case $output in
-  *"@slasher/SLASHER.md"*) ;;
-  *) fail "Says that AGENTS.md lacks the line that imports slasher/SLASHER.md" "output:" "$output" ;;
-esac
-
-[ "$(cat "$project/AGENTS.md")" = "$(printf '# Some project\n\nSome instructions.\n')" ] || fail "Leaves AGENTS.md unchanged" "AGENTS.md:" "$(cat "$project/AGENTS.md")"
+[ -f "$project/slasher/local/items/2026-01-01T00-00-00Z-some-idea.md" ] || fail "Runs the pulled installer's migrations after the pull" "found:" "$(ls "$project/slasher/local/items")"
 
 echo "0 failed, 0 aborted"

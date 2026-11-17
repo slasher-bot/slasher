@@ -136,7 +136,7 @@ done < "$registry"
 # --- The projects ----------------------------------------------------------
 #
 # A Slasher project is a git repository whose root holds slasher/system/ — the
-# discriminator refresh-packages.sh already applies, reused rather than defined
+# discriminator update-packages.sh already applies, reused rather than defined
 # a second time. This repository is not one: the authoring source holds
 # system/foundation with no wrapper. An entry whose path is not a Slasher
 # project is reported and skipped, and the others are still listed.

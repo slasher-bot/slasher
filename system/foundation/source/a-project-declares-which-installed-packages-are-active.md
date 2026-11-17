@@ -36,7 +36,7 @@
 
 **So the read costs less by the deactivated packages' share.** A rule never read cannot be cited or weighed, so the listing keeps each deactivated package one command away. Where the engineer reactivates one during the session, run its command and follow its rules from then on.
 
-**`refresh-packages.sh` refreshes a deactivated package like any other.** The set decides what is applied rather than what is on disk, and a package that may be loaded must not be stale.
+**`update-packages.sh` refreshes a deactivated package like any other.** The set decides what is applied rather than what is on disk, and a package that may be loaded must not be stale.
 
 ## What is printed, and where
 
@@ -110,7 +110,7 @@
 3. The read is still unconditional. The declaration decides what it holds.
    Follow only the active packages' rules.
 4. Where the engineer reactivates a package during the session, run its command and follow its rules from then on. No restart is needed.
-5. `refresh-packages.sh` refreshes a deactivated package like any other, so nothing loaded is stale.
+5. `update-packages.sh` refreshes a deactivated package like any other, so nothing loaded is stale.
 
 ## What is printed
 
@@ -150,8 +150,11 @@
 - 2026-10-28, revised: Why points removed, solubility 57 → 62, clarity 0.70 → 0.86; checked: 34 directives, 32 kept, 2 less precise, 0 lost, 1 repair, re-checked with 0 lost
 - 2026-10-29, revised: a deactivated package is listed, not read, and reactivating it needs no restart, solubility 62 → 61, clarity 0.86 → 0.86; checked: 45 directives, 43 kept, 2 less precise, 0 lost, 1 repair; the less precise directive left is that the declaration is read from three plain text data attribute lines
 - 2026-11-03, revised: /package activate and deactivate change the set by one package; checked: 42 directives, 40 kept, 2 less precise, 0 lost. Left less precise, from before this change: what Packages being authoritative means, and the set deciding what is applied rather than what is on disk
+- 2026-11-17, revised: the script `refresh-packages.sh` is `update-packages.sh`, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Tue Nov 17 2026 the script `update-packages.sh` was named `refresh-packages.sh`.
 
 Until Mon Nov 2 2026 a declaration named a whole set, and no command changed it by one package.
 
@@ -191,3 +194,4 @@ Changed by Scott Bellware on Thu Oct 29 2026 at 10:36:20 AM PT
 Changed by Scott Bellware on Tue Nov 3 2026 at 10:38:55 AM PT
 Changed by Scott Bellware on Wed Nov 4 2026 at 11:37:47 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Tue Nov 17 2026 at 11:43:35 AM PT

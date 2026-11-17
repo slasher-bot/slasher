@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/refresh-packages/slasher-md.sh
+#   test/automated/update-packages/slasher-md.sh
 #
 # Run from the repository root.
 set -e
@@ -44,7 +44,7 @@ control_slasher_md_text=$(system/foundation/install.sh bootstrap)
 
 # Actuation ------------------------------------------------------------------
 
-(cd "$project" && SLASHER_ORIGIN="$origin" slasher/system/foundation/refresh-packages.sh sample) > /dev/null
+(cd "$project" && SLASHER_ORIGIN="$origin" slasher/system/foundation/update-packages.sh sample) > /dev/null
 
 # Observation ----------------------------------------------------------------
 

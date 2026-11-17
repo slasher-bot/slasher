@@ -116,7 +116,7 @@ fi
 # The authoring source holds the packages at system/, with no slasher/ wrapper; a Slasher
 # project holds them at slasher/system/. Installing here would add a second, installed copy of
 # every package beside the ones being written, and place a Slasher project's bootstrap over
-# this repository's own. The same refusal is in refresh-packages.sh.
+# this repository's own. The same refusal is in update-packages.sh.
 if [ -d system/foundation ] && [ ! -d slasher/system ]; then
   echo "This is the Slasher authoring source, where the packages are written rather than" >&2
   echo "installed. Installing here would put a second copy of every package under slasher/," >&2
@@ -151,7 +151,7 @@ add() {
 
 # The repository a package publishes to is its installed path with the slashes flattened to
 # dashes, so a nested group/name gives group-name. A package may declare a different one, and
-# refresh-packages.sh reads that declaration — an installer cannot, since the package is not
+# update-packages.sh reads that declaration — an installer cannot, since the package is not
 # there yet to be read. So a package whose repository is not its flattened path is named here.
 package_repository() {
   case $1 in

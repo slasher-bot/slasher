@@ -102,7 +102,7 @@ foundation  →  (nothing — the base every other package builds on)
 - **`git subtree` can only place files inside a package directory.** So a tool a Slasher project runs has to live in some package. There is nowhere else for it to be delivered.
 - **It has to be a package that is always there.** Foundation is the only one — every other package includes it, so a project running Slasher at all has foundation.
 
-So `install.sh`, `refresh-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `list-projects.sh`, and `read-project-setting.sh` are here. The **authoring** tools are not. `install-all.sh` and `report-direct-commits.sh` sit unpackaged at the root of the composite repository. Only the composite publishes, and a Slasher project never runs them.
+So `install.sh`, `update-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `list-projects.sh`, and `read-project-setting.sh` are here. The **authoring** tools are not. `install-all.sh` and `report-direct-commits.sh` sit unpackaged at the root of the composite repository. Only the composite publishes, and a Slasher project never runs them.
 
 **`list-projects.sh` is packaged because it is not an authoring tool**, though it sat with them until 2026-08-07. It reports the Slasher projects **on this machine**, reading a per-machine registry at `~/.config/slasher/projects.toml`, in which each project is a `[[project]]` entry naming its root. So it is **machine-scoped** where the rest of this package is project-scoped. The engineer who wants it is anyone who installed Slasher into more than one project, rather than whoever maintains Slasher.
 
@@ -118,7 +118,7 @@ The authoring tools run **against the packages**. This one runs **beside project
 
 **The bootstrap lives in `slasher/SLASHER.md`, which only Slasher writes.** The project's `AGENTS.md` holds its own text and one line, `@slasher/SLASHER.md`, that imports it. `install.sh` writes Slasher's file whole, and adds the line once, asking first where the project already has an `AGENTS.md`. Nothing in the project's `AGENTS.md` is compared or rewritten after that.
 
-**`refresh-packages.sh` rewrites `slasher/SLASHER.md` from the installed foundation**, since no `git subtree pull` reaches a file outside the packages. It asks the installer for the text only where the installer is known to answer, and never invokes one that would treat the request as an install. It then says where `AGENTS.md` lacks the line. It then runs `install.sh migrate`, the migrations of the installer it just pulled, so one update brings both the new packages and what they ask of the project's own files. That mode asks nothing, places nothing the project has not got, and prints only what it changed.
+**`update-packages.sh` rewrites `slasher/SLASHER.md` from the installed foundation**, since no `git subtree pull` reaches a file outside the packages. It asks the installer for the text only where the installer is known to answer, and never invokes one that would treat the request as an install. It then says where `AGENTS.md` lacks the line. It then runs `install.sh migrate`, the migrations of the installer it just pulled, so one update brings both the new packages and what they ask of the project's own files. That mode asks nothing, places nothing the project has not got, and prints only what it changed.
 
 Until Mon Nov 16 2026 the bootstrap was a section of the project's `AGENTS.md`, from `## Slasher` to the end of the file, and the update compared that span with the installed bootstrap. A project's own text below the section made the two differ for good, and the remedy was to edit the file by hand.
 
@@ -146,14 +146,14 @@ This package has no dependencies. (The composite `install-all.sh` installs every
 **Refresh from upstream** periodically to pull the latest rules. Once foundation is installed, one command refreshes every installed package:
 
 ```
-slasher/system/foundation/refresh-packages.sh
+slasher/system/foundation/update-packages.sh
 ```
 
-**A package's repository is its installed path with the slashes flattened to dashes**, so a nested `group/name` publishes to `group-name`. **A package may declare a different one**, on a `**Repository:**` line in its `README.md` — the plain text data attribute form the rest of the system reads. `refresh-packages.sh` reads that line where it is present and derives the name where it is not, which is every package but one.
+**A package's repository is its installed path with the slashes flattened to dashes**, so a nested `group/name` publishes to `group-name`. **A package may declare a different one**, on a `**Repository:**` line in its `README.md` — the plain text data attribute form the rest of the system reads. `update-packages.sh` reads that line where it is present and derives the name where it is not, which is every package but one.
 
 The declaration exists because a repository name is met by people as well as by scripts. The Ruby package installs at `slasher/system/ext/ruby-lang/` and is published from `slasher-bot/slasher-ruby`, which the flattening does not produce.
 
-It reports each package that moved and the rule files that changed in it. Those files are binding, and a silent refresh would be a change of behavior nobody saw. Name packages to refresh only those (`… refresh-packages.sh testing git`). Set `SLASHER_ORIGIN` to refresh from a fork or a mirror instead of `https://github.com/slasher-bot`. A single package can still be pulled directly:
+It reports each package that moved and the rule files that changed in it. Those files are binding, and a silent refresh would be a change of behavior nobody saw. Name packages to refresh only those (`… update-packages.sh testing git`). Set `SLASHER_ORIGIN` to refresh from a fork or a mirror instead of `https://github.com/slasher-bot`. A single package can still be pulled directly:
 
 ```
 git subtree pull --prefix slasher/system/foundation git@github.com:slasher-bot/foundation.git master --squash
