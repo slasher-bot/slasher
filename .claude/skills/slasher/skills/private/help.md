@@ -8,11 +8,13 @@ PRIVATE
                                    with no prompt, the agent asks whether
                                    to continue it or end it
   /private <file path>             Copy the file to the private directory
+  /private <instruction>           Carry out the instruction in a private
+                                   session, then end the session
   /private item <words>            Write a private item
   /private log <words>             Write a private log entry
   /private journal <words>         Write a private journal entry
   /private session <instruction>   Carry out the instruction in a private
-                                   session
+                                   session, then end the session
   /private session end             End the private session, as /private end
                                    does
   /private read <name>             Read a private record
