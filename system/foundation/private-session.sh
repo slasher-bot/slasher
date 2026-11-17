@@ -9,7 +9,8 @@
 #
 # A bare /unrecorded, or /unrecorded with an instruction, starts an unrecorded session the same
 # way, with its state file in the unrecorded-sessions directory beside <state-directory>.
-# /unrecorded end removes it. Starting either session ends the other.
+# /unrecorded end removes it, and /unrecorded help, which only prints the help, changes nothing.
+# Starting either session ends the other.
 #
 # The state file holds the time of the session's last prompt, in seconds since the epoch. Each
 # prompt in a private session writes <now> there. Where more than 4 minutes passed since the last
@@ -52,6 +53,8 @@ case $prompt in
     mkdir -p "$state_directory"
     printf '%s\n' "$now" > "$private"
     rm -f "$unrecorded"
+    exit 0 ;;
+  "/unrecorded help"*|"/slasher:unrecorded help"*)
     exit 0 ;;
   "/unrecorded end"|"/slasher:unrecorded end")
     rm -f "$unrecorded"
