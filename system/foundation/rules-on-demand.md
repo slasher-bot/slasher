@@ -1193,10 +1193,10 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 
 Source: system/foundation/source/projects-lists-the-registry-and-carries-out-an-instruction-in-another-project.md
 
-Trigger: When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -base`, `/projects -system`, or `/projects <name>`
+Trigger: When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -base`, `/base`, `/projects -system`, or `/projects <name>`
 
 1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `list-projects.sh`, which reads `~/.config/slasher/projects.toml`, and print its report. Where there is no registry, say so.
-2. `/projects -base <instruction>`, `/projects -system <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the base project, the machine's system project, or the registered project with that name.
+2. `/projects -base <instruction>`, `/projects -system <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the base project, the machine's system project, or the registered project with that name. `/base <instruction>` is an alias of `/projects -base <instruction>`.
 3. Resolve the target from the current project's root with `slasher/system/foundation/resolve-project.sh -base`, `-system`, or `<name>`, or `system/foundation/resolve-project.sh` where there is no `slasher/` directory. It prints the target's root.
 4. Where the script fails, report its message and do nothing more.
 5. Before acting, run the target's loader from the target's root, and follow the rules it prints for the act.

@@ -4,6 +4,7 @@ PROJECTS
 
   /projects                        The machine's registry of Slasher projects
   /projects -base <instruction>    Carry out the instruction in this project's base project
+  /base <instruction>              An alias of /projects -base
   /projects -system <instruction>  Carry out the instruction in the machine's system project
   /projects <name> <instruction>   Carry out the instruction in the registered project of that name
   /projects help                   Print this command's help
