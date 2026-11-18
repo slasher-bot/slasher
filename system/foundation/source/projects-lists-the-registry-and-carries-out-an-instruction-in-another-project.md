@@ -1,10 +1,10 @@
 # Projects lists the registry, and carries out an instruction in another project
 
-**Trigger:** When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -base`, `/base`, `/projects -system`, or `/projects <name>`
+**Trigger:** When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -base`, `/base`, `/system`, `/projects -system`, or `/projects <name>`
 
 **`/projects` lists the Slasher projects registered on this machine, from within any project on it.** It runs foundation's `list-projects.sh`, which reads the registry at `~/.config/slasher/projects.toml`, and prints what the script reports. Where no registry exists, it says there is none.
 
-**`/projects` with a target carries out an instruction in another project.** The target is one of three: `-base`, the project's base project, `-system`, the machine's system project, or a project's name in the registry. The instruction is the rest of what was typed, as in `/projects -base add the receipt idea` or `/projects some-store show its recent log`. `/base <instruction>` is an alias of `/projects -base <instruction>`, and does exactly what it does.
+**`/projects` with a target carries out an instruction in another project.** The target is one of three: `-base`, the project's base project, `-system`, the machine's system project, or a project's name in the registry. The instruction is the rest of what was typed, as in `/projects -base add the receipt idea` or `/projects some-store show its recent log`. `/base <instruction>` is an alias of `/projects -base <instruction>`, and `/system <instruction>` of `/projects -system <instruction>`. Each does exactly what the command it names does.
 
 **The target is resolved by foundation's `resolve-project.sh`, run from the root of the current project.** `slasher/system/foundation/resolve-project.sh -base`, `-system`, or `<name>` prints the target's root. Where the project has no `slasher/` directory, it is `system/foundation/resolve-project.sh`. Where the script fails, report its message and do nothing more. It fails where `slasher.toml` or `system-project.toml` is missing, where no registered project has the name, and where more than one has it.
 
@@ -21,7 +21,7 @@
 ## Compressed
 
 1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `list-projects.sh`, which reads `~/.config/slasher/projects.toml`, and print its report. Where there is no registry, say so.
-2. `/projects -base <instruction>`, `/projects -system <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the base project, the machine's system project, or the registered project with that name. `/base <instruction>` is an alias of `/projects -base <instruction>`.
+2. `/projects -base <instruction>`, `/projects -system <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the base project, the machine's system project, or the registered project with that name. `/base <instruction>` is an alias of `/projects -base <instruction>`, and `/system <instruction>` of `/projects -system <instruction>`.
 3. Resolve the target from the current project's root with `slasher/system/foundation/resolve-project.sh -base`, `-system`, or `<name>`, or `system/foundation/resolve-project.sh` where there is no `slasher/` directory. It prints the target's root.
 4. Where the script fails, report its message and do nothing more.
 5. Before acting, run the target's loader from the target's root, and follow the rules it prints for the act.
@@ -35,8 +35,11 @@
 - 2026-11-02, compressed: checked: 11 directives, 11 kept, 0 less precise, 0 lost
 - 2026-11-08, revised: `/projects` with a target carries out an instruction in that project; not re-checked
 - 2026-11-18, revised: `/base` is an alias of `/projects -base`; not re-checked
+- 2026-11-18, revised: `/system` is an alias of `/projects -system`; not re-checked
 
 ## History
+
+Until Wed Nov 18 2026 `/projects -system` had no alias in Slasher. The Slasher authoring source had a `/system` command of its own, set by a local rule. The engineer made `/system` a Slasher alias.
 
 Until Wed Nov 18 2026 `/projects -base` had no alias. The engineer added `/base`.
 
@@ -56,3 +59,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 6:02:06 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:54:23 PM PT
 Changed by Scott Bellware on Wed Nov 18 2026 at 2:51:05 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 2:53:31 PM PT
