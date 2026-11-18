@@ -1,6 +1,6 @@
 # Slasher cannot be installed in a folder that is not a git repository
 
-**State:** Open
+**State:** Resolved
 
 **Tags:** [problem]
 
@@ -26,7 +26,13 @@ Added Wed Nov 18 2026. Proposed by the agent, not settled.
 2. **A repository that holds only Slasher's files, with its `.git` directory kept somewhere other than the folder.** The workspace does not look like a repository. It is more complex and less soluble.
 3. **Slasher installed in each project instead.** It does not meet the request, which is one Slasher for the whole workspace.
 
+## Settled
+
+- **2026-11-18** — The resolution is Slasher's workspace project and the `/workspace` command. The workspace folder itself needs no repository: the workspace project is a repository of its own beside the other projects, named by `slasher.toml` in the workspace folder.
+
 ---
 
 Authored by Scott Bellware on Wed Nov 18 2026 at 2:32:40 PM PT
 Changed by Scott Bellware on Wed Nov 18 2026 at 2:39:09 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 3:22:30 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 3:22:48 PM PT
