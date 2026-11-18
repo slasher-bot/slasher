@@ -24,6 +24,14 @@
 
 **`/brainstorm <kind>` starts brainstorming with the destination already settled:** a new item of that kind, where the kind is `idea`, `work`, `plan`, `design`, `aspiration`, `goal`, `note`, `mistake`, and `problem`. At the end the agent reframes the points and writes them to the new item, and does not ask where they go.
 
+## Brainstorming one line
+
+**`/brainstorm <text>` starts a brainstorm, records the text, and ends it, in one reply.** The text is the brainstorm's one point, written word for word to a new collection file. The end is the one `/brainstorm end` makes: the point is reframed, written to a new `[brainstorm]` item, and the collection file is renamed for it.
+
+**`/brainstorm <kind> <text>` does the same into a new item of that kind.** A first word that is a kind, or one of the command's subcommands, keeps that meaning, and the text is the words after the kind. So `/brainstorm idea the cart keeps its contents` brainstorms "the cart keeps its contents" into a new idea. `start`, `end`, `suspend`, `resume`, and `help` take no text.
+
+**As the engineer stated it:** A brainstorm line can take a single input and then end. "/brainstorm" should take a <text> input. When it does, the brainstorm starts and ends around whatever that textual input is.
+
 ## Suspending
 
 **`/brainstorm suspend` stops brainstorming without ending it.** The agent stops recording points, and does not reframe them or write an item. The collection file stays as it is, with its prefix alone as its name. What the engineer says after it is answered as ordinary conversation, not recorded.
@@ -38,7 +46,7 @@
 
 **Why:** a point is lost when it has to be organized before it can be said. Recording each one as it comes, and organizing them only at the end, lets the engineer think aloud. Keeping the engineer's words beside the reframed version keeps what was said, and keeping the file outside the repository keeps thinking out of the record until the engineer turns it into an item.
 
-**How to apply:** on `/brainstorm start`, create the collection file and write each point to it as it is said, word for word, without reframing or answering it. On `/brainstorm end`, reframe the points, write the reframed version into the file, write it to a new `[brainstorm]` item, Recorded, without asking where it goes, and rename the file for that item. With a kind given, write to a new item of that kind instead. On `/brainstorm suspend`, stop recording, and leave the file as it is. On `/brainstorm resume`, add the new words after the earlier ones. Log and commit nothing about the collection file.
+**How to apply:** on `/brainstorm start`, create the collection file and write each point to it as it is said, word for word, without reframing or answering it. On `/brainstorm end`, reframe the points, write the reframed version into the file, write it to a new `[brainstorm]` item, Recorded, without asking where it goes, and rename the file for that item. With a kind given, write to a new item of that kind instead. On `/brainstorm <text>` or `/brainstorm <kind> <text>`, do the start and the end in one reply, with the text as the one point. On `/brainstorm suspend`, stop recording, and leave the file as it is. On `/brainstorm resume`, add the new words after the earlier ones. Log and commit nothing about the collection file.
 
 ## Compressed
 
@@ -52,6 +60,8 @@
 8. `/brainstorm resume` reopens a collection file that has ended or is suspended. Add the new words after the earlier ones. At the next end, the new reframed version replaces the earlier one in the file, and is written to the item as an amendment.
 9. Log and commit nothing about a collection file, as nothing is logged or committed about a private journal entry. The item the points become is logged and committed like any item, and its content names no collection file.
 10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or write an item. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
+11. `/brainstorm <text>` starts a brainstorm, records the text word for word as its one point, and ends it, in one reply. The end is the one `/brainstorm end` makes.
+12. `/brainstorm <kind> <text>` does the same into a new item of that kind. A first word that is a kind or a subcommand keeps that meaning, and the text is the words after the kind. `start`, `end`, `suspend`, `resume`, and `help` take no text.
 
 ## Compression
 
@@ -63,8 +73,11 @@
 - 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 - 2026-11-13, revised: a brainstorm begun with no kind ends as a `[brainstorm]` item, with nothing asked; checked, with the items rule's new text, by one fresh agent that listed the directives before reading the compressed text: 17 directives, 13 kept, 3 less precise, 1 lost, 3 repairs, not re-checked. Left less precise: point 7's list of kinds, which names fewer kinds than the items rule allows, as before
 - 2026-11-14, revised: `/brainstorm start` replaces `/brainstorm begin`, and *start* replaces *begin*; not re-checked
+- 2026-11-18, revised: `/brainstorm <text>` and `/brainstorm <kind> <text>` brainstorm one line, in one reply; checked by a fresh lister and a fresh checker: 45 directives, 43 kept, 2 less precise, 0 lost. Left less precise: point 5 names the `[brainstorm]` tag and not the brainstorm kind, as before, since the items rule creates an item as a kind by its tag
 
 ## History
+
+Until Wed Nov 18 2026 `/brainstorm` took no text, and a first word that was not a subcommand or a kind asked which subcommand was meant.
 
 Until Sat Nov 14 2026 brainstorming started with `/brainstorm begin`, and this rule said *begin* where it now says *start*. The begin, start, end, conclude work item settled *start* and *end* as the standard words for beginning and ending work.
 
@@ -96,3 +109,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 6:44:35 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 1:08:47 PM PT

@@ -949,6 +949,8 @@ Trigger: When the engineer starts, ends, suspends, or resumes brainstorming (`/b
 8. `/brainstorm resume` reopens a collection file that has ended or is suspended. Add the new words after the earlier ones. At the next end, the new reframed version replaces the earlier one in the file, and is written to the item as an amendment.
 9. Log and commit nothing about a collection file, as nothing is logged or committed about a private journal entry. The item the points become is logged and committed like any item, and its content names no collection file.
 10. `/brainstorm suspend` stops recording without ending. Do not reframe the points or write an item. Leave the collection file as it is, named by its prefix alone. Answer what is said after it as ordinary conversation.
+11. `/brainstorm <text>` starts a brainstorm, records the text word for word as its one point, and ends it, in one reply. The end is the one `/brainstorm end` makes.
+12. `/brainstorm <kind> <text>` does the same into a new item of that kind. A first word that is a kind or a subcommand keeps that meaning, and the text is the words after the kind. `start`, `end`, `suspend`, `resume`, and `help` take no text.
 
 # Dated artifacts are prefixed with an ISO 8601 UTC datetime, and system rules are not
 

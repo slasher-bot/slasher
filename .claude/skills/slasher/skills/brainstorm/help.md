@@ -13,4 +13,7 @@ BRAINSTORMING
                                    <kind>: idea, work, plan, design,
                                    aspiration, goal, note, mistake,
                                    or problem
+  /brainstorm <text>               Brainstorm the text as one point, and end
+  /brainstorm <kind> <text>        Brainstorm the text as one point into an
+                                   item of that kind, and end
   /brainstorm help                 Print this command's help
