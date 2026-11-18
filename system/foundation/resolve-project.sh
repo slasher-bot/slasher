@@ -1,13 +1,13 @@
 #!/bin/sh
 # Usage:
 #
-#   slasher/system/foundation/resolve-project.sh -base
+#   slasher/system/foundation/resolve-project.sh -workspace
 #   slasher/system/foundation/resolve-project.sh -system
 #   slasher/system/foundation/resolve-project.sh <name>
 #
 # Run from the root of a Slasher project.
 #
-# -base prints the root of the project's base project: the directory
+# -workspace prints the root of the project's workspace project: the directory
 # beside it that slasher.toml, in their shared parent directory, names.
 #
 # -system prints the root of the machine's system project: the path that
@@ -22,11 +22,11 @@
 set -e
 
 case $1 in
-  -base)
+  -workspace)
     parent=$(dirname "$PWD")
 
     name=$(
-      sed -n 's/^[[:space:]]*base-project[[:space:]]*=[[:space:]]*"\([^"]*\)"[[:space:]]*$/\1/p' \
+      sed -n 's/^[[:space:]]*workspace-project[[:space:]]*=[[:space:]]*"\([^"]*\)"[[:space:]]*$/\1/p' \
         "$parent/slasher.toml"
     )
 

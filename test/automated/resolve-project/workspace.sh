@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/resolve-project/base.sh
+#   test/automated/resolve-project/workspace.sh
 #
 # Run from the repository root.
 set -e
@@ -23,21 +23,21 @@ project="$parent/some-project"
 mkdir -p "$project/system/foundation"
 cp system/foundation/resolve-project.sh "$project/system/foundation/"
 
-control_base="$parent/some-base"
-mkdir "$control_base"
+control_workspace="$parent/some-workspace"
+mkdir "$control_workspace"
 
 cat > "$parent/slasher.toml" <<'CONFIG'
-base-project = "some-base"
+workspace-project = "some-workspace"
 CONFIG
 
 # Actuation ------------------------------------------------------------------
 
-base=$(cd "$project" && system/foundation/resolve-project.sh -base)
+workspace=$(cd "$project" && system/foundation/resolve-project.sh -workspace)
 
-echo "Base: $base"
+echo "Workspace: $workspace"
 
-# Prints the root of the base project slasher.toml names
+# Prints the root of the workspace project slasher.toml names
 
-[ "$base" = "$control_base" ] || fail "Prints the root of the base project slasher.toml names" "found:" "$base"
+[ "$workspace" = "$control_workspace" ] || fail "Prints the root of the workspace project slasher.toml names" "found:" "$workspace"
 
 echo "0 failed, 0 aborted"

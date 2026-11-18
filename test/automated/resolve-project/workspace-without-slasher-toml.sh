@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage:
 #
-#   test/automated/resolve-project/base-without-slasher-toml.sh
+#   test/automated/resolve-project/workspace-without-slasher-toml.sh
 #
 # Run from the repository root.
 set -e
@@ -25,10 +25,10 @@ cp system/foundation/resolve-project.sh "$project/system/foundation/"
 
 # Actuation ------------------------------------------------------------------
 
-base=$(cd "$project" && system/foundation/resolve-project.sh -base 2>/dev/null) && status=0 || status=$?
+workspace=$(cd "$project" && system/foundation/resolve-project.sh -workspace 2>/dev/null) && status=0 || status=$?
 
 # When the parent directory holds no slasher.toml
 
-[ "$status" -ne 0 ] || fail "Fails" "output:" "$base"
+[ "$status" -ne 0 ] || fail "Fails" "output:" "$workspace"
 
 echo "0 failed, 0 aborted"
