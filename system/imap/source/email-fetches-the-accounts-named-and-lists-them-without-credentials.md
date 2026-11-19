@@ -2,17 +2,19 @@
 
 **Trigger:** When the engineer asks for email to be fetched or for the email accounts to be listed, as with `/email`, `/email fetch`, or `/email list`
 
-**`/email fetch` fetches IMAP accounts into the project.** `/email fetch <name>` fetches the account with that name. `/email fetch <host>` fetches every account whose host it is, as a Gmail host can hold many. `/email fetch` with nothing after it fetches every IMAP account, and a bare `/email` is the same. Each account follows the `[imap]` table of its own email configuration, `slasher-email.toml`, where it has one. The act is the package's `fetch.py`, run from the project root: `slasher/system/imap/fetch.py [<name>|<host>]`, or `system/imap/fetch.py` where the project has no `slasher/` directory. Report how many messages each account's folders took, as the script prints them, and where they went. Where the script fails, report its message and do nothing more.
+**`/email fetch` fetches the IMAP accounts the project lists into the project.** The project lists them in its email configuration, `email/slasher-email.toml` in its local directory, an `[[account]]` table to each, named as its credential is in the Keychain. `/email fetch <name>` fetches the listed account with that name. `/email fetch <host>` fetches every listed account whose host it is, as a Gmail host can hold many. `/email fetch` with nothing after it fetches every listed account, and a bare `/email` is the same. An account the project does not list is never fetched, and a project with no list fetches none. Each account follows its `[account.imap]` table. The act is the package's `fetch.py`, run from the project root: `slasher/system/imap/fetch.py [<name>|<host>]`, or `system/imap/fetch.py` where the project has no `slasher/` directory. Report how many messages each account's folders took, as the script prints them, and where they went. Where the script fails, report its message and do nothing more.
 
-**`/email list` lists the accounts, and never a credential.** The act is the package's `list.py`, run the same way. It prints one account to a line: its name, its host, and its login, separated by tabs. Present them as a table of those three columns. An account with no name shows an empty name.
+**`/email list` lists every account stored on the machine, and never a credential.** It lists them whether the project lists them or not, so their names can be copied into the project's email configuration. The act is the package's `list.py`, run the same way. It prints one account to a line: its name, its host, and its login, separated by tabs. Present them as a table of those three columns. An account with no name shows an empty name.
 
 **A credential never passes through the chat.** The agent does not ask for a credential, read one aloud, or print one. A credential is stored by the engineer in their own terminal, with `credential.sh write <host> <login> [--name <name>]`, typing it at a hidden prompt. Where the engineer asks to store one, give them that command to run, and do not run it with a credential in it.
 
-**Why:** a credential typed into the chat is kept in the conversation, beyond the Keychain's protection. The commands work on accounts by their names and hosts, which are not secret, so they need no credential to pass through the agent.
+**Why:** the Keychain holds every account on the machine, and a project that fetched them all would take in mail that belongs to another project. A credential typed into the chat is kept in the conversation, beyond the Keychain's protection. The commands work on accounts by their names and hosts, which are not secret, so they need no credential to pass through the agent.
 
 **How to apply:** on `/email`, `/email fetch`, or `/email list`, run the package's script from the project root, and report what it printed. Give the engineer the credential command to run themselves when they want an account stored.
 
 ## History
+
+Until Wed Nov 18 2026 a bare `/email fetch` fetched every IMAP account stored on the machine, and each account was configured by its own `slasher-email.toml`, in `email/<name>/`. The engineer limited a project to the accounts it lists, in one file.
 
 Until Sun Nov 15 2026 an account's fetch was configured by its fetch file, `fetch.toml`. The engineer replaced it with `slasher-email.toml`, one file for the `imap` and the `smtp` packages.
 
@@ -24,3 +26,4 @@ Related:
 
 Authored by Scott Bellware on Tue Nov 10 2026 at 7:58:43 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 2:46:08 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 8:21:44 PM PT
