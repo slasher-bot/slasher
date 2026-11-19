@@ -17,13 +17,13 @@
 | `2026-10-21T05-44-56Z` | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
 ```
 
-A list of items takes the ordinal and no SHA columns:
+A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |                        | item                        | state  |
-|---|------------------------|-----------------------------|--------|
-| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Active |
-| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Open   |
+| # |                        | item                        | kind   | state  |
+|---|------------------------|-----------------------------|--------|--------|
+| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Design | Active |
+| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Idea   | Open   |
 ```
 
 **A record never amended shows the same SHA twice, and that is the point.** The pair says whether a record has been touched since it was written. One that has not, and whose subject has moved since, is the stale case a reader is looking for.
@@ -31,6 +31,10 @@ A list of items takes the ordinal and no SHA columns:
 **The last column is chosen for the question.** A list of items or implementations takes the state. A list of commits asked about for their subject widths takes the width. A column nobody asked for is padding.
 
 **A list of commits takes no SHA columns**, because the handle is already the SHA and a commit has no creation distinct from itself. **A list of items takes none either**, at the engineer's direction. Its rows are referred to by their ordinal.
+
+**Every list of items takes a kind column, between the title and the state.** It names the kind each of the item's tags gives, written as a word, not as a tag: *Idea* for `[idea]`, *Work* for `[work]`, and *Legal matter* for `[legal-matter]`. Where the item carries several tags, it names each, separated by commas. `/items`, `/items current`, `/item list`, and `/current` each print it. A list of notes takes none, since every row is a note.
+
+**As the engineer stated it:** Include the item kind in item lists.
 
 ## Listing items by state
 
@@ -40,7 +44,7 @@ A list of items takes the ordinal and no SHA columns:
 
 ## The items command
 
-**`/items` lists every item, whatever its state, oldest first.** Each row is an ordinal, the item's handle, its title, and its state. The list takes no SHA columns and no kind column, as other lists of items do.
+**`/items` lists every item, whatever its state, oldest first.** Each row is an ordinal, the item's handle, its title, its kind, and its state. The list takes no SHA columns, as other lists of items do.
 
 **A hidden record is counted rather than listed**, under the a-status-report-prints-a-fixed-whole-project-report rule. A Suspended item is left out of the rows, and a line below the table gives the count and the kind, as `1 suspended item`.
 
@@ -54,7 +58,7 @@ A list of items takes the ordinal and no SHA columns:
 
 **As the engineer stated it:** When current items and implementations are printed together, as is the case with some commands, items in the Implementation state should not be printed. When current items are printed on their own, items in the Implementation state should be printed.
 
-**The items table printed by `/current` takes a kind column, between the title and the state.** It names the kind each of the item's tags gives, written as a word, not as a tag: *Idea* for `[idea]`, *Work* for `[work]`, and *Legal matter* for `[legal-matter]`. Where the item carries several tags, it names each, separated by commas. Other lists of items take no kind column unless it is asked for.
+**The items table printed by `/current` takes the kind column every list of items takes.**
 
 **As the engineer stated it:** Include the item kind in the table printed by "/current"
 
@@ -148,21 +152,22 @@ Keep every column short. Where a field runs to a sentence, use rows instead.
 | `2026-10-21T05-44-56Z` | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
 ```
 
-A list of items takes the ordinal and no SHA columns:
+A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |                        | item                        | state  |
-|---|------------------------|-----------------------------|--------|
-| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Active |
-| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Open   |
+| # |                        | item                        | kind   | state  |
+|---|------------------------|-----------------------------|--------|--------|
+| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Design | Active |
+| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Idea   | Open   |
 ```
 
 9. A record that was never amended shows the same SHA in both columns. This is intended, since it shows the record has not been touched since it was written.
 10. Choose the last column to fit the question.
 11. A list of items or implementations takes the state as its last column.
-12. A list of commits asked about for their subject widths takes the width.
-13. Do not add a column nobody asked for.
-14. A list of commits takes no SHA columns.
+12. Every list of items takes a kind column between the title and the state: `/items`, `/items current`, `/item list`, and `/current`. Name the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Name several tags each, separated by commas. A list of notes takes none.
+13. A list of commits asked about for their subject widths takes the width.
+14. Do not add a column nobody asked for.
+15. A list of commits takes no SHA columns.
 
 ## Listing items by state
 
@@ -172,7 +177,7 @@ A list of items takes the ordinal and no SHA columns:
 ## The items command
 
 1. `/items` lists every item, whatever its state, oldest first.
-2. Present each item as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns and no kind column.
+2. Present each item as one row: an ordinal, its handle, its title, its kind, and its state. Give it no SHA columns.
 3. A Suspended item is a hidden record, counted rather than listed, under the a-status-report-prints-a-fixed-whole-project-report rule. Leave it out of the rows. Below the table, print a line giving their count and kind, as `1 suspended item`.
 4. `/items current` lists the Open, Active, and Implementation items, as `/item list current` does.
 
@@ -182,7 +187,7 @@ A list of items takes the ordinal and no SHA columns:
 2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
-5. In the items table `/current` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
+5. The items table `/current` prints takes the kind column every list of items takes.
 6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
 7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Implementation and Suspended items here too.
 8. A number given to `/current` does not change these counts.
@@ -242,8 +247,11 @@ A list of items takes the ordinal and no SHA columns:
 - 2026-11-13, revised: `/items` lists every item, and `/items current` the current ones, as the items command; the items command checked: 12 directives, 10 kept, 2 less precise, 0 lost, 1 repair. Left less precise: that `/items current` does what a bare `/items` did before, which point 4 carries by naming `/item list current`, the same list
 - 2026-11-13, revised: `/current` leaves out Implementation items and counts them under Other items, as the current command; the current command checked: 24 directives, 19 kept, 2 less precise, 3 lost, 1 repair, not re-checked. Left less precise: the example *Work* for `[work]`, and the summary's heading, as before. Left lost: that `/current` replaced `/current-items`, an engineer's statement of a rename, not a directive of the command now
 - 2026-11-13, revised: current is Open, Active, and Implementation; not re-checked
+- 2026-11-18, revised: every list of items takes a kind column, between the title and the state, and a list of notes takes none, which the engineer asked for; checked: 83 directives, 81 kept, 2 less precise, 0 lost. Left less precise: the features and experiments title being the record's own, and no note counting as current or left out, both in sections this revision did not change
 
 ## History
+
+Until Wed Nov 18 2026 only the items table `/current` printed took a kind column, and other lists of items took none unless it was asked for.
 
 Until Fri Nov 13 2026 `/current` listed Implementation items beside the implementations that work them.
 
@@ -337,3 +345,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 2:56:24 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 3:39:16 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:59:30 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 10:33:31 PM PT

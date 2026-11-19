@@ -291,21 +291,22 @@ Trigger: When the engineer asks for a list of records, as with `/item list`, `/l
 | `2026-10-21T05-44-56Z` | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
 ```
 
-A list of items takes the ordinal and no SHA columns:
+A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |                        | item                        | state  |
-|---|------------------------|-----------------------------|--------|
-| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Active |
-| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Open   |
+| # |                        | item                        | kind   | state  |
+|---|------------------------|-----------------------------|--------|--------|
+| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Design | Active |
+| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Idea   | Open   |
 ```
 
 9. A record that was never amended shows the same SHA in both columns. This is intended, since it shows the record has not been touched since it was written.
 10. Choose the last column to fit the question.
 11. A list of items or implementations takes the state as its last column.
-12. A list of commits asked about for their subject widths takes the width.
-13. Do not add a column nobody asked for.
-14. A list of commits takes no SHA columns.
+12. Every list of items takes a kind column between the title and the state: `/items`, `/items current`, `/item list`, and `/current`. Name the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Name several tags each, separated by commas. A list of notes takes none.
+13. A list of commits asked about for their subject widths takes the width.
+14. Do not add a column nobody asked for.
+15. A list of commits takes no SHA columns.
 
 ## Listing items by state
 
@@ -315,7 +316,7 @@ A list of items takes the ordinal and no SHA columns:
 ## The items command
 
 1. `/items` lists every item, whatever its state, oldest first.
-2. Present each item as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns and no kind column.
+2. Present each item as one row: an ordinal, its handle, its title, its kind, and its state. Give it no SHA columns.
 3. A Suspended item is a hidden record, counted rather than listed, under the a-status-report-prints-a-fixed-whole-project-report rule. Leave it out of the rows. Below the table, print a line giving their count and kind, as `1 suspended item`.
 4. `/items current` lists the Open, Active, and Implementation items, as `/item list current` does.
 
@@ -325,7 +326,7 @@ A list of items takes the ordinal and no SHA columns:
 2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
-5. In the items table `/current` prints, put a kind column between the title and the state. It names the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Several tags are named each, separated by commas. Other lists of items take no kind column unless it is asked for.
+5. The items table `/current` prints takes the kind column every list of items takes.
 6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
 7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Implementation and Suspended items here too.
 8. A number given to `/current` does not change these counts.
