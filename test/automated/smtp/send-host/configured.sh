@@ -37,8 +37,11 @@ printf '%s' "some credential" | system/imap/credential.sh write imap.some-host.i
 
 # The .invalid top-level domain never resolves, so the send names the host it
 # tried and stops.
-cat > "$project/slasher/local/email/work-mail/slasher-email.toml" <<'TOML'
-[smtp]
+cat > "$project/slasher/local/email/slasher-email.toml" <<'TOML'
+[[account]]
+name = "work-mail"
+
+[account.smtp]
 host = "some-configured-host.invalid"
 TOML
 

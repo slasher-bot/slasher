@@ -45,6 +45,12 @@ export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no
 mkdir -p "$project/slasher/local/email/work-mail/INBOX"
 printf '%s' "some placeholder" > "$project/slasher/local/email/work-mail/INBOX/2026-01-01T00-00-00Z-1-some-subject.txt"
 
+mkdir -p "$project/slasher/local/email"
+cat > "$project/slasher/local/email/slasher-email.toml" <<'TOML'
+[[account]]
+name = "work-mail"
+TOML
+
 # Actuation ------------------------------------------------------------------
 
 (cd "$project" && slasher/system/imap/fetch.py work-mail)

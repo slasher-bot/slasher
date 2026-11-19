@@ -50,6 +50,12 @@ control_recipients="someone@example.com
 someone-else@example.com
 some-hidden-recipient@example.com"
 
+mkdir -p "$project/slasher/local/email"
+cat > "$project/slasher/local/email/slasher-email.toml" <<'TOML'
+[[account]]
+name = "work-mail"
+TOML
+
 # Actuation ------------------------------------------------------------------
 
 (cd "$project" && slasher/system/smtp/send.py work-mail some-message.eml) >/dev/null

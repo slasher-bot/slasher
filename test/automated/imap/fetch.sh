@@ -51,6 +51,12 @@ Subject: some subject
 
 some body"
 
+mkdir -p "$project/slasher/local/email"
+cat > "$project/slasher/local/email/slasher-email.toml" <<'TOML'
+[[account]]
+name = "work-mail"
+TOML
+
 # Actuation ------------------------------------------------------------------
 
 (cd "$project" && slasher/system/imap/fetch.py work-mail)

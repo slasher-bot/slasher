@@ -42,12 +42,15 @@ until python3 -c "import socket; socket.create_connection(('127.0.0.1', $port)).
 export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no
 
 home="$directory/home"
-mkdir -p "$home/.local/share/slasher/email/some-project/work-mail"
-cat > "$home/.local/share/slasher/email/some-project/work-mail/slasher-email.toml" <<'TOML'
-[imap]
+mkdir -p "$home/.local/share/slasher/email/some-project"
+cat > "$home/.local/share/slasher/email/some-project/slasher-email.toml" <<'TOML'
+[[account]]
+name = "work-mail"
+
+[account.imap]
 store = "private"
 
-[[imap.folder]]
+[[account.imap.folder]]
 source = "inbox"
 local = "INBOX"
 TOML

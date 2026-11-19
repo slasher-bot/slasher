@@ -9,10 +9,13 @@
 # line, then the body, as a fetched message does. A line of dashes at the
 # start of the body, as a fetched message has, is left out.
 #
+# The account must be one the project lists, as an [[account]] table in its
+# email/slasher-email.toml, read with the imap package's
+# email_configuration.py. An account the project does not list is refused.
+#
 # The login is read from the Keychain item, and the credential with the
-# imap package's credential.sh. The SMTP host is the host the [smtp] table of
-# the account's slasher-email.toml names, read with the imap package's
-# email_configuration.py. Where it names none, the SMTP host is the item's
+# imap package's credential.sh. The SMTP host is the host the account's
+# [account.smtp] table names. Where it names none, the SMTP host is the item's
 # host with a leading imap. replaced by smtp., as imap.example.com gives
 # smtp.example.com, and any other host is used as it is.
 #
@@ -75,8 +78,18 @@ def credential(name):
     ).stdout.rstrip("\n")
 
 
-def smtp_host(name, imap_host):
-    configuration = email_configuration.configuration(name) or {}
+def listed(name):
+    """The account's table in the project's email configuration. Stops where
+    the project lists no account, or does not list this one."""
+    accounts = email_configuration.accounts()
+    if accounts is None:
+        sys.exit(email_configuration.NO_LIST)
+    if name not in accounts:
+        sys.exit(f"The account {name} is not listed in this project's email/{email_configuration.FILE_NAME}.")
+    return accounts[name]
+
+
+def smtp_host(configuration, imap_host):
     configured = configuration.get("smtp", {}).get("host")
     if configured:
         return configured
@@ -117,13 +130,14 @@ def main():
     name, path = sys.argv[1], sys.argv[2]
 
     imap_host, login = account(name)
+    configuration = listed(name)
     parsed = message(path, login)
     to = recipients(parsed)
     if not to:
         sys.exit(f"The message in {path} names no recipient in its To, Cc, or Bcc headers.")
     del parsed["Bcc"]
 
-    host = smtp_host(name, imap_host)
+    host = smtp_host(configuration, imap_host)
     with connection(host) as server:
         server.login(login, credential(name))
         server.send_message(parsed, from_addr=login, to_addrs=to)

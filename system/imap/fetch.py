@@ -3,19 +3,25 @@
 #
 #   slasher/system/imap/fetch.py [<name>|<host>]
 #
-# Fetches the IMAP account whose credential is stored in the Keychain under
-# <name>, or every account whose host is <host>, into the project, under
-# slasher/local/email/<name>/. An account with no name goes under
-# slasher/local/email/<host>/<login>/. With no argument, every IMAP account
-# is fetched. Where that
-# folder holds a slasher-email.toml, the folders its [imap] table lists are
-# fetched, each into its local folder. A slasher-email.toml may instead be in
-# the private store, under ~/.local/share/slasher/email/<project>/<name>/, and
-# one whose [imap] table says store = "private" has the messages written
-# there, out of the repository. One that says store = "project", or has no
-# store line, has them written into the project. Any other store is refused,
-# and that account is not fetched. Where no folder is listed, the inbox goes
-# to INBOX/, and the folder the server marks as sent mail goes to Sent/.
+# Fetches the IMAP accounts the project lists into the project. The project
+# lists them in email/slasher-email.toml in its local directory, or in the
+# private store, under ~/.local/share/slasher/email/<project>/, one
+# [[account]] table to each, named as its credential is in the Keychain, or
+# <host>/<login> for an account with no name. With no argument, every listed
+# account with a stored credential is fetched, and a listed account with none
+# is reported. With <name>, only the listed account of that name is fetched,
+# and with <host>, each listed account on that host. A project with no list
+# fetches nothing, and an account the list does not name is never fetched.
+#
+# An account's messages go under slasher/local/email/<name>/, or
+# slasher/local/email/<host>/<login>/ for one with no name. Where its
+# [account.imap] table lists folders, those folders are fetched, each into
+# its local folder. One whose table says store = "private" has the messages
+# written to the private store, out of the repository. One that says
+# store = "project", or has no store line, has them written into the project.
+# Any other store is refused, and that account is not fetched. Where no folder
+# is listed, the inbox goes to INBOX/, and the folder the server marks as sent
+# mail goes to Sent/.
 #
 # Each message is one text file, its headers then its body, named with the
 # message's date as an ISO-8601-UTC prefix, its UID, and its subject. Its
@@ -79,15 +85,21 @@ def keychain_items():
     return items
 
 
-def accounts(argument=None):
-    """The accounts the argument names: the one with that name, or every
-    account whose host it is. With no argument, every IMAP account, which
-    credential.sh marks with imap as its kind."""
-    items = keychain_items()
+def name(item):
+    """The name an account is listed by: its credential's name, or
+    <host>/<login> where it has none."""
+    return item["label"] or os.path.join(item["host"], item["user"])
+
+
+def accounts(listed, argument=None):
+    """The listed accounts the argument names, with a stored credential: the
+    one with that name, or every one whose host it is. With no argument,
+    every listed account with a stored credential."""
+    stored = [item for item in keychain_items() if item["kind"] == "imap" and name(item) in listed]
     if argument is None:
-        return [item for item in items if item["kind"] == "imap"]
-    named = [item for item in items if item["label"] == argument]
-    return named or [item for item in items if item["host"] == argument]
+        return stored
+    named = [item for item in stored if name(item) == argument]
+    return named or [item for item in stored if item["host"] == argument]
 
 
 def read_credential(account):
@@ -127,12 +139,12 @@ class UnknownStore(Exception):
 
 
 def mailbox(account):
-    """The [imap] table of the account's email configuration, and the folder
-    its messages go to. Where the table says store = "private", the messages
+    """The [account.imap] table of the account in the project's email
+    configuration, and the folder its messages go to. Where the table says store = "private", the messages
     go to the private store. Where it says store = "project", or has no store
     line, or there is no configuration, they go to the project. Any other
     store is refused."""
-    folder = account["label"] or os.path.join(account["host"], account["user"])
+    folder = name(account)
     configuration = email_configuration.configuration(folder) or {}
     imap = configuration.get("imap", {})
     store = imap.get("store", "project")
@@ -285,12 +297,21 @@ def main():
         print("Usage: slasher/system/imap/fetch.py [<name>|<host>]", file=sys.stderr)
         return 2
     argument = sys.argv[1] if len(sys.argv) == 2 else None
-    found = accounts(argument)
+    listed = email_configuration.accounts()
+    if listed is None:
+        print(email_configuration.NO_LIST, file=sys.stderr)
+        return 1
+    found = accounts(listed, argument)
+    if argument is None:
+        stored = {name(account) for account in found}
+        for missing in listed:
+            if missing not in stored:
+                print(f"No credential is stored for the listed account {missing}", file=sys.stderr)
     if not found:
         if argument is None:
-            print("No IMAP account is stored", file=sys.stderr)
+            print("No listed account has a stored credential", file=sys.stderr)
         else:
-            print(f"No account is named {argument}, or has it as its host", file=sys.stderr)
+            print(f"No listed account is named {argument}, or has it as its host", file=sys.stderr)
         return 1
     status = 0
     for account in found:
