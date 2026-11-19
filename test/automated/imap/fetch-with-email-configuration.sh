@@ -41,10 +41,13 @@ until python3 -c "import socket; socket.create_connection(('127.0.0.1', $port)).
 
 export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no
 
-mkdir -p "$project/slasher/local/email/work-mail"
-cat > "$project/slasher/local/email/work-mail/slasher-email.toml" <<'TOML'
-[imap]
-[[imap.folder]]
+mkdir -p "$project/slasher/local/email"
+cat > "$project/slasher/local/email/slasher-email.toml" <<'TOML'
+[[account]]
+name = "work-mail"
+
+[account.imap]
+[[account.imap.folder]]
 source = "Some Label"
 local = "some-label"
 TOML
@@ -58,8 +61,7 @@ TOML
 folders=$(ls "$project/slasher/local/email/work-mail")
 files=$(ls "$project/slasher/local/email/work-mail/some-label" 2>/dev/null || true)
 
-[ "$folders" = "slasher-email.toml
-some-label" ] || fail "Fetches only the folders the email configuration lists" "folders:" "$folders"
+[ "$folders" = "some-label" ] || fail "Fetches only the folders the email configuration lists" "folders:" "$folders"
 [ "$files" = "2026-01-01T00-00-00Z-1-some-subject.txt" ] || fail "Writes the label's message to its local folder" "files:" "$files"
 
 echo "0 failed, 0 aborted"

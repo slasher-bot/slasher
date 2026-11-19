@@ -1,11 +1,15 @@
-# Finds and reads an email account's configuration, slasher-email.toml. The
+# Finds and reads a project's email configuration, slasher-email.toml. The
 # imap package's fetch.py and the smtp package's send.py both read it, so one
-# file configures both the fetch and the send of an account.
+# file configures both the fetch and the send of the project's accounts.
 #
-# The file is in the account's folder in the project's local directory,
-# slasher/local/email/<folder>/ or where the project's registry entry relocates it, or in the private store,
-# ~/.local/share/slasher/email/<project>/<folder>/. The project is looked in
-# first. Its [imap] table configures the fetch, and its [smtp] table the send.
+# The file is email/slasher-email.toml in the project's local directory,
+# slasher/local/email/ or where the project's registry entry relocates it, or
+# in the private store, ~/.local/share/slasher/email/<project>/. The project is
+# looked in first. Each [[account]] table names one account the project uses,
+# by the name its credential has in the Keychain, or <host>/<login> for an
+# account with no name. Its [account.imap] table configures the account's
+# fetch, and its [account.smtp] table its send. An account the file does not
+# list is neither fetched nor sent through.
 
 import os
 import subprocess
@@ -43,12 +47,32 @@ def private_folder(folder):
     )
 
 
-def configuration(folder):
-    """The account's configuration, read as TOML, or None where neither the
+def path():
+    """The project's email configuration file, or None where neither the
     project nor the private store holds one."""
-    for directory in (project_folder(folder), private_folder(folder)):
-        path = os.path.join(directory, FILE_NAME)
-        if os.path.isfile(path):
-            with open(path, "rb") as file:
-                return tomllib.load(file)
+    for directory in (project_folder(""), private_folder("")):
+        candidate = os.path.join(directory, FILE_NAME)
+        if os.path.isfile(candidate):
+            return candidate
     return None
+
+
+def accounts():
+    """The accounts the project lists, as a dictionary of each account's name
+    and its table, in the order listed. None where there is no file."""
+    found = path()
+    if found is None:
+        return None
+    with open(found, "rb") as file:
+        listed = tomllib.load(file).get("account", [])
+    return {table["name"]: table for table in listed if "name" in table}
+
+
+def configuration(name):
+    """The table of the account with that name, or None where the project
+    does not list it."""
+    return (accounts() or {}).get(name)
+
+
+NO_LIST = ("This project lists no email account. List each one as an [[account]] "
+           "table in email/" + FILE_NAME + ", in the project's local directory.")

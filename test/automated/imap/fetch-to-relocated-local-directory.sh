@@ -51,12 +51,15 @@ until python3 -c "import socket; socket.create_connection(('127.0.0.1', $port)).
 
 export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no SLASHER_REGISTRY="$registry"
 
-mkdir -p "$records/email/work-mail"
-cat > "$records/email/work-mail/slasher-email.toml" <<'TOML'
-[imap]
+mkdir -p "$records/email"
+cat > "$records/email/slasher-email.toml" <<'TOML'
+[[account]]
+name = "work-mail"
+
+[account.imap]
 store = "project"
 
-[[imap.folder]]
+[[account.imap.folder]]
 source = "inbox"
 local = "INBOX"
 TOML

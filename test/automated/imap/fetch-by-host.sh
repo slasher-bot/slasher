@@ -42,6 +42,15 @@ until python3 -c "import socket; socket.create_connection(('127.0.0.1', $port)).
 
 export IMAP_KEYCHAIN="$keychain" IMAP_PORT="$port" IMAP_TLS=no
 
+mkdir -p "$project/slasher/local/email"
+cat > "$project/slasher/local/email/slasher-email.toml" <<'TOML'
+[[account]]
+name = "some-mail"
+
+[[account]]
+name = "some-other-mail"
+TOML
+
 # Actuation ------------------------------------------------------------------
 
 (cd "$project" && slasher/system/imap/fetch.py 127.0.0.1)

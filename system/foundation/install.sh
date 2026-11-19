@@ -782,6 +782,52 @@ migrate_record_names() {
   fi
 }
 
+# An email account's configuration was a slasher-email.toml in its own folder, email/<name>/, or
+# email/<host>/<login>/ for an account with no name. A project now lists the accounts it uses in
+# one email/slasher-email.toml, an [[account]] table to each, and an account it does not list is
+# neither fetched nor sent through. So each account's file is folded into the one file, its
+# [imap] and [smtp] tables becoming [account.imap] and [account.smtp], and the account's file is
+# removed. It runs only where the one file is absent. An account the project fetched with no
+# file of its own is not listed, and is not fetched until it is. The private store's account
+# files are not moved, and are reported.
+migrate_email_configuration() {
+  directory="$own/email"
+  target="$directory/slasher-email.toml"
+  if [ -d "$directory" ]; then
+    found=$(cd "$directory" && find . -mindepth 2 -maxdepth 3 -name slasher-email.toml | sed 's|^\./||; s|/slasher-email\.toml$||' | sort)
+  else
+    found=
+  fi
+  if [ -n "$found" ]; then
+    if [ -e "$target" ]; then
+      echo "Both $target and an account's own slasher-email.toml in $directory are present — none is folded in."
+      echo "Move each account's tables into $target as an [[account]] table, and remove its file."
+    else
+      count=0
+      for name in $found; do
+        {
+          printf '[[account]]\nname = "%s"\n\n' "$name"
+          sed -E -e 's/^\[\[(imap|smtp)\./[[account.\1./' \
+              -e 's/^\[(imap|smtp)\]/[account.\1]/' \
+              -e 's/^\[(imap|smtp)\./[account.\1./' \
+              "$directory/$name/slasher-email.toml"
+          printf '\n'
+        } >> "$target"
+        rm "$directory/$name/slasher-email.toml"
+        count=$((count + 1))
+      done
+      echo "Folded the email configuration of $count account(s) into $target, an [[account]] table each."
+      echo "Only the accounts it lists are fetched. Commit the change."
+    fi
+  fi
+
+  private="$HOME/.local/share/slasher/email/$(basename "$PWD")"
+  if [ -d "$private" ] && [ -n "$(cd "$private" && find . -mindepth 2 -maxdepth 3 -name slasher-email.toml)" ]; then
+    echo "$private holds an account's own slasher-email.toml, which is no longer read."
+    echo "Move each account's tables into $private/slasher-email.toml as an [[account]] table."
+  fi
+}
+
 # 0. Print the bootstrap section and stop. Nothing is installed and nothing is placed,
 #    so this is safe to run anywhere, including from the authoring source. It exists so
 #    update-packages.sh can compare a project's AGENTS.md against the current text
@@ -861,6 +907,7 @@ if [ "$migrations" = yes ]; then
   migrate_work_tag
   migrate_work_state
   migrate_record_names
+  migrate_email_configuration
 fi
 
 # 4. An existing AGENTS.md left unchanged because no one was there to answer leaves the rules
