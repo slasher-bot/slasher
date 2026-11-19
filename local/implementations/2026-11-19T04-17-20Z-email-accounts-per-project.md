@@ -12,18 +12,29 @@ Resolves the item `2026-11-19T03-36-28Z-imap-fetch-cannot-say-which-accounts-app
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/email-accounts-per-project`
-- **Base:** the commit on `master` holding this record as first written
+- **Base:** `b487216a`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-email-accounts-per-project`, chosen by the engineer in the request.
 - **Participation:** unattended.
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-19T03-36-28Z-imap-fetch-cannot-say-which-accounts-apply-to-a-project`
+
+## What happened
+
+- A project lists its email accounts in `email/slasher-email.toml`, in its local directory or the private store, an `[[account]]` table to each, with `[account.imap]` and `[account.smtp]` tables.
+- `/email fetch` fetches only listed accounts with a stored credential, reports a listed account with none, and refuses a name or host the list does not hold. A project with no list fetches none.
+- `send.py` sends only through a listed account.
+- `/email list` still lists every stored account.
+- `install.sh migrate` folds each account's own `slasher-email.toml` into the one file, and removes it.
+- The `imap` rule, the two READMEs, and the email help say so. The rule has no compressed text to check.
+- The loop record is `2026-11-19T04-23-18Z-email-accounts-per-project`.
+- The automated suite passes: 121 tests.
 
 ## Confirmations
 
@@ -35,3 +46,4 @@ Resolves the item `2026-11-19T03-36-28Z-imap-fetch-cannot-say-which-accounts-app
 ---
 
 Authored by Scott Bellware on Wed Nov 18 2026 at 8:17:20 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 8:23:18 PM PT

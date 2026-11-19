@@ -1,6 +1,6 @@
 # The imap fetch cannot say which email accounts apply to a project
 
-**State:** Implementation
+**State:** Resolved
 
 **Tags:** [problem]
 
@@ -25,3 +25,4 @@ Authored by Scott Bellware on Wed Nov 18 2026 at 7:36:28 PM PT
 Changed by Scott Bellware on Wed Nov 18 2026 at 7:43:57 PM PT
 Changed by Scott Bellware on Wed Nov 18 2026 at 7:50:50 PM PT
 Changed by Scott Bellware on Wed Nov 18 2026 at 8:17:20 PM PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 8:23:28 PM PT
