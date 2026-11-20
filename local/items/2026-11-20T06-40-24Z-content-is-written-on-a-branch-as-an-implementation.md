@@ -68,6 +68,10 @@ Each answer changes different rules:
 
 - **2026-11-19** — **`/features` and `/experiments` stay as they are, and content gets a list command of its own.** The list command's name is not settled.
 
+**As the engineer stated it:** When it's time for a review, ask the user which type of review
+
+- **2026-11-19** — **No review command is fixed in advance.** When it is time for a review, the agent asks the writer which type of review, through the selection interface: `/prose critique`, `/prose suggest`, or `/prose edit`. Whether the merge waits until the writer has settled the review's suggestions is not settled.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
@@ -77,3 +81,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 10:50:41 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:21 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:37 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:49:31 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:55:07 PM PT
