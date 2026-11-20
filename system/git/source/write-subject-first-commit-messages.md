@@ -2,28 +2,29 @@
 
 **Trigger:** When writing a commit message
 
-The subject of a commit message is **the software** — never the engineer. A commit log is a record of the changes made to the software and their effects, not an account of what the engineer did. So the first line leads with *the thing that changed and its new state*, stated as a fact in passive voice and indicative mood.
+The subject of a commit message is **the thing that changed** — the software, or a piece of content such as an article — never the engineer. A commit log is a record of the changes made to the project and their effects, not an account of what the engineer did. So the first line leads with *the thing that changed and its new state*, stated as a fact in passive voice and indicative mood.
 
-Engineers gravitate toward recounting their exploits — "Fixed the parser", "Added the tests", "Refactored the module". A leading verb, whether an imperative ("Fix…") or a past-tense report ("Fixed…"), puts the engineer's work first. The subject must put the software first.
+Engineers gravitate toward recounting their exploits — "Fixed the parser", "Added the tests", "Refactored the module". A leading verb, whether an imperative ("Fix…") or a past-tense report ("Fixed…"), puts the engineer's work first. The subject must put the thing that changed first.
 
 - **State the change, don't narrate the work.** "Widget reconciliation is corrected" — not "Fix widget reconciliation" and not "Fixed widget reconciliation".
 - **"is corrected"** for a defect. **"is clarified"** for a refactor or readability change.
 - **Omit the verb for something new.** "Widget tests", not "Widget tests are added".
 - **Rename form:** "Widget, rather than sprocket".
+- **Content takes the same forms.** "Pricing column" for a new piece, "Pricing column draft is complete", and "Pricing column opening is clarified". Content takes no separate form and no prefix.
 - **Package version form:** "Package version is increased from 1.1.1 to 1.2.0" — the message states the current version and the next one, so the log line carries the transition without a reader reaching for the package specification. "Increased" holds even when a trailing segment resets, as it does here: what is increased is the version, not each segment.
 
 **The subject's length is the a-commit-messages-subject-stops-at-50-characters-and-its-body-wraps-at-72 rule's**, which caps it at 50 characters and wraps the body at 72.
 
-**The two rules pull against each other, and that is the point.** Naming the software and then its new state costs words a leading verb would not. Where the subject will not fit, the answer is to split the commit rather than to drop the subject and lead with a verb.
+**The two rules pull against each other, and that is the point.** Naming the thing that changed and then its new state costs words a leading verb would not. Where the subject will not fit, the answer is to split the commit rather than to drop the subject and lead with a verb.
 
-**Why:** the log records the history of the software. It is scanned rather than read. Leading with the changed thing rather than the engineer's action is truer to what the log is for, and easier to review. It is the Eventide house style, and it composes with the commit-wording rule — "Task 9 is done" already states the fact, software-first.
+**Why:** the log records the history of the project: its software, and its content where it has any. It is scanned rather than read. Leading with the changed thing rather than the engineer's action is truer to what the log is for, and easier to review. It is the Eventide house style, and it composes with the commit-wording rule — "Task 9 is done" already states the fact, thing-first.
 
-**How to apply:** name the software that changed, then state its new state in passive, indicative voice, subject leading. Never lead with a verb, because a verb puts the engineer's work ahead of the software. That is imperative and past tense alike.
+**How to apply:** name the software or the content that changed, then state its new state in passive, indicative voice, subject leading. Never lead with a verb, because a verb puts the engineer's work ahead of the thing that changed. That is imperative and past tense alike.
 
 ## Compressed
 
-1. The subject of a commit message is **the software**, never the engineer.
-2. The log records changes to the software and their effects. It is not an account of what the engineer did.
+1. The subject of a commit message is **the thing that changed**: the software, or a piece of content such as an article. It is never the engineer.
+2. The log records changes to the project and their effects. It is not an account of what the engineer did.
 3. The first line leads with the thing that changed and its new state.
 4. State it as a fact, in passive voice and indicative mood.
 5. **State the change, don't narrate the work.** "Widget reconciliation is corrected" — not "Fix widget reconciliation" and not "Fixed widget reconciliation".
@@ -35,18 +36,22 @@ Engineers gravitate toward recounting their exploits — "Fixed the parser", "Ad
 11. State both the current version and the next one.
 12. "Increased" holds even when a trailing segment resets.
 13. **Never lead with a verb.** That covers the imperative ("Fix…") and the past tense ("Fixed…") alike.
-14. Name the software that changed, then its new state.
+14. Name the software or the content that changed, then its new state.
 15. **The subject's length is the a-commit-messages-subject-stops-at-50-characters-and-its-body-wraps-at-72 rule's.** That rule caps the subject at 50 characters and wraps the body at 72.
 16. **Split the commit when the subject will not fit.**
-17. Do not drop the software subject and lead with a verb instead.
+17. Do not drop the subject and lead with a verb instead.
+18. **Content takes the same forms**, with no separate form and no prefix: "Pricing column", "Pricing column draft is complete", "Pricing column opening is clarified".
 
 ## Compression
 
 - 2026-10-22, compressed: compression 0.39, change 0.56, solubility 58 → 81, clarity 0.45 → 0.72, 15 directives, 15 kept, 0 less precise, 0 lost
 - 2026-10-24, revised: written as a numbered list; checked twice, every directive kept
 - 2026-10-28, revised: Why points removed, solubility 81 → 79, clarity 0.72 → 0.75; checked: 13 directives, 13 kept, 0 less precise, 0 lost
+- 2026-11-20, revised: the subject is the thing that changed, the software or content, which the engineer accepted; checked: 17 directives, 17 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Fri Nov 20 2026 the subject of a commit message was the software. The content items work item settled that it is the thing that changed, so content takes the same forms as code.
 
 This rule carried a *no 50-character limit* policy until 2026-08-18, licensing a first line as long as it needed. That policy is discontinued and the cap replaced it the same day.
 
@@ -82,3 +87,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:58 PM PT
 Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:09 PM PT
 Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:14 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:16 PM PT

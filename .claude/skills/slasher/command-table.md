@@ -11,6 +11,8 @@
 | `/features` | Lists the current features. |
 | `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of progressions. |
 | `/experiments` | Lists the current experiments. |
+| `/content` | Content is a piece of writing, built on its own branch or worktree to a declared end. It is a kind of progression, without the steps that serve only code. |
+| `/contents` | Lists the current content. |
 | `/progression, /implementation` | A progression is a bounded piece of work on its own branch or worktree, to a declared end. These commands create one with no kind, and list the current progressions of every kind: features, experiments, and those with no kind. |
 | `/progressions, /implementations` | Lists the current progressions of every kind. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |

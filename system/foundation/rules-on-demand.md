@@ -20,7 +20,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/progressions, /implementations` below `/progression, /implementation`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/pros-and-cons, /??`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc, /:`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/contents` below `/content`, `/progressions, /implementations` below `/progression, /implementation`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/pros-and-cons, /??`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc, /:`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -273,7 +273,7 @@ Trigger: When starting a phase of an experiment or a feature, or when the engine
 
 Source: system/foundation/source/a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows.md
 
-Trigger: When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, `/experiments`, or `/notes`
+Trigger: When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, `/experiments`, `/contents`, or `/notes`
 
 1. When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence. A table presents the fields in headed columns. Rows present one record to a line, with its fields in sequence and no columns. A list is called a table only where it is formatted as columns.
 2. This applies to any record type. That includes items, progression records, log entries, loop records, work session records, migration records, journal entries, and commits.
@@ -281,7 +281,7 @@ Trigger: When the engineer asks for a list of records, as with `/item list`, `/l
 4. The handle is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit.
 5. Every column after the handle has a heading.
 6. Two SHA columns come right after the handle: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the handle, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed.
-7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features` and `/experiments` print. They are not chosen per request.
+7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features`, `/experiments`, and `/contents` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
 ```
@@ -342,6 +342,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
 8. A number given to the command does not change these counts.
 9. `/progressions`, and its alias `/implementations`, lists the current progressions of every kind, as `/features` lists the features, and takes the number *n* and `current` as `/features` takes them. Where none is current, print *No current progression.* Its counts sit under the heading *Other progressions*.
+10. `/contents`, and `/content list`, lists the current content, as `/features` lists the features, and takes the number *n* and `current` as `/features` takes them. Where none is current, print *No current content.* Its counts sit under the heading *Other content*.
 
 ## The notes command
 
@@ -366,18 +367,18 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 Source: system/foundation/source/a-progression-runs-on-a-branch-to-a-declared-end.md
 
-Trigger: When creating, starting, adding a worktree to, suspending, or concluding an experiment or feature progression
+Trigger: When creating, starting, adding a worktree to, suspending, or concluding an experiment, feature, or content progression
 
-1. A progression runs on its own branch, designed through the five hinges by DBE, to a declared state.
+1. A progression runs on its own branch, designed through the five hinges by DBE, to a declared state. Content leaves out the five hinges, the participation question, the forecast, and the verdict, as the content-is-a-progression-without-the-steps-that-serve-only-code rule says.
 2. It is never left silently open.
-3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
+3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else, except `[content]`.
 4. Either kind opens with a question or an intent. A forecast is stated when the progression is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule).
 5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
 
 1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
-2. Name it `experiment/<subject>`, `feature/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
+2. Name it `experiment/<subject>`, `feature/<subject>`, `content/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
 5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
@@ -961,6 +962,52 @@ Trigger: When the engineer starts, ends, suspends, or resumes brainstorming (`/b
 11. `/brainstorm <text>` starts a brainstorm, records the text word for word as its one point, and ends it, in one reply. The end is the one `/brainstorm end` makes.
 12. `/brainstorm <kind> <text>` does the same into a new item of that kind. A first word that is a kind or a subcommand keeps that meaning, and the text is the words after the kind. `start`, `end`, `suspend`, `resume`, and `help` take no text.
 
+# Content is a progression without the steps that serve only code
+
+Source: system/foundation/source/content-is-a-progression-without-the-steps-that-serve-only-code.md
+
+Trigger: When the engineer types `/content` or `/contents`, or creates, starts, changes the state of, or concludes a content progression
+
+**Trigger:** When the engineer types `/content` or `/contents`, or creates, starts, changes the state of, or concludes a content progression
+
+**As the engineer stated it:** What kind of features does Slasher need to write content? For example, writing an article for a publication should happen on a branch, but an article isn't a feature or experiment. And not all writing is an article.
+
+**As the engineer later stated it:** The kind is content. The command is "/content"
+
+**Content is a progression whose product is writing**, such as an article, an essay, a lesson, or a page. One kind holds all writing. Its record is titled `Content — <name>` and tagged `[content]`. Its branch is `content/<subject>`, or `content/worktree/<subject>` where it has a worktree. The the-progressions-directory-holds-one-record-per-progression rule and the a-progression-runs-on-a-branch-to-a-declared-end rule govern it, except where this rule says otherwise.
+
+**Content keeps what every progression has.** It has a branch, a record with a state line, a declared end, and the working-location selection. It takes the same state words, the same log entries, and the same confirmations of a worktree and a branch deletion. Where it is created for an item, the item takes Progression, as for a feature.
+
+**Content leaves out the steps that serve only code, because it is content.** It goes through none of the five hinges, and it has no loop record. It is not asked whether the engineer is in the loop. It is not asked for a forecast, and it is not asked the verdict question. This holds whatever the progression produces. Code written in a content progression, such as a script that builds a site, goes through none of these steps either.
+
+**As the engineer stated it:** They're left out, answering *whether the steps that serve only code are left out because the work is content, or because it produces prose instead of code*. Asked on what basis, the engineer selected *Because it is content*.
+
+**Content has no standard phases.** The writer decides the phases of a piece, if any, and adds each one with `/phase new`.
+
+## The command
+
+**`/content` takes these subcommands:** `new`, `start`, `complete`, `defer`, `suspend`, `discontinue`, `obsolete`, `supersede`, `abandon`, `resume`, `status`, `list`, and `help`. Each does for content what the `/feature` subcommand of the same name does for a feature. `/content status` reports as the progression-status-reports-its-phases-its-state-what-exists-and-what-is-left rule says.
+
+**`/content` has no `new with phases`, and no `affirm`, `refute`, or `inconclusive`.** Content states no forecast and reaches no verdict. `/content complete` concludes it Completed.
+
+**As the engineer stated it:** Do not add these to the "/content" command: new with phases; affirm, refute, inconclusive. Include: defer, suspend, discontinue, obsolete, supersede, abandon
+
+**`/contents` and `/content list` list the current content**, as `/features` lists the current features, under the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule.
+
+## The review before the merge
+
+**Where the `prose` package is active, `/content complete` offers a review before the merge.** Ask, through the selection interface, whether to review the content, with the options *Review* and *No review*. Where the writer selects *Review*, ask which kind of review, with the options `/prose critique`, `/prose suggest`, and `/prose line-edit`. Then run the review the writer selected, on the content the progression produced.
+
+**Ordinarily, the merge waits until the writer has accepted or rejected each of the review's suggestions.** The writer can leave the review before every suggestion is settled, and the merge then does not wait on it. A critique makes no suggestion, so the merge waits for nothing after it. Where the writer selects *No review*, conclude the content without one.
+
+**Where the `prose` package is not active, `/content complete` offers no review**, and concludes the content as any progression without a forecast concludes.
+
+**As the engineer stated it:** When it's time for a review, ask the user which type of review. And: Yes ordinarily, but the user can still escape the review. And: Offered by /content complete
+
+**Why:** writing belongs on a branch, with a record and a declared end, as code does. The steps that design code from its use site have nothing to act on in a piece of writing, and a forecast and a verdict do not apply to it. A review takes the place of the tests that a merge of code waits for.
+
+**How to apply:** on `/content`, read the subcommand, and act as `/feature` does for the same subcommand, with the content kind's title, tag, and branch name. Ask only the working location when the content is created. On `/content complete`, offer the review where `prose` is active, and wait for its suggestions to be settled before the merge, unless the writer leaves the review.
+
 # Dated artifacts are prefixed with an ISO 8601 UTC datetime, and system rules are not
 
 Source: system/foundation/source/dated-artifacts-are-prefixed-with-an-iso-8601-utc-datetime-and-system-rules-are-not.md
@@ -1169,11 +1216,11 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 
 Source: system/foundation/source/progression-status-reports-its-phases-its-state-what-exists-and-what-is-left.md
 
-Trigger: When the engineer types `/feature status` or `/experiment status`, or asks for the status of a feature or an experiment
+Trigger: When the engineer types `/feature status`, `/experiment status`, or `/content status`, or asks for the status of a feature, an experiment, or content
 
-**Trigger:** When the engineer types `/feature status` or `/experiment status`, or asks for the status of a feature or an experiment
+**Trigger:** When the engineer types `/feature status`, `/experiment status`, or `/content status`, or asks for the status of a feature, an experiment, or content
 
-**`/feature status` and `/experiment status` report the status of one progression.** A bare `/feature status` reports on the feature the conversation is on. Where that is not clear, it reports on the one feature whose `**State:**` line reads Active. Where no feature is Active, or more than one is, ask which feature is meant, through the selection interface, each Active feature an option where there are any. `/experiment status` does the same for an experiment.
+**`/feature status` and `/experiment status` report the status of one progression.** A bare `/feature status` reports on the feature the conversation is on. Where that is not clear, it reports on the one feature whose `**State:**` line reads Active. Where no feature is Active, or more than one is, ask which feature is meant, through the selection interface, each Active feature an option where there are any. `/experiment status` does the same for an experiment, and `/content status` for content.
 
 **As the engineer stated it:** Add the "status" subcommand to implementations
 
@@ -1202,7 +1249,7 @@ Trigger: When the engineer types `/feature status` or `/experiment status`, or a
 
 **Why:** `/item status` reports where an item stands. A feature or an experiment is asked about the same way, and its phases are part of where it stands.
 
-**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, what is left, and whether it is ready to conclude.
+**How to apply:** on `/feature status`, `/experiment status`, or `/content status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, what is left, and whether it is ready to conclude.
 
 # Projects lists the registry, and carries out an instruction in another project
 
@@ -1321,15 +1368,15 @@ Trigger: When the engineer types `/status`, or asks for the status of the work u
 
 **Trigger:** When the engineer types `/status`, or asks for the status of the work under way
 
-**`/status` reports the status of one item, feature, or experiment.** It finds the record, then reports on it as the command of its kind does: an item as `/item status` does, a feature as `/feature status` does, and an experiment as `/experiment status` does. It is in the PROCESS command domain, so `/status help` says that the command takes no `help`, and names `/process help`.
+**`/status` reports the status of one item, feature, experiment, or content progression.** It finds the record, then reports on it as the command of its kind does: an item as `/item status` does, a feature as `/feature status` does, an experiment as `/experiment status` does, and content as `/content status` does. It is in the PROCESS command domain, so `/status help` says that the command takes no `help`, and names `/process help`.
 
 **As the engineer stated it:** Add a root "/status" command
 
-**A bare `/status` reports on the work under way.** That is the feature or experiment the conversation is on. Where the conversation is on none, it is the one progression whose `**State:**` line reads Active, and where none is Active, the one Active item. Where more than one record is a candidate at the step that decides, ask which, through the selection interface, each candidate an option. Where no record is a candidate, say that no work is under way, and report nothing.
+**A bare `/status` reports on the work under way.** That is the feature, experiment, or content the conversation is on. Where the conversation is on none, it is the one progression whose `**State:**` line reads Active, and where none is Active, the one Active item. Where more than one record is a candidate at the step that decides, ask which, through the selection interface, each candidate an option. Where no record is a candidate, say that no work is under way, and report nothing.
 
 **`/status <record>` reports on the record the identifier names.** An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of items, features, or experiments printed in the session, as `/status 3`
+- **a number**, the ordinal of a row in the last list of items, features, experiments, or content printed in the session, as `/status 3`
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the progressions, as `/status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item or progression, as `/status cart payment`
 
@@ -1683,15 +1730,15 @@ Trigger: When the engineer types `/print`, or asks for the last record or text w
 
 Source: system/foundation/source/the-progressions-directory-holds-one-record-per-progression.md
 
-Trigger: When creating or starting an experiment or feature, or writing or changing a progression record
+Trigger: When creating or starting an experiment, a feature, or content, or writing or changing a progression record
 
 1. `slasher/local/progressions/` holds progression records, one file per progression.
 2. A record carries how the progression started, where it is being worked, and what became of it.
 3. A progression is a bounded unit of work with a lifecycle.
 4. The record is a persisted, dated artifact, kept after the progression concludes.
-5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. A progression created directly, with no kind, is tagged `[progression]`, or `[implementation]` where `/implementation` created it. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
-6. The tags name what the work is. No rule reads them to decide how the work runs.
-7. Either kind opens with a question or an intent, whichever the work has.
+5. An experiment is tagged `[experiment]`, a feature `[feature]`, and a piece of writing, called content, `[content]`. A progression created directly, with no kind, is tagged `[progression]`, or `[implementation]` where `/implementation` created it. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
+6. The tags name what the work is. No rule reads them to decide how the work runs, except `[content]`. Content leaves out the steps that serve only code, as the content-is-a-progression-without-the-steps-that-serve-only-code rule says.
+7. Any kind opens with a question or an intent, whichever the work has.
 8. Whether the work states a forecast is asked when the progression is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
 9. Whether the work reaches a verdict is asked at the end, of work with a forecast only, and recorded as a confirmation. The lifecycle reads both. Neither follows from the kind, or from whether the work opens with a question or an intent.
 
@@ -1700,7 +1747,7 @@ Trigger: When creating or starting an experiment or feature, or writing or chang
 1. Open with the **Question** or the **Intent**.
 2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
-4. The setup also includes a `**Tags:**` line carrying `[experiment]`, `[feature]`, `[progression]`, or `[implementation]`.
+4. The setup also includes a `**Tags:**` line carrying `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
 6. As the work proceeds, it records what actually happened against the forecast.
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
@@ -1763,7 +1810,7 @@ Trigger: When creating or starting an experiment or feature, or writing or chang
 ## Format
 
 1. Use the same frontmatter-free markdown as rules: a title, then prose and tables.
-2. The title is `# Experiment — <name>`, `# Feature — <name>`, `# Progression — <name>`, or `# Implementation — <name>`.
+2. The title is `# Experiment — <name>`, `# Feature — <name>`, `# Content — <name>`, `# Progression — <name>`, or `# Implementation — <name>`.
 3. The kind reads in the title and is stated as data in the `**Tags:**` line.
 4. A record whose title and tag name different kinds is defective.
 5. The filename takes the ISO-8601-UTC prefix (see the file-names rule).

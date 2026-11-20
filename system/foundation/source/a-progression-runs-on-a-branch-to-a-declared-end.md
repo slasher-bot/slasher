@@ -1,14 +1,14 @@
 # A progression runs on a branch to a declared end
 
-**Trigger:** When creating, starting, adding a worktree to, suspending, or concluding an experiment or feature progression
+**Trigger:** When creating, starting, adding a worktree to, suspending, or concluding an experiment, feature, or content progression
 
 - **Solubility:** 21
 - **Original rank:** 6 of 106
 - **Unclarity:** 0.58
 
-A progression is bounded work with a lifecycle. It runs on a branch created for it, it is designed through the five hinges, and it reaches one of a fixed set of declared states. It is never left silently open.
+A progression is bounded work with a lifecycle. It runs on a branch created for it, it is designed through the five hinges, and it reaches one of a fixed set of declared states. Content is the exception: it leaves out the five hinges, the participation question, the forecast, and the verdict, as the content-is-a-progression-without-the-steps-that-serve-only-code rule says. It is never left silently open.
 
-**Whether the work states a forecast decides the parts that differ while it runs, and whether it reaches a verdict is asked at its end. The tag decides neither.** Either kind opens with a question or an intent. A forecast is stated when the progression is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule). Every clause below that names work with a forecast, or work with or without a verdict, names it because of those two. No clause varies by kind. The tag names the branch and the record, and nothing else.
+**Whether the work states a forecast decides the parts that differ while it runs, and whether it reaches a verdict is asked at its end. The tag decides neither.** Either kind opens with a question or an intent. A forecast is stated when the progression is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule). Every clause below that names work with a forecast, or work with or without a verdict, names it because of those two. No clause varies by kind, except for content. The tag names the branch and the record, and nothing else, except `[content]`.
 
 **As the engineer stated it:** change features and experiments so that both can have either an intent or a question.
 
@@ -20,7 +20,7 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 **As the engineer stated it:** When an implementation starts, an initial implementation record should be recorded on master. Then the branch is made, and the branch's version takes updates added during the course of the implementation, but the initial record remains on master
 
-- **Name it `experiment/<subject>`, `feature/<subject>`, `progression/<subject>`, or `implementation/<subject>`**, matching the tag. `<subject>` is a short dash-separated, lower-case name of what is under test or what is being built, named literally. Add a `-run-<n>` suffix only where the work actually has multiple runs.
+- **Name it `experiment/<subject>`, `feature/<subject>`, `content/<subject>`, `progression/<subject>`, or `implementation/<subject>`**, matching the tag. `<subject>` is a short dash-separated, lower-case name of what is under test or what is being built, named literally. Add a `-run-<n>` suffix only where the work actually has multiple runs.
 - **Where the work has a worktree, the name carries `worktree/`** — `feature/worktree/<subject>` and `experiment/worktree/<subject>`. A branch checked out in a worktree cannot be checked out again in the main working tree, and nothing in `git branch` says which those are. The segment says it in the one listing where the question comes up.
 - **Adding a worktree to work already under way renames the branch**, and that act is already a confirmed one the record carries. A name that says where the work is has to keep saying it, or it is worse than a name that never claimed to.
 - **The upstream branch is not encoded in the name.** A branch can outlive a change of upstream target, so the record names it.
@@ -136,16 +136,16 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## Compressed
 
-1. A progression runs on its own branch, designed through the five hinges by DBE, to a declared state.
+1. A progression runs on its own branch, designed through the five hinges by DBE, to a declared state. Content leaves out the five hinges, the participation question, the forecast, and the verdict, as the content-is-a-progression-without-the-steps-that-serve-only-code rule says.
 2. It is never left silently open.
-3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
+3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else, except `[content]`.
 4. Either kind opens with a question or an intent. A forecast is stated when the progression is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule).
 5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
 
 1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
-2. Name it `experiment/<subject>`, `feature/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
+2. Name it `experiment/<subject>`, `feature/<subject>`, `content/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
 5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
@@ -316,8 +316,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 - 2026-11-20, revised: a progression created directly takes a branch named `progression/<subject>` or `implementation/<subject>`; checked: 163 directives, 161 kept, 1 less precise, 1 lost, 1 repair, the verdict question going through the selection interface; the lost one is the trigger, which the loader prints beside the compressed text; re-checked: 163 directives, 163 kept, 0 less precise, 0 lost
+- 2026-11-20, revised: content leaves out the five hinges, the participation question, the forecast, and the verdict, and its branch is `content/<subject>`; checked: 155 directives, 153 kept, 2 less precise, 0 lost. Left less precise, neither touched by this revision: that a forecast is what is expected to happen, and that work without a verdict is verified before it integrates, which the compressed text gives as a reason rather than a directive
 
 ## History
+
+Until Fri Nov 20 2026 every progression was designed through the five hinges, no clause varied by kind, and no branch was named `content/<subject>`.
 
 Until Fri Nov 20 2026 a progression's branch was named `experiment/<subject>` or `feature/<subject>` only.
 
@@ -430,3 +433,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:11 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PM PT

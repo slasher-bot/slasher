@@ -12,13 +12,14 @@ Realizes the work item `2026-11-20T06-40-24Z-content-items`.
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Progression branch:** `feature/worktree/content-command`
+- **Base:** `f80f4ed7`, from `master`
 - **Working location:** a branch and a worktree, at `../slasher-feature-worktree-content-command`. The main working tree stays on `master`.
 - **Participation:** unattended, stated by the engineer in the request. The question was not asked.
 - **Forecast:** none. The verdict question is not asked.
@@ -41,6 +42,18 @@ Realizes the work item `2026-11-20T06-40-24Z-content-items`.
 13. Compile the source, and run the suite.
 14. Commit the change on the branch.
 
+## What happened
+
+- A new `foundation` rule, content-is-a-progression-without-the-steps-that-serve-only-code, says what content is: titled `Content — <name>`, tagged `[content]`, on a `content/<subject>` branch. It leaves out the five hinges, the loop record, the participation question, the forecast, and the verdict.
+- Where the `prose` package is active, `/content complete` offers a review: critique, suggestions, or a line edit. The merge waits for each suggestion to be settled, unless the writer leaves the review. Where `prose` is not active, no review is offered, so `foundation` declares no dependency on `prose`.
+- The `/content` and `/contents` skills, the `/content` help, and its two command table rows are written. CONTENT follows EXPERIMENTS in the help order.
+- The root state commands, `/start`, `/complete`, `/defer`, `/suspend`, `/discontinue`, `/obsolete`, `/supersede`, `/abandon`, and `/resume`, act on content too.
+- `/status` and `/content status` report on content.
+- The progression rules, the list rule, the command-table rule, the two status rules, and the `foundation` README name the content kind.
+- The commit-message rule's subject is the thing that changed, the software or content.
+- The compressed texts of the four changed rules that carry one are checked. Two repairs were made: the list rule names the content rule in its Related list, and the progressions rule says *any kind*, not *either kind*. Two directives of the progression-runs rule are left less precise, neither touched by this feature.
+- The automated suite passes: 137 tests.
+
 ## Confirmations
 
 - **2026-11-20** — Participation: Unattended, stated by the engineer in the request.
@@ -51,3 +64,5 @@ Realizes the work item `2026-11-20T06-40-24Z-content-items`.
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 12:17:39 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:26:56 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:28:47 PM PT

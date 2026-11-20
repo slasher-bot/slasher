@@ -1,8 +1,8 @@
 # Progression status reports its phases, its state, what exists, and what is left
 
-**Trigger:** When the engineer types `/feature status` or `/experiment status`, or asks for the status of a feature or an experiment
+**Trigger:** When the engineer types `/feature status`, `/experiment status`, or `/content status`, or asks for the status of a feature, an experiment, or content
 
-**`/feature status` and `/experiment status` report the status of one progression.** A bare `/feature status` reports on the feature the conversation is on. Where that is not clear, it reports on the one feature whose `**State:**` line reads Active. Where no feature is Active, or more than one is, ask which feature is meant, through the selection interface, each Active feature an option where there are any. `/experiment status` does the same for an experiment.
+**`/feature status` and `/experiment status` report the status of one progression.** A bare `/feature status` reports on the feature the conversation is on. Where that is not clear, it reports on the one feature whose `**State:**` line reads Active. Where no feature is Active, or more than one is, ask which feature is meant, through the selection interface, each Active feature an option where there are any. `/experiment status` does the same for an experiment, and `/content status` for content.
 
 **As the engineer stated it:** Add the "status" subcommand to implementations
 
@@ -31,10 +31,12 @@
 
 **Why:** `/item status` reports where an item stands. A feature or an experiment is asked about the same way, and its phases are part of where it stands.
 
-**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, what is left, and whether it is ready to conclude.
+**How to apply:** on `/feature status`, `/experiment status`, or `/content status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, what is left, and whether it is ready to conclude.
 
 
 ## History
+
+Until Fri Nov 20 2026 there was no `/content status`, since there was no content kind.
 
 Until Fri Nov 20 2026 the progression status report ended with what is left, and did not say whether the progression was ready to conclude.
 
@@ -52,3 +54,4 @@ Related:
 Authored by Scott Bellware on Mon Nov 16 2026 at 2:23:56 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PM PT
