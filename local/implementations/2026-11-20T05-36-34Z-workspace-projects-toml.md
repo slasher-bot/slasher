@@ -48,7 +48,8 @@ Realizes the idea `2026-11-20T04-39-16Z-a-workspace-project-has-its-own-projects
 - Where there is no registry but there is a workspace list, the workspace list is listed.
 - `resolve-project.sh <name>` finds a project only the workspace list names, since it reads `list-projects.sh`.
 - Outside a workspace, nothing changes.
-- The projects rule, its compressed text, the projects skill, and its help name the workspace list. The compressed text is not checked again, as with the rule's earlier revisions.
+- The projects rule, its compressed text, the projects skill, and its help name the workspace list.
+- The compressed text was checked against the body on 2026-11-19, as the engineer asked. Of 59 directives, 45 were kept, 5 were less precise, and 9 were lost: 5 from this feature's revision, and 9 from earlier revisions that were not checked. Each was repaired, and a second check in full kept all 59.
 - Six tests: `test/automated/list-projects/workspace.sh`, `workspace-without-machine-registry.sh`, `workspace-entry-with-another-setting.sh`, `workspace-entry-with-an-absolute-path.sh`, `workspace-entry-with-a-path-under-the-home-directory.sh`, and `test/automated/resolve-project/name-in-the-workspace-list.sh`.
 - The loop record is `2026-11-20T05-41-23Z-workspace-projects-toml`.
 - The automated suite passes: 130 tests.
@@ -64,3 +65,4 @@ Realizes the idea `2026-11-20T04-39-16Z-a-workspace-project-has-its-own-projects
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 9:36:34 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 9:41:23 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:05:09 PM PT

@@ -52,8 +52,10 @@
 ## Outcome
 
 - The automated suite passes: 130 tests.
-- The projects rule, its compressed text, the projects skill, and its help name the workspace list. The compressed text is not checked again, as with the rule's earlier revisions.
+- The projects rule, its compressed text, the projects skill, and its help name the workspace list.
+- The compressed text was checked against the body, repaired, and checked again in full. All 59 directives are kept.
 
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 9:41:23 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:05:09 PM PT
