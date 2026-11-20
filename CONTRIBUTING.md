@@ -24,7 +24,7 @@ Author in the composite repo. You never edit a component repository directly. A 
 
 **Before publishing, compile the source.** Run `./compile.sh` from the repository root. A split carries committed history, so where the compile changes a package's `rules-pre-loaded.md`, run the suite and commit it on `master` before splitting. A change there means a rules file was stale. See the local the-source-is-compiled-before-a-package-is-published rule.
 
-**Before publishing, check for direct commits.** Run `./report-direct-commits.sh` from the repository root. It reads each component repo's `master` and reports any commit whose message this repository's history does not contain. That is a commit made directly to the component repo rather than produced by a split.
+**Before publishing, check for direct commits.** Run `./report-direct-package-commits.sh` from the repository root. It reads each component repo's `master` and reports any commit whose message this repository's history does not contain. That is a commit made directly to the component repo rather than produced by a split.
 
 It fetches and pushes nothing, and exits non-zero when it finds something. Two such commits went unnoticed for days before the check existed, found only when a publish was attempted. Nothing else announces them.
 
@@ -59,11 +59,11 @@ git push git@github.com:slasher-bot/<package>.git publish-tmp:master
 git branch -D publish-tmp
 ```
 
-`report-direct-commits.sh` handles the repository before its first publish on its own. It reports `no master … — skipped` and carries on, so it needs no change when a package is added. `slasher-install` does: its package sets are written into the script, where the direct-commit check discovers packages by finding READMEs.
+`report-direct-package-commits.sh` handles the repository before its first publish on its own. It reports `no master … — skipped` and carries on, so it needs no change when a package is added. `slasher-install` does: its package sets are written into the script, where the direct-commit check discovers packages by finding READMEs.
 
 **If a push is rejected, stop — do not force yet.** A rejection means the component repo diverged, which the downstream-only rule forbids but does not prevent. Do not discard what is there. The remedy, in order:
 
-1. **Find what diverged** — `./report-direct-commits.sh`, or read the component's head directly.
+1. **Find what diverged** — `./report-direct-package-commits.sh`, or read the component's head directly.
 2. **Adopt the change into the composite**, where it belongs, and reconcile it with any rule it conflicts with. This is a real authoring step, not a mechanical copy: the direct commit was written without the composite in view, so it may contradict something.
 3. **Re-split, and confirm the content matches** what the component repo holds before pushing anything.
 4. **Then force-push.** A commit made directly to a component repo can never become an ancestor of a split, so no amount of adopting makes the publish fast-forward. Forcing is correct once the content is safely in the composite, and only then. Step 2 put the content here, so replacing the commit object does not lose it.

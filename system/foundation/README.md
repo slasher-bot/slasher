@@ -102,7 +102,7 @@ foundation  →  (nothing — the base every other package builds on)
 - **`git subtree` can only place files inside a package directory.** So a tool a Slasher project runs has to live in some package. There is nowhere else for it to be delivered.
 - **It has to be a package that is always there.** Foundation is the only one — every other package includes it, so a project running Slasher at all has foundation.
 
-So `install.sh`, `update-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `list-projects.sh`, and `read-project-setting.sh` are here. The **authoring** tools are not. `install-all.sh` and `report-direct-commits.sh` sit unpackaged at the root of the composite repository. Only the composite publishes, and a Slasher project never runs them.
+So `install.sh`, `update-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `list-projects.sh`, and `read-project-setting.sh` are here. The **authoring** tools are not. `install-all.sh` and `report-direct-package-commits.sh` sit unpackaged at the root of the composite repository. Only the composite publishes, and a Slasher project never runs them.
 
 **`list-projects.sh` is packaged because it is not an authoring tool**, though it sat with them until 2026-08-07. It reports the Slasher projects **on this machine**, reading a per-machine registry at `~/.config/slasher/projects.toml`, in which each project is a `[[project]]` entry naming its root. So it is **machine-scoped** where the rest of this package is project-scoped. The engineer who wants it is anyone who installed Slasher into more than one project, rather than whoever maintains Slasher.
 

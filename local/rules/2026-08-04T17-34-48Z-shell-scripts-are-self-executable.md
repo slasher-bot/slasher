@@ -1,6 +1,6 @@
 # A shell script is self-executable — the executable bit is set and the file opens with a shebang
 
-Every shell script in this repository is **runnable as itself** — `./report-direct-commits.sh`, never `sh report-direct-commits.sh`.
+Every shell script in this repository is **runnable as itself** — `./report-direct-package-commits.sh`, never `sh report-direct-package-commits.sh`.
 
 **A script is not required to carry `.sh`, and one does not.** `slasher-install`, then named `install`, dropped it on 2026-08-23. A script is a command, and `./slasher-install` reads as one where `./slasher-install.sh` reads as a file being run. What this rule asks for is the bit and the shebang, and neither depends on the name. Where the text below says `.sh`, read it as *shell script*. Two things together make it so, and each is required: the bit and the shebang, below. **One script is documented with an `sh` prefix even so**, because the copy an engineer runs is not the file this repository holds. The delivery section states when that applies and why the bit is set on it regardless.
 
@@ -9,7 +9,7 @@ Every shell script in this repository is **runnable as itself** — `./report-di
 
 **This reaches every shell script Slasher ships**, which is what makes it a rule about the system rather than about one repository's tidiness. Three kinds of script are authored here and they are covered alike:
 
-- **The tools at the root** — `report-direct-commits.sh` and `compile.sh` are authoring tools, run by whoever maintains Slasher, in this repository. **`slasher-install` sits beside them and is not one**: a consuming project fetches it, which is what makes it the one script here an engineer runs from somewhere other than a clone of this repository. That is the whole reason the delivery section below exists.
+- **The tools at the root** — `report-direct-package-commits.sh` and `compile.sh` are authoring tools, run by whoever maintains Slasher, in this repository. **`slasher-install` sits beside them and is not one**: a consuming project fetches it, which is what makes it the one script here an engineer runs from somewhere other than a clone of this repository. That is the whole reason the delivery section below exists.
 - **The scripts inside the packages**, and `foundation`'s in particular — `install.sh`, `update-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, and `read-consuming-projects.sh`, and each `install-dependencies.sh` a package carries. These are **installed into every consuming project** and run there, so a missing executable bit committed here arrives broken on every machine that installs the package. That is the case where the cost is not local, and it is the reason the rule is worth having rather than assuming.
 - **The tests in `test/`** — `test/automated/` and `test/interactive/`, run from this repository's root.
 
@@ -33,7 +33,7 @@ Three forms are in use, and which one is correct is not a matter of taste:
 
 **`./` is not what makes a script self-executing, which is what the rule had confused.** The executable bit and the shebang are, and they are what the two requirements at the top of this rule ask for. The `./` prefix contributes nothing to it. It exists to tell the shell that the argument is a **path** rather than a name to look up on `PATH`.
 
-Any string containing a slash already says that. So `slasher/system/foundation/update-packages.sh` is exactly as self-executing as `./report-direct-commits.sh`. Neither names an interpreter, and `./` is simply what a path looks like when the file is in the current directory.
+Any string containing a slash already says that. So `slasher/system/foundation/update-packages.sh` is exactly as self-executing as `./report-direct-package-commits.sh`. Neither names an interpreter, and `./` is simply what a path looks like when the file is in the current directory.
 
 **A script nobody types carries an Invocation block instead.** `session-start.sh`, `startup-display.sh`, and `statusline.sh` are wired into `.claude/settings.json` by `install.sh` and run by the harness, so a usage line would name a command no engineer issues. Each records its invocation anyway, and says why: a script whose invocation is not written down is one nobody can reproduce when the wiring breaks.
 
@@ -66,7 +66,7 @@ Where the script is run by the harness rather than by a person, record its invoc
 
 ## Self-executable
 
-1. Every shell script in this repository is runnable as itself: `./report-direct-commits.sh`, never `sh report-direct-commits.sh`. The bit and the shebang make it so, not `./`. `./` only marks the argument as a path, and any path containing a slash, as in the path form below, is equally runnable as itself. The one exception is a `curl`-delivered script's usage line, below.
+1. Every shell script in this repository is runnable as itself: `./report-direct-package-commits.sh`, never `sh report-direct-package-commits.sh`. The bit and the shebang make it so, not `./`. `./` only marks the argument as a path, and any path containing a slash, as in the path form below, is equally runnable as itself. The one exception is a `curl`-delivered script's usage line, below.
 2. Set the executable bit when the file is created, and commit it. A bit set only locally does not count.
 3. Confirm with `git ls-files -s` that the mode is `100755`, not `100644`.
 4. Open the file with a shebang naming the interpreter: `#!/bin/sh` for every script here.
@@ -76,7 +76,7 @@ Where the script is run by the harness rather than by a person, record its invoc
 ## What it reaches
 
 1. It reaches every shell script authored in this repository.
-2. The root authoring tools, `report-direct-commits.sh` and `compile.sh`, run in this repository. And `slasher-install`, also at the root, which is not an authoring tool: a consuming project fetches it.
+2. The root authoring tools, `report-direct-package-commits.sh` and `compile.sh`, run in this repository. And `slasher-install`, also at the root, which is not an authoring tool: a consuming project fetches it.
 3. The package scripts, including `foundation`'s `install.sh`, `update-packages.sh`, `session-start.sh`, `startup-display.sh`, `statusline.sh`, `read-consuming-projects.sh`, and each package's `install-dependencies.sh`.
 4. The tests in `test/automated/` and `test/interactive/`.
 5. It does not reach a script a consuming project writes for itself. This is a local rule, not a `foundation` rule. A consuming project wanting it adopts it as its own local rule.
@@ -106,6 +106,11 @@ Where the script is run by the harness rather than by a person, record its invoc
 
 - 2026-10-29, compressed: 9925 → 3020 characters; checked: 37 directives, 32 kept, 2 less precise, 3 lost; 3 repairs, re-checked: 37 directives, 32 kept, 5 less precise, 0 lost; what is still not kept was judged reasons or background
 - 2026-11-12, revised: `install` is named `slasher-install`, a name the engineer settled; not re-checked
+- 2026-11-20, revised: `report-direct-commits.sh` is named `report-direct-package-commits.sh`, a name the engineer settled; not re-checked
+
+## History
+
+Until Fri Nov 20 2026 the script that reports direct commits to a package's repository was named `report-direct-commits.sh`. The engineer renamed it `report-direct-package-commits.sh`.
 
 Related:
 
@@ -135,3 +140,4 @@ Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 11:48:58 AM PT
 Changed by Scott Bellware on Tue Nov 17 2026 at 11:43:35 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 11:59:37 AM PT
