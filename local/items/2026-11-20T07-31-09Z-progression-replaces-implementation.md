@@ -1,8 +1,10 @@
 # Progression replaces implementation
 
-**State:** Open
+**State:** Implementation
 
 **Tags:** [work]
+
+Its implementation is the feature `2026-11-20T08-18-26Z-progression-replaces-implementation`.
 
 **As the engineer stated it:** I choose "progression"
 
@@ -110,3 +112,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 11:50:39 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:52:42 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:54:37 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:14:49 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:18:26 AM PT
