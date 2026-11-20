@@ -31,7 +31,7 @@ Its progression is the feature `2026-11-20T08-18-26Z-progression-replaces-implem
 - The foundation rules whose names and text say implementation, among them the-implementations-directory-holds-one-record-per-implementation, an-implementation-runs-on-a-branch-to-a-declared-end, implementation-status-reports-its-phases-its-state-what-exists-and-what-is-left, and a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged.
 - The vocabularies, the skills and their help, the command table, and `install.sh`, which names `implementations/`.
 - The item state **Implementation**, which an item takes when a feature or an experiment is created for it.
-- The idea `2026-11-20T04-43-41Z-implementations-can-be-created-and-started-directly`, and the work item `2026-11-20T06-40-24Z-content-items`, which speak of implementations.
+- The idea `2026-11-20T04-43-41Z-progressions-are-created-and-started-directly`, and the work item `2026-11-20T06-40-24Z-content-items`, which speak of implementations.
 - Slasher projects, which hold an `implementations/` directory of their own.
 
 The rename is a structural change and a change to a term that existing records carry, so it is a migration. Its migration record is written in `local/migration/` before anything is renamed. Historical records keep the word they were written with.
@@ -97,7 +97,7 @@ The rename is a structural change and a change to a term that existing records c
 - **2026-11-20** — **Record titles such as `Feature — The current command` stay.** They name the kind, not the general term.
 - **2026-11-20** — **Journal entries are left as written.** The migration does not change them.
 - **2026-11-20** — **The `foundation` vocabulary defines progression and progression record, and substitutes progression for implementation in the record sense.**
-- **2026-11-20** — **The idea `2026-11-20T04-43-41Z-implementations-can-be-created-and-started-directly` is conformed:** its title becomes *Progressions can be created and started directly*, and its file is renamed.
+- **2026-11-20** — **The idea `2026-11-20T04-43-41Z-progressions-are-created-and-started-directly` is conformed:** its title becomes *Progressions can be created and started directly*, and its file is renamed.
 - **2026-11-20** — **The rename is worked as a feature on its own branch, in a worktree**, with the migration record written on `master` first.
 
 ---
