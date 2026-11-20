@@ -44,6 +44,7 @@ Until Mon Nov 16 2026 the example path ended with the record's state, `-OPEN`.
 
 Related:
 
+- the the-print-command-prints-the-last-record-or-text-worked-on rule — `/print`, which chooses the same thing and prints it
 - the a-reply-that-writes-a-record-ends-with-the-records-path rule — the principal record a bare `/open` opens
 - the the-record-command-copies-prints-or-opens-the-most-recent-principal-record rule — `/record open`, which opens the most recent principal record
 - the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule — the ordinal and the handle a printed list gives a record
@@ -53,3 +54,4 @@ Related:
 Authored by Scott Bellware on Sat Nov 14 2026 at 9:54:46 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 5:08:30 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 5:14:40 PM PT
