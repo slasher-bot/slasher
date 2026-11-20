@@ -19,7 +19,7 @@ Realizes the idea `2026-11-20T02-52-38Z-a-built-in-slasher-home-project`.
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/slasher-home-project`
-- **Base:** from `master`, the commit holding this record as first written
+- **Base:** `09a8a2db`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-slasher-home-project`
 - **Participation:** unattended, stated by the engineer in the request. The question was not asked.
 - **Forecast:** none. The verdict question is not asked.
@@ -38,6 +38,17 @@ Realizes the idea `2026-11-20T02-52-38Z-a-built-in-slasher-home-project`.
 9. Compile the source, and run the suite.
 10. Commit the change on the branch.
 
+## What happened
+
+- `resolve-project.sh -slasher-home` prints the path that `~/.config/slasher/slasher-home.toml` declares. `SLASHER_HOME_PROJECT` names another file in its place, for a test.
+- Where the file is missing, or declares no path, the script prints *No Slasher home directory is declared in <file>* and exits 1. The target then does not resolve to a project.
+- `/slasher-home <instruction>` is an alias of `/projects -slasher-home <instruction>`.
+- The projects rule, its compressed text, the projects skill, and its help name the new target and its alias. The compressed text is not checked again, as with the rule's earlier revisions.
+- Two tests: `test/automated/resolve-project/slasher-home.sh`, and `test/automated/resolve-project/slasher-home-without-slasher-home-toml.sh`.
+- The loop record is `2026-11-20T04-56-25Z-slasher-home-project`.
+- The automated suite passes: 123 tests.
+- This machine has no `slasher-home.toml` yet, so `/slasher-home` does not resolve here until one is written.
+
 ## Confirmations
 
 - **2026-11-19** — Participation: Unattended, stated by the engineer in the request.
@@ -48,3 +59,4 @@ Realizes the idea `2026-11-20T02-52-38Z-a-built-in-slasher-home-project`.
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 8:55:28 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 8:57:44 PM PT

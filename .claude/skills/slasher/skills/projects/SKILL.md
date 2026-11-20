@@ -1,7 +1,7 @@
 ---
 name: projects
-description: List the machine's registry of Slasher projects, or carry out an instruction in the workspace project, the system project, or a registered project.
-argument-hint: "[help | -workspace | -system | <name>] [instruction]"
+description: List the machine's registry of Slasher projects, or carry out an instruction in the workspace project, the system project, the Slasher home directory, or a registered project.
+argument-hint: "[help | -workspace | -system | -slasher-home | <name>] [instruction]"
 disable-model-invocation: true
 ---
 

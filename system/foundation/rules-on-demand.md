@@ -1201,17 +1201,17 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 
 Source: system/foundation/source/projects-lists-the-registry-and-carries-out-an-instruction-in-another-project.md
 
-Trigger: When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -workspace`, `/workspace`, `/system`, `/projects -system`, or `/projects <name>`
+Trigger: When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -workspace`, `/workspace`, `/system`, `/projects -system`, `/slasher-home`, `/projects -slasher-home`, or `/projects <name>`
 
 1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `list-projects.sh`, which reads `~/.config/slasher/projects.toml`, and print its report. Where there is no registry, say so.
-2. `/projects -workspace <instruction>`, `/projects -system <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the workspace project, the machine's system project, or the registered project with that name. `/workspace <instruction>` is an alias of `/projects -workspace <instruction>`, and `/system <instruction>` of `/projects -system <instruction>`.
-3. Resolve the target from the current project's root with `slasher/system/foundation/resolve-project.sh -workspace`, `-system`, or `<name>`, or `system/foundation/resolve-project.sh` where there is no `slasher/` directory. It prints the target's root.
-4. Where the script fails, report its message and do nothing more.
+2. `/projects -workspace <instruction>`, `/projects -system <instruction>`, `/projects -slasher-home <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the workspace project, the machine's system project, the Slasher home directory, which holds the development version of Slasher, or the registered project with that name. `/workspace <instruction>` is an alias of `/projects -workspace <instruction>`, `/system <instruction>` of `/projects -system <instruction>`, and `/slasher-home <instruction>` of `/projects -slasher-home <instruction>`.
+3. Resolve the target from the current project's root with `slasher/system/foundation/resolve-project.sh -workspace`, `-system`, `-slasher-home`, or `<name>`, or `system/foundation/resolve-project.sh` where there is no `slasher/` directory. It prints the target's root.
+4. Where the script fails, report its message and do nothing more. On a machine that declares no Slasher home directory, `-slasher-home` does not resolve to a project.
 5. Before acting, run the target's loader from the target's root, and follow the rules it prints for the act.
 6. Carry out the instruction under the target's root, by the target's conventions. Report what was done and where.
 7. A commit in the target waits for the engineer's selection.
 8. With a target and no instruction, print the target's root, and act on nothing.
-9. Do not change the registry, `slasher.toml`, or `system-project.toml`. Write no project's name into the project the session is in.
+9. Do not change the registry, `slasher.toml`, `system-project.toml`, or `slasher-home.toml`. Write no project's name into the project the session is in.
 
 # Pros and cons gives each option of the last question with its pros and cons
 
