@@ -2,11 +2,11 @@
 
 Source: system/prose/source/content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence.md
 
-Trigger: When reviewing or editing content, as with `/review`, `/print-and-review`, or `/edit`
+Trigger: When reviewing or editing content, as with `/prose`, `/edit`, or `/review`
 
-**Trigger:** When reviewing or editing content, as with `/review`, `/print-and-review`, or `/edit`
+**Trigger:** When reviewing or editing content, as with `/prose`, `/edit`, or `/review`
 
-**Every review of content judges it by the same named criteria.** `/review`, `/print-and-review`, and `/edit` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
+**Every review of content judges it by the same named criteria.** `/prose edit`, `/prose suggest`, and `/prose critique` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
 
 **A paragraph is judged by four criteria:**
 
@@ -35,75 +35,116 @@ Trigger: When reviewing or editing content, as with `/review`, `/print-and-revie
 
 Source: system/prose/source/edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence.md
 
-Trigger: When the engineer types `/edit`, or asks to work through content paragraph by paragraph
+Trigger: When the engineer types `/prose edit` or `/edit`, or asks to work through content paragraph by paragraph
 
-**Trigger:** When the engineer types `/edit`, or asks to work through content paragraph by paragraph
+**Trigger:** When the engineer types `/prose edit` or `/edit`, or asks to work through content paragraph by paragraph
 
-**`/edit <content>` walks the content one paragraph at a time.** Content is prose written for people to read, such as a file, a page, or a draft in the chat. A bare `/edit` walks the content the conversation is on. Where the words name no content, or the conversation is on none, say so, and start nothing. It judges each paragraph by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule.
+**`/prose edit <content>` walks the content one paragraph at a time.** `/edit` is its short form, and does exactly what it does. Content is prose written for people to read, such as a file, a page, or a draft in the chat. A bare `/prose edit` walks the content the conversation is on. Where the words name no content, or the conversation is on none, say so, and start nothing. It judges each paragraph and each sentence by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule.
 
 **As the engineer stated it:** Do the Both, option, but use the commend "edit" rather than "walkthrough"
 
-**The walk starts by numbering the paragraphs.** Read the content whole, for its arc, its tone, and its intent. Number its paragraphs p1, p2, p3, and so on. A heading, a blockquote, and a code block each count as a paragraph where it stands on its own lines. Say how many paragraphs there are, then show p1 and its findings.
+**As the engineer later stated it:** `edit` goes paragraph by paragraph, sentence by sentence, allowing the user to `accept`, `reject`, or `ignore`. This reflects the prior implementation of the `doc-edit` rules
 
-**Each paragraph is shown, then its findings.** Show the paragraph as written, then each finding: its criterion, what is wrong, and why it matters. Give no rewrite. Where the paragraph is clean, say so in a line.
+**As the engineer later stated it:** The sentences in a paragraph should be numbered as "s1", "s2", etc
+
+**The walk starts by numbering the paragraphs and their sentences.** Read the content whole, for its arc, its tone, and its intent. Number its paragraphs p1, p2, p3, and so on. A heading, a blockquote, and a code block each count as a paragraph where it stands on its own lines. Number the sentences of each paragraph s1, s2, s3, and so on, from 1 in each paragraph. A sentence is named by its paragraph and its number, as p4 s2. Say how many paragraphs there are, then show p1.
+
+**Each paragraph is shown, then its findings, each with a suggestion.** Show the paragraph as written, then each finding: its criterion, what is wrong, and why it matters. Give each finding a suggested change, as a numbered suggestion with the original, the suggested text, and a reason, under the prose-suggest-suggests-numbered-edits-and-accept-or-reject-settles-them rule. Where the paragraph is clean, say so in a line.
+
+**Each suggestion is accepted, rejected, or ignored.** Ask through the selection interface, one suggestion at a time, with the options *Accept*, *Reject*, and *Ignore*.
+
+1. **Accept** makes the change. In a file, write it at once, since the selection is the engineer's decision. In a draft in the chat, the change stands in the draft.
+2. **Reject** drops the suggestion, and changes nothing.
+3. **Ignore** changes nothing, and leaves the suggestion pending under its number. `/prose accept` or `/prose reject` can settle it later.
 
 **Subcommands move the walk:**
 
-- **`/edit next`**: show the next paragraph and its findings.
-- **`/edit previous`**: show the previous paragraph and its findings.
-- **`/edit p<n>`**, as `/edit p4`: show that paragraph and its findings, and make it the current one.
-- **`/edit sentences [p<n> ...]`**: judge the sentences of the paragraphs named, or of every paragraph, by the three sentence criteria. Group the findings by paragraph, and quote each sentence a finding is about.
-- **`/edit print`**: print the content from p1 to the current paragraph, with every accepted change made.
+- **`/prose edit next`**: show the next paragraph and its findings.
+- **`/prose edit previous`**: show the previous paragraph and its findings.
+- **`/prose edit p<n>`**, as `/prose edit p4`: show that paragraph and its findings, and make it the current one.
+- **`/prose edit p<n> s<n>`**, as `/prose edit p4 s2`: judge that sentence by the three sentence criteria, and show it with its findings and suggestions.
+- **`/prose edit sentences [p<n> ...]`**: judge the sentences of the paragraphs named, or of every paragraph, by the three sentence criteria. Group the findings by paragraph, and name each sentence a finding is about by its number, as p4 s2, with the sentence quoted.
+- **`/prose edit print`**: print the content from p1 to the current paragraph, with every accepted change made.
 
 **After the last paragraph, ask before the sentence pass.** Ask, through the selection interface, whether to judge the sentences of every paragraph, of the paragraphs the engineer names, or of none.
 
-**A rewrite asked for becomes a `/review` suggestion.** Where the engineer asks for a rewrite of a finding, give it as a numbered suggestion, with the original, the suggested text, and a reason, under the the-review-command-suggests-numbered-edits-and-accept-or-reject-settles-them rule. `/review accept` and `/review reject` settle it, and `/review accept` writes it. `/edit` writes nothing itself.
+**The walk holds its place for the session.** The paragraph and sentence numbers and the current paragraph stand until a new `/prose edit <content>` starts another walk. An accepted change does not renumber the walk. `/prose edit next` and the other subcommands with no walk started say so, and do nothing.
 
-**The walk holds its place for the session.** The paragraph numbers and the current paragraph stand until a new `/edit <content>` starts another walk. `/edit next` and the other subcommands with no walk started say so, and do nothing.
+**`/prose edit` is a subcommand of `/prose`,** in the PROSE command domain, under the prose-reviews-content-through-its-subcommands rule.
 
-**`/edit` is in the REVIEW command domain.** `/edit help` says that the command takes no `help`, and names `/review help`.
+**Why:** a long text reviewed in one answer gives the writer every finding at once, and the writer loses the passage each one is about. A walk keeps one paragraph in view with its findings. Numbered paragraphs and sentences let the writer name any passage in a word. Each suggestion is the writer's to accept, reject, or put off, so the writer's words change only by the writer's decision.
 
-**Why:** a long text reviewed in one answer gives the writer every finding at once, and the writer loses the passage each one is about. A walk keeps one paragraph in view with its findings. Findings without a rewrite keep the writer's words the writer's, and a rewrite the writer asks for is settled the way every suggested edit is.
+**How to apply:** on `/prose edit <content>`, number the paragraphs and their sentences, say how many paragraphs there are, and show p1 with its findings and suggestions. Ask for each suggestion whether to accept, reject, or ignore it. On each subcommand, move the walk and show the paragraph or the sentence with its findings, or judge its sentences, or print the content so far.
 
-**How to apply:** on `/edit <content>`, number the paragraphs, say how many, and show p1 with its findings. On each subcommand, move the walk and show the paragraph with its findings, or judge its sentences, or print the content so far. Give no rewrite unless asked, and give one as a `/review` suggestion.
+# `/prose critique` gives an overall critical review of content
 
-# Print-and-review prints the draft and a review of it
+Source: system/prose/source/prose-critique-gives-an-overall-critical-review-of-content.md
 
-Source: system/prose/source/print-and-review-prints-the-draft-and-a-review-of-it.md
+Trigger: When the engineer types `/prose critique`, or asks for a critique of content
 
-Trigger: When the engineer types `/print-and-review` or `/pr`, or asks for the draft to be printed and reviewed
+**Trigger:** When the engineer types `/prose critique`, or asks for a critique of content
 
-**Trigger:** When the engineer types `/print-and-review` or `/pr`, or asks for the draft to be printed and reviewed
+**As the engineer stated it:** `critique` provides an overall critical review
 
-**`/print-and-review` prints the draft as it now stands, then a review of it.** `/pr` is its shortcut alias. The draft is the text the conversation is working on, such as an article, a page, a message, or a rule, with every change made to it so far. `/pr <file>` names a file, and the draft is that file's text.
+**`/prose critique <content>` reviews the content named as a whole.** A bare `/prose critique` reviews the content the conversation is on, with every change made to it so far. Where the words name no content, or the conversation is on none, say so, and review nothing.
 
-**As the engineer stated it:** "/reprint-and-review" command with a "/rr" shortcut alias. This is useful typically in content editing when working a draft of a text. It asks the agent to reprint the text so far, and to follow it with a review or critique.
+**The critique judges the whole before its parts.** It asks whether the content says what it means to, in the order a reader needs, in words the reader holds, for its purpose and its reader. It judges by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule. Where the content is Slasher's own prose, such as a rule or a record, it is also judged by the `language` package's rules.
 
-**As the engineer later stated it:** Change "/reprint-and-review" to "/print-and-review"
+**The critique is a numbered list of findings, most important first.** Each finding quotes or names the passage it is about, names its criterion, and says what is wrong and why it matters to the reader. The numbers are handles. Where the content works and is worth keeping, say so. Where nothing needs to change, say so in one line, and give no findings to fill the list.
 
-**As the engineer later stated it:** Change "/rr" to "/pr"
+**The critique changes nothing, and suggests no numbered edit.** `/prose suggest` gives numbered edits that `/prose accept` can make. A critique gives the engineer the judgment of the whole, and the engineer decides what to act on.
 
-**The draft is printed whole and unchanged.** Print it as it stands, in a fenced block where it is markdown or code, so its form is seen as written. Do not correct it while printing it.
+**Why:** a review of passages one by one does not say whether the whole works. A critique of the whole lets the engineer judge the next change against the text as it is.
 
-**The review follows the draft, as a numbered list of findings, most important first.** Each finding quotes the passage it is about, names its criterion, says what is wrong with it and why it matters, and suggests a change in the words the change would use. The numbers are handles, so the engineer can answer *take 2 and 4*.
+**How to apply:** on `/prose critique`, find the content, judge it whole by its criteria, and give a numbered list of findings, most important first. Change nothing.
 
-**The review judges the draft by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule, for its purpose and its reader.** It asks whether the draft says what it means to, in the order a reader needs, in words the reader holds. Where the draft is Slasher's own prose, such as a rule or a record, it is also judged by the `language` package's rules. Where nothing needs to change, say so in one line, and give no findings to fill the list. Where a passage works and is worth keeping, say so.
+# `/prose` reviews content through its subcommands
 
-**The command changes nothing.** It does not edit the draft or its file. The engineer decides which findings to act on, and asks for the change.
+Source: system/prose/source/prose-reviews-content-through-its-subcommands.md
 
-**Where no draft is under way, and no file is named, say so, and ask which text is meant**, through the free-text option.
+Trigger: When the engineer types `/prose`, `/edit`, `/review`, `/accept`, or `/reject`
 
-**Why:** a draft worked on in conversation is changed a piece at a time, and its whole is not seen again until it is asked for. Seeing the whole and a critique of it together lets the engineer judge the next change against the text as it is, not as remembered.
+**Trigger:** When the engineer types `/prose`, `/edit`, `/review`, `/accept`, or `/reject`
 
-**How to apply:** on `/print-and-review` or `/pr`, find the draft, or read the file named. Print it whole and unchanged. Then give a numbered list of findings, each quoting its passage, naming its criterion and what is wrong, and suggesting the change. Change nothing.
+**As the engineer stated it:** A "/prose" command, with subcommands like "edit", "suggest", and "critique", which reviews content.
 
-# The review command suggests numbered edits to content, and accept or reject settles them
+**As the engineer later stated it:** These will all be subcommands of `/prose`. `/accept` and `/reject` are aliases for `/prose accept` and `prose reject`. `print-and-review` should be removed, along with its `pr` alias.
 
-Source: system/prose/source/the-review-command-suggests-numbered-edits-and-accept-or-reject-settles-them.md
+**As the engineer later selected it:** `/edit` stays as a short form of `/prose edit`, and `/review` as a short form of `/prose suggest`.
 
-Trigger: When the engineer types `/review`, or asks for suggested edits to content
+**`/prose` reviews content.** Content is prose written for people to read, such as a page, a README, an article, or a draft in the chat. Every subcommand judges it by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule.
 
-**Trigger:** When the engineer types `/review`, or asks for suggested edits to content
+**Its subcommands:**
+
+- **`/prose edit`** walks the content paragraph by paragraph, then sentence by sentence, and each suggestion is accepted, rejected, or ignored. The edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule governs it.
+- **`/prose suggest`** lists numbered suggested edits to the content. The prose-suggest-suggests-numbered-edits-and-accept-or-reject-settles-them rule governs it.
+- **`/prose accept`** and **`/prose reject`** settle pending suggestions by their numbers, as that rule says.
+- **`/prose critique`** gives an overall critical review of the content. The prose-critique-gives-an-overall-critical-review-of-content rule governs it.
+
+**A bare `/prose` asks which subcommand is meant**, through the selection interface, under the a-command-takes-its-subcommand-first-asks-when-it-has-none-and-its-domain-takes-help rule.
+
+**Four short forms do exactly what their subcommands do,** and pass their words on unchanged:
+
+- `/edit` is `/prose edit`.
+- `/review` is `/prose suggest`. `/review accept` and `/review reject` are `/prose accept` and `/prose reject`.
+- `/accept` is `/prose accept`.
+- `/reject` is `/prose reject`.
+
+**Suggestions share one numbering in a session.** A suggestion that `/prose edit` makes and one that `/prose suggest` makes are numbered in the same sequence, so `/accept 3` names one suggestion, whichever subcommand made it.
+
+**`/prose` is the PROSE command domain.** `/prose help` prints its help. `/edit help`, `/review help`, `/accept help`, and `/reject help` say that the command takes no `help`, name `/prose help`, and do nothing more. Claude Code's built-in code-review command also takes `/review`. Where it does, the engineer types `/slasher:review`.
+
+**Why:** the acts of working on content belong together, under one name the engineer can ask for help on. The short forms keep the commands the engineer already types.
+
+**How to apply:** on `/prose`, read the first word as the subcommand, and follow the rule that governs it. With no subcommand, ask which is meant. On a short form, do what its subcommand does.
+
+# `/prose suggest` suggests numbered edits to content, and accept or reject settles them
+
+Source: system/prose/source/prose-suggest-suggests-numbered-edits-and-accept-or-reject-settles-them.md
+
+Trigger: When the engineer types `/prose suggest`, `/prose accept`, `/prose reject`, `/review`, `/accept`, or `/reject`, or asks for suggested edits to content
+
+**Trigger:** When the engineer types `/prose suggest`, `/prose accept`, `/prose reject`, `/review`, `/accept`, or `/reject`, or asks for suggested edits to content
 
 **As the engineer stated it:** "/edit" command. It tells the agent to suggest edits to content. "/edit accept" tells the agent to incorporate the suggest edits. "/edit reject" tells the agent to not incorporate the agent's sugested edits.
 
@@ -115,7 +156,9 @@ Trigger: When the engineer types `/review`, or asks for suggested edits to conte
 
 **As the engineer later stated it:** Change "/suggest" to "/review"
 
-**`/review <content>` suggests edits to the content the words name.** A bare `/review` suggests edits to the content the conversation is on. Content is prose, such as a page, a README, an article, or a draft in the chat. Where the words name no content, or the conversation is on none, say so, and suggest nothing. Where the words name more than one piece of content, ask which, through the selection interface.
+**As the engineer later stated it:** `suggest` lists suggested changes in a numbered list. A change can be rejected or rejected using `/accept <number>` and `/reject <number>`, eg: `/accept #3` or `/reject #3`. `/accept` and `/reject` are aliases for `/prose accept` and `prose reject`.
+
+**`/prose suggest <content>` suggests edits to the content the words name.** A bare `/prose suggest` suggests edits to the content the conversation is on. Content is prose, such as a page, a README, an article, or a draft in the chat. Where the words name no content, or the conversation is on none, say so, and suggest nothing. Where the words name more than one piece of content, ask which, through the selection interface.
 
 **Suggest, and change nothing.** A suggestion leaves the content as it is. The content changes only when the engineer accepts a suggestion and selects writing it.
 
@@ -137,18 +180,18 @@ Trigger: When the engineer types `/review`, or asks for suggested edits to conte
    Reason:    Precision. It states the policy and does not hedge.
 ```
 
-**A suggestion is pending until it is accepted or rejected.** A later `/review` adds its suggestions after the pending ones, and the numbering continues. A later `/review` drops no pending suggestion. A number is never used again in the same session, so a number always names one suggestion.
+**A suggestion is pending until it is accepted or rejected.** A later `/prose suggest`, or a `/prose edit` walk, adds its suggestions after the pending ones, and the numbering continues. Neither drops a pending suggestion. A number is never used again in the same session, so a number always names one suggestion.
 
-**`/review accept` shows the result, then writes it on the engineer's selection.** `/review accept 1 3` accepts suggestions 1 and 3. A bare `/review accept` accepts every pending suggestion. Show each changed passage as it would read. Then ask, through the selection interface, whether to write the changes to the file, with the options *Write the changes* and *Something else — say what to change*. Write them only on that selection. An accepted suggestion stops being pending when its change is written. Where the engineer does not select writing, the suggestions stay pending.
+**`/prose accept` shows the result, then writes it on the engineer's selection.** `/prose accept 1 3`, or `/accept 1 3`, accepts suggestions 1 and 3. A number may be written `#3` or `3`. A bare `/prose accept` accepts every pending suggestion. Show each changed passage as it would read. Then ask, through the selection interface, whether to write the changes to the file, with the options *Write the changes* and *Something else — say what to change*. Write them only on that selection. An accepted suggestion stops being pending when its change is written. Where the engineer does not select writing, the suggestions stay pending.
 
 **Where the content is a draft in the chat, accepting prints the revised draft.** There is no file to write, so show the draft with the accepted changes made, and ask nothing.
 
-**`/review reject` drops suggestions and changes nothing.** `/review reject 2` drops suggestion 2. A bare `/review reject` drops every pending suggestion. Say which numbers were dropped.
+**`/prose reject` drops suggestions and changes nothing.** `/prose reject 2`, or `/reject 2`, drops suggestion 2. A bare `/prose reject` drops every pending suggestion. Say which numbers were dropped.
 
-**A number that names no pending suggestion is not guessed at.** Say so, and act on the other numbers named. Where no suggestion is pending, `/review accept` and `/review reject` say so, and do nothing.
+**A number that names no pending suggestion is not guessed at.** Say so, and act on the other numbers named. Where no suggestion is pending, `/prose accept` and `/prose reject` say so, and do nothing.
 
-**`/review` is the REVIEW command domain.** `/review help` prints its help. Claude Code's built-in code-review command also takes `/review`. Where it does, the engineer types `/slasher:review`, `/slasher:review accept`, and `/slasher:review reject`.
+**`/prose suggest`, `/prose accept`, and `/prose reject` are subcommands of `/prose`,** in the PROSE command domain. `/review` is a short form of `/prose suggest`, and `/review accept` and `/review reject` of `/prose accept` and `/prose reject`, under the prose-reviews-content-through-its-subcommands rule.
 
 **Why:** the content is the engineer's, and each change to it is the engineer's decision. A suggestion shown beside the original lets the engineer judge it before anything changes. Showing the result before writing it lets the engineer see the accepted changes together. Pending suggestions are kept, so a second review loses nothing from the first.
 
-**How to apply:** on `/review`, suggest numbered edits to the content named, or to the content the conversation is on, and change nothing. On `/review accept`, show the result of the accepted suggestions, and write it only on the engineer's selection. On `/review reject`, drop the suggestions named.
+**How to apply:** on `/prose suggest`, suggest numbered edits to the content named, or to the content the conversation is on, and change nothing. On `/prose accept`, show the result of the accepted suggestions, and write it only on the engineer's selection. On `/prose reject`, drop the suggestions named.

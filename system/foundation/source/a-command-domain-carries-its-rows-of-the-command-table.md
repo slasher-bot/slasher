@@ -8,7 +8,7 @@
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, and `/next?`. Their order is `/commands, /;`, `/recent, /?`, `/current, /'`, `/next, /proceed, /.`, and `/next?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` and `/commit, /c` in the `git` package, and `/print-and-review, /pr` in the `prose` package.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, and `/next?`. Their order is `/commands, /;`, `/recent, /?`, `/current, /'`, `/next, /proceed, /.`, and `/next?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` and `/commit, /c` in the `git` package.
 
 **A row with a shortcut alias names the command first and the alias after it, as `/recent, /?`.** A command with an alias and a shortcut names the alias, then the shortcut last, as `/next, /proceed, /.`. A command with two shortcuts names both, in the order they were given, as `/shortcuts, /sc, /:`. This holds in the full table and in the startup table alike.
 
@@ -25,6 +25,8 @@
 **How to apply:** when you write or change a command, its help, or a shortcut alias, change its row in its domain's `command-table-rows.md`, or foundation's plugin files for the top rows and the shortcuts, and run `./compile.sh` so the plugin's tables are rebuilt.
 
 ## History
+
+Until Thu Nov 19 2026 the `/print-and-review, /pr` row was an example of another package's row with a shortcut alias. The engineer removed the command.
 
 Until Thu Nov 19 2026 the `/current` rows named `/current, /', /c`. The engineer made `/c` the alias of `/commit`, and the `/commit, /c` row stands beside its skill in the `git` package.
 
@@ -112,3 +114,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 3:14:22 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 12:41:19 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 3:11:33 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 4:38:48 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 6:31:25 PM PT

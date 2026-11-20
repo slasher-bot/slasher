@@ -1,8 +1,8 @@
 # Content is judged by named criteria for each paragraph and each sentence
 
-**Trigger:** When reviewing or editing content, as with `/review`, `/print-and-review`, or `/edit`
+**Trigger:** When reviewing or editing content, as with `/prose`, `/edit`, or `/review`
 
-**Every review of content judges it by the same named criteria.** `/review`, `/print-and-review`, and `/edit` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
+**Every review of content judges it by the same named criteria.** `/prose edit`, `/prose suggest`, and `/prose critique` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
 
 **A paragraph is judged by four criteria:**
 
@@ -27,10 +27,14 @@
 
 **How to apply:** on any review of content, judge each paragraph by its four criteria and, where sentences are reviewed, each sentence by its three. Name the criterion in each finding, say what is wrong and why it matters, and say where a passage is clean.
 
+## History
+
+Until Thu Nov 19 2026 `/review`, `/print-and-review`, and `/edit` judged by this rule. The engineer made them subcommands of `/prose`, and removed `/print-and-review`.
+
 Related:
 
-- the the-review-command-suggests-numbered-edits-and-accept-or-reject-settles-them rule — suggests edits by these criteria
-- the print-and-review-prints-the-draft-and-a-review-of-it rule — reviews a whole draft by these criteria
+- the prose-suggest-suggests-numbered-edits-and-accept-or-reject-settles-them rule — suggests edits by these criteria
+- the prose-critique-gives-an-overall-critical-review-of-content rule — reviews the whole by these criteria
 - the edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule — walks a text by these criteria
 - the `language` package's writing-states-the-evidence-and-the-reader-draws-the-conclusion rule — the conclusion-drawing check, stated once
 
@@ -38,3 +42,4 @@ Related:
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 6:08:38 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:15:56 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 6:31:25 PM PT

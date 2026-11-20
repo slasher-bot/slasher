@@ -19,8 +19,7 @@ release
 package
 packages
 language
-print-and-review
-review
+prose
 email
 pros-and-cons
 ask-again

@@ -31,8 +31,7 @@
 | `/package` | These commands manage the installed packages: which are active, updating them, and installing Slasher. |
 | `/packages` | These commands list the installed packages, update them, and act on one package. |
 | `/language` | These commands work on language: reserving a word, ETE, Slasher's implementation of STE and its extensions, and clarifying language, often the agent's. |
-| `/print-and-review, /pr` | Print the draft as it now stands, then a review of it |
-| `/review` | Suggests numbered edits to content, and accept or reject settles them. |
+| `/prose` | These commands review content: walk it paragraph by paragraph, suggest numbered edits, or critique it whole. |
 | `/email` | These commands fetch IMAP email into the project, send a message, and list the accounts whose credentials are kept in the macOS Keychain. |
 | `/pros-and-cons, /??` | Give each option of the agent's last question with its pros and cons |
 | `/ask-again, /aa` | Repeat the agent's previous multiple-choice question |

@@ -5,6 +5,6 @@
 | `/recent, /?` | Brief summary of recent work, and what's next. |
 | `/current, /'` | Lists the current items, features, and experiments. |
 
-The other commands are `/next`, `/proceed`, `/next?`, `/item`, `/feature`, `/features`, `/experiment`, `/experiments`, `/process`, `/log`, `/decision`, `/note`, `/notes`, `/record`, `/records`, `/journal`, `/private`, `/unrecorded`, `/brainstorm`, `/test`, `/push`, `/p`, `/commit`, `/c`, `/commit-and-push`, `/cp`, `/projects`, `/release`, `/package`, `/packages`, `/language`, `/print-and-review`, `/pr`, `/review`, `/email`, `/pros-and-cons`, `/ask-again`, `/aa`, `/estimate-confidence`, `/unattended`, `/shortcuts`, `/sc`, and `/load`.
+The other commands are `/next`, `/proceed`, `/next?`, `/item`, `/feature`, `/features`, `/experiment`, `/experiments`, `/process`, `/log`, `/decision`, `/note`, `/notes`, `/record`, `/records`, `/journal`, `/private`, `/unrecorded`, `/brainstorm`, `/test`, `/push`, `/p`, `/commit`, `/c`, `/commit-and-push`, `/cp`, `/projects`, `/release`, `/package`, `/packages`, `/language`, `/prose`, `/email`, `/pros-and-cons`, `/ask-again`, `/aa`, `/estimate-confidence`, `/unattended`, `/shortcuts`, `/sc`, and `/load`.
 
 Type /help for all of Slasher's help, or /<command> help for one command's.
