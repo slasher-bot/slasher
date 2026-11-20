@@ -1,8 +1,10 @@
 # Explore Claude Code output styles, which shape the agent by a mechanism Waytide does not use
 
-Waytide shapes the agent through **rules read at the start of a session**. A Claude Code **output style** shapes it by **replacing part of the system prompt**. The two aim at the same thing by different mechanisms, and Waytide has never examined the second.
+**State:** Suspended
 
-**State:** Suspended **Tags:** [idea] [deferred]
+**Tags:** [idea] [deferred]
+
+Waytide shapes the agent through **rules read at the start of a session**. A Claude Code **output style** shapes it by **replacing part of the system prompt**. The two aim at the same thing by different mechanisms, and Waytide has never examined the second.
 
 **2026-08-23 — suspended.** Paused rather than ended. The `[deferred]` tag stays, since the tag and the state are independent: the item is still queued and it is not expected soon.
 
@@ -36,3 +38,4 @@ Authored by Scott Bellware on Sun Aug 9 2026 at 6:42:21 PM PT
 Changed by Scott Bellware on Tue Aug 18 2026 at 9:24:07 AM PT
 Changed by Scott Bellware on Sun Aug 23 2026 at 12:58:46 AM PT
 Changed by Scott Bellware on Wed Oct 21 2026 at 2:38:56 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:09:01 PM PT
