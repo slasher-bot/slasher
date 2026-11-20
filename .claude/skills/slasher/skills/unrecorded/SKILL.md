@@ -12,3 +12,4 @@ The engineer typed `/unrecorded $ARGUMENTS`.
 3. **`end`**: end the unrecorded session.
 4. **Nothing typed**: start an unrecorded session, and wait for the engineer's request.
 5. **Any other words**: start an unrecorded session, carry out the words as the engineer's instruction in it, and then end it.
+6. In the session, answer every question and carry out every command, and print each reply as in any other session. Only records are not written.

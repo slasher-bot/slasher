@@ -19,7 +19,7 @@ Realizes the problem `2026-11-20T04-20-12Z-an-unrecorded-session-withholds-answe
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/unrecorded-session-answers`
-- **Base:** from `master`, the commit holding this record as first written
+- **Base:** `d5131a0c`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-unrecorded-session-answers`
 - **Participation:** unattended, stated by the engineer in the request. The question was not asked.
 - **Forecast:** none. The verdict question is not asked.
@@ -36,6 +36,15 @@ Realizes the problem `2026-11-20T04-20-12Z-an-unrecorded-session-withholds-answe
 7. Run the suite.
 8. Commit the change on the branch.
 
+## What happened
+
+- The unrecorded-session rule has a section, *The agent still answers*. In the session, the agent answers every question, carries out every command, and prints each reply. A reply is not a record.
+- The rule's opening list, its **Why:**, and its **How to apply:** say the same.
+- The `/unrecorded` help, its command table row, and its skill say the same.
+- The rule has no compressed text to check.
+- No loop record: the work is a rule, a skill, and help, which is content work in this project.
+- The automated suite passes: 121 tests.
+
 ## Confirmations
 
 - **2026-11-20** — Participation: Unattended, stated by the engineer in the request.
@@ -46,3 +55,4 @@ Realizes the problem `2026-11-20T04-20-12Z-an-unrecorded-session-withholds-answe
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 8:23:55 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 8:27:01 PM PT

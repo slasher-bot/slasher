@@ -1,6 +1,7 @@
 UNRECORDED
   An unrecorded session writes no record anywhere, in the project or in the
-  private directory. Files that are not records still change.
+  private directory. The agent still answers and prints every reply,
+  and files that are not records still change.
 
   /unrecorded                      Start an unrecorded session
   /unrecorded <instruction>        Carry out the instruction unrecorded,

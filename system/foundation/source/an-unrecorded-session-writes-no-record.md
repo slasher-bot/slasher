@@ -4,7 +4,7 @@
 
 1. A bare `/unrecorded` starts an unrecorded session. It lasts until the session ends, or until `/unrecorded end`.
 2. `/unrecorded <instruction>` starts an unrecorded session, carries out the instruction in it, and then ends it. The session ends when the reply that carries out the instruction is done, as `/unrecorded end` ends it.
-3. In an unrecorded session, the agent writes no record anywhere: not in the project, and not in the private directory.
+3. In an unrecorded session, the agent writes no record anywhere: not in the project, and not in the private directory. It still answers and prints every reply.
 4. That holds for a record the engineer asks for, and for a record a rule asks for.
 5. Carry out the instruction after `/unrecorded` in the session, then end it. Where there is none, start the session and wait for the engineer's request.
 6. `/unrecorded help` prints the help of the UNRECORDED command domain, whose help command `/unrecorded` is.
@@ -12,6 +12,13 @@
 **As the engineer stated it:** An "/unrecorded" command that mirrors "/private", but instead of routing records to the private directory, the records are not written at all.
 
 **As the engineer later stated it:** When the "/unrecorded <instruction>" form is used, then unrecorded session ends upon comletion of the instruction
+
+## The agent still answers
+
+1. In an unrecorded session, answer every question and carry out every command, as in any other session.
+2. Print every answer, report, list, and result in the reply, as in any other session.
+3. A record is a file the agent writes to disk. A reply is not a record, so the session does not withhold it.
+4. Only the records named below are not written.
 
 ## What is not written
 
@@ -48,9 +55,9 @@
 5. End ends the session: delete the state file the hook names, and say that records are written again.
 6. The question carries no decision marker.
 
-**Why:** some work is not worth a record, and some should leave none: an exploration the engineer will discard, or a question asked only to think aloud. A private session keeps records out of the repository but still writes them. An unrecorded session writes none, so there is nothing to find, move, or delete afterwards.
+**Why:** an unrecorded session is for leaving no log entries, work session records, or other records behind. It is not for withholding the agent's answers. Some work is not worth a record, and some should leave none: an exploration the engineer will discard, or a question asked only to think aloud. A private session keeps records out of the repository but still writes them. An unrecorded session writes none, so there is nothing to find, move, or delete afterwards.
 
-**How to apply:** on `/unrecorded`, say that nothing will be recorded, and then write no record until the session ends. On `/unrecorded <instruction>`, carry out the instruction, then end the session in the same reply: delete its state file, and say that records are written again. Change files that are not records as the work asks. Ask before a change to an existing record, and before starting a feature or an experiment.
+**How to apply:** on `/unrecorded`, say that nothing will be recorded, and then write no record until the session ends. Answer and print every reply as usual. On `/unrecorded <instruction>`, carry out the instruction, then end the session in the same reply: delete its state file, and say that records are written again. Change files that are not records as the work asks. Ask before a change to an existing record, and before starting a feature or an experiment.
 
 ## History
 
@@ -69,3 +76,4 @@ Related:
 Authored by Scott Bellware on Mon Nov 16 2026 at 10:42:15 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 10:55:07 PM PT
 Changed by Scott Bellware on Tue Nov 17 2026 at 12:34:26 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 8:27:01 PM PT
