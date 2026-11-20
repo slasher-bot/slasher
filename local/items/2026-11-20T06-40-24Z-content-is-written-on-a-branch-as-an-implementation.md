@@ -88,6 +88,10 @@ Each answer changes different rules:
 
 - **2026-11-19** — **Content is offered no standard phases. The writer decides a piece's phases, if any.** This replaces the resolution above that outline, draft, review, and final are offered as standard phases, which stays as written.
 
+**As the engineer stated it:** Leave prose as is and content as is, answering the agent's assessment that the `prose` package could become the text review inside a `content` package.
+
+- **2026-11-19** — **`prose` and `content` stay separate.** The `prose` package and its commands stay as they are, and `content` does not take them in.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
@@ -102,3 +106,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 10:56:21 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:59:47 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:02:51 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:09:17 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:12:33 PM PT
