@@ -76,6 +76,10 @@ Each answer changes different rules:
 
 - **2026-11-19** — **Ordinarily, the merge waits until the writer has accepted or rejected each of the review's suggestions.** The writer can still leave the review before every suggestion is settled, and the merge then does not wait on it.
 
+**As the engineer stated it:** Do these: `/contents` follows the pattern, despite the awkward reading. `/content list` is a subcommand of `/content`, as `/item list` is of `/item`.
+
+- **2026-11-19** — **The content list command is both `/contents` and `/content list`.** `/contents` follows the pattern of `/features` and `/experiments`. `/content list` is a subcommand of `/content`, as `/item list` is of `/item`.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
@@ -87,3 +91,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:37 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:49:31 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:55:07 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:56:21 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:59:47 PM PT
