@@ -1,0 +1,3 @@
+# A bare /open opens the more recent of the last principal record and the last text being worked on, and text only in the chat is saved to a temporary markdown file first
+
+The agent made this decision under unattended work, in the feature record `2026-11-20T01-08-14Z-open-the-last-record`. The engineer's statement named the two targets and not which one wins. The more recent one wins, because a bare `/open` most often means the thing just worked on. `open` needs a file, so text that is only in the chat is written as it now stands to the system's temporary directory, outside the project, and that file opens.
