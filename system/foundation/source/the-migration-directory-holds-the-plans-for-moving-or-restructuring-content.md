@@ -3,6 +3,7 @@
 `slasher/local/migration/` holds **migration records**: the execution plans for moving or restructuring content, and the record of how each move actually went. **A migration is a structural change**: content moved across a repository boundary, or the layout of a project's files changed within one. **A change to a norm or standard that existing content must be conformed to is a migration too**: a tag renamed, a term substituted, or a format changed, where records already written carry the old form.
 
 - **When to use:** content is to cross out of this repository or into it, or the structure it sits in is to change. A library extracted into its own repository, a body of work moved to a project that will own it, one repository split into several or several merged into one, or existing conventions migrated into an installed system. A directory renamed or regrouped, as the contemporaneous, historical records were grouped under `logs/`, or a set of files restructured, is a migration too. If content ends up under a different root, or in a different structure, it belongs here. So does a change to a norm or standard, such as the `[work-item]` tag becoming `[work]`, when existing content in this repository or in a Slasher project has to be conformed to it.
+- **A migration may change a historical record to conform it to the changed norm or standard.** A log entry, a loop record, a work session record, a concluded implementation record, and a record's file name are each conformed with the rest, so the old form does not survive in them. **As the engineer stated it:** migrations are permitted to make changes to historical information in order to conform it to new contracts. Outside a migration, a historical record is still edited only for disclosure, per the disclosure-is-the-one-reason-to-edit-a-historical-record rule.
 - **What distinguishes it from an item that sequences work.** Such an item sequences a **build**, against something this repository settled. A migration plan sequences a change to **where existing content lives, or to the form it is written in**: the order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed. Across repositories, the increments land in two, and the plan is not concluded when this repository's part is done.
 - **The record stays after the content has moved.** This is the reason the directory is separate and the reason a migration record is not deleted on completion. When content moves, the trail of **where it went and why** is lost unless something here holds that trail. A reader asking what became of something finds the answer here, rather than having to know where to look next.
 - **Format:** the same frontmatter-free markdown as rules — a `# <title>`, then prose. State the **source and destination** outright — the repositories, or the old and new places within one — the **increments in order**, and what is true in between — what is duplicated, what is unavailable, and what is authoritative while the move is under way. Record what actually happened against the plan as the work proceeds.
@@ -23,25 +24,25 @@ Planning it where the content is before it moves puts the plan beside it. Keepin
 4. Plan a move here when content ends up under a different root, or in a different structure.
 5. Examples: a library extracted into its own repository, or work moved to a project that will own it.
 6. Further examples: one repository split into several, several merged into one, existing conventions migrated into an installed system, or a directory renamed or regrouped.
-7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project.
+7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project. The migration conforms historical records too: log entries, loop records, work session records, concluded implementation records, and record file names. Outside a migration, a historical record is edited only for disclosure, per the disclosure-is-the-one-reason-to-edit-a-historical-record rule.
 8. Do not use an ordinary item for a migration.
 9. An item sequences a build, against something this repository settled.
 10. A migration plan sequences a change to where existing content lives, or to the form it is written in. Across repositories, its increments land in two.
-11. Its order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed.
+11. Its order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed. Content arrives in its new place before anything depends on it there, and stops being authoritative in the old place before it becomes authoritative in the new.
 12. Across repositories, the plan is not concluded when this repository's part is done.
 13. A migration may realize a settled item, or be mechanical enough to need none.
 14. A migration record is one document, not entries that accrue like the contemporaneous, historical records under `logs/`.
 15. Revise the record while the migration runs.
-16. Write it before moving content across a repository boundary, restructuring where it lives, or conforming it to a changed norm or standard.
+16. Write it where the content is, before moving content across a repository boundary, restructuring where it lives, or conforming it to a changed norm or standard.
 17. Use the same frontmatter-free markdown as rules: a `# <title>`, then prose.
 18. State the source and destination outright: the repositories, or the old and new places within one.
 19. State the increments in order.
 20. State what is true in between: what is duplicated, what is unavailable, and what is authoritative while the move is under way.
 21. Record what actually happened against the plan as the work proceeds.
-22. Keep the record after the content has moved. Do not delete it on completion.
+22. Keep the record after the content has moved, as the trail of where it went and why. Do not delete it on completion.
 23. End the file with the `Authored by … / Changed by …` footer, per the working-state-artifacts-carry-a-provenance-footer rule.
 24. The filename follows the ISO-8601-UTC prefix convention of the file-names rule.
-25. Records written before this convention reached a project keep their names. A datetime is not revised to a resolution it never had.
+25. Records written before this convention reached a project keep their names. A datetime is not revised to a resolution it never had, per the a-time-value-carries-minutes-and-seconds rule.
 
 ## Compression
 
@@ -50,8 +51,11 @@ Planning it where the content is before it moves puts the plan beside it. Keepin
 - 2026-10-28, revised: Why points removed, solubility 68 → 64, clarity 0.76 → 0.76; checked: 15 directives, 15 kept, 0 less precise, 0 lost
 - 2026-10-29, revised: a change to a norm or standard is a migration too; checked: 21 directives, 19 kept, 2 less precise, 0 lost, 2 repairs; re-checked: 21 directives, 21 kept, 0 less precise, 0 lost
 - 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
+- 2026-11-19, revised: a migration conforms historical records too; checked: 44 directives, 40 kept, 1 less precise, 3 lost, 4 repairs; re-checked: 44 directives, 43 kept, 1 less precise, 0 lost, 1 repair; re-checked: 44 directives, 43 kept, 1 less precise, 0 lost, 1 repair; re-checked: 44 directives, 44 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Thu Nov 19 2026 this rule did not say a migration may change a historical record. A historical record was edited only for disclosure, migration or not.
 
 Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
@@ -76,6 +80,7 @@ Related:
 - the project's planning records — a migration sequences a change to where existing content lives, where those sequence a build, and a migration may realize a settled item or be mechanical enough to need none
 - the file-names rule — the filename prefix
 - the working-state-artifacts-carry-a-provenance-footer rule
+- the disclosure-is-the-one-reason-to-edit-a-historical-record rule — the one reason a historical record is edited outside a migration
 - the the-logs-directory-holds-the-contemporaneous-historical-records rule — the contemporaneous, historical records, which a migration record is not: it is one document rather than entries that accrue, it is revised while the migration runs, and it is written ahead of the move to be executed, then records what happened against the plan as the move runs
 
 ---
@@ -109,3 +114,5 @@ Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:55:45 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:58:05 PM PT

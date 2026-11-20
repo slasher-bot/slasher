@@ -83,6 +83,10 @@ The rename is a structural change and a change to a term that existing records c
 - **2026-11-19** — **Record file names that contain implementation are renamed to say progression.**
 - **2026-11-19** — **The disclosure-is-the-one-reason-to-edit-a-historical-record rule is amended** to permit this correction. Its wording is not settled.
 
+**As the engineer stated it:** Don't amend the rule. Just make the changes in the migration. If there is a rule here, it's that migrations are permitted to make changes to historical information in order to conform it to new contracts.
+
+- **2026-11-19** — **The disclosure-is-the-one-reason-to-edit-a-historical-record rule is not amended.** The migration makes the correction to the historical records. This replaces the resolution above that the rule is amended, which stays as written.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
@@ -93,3 +97,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 11:40:18 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:42:00 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:50:39 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:52:42 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:54:37 PM PT

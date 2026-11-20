@@ -536,25 +536,25 @@ Source: system/foundation/source/the-migration-directory-holds-the-plans-for-mov
 4. Plan a move here when content ends up under a different root, or in a different structure.
 5. Examples: a library extracted into its own repository, or work moved to a project that will own it.
 6. Further examples: one repository split into several, several merged into one, existing conventions migrated into an installed system, or a directory renamed or regrouped.
-7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project.
+7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project. The migration conforms historical records too: log entries, loop records, work session records, concluded implementation records, and record file names. Outside a migration, a historical record is edited only for disclosure, per the disclosure-is-the-one-reason-to-edit-a-historical-record rule.
 8. Do not use an ordinary item for a migration.
 9. An item sequences a build, against something this repository settled.
 10. A migration plan sequences a change to where existing content lives, or to the form it is written in. Across repositories, its increments land in two.
-11. Its order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed.
+11. Its order matters because content is unavailable or duplicated in between, a reference to the old place breaks until it is reconciled, and content in the old form does not match its rules until it is conformed. Content arrives in its new place before anything depends on it there, and stops being authoritative in the old place before it becomes authoritative in the new.
 12. Across repositories, the plan is not concluded when this repository's part is done.
 13. A migration may realize a settled item, or be mechanical enough to need none.
 14. A migration record is one document, not entries that accrue like the contemporaneous, historical records under `logs/`.
 15. Revise the record while the migration runs.
-16. Write it before moving content across a repository boundary, restructuring where it lives, or conforming it to a changed norm or standard.
+16. Write it where the content is, before moving content across a repository boundary, restructuring where it lives, or conforming it to a changed norm or standard.
 17. Use the same frontmatter-free markdown as rules: a `# <title>`, then prose.
 18. State the source and destination outright: the repositories, or the old and new places within one.
 19. State the increments in order.
 20. State what is true in between: what is duplicated, what is unavailable, and what is authoritative while the move is under way.
 21. Record what actually happened against the plan as the work proceeds.
-22. Keep the record after the content has moved. Do not delete it on completion.
+22. Keep the record after the content has moved, as the trail of where it went and why. Do not delete it on completion.
 23. End the file with the `Authored by … / Changed by …` footer, per the working-state-artifacts-carry-a-provenance-footer rule.
 24. The filename follows the ISO-8601-UTC prefix convention of the file-names rule.
-25. Records written before this convention reached a project keep their names. A datetime is not revised to a resolution it never had.
+25. Records written before this convention reached a project keep their names. A datetime is not revised to a resolution it never had, per the a-time-value-carries-minutes-and-seconds rule.
 
 # The work-sessions directory holds one record per work session
 
