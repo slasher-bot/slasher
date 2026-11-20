@@ -37,6 +37,18 @@ Each answer changes different rules:
 - **Open kinds:** one lifecycle, and the parts that serve only code apply only to features and experiments.
 - **A single content kind**, such as `[writing]`, with what is being written named in the title.
 
+## Settled
+
+**As the engineer stated it:** The kind is content. The command is "/content"
+
+- **2026-11-19** — The kind is **content**. It is one kind for all writing, not an open set of kinds such as article, essay, or lesson. This settles the decision above for a single content kind, and leaves the open-kinds alternative and the `/implementation new article …` example as written.
+- **2026-11-19** — The command is **`/content`**.
+
+**As the engineer stated it:** It's optional, answering *whether a prose review is required before content merges, or optional*.
+
+- **2026-11-19** — A prose review before content merges is **optional**. Which review command it is, and whether the writer accepts it, are not settled.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:45:22 PM PT
