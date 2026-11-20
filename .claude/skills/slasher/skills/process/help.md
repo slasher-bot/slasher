@@ -8,7 +8,6 @@ PROCESS
   /current [<n>]                   The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /current
-  /c [<n>]                         An alias of /current
   /recent                          Brief summary of recent work, and what's
                                    next
   /?                               An alias of /recent

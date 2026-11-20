@@ -26,9 +26,11 @@
 
 Related:
 
+- the commit-commits-the-work-on-the-current-branch rule — the same commit, with no push
 - the push-pushes-the-current-branch-to-its-remote rule — the push this command ends with
 - the run-the-test-suite-after-changes-before-considering-whether-to-commit rule — the suite run before the commit
 
 ---
 
 Authored by Scott Bellware on Sun Nov 15 2026 at 4:09:35 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 4:38:32 PM PT

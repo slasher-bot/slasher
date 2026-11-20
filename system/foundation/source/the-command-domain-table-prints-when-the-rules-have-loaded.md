@@ -1,6 +1,6 @@
 # The command domain table prints when the rules have loaded
 
-**When the session-start read concludes, print the plugin's startup table, word for word, then the current line.** The startup table is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. The current line stands one blank line below it, and ends what the read prints: *Type /current or /c for open and active work.* It names `/current` and its alias `/c`, which lists the current items, then the current features and experiments. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
+**When the session-start read concludes, print the plugin's startup table, word for word, then the current line.** The startup table is `command-table-startup.md`, in the plugin's root directory, `.claude/skills/slasher/`: the startup table's rows, a sentence naming the other commands, and the help line. The current line stands one blank line below it, and ends what the read prints: *Type /current or /' for open and active work.* It names `/current` and its alias `/'`, which lists the current items, then the current features and experiments. Print it in the response that carries the read, after the package set stanza where one prints, and ahead of anything else in that response. This holds for a read started by the session's first prompt, by `/load`, and by `load rules`. A read run again after a compaction prints no table, since the engineer asked for nothing.
 
 **The tables are built, not written here.** The plugin build joins the command table from each active package's rows, and writes the startup table's sentence from it, so a package that is not active adds no row. `/command-table`, `/;`, and `/commands` print the joined command table, and `/shortcuts`, `/sc`, and `/:` the shortcuts table, each as it stands and with no rule loaded. How a command's rows are written is the a-command-domain-carries-its-rows-of-the-command-table rule's, which loads when a command is written.
 
@@ -11,6 +11,8 @@
 **How to apply:** at the end of the session-start read, print the plugin's `command-table-startup.md` once, then the current line, and then turn to the engineer's request or wait for one.
 
 ## History
+
+Until Thu Nov 19 2026 the current line read *Type /current or /c for open and active work.* The engineer made `/c` the alias of `/commit`, and the line names `/'`.
 
 Until Wed Nov 18 2026 the current line read *Type /current for open and active work.* The engineer added its alias `/c`.
 
@@ -260,3 +262,4 @@ Changed by Scott Bellware on Tue Nov 10 2026 at 9:48:54 PM PT
 Changed by Scott Bellware on Tue Nov 10 2026 at 11:45:30 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:43:31 PM PT
 Changed by Scott Bellware on Wed Nov 18 2026 at 2:28:48 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 4:38:48 PM PT

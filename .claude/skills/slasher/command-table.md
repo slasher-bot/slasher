@@ -3,7 +3,7 @@
 | `/slasher help` | Print the help of every Slasher command |
 | `/commands, /;` | Print this table |
 | `/recent, /?` | Brief summary of recent work, and what's next. |
-| `/current, /', /c` | Lists the current items, then the current features and experiments. |
+| `/current, /'` | Lists the current items, then the current features and experiments. |
 | `/next, /proceed, /.` | Proceed to the next step in the current multi-step process or with the action that the agent is suggesting, or resume interrupted work |
 | `/next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, notes, and work to be done, each with a state. |
@@ -24,6 +24,7 @@
 | `/brainstorm` | Brainstorming records points as they are said, freeform in no order, and organizes them when the writer is done. |
 | `/test` | These commands run the project's tests, or other compliance routines, quality checks, and report on them. |
 | `/push, /p` | These commands commit the work and push the current branch to its remote, and never force. |
+| `/commit, /c` | Commits the work on the current branch, and pushes nothing. |
 | `/commit-and-push, /cp` | Commits the work, then pushes the current branch. |
 | `/projects` | Lists the Slasher projects registered on this machine. The list helps move ideas, new patterns, and corrections into other projects. |
 | `/release` | Presents the candidates for a package's next version, for the engineer to choose. |

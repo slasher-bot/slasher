@@ -168,7 +168,6 @@ PROCESS
   /current [<n>]                   The current items, or the n most recent,
                                    then the current features and experiments
   /' [<n>]                         An alias of /current
-  /c [<n>]                         An alias of /current
   /recent                          Brief summary of recent work, and what's
                                    next
   /?                               An alias of /recent
@@ -333,6 +332,9 @@ PUSH
 
   /push                            Push the current branch to its upstream
   /p                               An alias of /push
+  /commit                          Run the suite, then commit the work on
+                                   the current branch, and push nothing
+  /c                               An alias of /commit
   /commit-and-push                 Run the suite, commit the work, then push
                                    the current branch
   /cp                              An alias of /commit-and-push

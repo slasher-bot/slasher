@@ -4,6 +4,9 @@ PUSH
 
   /push                            Push the current branch to its upstream
   /p                               An alias of /push
+  /commit                          Run the suite, then commit the work on
+                                   the current branch, and push nothing
+  /c                               An alias of /commit
   /commit-and-push                 Run the suite, commit the work, then push
                                    the current branch
   /cp                              An alias of /commit-and-push
