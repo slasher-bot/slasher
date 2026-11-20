@@ -71,6 +71,18 @@ The rename is a structural change and a change to a term that existing records c
 - **2026-11-19** — **`install.sh` corrects each path written as `implementations/…` inside an item to `progressions/…`.**
 - **2026-11-19** — **The loop records, the log entries, and the implementation records' own text are corrected to say progression.** This replaces the statement above that historical records keep the word they were written with, which stays as written. It departs from the disclosure-is-the-one-reason-to-edit-a-historical-record rule, which permits an edit to a historical record only for disclosure. Whether `install.sh` makes this correction in a Slasher project, whether the record file names that say implementation are renamed, and whether that rule is amended, are not settled.
 
+**As the engineer stated it**, answering the three questions that resolution left open:
+
+> Does install.sh also make that correction in projects that use Slasher? — Yes
+>
+> Are file names that contain "implementation" renamed? — Yes
+>
+> Is the rule amended? — Yes
+
+- **2026-11-19** — **`install.sh` makes the correction to progression in the historical records of every Slasher project.**
+- **2026-11-19** — **Record file names that contain implementation are renamed to say progression.**
+- **2026-11-19** — **The disclosure-is-the-one-reason-to-edit-a-historical-record rule is amended** to permit this correction. Its wording is not settled.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
@@ -80,3 +92,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 11:39:30 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:40:18 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:42:00 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:50:39 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:52:42 PM PT
