@@ -56,9 +56,19 @@ Each answer changes different rules:
 
 - **2026-11-19** — This item **does not replace** the idea `2026-11-20T04-43-41Z-implementations-can-be-created-and-started-directly`. The idea stays a separate item.
 
+**As the engineer stated it:** They're left out, answering *whether the steps that serve only code are left out because the work is content, or because it produces prose instead of code*. Asked on what basis, the engineer selected *Because it is content*.
+
+- **2026-11-19** — **The steps that serve only code are left out of every `/content` implementation, because it is content**: the five hinges, the loop record, and the question of whether the engineer decides at each step. This holds whatever the implementation produces. Code written inside one, such as a script that builds a site, goes through none of them.
+
+**As the engineer stated it:** No, answering *whether content work is asked for a forecast*.
+
+- **2026-11-19** — **Content work is not asked for a forecast.** It states none, and is not asked the verdict question.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:45:22 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:02 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:50:41 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:21 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:37 PM PT
