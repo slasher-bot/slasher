@@ -12,7 +12,7 @@ Realizes the idea `2026-11-20T04-43-41Z-progressions-are-created-and-started-dir
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -56,8 +56,11 @@ Realizes the idea `2026-11-20T04-43-41Z-progressions-are-created-and-started-dir
 - **2026-11-20** — Forecast: No forecast, selected by the engineer.
 - **2026-11-20** — Commands: /progression and /progressions, with /implementation and /implementations as aliases, selected by the engineer. /implementation titles its record `Implementation — <name>`, as the engineer directed.
 - **2026-11-20** — Plan: Accept, selected by the engineer, after two revisions.
+- **2026-11-20** — Conclusion: Completed, requested by the engineer with `/feature complete`. `master` was fast-forwarded to the branch, which held every commit on `master`.
+- **2026-11-20** — Branch deletion and worktree removal: Delete the branch and worktree, selected by the engineer. The branch was never pushed.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 10:24:24 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:30:32 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:43:37 AM PT
