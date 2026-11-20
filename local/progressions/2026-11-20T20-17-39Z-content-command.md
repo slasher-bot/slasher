@@ -60,9 +60,12 @@ Realizes the work item `2026-11-20T06-40-24Z-content-items`.
 - **2026-11-20** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-20** — Forecast: No forecast, selected by the engineer.
 - **2026-11-20** — Plan: Accept, selected by the engineer.
+- **2026-11-20** — Merge into master: Merge, selected by the engineer.
+- **2026-11-20** — Branch deletion and worktree removal: Remove and delete, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 12:17:39 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:26:56 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:28:47 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:30:24 PM PT
