@@ -19,20 +19,32 @@
 
 **Where the words match no record, say so, and open nothing.** Where an ordinal is given and no list of records was printed in the session, say so, and open nothing.
 
-**Where no words were typed, ask which record**, through the selection interface. Offer the current items and the current implementations, most recently created first.
+**As the engineer later stated it:** For #2 and #3, they should act on either the last record or the last text that was generated and being worked on.
+
+**Where no words were typed, open the last thing worked on: the more recent of the most recent principal record and the last text the agent generated that the engineer is working on.** The principal record is the one the a-reply-that-writes-a-record-ends-with-the-records-path rule names, and `/record open` opens the same one. The text is a piece the agent wrote in the chat and the engineer is working on, such as a draft under review. It is not every reply.
+
+1. Where the more recent is the record, open it as `/record open` does.
+2. Where the more recent is text already in a file, open that file.
+3. Where the more recent is text in the chat only, write it, as it now stands, to a markdown file in the system's temporary directory, named for the text, as `$TMPDIR/cart-receipt-draft.md`. Then open that file.
+4. Where there is neither, say so, and open nothing.
+
+After the open, say what was opened, in one line, with its path: from the project root for a record, and in full for a file outside the project.
 
 **`/open` is in the RECORD command domain.** `/record help` prints its help. `/open help` says that this command takes no `help`, names `/record help`, and does nothing more.
 
-**Why:** the engineer often wants to read or edit a record that is not the one just written, such as one a list just showed. `/record open` opens only the most recent principal record, and finding any other record takes a search.
+**Why:** the engineer often wants to read or edit a record that is not the one just written, such as one a list just showed. `/record open` opens only the most recent principal record, and finding any other record takes a search. A bare `/open` most often means the thing just worked on, which can be a draft that is not a record.
 
-**How to apply:** on `/open`, find the record the words name, and open it with the platform's command. Where the words name none, or more than one, say so or ask, as above.
+**How to apply:** on `/open`, find the record the words name, and open it with the platform's command. Where the words name none, or more than one, say so or ask, as above. With no words, open the more recent of the last principal record and the last text being worked on.
 
 ## History
+
+Until Thu Nov 19 2026 a bare `/open` asked which record, through the selection interface, and offered the current items and the current implementations, most recently created first.
 
 Until Mon Nov 16 2026 the example path ended with the record's state, `-OPEN`.
 
 Related:
 
+- the a-reply-that-writes-a-record-ends-with-the-records-path rule — the principal record a bare `/open` opens
 - the the-record-command-copies-prints-or-opens-the-most-recent-principal-record rule — `/record open`, which opens the most recent principal record
 - the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule — the ordinal and the handle a printed list gives a record
 
@@ -40,3 +52,4 @@ Related:
 
 Authored by Scott Bellware on Sat Nov 14 2026 at 9:54:46 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 5:08:30 PM PT

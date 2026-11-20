@@ -1,6 +1,7 @@
 RECORD
   These commands print or copy the path of, print, or open the most recent
-  principal record, and open any record by name.
+  principal record, open any record by name, and open the last record or
+  text worked on.
 
   /record                          Print the record's path
   /record copy                     Copy the record's path to the clipboard
@@ -10,4 +11,6 @@ RECORD
                                    application. <record>: an ordinal from
                                    the last list, a handle, a path, or
                                    words from its title
+  /open                            Open the last record or the last text
+                                   worked on, whichever is more recent
   /record help                     Print this command's help
