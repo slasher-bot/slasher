@@ -22,6 +22,17 @@
 - **Hinge, naming:** the condition *When slasher-home.toml is missing* encloses *Fails*.
 - **Outcome:** `test/automated/resolve-project/slasher-home-without-slasher-home-toml.sh` was uncontested before the case existed, because the name lookup also failed. With the case, it fails for its own reason.
 
+
+## Cycle 3 — a path under the home directory
+
+- **Hinge, actuation:** the same as the normal path, in its own file.
+- **Hinge, observation:** the printed path, compared with the control home directory joined to the rest of the declared path. The engineer asked for the value `~/projects/slasher/slasher`, and the script printed the `~` unread.
+- **Hinge, controls:** a temporary directory sent to the script as `HOME`, and a declaration of `path = "~/some-slasher-home"`. The control home is unique to the run, so the test can tell it from the engineer's own.
+- **Hinge, implementation:** written directly. A leading `~`, alone or before a `/`, is replaced by `$HOME`, as `projects.toml` reads it. A `~` anywhere else is left as written.
+- **Hinge, naming:** *Prints the Slasher home directory, with a leading ~ read as the home directory*.
+- **Outcome:** `test/automated/resolve-project/slasher-home-under-the-home-directory.sh` failed with `~/some-slasher-home` printed, and passes with the expansion.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 8:56:25 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 9:05:17 PM PT

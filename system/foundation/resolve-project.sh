@@ -20,6 +20,7 @@
 # ~/.config/slasher/slasher-home.toml records. SLASHER_HOME_PROJECT names
 # another file in its place, so a test can use its own. Where the machine
 # declares no Slasher home directory, it prints nothing and exits non-zero.
+# A leading ~ in the path is the home directory.
 #
 # <name> prints the root of the project in the machine's registry whose
 # directory has that name, as list-projects.sh lists them. Where no
@@ -61,6 +62,11 @@ case $1 in
       echo "No Slasher home directory is declared in $config" >&2
       exit 1
     fi
+
+    # A leading ~ is the home directory, as it is in projects.toml.
+    case $slasher_home in
+      "~"|"~/"*) slasher_home=$HOME${slasher_home#"~"} ;;
+    esac
 
     printf '%s\n' "$slasher_home"
     ;;
