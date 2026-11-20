@@ -48,7 +48,12 @@ Each answer changes different rules:
 
 - **2026-11-19** — A prose review before content merges is **optional**. Which review command it is, and whether the writer accepts it, are not settled.
 
+**As the engineer stated it:** Yes, answering *whether outline, draft, review, and final are offered as standard phases for content, or the writer names their own every time*.
+
+- **2026-11-19** — **Outline, draft, review, and final are offered as standard phases** for content. They are offered, so the writer may still take them or not.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:45:22 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:02 PM PT
