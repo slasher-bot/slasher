@@ -34,6 +34,13 @@
 
 The rename is a structural change and a change to a term that existing records carry, so it is a migration. Its migration record is written in `local/migration/` before anything is renamed. Historical records keep the word they were written with.
 
+## Settled
+
+**As the engineer stated it:** Yes, answering *whether the directory becomes `local/progressions/`*.
+
+- **2026-11-19** — **The directory `local/implementations/` becomes `local/progressions/`.**
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:35:25 PM PT
