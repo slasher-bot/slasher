@@ -1,6 +1,6 @@
 # A workspace project can have its own projects.toml
 
-**State:** Implementation
+**State:** Realized
 
 **Tags:** [idea]
 
@@ -38,3 +38,4 @@ The workspace project commits a small list of its member projects. That list is 
 Authored by Scott Bellware on Thu Nov 19 2026 at 8:39:16 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 9:27:49 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 9:36:34 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:13:48 PM PT
