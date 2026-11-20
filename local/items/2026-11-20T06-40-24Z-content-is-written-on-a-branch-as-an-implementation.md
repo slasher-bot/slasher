@@ -1,0 +1,42 @@
+# Content is written on a branch, as an implementation of its own kind
+
+**State:** Open
+
+**Tags:** [work]
+
+**As the engineer stated it:** What kind of features does Slasher need to write content? For example, writing an article for a publication should happen on a branch, but an article isn't a feature or experiment. And not all writing is an article.
+
+Writing needs what a feature or an experiment has, without the parts that serve only code. The kind of implementation becomes an open set, as the kinds of items are, so an article, an essay, a lesson, or a page is each its own kind. The idea `2026-11-20T04-43-41Z-implementations-can-be-created-and-started-directly` is the start of it.
+
+## What content needs
+
+1. **Kinds you can name freely.**
+   - `/implementation new article The pricing column` would create `Article — The pricing column`, tagged `[article]`, on a branch named `article/pricing-column`.
+   - Any word could be a kind, as it is for items, where a kind the rule does not list is as good as one it does.
+   - Features and experiments would become two kinds among many.
+
+2. **A lifecycle without the parts that serve only code.** Writing keeps a branch, a record, a declared end, and the selection of branch or worktree. It drops these:
+   - The five hinges and the loop record. The local rule that Design By Efferent does not govern content work already keeps the method off content, but the general rule for implementations still says every one is designed through the five hinges.
+   - The question of whether the engineer decides at each step or the agent works alone.
+   - The forecast question, unless the writer chooses to state one.
+
+3. **A content check before the merge, in place of the tests.**
+   - Code merges after its tests pass. Writing has no tests, so today it would wait only for a separate confirmation from the engineer.
+   - The `prose` package's review commands, `/prose critique`, `/prose edit`, and `/prose suggest`, could be that check: a review the writer accepts before the merge.
+
+4. **Commit messages written for content.** The commit-message rules say the subject is always the software. A commit on an article names the piece and its new state, as in *Pricing column draft is complete*.
+
+5. **Lists that include every kind.** `/current`, the status line, and the status reports show an article in progress the same way they show a feature. Today `/features` and `/experiments` each show only their own kind.
+
+6. **Optional stages.** Phases already exist. An article could run outline, draft, review, and final as phases, but only where the writer wants them.
+
+## The decision that is open
+
+Each answer changes different rules:
+
+- **Open kinds:** one lifecycle, and the parts that serve only code apply only to features and experiments.
+- **A single content kind**, such as `[writing]`, with what is being written named in the title.
+
+---
+
+Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
