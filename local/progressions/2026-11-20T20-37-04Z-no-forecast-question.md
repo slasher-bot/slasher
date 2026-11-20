@@ -12,7 +12,7 @@ Realizes the idea `2026-11-20T19-31-16Z-remove-the-forecast-question-from-progre
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -56,8 +56,11 @@ Realizes the idea `2026-11-20T19-31-16Z-remove-the-forecast-question-from-progre
 - **2026-11-20** — Forecast: No forecast, selected by the engineer.
 - **2026-11-20** — Plan: Revise, selected by the engineer, who asked that the phase's forecast question be removed as well.
 - **2026-11-20** — Plan: Accept, selected by the engineer.
+- **2026-11-20** — Merge into master: Merge, selected by the engineer.
+- **2026-11-20** — Branch deletion: Delete, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 12:37:04 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:40:47 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:44:25 PM PT
