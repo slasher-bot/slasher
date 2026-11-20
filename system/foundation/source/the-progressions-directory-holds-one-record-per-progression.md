@@ -10,7 +10,7 @@
 
 **As the engineer stated it:** change features and experiments so that both can have either an intent or a question. And: an intent can also bring a forecast and verdict.
 
-**Whether the work states a forecast is asked when the progression is created, and whether it reaches a verdict is asked at its end. The lifecycle reads both.** The forecast question is put to the engineer when the progression is created and recorded as a confirmation, beside the working location and the participation. Only work with a forecast is asked the verdict question, when its work is complete. Neither follows from the kind, or from whether the work opens with a question or an intent.
+**No forecast question is asked, and whether the work reaches a verdict is asked at its end. The lifecycle reads both.** The work states a forecast only where the engineer gives one without being asked. Only work with a forecast is asked the verdict question, when its work is complete. Neither follows from the kind, or from whether the work opens with a question or an intent.
 
 ## The record
 
@@ -21,7 +21,7 @@ Open with the **Question** or the **Intent**, then the setup:
 - the **progression branch**
 - its **base**
 - the **working location** chosen when the progression is created
-- **whether it states a forecast**, asked when the progression is created, and the forecast where it states one
+- **the forecast**, where the engineer gives one without being asked
 - **whether it reaches a verdict**, asked at the end of work with a forecast
 - a **`**Tags:**`** line carrying `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`
 
@@ -29,7 +29,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Work without a forecast states none of that.** There is no comparison against a forecast, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word, which any progression can take.
 
-**Every record carries the confirmations the lifecycle required**, so the work's authority is auditable: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the progression's creation, the verdict selection at the end where the work has a forecast, adding a worktree to work already under way, and branch deletion with worktree removal. **Work that reaches a verdict also records** the affirmation declaration, concluding a superseded one, and merging untested code.
+**Every record carries the confirmations the lifecycle required**, so the work's authority is auditable: the working-location selection and the attended-or-unattended selection, each at the progression's creation, the verdict selection at the end where the work has a forecast, adding a worktree to work already under way, and branch deletion with worktree removal. **Work that reaches a verdict also records** the affirmation declaration, concluding a superseded one, and merging untested code.
 
 ## The state
 
@@ -87,7 +87,7 @@ The same frontmatter-free markdown as rules — a `# Experiment — <name>`, `# 
 
 **Why:** an experiment and a feature share one lifecycle. What differs between two progressions is whether the work is judged against a forecast, and that is a decision about this piece of work rather than about its kind. A forecast recorded at creation keeps a verdict possible, and the verdict is decided at the end, when the work has shown what it shows. The kind keeps naming what the work is.
 
-**How to apply:** record every progression here, tagged `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`. Open with the question or the intent, then the branch topology, the working location, and whether it states a forecast. Forecast before the work where the engineer gives one, and record what happened against it. Record the verdict selection at the end, where the work has a forecast.
+**How to apply:** record every progression here, tagged `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`. Open with the question or the intent, then the branch topology and the working location. Write the forecast before the work where the engineer gives one, and record what happened against it. Record the verdict selection at the end, where the work has a forecast.
 
 Write the state line as `Open` when `new` writes the record, or as `Active` when `start` writes it, make it `Active` when the work starts, and update it as the state changes. Record each confirmation the lifecycle requires.
 
@@ -100,13 +100,13 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 5. An experiment is tagged `[experiment]`, a feature `[feature]`, and a piece of writing, called content, `[content]`. A progression created directly, with no kind, is tagged `[progression]`, or `[implementation]` where `/implementation` created it. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 6. The tags name what the work is. No rule reads them to decide how the work runs, except `[content]`. Content leaves out the steps that serve only code, as the content-is-a-progression-without-the-steps-that-serve-only-code rule says.
 7. Any kind opens with a question or an intent, whichever the work has.
-8. Whether the work states a forecast is asked when the progression is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
+8. No forecast question is asked. The work states a forecast only where the engineer gives one without being asked.
 9. Whether the work reaches a verdict is asked at the end, of work with a forecast only, and recorded as a confirmation. The lifecycle reads both. Neither follows from the kind, or from whether the work opens with a question or an intent.
 
 ## The record
 
 1. Open with the **Question** or the **Intent**.
-2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
+2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and the forecast where the engineer gives one. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
 4. The setup also includes a `**Tags:**` line carrying `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
@@ -114,7 +114,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
 8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
-10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the progression's creation, and the verdict selection at the end where the work has a forecast.
+10. Every record carries these: the working-location selection and the attended-or-unattended selection, each at the progression's creation, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
 12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded progression, and merging untested code.
 
@@ -204,8 +204,11 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 - 2026-11-20, revised: a progression created directly takes `[progression]` or `[implementation]`, and its title; checked: 126 directives, 126 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: the content kind, tagged `[content]` and titled `Content — <name>`, the one tag a rule reads; checked: 67 directives, 66 kept, 1 less precise, 0 lost, 1 repair: *any kind*, not *either kind*, opens with a question or an intent; re-checked: 67 directives, 67 kept, 0 less precise, 0 lost
+- 2026-11-20, revised: no forecast question is asked, and the forecast selection is no longer a confirmation, which the engineer settled; checked: 96 directives, 96 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Fri Nov 20 2026 whether the work states a forecast was asked when the progression was created, and recorded as a confirmation. The engineer removed the question.
 
 Until Fri Nov 20 2026 there was no content kind, and no rule read a progression's tag to decide how it runs.
 
@@ -296,3 +299,4 @@ Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:37:58 PM PT

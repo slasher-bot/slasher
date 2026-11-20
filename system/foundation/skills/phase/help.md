@@ -13,7 +13,8 @@ PHASE
                                    not realized)
   /phase inconclusive              -> Inconclusive
 
-  Whether a phase states a forecast is asked when it is created.
+  A phase is not asked whether it states a forecast. It states one
+  where you give one.
   A phase with one is asked the verdict question when it completes.
 
   /phases                          List the phases, the current one emphasized

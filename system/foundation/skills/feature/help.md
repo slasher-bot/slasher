@@ -27,6 +27,6 @@ FEATURES
   /features [current] [<n>]        The current features, or the n most recent
   /feature help                    Print this command's help
 
-  Either kind opens with a question or an intent. A forecast is
-  stated when it is created, where you give one, and the verdict is asked
-  when the work completes.
+  Any kind opens with a question or an intent. No forecast question is
+  asked. A forecast is stated where you give one, and the verdict is asked
+  when work with a forecast completes.
