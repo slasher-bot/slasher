@@ -56,6 +56,21 @@ The rename is a structural change and a change to a term that existing records c
 
 - **2026-11-19** — **The rename is done before content is built.** The work item `2026-11-20T06-40-24Z-content-items` waits for this item to conclude.
 
+**As the engineer stated it**, answering what else `install.sh` renames besides the directory and the state line:
+
+> install.sh renames this line in records that haven't concluded — Yes
+>
+> Renaming it to Progression: would make those items match the new state word — Yes
+>
+> Paths written as implementations/… inside items — Correct it to "progressions"
+>
+> Loop records, log entries, and the records' own text. These are historical, and they keep the word they were written with — Correct the records to "progressions"
+
+- **2026-11-19** — **`install.sh` renames the `- **Implementation branch:**` line to `- **Progression branch:**` in every record that has not concluded.** The status line script reads that line to find the branch of the work under way.
+- **2026-11-19** — **`install.sh` renames the `**Implementation:**` line in items to `**Progression:**`.**
+- **2026-11-19** — **`install.sh` corrects each path written as `implementations/…` inside an item to `progressions/…`.**
+- **2026-11-19** — **The loop records, the log entries, and the implementation records' own text are corrected to say progression.** This replaces the statement above that historical records keep the word they were written with, which stays as written. It departs from the disclosure-is-the-one-reason-to-edit-a-historical-record rule, which permits an edit to a historical record only for disclosure. Whether `install.sh` makes this correction in a Slasher project, whether the record file names that say implementation are renamed, and whether that rule is amended, are not settled.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
@@ -64,3 +79,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 11:38:14 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:39:30 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:40:18 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:42:00 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:50:39 PM PT
