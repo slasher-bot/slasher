@@ -40,6 +40,7 @@ Prose that says *implementation* in a sentence the script cannot read is left as
 - **2026-11-20** — Increment 1 is made on `feature/worktree/progression-replaces-implementation`. The mechanical pass, run on this repository's records, also rewrote the records that discuss this rename, so that *`implementations/` becomes `progressions/`* read *`progressions/` becomes `progressions/`*. Those records were restored and left out. In a Slasher project the same can happen only to a record that discusses this rename.
 - **2026-11-20** — Increment 2: the feature is Completed, and the branch merges to `master`.
 - **2026-11-20** — Increment 3: the packages are compiled and published from `master`. `foundation`, `design-by-efferent`, `git`, `journal`, and `language` changed, and each push was a fast-forward.
+- **2026-11-20** — Increment 4: each Slasher project on this machine updates its packages, and the update is committed in each. In the three that held `implementations/`, the migration moved it to `progressions/` and conformed their records. No clash was reported.
 
 ---
 
@@ -47,3 +48,4 @@ Authored by Scott Bellware on Fri Nov 20 2026 at 12:18:26 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:32:16 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 9:55:31 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:03:32 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:08:31 AM PT
