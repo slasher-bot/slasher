@@ -40,7 +40,12 @@ The rename is a structural change and a change to a term that existing records c
 
 - **2026-11-19** — **The directory `local/implementations/` becomes `local/progressions/`.**
 
+**As the engineer stated it:** I'm not sure. It's either "progression" or "doing". Asked which, the engineer selected *Progression*.
+
+- **2026-11-19** — **The item state Implementation becomes Progression.** An item takes it when a progression is created for it.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:35:25 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:38:14 PM PT
