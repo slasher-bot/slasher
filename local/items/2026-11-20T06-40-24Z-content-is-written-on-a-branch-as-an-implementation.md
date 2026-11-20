@@ -64,6 +64,10 @@ Each answer changes different rules:
 
 - **2026-11-19** — **Content work is not asked for a forecast.** It states none, and is not asked the verdict question.
 
+**As the engineer stated it:** Yes, answering *whether `/features` and `/experiments` stay as they are, and whether content gets a list command of its own*.
+
+- **2026-11-19** — **`/features` and `/experiments` stay as they are, and content gets a list command of its own.** The list command's name is not settled.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
@@ -72,3 +76,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:02 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:50:41 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:21 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:37 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:49:31 PM PT
