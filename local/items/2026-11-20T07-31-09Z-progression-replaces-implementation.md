@@ -87,6 +87,17 @@ The rename is a structural change and a change to a term that existing records c
 
 - **2026-11-19** — **The disclosure-is-the-one-reason-to-edit-a-historical-record rule is not amended.** The migration makes the correction to the historical records. This replaces the resolution above that the rule is amended, which stays as written.
 
+**Selected by the engineer**, from questions put to settle what an unattended rename would otherwise decide alone:
+
+- **2026-11-20** — **Only the record sense of implementation changes.** The implementation hinge, and implementation meaning code written, keep the word.
+- **2026-11-20** — **A rule name that contains implementation takes progression in its place, and nothing else changes**, as an-implementation-runs-on-a-branch-to-a-declared-end becomes a-progression-runs-on-a-branch-to-a-declared-end.
+- **2026-11-20** — **The work is a progression, and its file is a progression record.**
+- **2026-11-20** — **Record titles such as `Feature — The current command` stay.** They name the kind, not the general term.
+- **2026-11-20** — **Journal entries are left as written.** The migration does not change them.
+- **2026-11-20** — **The `foundation` vocabulary defines progression and progression record, and substitutes progression for implementation in the record sense.**
+- **2026-11-20** — **The idea `2026-11-20T04-43-41Z-implementations-can-be-created-and-started-directly` is conformed:** its title becomes *Progressions can be created and started directly*, and its file is renamed.
+- **2026-11-20** — **The rename is worked as a feature on its own branch, in a worktree**, with the migration record written on `master` first.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
@@ -98,3 +109,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 11:42:00 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:50:39 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:52:42 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:54:37 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:14:49 AM PT
