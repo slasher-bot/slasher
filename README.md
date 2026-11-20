@@ -13,9 +13,10 @@ Where there is ambiguity, the agent gives the engineer options, including the op
 - **Commands for the work.** Slash commands record items and decisions, start features and experiments, take the next step, and say what was recently done. `/help` lists them all.
 - **A design method with the engineer in control at decision points.** Design By Efferent: the agent stops at the decisions that matter and offers options, never a single proposal.
 - **Human in the loop, or fully automated.** When a feature or experiment starts, the engineer chooses how much autonomy the agent is given.
+- **Domain conventions.** Packages for language, testing, git, and versioning.
 - **Project-local rules.** A project's own rules and terms sit beside Slasher's, and take precedence over them.
 - **Journaling.** The engineer keeps a journal in their own words. The agent reads it at the start of a session, and writes an entry only when the engineer dictates one. Journal entries can be private, and those are stored outside of the project.
-- **Domain conventions.** Packages for language, testing, git, and versioning.
+- **Content.** Authoring and editing prose content.
 - **Email.** An optional package, `imap`, fetches IMAP mail and Gmail labels into the project, with each credential kept in the macOS Keychain. Another, `smtp`, sends a message through the same account, after the engineer confirms it.
 - **Machinery.** The installer, package sets, a session-start hook, a status line, and commands.
 
