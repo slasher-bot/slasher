@@ -52,8 +52,13 @@ Each answer changes different rules:
 
 - **2026-11-19** — **Outline, draft, review, and final are offered as standard phases** for content. They are offered, so the writer may still take them or not.
 
+**As the engineer stated it:** No, answering *whether this item replaces the idea "Implementations can be created and started directly"*.
+
+- **2026-11-19** — This item **does not replace** the idea `2026-11-20T04-43-41Z-implementations-can-be-created-and-started-directly`. The idea stays a separate item.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:45:22 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:48:02 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 10:50:41 PM PT
