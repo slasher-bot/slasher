@@ -5,14 +5,14 @@
 
 ## Reframed
 
-1. **The startup display has no stated purpose.** Lines were added one at a time, each for a reason, and nobody decided what the display is for. The display is now cluttered. Removing the open-implementations line is one instance of that larger question.
+1. **The startup display has no stated purpose.** Lines were added one at a time, each for a reason, and nobody decided what the display is for. The display is now cluttered. Removing the open-progressions line is one instance of that larger question.
 2. **A candidate purpose: tell the engineer where they are and what is going on.** The display is not a report of everything that is open.
 3. **A candidate principle: the display shows only actionable information.** What counts as actionable is not settled:
    - Unpushed commits may be actionable.
    - The current branch is context, not an action, but it is useful.
-   - Open implementations are useful sometimes, and not at every session start.
-4. **A distinction to examine: what needs the engineer's attention, against what only exists.** An open implementation can exist without needing attention at each session start.
-5. **Before a line is removed, find whether what it computes is used elsewhere.** The open-implementations count may be computed for the display only, or something else may read it.
+   - Open progressions are useful sometimes, and not at every session start.
+4. **A distinction to examine: what needs the engineer's attention, against what only exists.** An open progression can exist without needing attention at each session start.
+5. **Before a line is removed, find whether what it computes is used elsewhere.** The open-progressions count may be computed for the display only, or something else may read it.
 6. **Configuration of the display is not wanted.** A sensible default is preferred over a setting for each line.
 7. **A question about the process: tiny changes become work items, and the work items then need managing.** It is not settled whether that is a defect or the expected cost of a structured workflow.
 

@@ -4,7 +4,7 @@
 
 1. A private record is a record the engineer keeps for a project outside the project's repository. It is not committed with the project.
 2. Anything given to `/private` is recorded only in the private directory. Nothing of it is written into the project.
-3. A private record is a document, an item, a log entry, or a journal entry. In a private session, it is also a work session record, an implementation record, or a loop record.
+3. A private record is a document, an item, a log entry, or a journal entry. In a private session, it is also a work session record, a progression record, or a loop record.
 4. Its contents are what the engineer directs. Write the engineer's words, or what the engineer asks the agent to write. Add nothing on your own initiative.
 
 **As the engineer stated it:** When the "/private <instruction>" form is used, then private session ends upon comletion of the instruction
@@ -22,7 +22,7 @@
 | log entry | `~/.local/share/slasher/log/<project>/` |
 | journal entry | `~/.local/share/slasher/journal/<project>/` |
 | work session record | `~/.local/share/slasher/work-sessions/<project>/` |
-| implementation record | `~/.local/share/slasher/implementations/<project>/` |
+| progression record | `~/.local/share/slasher/progressions/<project>/` |
 | loop record | `~/.local/share/slasher/loops/<project>/` |
 
 4. One file in a project's directory is one record.
@@ -45,7 +45,7 @@
 1. A bare `/private` starts a private session. It lasts until the session ends, or until `/private end` or `/private session end`.
 2. `/private <instruction>`, or `/private session <instruction>`, starts a private session, carries out the instruction in it, and then ends it. The session ends when the reply that carries out the instruction is done: delete its state file, where there is one, and say that records go into the project again. Starting it ends an unrecorded session, as a bare `/private` does, so delete the unrecorded session's state file, where there is one.
 3. In a private session, every record the agent writes goes to the private directory, in the directory for its kind, and never into the project. That holds for a record the engineer asks for and for a record a rule asks for.
-4. A record is a file under `slasher/local/` that a rule tells the agent to write: an item, a log entry, a journal entry, a work session record, an implementation record, or a loop record.
+4. A record is a file under `slasher/local/` that a rule tells the agent to write: an item, a log entry, a journal entry, a work session record, a progression record, or a loop record.
 5. Carry out the instruction in the private session, then end it. Where no instruction was typed, or the `/private` was bare, start the private session and wait for the engineer's request.
 6. When the private session starts, say once that the session's records go to the private directory. Say it again when it ends. A session started with an instruction says both in the one reply.
 7. A file that is not a record still changes in the project, as the work asks. Code, a test, a rule, a vocabulary, a README, and a skill are not records.
@@ -70,7 +70,7 @@
 2. **An item** takes an item's shape: the ISO-8601-UTC prefix, a name with no state, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
 3. **A log entry** takes a log entry's shape: the ISO-8601-UTC prefix and a one-line title, with a `**Tags:**` line or a body where it needs one.
 4. **A journal entry** takes the shape the private-journal-convention gives it.
-5. **A work session record, an implementation record, or a loop record** takes the shape its own rule gives it, with no log entry in the project and no commit.
+5. **A work session record, a progression record, or a loop record** takes the shape its own rule gives it, with no log entry in the project and no commit.
 6. Where a file of that name is already there, ask, through the selection interface, whether to replace it or to use another name.
 
 ## Only on the engineer's command
@@ -106,6 +106,8 @@
 
 ## History
 
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
+
 Until Mon Nov 16 2026 a private item's name took the state suffix.
 
 Until Tue Nov 17 2026, `/private session <instruction>` started a session that lasted until `/private end` or the end of the session, and words that were not a subcommand or an existing file were not guessed at: the agent asked which subcommand was meant.
@@ -134,3 +136,4 @@ Changed by Scott Bellware on Thu Nov 12 2026 at 11:46:17 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 2:56:31 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Tue Nov 17 2026 at 12:40:19 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT

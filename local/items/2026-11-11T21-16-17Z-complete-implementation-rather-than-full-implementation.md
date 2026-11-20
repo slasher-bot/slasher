@@ -6,7 +6,7 @@
 
 The term stands in the at-the-implementation-hinge-the-engineer-chooses-a-direct-implementation-or-red-green-refactor rule: its first candidate, and its first option's label.
 
-**Implementation:** `2026-11-11T21-34-13Z-complete-implementation`, the feature that does it.
+**Progression:** `2026-11-11T21-34-13Z-complete-implementation`, the feature that does it.
 
 ---
 

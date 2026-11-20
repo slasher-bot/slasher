@@ -6,7 +6,7 @@
 - **Original rank:** 52 of 106
 - **Unclarity:** 0.52
 
-Every working-state artifact under `slasher/` that is a document with a body ends with a **provenance footer**. That is the `Authored by … / Changed by …` block, in the record-a-rules-authorship-in-a-provenance-footer format, with a local human-readable datetime. This covers **implementation records (experiments and features), items (designs, plans, notes, and deferred work among them), loop records, and work session records**.
+Every working-state artifact under `slasher/` that is a document with a body ends with a **provenance footer**. That is the `Authored by … / Changed by …` block, in the record-a-rules-authorship-in-a-provenance-footer format, with a local human-readable datetime. This covers **progression records (experiments and features), items (designs, plans, notes, and deferred work among them), loop records, and work session records**.
 
 - **Same footer, different reason than the rule files.** The rule-file footer exists because `git subtree` strips the composite's per-file history when a package is installed into a Slasher project, so `git blame` can't show a rule's author there. That reason does **not** apply to a working-state artifact: it lives in the project's own `slasher/` tree, is never shipped by subtree, and keeps its git history intact. The footer is here for a different reason. **The file should be useful on its own.** These artifacts are written to be read as self-contained documents, so a reader should not have to leave the file and query the git log to learn who wrote it and when.
 - **The format is the record-a-rules-authorship-in-a-provenance-footer format.** `Authored by <name> on <local datetime>` for the original author, a `Changed by <name> on <local datetime>` line appended for each later change — oldest first, never rewritten. The datetime is the artifact's true authoring time. For a dated artifact whose ISO-8601-UTC filename prefix records when it was created, that prefix is the authoritative time (a later git add-date from a migration is a false trail).
@@ -19,13 +19,13 @@ Its authoring time is already in its ISO-8601-UTC filename and its commit. A foo
 
 This is a different justification from the rule-file footer's (which recovers history that subtree strips). Stating it once, here, keeps every working-state convention from repeating it. The log is exempt because its one-file-per-entry shape already carries its provenance in the filename, and a footer would break that shape.
 
-**How to apply:** end a provenance footer on every one of these: an implementation record, whether an experiment or a feature; an item, whatever it is tagged; a loop record; and a work session record. The format is the record-a-rules-authorship-in-a-provenance-footer format: `Authored by` on creation, and an appended `Changed by` line on each later change. Do not add a footer to a `slasher/local/logs/log/` entry.
+**How to apply:** end a provenance footer on every one of these: a progression record, whether an experiment or a feature; an item, whatever it is tagged; a loop record; and a work session record. The format is the record-a-rules-authorship-in-a-provenance-footer format: `Authored by` on creation, and an appended `Changed by` line on each later change. Do not add a footer to a `slasher/local/logs/log/` entry.
 
 ## Compressed
 
 1. Every working-state artifact under `slasher/` that is a document with a body ends with a **provenance footer**.
 2. The footer is the `Authored by … / Changed by …` block, in the record-a-rules-authorship-in-a-provenance-footer format, with a local human-readable datetime.
-3. The footer goes on every implementation record, whether an experiment or a feature.
+3. The footer goes on every progression record, whether an experiment or a feature.
 4. It goes on every item, whatever it is tagged, including designs, plans, notes, and deferred work.
 5. It goes on every loop record and every work session record.
 6. Write `Authored by <name> on <local datetime>` for the original author, on creation.
@@ -48,8 +48,11 @@ This is a different justification from the rule-file footer's (which recovers hi
 - 2026-10-28, revised: Why points removed, solubility 80 → 79, clarity 0.81 → 0.80; checked: 17 directives, 15 kept, 1 less precise, 1 lost
 - 2026-10-29, merge from master re-checked: 14 directives, 14 kept, 0 less precise, 0 lost, 0 repairs
 - 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
@@ -63,7 +66,7 @@ Related:
 
 - the record-a-rules-authorship-in-a-provenance-footer rule — the footer's format and the rule-file case
 - the the-log-holds-one-file-per-entry-with-a-one-line-title rule — the exempt one-line log
-- the artifact conventions that reference this one — the-implementations-directory-holds-one-record-per-implementation rule, the-items-directory-holds-one-file-per-item rule, a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule, the-work-sessions-directory-holds-one-record-per-work-session rule, and DBE's a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule
+- the artifact conventions that reference this one — the-progressions-directory-holds-one-record-per-progression rule, the-items-directory-holds-one-file-per-item rule, a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule, the-work-sessions-directory-holds-one-record-per-work-session rule, and DBE's a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule
 
 ---
 
@@ -103,3 +106,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 10:02:10 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT

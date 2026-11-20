@@ -22,7 +22,7 @@ A change to a package leaves every project that installed it holding the previou
 
 **Why:** the engineer decides when other repositories move, and that decision is not readable from what a package change was. A refresh writes merge commits into repositories they may not be working in this week, against rules that will be read at the start of every session there. The engineer is weighing that. The agent is weighing a diff it has just produced.
 
-An agent that names the pending state presses toward a change across repositories at the moment its own view of the work is narrowest. That is the same failure the an-implementation-runs-on-a-branch-to-a-declared-end rule bars when it forbids the agent raising the end of an experiment, reached through a different act.
+An agent that names the pending state presses toward a change across repositories at the moment its own view of the work is narrowest. That is the same failure the a-progression-runs-on-a-branch-to-a-declared-end rule bars when it forbids the agent raising the end of an experiment, reached through a different act.
 
 **A report is the place this fails**, rather than a question, which is why the rule reaches reporting at all. An agent instructed not to ask will still close its summary with the state of everything it did not do. The engineer then answers a prompt nobody phrased as one.
 
@@ -76,7 +76,7 @@ Until Sun Oct 25 2026 this rule was named downstream-work-is-never-offered.
 
 Related:
 
-- the an-implementation-runs-on-a-branch-to-a-declared-end rule — the agent never raising the end of an experiment, the same failure through a different act
+- the a-progression-runs-on-a-branch-to-a-declared-end rule — the agent never raising the end of an experiment, the same failure through a different act
 - the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the notice, which is the harness's and reports only the project the session is in
 - this package's README — the refresh procedure itself, which is run on the engineer's instruction
 
@@ -91,3 +91,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:53 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT

@@ -9,6 +9,6 @@ The question, put through the selection interface:
 The options:
 
 - **One line (Recommended)** — In test/automated/statusline.sh: the status line has no second line.
-- **Script prints nothing** — In test/automated/current-implementation.sh: the script's output is empty.
+- **Script prints nothing** — In test/automated/current-progression.sh: the script's output is empty.
 
 The engineer's answer: **One line (Recommended)**

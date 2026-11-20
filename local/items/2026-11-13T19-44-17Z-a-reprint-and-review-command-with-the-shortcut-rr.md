@@ -7,7 +7,7 @@
 
 This is useful typically in content editing when working a draft of a text. It asks the agent to reprint the text so far, and to follow it with a review or critique.
 
-**Implementation:** `2026-11-14T00-16-56Z-reprint-and-review`, the feature that builds it.
+**Progression:** `2026-11-14T00-16-56Z-reprint-and-review`, the feature that builds it.
 
 ---
 

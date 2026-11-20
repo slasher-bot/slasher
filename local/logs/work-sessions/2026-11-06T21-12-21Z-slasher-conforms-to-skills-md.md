@@ -14,7 +14,7 @@ The engineer asked that the `<n>` argument of `/current` read as optional in the
 
 ## 3. The feature starts
 
-The engineer restructured `scratch/skills.md`, putting each command domain's root commands under one heading with one help command, and asked for a feature to conform Slasher to it. The feature record is `local/implementations/2026-11-06T20-54-01Z-conform-slasher-to-skills-md`. The engineer selected branch and worktree, attended participation, and a conclusion without an engineer's verdict.
+The engineer restructured `scratch/skills.md`, putting each command domain's root commands under one heading with one help command, and asked for a feature to conform Slasher to it. The feature record is `local/progressions/2026-11-06T20-54-01Z-conform-slasher-to-skills-md`. The engineer selected branch and worktree, attended participation, and a conclusion without an engineer's verdict.
 
 ## 4. The decisions
 
@@ -54,7 +54,7 @@ The engineer asked whether the feature was complete, then asked to complete it. 
 
 ## Where the durable records live
 
-- Feature record: `local/implementations/2026-11-06T20-54-01Z-conform-slasher-to-skills-md`
+- Feature record: `local/progressions/2026-11-06T20-54-01Z-conform-slasher-to-skills-md`
 - Work item: `local/items/2026-11-06T21-00-21Z-the-participation-question-shows-its-measures-without-literal-asterisks`
 - Rules: the a-command-takes-its-subcommand-first-asks-when-it-has-none-and-its-domain-takes-help rule, the the-waytide-skills-are-delivered-as-a-plugin-named-slasher rule, the the-command-domain-table-prints-when-the-rules-have-loaded rule, and the brainstorming-records-points-as-they-are-said-and-organizes-them-at-the-end rule
 - Vocabulary: the `journal` package's `vocabulary.md`

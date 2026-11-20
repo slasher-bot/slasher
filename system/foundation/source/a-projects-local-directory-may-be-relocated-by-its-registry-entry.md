@@ -18,8 +18,9 @@ Related:
 
 - the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule — what the local directory holds
 - the a-project-does-not-name-its-downstream-consumers-in-its-own-files rule — the per-machine configuration outside the repository
-- the an-implementation-runs-on-a-branch-to-a-declared-end rule — where a record is first written, which a relocated directory changes
+- the a-progression-runs-on-a-branch-to-a-declared-end rule — where a record is first written, which a relocated directory changes
 
 ---
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 8:50:16 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT

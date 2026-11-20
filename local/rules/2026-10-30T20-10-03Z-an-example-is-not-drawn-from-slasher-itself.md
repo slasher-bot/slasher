@@ -8,7 +8,7 @@
 
 **As the engineer stated it:** use the checkout, etc example for all examples.
 
-**What this does not reach.** A record of Slasher's own work names that work, because it is the record's subject and not an example. A log entry, an item, or an implementation record about Slasher is not an example of anything.
+**What this does not reach.** A record of Slasher's own work names that work, because it is the record's subject and not an example. A log entry, an item, or a progression record about Slasher is not an example of anything.
 
 **Why:** an example is there to show the reader a general thing through a particular one. When the particular is Slasher's own, the reader meets the system twice in one sentence, once as what is explained and once as what explains it, and cannot tell which is which.
 
@@ -20,7 +20,7 @@
 2. Draw an example in help text, documentation, or an explanation from some other project, never from Slasher's own work.
 3. Draw every example from one ordinary software project, understood without knowing anything about Slasher: a checkout, with a cart, a payment, and a receipt.
 4. Do not name a Slasher feature, branch, package, rule, or record as an example.
-5. A record of Slasher's own work, such as a log entry, an item, or an implementation record, names that work as its subject. That is not an example, and this rule does not reach it.
+5. A record of Slasher's own work, such as a log entry, an item, or a progression record, names that work as its subject. That is not an example, and this rule does not reach it.
 
 ## History
 

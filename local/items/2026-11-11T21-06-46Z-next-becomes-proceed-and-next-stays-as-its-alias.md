@@ -11,7 +11,7 @@
 
 **As the engineer stated it:** Actually, the base command should be "/next", as it pairs with "/next?". "/proceed" is the alias, and "/>>" is the shortcut. List the shortcut last in the table.
 
-**Implementation:** `2026-11-11T21-14-37Z-next-becomes-proceed`, the feature that builds it.
+**Progression:** `2026-11-11T21-14-37Z-next-becomes-proceed`, the feature that builds it.
 
 ---
 

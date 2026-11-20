@@ -7,7 +7,7 @@ The question, put through the selection interface:
 > Accept the plan? (Item: A /commit command, with the /c alias. Today /c is an alias of /current, so /c moves to /commit.)
 >
 > 1. Start an unattended feature, feature/worktree/commit-command, in a new worktree. The worktree keeps the uncommitted expanded-answer changes out of this work. The feature states no forecast.
-> 2. Commit the feature record, the item's Implementation state, and their log entries on master. Accepting this plan selects that commit.
+> 2. Commit the feature record, the item's Progression state, and their log entries on master. Accepting this plan selects that commit.
 > 3. Write a git rule: /commit runs the automated suite, commits the working tree's changes under the commit-message rules, and pushes nothing. /c does exactly what /commit does.
 > 4. Add the /commit and /c skills to the git package. Remove the /c skill from foundation.
 > 5. Add /commit and /c to the PUSH help, and add a /commit, /c row to the command table.

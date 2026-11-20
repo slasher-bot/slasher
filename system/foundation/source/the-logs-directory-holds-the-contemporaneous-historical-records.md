@@ -8,7 +8,7 @@
 - **`slasher/local/logs/loops/`** — the loop records, one file per feature, the cycles through the loop (`design-by-efferent`'s a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule).
 - **`slasher/local/logs/work-sessions/`** — the narrative record of a work session (`the-work-sessions-directory-holds-one-record-per-work-session`).
 
-**What makes a record belong here is that it accrues chronologically and is never revised.** Each is a running account of something that happened, entry after entry, in the order it happened. A reader reaches one by date. Nothing here is a statement of what is currently true, which is what separates these from an item, an implementation record, or a migration record.
+**What makes a record belong here is that it accrues chronologically and is never revised.** Each is a running account of something that happened, entry after entry, in the order it happened. A reader reaches one by date. Nothing here is a statement of what is currently true, which is what separates these from an item, a progression record, or a migration record.
 
 **A migration record is not one of these, and the distinction is the sharpest test of the rule.** It is one document rather than entries that accrue, it is revised while the migration runs, and it is **prospective** — a sequence of steps written to be executed. The three records above are retrospective accounts of what happened. That a migration record is *kept* afterward makes it durable, not chronological, and durability is not what this directory is for.
 
@@ -22,7 +22,7 @@
 
 **`logs/loops/` is contributed by `design-by-efferent`**, which includes `foundation` rather than the reverse. Foundation names the parent directory here, and that is a **citation** — it requires nothing of what sits inside `loops/`, reads nothing there, and derives nothing from it. A project installing `foundation` alone has `logs/log/` and no `logs/loops/`, and nothing is missing.
 
-**Why:** the three were siblings of `items/`, `implementations/`, and `migration/` under `slasher/local/`, which put a chronological account beside a statement of current state and made the directory listing say nothing about which was which. Grouping them says it in the path.
+**Why:** the three were siblings of `items/`, `progressions/`, and `migration/` under `slasher/local/`, which put a chronological account beside a statement of current state and made the directory listing say nothing about which was which. Grouping them says it in the path.
 
 The grouping also gives a later contemporaneous, historical record somewhere obvious to go, in a place that names it as the same kind of thing as the others.
 
@@ -39,7 +39,7 @@ The grouping also gives a later contemporaneous, historical record somewhere obv
 7. Write a work session record to `slasher/local/logs/work-sessions/`.
 8. A record belongs here only when it accrues chronologically and is never revised.
 9. Each record here is a running account, entry after entry, in the order things happened, and it is reached by date.
-10. Nothing here states what is currently true. Items, implementation records, and migration records do not belong here.
+10. Nothing here states what is currently true. Items, progression records, and migration records do not belong here.
 11. A migration record does not belong here. It is one document, revised while the migration runs, and prospective: steps written to be executed.
 12. Keeping a record afterward makes it durable, not chronological. Durability does not qualify a record for this directory.
 13. The three records keep their own names and their own conventions. This rule only groups them.
@@ -64,8 +64,11 @@ The grouping also gives a later contemporaneous, historical record somewhere obv
 - 2026-10-27, re-checked: 14 directives, 12 kept, 2 less precise, 0 lost, 2 repairs, re-checked kept
 - 2026-10-27, revised: the log is one file per entry, of short entries, not one line or one file per decision, a term the engineer settled; not checked
 - 2026-10-28, revised: Why points removed, solubility 73 → 70, clarity 0.82 → 0.85; checked: 13 directives, 11 kept, 2 less precise, 0 lost
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 A migration record was moved here on 2026-08-18 and moved back out the same day.
 
@@ -112,3 +115,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 10:02:47 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT

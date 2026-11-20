@@ -6,7 +6,7 @@ The question, put through the selection interface:
 
 > Accept the plan?
 >
-> 1. Write the feature record and its log entry on master, and make the idea Implementation.
+> 1. Write the feature record and its log entry on master, and make the idea Progression.
 > 2. Create the branch at the selected location.
 > 3. Write the test for -slasher-home first. It prints the path that a slasher-home.toml file declares.
 > 4. Write the test for a missing slasher-home.toml. The script fails and prints nothing.

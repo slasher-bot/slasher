@@ -77,7 +77,7 @@
 
 **The mode mechanism was decommissioned rather than amended.** This idea's premise was that a mode may change mid-stream because the pair is written into the record. The mechanism was removed from active service instead, so the premise is satisfied by the mode no longer existing.
 
-**What is deliberately not folded in.** `implementations/` holds a record with a branch lifecycle, and `logs/` holds the records that accrue chronologically. An idea is thinking, and neither of those is. The three-directory arrangement is the resting point, not one directory for everything.
+**What is deliberately not folded in.** `progressions/` holds a record with a branch lifecycle, and `logs/` holds the records that accrue chronologically. An idea is thinking, and neither of those is. The three-directory arrangement is the resting point, not one directory for everything.
 
 ## Settled 2026-08-25 — the aspiration is realized
 

@@ -23,9 +23,9 @@
    - `New mistake` creates an item tagged `[mistake]`.
    - `New problem` creates an item tagged `[problem]`.
    - `New observation` / `Record observation` / `Observation` / `Observe` creates an observation, tagged `[observation]`, with the state `Recorded`.
-2. **Implementations**
-   - `New feature` starts a feature, with its implementation record.
-   - `New experiment` starts an experiment, with its implementation record.
+2. **Progressions**
+   - `New feature` starts a feature, with its progression record.
+   - `New experiment` starts an experiment, with its progression record.
    - `New experiment with phases`: a new experiment prompts for whether it has phases.
    - An experiment and feature status command lists the phases, marks the current phase, and states its goal. A feature has no phases under the implementation-lifecycle rule, so what its status shows is not settled.
    - Affirming an experiment: the engineer's declaration that concludes it as `Affirmed`. The log is copied into the project log, and the branch merges where it produced implementation. The agent still never raises the end of an experiment, so the skill runs only on the engineer's command.
@@ -153,9 +153,9 @@
 
 ## Amended — 2026-10-29: phases
 
-**`/phases` is a root command that lists the current implementation's phases in order, and prints the current phase with emphasis.**
+**`/phases` is a root command that lists the current progression's phases in order, and prints the current phase with emphasis.**
 
-**Not settled:** how it finds the current implementation, such as from the branch the working tree is on, and how it sits beside `/experiment status` and `/feature status`, which list the phases with the current one's goal.
+**Not settled:** how it finds the current progression, such as from the branch the working tree is on, and how it sits beside `/experiment status` and `/feature status`, which list the phases with the current one's goal.
 
 ## Amended — 2026-10-30: the engineer's edits to the help text
 
@@ -181,19 +181,19 @@
 
 ## Amended — 2026-10-30: the phases command
 
-**`/phases` is a root command for the current implementation's phases, with these subcommands.**
+**`/phases` is a root command for the current progression's phases, with these subcommands.**
 
 - `/phases` lists the phases in order and prints the current phase with emphasis.
 - `/phases current` prints the current phase, its goal, and its branch.
 - `/phases add <name>` adds a phase to the record, after the last one.
-- `/phases start` starts the next phase in the record's order: it creates the phase's branch from the implementation's branch, then states the phase's goal and lists the phases.
-- `/phases complete` concludes the current phase where it reaches no verdict, and merges its branch into the implementation's branch.
-- `/phases affirm`, `/phases refute`, and `/phases inconclusive` conclude the current phase where it reaches a verdict, on the engineer's declaration only. An affirmed phase merges into the implementation's branch.
+- `/phases start` starts the next phase in the record's order: it creates the phase's branch from the progression's branch, then states the phase's goal and lists the phases.
+- `/phases complete` concludes the current phase where it reaches no verdict, and merges its branch into the progression's branch.
+- `/phases affirm`, `/phases refute`, and `/phases inconclusive` conclude the current phase where it reaches a verdict, on the engineer's declaration only. An affirmed phase merges into the progression's branch.
 - `/phases help` prints this command's help.
 
-**The rules behind it** are the an-implementation-runs-on-a-branch-to-a-declared-end rule, for a phase's branch and its merge, and the a-phase-starts-by-stating-its-goal rule, for what is printed when a phase starts. Listing the phases on request has no rule yet, and is among the rules the slash-commands phase writes.
+**The rules behind it** are the a-progression-runs-on-a-branch-to-a-declared-end rule, for a phase's branch and its merge, and the a-phase-starts-by-stating-its-goal rule, for what is printed when a phase starts. Listing the phases on request has no rule yet, and is among the rules the slash-commands phase writes.
 
-**Whether a phase reaches a verdict is chosen for each phase, when it is added**, whatever its implementation's choice. The engineer settled this on 2026-10-30. The an-implementation-runs-on-a-branch-to-a-declared-end rule does not yet say so, and is amended with the rules the slash-commands phase writes.
+**Whether a phase reaches a verdict is chosen for each phase, when it is added**, whatever its progression's choice. The engineer settled this on 2026-10-30. The a-progression-runs-on-a-branch-to-a-declared-end rule does not yet say so, and is amended with the rules the slash-commands phase writes.
 
 ## Amended — 2026-10-30: phase
 
@@ -234,7 +234,7 @@
 
 **Not settled:**
 
-- what counts as a multi-step process, and where its steps come from, such as a plan's tasks or an implementation's phases. No rule says so yet, and one is written with the other missing rules.
+- what counts as a multi-step process, and where its steps come from, such as a plan's tasks or a progression's phases. No rule says so yet, and one is written with the other missing rules.
 - whether `/next?` is an allowed skill name. A `?` may not be, and the name is checked when the skills are built.
 
 ## Amended — 2026-11-05: the skills as built
@@ -324,7 +324,7 @@ On 2026-10-30: "Add a “/current” command that lists current items". The engi
 
 On 2026-10-30: "Actually, it should be “/current-items”"
 
-On 2026-10-30: "Create a “/phases” root command. Add appropriate subcommands." Asked whether a phase's verdict follows its implementation's or is chosen per phase, the engineer selected that it is chosen per phase.
+On 2026-10-30: "Create a “/phases” root command. Add appropriate subcommands." Asked whether a phase's verdict follows its progression's or is chosen per phase, the engineer selected that it is chosen per phase.
 
 On 2026-10-30: "Make “phases” singular: “phase”"
 

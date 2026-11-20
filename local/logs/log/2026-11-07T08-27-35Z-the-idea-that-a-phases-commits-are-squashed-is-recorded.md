@@ -1,1 +1,1 @@
-# The idea that a phase's commits are squashed into the implementation branch is recorded, Open
+# The idea that a phase's commits are squashed into the progression branch is recorded, Open

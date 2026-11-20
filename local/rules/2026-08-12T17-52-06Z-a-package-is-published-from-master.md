@@ -4,9 +4,9 @@
 
 **So an experiment never publishes and a feature never publishes.** Neither is `master`.
 
-**A merge to some other branch does not release the hold.** An experiment's upstream branch is not always `master`, and a feature's is not either. Each may merge into another topic branch, and the foundation an-implementation-runs-on-a-branch-to-a-declared-end rule says so. That merge concludes the work against its own upstream. It does not put the content on `master`, so it licenses no publish. The publish waits for `master`, however many merges that takes.
+**A merge to some other branch does not release the hold.** An experiment's upstream branch is not always `master`, and a feature's is not either. Each may merge into another topic branch, and the foundation a-progression-runs-on-a-branch-to-a-declared-end rule says so. That merge concludes the work against its own upstream. It does not put the content on `master`, so it licenses no publish. The publish waits for `master`, however many merges that takes.
 
-**The work also has to have concluded.** Work that reaches a verdict is **affirmed**, which the engineer declares. Work without a verdict is **completed**, and has no affirmation. Whether the work reaches a verdict is asked at its end, of work with a forecast, whatever its kind, as the foundation an-implementation-runs-on-a-branch-to-a-declared-end rule states. Reaching `master` and reaching a concluded state are two conditions, and a publish waits for the two.
+**The work also has to have concluded.** Work that reaches a verdict is **affirmed**, which the engineer declares. Work without a verdict is **completed**, and has no affirmation. Whether the work reaches a verdict is asked at its end, of work with a forecast, whatever its kind, as the foundation a-progression-runs-on-a-branch-to-a-declared-end rule states. Reaching `master` and reaching a concluded state are two conditions, and a publish waits for the two.
 
 ## The publish is never offered
 
@@ -14,7 +14,7 @@
 
 **A publish named as a precondition is the same offer.** *This package cannot be installed anywhere until it is published* states a true fact and points at the publish. It makes the open state read as an obstacle. Do not write what the work is blocked on where the block is that the work has not concluded.
 
-**This is the publishing case of the foundation an-implementation-runs-on-a-branch-to-a-declared-end rule's instruction** that the agent never raises the end of work that reaches a verdict. An offer to publish reaches the same place by a longer route. A publish requires a merge, and a merge requires the ending.
+**This is the publishing case of the foundation a-progression-runs-on-a-branch-to-a-declared-end rule's instruction** that the agent never raises the end of work that reaches a verdict. An offer to publish reaches the same place by a longer route. A publish requires a merge, and a merge requires the ending.
 
 **Report what is settled and what is open, and stop there.** The engineer signals when the work is done.
 
@@ -24,9 +24,9 @@
 
 ## The exception is rare and it is confirmed
 
-Where an implementation's own question or intent is about publishing, put the exception through the selection UI and record it as a confirmation in its record. Nothing else licenses a publish from a topic branch.
+Where a progression's own question or intent is about publishing, put the exception through the selection UI and record it as a confirmation in its record. Nothing else licenses a publish from a topic branch.
 
-**The never-offer instruction does not reach that case.** An implementation whose question or intent is about publishing has publishing as its subject, so raising it is the work rather than an offer. What is forbidden is raising it where the implementation is about something else.
+**The never-offer instruction does not reach that case.** A progression whose question or intent is about publishing has publishing as its subject, so raising it is the work rather than an offer. What is forbidden is raising it where the progression is about something else.
 
 **Slasher carries no version numbers**, and this rule asks for none. The `versioning` package's the-next-version-is-put-to-the-engineer-never-decided-by-the-agent rule governs a consuming project that versions its packages. It does not govern this project, which versions nothing.
 
@@ -63,9 +63,9 @@ Never offer a publish while an experiment or a feature is open. Never name one a
 
 ## The exception
 
-1. Where an implementation's own question or intent is about publishing, put the exception through the selection UI and record it as a confirmation in its record.
+1. Where a progression's own question or intent is about publishing, put the exception through the selection UI and record it as a confirmation in its record.
 2. Nothing else licenses a publish from a topic branch.
-3. In that implementation, raising the publish is the work, not a forbidden offer. Raising it in an implementation about something else stays forbidden.
+3. In that progression, raising the publish is the work, not a forbidden offer. Raising it in a progression about something else stays forbidden.
 4. Slasher carries no version numbers, and this rule asks for none. The `versioning` package's the-next-version-is-put-to-the-engineer-never-decided-by-the-agent rule governs a consuming project that versions its packages. It does not govern this project, which versions nothing.
 
 ## Compression
@@ -84,7 +84,7 @@ Related:
 
 - `CONTRIBUTING.md` — the publish procedure itself
 - the foundation work-in-a-downstream-project-is-never-offered-and-its-pending-state-is-not-reported rule — the same never-offer instruction for the act on the other side of a publish, refreshing the projects that installed the package
-- the foundation an-implementation-runs-on-a-branch-to-a-declared-end rule — the affirmation and the completion a publish waits on, its instruction that the agent never raises the end of work that reaches a verdict, and why work without one has no affirmation
+- the foundation a-progression-runs-on-a-branch-to-a-declared-end rule — the affirmation and the completion a publish waits on, its instruction that the agent never raises the end of work that reaches a verdict, and why work without one has no affirmation
 - the versioning package's the-next-version-is-put-to-the-engineer-never-decided-by-the-agent rule — which governs a consuming project that versions its packages, and not this one
 
 ---

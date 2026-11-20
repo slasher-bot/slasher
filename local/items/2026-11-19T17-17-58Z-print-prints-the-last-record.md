@@ -10,7 +10,7 @@
 
 - **2026-11-19** — `/print` acts on either the last record or the last text that was generated and is being worked on. **As the engineer stated it:** For #2 and #3, they should act on either the last record or the last text that was generated and being worked on.
 
-**Implementation:** `2026-11-20T01-14-23Z-print-the-last-record`
+**Progression:** `2026-11-20T01-14-23Z-print-the-last-record`
 
 ---
 

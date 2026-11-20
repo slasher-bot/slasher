@@ -13,7 +13,7 @@ A project's local directory can be located in any directory. When the local dire
 - **2026-11-16** — Where a relocated local directory is in a git repository, a record is committed in that repository.
 - **2026-11-16** — Every worktree of a project uses the one relocated local directory. A record is written once, in that directory, and no merge acts on it. The engineer noted that the capability is used in content projects, where branches are rarer.
 
-**Implementation:** `2026-11-17T04-44-33Z-relocatable-local-directory`, the feature that builds it.
+**Progression:** `2026-11-17T04-44-33Z-relocatable-local-directory`, the feature that builds it.
 
 ---
 

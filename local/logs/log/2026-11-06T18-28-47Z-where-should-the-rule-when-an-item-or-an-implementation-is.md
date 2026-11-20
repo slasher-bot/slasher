@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **Amend foundation rules** — Add it to the foundation rules that govern item states and implementation states, so every project that installs foundation receives it.
+- **Amend foundation rules** — Add it to the foundation rules that govern item states and progression states, so every project that installs foundation receives it.
 - **New local rule** — Write it as a new rule in local/rules/, so it binds only this repository.
 
 The engineer's answer: **Amend foundation rules**

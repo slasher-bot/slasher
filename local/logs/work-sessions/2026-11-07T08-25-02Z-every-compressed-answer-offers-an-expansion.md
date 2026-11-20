@@ -46,7 +46,7 @@ The rule's compressed text was checked by two agents. The first checker took the
 ## Where the durable records live
 
 - The item: `local/items/2026-11-07T08-08-25Z-a-brief-explanation-offers-a-more-detailed-answer`
-- The feature record: `local/implementations/2026-11-07T08-13-03Z-brief-explanation-offers-more-detail`
+- The feature record: `local/progressions/2026-11-07T08-13-03Z-brief-explanation-offers-more-detail`
 - The rules: the `language` package's an-answer-is-a-list-and-prose-must-justify-itself rule, and the `design-by-efferent` package's attended-or-unattended-is-chosen-when-the-work-is-started rule
 - The Unattended-first idea: `local/items/2026-11-07T08-03-39Z-the-participation-question-offers-unattended-first`
 - The log entries from `2026-11-07T08-03-39Z` onward under `local/logs/log/`

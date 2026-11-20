@@ -5,7 +5,7 @@
 
 Update consuming projects, as well as the repository.
 
-**Implementation:** `2026-11-13T08-54-58Z-refresh-after-publish`
+**Progression:** `2026-11-13T08-54-58Z-refresh-after-publish`
 
 ---
 

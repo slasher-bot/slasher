@@ -26,7 +26,7 @@
 2. A log entry, including the one the hook writes for a process question. The hook writes none while the session lasts.
 3. A journal entry, in the project journal or the private journal
 4. A work session record
-5. An implementation record
+5. A progression record
 6. A loop record
 7. A migration record
 8. A brainstorm collection file
@@ -43,7 +43,7 @@
 1. When the session starts, say once that nothing in it will be recorded. Say it again when it ends. A session started with an instruction says both in the one reply.
 2. A reply in the session prints no *Record:* line, since it wrote no record.
 3. Where the work would change an existing record's content or state, say so, and ask, through the selection interface, whether to end the session first. Do not change the record in the session.
-4. Before starting a feature or an experiment, ask, through the selection interface, whether to end the session first. An implementation without its record would be left silently open.
+4. Before starting a feature or an experiment, ask, through the selection interface, whether to end the session first. A progression without its record would be left silently open.
 5. Starting a private session ends an unrecorded one, and starting an unrecorded session ends a private one. Records only go one way at a time.
 
 ## An unrecorded session times out
@@ -61,6 +61,8 @@
 
 ## History
 
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
+
 1. Until Tue Nov 17 2026, `/unrecorded <instruction>` started a session that lasted, like a bare `/unrecorded`, until `/unrecorded end` or the end of the session.
 2. Until Mon Nov 16 2026, `/unrecorded` was part of the PRIVATE command domain. `/unrecorded help` said that the command takes no `help`, and named `/private help`.
 
@@ -69,7 +71,7 @@ Related:
 - the anything-given-to-private-is-recorded-only-in-the-private-directory rule — the private session this command mirrors
 - the a-reply-that-writes-a-record-ends-with-the-records-path rule — the *Record:* line a reply in the session does not print
 - the a-process-question-and-its-answer-are-logged rule — the hook that writes no entry in the session
-- the an-implementation-runs-on-a-branch-to-a-declared-end rule — why a feature or an experiment is not started in the session
+- the a-progression-runs-on-a-branch-to-a-declared-end rule — why a feature or an experiment is not started in the session
 
 ---
 
@@ -77,3 +79,4 @@ Authored by Scott Bellware on Mon Nov 16 2026 at 10:42:15 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 10:55:07 PM PT
 Changed by Scott Bellware on Tue Nov 17 2026 at 12:34:26 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 8:27:01 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:43 AM PT

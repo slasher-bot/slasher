@@ -6,7 +6,7 @@ The question, put through the selection interface:
 
 > Accept the plan?
 >
-> 1. Write the feature record and its log entry on master. Make the item "A workspace project can have its own projects.toml" Implementation, with its log entry. Commit them.
+> 1. Write the feature record and its log entry on master. Make the item "A workspace project can have its own projects.toml" Progression, with its log entry. Commit them.
 > 2. Create the branch feature/worktree/workspace-projects-toml in a worktree at ../slasher-feature-worktree-workspace-projects-toml.
 > 3. Write the test first: list-projects.sh, run in a workspace, lists the projects in the machine list and the projects in the workspace list together, each once.
 > 4. Write a test: with no machine list, list-projects.sh lists the workspace list's projects.

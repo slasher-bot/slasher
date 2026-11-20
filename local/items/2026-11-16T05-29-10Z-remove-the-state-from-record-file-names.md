@@ -8,7 +8,7 @@ Consider removing the state from records' file names so that referencing them vi
 
 Added Mon Nov 16 2026: the change will also require a migration for downstream projects.
 
-**Implementation:** `2026-11-17T02-31-38Z-record-names-without-state`, the feature that builds it.
+**Progression:** `2026-11-17T02-31-38Z-record-names-without-state`, the feature that builds it.
 
 ---
 

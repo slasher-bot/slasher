@@ -9,7 +9,7 @@
 
 **As the engineer stated it:** "store = project" should be supported, even if it defaults to "project" when left out
 
-**Implementation:** `2026-11-14T17-01-25Z-fetch-file-store-project`, the feature that builds it.
+**Progression:** `2026-11-14T17-01-25Z-fetch-file-store-project`, the feature that builds it.
 
 ---
 

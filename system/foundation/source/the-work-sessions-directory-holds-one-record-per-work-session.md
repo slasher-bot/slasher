@@ -3,7 +3,7 @@
 `slasher/local/logs/work-sessions/` holds **work session records**: the communicable, chronological narrative of a discrete work session between an engineer and Claude. A work session is a unit of the engineer's work. It may run a few hours, a whole day, or span more than a day. Its boundaries are the discrete piece of work, not a fixed clock.
 
 - **What a work session record is.** The **guided tour** of the work session — what was asked and what was concluded at each step, in order, with the settled vocabulary defined as it arises. It is written to be *read by a person*, so its job is orientation and reasoning, not truth-of-record.
-- **It is not the source of truth.** The durable records are: the binding rules (`slasher/system/`, `slasher/local/rules/`), the project's items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the implementation records (`slasher/local/implementations/`). The work session record **points to** them throughout. They are authoritative, and the work session record is the narrative that ties them together and preserves the reasoning behind each fork.
+- **It is not the source of truth.** The durable records are: the binding rules (`slasher/system/`, `slasher/local/rules/`), the project's items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the progression records (`slasher/local/progressions/`). The work session record **points to** them throughout. They are authoritative, and the work session record is the narrative that ties them together and preserves the reasoning behind each fork.
 - **When it is written.** At the end of a work session that produced substantial dialogue, decisions, or discovery worth a durable narrative — on the engineer's request, or when the agent recognizes the work session has accumulated such work and proposes recording it. A trivial work session needs no record. The work session record is not a per-session obligation. **The agent also proposes recording at a conclusion it carries out:** when it concludes a feature, an experiment, or a phase, or takes an item to Completed, Realized, Abandoned, or Superseded. Each is a discrete act the agent takes, so the proposal cannot be missed there.
 - **How the recording is asked.** When the agent raises the question of recording a work session, it puts the decision through the **AskUserQuestion** selection UI, not a free-text prose question. It offers three options, each naming it a **work session record**: **write a new work session record** for the work, **amend the previous work session record**, or **don't write a work session record**. The amend option names the previous record in a few words, as in *Amend the previous work session record, "Checkout payments"*, so the engineer knows which record it is. The engineer's selection decides it. **The prompt says "work session"** — the directory is `work-sessions/`, a work session here is a unit of the engineer's work, and the shortened form invites the reader to supply some other sense of "session". (A direct instruction from the engineer to write or amend a record needs no such prompt — the question isn't being asked.)
 - **Naming.** A work session record is a dated working-state artifact, so it takes the ISO-8601-UTC filename prefix (see the file-names rule): `YYYY-MM-DDTHH-MM-SSZ-<name>.md`.
@@ -41,7 +41,7 @@ When *you* raise the question of recording, rather than being told to, put it th
 6. It defines settled vocabulary as that vocabulary arises.
 7. It is written for a person to read. Its job is orientation and reasoning, not truth-of-record.
 8. It is not the source of truth. The durable records are authoritative.
-9. The durable records are the binding rules (`slasher/system/`, `slasher/local/rules/`), the items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the implementation records (`slasher/local/implementations/`).
+9. The durable records are the binding rules (`slasher/system/`, `slasher/local/rules/`), the items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the progression records (`slasher/local/progressions/`).
 10. The record points to the durable records throughout. It does not restate them.
 11. The record keeps the reasoning behind each fork in the work. It ties the durable records together as a narrative and keeps the arc.
 12. Write a record at the end of a work session that produced substantial dialogue, decisions, or discovery worth keeping as a narrative.
@@ -85,8 +85,11 @@ When *you* raise the question of recording, rather than being told to, put it th
 - 2026-11-11, revised: an observation item is a note, a term the engineer settled; not re-checked
 - 2026-11-14, revised: *started* replaces *began*, and Completed replaces Done in point 15; not re-checked
 - 2026-11-15, revised: a record is written at a work session's end, where it said close, as point 12; not re-checked
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Sun Nov 15 2026 this rule said a record is written at a work session's *close*, where it now says its *end*. The begin, start, end, conclude work item settled that a work session ends.
 
@@ -118,7 +121,7 @@ Until Mon Oct 26 2026 this rule was named a-work-session-record-is-the-narrative
 
 Related:
 
-- the the-implementations-directory-holds-one-record-per-implementation rule and the the-items-directory-holds-one-file-per-item rule — the sibling artifact conventions
+- the the-progressions-directory-holds-one-record-per-progression rule and the the-items-directory-holds-one-file-per-item rule — the sibling artifact conventions
 - the record-a-rules-authorship-in-a-provenance-footer rule — the footer's format
 - the present-every-prompt-to-the-engineer-through-the-selection-ui rule — why every prompt goes through the selection UI
 - the the-log-holds-one-file-per-entry-with-a-one-line-title rule
@@ -189,3 +192,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 11:56:50 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:08 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:31:35 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT

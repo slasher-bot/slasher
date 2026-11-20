@@ -41,7 +41,7 @@ Until Sun Nov 8 2026 the agent chose whether an unattended feature reached a ver
 Related:
 
 - the `design-by-efferent` package's attended-or-unattended-is-chosen-when-the-work-is-created rule — the plan's form, and unattended work in a feature
-- the an-implementation-runs-on-a-branch-to-a-declared-end rule — a feature's start, which the agent decides here
+- the a-progression-runs-on-a-branch-to-a-declared-end rule — a feature's start, which the agent decides here
 - the `git` package's run-the-test-suite-after-changes-before-considering-whether-to-commit rule — the commit on `master` that still waits
 - the present-every-prompt-to-the-engineer-through-the-selection-ui rule — the prompts the agent decides instead of putting
 
@@ -50,3 +50,4 @@ Related:
 Authored by Scott Bellware on Sat Nov 7 2026 at 1:17:43 AM PT
 Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:25 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:17 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT

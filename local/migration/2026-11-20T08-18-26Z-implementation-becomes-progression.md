@@ -37,7 +37,9 @@ Prose that says *implementation* in a sentence the script cannot read is left as
 ## What happened
 
 - **2026-11-20** — The feature record and this migration record are written on `master`.
+- **2026-11-20** — Increment 1 is made on `feature/worktree/progression-replaces-implementation`. The mechanical pass, run on this repository's records, also rewrote the records that discuss this rename, so that *`implementations/` becomes `progressions/`* read *`progressions/` becomes `progressions/`*. Those records were restored and left out. In a Slasher project the same can happen only to a record that discusses this rename.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 12:18:26 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:32:16 AM PT

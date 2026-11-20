@@ -9,6 +9,6 @@ The question, put through the selection interface:
 The options:
 
 - **Phase branch (Recommended)** — One name, as git shows it.
-- **Both, set apart** — The implementation's branch, a middle dot, and the phase's name.
+- **Both, set apart** — The progression's branch, a middle dot, and the phase's name.
 
 The engineer's answer: **Phase branch (Recommended)**

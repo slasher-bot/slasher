@@ -9,7 +9,7 @@ The question, put through the selection interface:
 > 1. Start an unattended feature for the item, on branch `feature/worktree/written-record-path-last`, in a new worktree. The work states no forecast.
 > 2. Commit the feature's first record and the item on master first, then create the branch.
 > 3. Write a foundation rule that loads at every session start, since writing a record happens in most replies.
-> 4. After the agent writes a record (an item, an implementation record, a rule, a log entry, a journal entry, a work session record, or a loop record), its reply ends with the record's full path.
+> 4. After the agent writes a record (an item, a progression record, a rule, a log entry, a journal entry, a work session record, or a loop record), its reply ends with the record's full path.
 > 5. Each path is alone on its own line, with nothing around it, so it can be copied or opened.
 > 6. Where a reply writes several records, each path gets its own line at the end. The record the reply is about comes last, and its log entries come before it.
 > 7. A record a hook writes, such as a decision's log entry, is not listed, since the agent did not write it.

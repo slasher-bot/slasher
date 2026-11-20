@@ -148,11 +148,11 @@ fi
 
 printf '%s\n' "$line"
 
-# The second line names the implementation under way. It is absent
-# where current-implementation.sh prints nothing.
-if [ -n "$system" ] && [ -x "$system/foundation/current-implementation.sh" ]; then
-  implementation=$("$system/foundation/current-implementation.sh" 2>/dev/null)
-  if [ -n "$implementation" ]; then
-    printf '%s\n' "$implementation"
+# The second line names the progression under way. It is absent
+# where current-progression.sh prints nothing.
+if [ -n "$system" ] && [ -x "$system/foundation/current-progression.sh" ]; then
+  progression=$("$system/foundation/current-progression.sh" 2>/dev/null)
+  if [ -n "$progression" ]; then
+    printf '%s\n' "$progression"
   fi
 fi

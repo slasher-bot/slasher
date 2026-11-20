@@ -3,7 +3,7 @@
 - **State:** Abandoned
 - **Tags:** [aspiration]
 
-**2026-08-25 — abandoned by the engineer's decision.** No reason is recorded, because none was stated. The Self-Explanation feature, started the same day to realize the interactive-chat half of this aspiration, was abandoned with it — see `local/implementations/2026-08-25T00-36-18Z-self-explanation-ABANDONED.md`.
+**2026-08-25 — abandoned by the engineer's decision.** No reason is recorded, because none was stated. The Self-Explanation feature, started the same day to realize the interactive-chat half of this aspiration, was abandoned with it — see `local/progressions/2026-08-25T00-36-18Z-self-explanation-ABANDONED.md`.
 
 **What this leaves standing elsewhere.** The `website` project's design holds production and presentation, including the two surfaces and the projection, by this record's own 2026-08-03 settlement. Abandoning this record decides nothing about that one.
 

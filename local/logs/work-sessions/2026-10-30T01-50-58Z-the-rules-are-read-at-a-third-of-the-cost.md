@@ -2,7 +2,7 @@
 
 This work session began as a question: can Waytide's rules be made much cheaper to read at the start of a session, with sessions behaving the same? It became the rule-reduction experiment, run in fifteen phases. It ended with the experiment affirmed and merged into `master`, and the session-start read at about 170,000 characters, against about 547,000 when it began.
 
-**This is the guided tour, not the record of truth.** The durable records it points to are authoritative: above all the experiment's record, `local/implementations/2026-10-22T04-51-25Z-rule-reduction`, which holds every finding, forecast, and figure, and the log, `local/logs/log/`, which holds an entry for each action below.
+**This is the guided tour, not the record of truth.** The durable records it points to are authoritative: above all the experiment's record, `local/progressions/2026-10-22T04-51-25Z-rule-reduction`, which holds every finding, forecast, and figure, and the log, `local/logs/log/`, which holds an entry for each action below.
 
 ## 1. The goal
 
@@ -126,7 +126,7 @@ This work session began as a question: can Waytide's rules be made much cheaper 
 
 ## Where the durable records live
 
-- **The experiment's record:** `local/implementations/2026-10-22T04-51-25Z-rule-reduction`, with its appendices.
+- **The experiment's record:** `local/progressions/2026-10-22T04-51-25Z-rule-reduction`, with its appendices.
 - **The compression rule:** a-rules-compressed-text-is-written-in-its-source-checked-against-it-and-its-figures-recorded-below-the-body.
 - **The loader and the hook:** `system/foundation/load-rules.sh` and `system/foundation/session-start.sh`.
 - **The log:** `local/logs/log/`, the entries from 2026-10-21 to 2026-10-30, with each of the engineer's decisions tagged `[decision]`.

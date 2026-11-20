@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **Items only** — They keep listing only the current items. Only /current adds the implementations.
-- **Same as /current** — They become aliases of /current, items then implementations.
+- **Items only** — They keep listing only the current items. Only /current adds the progressions.
+- **Same as /current** — They become aliases of /current, items then progressions.
 
 The engineer's answer: **Items only**

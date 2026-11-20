@@ -1,10 +1,10 @@
-# Implementation hinge: how does current-implementation.sh come about? — Working implementation, selected by the engineer
+# Implementation hinge: how does current-progression.sh come about? — Working implementation, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Implementation hinge: how does current-implementation.sh come about?
+> Implementation hinge: how does current-progression.sh come about?
 
 The options:
 

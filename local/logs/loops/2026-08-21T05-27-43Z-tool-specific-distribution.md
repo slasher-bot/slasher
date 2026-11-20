@@ -61,7 +61,7 @@ The feature that takes a tool-named package out of Waytide's default distributio
 ## Cycle 10 — The installed location, and the repository name
 
 - **Hinge** — where the package installs, and what follows for the repository's name.
-- **Chat** — the engineer stated `tool/ruby-lang/`, then corrected it to `tools/ruby-lang/`, which also matches the house plural of `rules/`, `ideas/`, `logs/`, and `implementations/`.
+- **Chat** — the engineer stated `tool/ruby-lang/`, then corrected it to `tools/ruby-lang/`, which also matches the house plural of `rules/`, `ideas/`, `logs/`, and `progressions/`.
 - **The breakage this surfaced** — `refresh-packages.sh` line 95 derives a repository name by flattening the installed path, `tr '/' '-'`. A package at `tools/ruby-lang` is refreshed from `tools-ruby-lang.git`, and the repository was `waytide-ruby`. The correspondence the scheme rests on was gone.
 - **Options** — `waytide/ruby-lang`, naming a grouped package's repository by its leaf and changing the derivation once. `waytide/tools-ruby-lang`, keeping the flattening exactly. Keep `waytide-ruby` and teach foundation to read a package's origin rather than derive it.
 - **Decision** — `waytide/tools-ruby-lang`. Nothing in any script changes, and the repository was an hour old with no consumers, so the rename cost only the raw URLs in its own files.

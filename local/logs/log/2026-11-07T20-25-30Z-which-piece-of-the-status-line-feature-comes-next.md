@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **Several current (Recommended)** — Only the implementation most recently acted upon is shown, not one line each.
+- **Several current (Recommended)** — Only the progression most recently acted upon is shown, not one line each.
 - **With a phase** — The branch of the phase under way is shown, such as feature/receipt.tax-line.
 - **None current** — No second line, which already holds. The test records it.
 

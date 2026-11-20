@@ -1,12 +1,12 @@
 # Work Session — The current command feature is completed (2026-11-06)
 
-This work session began as a request to change `/current-items` to `/current`, with a summary of current implementations below the items. It became a feature, built in its own worktree, and ended with the feature Completed, merged into `master`, and its item Realized.
+This work session began as a request to change `/current-items` to `/current`, with a summary of current progressions below the items. It became a feature, built in its own worktree, and ended with the feature Completed, merged into `master`, and its item Realized.
 
 This is the communicable record of the work session, a guided tour. The durable records it points to are the source of truth.
 
 ## 1. The idea is recorded
 
-The engineer asked: "Change current-items to current, and include a summary of current implementations at the bottom." It was recorded as the item `2026-11-06T18-10-47Z-the-current-command-lists-items-and-implementations`, Open. Three questions stayed open: whether `/current-items` stays as an alias, what a summary row holds, and which implementation states count as current.
+The engineer asked: "Change current-items to current, and include a summary of current implementations at the bottom." It was recorded as the item `2026-11-06T18-10-47Z-the-current-command-lists-items-and-progressions`, Open. Three questions stayed open: whether `/current-items` stays as an alias, what a summary row holds, and which progression states count as current.
 
 ## 2. The feature starts
 
@@ -18,12 +18,12 @@ The engineer answered four questions, each logged as a decision on 2026-11-06:
 
 - `/current-items` is removed, not kept as an alias.
 - `/item current` and `/item list current` list items only.
-- The summary shows each implementation's title and state.
-- An implementation counts as current when it is Active or Suspended.
+- The summary shows each progression's title and state.
+- A progression counts as current when it is Active or Suspended.
 
 ## 4. The command is built
 
-The commit "The current command lists items and implementations" replaced the `current-items` skill with a `current` skill, in the plugin and in `foundation`. It updated the help text and the help order. It extended the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule with the summary of implementations.
+The commit "The current command lists items and implementations" replaced the `current-items` skill with a `current` skill, in the plugin and in `foundation`. It updated the help text and the help order. It extended the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule with the summary of progressions.
 
 ## 5. The feature is checked and concluded
 
@@ -40,12 +40,12 @@ The engineer asked to conclude the feature. The item received a dated Settled se
 ## Glossary
 
 - **current item** — an item whose state is Open or Active.
-- **current implementation** — a feature or experiment whose state is Active or Suspended.
+- **current progression** — a feature or experiment whose state is Active or Suspended.
 
 ## Where the durable records live
 
-- Item: `local/items/2026-11-06T18-10-47Z-the-current-command-lists-items-and-implementations`
-- Feature record: `local/implementations/2026-11-06T18-13-34Z-current-command`
+- Item: `local/items/2026-11-06T18-10-47Z-the-current-command-lists-items-and-progressions`
+- Feature record: `local/progressions/2026-11-06T18-13-34Z-current-command`
 - Rule: the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule
 - Log entries: `local/logs/log/`, from `2026-11-06T18-10-47Z` to `2026-11-06T18-21-03Z`
 - Commits: "The current command lists items and implementations", "The current command feature is complete", and the merge of `feature/worktree/current-command`

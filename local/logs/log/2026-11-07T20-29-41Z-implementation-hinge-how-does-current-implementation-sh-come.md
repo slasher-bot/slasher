@@ -1,10 +1,10 @@
-# Implementation hinge: how does current-implementation.sh come to show the phase under way? — Working (Recommended), selected by the engineer
+# Implementation hinge: how does current-progression.sh come to show the phase under way? — Working (Recommended), selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Implementation hinge: how does current-implementation.sh come to show the phase under way?
+> Implementation hinge: how does current-progression.sh come to show the phase under way?
 
 The options:
 

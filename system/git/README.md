@@ -12,7 +12,7 @@ The rules in this package govern how commits are made and worded:
 
 One rule governs how a commit is **read** rather than how it is made:
 
-- **A SHA names the work, not the commit**. When the engineer names a commit by its SHA, they are asking about the substance it carries — the item, the implementation, the rule, the change to the code. Not the commit message, the file list, or the log entry. Those are the answer when the question is about the commit itself, or when the commit's whole content is a git operation.
+- **A SHA names the work, not the commit**. When the engineer names a commit by its SHA, they are asking about the substance it carries — the item, the progression, the rule, the change to the code. Not the commit message, the file list, or the log entry. Those are the answer when the question is about the commit itself, or when the commit's whole content is a git operation.
 
 Two rules govern a branch operation rather than a commit:
 

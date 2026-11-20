@@ -1,7 +1,7 @@
 | Shortcut | Command | Does |
 |---|---|---|
 | `/i` | `/items current` | Lists the current items |
-| `/'` | `/current` | Lists the current items and implementations |
+| `/'` | `/current` | Lists the current items and progressions |
 | `/?` | `/recent` | Brief summary of recent work, and what's next |
 | `/??` | `/pros-and-cons` | Gives each option of the last question with its pros and cons |
 | `/aa` | `/ask-again` | Repeats the agent's previous multiple-choice question |

@@ -64,14 +64,16 @@ item="$items_dir/2026-01-01T00-00-00Z-some-idea.md"
 
 [ "$(cat "$item")" = "$(control_item_text)" ] || fail "Leaves the item's content unchanged" "found:" "$(cat "$item")"
 
-# Removes the state from an implementation record's file name ----------------
+# Removes the state from a progression record's file name -------------------
 
-implementation="$implementations_dir/2026-01-01T00-00-00Z-some-feature.md"
+# The installer also moves implementations/ to progressions/, after it removes the state.
+progressions_dir="$project/slasher/local/progressions"
+progression="$progressions_dir/2026-01-01T00-00-00Z-some-feature.md"
 
-[ -f "$implementation" ] || fail "Removes the state from an implementation record's file name" "found:" "$(ls "$implementations_dir")"
+[ -f "$progression" ] || fail "Removes the state from a progression record's file name" "found:" "$(ls "$progressions_dir")"
 
-# Leaves the implementation record's content unchanged -----------------------
+# Leaves the progression record's content unchanged --------------------------
 
-[ "$(cat "$implementation")" = "$(control_implementation_text)" ] || fail "Leaves the implementation record's content unchanged" "found:" "$(cat "$implementation")"
+[ "$(cat "$progression")" = "$(control_implementation_text)" ] || fail "Leaves the progression record's content unchanged" "found:" "$(cat "$progression")"
 
 echo "0 failed, 0 aborted"

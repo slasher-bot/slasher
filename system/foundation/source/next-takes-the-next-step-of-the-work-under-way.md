@@ -6,7 +6,7 @@
 
 **As the engineer stated it:** any kind of multi-step process. It stops me from having to say: What's next?
 
-**The work under way is any work with steps still to take.** A plan's unchecked tasks, an implementation's phases, the design hinges of an outcome, a list of steps the agent gave, a procedure part done: each is one. Work that was interrupted, as by other requests, is still work under way, and `/next` resumes it at the step where it stopped. The next step is the first one not yet taken.
+**The work under way is any work with steps still to take.** A plan's unchecked tasks, a progression's phases, the design hinges of an outcome, a list of steps the agent gave, a procedure part done: each is one. Work that was interrupted, as by other requests, is still work under way, and `/next` resumes it at the step where it stopped. The next step is the first one not yet taken.
 
 **`/next?` names the next step and does not take it.** Where the work was interrupted, that is the step where it stopped. It says what the step is and what it would do, in a sentence or two.
 
@@ -25,7 +25,7 @@
 ## Compressed
 
 1. `/next?` asks what the next step is, as the engineer asking *What's next?* would. `/next` takes it, as the engineer saying *proceed* would. `/proceed` and `/.` are aliases of `/next`.
-2. The work under way is any work with steps still to take: a plan's unchecked tasks, an implementation's phases, an outcome's design hinges, a list of steps the agent gave, a procedure part done. Interrupted work is still under way, and `/next` resumes it where it stopped. The next step is the first not yet taken.
+2. The work under way is any work with steps still to take: a plan's unchecked tasks, a progression's phases, an outcome's design hinges, a list of steps the agent gave, a procedure part done. Interrupted work is still under way, and `/next` resumes it where it stopped. The next step is the first not yet taken.
 3. On `/next?`, name the next step, or the step where interrupted work stopped, and what it would do, in a sentence or two, and do not take it.
 4. On `/next`, take the next step and nothing beyond it, then stop. Where the agent is suggesting an action, one its last response offered, that action is the next step.
 5. Follow the work the conversation is on. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
@@ -42,8 +42,11 @@
 - 2026-11-11, revised: the command is `/next` again, and `/proceed` is its alias, a term swap the engineer settled; not re-checked
 - 2026-11-11, revised: `/next` carries out an action the agent is suggesting, at the engineer's direction; checked: 21 directives, 16 kept, 5 less precise, 0 lost, 3 repairs; re-checked: 21 directives, 20 kept, 1 less precise, 0 lost. Left less precise: a plain request for what is next is not stated as a trigger in the compressed text, which the rule's trigger line carries
 - 2026-11-15, revised: the shortcut of `/next` is `/.`, a term swap the engineer settled; not re-checked
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Sun Nov 15 2026 the shortcut of `/next` was `/..`. The engineer changed it to `/.`, and `/?`, the shortcut of `/next?` until then, became the shortcut of `/recent`.
 
@@ -77,3 +80,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 1:20:46 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 1:24:40 PM PT
 Changed by Scott Bellware on Thu Nov 12 2026 at 10:49:31 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 1:29:39 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:10 AM PT

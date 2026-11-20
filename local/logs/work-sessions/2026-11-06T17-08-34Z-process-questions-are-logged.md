@@ -2,7 +2,7 @@
 
 This work session made every process question put through the selection interface log itself, with the engineer's answer, and put the unattended plan inside the question that asks the engineer to accept it. It was the first feature started under the new *Human in the loop* question, and the first run unattended under it. It was concluded Completed.
 
-This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/implementations/2026-11-06T10-13-43Z-process-question-log`, foundation's a-process-question-and-its-answer-are-logged rule, the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule, and the log.
+This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/progressions/2026-11-06T10-13-43Z-process-question-log`, foundation's a-process-question-and-its-answer-are-logged rule, the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule, and the log.
 
 ## 1. The mechanism
 
@@ -35,7 +35,7 @@ The engineer first said Affirmed. The agent pointed out that the feature was sta
 
 ## Where the durable records live
 
-- The feature record, `local/implementations/2026-11-06T10-13-43Z-process-question-log`.
+- The feature record, `local/progressions/2026-11-06T10-13-43Z-process-question-log`.
 - The rule, foundation's a-process-question-and-its-answer-are-logged.
 - The script, `system/foundation/process-question-log.sh`, and its test, `test/automated/process-question-log.sh`.
 - The plugin hook, `system/foundation/plugin/hooks/process-question-log`.

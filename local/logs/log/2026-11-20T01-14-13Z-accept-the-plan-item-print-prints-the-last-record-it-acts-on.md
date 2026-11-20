@@ -7,7 +7,7 @@ The question, put through the selection interface:
 > Accept the plan? (Item: /print prints the last record. It acts on the last record or the last text worked on, as a bare /open does.)
 >
 > 1. Start an unattended feature, feature/worktree/print-the-last-record, in a new worktree. The feature states no forecast.
-> 2. Commit the feature record, the item's Implementation state, and their log entries on master. Accepting this plan selects that commit.
+> 2. Commit the feature record, the item's Progression state, and their log entries on master. Accepting this plan selects that commit.
 > 3. Write a foundation rule: a bare /print prints the more recent of the most recent principal record and the last text the agent generated that the engineer is working on.
 > 4. A record prints as /record print prints it: its contents as they stand, under a line naming its path.
 > 5. Text already in a file prints as that file does. Text in the chat only prints as it now stands.

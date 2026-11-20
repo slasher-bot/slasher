@@ -54,7 +54,7 @@ Added Mon Nov 16 2026, on how the option works:
 - **2026-11-16** — Where the bootstrap moves into a file Slasher owns, the file is `slasher/SLASHER.md`, and the line in the project's `AGENTS.md` reads `@slasher/SLASHER.md`. The `@` belongs to the line, not the file name. Codex and Cursor treat an `AGENTS.md` in a subdirectory as instructions for work inside that directory alone, which is wrong for instructions that cover the whole project. No agent picks up `SLASHER.md` on its own, so it is reached only through the line, and its name says it is Slasher's. The cost is that an engineer browsing `slasher/` does not recognize it as an agent instruction file by its name. Whether the bootstrap moves at all is not settled.
 - **2026-11-16** — The bootstrap moves into `slasher/SLASHER.md`, and the project's `AGENTS.md` keeps the one line `@slasher/SLASHER.md`. Markers around the section are not built.
 
-**Implementation:** `2026-11-17T07-15-50Z-agents-md-bootstrap`, the feature that builds it.
+**Progression:** `2026-11-17T07-15-50Z-agents-md-bootstrap`, the feature that builds it.
 
 ---
 

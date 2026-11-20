@@ -2,7 +2,7 @@
 
 This work session took up a feature left open since October 28, found it working, and concluded it. The feature is the installer's migration of a consuming project's observations from the state `Stated` to `Recorded`. It had been built and committed on its own branch in one sitting, and then left Active while other work went on.
 
-This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/implementations/2026-10-29T00-41-28Z-observation-state-migration` and the commits named below.
+This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/progressions/2026-10-29T00-41-28Z-observation-state-migration` and the commits named below.
 
 ## 1. What the feature was
 
@@ -19,11 +19,11 @@ The engineer concluded it Completed. Its record took confirmations that it reach
 ## Takeaways
 
 - The installer now carries a consuming project's observations from `Stated` to `Recorded` when it next runs.
-- No implementation is left open.
+- No progression is left open.
 
 ## Where the durable records live
 
-- The feature record, `local/implementations/2026-10-29T00-41-28Z-observation-state-migration`.
+- The feature record, `local/progressions/2026-10-29T00-41-28Z-observation-state-migration`.
 - The installer function `migrate_observation_state`, in `system/foundation/install.sh`, and its tests, `test/automated/install-observation-state.sh` and `test/automated/install-observation-state-clash.sh`.
 - The log entry of 2026-11-06 recording the conclusion.
 

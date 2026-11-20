@@ -9,7 +9,7 @@
 
 **As the engineer later stated it:** Actually, "/#" should be "/%", not "/$"
 
-**Implementation:** `2026-11-13T07-49-06Z-shortcuts-hash-and-percent`, the feature that builds it.
+**Progression:** `2026-11-13T07-49-06Z-shortcuts-hash-and-percent`, the feature that builds it.
 
 ---
 

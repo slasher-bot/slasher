@@ -55,7 +55,7 @@ The engineer concluded the feature as Completed. The item is Realized, `master` 
 - The table rule: the the-command-domain-table-prints-when-the-rules-have-loaded rule
 - The skills: `system/foundation/skills/?/`, `system/foundation/skills/command-table/`, `system/foundation/skills/commands/`
 - The item: `local/items/2026-11-08T02-22-31Z-the-command-table-at-startup-is-abridged`
-- The feature record: `local/implementations/2026-11-08T02-24-30Z-abridged-startup-command-table`
+- The feature record: `local/progressions/2026-11-08T02-24-30Z-abridged-startup-command-table`
 - The log entries from `2026-11-08T02-22-31Z` to `2026-11-08T02-51-40Z` under `local/logs/log/`
 
 ---

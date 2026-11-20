@@ -2,7 +2,7 @@
 
 This work session put the agent's confidence in doing the work unattended into the question asked at a feature's or an experiment's start, and concluded the feature that did it, Affirmed. It began with the engineer asking to show a confidence percentage in the "Who decides?" question. It ended with the question renamed *Human in the loop*, four figures each explained on a line of its own, a warning and a recommendation below a floor of 70%, the figures recorded in the start confirmation, and unattended work waiting for the engineer to accept its plan. Nearly every word of the question was settled by the engineer, one wording at a time.
 
-This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/implementations/2026-11-06T09-08-21Z-participation-confidence`, the two ideas it realized, the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule, and the log.
+This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/progressions/2026-11-06T09-08-21Z-participation-confidence`, the two ideas it realized, the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule, and the log.
 
 ## 1. What the percentage measures
 
@@ -42,7 +42,7 @@ The engineer declared the feature Affirmed. No fresh agent had yet started a fea
 
 ## Where the durable records live
 
-- The feature record, `local/implementations/2026-11-06T09-08-21Z-participation-confidence`.
+- The feature record, `local/progressions/2026-11-06T09-08-21Z-participation-confidence`.
 - The ideas realized: `2026-11-05T02-29-51Z-the-participation-question-shows-the-unattended-plan-and-a-confidence` and `2026-11-05T02-38-50Z-low-confidence-in-unattended-work-recommends-attended`.
 - The estimate of the floor, `local/logs/log/2026-11-06T09-23-01Z-the-attended-floor-is-estimated-at-about-70-percent`.
 - The rule, design-by-efferent's attended-or-unattended-is-chosen-when-the-work-is-started.

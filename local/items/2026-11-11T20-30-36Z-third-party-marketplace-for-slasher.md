@@ -2,7 +2,7 @@
 
 - **State:** Realized
 - **Tags:** [idea]
-- **Implementation:** the experiment `2026-11-11T20-33-36Z-third-party-marketplace`
+- **Progression:** the experiment `2026-11-11T20-33-36Z-third-party-marketplace`
 
 **Slasher is distributed through a third-party marketplace of its own.** A third-party marketplace is one Anthropic does not run: a git repository holding a `.claude-plugin/marketplace.json` that lists the plugin, which a user adds with `/plugin marketplace add`.
 

@@ -9,7 +9,7 @@
 
 **Settled 2026-11-15:** the package is named `prose`, at `system/prose/`, not `content`. The installer already has a package set named `content`, and `slasher-install content` resolves to the set, so a package of that name could not be installed by name. The engineer selected renaming the package, then the name `prose`.
 
-**Implementation:** `2026-11-15T19-38-31Z-review-command`
+**Progression:** `2026-11-15T19-38-31Z-review-command`
 
 ---
 

@@ -1,6 +1,6 @@
 EXPERIMENTS
   An experiment tests a question on its own branch or worktree, to a declared
-  end. Features and experiments are both kinds of implementations.
+  end. Features and experiments are both kinds of progressions.
 
   /experiment new                  Create its branch and an Open record
   /experiment new with phases      Create it, asking for its phases

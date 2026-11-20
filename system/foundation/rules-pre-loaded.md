@@ -207,7 +207,7 @@ Source: system/foundation/source/a-projects-binding-rules-are-recorded-in-its-pa
 
 1. Rules are kept separate from work artifacts.
 2. `slasher/local/rules/` holds only rules. `slasher/system/` holds only the packages' rules and what packages them: each package's `README.md`, `source/`, and `LICENSE`, its `vocabulary.md` where it has one, and its scripts. Neither holds any of the project's working state.
-3. The project's working state lives beside `rules/` under `slasher/local/`: `logs/` (holding `log/`, `loops/`, and `work-sessions/`), `items/`, `implementations/`, `migration/`.
+3. The project's working state lives beside `rules/` under `slasher/local/`: `logs/` (holding `log/`, `loops/`, and `work-sessions/`), `items/`, `progressions/`, `migration/`.
 4. Work with working state as its own conventions describe.
 5. Do not read working state as binding rules at session start.
 6. `slasher/local/vocabulary.md` sits beside working state but is not working state. It is the one thing there that binds.
@@ -303,7 +303,7 @@ Source: system/foundation/source/a-projects-local-directory-may-be-relocated-by-
 Source: system/foundation/source/a-reply-that-writes-a-record-ends-with-the-records-path.md
 
 1. Before sending a reply, check whether it wrote a record. Where it did, end the reply with the line *Record:*, then the path of its principal record from the project root, as the file now stands. The principal record is the record the reply's operation is about, such as the item an operation acts on. Print no other record the reply wrote. Write a printed path in the home folder with the `~/` shortcut. `/record copy` copies the absolute path alone, with no dash or backticks.
-2. A record is an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
+2. A record is an item, a progression record, a rule, a log entry, a journal entry, a work session record, a loop record, or any other record the agent writes to disk.
 3. Write one record under *Record:*, indented two non-breaking spaces, with no dash, then the path in backticks. End the heading line with a backslash, so no blank line stands between it and the path. Write two or more under *Records:*, each a list item, `- ` and then the path in backticks. The backticks make the terminal show the path in color. Put nothing else on the line: no label, and no sentence.
 4. Where the operation is about more than one record, list each, each path its own list item. List a renamed record by its new path. Where no record written is the subject of the operation, print no records line.
 5. Do not list a record the agent did not write, such as a log entry a hook writes.
@@ -330,7 +330,7 @@ Source: system/foundation/source/a-status-report-prints-a-fixed-whole-project-re
 13. The map shows that `slasher/local/rules/` holds the project's own local rules.
 14. The map states that both are binding and both are read at session start.
 15. The map shows the contemporaneous, historical records under `logs/` (`log/`, `loops/`, `work-sessions/`), alongside `rules/` under `slasher/local/`.
-16. The map shows the work-artifact directories `items/`, `implementations/`, and `migration/`, also under `slasher/local/`.
+16. The map shows the work-artifact directories `items/`, `progressions/`, and `migration/`, also under `slasher/local/`.
 17. The orientation says how to work with the directory. Rules are enforceable conventions.
 18. The log is title-only ISO-8601-UTC decision entries.
 19. A rule typically pairs with a log entry.
@@ -536,7 +536,7 @@ Source: system/foundation/source/the-migration-directory-holds-the-plans-for-mov
 4. Plan a move here when content ends up under a different root, or in a different structure.
 5. Examples: a library extracted into its own repository, or work moved to a project that will own it.
 6. Further examples: one repository split into several, several merged into one, existing conventions migrated into an installed system, or a directory renamed or regrouped.
-7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project. The migration conforms historical records too: log entries, loop records, work session records, concluded implementation records, and record file names. Outside a migration, a historical record is edited only for disclosure, per the disclosure-is-the-one-reason-to-edit-a-historical-record rule. Within a migration, this rule takes precedence over that one.
+7. A change to a norm or standard that existing content must be conformed to is a migration too: a tag renamed, a term substituted, or a format changed, where records already written carry the old form. Example: the `[work-item]` tag becoming `[work]`, in this repository or in a Slasher project. The migration conforms historical records too: log entries, loop records, work session records, concluded progression records, and record file names. Outside a migration, a historical record is edited only for disclosure, per the disclosure-is-the-one-reason-to-edit-a-historical-record rule. Within a migration, this rule takes precedence over that one.
 8. Do not use an ordinary item for a migration.
 9. An item sequences a build, against something this repository settled.
 10. A migration plan sequences a change to where existing content lives, or to the form it is written in. Across repositories, its increments land in two.
@@ -568,7 +568,7 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 6. It defines settled vocabulary as that vocabulary arises.
 7. It is written for a person to read. Its job is orientation and reasoning, not truth-of-record.
 8. It is not the source of truth. The durable records are authoritative.
-9. The durable records are the binding rules (`slasher/system/`, `slasher/local/rules/`), the items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the implementation records (`slasher/local/implementations/`).
+9. The durable records are the binding rules (`slasher/system/`, `slasher/local/rules/`), the items (`slasher/local/items/`), the log (`slasher/local/logs/log/`), and the progression records (`slasher/local/progressions/`).
 10. The record points to the durable records throughout. It does not restate them.
 11. The record keeps the reasoning behind each fork in the work. It ties the durable records together as a narrative and keeps the arc.
 12. Write a record at the end of a work session that produced substantial dialogue, decisions, or discovery worth keeping as a narrative.

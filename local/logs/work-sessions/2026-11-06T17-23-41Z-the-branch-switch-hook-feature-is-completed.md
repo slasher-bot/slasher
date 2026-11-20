@@ -2,7 +2,7 @@
 
 This work session started with the rules being loaded and two questions about how rules are compressed. It then found the branch-switch hook feature still open, confirmed its work was finished, and concluded it as Completed.
 
-This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/implementations/2026-11-06T08-51-10Z-branch-switch-hook`, foundation's a-rules-compressed-text-is-written-in-its-source-checked-against-it-and-its-figures-recorded-below-the-body rule, the rule-reduction experiment's record `local/implementations/2026-10-22T04-51-25Z-rule-reduction`, and the log.
+This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/progressions/2026-11-06T08-51-10Z-branch-switch-hook`, foundation's a-rules-compressed-text-is-written-in-its-source-checked-against-it-and-its-figures-recorded-below-the-body rule, the rule-reduction experiment's record `local/progressions/2026-10-22T04-51-25Z-rule-reduction`, and the log.
 
 ## 1. How rules are compressed
 
@@ -32,9 +32,9 @@ The engineer said to affirm the feature. It had been started as work without a v
 
 ## Where the durable records live
 
-- The feature record, `local/implementations/2026-11-06T08-51-10Z-branch-switch-hook`.
+- The feature record, `local/progressions/2026-11-06T08-51-10Z-branch-switch-hook`.
 - The compression rule, foundation's a-rules-compressed-text-is-written-in-its-source-checked-against-it-and-its-figures-recorded-below-the-body.
-- The measures' definitions, in `local/implementations/2026-10-22T04-51-25Z-rule-reduction`.
+- The measures' definitions, in `local/progressions/2026-10-22T04-51-25Z-rule-reduction`.
 - The log entries for the conclusion, in `local/logs/log/`.
 
 ---

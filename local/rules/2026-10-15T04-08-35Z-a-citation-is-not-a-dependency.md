@@ -10,7 +10,7 @@ A rule may **name** another package's rule — for orientation, for contrast, or
 
 **The model citation** is foundation's own a-status-report-prints-a-fixed-whole-project-report rule. It names the `testing` package and is written for its absence. Its words are *"If the project has **not** adopted the testing conventions, degrade this section."* The rule works either way. So `testing` is cited and not declared.
 
-**The refused dependency** is the the-implementations-directory-holds-one-record-per-implementation rule. It cites `design-by-efferent`'s a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule and deliberately stops short of requiring anything in `slasher/local/logs/loops/`. Its words are *"would invert the package graph, and would make the implementation lifecycle unavailable to a project that installs `foundation` alone."* That rule is two things at once. It is a citation of another package, and the reason a dependency was not taken.
+**The refused dependency** is the the-progressions-directory-holds-one-record-per-progression rule. It cites `design-by-efferent`'s a-loop-record-holds-the-cycles-through-the-loop-one-file-per-feature rule and deliberately stops short of requiring anything in `slasher/local/logs/loops/`. Its words are *"would invert the package graph, and would make the progression lifecycle unavailable to a project that installs `foundation` alone."* That rule is two things at once. It is a citation of another package, and the reason a dependency was not taken.
 
 **Why:** the alternative reading is not available, and the package graph shows it. Six of the seven packages name packages they do not declare. `foundation`, the base every other package builds on, cites most of them, design-by-efferent among them. If a citation were a dependency, `foundation` would depend on `design-by-efferent`, which declares a dependency on `foundation`, and the graph would cycle. So the two kinds of reference have to be distinct, and the only workable line between them is whether the rule functions alone.
 
@@ -60,7 +60,7 @@ This criterion was practiced before it was written. Every declaration in the sys
 Related:
 
 - the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule — the rule format and where rules live
-- the the-implementations-directory-holds-one-record-per-implementation rule — the refused dependency it declines
+- the the-progressions-directory-holds-one-record-per-progression rule — the refused dependency it declines
 - the a-status-report-prints-a-fixed-whole-project-report rule — the model citation, written for the cited package's absence
 - each package's README — where a dependency is declared
 

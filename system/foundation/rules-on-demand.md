@@ -96,15 +96,15 @@ Trigger: When writing a section of a [design] item that documents a dependency o
 5. Do not title it just "Dependency".
 6. Use plain "Dependency" only for sections about something other than a package.
 
-# A log entry is written for an implementation record, and the concluding entry depends on whether the work merged
+# A log entry is written for a progression record, and the concluding entry depends on whether the work merged
 
-Source: system/foundation/source/a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged.md
+Source: system/foundation/source/a-log-entry-is-written-for-a-progression-record-and-the-concluding-entry-depends-on-whether-the-work-merged.md
 
-Trigger: When creating an implementation record, or changing its **State:** line
+Trigger: When creating a progression record, or changing its **State:** line
 
-## An implementation record takes a log entry
+## A progression record takes a log entry
 
-1. An implementation record pairs with a one-line entry in `slasher/local/logs/log/`.
+1. A progression record pairs with a one-line entry in `slasher/local/logs/log/`.
 2. Write the entry when the record is created.
 3. Write another entry on each change of the canonical `**State:**` line.
 
@@ -125,7 +125,7 @@ Trigger: When creating an implementation record, or changing its **State:** line
 
 ## What is already required, and not restated
 
-1. Affirmed work still copies its own log into the project's log, as an-implementation-runs-on-a-branch-to-a-declared-end rule requires.
+1. Affirmed work still copies its own log into the project's log, as a-progression-runs-on-a-branch-to-a-declared-end rule requires.
 2. The summary marker sits beside those copied entries. It does not replace them.
 3. Work without a verdict has no affirmation and no log copy. Completed work's marker is the whole of what its conclusion writes.
 
@@ -134,7 +134,7 @@ Trigger: When creating an implementation record, or changing its **State:** line
 1. Write no log entry for a confirmation the lifecycle records.
 2. Those confirmations are the working-location selection, the attended-or-unattended selection, a worktree added mid-flight, and branch deletion. They are recorded in the record.
 3. Write no log entry for a turn of the work.
-4. The hinges, the cycles, and the runs belong to the loop record and the implementation record.
+4. The hinges, the cycles, and the runs belong to the loop record and the progression record.
 
 # A log entry is written for an item on creation, on each settled resolution, and on a change of state
 
@@ -255,19 +255,19 @@ Lines 1–8 below are the opening statements, which come before any section head
 11. Never change a note's state.
 12. Where the thinking moves, write a later note and leave the earlier one as written.
 
-# When an implementation's phase starts, its goal is stated, and the phases are listed with the current one marked
+# When a progression's phase starts, its goal is stated, and the phases are listed with the current one marked
 
 Source: system/foundation/source/a-phase-starts-by-stating-its-goal.md
 
 Trigger: When starting a phase of an experiment or a feature, or when the engineer asks for the current phase or the list of phases, as with `/experiment status`, `/feature status`, or `/phase status`
 
 1. At the start of an experiment's or a feature's phase, state the phase's goal to the engineer, before its work, in the response that starts it.
-2. The goal is the phase's question or intent, whichever it has, whatever the kind. For a question, it is what the phase is to establish. For an intent, it is what the phase is to build. Say how it serves the implementation's question or intent.
-3. List the implementation's phases with it, in the order the record names them, and mark the current phase, so the engineer sees which phases are done and which are still to come.
+2. The goal is the phase's question or intent, whichever it has, whatever the kind. For a question, it is what the phase is to establish. For an intent, it is what the phase is to build. Say how it serves the progression's question or intent.
+3. List the progression's phases with it, in the order the record names them, and mark the current phase, so the engineer sees which phases are done and which are still to come.
 4. State the goal and the list at each phase's start, not only when the record is written. The record's naming of the phases, and a phase's forecast, do not stand in for them.
 5. When the engineer asks for the current phase, as with `/phase` or `/phase current`, print its goal and its branch.
 6. When the engineer asks for the phases, as with `/phases`, list them in the record's order, with the current phase emphasized.
-7. `/experiment status`, `/feature status`, and `/phase status` print the phases in the record's order, the current one emphasized, and the current phase's goal. Without phases, they print the implementation's question or intent, and its state.
+7. `/experiment status`, `/feature status`, and `/phase status` print the phases in the record's order, the current one emphasized, and the current phase's goal. Without phases, they print the progression's question or intent, and its state.
 
 # A printed list of records is formatted as a table or as a list of rows
 
@@ -276,7 +276,7 @@ Source: system/foundation/source/a-printed-list-of-records-is-formatted-as-a-tab
 Trigger: When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, `/experiments`, or `/notes`
 
 1. When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence. A table presents the fields in headed columns. Rows present one record to a line, with its fields in sequence and no columns. A list is called a table only where it is formatted as columns.
-2. This applies to any record type. That includes items, implementation records, log entries, loop records, work session records, migration records, journal entries, and commits.
+2. This applies to any record type. That includes items, progression records, log entries, loop records, work session records, migration records, journal entries, and commits.
 3. The first column is the record's handle and has no heading.
 4. The handle is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit.
 5. Every column after the handle has a heading.
@@ -285,7 +285,7 @@ Trigger: When the engineer asks for a list of records, as with `/item list`, `/l
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
 ```
-|                        | created   | changed   | implementation                   | state     |
+|                        | created   | changed   | progression                      | state     |
 |------------------------|-----------|-----------|----------------------------------|-----------|
 | `2026-08-25T00-36-18Z` | `159985b` | `ed7ec4a` | Feature — Self-Explanation       | Abandoned |
 | `2026-10-21T05-44-56Z` | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
@@ -302,7 +302,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 9. A record that was never amended shows the same SHA in both columns. This is intended, since it shows the record has not been touched since it was written.
 10. Choose the last column to fit the question.
-11. A list of items or implementations takes the state as its last column.
+11. A list of items or progressions takes the state as its last column.
 12. Every list of items takes a kind column between the title and the state: `/items`, `/items current`, `/item list`, and `/current`. Name the kind each tag gives as a word, not a tag: *Idea* for `[idea]`, *Legal matter* for `[legal-matter]`. Name several tags each, separated by commas. A list of notes takes none.
 13. A list of commits asked about for their subject widths takes the width.
 14. Do not add a column nobody asked for.
@@ -311,24 +311,24 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 ## Listing items by state
 
 1. A list of items may be asked for by state, and lists the items whose `**State:**` line reads that state.
-2. `current` asks for the Open, Active, and Implementation items together. It is not a state, and it leaves out Suspended items.
+2. `current` asks for the Open, Active, and Progression items together. It is not a state, and it leaves out Suspended items.
 
 ## The items command
 
 1. `/items` lists every item, whatever its state, oldest first.
 2. Present each item as one row: an ordinal, its handle, its title, its kind, and its state. Give it no SHA columns.
 3. A Suspended item is a hidden record, counted rather than listed, under the a-status-report-prints-a-fixed-whole-project-report rule. Leave it out of the rows. Below the table, print a line giving their count and kind, as `1 suspended item`.
-4. `/items current` lists the Open, Active, and Implementation items, as `/item list current` does.
+4. `/items current` lists the Open, Active, and Progression items, as `/item list current` does.
 
 ## The current command
 
-1. `/current` lists the Open and Active items, then, under a heading of their own, the current implementations. It leaves out Implementation items, whose work the implementations show. `/items current` still lists them.
-2. The current implementations are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
-3. Present each current implementation as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
-4. Where no implementation is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
+1. `/current` lists the Open and Active items, then, under a heading of their own, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
+2. The current progressions are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
+3. Present each current progression as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
+4. Where no progression is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. The items table `/current` prints takes the kind column every list of items takes.
-6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current implementations in full.
-7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Implementation and Suspended items here too.
+6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current progressions in full.
+7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Progression and Suspended items here too.
 8. A number given to `/current` does not change these counts.
 
 ## The features and experiments commands
@@ -361,6 +361,160 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 2. This rule does not govern an answer that is not a list of records.
 3. The `language` package's an-answer-is-a-list-and-prose-must-justify-itself rule governs the form of an answer's list items. This rule governs only how a set of records is presented.
 
+# A progression runs on a branch to a declared end
+
+Source: system/foundation/source/a-progression-runs-on-a-branch-to-a-declared-end.md
+
+Trigger: When creating, starting, adding a worktree to, suspending, or concluding an experiment or feature progression
+
+1. A progression runs on its own branch, designed through the five hinges by DBE, to a declared state.
+2. It is never left silently open.
+3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
+4. Either kind opens with a question or an intent. A forecast is stated when the progression is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule).
+5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
+
+## The branch
+
+1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
+2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
+3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
+4. Add `-run-<n>` only where the work has more than one run.
+5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
+6. A branch checked out in a worktree cannot be checked out in the main working tree, and `git branch` is where that question comes up.
+7. Adding a worktree to work under way renames the branch.
+8. The rename is confirmed, and the record carries it.
+9. Keep the upstream branch out of the name, since a branch can outlive its upstream target. The record names it.
+10. A worktree is the one fact the name carries, because `git branch` has no other answer for it.
+11. The rename keeps that fact current.
+12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
+13. Make no git tag for the base.
+14. A later run branches from the recorded commit.
+15. Except on the current branch, `new`, or `start` where it creates the progression, commits the first record, `Open` or `Active`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the progression branch from that commit.
+16. Make every later update to the record on the progression branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
+17. Where the working location is the current branch, write the record there. There is no second copy.
+
+## Phases
+
+1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the progression's.
+2. The record names the phases and their order when the progression is created, and, as each phase starts, the commit it branched from.
+3. When a phase is created, by `/phase new`, ask whether it states a forecast, whatever its progression chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the progression's three options. A phase without a forecast is not asked.
+4. A phase's branch is the progression's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
+5. Git refuses a slash here, because no branch can sit beneath another branch's name.
+6. A `worktree/` segment carries into each phase's name.
+7. A phase branches from the progression's branch and concludes into it.
+8. Where the phase is concluded with a verdict, it is affirmed, refuted, or inconclusive only on the engineer's declaration.
+9. An affirmed phase merges back into the progression's branch.
+10. The record carries each phase's verdict and findings.
+11. Where the phase is concluded without a verdict, or has no forecast, it concludes Completed, with no verdict, and merges back into the progression's branch.
+12. One phase runs at a time, in the record's order, each from the progression's branch as the earlier phases left it.
+13. A phase's commits reach no other branch.
+14. The progression concludes after its phases, and only then merges to its upstream branch.
+15. Merge a concluded phase with `git merge --no-ff`. Squash a phase's commits when the progression concludes, not when the phase does. Read each phase's commits from the start the record names to the phase's branch. Drop each phase's `--no-ff` merge commit, since its squashed commit takes its place. Before the progression merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
+16. A commit made outside any phase keeps its content and its message, in its place. Its SHA changes. Where the branch was pushed, force-push the rebuilt branch with `--force-with-lease` against the pushed tip, on the engineer's selection.
+17. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, each on its own line after a dash.
+18. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
+19. Keep a phase's branch until the progression concludes. Delete it with the progression's branch.
+
+## The working location
+
+1. Put the working location through the selection interface each time a progression is created, with no default.
+2. Each option states what it creates:
+
+> **Branch only** — Create the branch and switch this working tree to it. At the conclusion this
+> working tree switches back.
+>
+> **Branch and worktree** — Create the branch as `<kind>/worktree/<subject>` and check it out in a
+> new worktree: a second working directory at `<path>`. This working tree stays on
+> `<upstream branch>`.
+>
+> **The current branch** — Build it where the working tree already is, creating nothing. There is
+> no branch to switch back to and nothing to merge.
+
+3. Choosing the current branch rules out a forecast and a verdict. Work built there states no forecast, concludes Completed, and is not asked the verdict question.
+4. The changes of work with a forecast must not reach the branch it deviates from before it is affirmed, and its own branch is what keeps them out.
+5. Work without a forecast is the main line.
+6. Offer the current branch last, because a first option reads as recommended, and the current branch gives up isolation.
+7. The current branch's cost: there is no isolation, partial work sits where others read, and abandoning means reverting rather than deleting a branch.
+8. On the current branch, the record still carries the intent, the state, and the confirmations.
+9. Place a worktree beside the repository directory, named `<repository-name>-<branch, each slash as a dash>`, as in `slasher-experiment-state-suffix-legibility`.
+10. A worktree inside the repository would show as untracked content in the work's own `git status`.
+11. Create a branch-only progression with `git switch -c <branch>`, and a worktree progression with `git worktree add -b <branch> <path>`, where `-b` is required.
+12. Use `git worktree add <path> <branch>` only to add a worktree to work under way, since it fails on a branch that does not exist.
+13. Change the location only by adding a worktree.
+14. Add one only on one of two triggers: other work arrives that the engineer means to work alongside.
+15. Or the work is escalated, needing more isolation than it was taken for.
+16. Confirm the addition.
+17. Add a line to the record, and keep the original.
+18. The conclusion follows the location as it then stands.
+19. Never collapse a worktree back.
+
+## Participation
+
+1. Put attended or unattended through the selection interface beside the working location.
+2. Attended is the default.
+3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule states why the two sit at one gate, and what changes between them.
+4. Record both choices.
+
+## The forecast and the verdict
+
+1. When the progression is created, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
+2. Do not ask it where the working location is the current branch. Work there states no forecast.
+3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
+4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
+5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
+6. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
+7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed.
+8. Then ask the question again, with the same three options.
+
+## The end
+
+1. Every progression ends in a declared state, or is suspended, which pauses it.
+2. The words are the the-progressions-directory-holds-one-record-per-progression rule's.
+3. Work that reaches a verdict is affirmed only on the engineer's explicit declaration.
+4. On affirmation, its log is copied into the project log.
+5. Where it produced implementation, its branch merges to the upstream branch, after the tests pass.
+6. Where no test covers the work, the merge also waits for specific confirmation.
+7. Observation-only work's affirmation is the log copy alone.
+8. Work that reaches a verdict and will merge brings what master needs to conform to it: every rule its practice needs, and every other change, on its branch before it merges.
+9. Work without a verdict merges with no gate, because every commit was verified under the run-the-test-suite-after-changes-before-considering-whether-to-commit rule.
+10. The merged result can still break the suite, and that is fixed from there.
+11. Work without a verdict has no affirmation.
+12. Refuted, inconclusive, abandoned, and superseded work keeps its record, marked with its state, so the attempt and its findings survive.
+13. Refuted, inconclusive, abandoned, and superseded work does not merge.
+14. Supersede a progression at any time, without suspending it first.
+15. Keep the superseded progression's branch until the engineer confirms its deletion.
+16. The two records name each other.
+17. A child supersedes its parent by preserving it.
+18. The child merges the parent first, taking every commit the parent made after the child branched.
+19. The parent is then parked Superseded, and the records name each other.
+20. The child takes the parent's upstream.
+21. The parent branch is deleted only on confirmation.
+22. This is the one supersession that merges the superseded branch.
+23. Conclude in the main working tree, on the upstream branch.
+24. Under branch only, the working tree switches back.
+25. Under a worktree, end the session in the main working tree, never in the removed directory.
+26. On the current branch there is nothing to return from.
+27. Branch deletion takes one confirmation from the engineer, through the selection interface. It covers the worktree removal, the kept phase branches, and the progression's branch on the remote where it was pushed. Delete the remote branch only after the upstream branch holding the work has been pushed. Do not prompt twice. Delete a squashed phase's branch with `git branch -D`, since git refuses `-d` for it.
+28. Remove the worktree first, since git refuses to delete a branch checked out in a worktree.
+29. Suspension deletes no branch and removes no worktree.
+
+## The agent never raises the end of work with a forecast
+
+1. Do not offer to conclude, affirm, refute, or merge one: not as a next step, an option, or a precondition.
+2. Report what is settled and what is open, and stop.
+3. The length of work with a forecast is the engineer's judgment, not readable from the work done.
+4. Work without a forecast is not covered, because its completion is ordinary.
+
+## Drift
+
+1. While work with a forecast is open under branch only, watch for main-sequence work starting, and surface it.
+2. Offer two recourses through the selection interface: suspend the progression, where the intent is to stop working it for now, or add a worktree, where the intent is to keep working it alongside.
+3. Neither recourse ends the progression, and the engineer's intent decides.
+4. The watch rests on the branch name in the status line and on a judgment of whether the work serves the recorded question or intent.
+5. The watch is a practice, not a guarantee.
+6. Under a worktree there is nothing to watch. The status line's second line names the branch of a progression that has not concluded, in any worktree.
+7. Work without a forecast has no watch, since starting other work during it is ordinary.
+
 # A record may be tagged with square-bracket tags
 
 Source: system/foundation/source/a-record-may-be-categorized-with-square-bracket-tags.md
@@ -379,9 +533,9 @@ Trigger: When adding a tag to a record or a list item
 
 Source: system/foundation/source/a-records-file-name-carries-no-state.md
 
-Trigger: When creating, renaming, changing the state of, or referencing an item or implementation record
+Trigger: When creating, renaming, changing the state of, or referencing an item or progression record
 
-1. An item's or an implementation record's file name carries no state.
+1. An item's or a progression record's file name carries no state.
 2. The name is the ISO-8601-UTC prefix, a dash-separated, lower-case name, and `.md`.
 
 ```
@@ -478,7 +632,7 @@ Trigger: When removing a rule, procedure, or report
 **Tags:** [suspended]
 ```
 
-2. This is the one form every record uses, per the a-record-may-be-categorized-with-square-bracket-tags rule. A log entry's tags sit where an item's and an implementation record's do.
+2. This is the one form every record uses, per the a-record-may-be-categorized-with-square-bracket-tags rule. A log entry's tags sit where an item's and a progression record's do.
 3. A log entry may carry other tags beside this one.
 4. What `[suspended]` marks is fixed here.
 5. The set of suspensions is read from this tag.
@@ -568,160 +722,6 @@ Trigger: When writing, revising, or creating a `vocabulary.md` file
 2. Where a package keeps a word the `language` vocabulary substitutes away, its entry says so and gives the reason.
 3. A reader must not have to work out which case an entry is. The entry says whether it narrows or replaces the general term.
 
-# An implementation runs on a branch to a declared end
-
-Source: system/foundation/source/an-implementation-runs-on-a-branch-to-a-declared-end.md
-
-Trigger: When creating, starting, adding a worktree to, suspending, or concluding an experiment or feature implementation
-
-1. An implementation runs on its own branch, designed through the five hinges by DBE, to a declared state.
-2. It is never left silently open.
-3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else.
-4. Either kind opens with a question or an intent. A forecast is stated when the implementation is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-implementations-directory-holds-one-record-per-implementation rule).
-5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
-
-## The branch
-
-1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no implementation is in place, `start` creates it as `new` does, and writes the record `Active`.
-2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
-3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
-4. Add `-run-<n>` only where the work has more than one run.
-5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
-6. A branch checked out in a worktree cannot be checked out in the main working tree, and `git branch` is where that question comes up.
-7. Adding a worktree to work under way renames the branch.
-8. The rename is confirmed, and the record carries it.
-9. Keep the upstream branch out of the name, since a branch can outlive its upstream target. The record names it.
-10. A worktree is the one fact the name carries, because `git branch` has no other answer for it.
-11. The rename keeps that fact current.
-12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
-13. Make no git tag for the base.
-14. A later run branches from the recorded commit.
-15. Except on the current branch, `new`, or `start` where it creates the implementation, commits the first record, `Open` or `Active`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the implementation branch from that commit.
-16. Make every later update to the record on the implementation branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
-17. Where the working location is the current branch, write the record there. There is no second copy.
-
-## Phases
-
-1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the implementation's.
-2. The record names the phases and their order when the implementation is created, and, as each phase starts, the commit it branched from.
-3. When a phase is created, by `/phase new`, ask whether it states a forecast, whatever its implementation chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the implementation's three options. A phase without a forecast is not asked.
-4. A phase's branch is the implementation's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
-5. Git refuses a slash here, because no branch can sit beneath another branch's name.
-6. A `worktree/` segment carries into each phase's name.
-7. A phase branches from the implementation's branch and concludes into it.
-8. Where the phase is concluded with a verdict, it is affirmed, refuted, or inconclusive only on the engineer's declaration.
-9. An affirmed phase merges back into the implementation's branch.
-10. The record carries each phase's verdict and findings.
-11. Where the phase is concluded without a verdict, or has no forecast, it concludes Completed, with no verdict, and merges back into the implementation's branch.
-12. One phase runs at a time, in the record's order, each from the implementation's branch as the earlier phases left it.
-13. A phase's commits reach no other branch.
-14. The implementation concludes after its phases, and only then merges to its upstream branch.
-15. Merge a concluded phase with `git merge --no-ff`. Squash a phase's commits when the implementation concludes, not when the phase does. Read each phase's commits from the start the record names to the phase's branch. Drop each phase's `--no-ff` merge commit, since its squashed commit takes its place. Before the implementation merges to its upstream branch, rebuild its branch so each merged phase is one squashed commit, in the phases' order.
-16. A commit made outside any phase keeps its content and its message, in its place. Its SHA changes. Where the branch was pushed, force-push the rebuilt branch with `--force-with-lease` against the pushed tip, on the engineer's selection.
-17. The squashed commit's subject summarizes what the phase built, under the commit-message rules. Its body lists the phase's own commit subjects, oldest first, each on its own line after a dash.
-18. A refuted or inconclusive phase does not merge, so nothing of it is squashed.
-19. Keep a phase's branch until the implementation concludes. Delete it with the implementation's branch.
-
-## The working location
-
-1. Put the working location through the selection interface each time an implementation is created, with no default.
-2. Each option states what it creates:
-
-> **Branch only** — Create the branch and switch this working tree to it. At the conclusion this
-> working tree switches back.
->
-> **Branch and worktree** — Create the branch as `<kind>/worktree/<subject>` and check it out in a
-> new worktree: a second working directory at `<path>`. This working tree stays on
-> `<upstream branch>`.
->
-> **The current branch** — Build it where the working tree already is, creating nothing. There is
-> no branch to switch back to and nothing to merge.
-
-3. Choosing the current branch rules out a forecast and a verdict. Work built there states no forecast, concludes Completed, and is not asked the verdict question.
-4. The changes of work with a forecast must not reach the branch it deviates from before it is affirmed, and its own branch is what keeps them out.
-5. Work without a forecast is the main line.
-6. Offer the current branch last, because a first option reads as recommended, and the current branch gives up isolation.
-7. The current branch's cost: there is no isolation, partial work sits where others read, and abandoning means reverting rather than deleting a branch.
-8. On the current branch, the record still carries the intent, the state, and the confirmations.
-9. Place a worktree beside the repository directory, named `<repository-name>-<branch, each slash as a dash>`, as in `slasher-experiment-state-suffix-legibility`.
-10. A worktree inside the repository would show as untracked content in the work's own `git status`.
-11. Create a branch-only implementation with `git switch -c <branch>`, and a worktree implementation with `git worktree add -b <branch> <path>`, where `-b` is required.
-12. Use `git worktree add <path> <branch>` only to add a worktree to work under way, since it fails on a branch that does not exist.
-13. Change the location only by adding a worktree.
-14. Add one only on one of two triggers: other work arrives that the engineer means to work alongside.
-15. Or the work is escalated, needing more isolation than it was taken for.
-16. Confirm the addition.
-17. Add a line to the record, and keep the original.
-18. The conclusion follows the location as it then stands.
-19. Never collapse a worktree back.
-
-## Participation
-
-1. Put attended or unattended through the selection interface beside the working location.
-2. Attended is the default.
-3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule states why the two sit at one gate, and what changes between them.
-4. Record both choices.
-
-## The forecast and the verdict
-
-1. When the implementation is created, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
-2. Do not ask it where the working location is the current branch. Work there states no forecast.
-3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
-4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
-5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
-6. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
-7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed.
-8. Then ask the question again, with the same three options.
-
-## The end
-
-1. Every implementation ends in a declared state, or is suspended, which pauses it.
-2. The words are the the-implementations-directory-holds-one-record-per-implementation rule's.
-3. Work that reaches a verdict is affirmed only on the engineer's explicit declaration.
-4. On affirmation, its log is copied into the project log.
-5. Where it produced implementation, its branch merges to the upstream branch, after the tests pass.
-6. Where no test covers the work, the merge also waits for specific confirmation.
-7. Observation-only work's affirmation is the log copy alone.
-8. Work that reaches a verdict and will merge brings what master needs to conform to it: every rule its practice needs, and every other change, on its branch before it merges.
-9. Work without a verdict merges with no gate, because every commit was verified under the run-the-test-suite-after-changes-before-considering-whether-to-commit rule.
-10. The merged result can still break the suite, and that is fixed from there.
-11. Work without a verdict has no affirmation.
-12. Refuted, inconclusive, abandoned, and superseded work keeps its record, marked with its state, so the attempt and its findings survive.
-13. Refuted, inconclusive, abandoned, and superseded work does not merge.
-14. Supersede an implementation at any time, without suspending it first.
-15. Keep the superseded implementation's branch until the engineer confirms its deletion.
-16. The two records name each other.
-17. A child supersedes its parent by preserving it.
-18. The child merges the parent first, taking every commit the parent made after the child branched.
-19. The parent is then parked Superseded, and the records name each other.
-20. The child takes the parent's upstream.
-21. The parent branch is deleted only on confirmation.
-22. This is the one supersession that merges the superseded branch.
-23. Conclude in the main working tree, on the upstream branch.
-24. Under branch only, the working tree switches back.
-25. Under a worktree, end the session in the main working tree, never in the removed directory.
-26. On the current branch there is nothing to return from.
-27. Branch deletion takes one confirmation from the engineer, through the selection interface. It covers the worktree removal, the kept phase branches, and the implementation's branch on the remote where it was pushed. Delete the remote branch only after the upstream branch holding the work has been pushed. Do not prompt twice. Delete a squashed phase's branch with `git branch -D`, since git refuses `-d` for it.
-28. Remove the worktree first, since git refuses to delete a branch checked out in a worktree.
-29. Suspension deletes no branch and removes no worktree.
-
-## The agent never raises the end of work with a forecast
-
-1. Do not offer to conclude, affirm, refute, or merge one: not as a next step, an option, or a precondition.
-2. Report what is settled and what is open, and stop.
-3. The length of work with a forecast is the engineer's judgment, not readable from the work done.
-4. Work without a forecast is not covered, because its completion is ordinary.
-
-## Drift
-
-1. While work with a forecast is open under branch only, watch for main-sequence work starting, and surface it.
-2. Offer two recourses through the selection interface: suspend the implementation, where the intent is to stop working it for now, or add a worktree, where the intent is to keep working it alongside.
-3. Neither recourse ends the implementation, and the engineer's intent decides.
-4. The watch rests on the branch name in the status line and on a judgment of whether the work serves the recorded question or intent.
-5. The watch is a practice, not a guarantee.
-6. Under a worktree there is nothing to watch. The status line's second line names the branch of an implementation that has not concluded, in any worktree.
-7. Work without a forecast has no watch, since starting other work during it is ordinary.
-
 # An item that sequences work contains no code samples
 
 Source: system/foundation/source/an-item-that-sequences-work-contains-no-code-samples.md
@@ -772,7 +772,7 @@ Trigger: When the engineer types `/unrecorded`, or starts or ends an unrecorded 
 2. A log entry, including the one the hook writes for a process question. The hook writes none while the session lasts.
 3. A journal entry, in the project journal or the private journal
 4. A work session record
-5. An implementation record
+5. A progression record
 6. A loop record
 7. A migration record
 8. A brainstorm collection file
@@ -789,7 +789,7 @@ Trigger: When the engineer types `/unrecorded`, or starts or ends an unrecorded 
 1. When the session starts, say once that nothing in it will be recorded. Say it again when it ends. A session started with an instruction says both in the one reply.
 2. A reply in the session prints no *Record:* line, since it wrote no record.
 3. Where the work would change an existing record's content or state, say so, and ask, through the selection interface, whether to end the session first. Do not change the record in the session.
-4. Before starting a feature or an experiment, ask, through the selection interface, whether to end the session first. An implementation without its record would be left silently open.
+4. Before starting a feature or an experiment, ask, through the selection interface, whether to end the session first. A progression without its record would be left silently open.
 5. Starting a private session ends an unrecorded one, and starting an unrecorded session ends a private one. Records only go one way at a time.
 
 ## An unrecorded session times out
@@ -815,7 +815,7 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 
 1. A private record is a record the engineer keeps for a project outside the project's repository. It is not committed with the project.
 2. Anything given to `/private` is recorded only in the private directory. Nothing of it is written into the project.
-3. A private record is a document, an item, a log entry, or a journal entry. In a private session, it is also a work session record, an implementation record, or a loop record.
+3. A private record is a document, an item, a log entry, or a journal entry. In a private session, it is also a work session record, a progression record, or a loop record.
 4. Its contents are what the engineer directs. Write the engineer's words, or what the engineer asks the agent to write. Add nothing on your own initiative.
 
 **As the engineer stated it:** When the "/private <instruction>" form is used, then private session ends upon comletion of the instruction
@@ -833,7 +833,7 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 | log entry | `~/.local/share/slasher/log/<project>/` |
 | journal entry | `~/.local/share/slasher/journal/<project>/` |
 | work session record | `~/.local/share/slasher/work-sessions/<project>/` |
-| implementation record | `~/.local/share/slasher/implementations/<project>/` |
+| progression record | `~/.local/share/slasher/progressions/<project>/` |
 | loop record | `~/.local/share/slasher/loops/<project>/` |
 
 4. One file in a project's directory is one record.
@@ -856,7 +856,7 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 1. A bare `/private` starts a private session. It lasts until the session ends, or until `/private end` or `/private session end`.
 2. `/private <instruction>`, or `/private session <instruction>`, starts a private session, carries out the instruction in it, and then ends it. The session ends when the reply that carries out the instruction is done: delete its state file, where there is one, and say that records go into the project again. Starting it ends an unrecorded session, as a bare `/private` does, so delete the unrecorded session's state file, where there is one.
 3. In a private session, every record the agent writes goes to the private directory, in the directory for its kind, and never into the project. That holds for a record the engineer asks for and for a record a rule asks for.
-4. A record is a file under `slasher/local/` that a rule tells the agent to write: an item, a log entry, a journal entry, a work session record, an implementation record, or a loop record.
+4. A record is a file under `slasher/local/` that a rule tells the agent to write: an item, a log entry, a journal entry, a work session record, a progression record, or a loop record.
 5. Carry out the instruction in the private session, then end it. Where no instruction was typed, or the `/private` was bare, start the private session and wait for the engineer's request.
 6. When the private session starts, say once that the session's records go to the private directory. Say it again when it ends. A session started with an instruction says both in the one reply.
 7. A file that is not a record still changes in the project, as the work asks. Code, a test, a rule, a vocabulary, a README, and a skill are not records.
@@ -881,7 +881,7 @@ Trigger: When the engineer types `/private`, or asks to write, read, or list a p
 2. **An item** takes an item's shape: the ISO-8601-UTC prefix, a name with no state, a `**State:**` line, a `**Tags:**` line, and the provenance footer.
 3. **A log entry** takes a log entry's shape: the ISO-8601-UTC prefix and a one-line title, with a `**Tags:**` line or a body where it needs one.
 4. **A journal entry** takes the shape the private-journal-convention gives it.
-5. **A work session record, an implementation record, or a loop record** takes the shape its own rule gives it, with no log entry in the project and no commit.
+5. **A work session record, a progression record, or a loop record** takes the shape its own rule gives it, with no log entry in the project and no commit.
 6. Where a file of that name is already there, ask, through the selection interface, whether to replace it or to use another name.
 
 ## Only on the engineer's command
@@ -969,7 +969,7 @@ Trigger: When creating and naming a new file under slasher/local/ or a new rule 
 ## What takes the prefix
 1. A dated artifact takes the datetime prefix. A dated artifact is something a project accrues over time, ordered by when it was made.
 2. The contemporaneous, historical records under `logs/` take it: the log (`logs/log/`), `logs/loops/`, and `logs/work-sessions/`.
-3. The work-artifact directories `items/`, `implementations/`, and `migration/` take it.
+3. The work-artifact directories `items/`, `progressions/`, and `migration/` take it.
 4. A Slasher project's own local rules, the ones it adds to its `slasher/local/rules/`, take it. A local rule is a dated decision in that project's history.
 5. Prefix every new working-state artifact with the full `YYYY-MM-DDTHH-MM-SSZ-` UTC datetime.
 6. Prefix every local rule a project adds the same way.
@@ -993,7 +993,7 @@ Trigger: When creating and naming a new file under slasher/local/ or a new rule 
 
 Source: system/foundation/source/disclosure-is-the-one-reason-to-edit-a-historical-record.md
 
-Trigger: When about to edit a historical record (a log entry, work session record, implementation record, or completed migration record), or when the engineer says a record discloses something it should not
+Trigger: When about to edit a historical record (a log entry, work session record, progression record, or completed migration record), or when the engineer says a record discloses something it should not
 
 1. A historical record states what was true when it was written.
 2. Historical records include log entries, work session records, experiment records, feature records, and completed migration records.
@@ -1057,42 +1057,6 @@ Trigger: When the engineer types `/estimate-confidence` or `/%`, or asks for the
 
 **How to apply:** on `/estimate-confidence` or `/%`, estimate the figures for the rest of the work under way, print them with their sentences, add the warning line where it applies, list what drives the two figures, and stop.
 
-# Implementation status reports its phases, its state, what exists, and what is left
-
-Source: system/foundation/source/implementation-status-reports-its-phases-its-state-what-exists-and-what-is-left.md
-
-Trigger: When the engineer types `/feature status` or `/experiment status`, or asks for the status of a feature or an experiment
-
-**Trigger:** When the engineer types `/feature status` or `/experiment status`, or asks for the status of a feature or an experiment
-
-**`/feature status` and `/experiment status` report the status of one implementation.** A bare `/feature status` reports on the feature the conversation is on. Where that is not clear, it reports on the one feature whose `**State:**` line reads Active. Where no feature is Active, or more than one is, ask which feature is meant, through the selection interface, each Active feature an option where there are any. `/experiment status` does the same for an experiment.
-
-**As the engineer stated it:** Add the "status" subcommand to implementations
-
-**`/feature status <feature>` reports on the feature the identifier names**, and `/experiment status <experiment>` on the experiment. An identifier is any of three forms:
-
-- **a number**, the ordinal of a row in the last list of features or experiments printed in the session, as `/feature status 2`
-- **a datetime prefix**, the record's ISO-8601-UTC filename prefix, as `/feature status 2026-10-02T14-10-05Z`
-- **words from the title**, which match the title of one record of the kind, as `/feature status cart payment`
-
-**Where the identifier names no record of the kind, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of the kind was printed in the session, say so, and report nothing.
-
-**Name the implementation before the report**, by its record's title, so the engineer can see which one the identifier named.
-
-**The report gives the phases, then the state, what exists, and what is left.** The phases are what the a-phase-starts-by-stating-its-goal rule prints for a status: the phases in the record's order, the current one emphasized, and the current phase's goal. Without phases, give the question or intent. Then each of the rest is a short list item:
-
-- **State:** the word on its `**State:**` line.
-- **What exists:** each thing the implementation's question or intent asks for that now exists on its branch, such as a command, a rule, or a file.
-- **What is left:** each thing it asks for that does not exist yet, and any decision it waits on.
-
-**Read the record, its branch, and the work when the command is typed, never from memory.**
-
-**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the implementation is the engineer's to ask for.
-
-**Why:** `/item status` reports where an item stands. A feature or an experiment is asked about the same way, and its phases are part of where it stands.
-
-**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, and what is left.
-
 # Item status reports an item's state, what exists, and what is left
 
 Source: system/foundation/source/item-status-reports-an-items-state-what-exists-and-what-is-left.md
@@ -1136,7 +1100,7 @@ Source: system/foundation/source/next-takes-the-next-step-of-the-work-under-way.
 Trigger: When the engineer types `/next`, `/next`, or `/next?`, or asks what is next
 
 1. `/next?` asks what the next step is, as the engineer asking *What's next?* would. `/next` takes it, as the engineer saying *proceed* would. `/proceed` and `/.` are aliases of `/next`.
-2. The work under way is any work with steps still to take: a plan's unchecked tasks, an implementation's phases, an outcome's design hinges, a list of steps the agent gave, a procedure part done. Interrupted work is still under way, and `/next` resumes it where it stopped. The next step is the first not yet taken.
+2. The work under way is any work with steps still to take: a plan's unchecked tasks, a progression's phases, an outcome's design hinges, a list of steps the agent gave, a procedure part done. Interrupted work is still under way, and `/next` resumes it where it stopped. The next step is the first not yet taken.
 3. On `/next?`, name the next step, or the step where interrupted work stopped, and what it would do, in a sentence or two, and do not take it.
 4. On `/next`, take the next step and nothing beyond it, then stop. Where the agent is suggesting an action, one its last response offered, that action is the next step.
 5. Follow the work the conversation is on. Where that is not clear, ask which, through the selection interface. Where no work is under way, say so.
@@ -1196,6 +1160,42 @@ Trigger: When the engineer types `/packages`, or asks which packages are install
 **Why:** the engineer asks what is installed, and what each package does, without opening each README. `/package-set` answers which are active, and `/packages` answers what each one is.
 
 **How to apply:** on `/packages`, read the package directories and the latest package set declaration. Print a table of name, state, and the README's first sentence, `foundation` first, then the package set's name below it where one is declared. On `/packages <package>`, carry out the act named, or ask which, offering only the acts the package can take now.
+
+# Progression status reports its phases, its state, what exists, and what is left
+
+Source: system/foundation/source/progression-status-reports-its-phases-its-state-what-exists-and-what-is-left.md
+
+Trigger: When the engineer types `/feature status` or `/experiment status`, or asks for the status of a feature or an experiment
+
+**Trigger:** When the engineer types `/feature status` or `/experiment status`, or asks for the status of a feature or an experiment
+
+**`/feature status` and `/experiment status` report the status of one progression.** A bare `/feature status` reports on the feature the conversation is on. Where that is not clear, it reports on the one feature whose `**State:**` line reads Active. Where no feature is Active, or more than one is, ask which feature is meant, through the selection interface, each Active feature an option where there are any. `/experiment status` does the same for an experiment.
+
+**As the engineer stated it:** Add the "status" subcommand to implementations
+
+**`/feature status <feature>` reports on the feature the identifier names**, and `/experiment status <experiment>` on the experiment. An identifier is any of three forms:
+
+- **a number**, the ordinal of a row in the last list of features or experiments printed in the session, as `/feature status 2`
+- **a datetime prefix**, the record's ISO-8601-UTC filename prefix, as `/feature status 2026-10-02T14-10-05Z`
+- **words from the title**, which match the title of one record of the kind, as `/feature status cart payment`
+
+**Where the identifier names no record of the kind, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of the kind was printed in the session, say so, and report nothing.
+
+**Name the progression before the report**, by its record's title, so the engineer can see which one the identifier named.
+
+**The report gives the phases, then the state, what exists, and what is left.** The phases are what the a-phase-starts-by-stating-its-goal rule prints for a status: the phases in the record's order, the current one emphasized, and the current phase's goal. Without phases, give the question or intent. Then each of the rest is a short list item:
+
+- **State:** the word on its `**State:**` line.
+- **What exists:** each thing the progression's question or intent asks for that now exists on its branch, such as a command, a rule, or a file.
+- **What is left:** each thing it asks for that does not exist yet, and any decision it waits on.
+
+**Read the record, its branch, and the work when the command is typed, never from memory.**
+
+**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the progression is the engineer's to ask for.
+
+**Why:** `/item status` reports where an item stands. A feature or an experiment is asked about the same way, and its phases are part of where it stands.
+
+**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, and what is left.
 
 # Projects lists the registry, and carries out an instruction in another project
 
@@ -1318,13 +1318,13 @@ Trigger: When the engineer types `/status`, or asks for the status of the work u
 
 **As the engineer stated it:** Add a root "/status" command
 
-**A bare `/status` reports on the work under way.** That is the feature or experiment the conversation is on. Where the conversation is on none, it is the one implementation whose `**State:**` line reads Active, and where none is Active, the one Active item. Where more than one record is a candidate at the step that decides, ask which, through the selection interface, each candidate an option. Where no record is a candidate, say that no work is under way, and report nothing.
+**A bare `/status` reports on the work under way.** That is the feature or experiment the conversation is on. Where the conversation is on none, it is the one progression whose `**State:**` line reads Active, and where none is Active, the one Active item. Where more than one record is a candidate at the step that decides, ask which, through the selection interface, each candidate an option. Where no record is a candidate, say that no work is under way, and report nothing.
 
 **`/status <record>` reports on the record the identifier names.** An identifier is any of three forms:
 
 - **a number**, the ordinal of a row in the last list of items, features, or experiments printed in the session, as `/status 3`
-- **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the implementations, as `/status 2026-10-02T14-10-05Z`
-- **words from the title**, which match the title of one item or implementation, as `/status cart payment`
+- **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the progressions, as `/status 2026-10-02T14-10-05Z`
+- **words from the title**, which match the title of one item or progression, as `/status cart payment`
 
 **Where the identifier names no record, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of records was printed in the session, say so, and report nothing.
 
@@ -1332,7 +1332,7 @@ Trigger: When the engineer types `/status`, or asks for the status of the work u
 
 **Why:** the engineer asks *where does this stand?* without stopping to name the kind of record. One root command finds the work under way, or the record named, and gives the report its kind gives.
 
-**How to apply:** on `/status`, find the record from the identifier, or the work under way where none was given. Then report on it under the item-status-reports-an-items-state-what-exists-and-what-is-left rule for an item, or the implementation-status-reports-its-phases-its-state-what-exists-and-what-is-left rule for a feature or an experiment.
+**How to apply:** on `/status`, find the record from the identifier, or the work under way where none was given. Then report on it under the item-status-reports-an-items-state-what-exists-and-what-is-left rule for an item, or the progression-status-reports-its-phases-its-state-what-exists-and-what-is-left rule for a feature or an experiment.
 
 # The harness announces Slasher's installation, and the agent never prints the notice
 
@@ -1427,8 +1427,8 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 15. It compares against the remote-tracking ref, so it reflects the last fetch.
 16. A branch with no upstream reports nothing, since unpushed is relative to an upstream.
 17. An upstream missing by accident is a different fact, and is deliberately not folded into this segment.
-18. Where a feature or an experiment is Open, Active, or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's.
-19. A phase is under way where its branch exists, and its commits count as work on its implementation. Where more than one implementation is current, show the one whose branch, or a phase's branch, has the latest commit.
+18. Where a feature or an experiment is Open, Active, or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-progression.sh` finds it, in this repository's arrangement or an installed project's.
+19. A phase is under way where its branch exists, and its commits count as work on its progression. Where more than one progression is current, show the one whose branch, or a phase's branch, has the latest commit.
 20. Where none is current, print no second line.
 
 ## The startup display
@@ -1461,98 +1461,6 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 2. Elsewhere the system loads through the bootstrap in `slasher/SLASHER.md`, which the project's `AGENTS.md` imports, silently.
 3. A setting that disables hooks silences it too.
 4. A newly placed plugin or `.claude/settings.json` may not take effect until the harness reloads.
-
-# The implementations directory holds one record per implementation
-
-Source: system/foundation/source/the-implementations-directory-holds-one-record-per-implementation.md
-
-Trigger: When creating or starting an experiment or feature, or writing or changing an implementation record
-
-1. `slasher/local/implementations/` holds implementation records, one file per implementation.
-2. A record carries how the implementation started, where it is being worked, and what became of it.
-3. An implementation is a bounded unit of work with a lifecycle.
-4. The record is a persisted, dated artifact, kept after the implementation concludes.
-5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
-6. The tags name what the work is. No rule reads them to decide how the work runs.
-7. Either kind opens with a question or an intent, whichever the work has.
-8. Whether the work states a forecast is asked when the implementation is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
-9. Whether the work reaches a verdict is asked at the end, of work with a forecast only, and recorded as a confirmation. The lifecycle reads both. Neither follows from the kind, or from whether the work opens with a question or an intent.
-
-## The record
-
-1. Open with the **Question** or the **Intent**.
-2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the implementation branch, its base, the working location chosen when the implementation is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
-3. The upstream branch is `master` or another topic branch.
-4. The setup also includes a `**Tags:**` line carrying `[experiment]` or `[feature]`.
-5. Work with a forecast states it, what is expected to happen, before the work.
-6. As the work proceeds, it records what actually happened against the forecast.
-7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
-8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
-9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
-10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the implementation's creation, and the verdict selection at the end where the work has a forecast.
-11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
-12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded implementation, and merging untested code.
-
-## The state
-
-1. The state sits on a canonical `**State:**` line carrying one word and nothing else, for example `- **State:** Suspended`.
-2. Write the line with the record, as `Open`, and change it as the record reaches another word.
-3. That line is the only authoritative statement of the state.
-4. The state words may appear freely in the record's prose. Nothing else in the file is read as the state.
-5. `Active` is the in-progress state, as it is for an item.
-6. A record without a line is a defect. Absence is not a state.
-7. Do not invent a state word.
-8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no implementation is in place, `start` creates the branch and writes the record `Active`.
-9. The filename carries no state (see the a-records-file-name-carries-no-state rule).
-10. The state words every implementation takes are these.
-    - **Open**: the record and the branch exist, and the work has not started.
-    - **Active**: the work is in progress.
-    - **Deferred**: kept to do later, with no one working toward it.
-    - **Suspended**: paused, not ended.
-    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the status line leave it out. What it recorded may be merged.
-    - **Obsolete**: it lost its relevance over time, with no one deciding.
-    - **Superseded**: replaced by another implementation. Each of the two records names its counterpart. Supersede at any time, without suspending first.
-    - **Abandoned**: dropped before concluding, by decision. It is not merged, and the record is kept.
-11. The concluding words are these, and any implementation takes any of them, whether or not it has a forecast.
-    - **Completed**: integrated into the upstream branch. It is the ordinary conclusion.
-    - **Affirmed**: the question held, or the intent was met, as forecast where there is one. The engineer declares it.
-    - **Refuted**: the question was disproven, or the intent was not met.
-    - **Inconclusive**: it ran and gave no clear verdict either way.
-12. The engineer concludes an implementation Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
-13. Where the implementation is created for an item, make the item Implementation, and name each record in the other. When the implementation is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
-    - Where the item is already on `master`, make each of these state changes on `master` too, not only on the implementation's branch. Commit the same item content and the same log entry on both, so the merge matches.
-14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed implementation does to its merged branch is settled when it first occurs.
-15. Where the engineer asks for an implementation to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the implementation before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
-
-## Runs
-
-1. Runs are optional.
-2. Only work that reaches a verdict has runs.
-3. Split an implementation into runs only when its question or intent is held fixed and one factor is varied to compare.
-4. Each run is its own branch from the same base.
-5. Each run carries its own forecast.
-6. Runs are titled `Run 1`, `Run 2`, and so on.
-7. A run is a deliberate variation, not a retry.
-
-## It is the lifecycle record, not the design record
-
-1. The same work's design belongs in a loop record under `slasher/local/logs/loops/`.
-2. A loop record holds each cycle's hinge, the options put to the engineer, and the decision.
-3. The implementation record and the loop record divide by concern. Each names the other.
-4. Keep them as separate files. `slasher/local/logs/loops/` belongs to `design-by-efferent`, which includes `foundation`, not the reverse.
-5. A foundation rule must not require fields in that directory. That dependency is refused.
-6. Naming the loop record in prose is a citation and is permitted. It is the only reference permitted.
-
-## Format
-
-1. Use the same frontmatter-free markdown as rules: a title, then prose and tables.
-2. The title is `# Experiment — <name>` or `# Feature — <name>`.
-3. The kind reads in the title and is stated as data in the `**Tags:**` line.
-4. A record whose title and tag name different kinds is defective.
-5. The filename takes the ISO-8601-UTC prefix (see the file-names rule).
-6. The filename carries no state.
-7. End the file with the provenance footer.
-8. Pair the record with a log entry (see the a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
 
 # The items directory holds one file per item
 
@@ -1622,9 +1530,9 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 60. Answer a question that runs against what an item settled, and record the change.
 61. Do not refuse to answer until the item is amended.
 62. Reconcile a settled item; never regenerate it. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
-63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The implementations rule asks the same for an implementation concluded with no state named. *Complete that item* names its kind's concluding state.
-64. **Implementation** — when a feature or an experiment is created for an item, the item takes Implementation, and the two records name each other. It is a current item, and its implementation is listed as current work too.
-65. When the implementation is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
+63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The progressions rule asks the same for a progression concluded with no state named. *Complete that item* names its kind's concluding state.
+64. **Progression** — when a feature or an experiment is created for an item, the item takes Progression, and the two records name each other. It is a current item, and its progression is listed as current work too.
+65. When the progression is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
 
 # The log records why work was abandoned, and never says undone work was done
 
@@ -1668,7 +1576,7 @@ Trigger: When writing a record under local/logs/ or deciding which directory a n
 7. Write a work session record to `slasher/local/logs/work-sessions/`.
 8. A record belongs here only when it accrues chronologically and is never revised.
 9. Each record here is a running account, entry after entry, in the order things happened, and it is reached by date.
-10. Nothing here states what is currently true. Items, implementation records, and migration records do not belong here.
+10. Nothing here states what is currently true. Items, progression records, and migration records do not belong here.
 11. A migration record does not belong here. It is one document, revised while the migration runs, and prospective: steps written to be executed.
 12. Keeping a record afterward makes it durable, not chronological. Durability does not qualify a record for this directory.
 13. The three records keep their own names and their own conventions. This rule only groups them.
@@ -1697,7 +1605,7 @@ Trigger: When the engineer types `/open`, or asks for a record they name to be o
 
 **As the engineer stated it:** Create an "/open" command. It receives a record descriptor, and opens its file in the default application.
 
-**`/open <record>` opens the record the words name, in the default application for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand. A record is any record the agent writes under `slasher/local/`: an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or a migration record.
+**`/open <record>` opens the record the words name, in the default application for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand. A record is any record the agent writes under `slasher/local/`: an item, a progression record, a rule, a log entry, a journal entry, a work session record, a loop record, or a migration record.
 
 **The words name a record in one of four ways.**
 
@@ -1759,6 +1667,98 @@ Trigger: When the engineer types `/print`, or asks for the last record or text w
 **Why:** the engineer often wants to read again the thing just worked on, in full, in the chat. That thing can be a record or a draft that is not a record. A bare `/print` most often means the thing just worked on, as a bare `/open` does, so the two commands choose it the same way.
 
 **How to apply:** on a bare `/print`, take the more recent of the last principal record and the last text being worked on, and print it as it now stands. With words, print the record they name.
+
+# The progressions directory holds one record per progression
+
+Source: system/foundation/source/the-progressions-directory-holds-one-record-per-progression.md
+
+Trigger: When creating or starting an experiment or feature, or writing or changing a progression record
+
+1. `slasher/local/progressions/` holds progression records, one file per progression.
+2. A record carries how the progression started, where it is being worked, and what became of it.
+3. A progression is a bounded unit of work with a lifecycle.
+4. The record is a persisted, dated artifact, kept after the progression concludes.
+5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
+6. The tags name what the work is. No rule reads them to decide how the work runs.
+7. Either kind opens with a question or an intent, whichever the work has.
+8. Whether the work states a forecast is asked when the progression is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
+9. Whether the work reaches a verdict is asked at the end, of work with a forecast only, and recorded as a confirmation. The lifecycle reads both. Neither follows from the kind, or from whether the work opens with a question or an intent.
+
+## The record
+
+1. Open with the **Question** or the **Intent**.
+2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
+3. The upstream branch is `master` or another topic branch.
+4. The setup also includes a `**Tags:**` line carrying `[experiment]` or `[feature]`.
+5. Work with a forecast states it, what is expected to happen, before the work.
+6. As the work proceeds, it records what actually happened against the forecast.
+7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
+8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
+9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
+10. Every record carries these: the working-location selection, the attended-or-unattended selection, and the forecast selection, each at the progression's creation, and the verdict selection at the end where the work has a forecast.
+11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
+12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded progression, and merging untested code.
+
+## The state
+
+1. The state sits on a canonical `**State:**` line carrying one word and nothing else, for example `- **State:** Suspended`.
+2. Write the line with the record, as `Open`, and change it as the record reaches another word.
+3. That line is the only authoritative statement of the state.
+4. The state words may appear freely in the record's prose. Nothing else in the file is read as the state.
+5. `Active` is the in-progress state, as it is for an item.
+6. A record without a line is a defect. Absence is not a state.
+7. Do not invent a state word.
+8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no progression is in place, `start` creates the branch and writes the record `Active`.
+9. The filename carries no state (see the a-records-file-name-carries-no-state rule).
+10. The state words every progression takes are these.
+    - **Open**: the record and the branch exist, and the work has not started.
+    - **Active**: the work is in progress.
+    - **Deferred**: kept to do later, with no one working toward it.
+    - **Suspended**: paused, not ended.
+    - **Discontinued**: stopped, with no plan to do it. It is not current work: the list of current work and the status line leave it out. What it recorded may be merged.
+    - **Obsolete**: it lost its relevance over time, with no one deciding.
+    - **Superseded**: replaced by another progression. Each of the two records names its counterpart. Supersede at any time, without suspending first.
+    - **Abandoned**: dropped before concluding, by decision. It is not merged, and the record is kept.
+11. The concluding words are these, and any progression takes any of them, whether or not it has a forecast.
+    - **Completed**: integrated into the upstream branch. It is the ordinary conclusion.
+    - **Affirmed**: the question held, or the intent was met, as forecast where there is one. The engineer declares it.
+    - **Refuted**: the question was disproven, or the intent was not met.
+    - **Inconclusive**: it ran and gave no clear verdict either way.
+12. The engineer concludes a progression Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
+13. Where the progression is created for an item, make the item Progression, and name each record in the other. When the progression is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
+    - Where the item is already on `master`, make each of these state changes on `master` too, not only on the progression's branch. Commit the same item content and the same log entry on both, so the merge matches.
+14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed progression does to its merged branch is settled when it first occurs.
+15. Where the engineer asks for a progression to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the progression before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
+
+## Runs
+
+1. Runs are optional.
+2. Only work that reaches a verdict has runs.
+3. Split a progression into runs only when its question or intent is held fixed and one factor is varied to compare.
+4. Each run is its own branch from the same base.
+5. Each run carries its own forecast.
+6. Runs are titled `Run 1`, `Run 2`, and so on.
+7. A run is a deliberate variation, not a retry.
+
+## It is the lifecycle record, not the design record
+
+1. The same work's design belongs in a loop record under `slasher/local/logs/loops/`.
+2. A loop record holds each cycle's hinge, the options put to the engineer, and the decision.
+3. The progression record and the loop record divide by concern. Each names the other.
+4. Keep them as separate files. `slasher/local/logs/loops/` belongs to `design-by-efferent`, which includes `foundation`, not the reverse.
+5. A foundation rule must not require fields in that directory. That dependency is refused.
+6. Naming the loop record in prose is a citation and is permitted. It is the only reference permitted.
+
+## Format
+
+1. Use the same frontmatter-free markdown as rules: a title, then prose and tables.
+2. The title is `# Experiment — <name>` or `# Feature — <name>`.
+3. The kind reads in the title and is stated as data in the `**Tags:**` line.
+4. A record whose title and tag name different kinds is defective.
+5. The filename takes the ISO-8601-UTC prefix (see the file-names rule).
+6. The filename carries no state.
+7. End the file with the provenance footer.
+8. Pair the record with a log entry (see the a-log-entry-is-written-for-a-progression-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
 
 # The recent report says what was recently done, and what is next
 
@@ -1971,7 +1971,7 @@ Trigger: When creating or changing a working-state document under slasher/
 
 1. Every working-state artifact under `slasher/` that is a document with a body ends with a **provenance footer**.
 2. The footer is the `Authored by … / Changed by …` block, in the record-a-rules-authorship-in-a-provenance-footer format, with a local human-readable datetime.
-3. The footer goes on every implementation record, whether an experiment or a feature.
+3. The footer goes on every progression record, whether an experiment or a feature.
 4. It goes on every item, whatever it is tagged, including designs, plans, notes, and deferred work.
 5. It goes on every loop record and every work session record.
 6. Write `Authored by <name> on <local datetime>` for the original author, on creation.

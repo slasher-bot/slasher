@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **This repository (Recommended)** — system/foundation/ and local/implementations/, as in the Slasher source. Works with the script as it stands.
-- **Installed project** — slasher/system/foundation/ and slasher/local/implementations/. current-implementation.sh must also learn to find records there.
+- **This repository (Recommended)** — system/foundation/ and local/progressions/, as in the Slasher source. Works with the script as it stands.
+- **Installed project** — slasher/system/foundation/ and slasher/local/progressions/. current-progression.sh must also learn to find records there.
 
 The engineer's answer: **This repository (Recommended)**

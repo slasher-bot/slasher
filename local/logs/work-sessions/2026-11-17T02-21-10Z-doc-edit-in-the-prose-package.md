@@ -2,7 +2,7 @@
 
 This work session started as a comparison of Slasher's prose commands with the doc-edit skill, became a feature that brought doc-edit's way of reviewing into the `prose` package, and ended with the check on writing that draws the reader's conclusion stated once, in `language`.
 
-This is the communicable record of the work session, a guided tour. The items, implementation record, rules, and log entries it points to are the source of truth.
+This is the communicable record of the work session, a guided tour. The items, progression record, rules, and log entries it points to are the source of truth.
 
 ## 1. The comparison
 
@@ -21,7 +21,7 @@ Asked to propose an approach, the agent put three: a walk-through command, doc-e
 The feature ran in a worktree, unattended, by a plan the engineer accepted. A **criteria rule** names four paragraph criteria and three sentence criteria. `/review` and `/print-and-review` judge by it, and each finding names its criterion. `/edit` numbers the paragraphs and walks them with `next`, `previous`, `p<n>`, `sentences`, and `print`, giving findings with no rewrite. A rewrite asked for becomes a `/review` suggestion.
 
 - Rules: content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence, edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence
-- Implementation record: `2026-11-17T02-07-24Z-prose-edit`, Completed
+- Progression record: `2026-11-17T02-07-24Z-prose-edit`, Completed
 
 ## 4. One rule, not two
 
@@ -49,7 +49,7 @@ The engineer concluded the feature Completed. It merged to `master`, and the aut
 
 - Rules: the four `prose` rules in `system/prose/source/`, and writing-states-the-evidence-and-the-reader-draws-the-conclusion in `system/language/source/`
 - Items: the comparison item, and the doc-edit incorporation work item
-- Implementation record: `2026-11-17T02-07-24Z-prose-edit`
+- Progression record: `2026-11-17T02-07-24Z-prose-edit`
 - Log entries, in `local/logs/log/`, from `2026-11-16T23-15-47Z`
 
 ---

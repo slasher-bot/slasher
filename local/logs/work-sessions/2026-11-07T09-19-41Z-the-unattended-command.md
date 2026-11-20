@@ -42,7 +42,7 @@ The command governs the agent's behavior, so no automated test reaches it. The e
 ## Where the durable records live
 
 - The item: `local/items/2026-11-07T08-54-40Z-an-unattended-command-carries-out-a-request-on-the-agents-own`
-- The feature record: `local/implementations/2026-11-07T09-14-17Z-unattended-command`
+- The feature record: `local/progressions/2026-11-07T09-14-17Z-unattended-command`
 - The rule: the unattended-carries-out-a-request-without-stopping-for-the-engineer rule
 - The verdict idea: `local/items/2026-11-07T09-18-22Z-the-verdict-question-offers-whats-a-verdict`
 - The log entries from `2026-11-07T09-14-07Z` onward under `local/logs/log/`

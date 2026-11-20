@@ -71,11 +71,11 @@ Source: system/git/source/a-commits-sha-refers-to-the-work-the-commit-carries.md
 Trigger: When the engineer gives a commit SHA
 
 1. A commit SHA from the engineer asks about the work the commit carries.
-2. That work is the item, the implementation, the rule, or the code change.
+2. That work is the item, the progression, the rule, or the code change.
 3. The SHA does not ask about the commit's mechanics.
 4. The mechanics are the commit's message, its file list, its diff statistics, and the log entry that came with it.
 5. Answer from what the commit added or changed.
-6. If the commit carries an item, an implementation record, or a rule, read that file. Answer from its content.
+6. If the commit carries an item, a progression record, or a rule, read that file. Answer from its content.
 7. If the commit changes code, answer from what the code now does.
 8. Open the files the commit added or changed, rather than reporting their names.
 9. Give the mechanics when the question is about them. Answer each of *Was it pushed*, *what did it touch*, *is it on master*, and *what does its message say* directly.
@@ -133,7 +133,7 @@ BRANCH SWITCHED
 2. `git switch -c` prints the block, with `from` naming the base.
 3. A worktree adds a working directory rather than moving this one.
 4. Print no block for a worktree.
-5. The an-implementation-runs-on-a-branch-to-a-declared-end rule governs the worktree case.
+5. The a-progression-runs-on-a-branch-to-a-declared-end rule governs the worktree case.
 6. A merge, a commit, or a push does not move the working tree.
 7. Print no block for a merge, a commit, or a push.
 

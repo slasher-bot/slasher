@@ -9,6 +9,6 @@ The question, put through the selection interface:
 The options:
 
 - **A forecast at the start (Recommended)** — Work with a forecast is treated as work that may reach a verdict until it ends. At the end it is asked the verdict question. Work without a forecast concludes Completed, unasked.
-- **Every branch-built implementation** — Any implementation on its own branch is treated as work that may reach a verdict until it ends, forecast or not. Only work on the current branch is the main line.
+- **Every branch-built progression** — Any progression on its own branch is treated as work that may reach a verdict until it ends, forecast or not. Only work on the current branch is the main line.
 
 The engineer's answer: **A forecast at the start (Recommended)**

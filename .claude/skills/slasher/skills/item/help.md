@@ -26,7 +26,7 @@ ITEMS
   /item list <state>, /list <state>
                                    List items in a state
                                    <state>: any item state, or "current"
-                                   (Open, Active, and Implementation)
+                                   (Open, Active, and Progression)
   /item status [<item>]            The item's state, what exists, and what
                                    is left. <item>: a number from the last
                                    list, a datetime, or words from the

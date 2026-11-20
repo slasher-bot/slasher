@@ -1,10 +1,10 @@
-# Does the feature Ask the verdict question after an implementation completes conclude with an engineer's verdict? The rules still ask this at the start until this feature changes them. — Conclude without an engineer's verdict, selected by the engineer
+# Does the feature Ask the verdict question after a progression completes conclude with an engineer's verdict? The rules still ask this at the start until this feature changes them. — Conclude without an engineer's verdict, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Does the feature Ask the verdict question after an implementation completes conclude with an engineer's verdict? The rules still ask this at the start until this feature changes them.
+> Does the feature Ask the verdict question after a progression completes conclude with an engineer's verdict? The rules still ask this at the start until this feature changes them.
 
 The options:
 

@@ -19,7 +19,7 @@ These will all be subcommands of `/prose`
 
 - **2026-11-19** — `edit` numbers the sentences in a paragraph s1, s2, and so on. **As the engineer stated it:** The sentences in a paragraph should be numbered as "s1", "s2", etc
 
-**Implementation:** `2026-11-20T02-27-27Z-prose-command`
+**Progression:** `2026-11-20T02-27-27Z-prose-command`
 
 ---
 

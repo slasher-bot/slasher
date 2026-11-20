@@ -9,7 +9,7 @@
 
 **As the engineer later stated it:** Remove the part about the email package from #3
 
-**Implementation:** `2026-11-13T08-22-43Z-smtp-package`, the feature that builds it.
+**Progression:** `2026-11-13T08-22-43Z-smtp-package`, the feature that builds it.
 
 ---
 

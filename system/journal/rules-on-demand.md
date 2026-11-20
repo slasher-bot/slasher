@@ -202,7 +202,7 @@ Trigger: When writing, changing, or committing a journal entry
 4. The the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule resolves which writer is writing.
 5. The journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule states the directory at the entry.
 6. The package's former name is `diary`.
-7. Records written before the rename keep the word they were written with: the log, the implementation records, and the journal entries. They are historical and are not revised.
+7. Records written before the rename keep the word they were written with: the log, the progression records, and the journal entries. They are historical and are not revised.
 8. `diary` in this repository's history names nothing live.
 
 ## `slasher/local/journal/`

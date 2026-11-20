@@ -2,7 +2,7 @@
 
 This work session gave every command group in the help text a short description, and concluded the feature that did it. It began with a work item asking that each heading in `scratch/skills.md` carry a sentence of description, both there and at the top of its root commands' help. It became a feature, and the engineer settled the fourteen descriptions one wording at a time. Several ideas and one rule change were recorded on the way.
 
-This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/implementations/2026-11-06T08-01-07Z-command-group-descriptions`, the work item `local/items/2026-11-06T07-57-00Z-each-command-group-has-a-one-sentence-description`, and the log.
+This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/progressions/2026-11-06T08-01-07Z-command-group-descriptions`, the work item `local/items/2026-11-06T07-57-00Z-each-command-group-has-a-one-sentence-description`, and the log.
 
 ## 1. The work item and the feature
 
@@ -10,7 +10,7 @@ The engineer asked for each command group's first line, then its help's first li
 
 ## 2. The verdict question's words
 
-At the feature's start the verdict question offered "No verdict" and "Reaches a verdict". The engineer asked for *Conclude with an engineer's verdict* and *Conclude without an engineer's verdict*, and had the implementation rule amended to fix those words, as the participation rule fixes "Who decides?". The rule was checked, with nothing lost.
+At the feature's start the verdict question offered "No verdict" and "Reaches a verdict". The engineer asked for *Conclude with an engineer's verdict* and *Conclude without an engineer's verdict*, and had the progression rule amended to fix those words, as the participation rule fixes "Who decides?". The rule was checked, with nothing lost.
 
 ## 3. The fourteen descriptions
 
@@ -27,10 +27,10 @@ The working tree had been switched to `master` by other work in the meantime, so
 
 ## Where the durable records live
 
-- The feature record, `local/implementations/2026-11-06T08-01-07Z-command-group-descriptions`.
+- The feature record, `local/progressions/2026-11-06T08-01-07Z-command-group-descriptions`.
 - The work item, `local/items/2026-11-06T07-57-00Z-each-command-group-has-a-one-sentence-description`.
 - The ideas recorded: `/thought` as an alias for observation, `/projects` carrying ideas into other projects, and an item's state commands as bare aliases.
-- The implementation rule, an-implementation-runs-on-a-branch-to-a-declared-end.
+- The progression rule, a-progression-runs-on-a-branch-to-a-declared-end.
 - The help text, `scratch/skills.md`, and each skill's `help.md`.
 
 ---

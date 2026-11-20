@@ -2,7 +2,7 @@
 
 Seven days that began by moving one directory and ended by removing four mechanisms. The work started as ordinary maintenance — where a migration record belongs, what the system's description says — and turned into a distribution question when the Ruby package left the default set. Answering that produced **package sets**, which is the one thing built in the gap. Everything after it was subtraction: the deferred queue, the mode vocabulary, the observation lifecycle, and every hard-wrapped line came out. The last day closed eleven ideas, four of them by abandonment, and settled the largest question underneath them — the core of Waytide keeps Design By Efferent.
 
-**This is the communicable record, and it covers a gap rather than a sitting.** The durable records are the source of truth: the rules under `system/` and `local/rules/`, the ideas in `local/ideas/`, the decision log in `local/logs/log/`, and the implementation records in `local/implementations/`. This narrative points at them and does not restate them. The gap runs from 2026-08-19, where *The record types collapse into three* left off, to 2026-08-25, and it holds 142 log entries. Its boundaries are the week rather than one discrete piece of work, which is what the engineer asked for.
+**This is the communicable record, and it covers a gap rather than a sitting.** The durable records are the source of truth: the rules under `system/` and `local/rules/`, the ideas in `local/ideas/`, the decision log in `local/logs/log/`, and the progression records in `local/progressions/`. This narrative points at them and does not restate them. The gap runs from 2026-08-19, where *The record types collapse into three* left off, to 2026-08-25, and it holds 142 log entries. Its boundaries are the week rather than one discrete piece of work, which is what the engineer asked for.
 
 ## 1. A migration record moves under `logs/` and moves back the same day
 
@@ -38,7 +38,7 @@ This is the substantial build of the week, and it started as something else. The
 
 **A set declared mid-session takes effect at the next one**, and the engineer is told so at the moment they declare it — a mechanism whose effect is delayed and does not say so reads as one that did not work.
 
-The record is `local/implementations/2026-08-23T08-09-02Z-package-sets-COMPLETED.md`.
+The record is `local/progressions/2026-08-23T08-09-02Z-package-sets-COMPLETED.md`.
 
 ## 5. The grouping becomes `ext/`
 
@@ -114,7 +114,7 @@ The question underneath the `ext/` abandonment was answered: the core should not
 ## Where the durable records live
 
 - **The rules** — `system/foundation/`, `system/journal/`, `system/testing/`, and the local rules in `local/rules/`. Written in the gap: `a-project-declares-its-package-set`, `a-record-list-is-a-table`, `a-sha-names-the-work-rather-than-the-commit`, `tests-are-automated-or-interactive`, `a-suspended-test-file-is-named-with-a-leading-underscore`, `prose-is-not-hard-wrapped`, `a-vocabulary-entry-says-what-a-term-means-not-what-it-was`, `the-log-never-says-undone-work-was-done`, and the local `the-readme-is-figurative-for-the-uninitiated`.
-- **The implementation records** — `local/implementations/`, for Tool-Specific Distribution, Package Sets, the ext grouping, and the two abandoned features.
+- **The progression records** — `local/progressions/`, for Tool-Specific Distribution, Package Sets, the ext grouping, and the two abandoned features.
 - **The migration records** — `local/migration/`, for the Ruby package's move and the `tools/`-to-`ext/` rename.
 - **The ideas** — `local/ideas/`, all of which now carry a terminal state.
 - **The decision log** — `local/logs/log/`, 142 entries for this gap.

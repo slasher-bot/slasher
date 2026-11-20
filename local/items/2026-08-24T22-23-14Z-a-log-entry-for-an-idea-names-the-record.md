@@ -63,7 +63,7 @@
 - **Which rule carries it.** Amending the direction-and-sequencing-artifacts-take-a-log-entry rule is the candidate, since it already states the artifact-not-the-word requirement. A rule of its own is the alternative. This is undecided.
   - **2026-08-24 — decided, and this item leaves the tail.** The engineer selected the amendment, accepting the stated cost: the rule now says more than its name does, and its name is left alone rather than renamed, since a rename reaches every citation of it.
 - **No wording template is fixed.** The earlier entries show a form that works. Fixing one would be the over-prescription the plans-no-code-samples rule warns against, and the form is not the part that failed.
-- **Whether it reaches an implementation record's entries.** The engineer named the logs that pertain to an idea. An open feature or experiment raises the same question and is not settled here.
+- **Whether it reaches a progression record's entries.** The engineer named the logs that pertain to an idea. An open feature or experiment raises the same question and is not settled here.
 - **No conforming pass follows.** Recording this settles what is written from now on, per the `language` package's a-word-is-reserved-in-six-steps rule's statement that a conforming pass is asked for separately.
   - **2026-08-24 — the engineer asked for one separately, which is what that rule anticipates.** It was bounded to the six entries and is done. Nothing standing was conformed beyond them.
 

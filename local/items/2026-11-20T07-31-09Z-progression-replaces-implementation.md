@@ -4,7 +4,7 @@
 
 **Tags:** [work]
 
-Its implementation is the feature `2026-11-20T08-18-26Z-progression-replaces-implementation`.
+Its progression is the feature `2026-11-20T08-18-26Z-progression-replaces-implementation`.
 
 **As the engineer stated it:** I choose "progression"
 

@@ -1,10 +1,10 @@
-# `/feature status` and `/experiment status` already show the phases and the current phase's goal. How should `status` change for implementations? — Add item status to it, selected by the engineer
+# `/feature status` and `/experiment status` already show the phases and the current phase's goal. How should `status` change for progressions? — Add item status to it, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> `/feature status` and `/experiment status` already show the phases and the current phase's goal. How should `status` change for implementations?
+> `/feature status` and `/experiment status` already show the phases and the current phase's goal. How should `status` change for progressions?
 
 The options:
 

@@ -6,7 +6,7 @@
 
 A journal can be configured as private entirely, so that individual entries don't have to be written as private.
 
-**Implementation:** `2026-11-16T05-23-14Z-fully-private-journal`
+**Progression:** `2026-11-16T05-23-14Z-fully-private-journal`
 
 ---
 

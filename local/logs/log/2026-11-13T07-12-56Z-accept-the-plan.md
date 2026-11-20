@@ -8,7 +8,7 @@ The question, put through the selection interface:
 >
 > 1. Add `/private session <instruction>` to the private-records rule. From that command until the session ends, the session is a private session.
 > 2. In a private session, every record the agent writes goes to the private directory, never into the project.
-> 3. Records include items, log entries, journal entries, work session records, implementation records, and loop records. Add a private directory for each kind that has none.
+> 3. Records include items, log entries, journal entries, work session records, progression records, and loop records. Add a private directory for each kind that has none.
 > 4. The agent carries out the instruction after `session` in the private session. With no instruction, the private session starts and the agent waits.
 > 5. The log-entry hook still writes into the project. In a private session, the agent moves each entry the hook writes to the private log directory.
 > 6. A file that is not a record, such as code, a rule, or a README, still changes in the project. The engineer asked only for the session's records to be private.

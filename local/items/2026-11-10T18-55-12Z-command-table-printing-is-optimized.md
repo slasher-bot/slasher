@@ -16,7 +16,7 @@
   - The startup table and its sentence naming the other commands are generated from the joined rows.
   - The help-order file that orders the help orders the table's rows too.
 
-**Implementation:** the feature `2026-11-10T06-02-53Z-general-email-fetch`, in its command table phase, carries this item's work. It is Completed, so this work item is Done.
+**Progression:** the feature `2026-11-10T06-02-53Z-general-email-fetch`, in its command table phase, carries this item's work. It is Completed, so this work item is Done.
 
 ---
 

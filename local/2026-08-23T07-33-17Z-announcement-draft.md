@@ -4,7 +4,7 @@ The message announcing Waytide to the Eventide community, written for Slack. **A
 posted on 2026-08-22.** What is below is the current draft, revised since.
 
 **It sits directly in `local/` for now.** No convention covers content — `local/` holds ideas,
-implementations, logs, migration, the journal, the rules, and the vocabulary, and an announcement
+progressions, logs, migration, the journal, the rules, and the vocabulary, and an announcement
 is none of them. That gap is what *Waytide for content and web* names, and this file moves when
 that idea settles where content lives.
 
@@ -30,7 +30,7 @@ Waytide is a project's working conventions, written as files an AI coding agent 
 It came out of the design practice the Eventide Project uses in its own work, extracted from Constant and generalized into installable packages.
 
 • *Conventions that bind* — one rule per file, in prose, each carrying its reasoning
-• *The work records itself* — decisions, ideas, and implementations accumulate beside the code
+• *The work records itself* — decisions, ideas, and progressions accumulate beside the code
 • *Design By Efferent* — the call written before any implementation, so the interface is shaped from the use site
 • *Gates, not ceremony* — the loop stops only where a decision is subtle and load-bearing
 • *Five checkpoints* — the call, the way to prove the call's effects, the conditions necessary to prove it, the implementation of it, and following clarifications and evolutions. The agent provides reasonable assumptions and options, or the engineer takes the helm

@@ -9,6 +9,6 @@ The question, put through the selection interface:
 The options:
 
 - **Completed record (Recommended)** — One feature record whose state is Completed.
-- **No records** — An empty implementations directory.
+- **No records** — An empty progressions directory.
 
 The engineer's answer: **Completed record (Recommended)**

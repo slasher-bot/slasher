@@ -1,10 +1,10 @@
-# Implementation hinge: how does current-implementation.sh come to find records in an installed project? — Working (Recommended), selected by the engineer
+# Implementation hinge: how does current-progression.sh come to find records in an installed project? — Working (Recommended), selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Implementation hinge: how does current-implementation.sh come to find records in an installed project?
+> Implementation hinge: how does current-progression.sh come to find records in an installed project?
 
 The options:
 

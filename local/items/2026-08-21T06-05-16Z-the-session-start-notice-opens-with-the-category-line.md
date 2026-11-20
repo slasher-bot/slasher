@@ -43,7 +43,7 @@ To load them now, type: load waytide.
 
 **A line that never changes is read once and then stops being read.** The announce-waytide-at-session-start rule states it about a permanent segment, and the print-the-deferred-queue-after-the-rule-read rule states it again as the reason the queue is printed after the read rather than carried in the notice: *the failure of a permanent line is that it stops being read*.
 
-**The install line is permanent too, and it survives that objection because its content moves.** The package count and list change, and the open-implementation lines appear and disappear. A category line has no such variation.
+**The install line is permanent too, and it survives that objection because its content moves.** The package count and list change, and the open-progression lines appear and disappear. A category line has no such variation.
 
 **The status line already carries the standing fact.** `waytide · master :: Waytide` renders every turn, and the rule says what it is for: the standing fact that the system is in force. A second permanent statement of identity is a second thing that stops being read.
 

@@ -7,7 +7,7 @@ PHASE
                                    and its goal
   /phase new <name>                Create a phase after the last
   /phase start                     Start the next phase
-  /phase complete                  -> Completed, merged into the implementation
+  /phase complete                  -> Completed, merged into the progression
   /phase affirm                    -> Affirmed (engineer's declaration only)
   /phase refute                    -> Refuted (the phase's proposition is
                                    not realized)

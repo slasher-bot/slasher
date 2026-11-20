@@ -1,10 +1,10 @@
-# Realized was meant for ideas, Done is for work items, and Completed is for implementations. Should the concluding states keep that pairing, or become one word? — Keep the pairing, selected by the engineer
+# Realized was meant for ideas, Done is for work items, and Completed is for progressions. Should the concluding states keep that pairing, or become one word? — Keep the pairing, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Realized was meant for ideas, Done is for work items, and Completed is for implementations. Should the concluding states keep that pairing, or become one word?
+> Realized was meant for ideas, Done is for work items, and Completed is for progressions. Should the concluding states keep that pairing, or become one word?
 
 The options:
 

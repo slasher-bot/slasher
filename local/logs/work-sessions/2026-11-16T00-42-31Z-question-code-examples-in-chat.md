@@ -2,7 +2,7 @@
 
 This work session took an item James Hughes proposed, that a question's code examples be shown in the chat before the selection, and built it as an unattended feature. It also recorded a second report from him, that the installer fails silently where a project already has an `AGENTS.md`. It ended with the feature merged to `master` and the problem item Open.
 
-This is the communicable record of the work session, a guided tour. The items, implementation record, loop record, rules, and log entries it points to are the source of truth.
+This is the communicable record of the work session, a guided tour. The items, progression record, loop record, rules, and log entries it points to are the source of truth.
 
 ## 1. The item, explained
 
@@ -19,7 +19,7 @@ The engineer started the feature in a worktree, unattended, with no forecast, an
 - The design-by-efferent hinge-cycle rule shows an artifact longer than one line the same way.
 - Both rules' compressed texts were checked by a fresh lister and a fresh checker. The hinge rule's check found two lost and three less precise directives from before this change. They were repaired, and both rules were re-checked.
 
-- Implementation record: `2026-11-16T00-25-10Z-question-code-examples-in-chat`
+- Progression record: `2026-11-16T00-25-10Z-question-code-examples-in-chat`
 - Loop record: the loop record for the feature, under `local/logs/loops/`
 
 ## 3. The AGENTS.md problem
@@ -45,7 +45,7 @@ The engineer concluded the feature Completed. It merged to `master`, and the aut
 ## Where the durable records live
 
 - `local/items/`: the code examples item, Completed, and the AGENTS.md problem item, Open.
-- `local/implementations/`: the question code examples implementation record.
+- `local/progressions/`: the question code examples progression record.
 - `local/logs/loops/`: the loop record for the feature.
 - `local/logs/log/`: an entry for each decision and each change of state.
 - `system/foundation/` and `system/design-by-efferent/`: the two rules.

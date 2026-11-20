@@ -6,7 +6,7 @@
 
 A workspace project can have its own `projects.toml`.
 
-Its implementation is the feature `2026-11-20T05-36-34Z-workspace-projects-toml`.
+Its progression is the feature `2026-11-20T05-36-34Z-workspace-projects-toml`.
 
 ## Suggestions — Thu Nov 19 2026
 

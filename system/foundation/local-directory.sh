@@ -6,7 +6,7 @@
 # Run from the root of a Slasher project, or of one of its worktrees.
 #
 # Prints the project's local directory: the directory that holds its own rules,
-# vocabulary, journal, logs, items, implementations, and migration records.
+# vocabulary, journal, logs, items, progressions, and migration records.
 #
 # Where the project's entry in the machine's project registry has a local key,
 # that is the directory, as in:

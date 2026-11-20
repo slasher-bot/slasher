@@ -2,14 +2,14 @@
 
 This work session started with an idea for an `/edit` command that suggests edits to content. It became a feature, which renamed the command four times and settled its design in five decisions. It created a new package, `prose`, to carry it, and changed which packages this repository activates. It ended with `/review` merged to `master`, and with Claude Code's built-in `/review` known to take the bare name.
 
-This is the communicable record of the work session, a guided tour. The items, implementation record, rule, package-set declarations, and log entries it points to are the source of truth.
+This is the communicable record of the work session, a guided tour. The items, progression record, rule, package-set declarations, and log entries it points to are the source of truth.
 
 ## 1. The feature, started for item 2
 
 After a publish of `foundation` and a push, the engineer typed `/feature start #2`, for the idea of an `/edit` command. No feature was Open, so the feature was created Active. The engineer selected a branch and worktree, attended work, and no forecast. Attended work was recommended, since the agent's confidence was 55%.
 
 - Item: `2026-11-14T14-42-30Z-edit-command-suggests-edits-to-content`, now Realized
-- Implementation record: `2026-11-15T19-38-31Z-review-command`
+- Progression record: `2026-11-15T19-38-31Z-review-command`
 
 ## 2. The command's name
 
@@ -17,7 +17,7 @@ The engineer renamed `/edit` to `/suggest`, then `/suggest` to `/review`. The br
 
 ## 3. The design
 
-A command made of prose has no automated test, so its design questions were put as decisions rather than as test hinges. Each is in the implementation record.
+A command made of prose has no automated test, so its design questions were put as decisions rather than as test hinges. Each is in the progression record.
 
 - **Use site**: `/review <content>` names the content, and a bare `/review` takes the content the conversation is on.
 - **Numbered suggestions**: `/review accept 1 3` and `/review reject 2` settle some suggestions. With no numbers, they settle all.
@@ -57,7 +57,7 @@ The engineer concluded the feature Completed. It merged to `master`, with one co
 ## Where the durable records live
 
 - `local/items/`: the edit command idea and the content package idea, both Realized.
-- `local/implementations/`: the review command implementation record.
+- `local/progressions/`: the review command progression record.
 - `local/`: the two package-set declarations.
 - `local/logs/log/`: an entry for each decision and each change of state.
 - `system/prose/`: the package, its rule, and the `review` skill.

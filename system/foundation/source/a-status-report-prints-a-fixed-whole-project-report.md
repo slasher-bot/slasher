@@ -6,7 +6,7 @@ When the user asks for a **status report** (or "project status"), produce a repo
 
 1. **Task table** — the tasks those records carry, as a table: number, task, status (done / next / pending), and a terse note. Mark the next task. Include any out-of-sequence extras already built.
 2. **Waiting work table** — the items carrying a `**Waits for:**` line: name, date, what it waits for, one-line gist. These are off the task line until the wait ends. Order them by their `**Priority:**` rank where they carry one. **A hidden record is not listed here** — see below.
-3. **Slasher-directory orientation** — a basic map of `slasher/`: `slasher/system/` holds the installed rule packages (e.g. `foundation/`, `language/`) and `slasher/local/rules/` holds the project's own local rules — each binding, each read at session start. Alongside `rules/` under `slasher/local/`, the contemporaneous, historical records under `logs/` (`log/`, `loops/`, `work-sessions/`), and the work-artifact directories `items/`, `implementations/`, and `migration/`. How to work with it: rules are enforceable conventions, and the log is title-only ISO-8601-UTC decision entries. A rule typically pairs with a log entry. An item holds the task checklist where it sequences work, and a `**Waits for:**` line marks work that is not yet actionable.
+3. **Slasher-directory orientation** — a basic map of `slasher/`: `slasher/system/` holds the installed rule packages (e.g. `foundation/`, `language/`) and `slasher/local/rules/` holds the project's own local rules — each binding, each read at session start. Alongside `rules/` under `slasher/local/`, the contemporaneous, historical records under `logs/` (`log/`, `loops/`, `work-sessions/`), and the work-artifact directories `items/`, `progressions/`, and `migration/`. How to work with it: rules are enforceable conventions, and the log is title-only ISO-8601-UTC decision entries. A rule typically pairs with a log entry. An item holds the task checklist where it sequences work, and a `**Waits for:**` line marks work that is not yet actionable.
 4. **Recent flows of work** — a brief of the recent direction, drawn from the latest log/commit entries (a few lines, not an exhaustive list).
 5. **Test suite** — **convention-aware of the testing package.** If the project has adopted the testing conventions, run the suite and report the count and pass/fail line. Report the suite's **context tree two levels deep, rendered hierarchically**. Each distinct **top-level context** is a tree root, with its distinct **second-level contexts** indented as its branches. Use an indented tree, such as a fenced block with `├─`/`└─` branches. Stop at two levels — do not descend into per-assertion contexts. If the project has **not** adopted the testing conventions, degrade this section. Report whatever suite the project has, with its count and pass/fail, or note that there is none.
 
@@ -57,7 +57,7 @@ Keep each part tight. Read current state before printing — do not report stale
 13. The map shows that `slasher/local/rules/` holds the project's own local rules.
 14. The map states that both are binding and both are read at session start.
 15. The map shows the contemporaneous, historical records under `logs/` (`log/`, `loops/`, `work-sessions/`), alongside `rules/` under `slasher/local/`.
-16. The map shows the work-artifact directories `items/`, `implementations/`, and `migration/`, also under `slasher/local/`.
+16. The map shows the work-artifact directories `items/`, `progressions/`, and `migration/`, also under `slasher/local/`.
 17. The orientation says how to work with the directory. Rules are enforceable conventions.
 18. The log is title-only ISO-8601-UTC decision entries.
 19. A rule typically pairs with a log entry.
@@ -115,8 +115,11 @@ Keep each part tight. Read current state before printing — do not report stale
 - 2026-10-24, compressed: compression 0.10, change 0.41, solubility 28 → 51, clarity 0.40 → 0.83, 32 directives, 32 kept, 0 less precise, 0 lost, after 1 repair, re-checked kept
 - 2026-10-28, revised: How to apply removed, each directive only it carried moved to the section it belongs to, solubility 51 → 51, clarity 0.83 → 0.83; checked: 29 directives, 28 kept, 1 less precise, 0 lost, 1 repair, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 51 → 51, clarity 0.83 → 0.83; checked: 31 directives, 31 kept, 0 less precise, 0 lost
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Thu Nov 5 2026 this rule was loaded on demand, on the trigger *When the engineer asks for a status report, or when giving any summary of where the project stands*. Its trigger was not a safe one, so it is pre-loaded.
 
@@ -169,3 +172,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT

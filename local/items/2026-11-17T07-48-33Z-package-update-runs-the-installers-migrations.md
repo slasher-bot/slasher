@@ -23,7 +23,7 @@ Added Mon Nov 16 2026. Recommended by the agent, not settled.
 - It never asks anything, and never appends to an `AGENTS.md` that holds no Slasher section. Adding that line still needs the engineer's consent, so the update only reports it, as it does now.
 - It prints each migration that changed something, so nothing moves silently.
 
-**Implementation:** `2026-11-17T07-50-01Z-update-runs-migrations`, the feature that builds it.
+**Progression:** `2026-11-17T07-50-01Z-update-runs-migrations`, the feature that builds it.
 
 ---
 

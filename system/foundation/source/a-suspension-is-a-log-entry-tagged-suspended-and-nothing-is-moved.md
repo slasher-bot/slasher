@@ -24,7 +24,7 @@
 **Tags:** [suspended]
 ```
 
-**That is the one form every record uses.** The a-record-may-be-categorized-with-square-bracket-tags rule excludes no record and offers no second shape, so a log entry's tags sit where an item's and an implementation record's do.
+**That is the one form every record uses.** The a-record-may-be-categorized-with-square-bracket-tags rule excludes no record and offers no second shape, so a log entry's tags sit where an item's and a progression record's do.
 
 **A log entry may carry other tags beside this one.** Nothing here reserves the line, and nothing excludes any record from tagging.
 
@@ -67,7 +67,7 @@ Do not keep a copy of the removed thing. Do not tag an item's log entry this way
 **Tags:** [suspended]
 ```
 
-2. This is the one form every record uses, per the a-record-may-be-categorized-with-square-bracket-tags rule. A log entry's tags sit where an item's and an implementation record's do.
+2. This is the one form every record uses, per the a-record-may-be-categorized-with-square-bracket-tags rule. A log entry's tags sit where an item's and a progression record's do.
 3. A log entry may carry other tags beside this one.
 4. What `[suspended]` marks is fixed here.
 5. The set of suspensions is read from this tag.
@@ -78,8 +78,11 @@ Do not keep a copy of the removed thing. Do not tag an item's log entry this way
 - 2026-10-27, revised: `[suspended]` is no longer called a reserved tag, a term the engineer settled; not checked
 - 2026-10-28, revised: How to apply removed, each directive only it carried moved to the section it belongs to, solubility 70 → 67, clarity 0.76 → 0.73; checked: 20 directives, 17 kept, 3 less precise, 0 lost, 4 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 67 → 73, clarity 0.73 → 0.76; checked: 16 directives, 16 kept, 0 less precise, 0 lost
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Thu Nov 5 2026 its trigger read *When the project stops doing something, such as removing a rule, procedure, or report*, which was not a safe one.
 
@@ -120,3 +123,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 9:42:16 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT

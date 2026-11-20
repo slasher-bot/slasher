@@ -1,6 +1,6 @@
 # Disclosure is the one reason to edit a historical record
 
-**Trigger:** When about to edit a historical record (a log entry, work session record, implementation record, or completed migration record), or when the engineer says a record discloses something it should not
+**Trigger:** When about to edit a historical record (a log entry, work session record, progression record, or completed migration record), or when the engineer says a record discloses something it should not
 
 A historical record states what was true when it was written, and is **not** revised to suit a later convention. That is a log entry, a work session record, an experiment record, a feature record, or a completed migration record. That is the standing rule. It holds against renaming, reformatting, and correcting a term the project has since replaced. It holds against every other reason a reader might want a record to read differently.
 
@@ -79,8 +79,11 @@ Reducing resolution satisfies the two — the evidence survives, and what was no
 
 - 2026-10-24, compressed: compression 0.28, change 0.60, solubility 43 → 64, clarity 0.49 → 0.68, 16 directives, 16 kept, 0 less precise, 0 lost, after 2 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 64 → 65, clarity 0.68 → 0.70; checked: 16 directives, 16 kept, 0 less precise, 0 lost
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Mon Oct 26 2026 this rule called the log "the decision log". The engineer settled that it is the log, since its entries record more than decisions.
 
@@ -110,3 +113,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 3:38:10 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:53 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT

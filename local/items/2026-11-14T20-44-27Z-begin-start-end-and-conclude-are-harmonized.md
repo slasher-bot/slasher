@@ -19,7 +19,7 @@
 - **2026-11-14** — A feature has `start` and no `new`. `/feature start` creates the feature, its record and its branch, asks the start's questions, and makes it Active. **As the engineer stated it:** "Feature should have \"start\" but not \"new\""
 - **2026-11-14** — An experiment follows a feature: `/experiment start` creates and starts it, and `/experiment new` is removed. Selected by the engineer.
 - **2026-11-14** — Open is dropped as a state of a feature or an experiment, which is Active from the moment it is created. Items keep Open. Selected by the engineer.
-- **2026-11-14** — The three resolutions above, that a feature and an experiment have `start` and no `new`, and no Open state, are reversed. A feature and an experiment keep `new`, which creates the implementation Open. `start` makes an Open implementation Active. Where no implementation is in place, `start` creates it and writes it Active. **As the engineer stated it:** "Reversal: Implementations have a new command, and they are open at that point. But if start is issued without first having an implementation in place, it starts the implementation in the active state."
+- **2026-11-14** — The three resolutions above, that a feature and an experiment have `start` and no `new`, and no Open state, are reversed. A feature and an experiment keep `new`, which creates the progression Open. `start` makes an Open progression Active. Where no progression is in place, `start` creates it and writes it Active. **As the engineer stated it:** "Reversal: Implementations have a new command, and they are open at that point. But if start is issued without first having an implementation in place, it starts the implementation in the active state."
 - **2026-11-14** — The rules say a feature's or an experiment's location, forecast, and attended-or-unattended questions are asked when it is created, not "at the start". *Start* means only the work starting. Selected by the engineer.
 - **2026-11-15** — `/phase new` replaces `/phase add`, so a phase is created by `new`, as a feature and an experiment are. **As the engineer stated it:** "phase add should be phase new"
 - **2026-11-15** — `/phase` has a `status` subcommand, which prints what `/feature status` and `/experiment status` print: the phases in order, the current one emphasized, and the current phase's goal. **As the engineer stated it:** "The \"/phase\" command should also have a \"status\" subcommand". What it prints was selected by the engineer.
@@ -28,7 +28,7 @@
 - **2026-11-15** — *Conclude* replaces *finish*, as in *a piece of work concluded*. **As the engineer stated it:** "Use conclude instead of finish"
 - **2026-11-15** — Goals, aspirations, designs, notes, and brainstorms keep starting Recorded. Designs, notes, and brainstorms stay Recorded. **As the engineer stated it:** "It stays as it is"
 
-**Implementation:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
+**Progression:** `2026-11-14T23-32-59Z-begin-start-end-conclude-harmonized`
 
 ---
 

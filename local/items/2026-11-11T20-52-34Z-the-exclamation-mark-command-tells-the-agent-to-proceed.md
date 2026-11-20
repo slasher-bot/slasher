@@ -15,7 +15,7 @@
 
 **As the engineer stated it:** Revert the shortcuts changes we just made. If "/>>" does "proceed", then "/!" is not needed as an alias for next
 
-**Implementation:** `2026-11-11T20-57-41Z-proceed-shortcut`, the feature that builds it.
+**Progression:** `2026-11-11T20-57-41Z-proceed-shortcut`, the feature that builds it.
 
 ---
 

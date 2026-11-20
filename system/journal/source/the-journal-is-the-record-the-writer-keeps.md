@@ -2,9 +2,9 @@
 
 **Trigger:** When writing, changing, or committing a journal entry
 
-**`slasher/local/journal/<username>/` holds a writer's journal.** It is the one record in `slasher/local/` the writer keeps. A project may hold the journals of more than one writer, and each writer's entries sit under their own directory, named for their username. The the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule resolves which writer is writing, and the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule states the directory at the entry. The log, the work session record, the loop record, and the implementation record are all the agent's work, read by the writer. The journal runs the other way. The writer keeps it, and the agent reads it.
+**`slasher/local/journal/<username>/` holds a writer's journal.** It is the one record in `slasher/local/` the writer keeps. A project may hold the journals of more than one writer, and each writer's entries sit under their own directory, named for their username. The the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule resolves which writer is writing, and the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule states the directory at the entry. The log, the work session record, the loop record, and the progression record are all the agent's work, read by the writer. The journal runs the other way. The writer keeps it, and the agent reads it.
 
-**Records written while the package was named `diary` keep that word.** The log, the implementation records, and the writer's own entries are historical and are not revised. So `diary` still reads in this repository's history, and it names nothing live.
+**Records written while the package was named `diary` keep that word.** The log, the progression records, and the writer's own entries are historical and are not revised. So `diary` still reads in this repository's history, and it names nothing live.
 
 **`slasher/local/journal/` holds the writers' directories and the writers file.** That file is `writers.toml`, and it overrides a writer's display name for this project. It is optional, and it may omit the active writer, whose name and username are declared in `~/.config/slasher/user`. A writer absent from it shows as the name that file gives, or as their username. See the the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule.
 
@@ -64,7 +64,7 @@ One file per entry rather than one per day follows the convention every other da
 4. The the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule resolves which writer is writing.
 5. The journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule states the directory at the entry.
 6. The package's former name is `diary`.
-7. Records written before the rename keep the word they were written with: the log, the implementation records, and the journal entries. They are historical and are not revised.
+7. Records written before the rename keep the word they were written with: the log, the progression records, and the journal entries. They are historical and are not revised.
 8. `diary` in this repository's history names nothing live.
 
 ## `slasher/local/journal/`
@@ -137,8 +137,11 @@ Journal: Idea
 - 2026-10-28, revised: How to apply removed, each directive only it carried moved to the section it belongs to, solubility 48 → 50, clarity 0.77 → 0.80; checked: 37 directives, 34 kept, 3 less precise, 0 lost, 5 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 50 → 50, clarity 0.80 → 0.79; checked: 37 directives, 35 kept, 2 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 37 directives, 35 kept, 0 less precise, 2 lost, 2 repairs
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 The prefix was `Diary:` for the few hours between the date being dropped and the package being renamed, both on 2026-08-18.
 
@@ -205,3 +208,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 7:01:39 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 3:55:30 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:58:37 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT

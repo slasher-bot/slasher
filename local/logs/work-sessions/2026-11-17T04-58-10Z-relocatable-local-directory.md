@@ -42,7 +42,7 @@ The engineer concluded the feature Completed. It merged to `master` cleanly, the
 
 ## Glossary
 
-- **local directory**: the directory that holds a project's own rules, vocabulary, journal, logs, items, implementations, and migration records. `slasher/local/` by default.
+- **local directory**: the directory that holds a project's own rules, vocabulary, journal, logs, items, progressions, and migration records. `slasher/local/` by default.
 - **relocated**: of a local directory, placed outside the project by the `local` key in the project's registry entry.
 - **project registry**: `~/.config/slasher/projects.toml`, the per-machine list of Slasher projects and their settings.
 

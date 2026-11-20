@@ -6,7 +6,7 @@ This migration conforms the work items and rework items in the Done state to Com
 
 - **This repository:** the 13 items in `local/items/` whose file ends `-DONE.md`. Each is renamed to end `-COMPLETED.md`, its `**State:**` line reads Completed, and its footer takes a `Changed by` line.
 - **Consuming projects:** `install.sh` renames each item whose file ends `-DONE.md` to end `-COMPLETED.md`, and changes its `**State:**` line to Completed, on install and on refresh. Where both files are present, neither is touched.
-- **Left as written:** every log entry, work session record, and implementation record that names the Done state, and every reference to an item by its prefix and name, which carries no state suffix.
+- **Left as written:** every log entry, work session record, and progression record that names the Done state, and every reference to an item by its prefix and name, which carries no state suffix.
 
 ## Increments
 

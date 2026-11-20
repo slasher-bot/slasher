@@ -17,7 +17,7 @@ Added Wed Nov 18 2026. `fetch.py` takes its accounts from the password items in 
 - **2026-11-18** — A file in the project's local directory lists the email accounts that apply to the project, by name. A bare `/email fetch` fetches only those accounts, and a project with no list fetches none. The list travels with the project's records. The file's name and place are not settled.
 - **2026-11-18** — The list and every account's configuration are one file, `email/slasher-email.toml` in the project's local directory. Each account is an `[[account]]` table with its `name`, the name the account has in the Keychain, and an `[account.imap]` table holding what the account's own `slasher-email.toml` holds today under `[imap]`. An `[account.smtp]` table holds its send configuration. The per-account `slasher-email.toml` files are no longer read, and their content moves into the one file. Fetched mail still goes to `email/<name>/`. This settles the file's name and place, which the earlier resolution left open.
 
-**Implementation:** `2026-11-19T04-17-20Z-email-accounts-per-project`
+**Progression:** `2026-11-19T04-17-20Z-email-accounts-per-project`
 
 ---
 

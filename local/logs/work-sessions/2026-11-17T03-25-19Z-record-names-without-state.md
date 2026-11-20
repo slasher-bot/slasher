@@ -16,7 +16,7 @@ The engineer stopped the feature's first creation question to add that the chang
 
 ## 3. The feature, unattended
 
-The engineer chose a branch and worktree, unattended work, and no forecast, and accepted a ten-step plan. The migration was written test first, in `install.sh`, after the older migrations that find a record by its suffix. Where the new name is taken, or two names differ only in their state, it renames neither. The status line's script reads the `**State:**` line. The suffix rule was rewritten as the a-records-file-name-carries-no-state rule, and eight rules changed to match. Fresh agents checked the six changed compressed texts and found four gaps, which were repaired. All 240 of this repository's items and implementation records were renamed.
+The engineer chose a branch and worktree, unattended work, and no forecast, and accepted a ten-step plan. The migration was written test first, in `install.sh`, after the older migrations that find a record by its suffix. Where the new name is taken, or two names differ only in their state, it renames neither. The status line's script reads the `**State:**` line. The suffix rule was rewritten as the a-records-file-name-carries-no-state rule, and eight rules changed to match. Fresh agents checked the six changed compressed texts and found four gaps, which were repaired. All 240 of this repository's items and progression records were renamed.
 
 - Feature record: `2026-11-17T02-31-38Z-record-names-without-state`, Completed
 - Loop record: `2026-11-17T02-38-07Z-record-names-without-state`
@@ -42,8 +42,8 @@ The engineer concluded the feature Completed. It merged to `master` with no reco
 
 ## Where the durable records live
 
-- Rules, in `system/foundation/source/`: a-records-file-name-carries-no-state, and the items, implementations, notes, file-names, records-line, `/open`, and private rules
-- `system/foundation/install.sh` and `system/foundation/current-implementation.sh`
+- Rules, in `system/foundation/source/`: a-records-file-name-carries-no-state, and the items, progressions, notes, file-names, records-line, `/open`, and private rules
+- `system/foundation/install.sh` and `system/foundation/current-progression.sh`
 - Tests: `test/automated/install-record-names-without-state.sh` and its clash test
 - The item, feature record, loop record, and migration record named above
 - Commits: `0b161e6d` through `58db2e2b` on `master`

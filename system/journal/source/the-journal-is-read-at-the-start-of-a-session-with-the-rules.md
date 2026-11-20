@@ -16,7 +16,7 @@
 
 **Where the directory is not there, read nothing and say nothing.** A project that keeps no journal is the ordinary case, and so is a writer who keeps none where other writers do. Its absence is not a defect and is not reported.
 
-**The other working directories are not read this way.** `logs/`, `items/`, `implementations/`, and `migration/` are worked with as their own conventions describe. The journal is the one that is read whole, at the start, without being asked for.
+**The other working directories are not read this way.** `logs/`, `items/`, `progressions/`, and `migration/` are worked with as their own conventions describe. The journal is the one that is read whole, at the start, without being asked for.
 
 **Say nothing about having read it.** No summary, no count of entries, no line naming what the writer was last thinking about. The writer wrote it and knows what is in it. A report back would be the agent returning a person's own words to them.
 
@@ -58,8 +58,11 @@ Reading one writer's journal alone follows from the same thing. An entry carries
 - 2026-10-24, compressed: compression 0.52, change 0.75, solubility 49 → 76, clarity 0.49 → 0.70, 14 directives, 14 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 76 → 73, clarity 0.70 → 0.69; checked: 14 directives, 14 kept, 0 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 14 directives, 13 kept, 0 less precise, 1 lost, 1 repair
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Sun Oct 25 2026 this rule was named the-journal-is-read-at-session-start.
 
@@ -101,3 +104,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Wed Oct 28 2026 at 3:55:30 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT

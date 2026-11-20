@@ -24,7 +24,7 @@ Asked whether the feature was ready, the agent found the branch committed and me
 - The the-work-sessions-directory-holds-one-record-per-work-session rule
 - The suspension: `local/logs/log/2026-11-07T10-26-41Z-the-design-question-after-a-work-session-record-is-suspended`
 - The item: `local/items/2026-11-07T08-03-39Z-the-participation-question-offers-unattended-first`
-- The feature record: `local/implementations/2026-11-07T09-46-08Z-participation-question-offers-unattended-first`
+- The feature record: `local/progressions/2026-11-07T09-46-08Z-participation-question-offers-unattended-first`
 
 ---
 

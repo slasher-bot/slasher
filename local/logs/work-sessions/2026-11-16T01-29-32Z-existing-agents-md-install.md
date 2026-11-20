@@ -2,7 +2,7 @@
 
 This work session tested James Hughes's report that the installer fails silently where a project already has an `AGENTS.md`, and fixed it. The test showed the failure is not silent at the installer, but is lost under `/install`. The fix gives the installer an explicit answer, fails loudly without one, and has `/install` ask. It ran attended through three outcomes, then unattended to the end, at the engineer's direction.
 
-This is the communicable record of the work session, a guided tour. The item, implementation record, loop record, and log entries it points to are the source of truth.
+This is the communicable record of the work session, a guided tour. The item, progression record, loop record, and log entries it points to are the source of truth.
 
 ## 1. The test
 
@@ -26,7 +26,7 @@ Each outcome went through actuation, observation, controls, and implementation. 
 
 The engineer directed the rest unattended, and accepted the plan. `/install` asks whether to append when the installer fails that way. The tests were named, and the two `install.sh` tests took the folder form. The READMEs say how an existing `AGENTS.md` is handled. An existing `CLAUDE.md` without `@AGENTS.md` is skipped the same way, which is noted in the item and not fixed. The engineer asked for the selection to be simulated, and the agent drew it.
 
-- Implementation record: `2026-11-16T00-59-24Z-existing-agents-md-install`
+- Progression record: `2026-11-16T00-59-24Z-existing-agents-md-install`
 - Loop record: `2026-11-16T01-03-54Z-existing-agents-md-install`
 
 ## 5. The conclusion
@@ -46,7 +46,7 @@ The engineer concluded the feature Completed. It merged to `master`, and the aut
 ## Where the durable records live
 
 - `local/items/`: the AGENTS.md problem item, Resolved, with the test results.
-- `local/implementations/`: the existing AGENTS.md install implementation record.
+- `local/progressions/`: the existing AGENTS.md install progression record.
 - `local/logs/loops/`: the loop record, attended and then unattended.
 - `local/logs/log/`: an entry for each decision and each change of state.
 - `system/foundation/install.sh`, `slasher-install`, the `install` skill, and the tests under `test/automated/install-agents-md/` and `test/automated/slasher-install/agents-md/`.

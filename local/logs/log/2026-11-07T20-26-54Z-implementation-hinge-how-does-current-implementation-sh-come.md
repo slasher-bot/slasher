@@ -1,10 +1,10 @@
-# Implementation hinge: how does current-implementation.sh come to print only the most recently acted upon? — Working (Recommended), selected by the engineer
+# Implementation hinge: how does current-progression.sh come to print only the most recently acted upon? — Working (Recommended), selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Implementation hinge: how does current-implementation.sh come to print only the most recently acted upon?
+> Implementation hinge: how does current-progression.sh come to print only the most recently acted upon?
 
 The options:
 

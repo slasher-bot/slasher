@@ -21,7 +21,7 @@ A project's local directory may sit outside the project, at the path its registr
 
 ## 4. The status line's worktrees
 
-- **Hinge:** whether `current-implementation.sh` still reads every worktree's records.
+- **Hinge:** whether `current-progression.sh` still reads every worktree's records.
 - **Decision:** not where the directory is relocated, since every worktree shares it. Where it is not, every worktree is read as before.
 
 ## 5. Failure in each caller

@@ -6,7 +6,7 @@
 
 "/private" "/private end"
 
-**Implementation:** `2026-11-16T22-55-23Z-private-session-commands`
+**Progression:** `2026-11-16T22-55-23Z-private-session-commands`
 
 ---
 

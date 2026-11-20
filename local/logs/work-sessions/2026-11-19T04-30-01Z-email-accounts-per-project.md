@@ -44,7 +44,7 @@ The engineer selected the merge. The automated suite passed on `master` with 121
 ## Where the durable records live
 
 - Item: `local/items/2026-11-19T03-36-28Z-imap-fetch-cannot-say-which-accounts-apply-to-a-project.md`
-- Feature record: `local/implementations/2026-11-19T04-17-20Z-email-accounts-per-project.md`
+- Feature record: `local/progressions/2026-11-19T04-17-20Z-email-accounts-per-project.md`
 - Loop record: `local/logs/loops/2026-11-19T04-23-18Z-email-accounts-per-project.md`
 - Code: `system/imap/email_configuration.py`, `system/imap/fetch.py`, `system/smtp/send.py`, and the migration in `system/foundation/install.sh`
 

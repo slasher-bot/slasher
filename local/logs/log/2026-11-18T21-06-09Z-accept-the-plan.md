@@ -6,7 +6,7 @@ The question, put through the selection interface:
 
 > Accept the plan?
 >
-> 1. Write the feature record, Active, on master. Make the work item Implementation. Write their log entries.
+> 1. Write the feature record, Active, on master. Make the work item Progression. Write their log entries.
 > 2. `/brainstorm <text>` starts a brainstorm, records the text word for word, and ends it, in one reply. The end writes a [brainstorm] item as `/brainstorm end` does.
 > 3. `/brainstorm <kind> <text>` does the same into a new item of that kind.
 > 4. A first word that is a subcommand or a kind keeps its meaning. So `/brainstorm idea the cart keeps its contents` brainstorms into an idea, and the text is "the cart keeps its contents".

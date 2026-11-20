@@ -8,7 +8,7 @@ Add a "/commit" command with "/c" alias.
 
 **Supersedes:** `2026-11-19T18-02-45Z-c-is-the-shortcut-of-commit`
 
-**Implementation:** `2026-11-20T00-37-50Z-commit-command`
+**Progression:** `2026-11-20T00-37-50Z-commit-command`
 
 ---
 

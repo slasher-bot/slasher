@@ -2,9 +2,9 @@
 
 **Trigger:** When the engineer gives a commit SHA
 
-**When the engineer names a commit by its SHA, they are asking about the substance the commit carries.** That is the item, the implementation, the rule, or the change to the code. They are not asking about the commit's own mechanics — its message, its file list, its diff statistics, or the log entry that travelled with it.
+**When the engineer names a commit by its SHA, they are asking about the substance the commit carries.** That is the item, the progression, the rule, or the change to the code. They are not asking about the commit's own mechanics — its message, its file list, its diff statistics, or the log entry that travelled with it.
 
-**Answer from what the commit added or changed.** Where it carries an item, an implementation record, or a rule, read that file and answer from its content. Where it changes code, answer from what the code now does. The SHA is the handle nearest to hand for a piece of work, and it is used because it is unambiguous rather than because the commit object is the subject.
+**Answer from what the commit added or changed.** Where it carries an item, a progression record, or a rule, read that file and answer from its content. Where it changes code, answer from what the code now does. The SHA is the handle nearest to hand for a piece of work, and it is used because it is unambiguous rather than because the commit object is the subject.
 
 ## What the mechanics are, and when they are the answer
 
@@ -27,11 +27,11 @@ Give the message, the stat, or the log entry when the question is about the comm
 ## Compressed
 
 1. A commit SHA from the engineer asks about the work the commit carries.
-2. That work is the item, the implementation, the rule, or the code change.
+2. That work is the item, the progression, the rule, or the code change.
 3. The SHA does not ask about the commit's mechanics.
 4. The mechanics are the commit's message, its file list, its diff statistics, and the log entry that came with it.
 5. Answer from what the commit added or changed.
-6. If the commit carries an item, an implementation record, or a rule, read that file. Answer from its content.
+6. If the commit carries an item, a progression record, or a rule, read that file. Answer from its content.
 7. If the commit changes code, answer from what the code now does.
 8. Open the files the commit added or changed, rather than reporting their names.
 9. Give the mechanics when the question is about them. Answer each of *Was it pushed*, *what did it touch*, *is it on master*, and *what does its message say* directly.
@@ -45,8 +45,11 @@ Give the message, the stat, or the log entry when the question is about the comm
 - 2026-10-22, compressed: compression 0.52, change 0.68, solubility 48 → 79, clarity 0.35 → 0.67, 9 directives, 8 kept, 1 less precise, 0 lost
 - 2026-10-24, revised: written as a numbered list; checked twice, every directive kept
 - 2026-10-28, revised: Why points removed, solubility 79 → 89, clarity 0.67 → 0.92; checked: 9 directives, 8 kept, 1 less precise, 0 lost
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Sun Oct 25 2026 this rule was named a-sha-names-the-work-rather-than-the-commit and titled "A commit named by its SHA is a reference to the work it carries, not to the commit".
 
@@ -68,3 +71,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:14 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 2:38:01 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT

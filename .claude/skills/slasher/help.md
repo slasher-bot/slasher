@@ -38,7 +38,7 @@ ITEMS
   /item list <state>, /list <state>
                                    List items in a state
                                    <state>: any item state, or "current"
-                                   (Open, Active, and Implementation)
+                                   (Open, Active, and Progression)
   /item status [<item>]            The item's state, what exists, and what
                                    is left. <item>: a number from the last
                                    list, a datetime, or words from the
@@ -74,7 +74,7 @@ ITEMS
 
 FEATURES
   A feature builds something the project needs, on its own branch or worktree,
-  to a declared end. Features and experiments are both kinds of implementations.
+  to a declared end. Features and experiments are both kinds of progressions.
 
   /feature new                     Create its branch and an Open record
   /feature new with phases         Create it, asking for its phases
@@ -107,7 +107,7 @@ FEATURES
 
 EXPERIMENTS
   An experiment tests a question on its own branch or worktree, to a declared
-  end. Features and experiments are both kinds of implementations.
+  end. Features and experiments are both kinds of progressions.
 
   /experiment new                  Create its branch and an Open record
   /experiment new with phases      Create it, asking for its phases
@@ -145,7 +145,7 @@ PHASE
                                    and its goal
   /phase new <name>                Create a phase after the last
   /phase start                     Start the next phase
-  /phase complete                  -> Completed, merged into the implementation
+  /phase complete                  -> Completed, merged into the progression
   /phase affirm                    -> Affirmed (engineer's declaration only)
   /phase refute                    -> Refuted (the phase's proposition is
                                    not realized)

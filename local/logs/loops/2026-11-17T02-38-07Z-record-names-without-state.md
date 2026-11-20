@@ -1,13 +1,13 @@
 # Loop record — Record names without state
 
-An item's or an implementation record's file name carries no state, so its path stays the same for the record's whole life. A Slasher project's records are renamed by `install.sh` when its packages are updated.
+An item's or a progression record's file name carries no state, so its path stays the same for the record's whole life. A Slasher project's records are renamed by `install.sh` when its packages are updated.
 
 **Mode:** unattended. The engineer selected it at the start, and accepted the plan.
 
 ## 1. The migration's actuation
 
 - **Hinge:** how a Slasher project's records lose their suffix.
-- **Decision:** a function in `install.sh`, `migrate_record_names`, run by `install.sh agents-md` after the older migrations. The test actuates `install.sh agents-md` in a project holding a suffixed item and a suffixed implementation record. Every earlier record migration is a function there, actuated the same way, and `/package update` reaches it.
+- **Decision:** a function in `install.sh`, `migrate_record_names`, run by `install.sh agents-md` after the older migrations. The test actuates `install.sh agents-md` in a project holding a suffixed item and a suffixed progression record. Every earlier record migration is a function there, actuated the same way, and `/package update` reaches it.
 
 ## 2. What counts as the state
 
@@ -26,7 +26,7 @@ An item's or an implementation record's file name carries no state, so its path 
 
 ## 5. The status line
 
-- **Hinge:** how `current-implementation.sh` finds a current implementation without the suffix.
+- **Hinge:** how `current-progression.sh` finds a current progression without the suffix.
 - **Decision:** it reads each record's `**State:**` line for Open, Active, or Suspended, with or without the leading dash. The State line is the only statement of the state, so this works for either form of name.
 
 ## 6. The rule

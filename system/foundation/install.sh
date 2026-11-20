@@ -92,7 +92,7 @@ the working directory, branch, and any uncommitted, untracked, or unpushed work.
 is this project's own. `slasher/system/` is installed and never edited in place.
 `slasher/local/` is everything this project writes: `rules/` and `vocabulary.md`
 alongside the working state — `logs/` (holding `log/`, `loops/`, and
-`work-sessions/`), `items/`, `implementations/`, and `migration/` — each worked with as
+`work-sessions/`), `items/`, `progressions/`, and `migration/` — each worked with as
 its convention describes, and only `rules/` and `vocabulary.md` read as binding at
 session start.
 EOF
@@ -746,7 +746,7 @@ migrate_work_state() {
 # them, since each of them finds a record by its suffix.
 migrate_record_names() {
   migrated=0
-  for directory in "$own/items" "$own/implementations"; do
+  for directory in "$own/items" "$own/implementations" "$own/progressions"; do
     [ -d "$directory" ] || continue
     for suffixed in "$directory"/*-*.md; do
       [ -f "$suffixed" ] || continue
@@ -779,6 +779,78 @@ migrate_record_names() {
   if [ "$migrated" -gt 0 ]; then
     echo "Renamed $migrated record(s) without the state at the end of the name — the State line alone holds it."
     echo "Commit the rename."
+  fi
+}
+
+# Carry a project's implementations to progressions. Progression replaced implementation on
+# 2026-11-20 as the name of a bounded piece of work on its own branch, and its file became a
+# progression record. A rule change cannot reach a project's own records, so the installer does,
+# and within a migration the migration rule permits it to conform historical records.
+#
+# It acts only on forms whose sense is the record, since a script cannot tell the record sense
+# from the other, the code that satisfies a test, in a sentence. implementations/ moves to
+# progressions/ only where progressions/ is absent, and a clash is reported and left alone. In
+# every record except the journal's, implementations/, the Implementation branch line, and
+# implementation record change, and an item's Implementation state and Implementation line
+# change. A log entry named for the Implementation state is renamed, only where the new name
+# is absent. Plain mv rather than git mv, for records that were never committed.
+migrate_progressions() {
+  old_dir="$own/implementations"
+  new_dir="$own/progressions"
+
+  if [ -d "$old_dir" ]; then
+    if [ -d "$new_dir" ]; then
+      echo "Both $old_dir/ and $new_dir/ are present — neither is touched."
+      echo "$old_dir/ is the old name. Move its records into $new_dir/ and remove it."
+      return 0
+    fi
+    mv "$old_dir" "$new_dir"
+    echo "Moved $old_dir/ to $new_dir/ — an implementation is now called a progression."
+  fi
+
+  [ -d "$own" ] || return 0
+
+  conformed=0
+  records=$(mktemp)
+  find "$own" -name '*.md' -not -path "$own/journal/*" > "$records" 2>/dev/null || true
+  # Read from the file rather than a pipe, so the count is not lost in a subshell, and a path
+  # with a space in it is read whole.
+  while IFS= read -r record; do
+    sed \
+      -e 's|implementations/|progressions/|g' \
+      -e 's/^\(- \)\{0,1\}\*\*Implementation branch:\*\*/\1**Progression branch:**/' \
+      -e 's/^\(- \)\{0,1\}\*\*Implementation:\*\*/\1**Progression:**/' \
+      -e 's/^\(\(- \)\{0,1\}\*\*State:\*\*\) Implementation$/\1 Progression/' \
+      -e 's/\([Aa]\)n \([Ii]mplementation records\{0,1\}\)/\1 \2/g' \
+      -e 's/\([Ii]\)mplementation \(records\{0,1\}\)/\1MPL_PROGRESSION \2/g' \
+      -e 's/iMPL_PROGRESSION/progression/g; s/IMPL_PROGRESSION/Progression/g' \
+      "$record" > "$record.tmp"
+    if cmp -s "$record" "$record.tmp"; then
+      rm "$record.tmp"
+    else
+      mv "$record.tmp" "$record"
+      conformed=$((conformed + 1))
+    fi
+  done < "$records"
+  rm -f "$records"
+
+  renamed=0
+  if [ -d "$own/logs/log" ]; then
+    for entry in "$own/logs/log"/*-is-implementation.md "$own/logs/log"/*-reaches-implementation.md "$own/logs/log"/*-takes-implementation.md; do
+      [ -f "$entry" ] || continue
+      name="${entry%-implementation.md}-progression.md"
+      if [ -e "$name" ]; then
+        echo "Both $entry and $name are present — neither is touched."
+        continue
+      fi
+      mv "$entry" "$name"
+      renamed=$((renamed + 1))
+    done
+  fi
+
+  if [ "$conformed" -gt 0 ] || [ "$renamed" -gt 0 ]; then
+    echo "Conformed $conformed record(s) and renamed $renamed log entr(ies) to say progression."
+    echo "Commit the change."
   fi
 }
 
@@ -907,6 +979,7 @@ if [ "$migrations" = yes ]; then
   migrate_work_tag
   migrate_work_state
   migrate_record_names
+  migrate_progressions
   migrate_email_configuration
 fi
 

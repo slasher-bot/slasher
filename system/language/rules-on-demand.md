@@ -65,7 +65,7 @@ Trigger: When reserving a word or choosing a vocabulary category for a term
 
 1. This category holds terms that name the files an agent and an engineer write and read as they work.
 2. It also holds terms for what is done to those files.
-3. Examples: `working-state artifact`, `implementation record`, `loop record`, `work session record`, `log entry`, `rule file`, `vocabulary`.
+3. Examples: `working-state artifact`, `progression record`, `loop record`, `work session record`, `log entry`, `rule file`, `vocabulary`.
 
 ## Human-computer interaction (HCI)
 

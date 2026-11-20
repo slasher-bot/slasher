@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **Script's output (Recommended)** — The second line is whatever current-implementation.sh prints in the same project, so this test reads only that statusline.sh passes it through.
+- **Script's output (Recommended)** — The second line is whatever current-progression.sh prints in the same project, so this test reads only that statusline.sh passes it through.
 - **The record's branch** — The second line is the branch the control record names, as the engineer would read it.
 
 The engineer's answer: **Script's output (Recommended)**

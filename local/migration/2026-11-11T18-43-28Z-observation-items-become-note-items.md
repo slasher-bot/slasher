@@ -6,7 +6,7 @@ This migration conforms the items tagged `[observation]` to the `[note]` tag, in
 
 - **This repository:** the 18 items in `local/items/` whose `**Tags:**` line carries `[observation]`. Each takes `[note]` in its place, in the same file, with a `Changed by` footer line. Each filename keeps its `-RECORDED` suffix, since a note keeps the one state Recorded.
 - **Consuming projects:** `install.sh` retags each item whose `**Tags:**` line carries `[observation]` as `[note]`, on install and on refresh.
-- **Left as written:** an item that names `[observation]` only in its text, as `2026-08-18T04-57-09Z-one-ideas-directory` and `2026-10-29T16-24-42Z-waytide-skills` do, and every log entry, work session record, and implementation record.
+- **Left as written:** an item that names `[observation]` only in its text, as `2026-08-18T04-57-09Z-one-ideas-directory` and `2026-10-29T16-24-42Z-waytide-skills` do, and every log entry, work session record, and progression record.
 
 ## Increments
 

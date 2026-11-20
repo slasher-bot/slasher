@@ -56,7 +56,7 @@ The engineer said the feature works and selected *Commit and complete*. The feat
 - The rule: anything-given-to-private-is-recorded-only-in-the-private-directory, in the foundation package.
 - The command: `/private`, in foundation's skills, with its help and its command-table row.
 - The vocabulary: **private record**, in the foundation vocabulary.
-- The feature record: `local/implementations/2026-11-13T06-10-36Z-private-documents`.
+- The feature record: `local/progressions/2026-11-13T06-10-36Z-private-documents`.
 - The idea: `local/items/2026-11-12T17-34-30Z-private-documents`.
 - The log entries of 2026-11-13, from the intent selection to the feature's completion.
 

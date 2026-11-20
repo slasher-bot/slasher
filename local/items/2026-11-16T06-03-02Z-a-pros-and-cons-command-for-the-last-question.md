@@ -6,7 +6,7 @@
 
 A Pros and Cons command that refers to the last question. It pairs with ask-again. Remove /idk and /clarify, but assign /?? to the new pros and cons command.
 
-**Implementation:** `2026-11-16T23-09-55Z-pros-and-cons-command`
+**Progression:** `2026-11-16T23-09-55Z-pros-and-cons-command`
 
 ---
 

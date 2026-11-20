@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **Remote branch deleted after upstream is pushed (Recommended)** — The implementation's branch on the remote is deleted only once the upstream branch holding the work has been pushed.
+- **Remote branch deleted after upstream is pushed (Recommended)** — The progression's branch on the remote is deleted only once the upstream branch holding the work has been pushed.
 - **Phase merge commits are dropped** — The rebuild drops each phase's --no-ff merge commit, since its squashed commit takes its place.
 - **Body lists subjects as - lines** — The squashed commit's body lists each phase commit subject on its own line, after a dash, oldest first.
 - **None** — Leave the rule as it is.

@@ -47,12 +47,12 @@ The engineer started the item that proposed typing an item's state commands as r
 
 ## Where the durable records live
 
-- The an-implementation-runs-on-a-branch-to-a-declared-end rule — the verdict question and its three options
+- The a-progression-runs-on-a-branch-to-a-declared-end rule — the verdict question and its three options
 - The the-command-domain-table-prints-when-the-rules-have-loaded rule — the command table
 - The the-slasher-skills-are-delivered-as-a-plugin-named-slasher rule — the directory names of punctuation commands
 - The item: `local/items/2026-11-07T09-18-22Z-the-verdict-question-offers-whats-a-verdict`
 - The item: `local/items/2026-11-06T08-38-28Z-an-items-state-commands-are-typed-without-the-item-prefix`
-- The feature record: `local/implementations/2026-11-07T19-45-38Z-item-state-commands-without-prefix`
+- The feature record: `local/progressions/2026-11-07T19-45-38Z-item-state-commands-without-prefix`
 - The log entries from `local/logs/log/2026-11-07T10-35-01Z-the-question-mark-command-answers-what-are-we-doing` to `local/logs/log/2026-11-07T19-02-24Z-the-verdict-question-item-is-realized`, and from `local/logs/log/2026-11-07T19-43-46Z-how-should-an-item-s-state-commands-are-typed-without-the` to `local/logs/log/2026-11-07T19-51-41Z-the-item-state-commands-item-is-realized`
 
 ---

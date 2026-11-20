@@ -44,7 +44,7 @@ BRANCH SWITCHED
 ## What this does not cover
 
 - **Creating a branch** is a switch when the working tree moves to it. `git switch -c` prints the block, with `from` naming the base.
-- **A worktree** adds a working directory rather than moving this one. No switch occurs here, so no block is printed. The an-implementation-runs-on-a-branch-to-a-declared-end rule governs that case.
+- **A worktree** adds a working directory rather than moving this one. No switch occurs here, so no block is printed. The a-progression-runs-on-a-branch-to-a-declared-end rule governs that case.
 - **A merge, a commit, or a push** does not move the working tree. No block.
 
 **Why:** an agent reports what it did, and not where it stood. So a branch switch is the one operation whose effect is invisible in every later report. The engineer's own record of this session is the case. The agent switched to a parent experiment branch to edit a file, and stayed there after committing. The next instruction was read against a branch neither party had named. A block that cannot be scrolled past removes the class of error rather than one instance of it.
@@ -102,7 +102,7 @@ BRANCH SWITCHED
 2. `git switch -c` prints the block, with `from` naming the base.
 3. A worktree adds a working directory rather than moving this one.
 4. Print no block for a worktree.
-5. The an-implementation-runs-on-a-branch-to-a-declared-end rule governs the worktree case.
+5. The a-progression-runs-on-a-branch-to-a-declared-end rule governs the worktree case.
 6. A merge, a commit, or a push does not move the working tree.
 7. Print no block for a merge, a commit, or a push.
 
@@ -116,7 +116,7 @@ BRANCH SWITCHED
 
 Related:
 
-- the `foundation` an-implementation-runs-on-a-branch-to-a-declared-end rule — which require the working tree to end on the upstream branch, and which the block makes checkable
+- the `foundation` a-progression-runs-on-a-branch-to-a-declared-end rule — which require the working tree to end on the upstream branch, and which the block makes checkable
 - the run-the-test-suite-after-changes-before-considering-whether-to-commit rule — the other thing confirmed before work is recorded
 - the `foundation` the-slasher-skills-are-delivered-as-a-plugin-named-slasher rule — the plugin that carries the hook
 
@@ -136,3 +136,4 @@ Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:09 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:53:55 AM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT

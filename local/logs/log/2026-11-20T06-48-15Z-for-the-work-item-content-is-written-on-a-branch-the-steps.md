@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **Because it is content** — Every /content implementation leaves them out, whatever it produces. Code written inside one, such as a script that builds a site, gets none of them.
-- **Because it is prose** — Leave them out for the prose an implementation produces. Code inside a /content implementation still goes through them, as the local rule on Design By Efferent already says.
+- **Because it is content** — Every /content progression leaves them out, whatever it produces. Code written inside one, such as a script that builds a site, gets none of them.
+- **Because it is prose** — Leave them out for the prose a progression produces. Code inside a /content progression still goes through them, as the local rule on Design By Efferent already says.
 
 The engineer's answer: **Because it is content**

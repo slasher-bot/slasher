@@ -1,1 +1,1 @@
-# A bare /items lists the current items alone, and /current lists the current items and implementations
+# A bare /items lists the current items alone, and /current lists the current items and progressions

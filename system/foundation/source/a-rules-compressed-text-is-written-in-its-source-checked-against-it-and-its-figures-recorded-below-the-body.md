@@ -126,7 +126,7 @@ Until Thu Oct 29 2026 the figures were listed as compression, change, size rank,
 Related:
 
 - the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule — a package's `source/` and its rules file
-- the an-implementation-runs-on-a-branch-to-a-declared-end rule — the rule-reduction experiment, which brings this rule to master when it merges
+- the a-progression-runs-on-a-branch-to-a-declared-end rule — the rule-reduction experiment, which brings this rule to master when it merges
 
 ---
 
@@ -135,3 +135,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:40:00 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 6:19:10 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 6:24:12 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 6:31:12 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT

@@ -7,7 +7,7 @@
 
 **As the engineer stated it:** A "/private session <other instruction>" where for the life of that session, the output goes to the private directory
 
-**Implementation:** `2026-11-13T07-12-07Z-private-session`
+**Progression:** `2026-11-13T07-12-07Z-private-session`
 
 ---
 

@@ -7,7 +7,7 @@ The question, put through the selection interface:
 > Accept the plan?
 >
 > 1. Write the feature record and its log entry on master.
-> 2. Make the item Implementation, and commit the records on master.
+> 2. Make the item Progression, and commit the records on master.
 > 3. Create the branch feature/worktree/unrecorded-session-answers in a new worktree.
 > 4. Add a section to the unrecorded-session rule. It says that the agent answers every question and carries out every command, and prints its answers as in any session.
 > 5. Say the same in the /unrecorded help and skill.

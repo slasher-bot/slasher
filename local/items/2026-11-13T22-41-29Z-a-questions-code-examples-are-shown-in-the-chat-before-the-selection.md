@@ -17,7 +17,7 @@
 
 The image they posted is beside this item: [`2026-11-13T22-41-29Z-a-questions-code-examples-are-shown-in-the-chat-before-the-selection.png`](2026-11-13T22-41-29Z-a-questions-code-examples-are-shown-in-the-chat-before-the-selection.png).
 
-**Implementation:** `2026-11-16T00-25-10Z-question-code-examples-in-chat`
+**Progression:** `2026-11-16T00-25-10Z-question-code-examples-in-chat`
 
 ---
 

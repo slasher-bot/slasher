@@ -23,7 +23,7 @@ The engineer asked for the idea to be done unattended, in a worktree, with no fo
 What the plan settled:
 
 - **A private session** lasts from `/private session` until the session ends, or until `/private session end`.
-- **Every record the agent writes in it goes to the private directory**, in the directory for its kind. Work session records, implementation records, and loop records now have private directories, beside documents, items, log entries, and journal entries.
+- **Every record the agent writes in it goes to the private directory**, in the directory for its kind. Work session records, progression records, and loop records now have private directories, beside documents, items, log entries, and journal entries.
 - **The log-entry hook still writes into the project.** In a private session, the agent moves each entry the hook writes to the private log directory before anything is committed.
 - **A record that already exists in the project stays there.** Where the work asks to change one, the agent asks whether to end the private session first.
 
@@ -48,7 +48,7 @@ The engineer tried `/private session` in another session, and it worked. That se
 - The rule: anything-given-to-private-is-recorded-only-in-the-private-directory, in the foundation package.
 - The command: `/private session`, in foundation's `/private` skill and its help.
 - The vocabulary: **private session**, in the foundation vocabulary.
-- The feature record: `local/implementations/2026-11-13T07-12-07Z-private-session`.
+- The feature record: `local/progressions/2026-11-13T07-12-07Z-private-session`.
 - The idea: `local/items/2026-11-13T07-09-31Z-private-session-sends-a-sessions-output-to-the-private-directory`.
 - The log entries of 2026-11-13, from the publish of `foundation` to the feature's completion.
 

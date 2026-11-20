@@ -6,7 +6,7 @@ The question, put through the selection interface:
 
 > Accept the plan?
 >
-> 1. On master, make the email accounts problem item Implementation. Write the feature record, Active, with its log entries. Commit them, with the /prose idea in its own commit.
+> 1. On master, make the email accounts problem item Progression. Write the feature record, Active, with its log entries. Commit them, with the /prose idea in its own commit.
 > 2. Create the branch feature/worktree/email-accounts-per-project in a worktree beside the repository.
 > 3. Write the loop record, declared unattended.
 > 4. Write the tests first. A bare fetch fetches only the listed accounts. A project with no email/slasher-email.toml fetches none and says so. /email fetch <name> refuses an account the project does not list. send.py refuses an unlisted account. An account table's [account.imap] and [account.smtp] configure it as the old file did.

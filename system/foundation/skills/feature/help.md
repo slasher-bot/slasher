@@ -1,6 +1,6 @@
 FEATURES
   A feature builds something the project needs, on its own branch or worktree,
-  to a declared end. Features and experiments are both kinds of implementations.
+  to a declared end. Features and experiments are both kinds of progressions.
 
   /feature new                     Create its branch and an Open record
   /feature new with phases         Create it, asking for its phases

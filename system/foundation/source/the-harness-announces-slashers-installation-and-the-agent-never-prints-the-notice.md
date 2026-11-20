@@ -20,7 +20,7 @@ Slasher installed at slasher/system/ — 5 packages: foundation, language, testi
 
   **The move took a hazard with it.** The mark's backslashes had to be doubled here. The notice is interpolated into a JSON string by `printf` with no escaping, and a lone backslash begins a JSON escape sequence. `\_` is not a valid one, the harness fails to parse the output, and **the notice disappears with no error at all**. That constraint is now off the art entirely. It still governs everything else this hook emits, and the load line's no-quotation-marks rule below is the same hazard arriving through a different character.
 
-  **The notice reports the install and nothing more.** It names no experiment or feature. An implementation that has not concluded is shown by the status line's second line, below, for the whole session, and `/current` lists every one.
+  **The notice reports the install and nothing more.** It names no experiment or feature. A progression that has not concluded is shown by the status line's second line, below, for the whole session, and `/current` lists every one.
 
 - **A status line.** `slasher/system/foundation/statusline.sh` keeps the system's presence on screen for the whole session, alongside the working directory and git branch. The fact then stays available instead of scrolling away:
 
@@ -53,7 +53,7 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 
 **A branch with no upstream reports nothing.** "Unpushed" is a claim relative to somewhere, and with no upstream configured there is nowhere for it to be relative to. A branch that was never going to be pushed is ordinary, and calling it unpushed would be false. That does leave an upstream missing *by accident* unreported. It is a different fact from the one this segment names, and it is deliberately not folded in.
 
-**A second line names the implementation under way.** Where a feature or an experiment is Open, Active, or Suspended, the line beneath shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's. A phase is under way where its branch exists, and a phase's commits count as work on its implementation. Where more than one implementation is current, the line shows the one most recently acted upon: the one whose branch, or a phase's branch, has the latest commit. Where none is current, there is no second line.
+**A second line names the progression under way.** Where a feature or an experiment is Open, Active, or Suspended, the line beneath shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-progression.sh` finds it, in this repository's arrangement or an installed project's. A phase is under way where its branch exists, and a phase's commits count as work on its progression. Where more than one progression is current, the line shows the one most recently acted upon: the one whose branch, or a phase's branch, has the latest commit. Where none is current, there is no second line.
 
 - **A startup display, in two parts.** As the session starts, the session-start part frames the notice: the title and the copyright and license ahead of it, and the load line after it, last. The loading part, the loading line and then the figure, prints on the session's first prompt, whatever it is: the plugin's `UserPromptSubmit` hook runs `slasher/system/foundation/startup-display.sh` on every prompt, and it prints on the first only. Both read them from the the-startup-display-prints-as-the-session-starts rule, which governs the display.
 
@@ -244,8 +244,8 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 15. It compares against the remote-tracking ref, so it reflects the last fetch.
 16. A branch with no upstream reports nothing, since unpushed is relative to an upstream.
 17. An upstream missing by accident is a different fact, and is deliberately not folded into this segment.
-18. Where a feature or an experiment is Open, Active, or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-implementation.sh` finds it, in this repository's arrangement or an installed project's.
-19. A phase is under way where its branch exists, and its commits count as work on its implementation. Where more than one implementation is current, show the one whose branch, or a phase's branch, has the latest commit.
+18. Where a feature or an experiment is Open, Active, or Suspended, a second line shows its branch, or the branch of its phase under way, as `feature/receipt.tax-line`. `slasher/system/foundation/current-progression.sh` finds it, in this repository's arrangement or an installed project's.
+19. A phase is under way where its branch exists, and its commits count as work on its progression. Where more than one progression is current, show the one whose branch, or a phase's branch, has the latest commit.
 20. Where none is current, print no second line.
 
 ## The startup display
@@ -311,8 +311,11 @@ slasher · master · uncommitted changes · untracked files · unpushed commits 
 - 2026-11-14, revised: the notice reports the install and nothing more, and the open line is removed; checked: 134 directives, 129 kept, 4 less precise, 1 lost, 1 repair, naming `/current`; re-checked: 134 directives, 128 kept, 6 less precise, 0 lost. Left less precise, none touched by this revision: that the loading part reads from the startup display rule, that the instruction names nothing else beside the packages, that the compaction's summary does not hold the rules, the authoring source's `system/`, the removed `SLASHER_QUIET`, and that `session-start.sh instruction` prints the instruction alone, as plain text
 - 2026-11-14, revised: point 6 says the load line is left out where Claude Code was started with `/load`; not re-checked
 - 2026-11-16, revised: the bootstrap is in `slasher/SLASHER.md`, a name the engineer settled; not re-checked
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Mon Nov 16 2026 the bootstrap was a section of the project's `AGENTS.md`, where it now is `slasher/SLASHER.md`, which `AGENTS.md` imports.
 
@@ -480,3 +483,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 3:19:02 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 11:21:51 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT

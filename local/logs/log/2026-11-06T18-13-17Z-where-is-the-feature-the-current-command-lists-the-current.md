@@ -1,10 +1,10 @@
-# Where is the feature "The current command lists the current items, then summarizes the current implementations" built? It merges into master. — Branch and worktree, selected by the engineer
+# Where is the feature "The current command lists the current items, then summarizes the current progressions" built? It merges into master. — Branch and worktree, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Where is the feature "The current command lists the current items, then summarizes the current implementations" built? It merges into master.
+> Where is the feature "The current command lists the current items, then summarizes the current progressions" built? It merges into master.
 
 The options:
 

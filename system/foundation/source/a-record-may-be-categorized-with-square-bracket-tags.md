@@ -50,7 +50,7 @@ Related:
 - the the-log-holds-one-file-per-entry-with-a-one-line-title rule — where a log entry's `**Tags:**` line goes
 - the a-log-entry-recording-an-engineers-decision-is-tagged-decision rule — what `[decision]` means
 - the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule — what `[suspended]` means
-- the the-implementations-directory-holds-one-record-per-implementation rule — the states of `[experiment]` and `[feature]`
+- the the-progressions-directory-holds-one-record-per-progression rule — the states of `[experiment]` and `[feature]`
 - the the-items-directory-holds-one-file-per-item rule — the states of an item, and of `[work]`
 - the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule — the one state of `[note]`
 - the `journal` package's a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule — where a journal entry's `**Tags:**` line sits
@@ -85,3 +85,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 9:42:16 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 6:34:30 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT

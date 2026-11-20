@@ -1,10 +1,10 @@
-# Where is the feature for A phase's commits are squashed into the implementation branch worked? — Branch and worktree, selected by the engineer
+# Where is the feature for A phase's commits are squashed into the progression branch worked? — Branch and worktree, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Where is the feature for A phase's commits are squashed into the implementation branch worked?
+> Where is the feature for A phase's commits are squashed into the progression branch worked?
 
 The options:
 

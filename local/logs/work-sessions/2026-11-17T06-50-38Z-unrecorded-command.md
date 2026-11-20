@@ -36,7 +36,7 @@ The engineer concluded the feature Completed. It merged to `master` cleanly, the
 ## Glossary
 
 - **unrecorded session**: the part of a session from `/unrecorded` until `/unrecorded end`, a timeout, or the session's end, in which no record is written.
-- **record**: a file a rule tells the agent to write, such as an item, a log entry, or an implementation record.
+- **record**: a file a rule tells the agent to write, such as an item, a log entry, or a progression record.
 
 ## Where the durable records live
 

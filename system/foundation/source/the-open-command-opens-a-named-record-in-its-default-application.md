@@ -4,7 +4,7 @@
 
 **As the engineer stated it:** Create an "/open" command. It receives a record descriptor, and opens its file in the default application.
 
-**`/open <record>` opens the record the words name, in the default application for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand. A record is any record the agent writes under `slasher/local/`: an item, an implementation record, a rule, a log entry, a journal entry, a work session record, a loop record, or a migration record.
+**`/open <record>` opens the record the words name, in the default application for its kind of file**, by its full, absolute path. Open it with `open` on macOS, and `xdg-open` on Linux. Where no such command is found, say so, and print the path so the engineer can open it by hand. A record is any record the agent writes under `slasher/local/`: an item, a progression record, a rule, a log entry, a journal entry, a work session record, a loop record, or a migration record.
 
 **The words name a record in one of four ways.**
 
@@ -38,6 +38,8 @@ After the open, say what was opened, in one line, with its path: from the projec
 
 ## History
 
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
+
 Until Thu Nov 19 2026 a bare `/open` asked which record, through the selection interface, and offered the current items and the current implementations, most recently created first.
 
 Until Mon Nov 16 2026 the example path ended with the record's state, `-OPEN`.
@@ -55,3 +57,4 @@ Authored by Scott Bellware on Sat Nov 14 2026 at 9:54:46 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 5:08:30 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 5:14:40 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT

@@ -7,7 +7,7 @@
 
 **As the engineer stated it:** A brainstorm that isn't initiated with an item kind is given the Brainstorm kind. A brainstorm record like this has an initial state of recorded and concludes recorded
 
-**Implementation:** `2026-11-14T02-44-12Z-brainstorm-item-kind`, the feature that builds it.
+**Progression:** `2026-11-14T02-44-12Z-brainstorm-item-kind`, the feature that builds it.
 
 ---
 

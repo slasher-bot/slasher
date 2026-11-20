@@ -6,7 +6,7 @@ This is the communicable record, the guided tour of the work session. The durabl
 
 ## 1. Where the work stood
 
-`/current` listed seven open ideas and no current feature or experiment. `/sup?` found every commit on `master` pushed, and no step left to take in any plan or implementation.
+`/current` listed seven open ideas and no current feature or experiment. `/sup?` found every commit on `master` pushed, and no step left to take in any plan or progression.
 
 ## 2. The command domain table changes
 

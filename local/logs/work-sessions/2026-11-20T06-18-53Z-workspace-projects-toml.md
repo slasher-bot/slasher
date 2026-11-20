@@ -19,7 +19,7 @@ The engineer asked for suggestions, then asked for them to be added to the idea.
 
 ## 3. The feature, created and planned
 
-The engineer asked for an unattended feature for the idea. The working location was branch and worktree, and the work stated no forecast. The plan was accepted as written. The feature record `2026-11-20T05-36-34Z-workspace-projects-toml` was written Active on `master`, and the idea took the state Implementation (commit `b9e3c217`).
+The engineer asked for an unattended feature for the idea. The working location was branch and worktree, and the work stated no forecast. The plan was accepted as written. The feature record `2026-11-20T05-36-34Z-workspace-projects-toml` was written Active on `master`, and the idea took the state Progression (commit `b9e3c217`).
 
 ## 4. The build
 
@@ -58,7 +58,7 @@ The **compressed text** is the shorter version of a rule that the loader prints 
 ## Where the durable records live
 
 - The idea: `local/items/2026-11-20T04-39-16Z-a-workspace-project-has-its-own-projects-toml.md`
-- The feature record: `local/implementations/2026-11-20T05-36-34Z-workspace-projects-toml.md`
+- The feature record: `local/progressions/2026-11-20T05-36-34Z-workspace-projects-toml.md`
 - The loop record: `local/logs/loops/2026-11-20T05-41-23Z-workspace-projects-toml.md`
 - The rule: the projects-lists-the-registry-and-carries-out-an-instruction-in-another-project rule
 - The code: `system/foundation/list-projects.sh`, and the tests under `test/automated/list-projects/` and `test/automated/resolve-project/`

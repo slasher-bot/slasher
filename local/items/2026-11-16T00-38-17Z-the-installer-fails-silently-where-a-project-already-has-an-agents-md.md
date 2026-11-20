@@ -22,7 +22,7 @@ The failure was reproduced in a test project holding its own `AGENTS.md`, by run
 
 **A note, 2026-11-15:** an existing `CLAUDE.md` that does not import `AGENTS.md` is skipped the same way. With no terminal, the installer prints that it was not modified, and goes on. The feature for this item does not change that.
 
-**Implementation:** `2026-11-16T00-59-24Z-existing-agents-md-install`
+**Progression:** `2026-11-16T00-59-24Z-existing-agents-md-install`
 
 ---
 

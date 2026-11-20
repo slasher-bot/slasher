@@ -11,7 +11,7 @@
 
 **The word reaches far.** It names the directory, which holds 37 records, and it appears in 34 rule files, vocabularies, and scripts. The directory's name is in the session-start read instruction and in `session-start.sh`, which scans it for open work.
 
-**2026-10-21 — realized.** What the item describes exists: the feature *"Item" replaces "idea"* completed, `local/implementations/2026-10-21T05-44-56Z-item-replaces-idea-COMPLETED.md`.
+**2026-10-21 — realized.** What the item describes exists: the feature *"Item" replaces "idea"* completed, `local/progressions/2026-10-21T05-44-56Z-item-replaces-idea-COMPLETED.md`.
 
 ---
 

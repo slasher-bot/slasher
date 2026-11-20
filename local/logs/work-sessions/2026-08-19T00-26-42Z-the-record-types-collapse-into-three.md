@@ -1,10 +1,10 @@
 # Work Session — The record types collapse into three (2026-08-18)
 
-The work session began with a mechanical consolidation — experiments and features into one record — and became a sweep through every working-state directory Waytide had accumulated. It ended with three: `ideas/`, `implementations/`, and `logs/`. What separated the old directories from each other became tags, and the tag protocol was generalized twice on the way, each time because a prohibition turned out to have no reason under it. Along the way the `diary` package was renamed `journal`, the suspension mechanism was retired after fifteen days and eleven unrestored items, one move was made and reversed within the hour, and all four consuming projects were brought across.
+The work session began with a mechanical consolidation — experiments and features into one record — and became a sweep through every working-state directory Waytide had accumulated. It ended with three: `ideas/`, `progressions/`, and `logs/`. What separated the old directories from each other became tags, and the tag protocol was generalized twice on the way, each time because a prohibition turned out to have no reason under it. Along the way the `diary` package was renamed `journal`, the suspension mechanism was retired after fifteen days and eleven unrestored items, one move was made and reversed within the hour, and all four consuming projects were brought across.
 
 **This is the communicable record — the guided tour.** The durable records are the rules under `waytide/system/`, the ideas under `waytide/local/ideas/`, and the decision log under `waytide/local/logs/log/`, which took fifty entries today. This narrative points to them and does not restate them.
 
-## 1. Experiments and features become implementations
+## 1. Experiments and features become progressions
 
 The work session opened on a direct instruction: consolidate the two into a single protocol, with tags, and convert the existing records.
 
@@ -12,7 +12,7 @@ The work session opened on a direct instruction: consolidate the two into a sing
 
 **One difference accounts for every other.** An `[experiment]` is built to a **question**; a `[feature]` to an **intent**. Everything the two kinds do differently follows: an experiment forecasts, reaches a verdict of affirmed, refuted, or inconclusive, merges through a test gate on the engineer's affirmation, and is watched for drift. A feature has none of those because it has no question, ends **completed**, and is the only kind that may be built on the current branch.
 
-Sixteen records moved into `waytide/local/implementations/`, each tagged with its kind. `session-start.sh` collapsed to one `report_open` call whose concluded words are the union of the two kinds' — `Suspended` deliberately absent, since a suspended implementation is paused rather than concluded and is still reported.
+Sixteen records moved into `waytide/local/progressions/`, each tagged with its kind. `session-start.sh` collapsed to one `report_open` call whose concluded words are the union of the two kinds' — `Suspended` deliberately absent, since a suspended progression is paused rather than concluded and is still reported.
 
 **The mechanical name-swap broke prose, and the breakage was the interesting part.** `rule both require` became `rule requires`; a doubled directory path and a doubled convention name appeared in `announce-waytide-at-session-start`; two files were left with a provenance stamp for a change that never happened, and were reverted. The refused-dependency argument — that a `foundation` rule requiring fields under `waytide/local/loops/` would invert the package graph — lived in `features-convention` and had to be carried across, because `a-citation-is-not-a-dependency` cites it as its worked example.
 
@@ -40,7 +40,7 @@ Historical records kept the word they were written with. The `[suspended]` recor
 
 The engineer's observation: several record types are logs, and there is only one `log` directory.
 
-`log/`, `loops/`, and `work-sessions/` moved under `waytide/local/logs/`. **What makes a record belong there is that it accrues chronologically and is never revised** — a reader reaches it by date, and nothing in it states what is currently true. That is the distinction the flat layout hid: `ideas/` and `implementations/` state what *is*; these state what *happened*.
+`log/`, `loops/`, and `work-sessions/` moved under `waytide/local/logs/`. **What makes a record belong there is that it accrues chronologically and is never revised** — a reader reaches it by date, and nothing in it states what is currently true. That is the distinction the flat layout hid: `ideas/` and `progressions/` state what *is*; these state what *happened*.
 
 `log` kept its name inside `logs/`. Every rule that says *write a log entry* means that directory, and a rename would reach all of them for nothing.
 
@@ -80,7 +80,7 @@ Being *kept* after the content has gone is what made it look like a running reco
 
 `waytide/diary` was renamed `waytide/journal` on the engineer's confirmation; the old URL redirects. Its publish could not fast-forward — a `subtree split`'s history depends on the prefix path, and the prefix had moved — so it took the force-reset that `CONTRIBUTING.md` names for exactly that case, verified first against `system/journal/`.
 
-All four consuming projects were refreshed and their local records migrated: running records under `logs/`, experiments and features into `implementations/` with tags and state suffixes, deferred items into `ideas/` tagged `[deferred]`, `system/diary/` removed and `system/journal/` added fresh — the prefix change again forbidding a pull. Every component repository now matches its composite split, and `report-direct-commits.sh` confirms no component has drifted.
+All four consuming projects were refreshed and their local records migrated: running records under `logs/`, experiments and features into `progressions/` with tags and state suffixes, deferred items into `ideas/` tagged `[deferred]`, `system/diary/` removed and `system/journal/` added fresh — the prefix change again forbidding a pull. Every component repository now matches its composite split, and `report-direct-commits.sh` confirms no component has drifted.
 
 ## Takeaways
 
@@ -92,7 +92,7 @@ All four consuming projects were refreshed and their local records migrated: run
 
 ## Glossary
 
-- **implementation** — a bounded unit of work with a lifecycle, recorded in `waytide/local/implementations/`. Two kinds, distinguished by a reserved tag: an `[experiment]` is built to a question, a `[feature]` to an intent.
+- **progression** — a bounded unit of work with a lifecycle, recorded in `waytide/local/progressions/`. Two kinds, distinguished by a reserved tag: an `[experiment]` is built to a question, a `[feature]` to an intent.
 - **running record** — a record that accrues chronologically and is never revised, reached by date. The three under `waytide/local/logs/`: the decision log, the loop records, the work session records. A migration record is not one, and the distinction is stated in both rules.
 - **the deferred queue** — every idea tagged `[deferred]`. A tag rather than a directory, since the wait, the rank, and the print at session start are carried by the item itself.
 - **suspension** — stopping something the project *did*, recorded as a log entry tagged `[suspended]` naming what was stopped, why, and what else changed. Distinct from the `Suspended` **state**, which marks something the project only *wanted* and keeps it in place.
@@ -104,7 +104,7 @@ All four consuming projects were refreshed and their local records migrated: run
 - **Rules added** — `implementations-convention`, `implementation-lifecycle`, `implementation-records-take-a-log-entry`, `deferred-queue-convention`, `logs-directory`, `a-suspension-is-a-log-entry`, `a-record-takes-category-tags` (renamed).
 - **Rules removed** — `experiments-convention`, `experiment-lifecycle`, `features-convention`, `feature-lifecycle`, `deferred-convention`, `suspended-convention`.
 - **Decision log** — `waytide/local/logs/log/`, fifty entries dated 2026-08-18.
-- **Records converted** — sixteen implementations, one deferred idea, thirteen tagged log entries.
+- **Records converted** — sixteen progressions, one deferred idea, thirteen tagged log entries.
 - **Journal** — two entries by the writer, 2026-08-17 and 2026-08-18.
 - **Published** — `foundation`, `language`, `git`, `design-by-efferent`, `journal`.
 

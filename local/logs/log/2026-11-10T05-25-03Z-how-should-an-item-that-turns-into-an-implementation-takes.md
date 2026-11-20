@@ -8,7 +8,7 @@ The question, put through the selection interface:
 
 The options:
 
-- **Amend the items rule** — Add the Implementation state to the items rule, on the harmonized-states feature branch, with its History
+- **Amend the items rule** — Add the Progression state to the items rule, on the harmonized-states feature branch, with its History
 - **Observation** — Record it as an observation while the thinking settles
 - **Neither** — Don't record it
 

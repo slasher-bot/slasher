@@ -7,7 +7,7 @@
 
 **As the engineer stated it:** A "/brief" command that asks for the output in brief
 
-**Implementation:** `2026-11-11T23-07-58Z-brief-command`, the feature that builds it.
+**Progression:** `2026-11-11T23-07-58Z-brief-command`, the feature that builds it.
 
 ---
 

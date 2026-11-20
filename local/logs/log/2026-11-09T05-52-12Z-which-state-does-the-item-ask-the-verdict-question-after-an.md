@@ -1,10 +1,10 @@
-# Which state does the item Ask the verdict question after an implementation completes take? — Realized, selected by the engineer
+# Which state does the item Ask the verdict question after a progression completes take? — Realized, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Which state does the item Ask the verdict question after an implementation completes take?
+> Which state does the item Ask the verdict question after a progression completes take?
 
 The options:
 

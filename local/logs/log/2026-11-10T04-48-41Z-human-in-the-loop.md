@@ -6,7 +6,7 @@ The question, put through the selection interface:
 
 > Human in the loop
 >
-> The rules and skills in this feature are content work and are written directly. This question covers the code: the scripts that list current implementations may need to take Open records.
+> The rules and skills in this feature are content work and are written directly. This question covers the code: the scripts that list current progressions may need to take Open records.
 >
 > - Agent's confidence: 75% (how sure the agent is about working alone.)
 > - Risk of redo: 25% (how likely it is that you will have to redo work the agent does.)

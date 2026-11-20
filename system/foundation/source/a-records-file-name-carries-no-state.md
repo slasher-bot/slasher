@@ -1,8 +1,8 @@
 # A record's file name carries no state
 
-**Trigger:** When creating, renaming, changing the state of, or referencing an item or implementation record
+**Trigger:** When creating, renaming, changing the state of, or referencing an item or progression record
 
-**An item's or an implementation record's file name carries no state.** The name is the ISO-8601-UTC prefix, then a dash-separated, lower-case name, then `.md`, as the file-names rule gives it. The state is the `**State:**` line inside the file, and nothing else states it.
+**An item's or a progression record's file name carries no state.** The name is the ISO-8601-UTC prefix, then a dash-separated, lower-case name, then `.md`, as the file-names rule gives it. The state is the `**State:**` line inside the file, and nothing else states it.
 
 ```
 2026-07-27T07-09-02Z-the-cart-keeps-its-contents.md
@@ -17,15 +17,15 @@
 
 **A record written while its name carried its state keeps its content as written.** A historical record that gives such a path, as `…-the-cart-keeps-its-contents-OPEN.md`, is not revised. Its path is unresolvable, and a reader finds the record by its prefix and name.
 
-**A Slasher project's records are renamed when its packages are updated or Slasher is installed.** `install.sh` takes the state off the end of each item's and implementation record's name, where the name without it is free. Where it is not free, or two names differ only in their state, it renames neither, and says so. The content of a renamed record does not change.
+**A Slasher project's records are renamed when its packages are updated or Slasher is installed.** `install.sh` takes the state off the end of each item's and progression record's name, where the name without it is free. Where it is not free, or two names differ only in their state, it renames neither, and says so. The content of a renamed record does not change.
 
 **Why:** a record's name carried its state until Mon Nov 16 2026, so each state change renamed the file, and every link to it broke. The project shares records by link, and a link cannot leave out a suffix the way a reference in a record can. The state is read where Slasher shows it: `/items`, `/current`, and `/status` read the `**State:**` line.
 
-**How to apply:** name a new item or implementation record by its prefix and name, with no state. At a state change, edit the `**State:**` line and leave the name as it is. Refer to a record by its path, or by its prefix and name. Leave historical records as written.
+**How to apply:** name a new item or progression record by its prefix and name, with no state. At a state change, edit the `**State:**` line and leave the name as it is. Refer to a record by its path, or by its prefix and name. Leave historical records as written.
 
 ## Compressed
 
-1. An item's or an implementation record's file name carries no state.
+1. An item's or a progression record's file name carries no state.
 2. The name is the ISO-8601-UTC prefix, a dash-separated, lower-case name, and `.md`.
 
 ```
@@ -42,8 +42,11 @@
 ## Compression
 
 - 2026-11-16, revised: the rule is rewritten from the opposite convention, so the earlier figures describe a different rule; checked: 13 directives, 13 kept, 0 less precise, 0 lost
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Mon Nov 16 2026 this rule was named a-record-carrying-a-state-line-ends-its-filename-with-the-state-in-upper-case, and required the opposite: a record's file name ended with its state word in upper case, after a dash, as `…-ooda-terminology-REFUTED.md`, and each state change renamed the file with `git mv`. A reference left out the suffix and the extension so a rename broke none. The suffix was the one exception to the file-names rule's lower-case name. The engineer settled that a file name carries no state, so a link to a record stays stable.
 
@@ -65,7 +68,7 @@ Until 2026-10-26 an implementation record took no suffix while its work was unde
 
 Related:
 
-- the the-implementations-directory-holds-one-record-per-implementation rule — the record whose state the `**State:**` line states
+- the the-progressions-directory-holds-one-record-per-progression rule — the record whose state the `**State:**` line states
 - the the-items-directory-holds-one-file-per-item rule — the other record that carries a state line
 - the file-names rule — the ISO-8601-UTC prefix and the lower-case name
 - the a-reply-that-writes-a-record-ends-with-the-records-path rule — the path printed under *Record:*, which stays true
@@ -108,3 +111,4 @@ Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:03 PM PT
 Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT

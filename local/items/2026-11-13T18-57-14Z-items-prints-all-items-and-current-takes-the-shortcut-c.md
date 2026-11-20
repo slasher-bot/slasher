@@ -9,7 +9,7 @@
 
 **As the engineer stated it:** The "/items" command should print all items. The "/items current" command should do what "/items" does presently. The "/current" command should have a "/c" shortcut.
 
-**Implementation:** `2026-11-13T23-39-32Z-items-all-and-c`, the feature that builds it.
+**Progression:** `2026-11-13T23-39-32Z-items-all-and-c`, the feature that builds it.
 
 ---
 

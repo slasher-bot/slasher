@@ -2,7 +2,7 @@
 
 This work session began with one skill to build, `/log`, and ended with the skills feature concluded and merged into `master`. Phase 1 built every command in the help text as a skill in a plugin, which came to be named `slasher` and to carry the whole session start. Phase 2 measured the session-start read, found the limit on what a hook can carry, and shrank the read by about 18%, with five rules now arriving before the first prompt. Along the way the engineer recorded several ideas, among them the base project.
 
-This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/implementations/2026-10-30T01-21-06Z-skills`, the log, the rules, and the commits on `feature/worktree/skills`.
+This record is the guided tour. The durable records it points to are the source of truth: the feature record `local/progressions/2026-10-30T01-21-06Z-skills`, the log, the rules, and the commits on `feature/worktree/skills`.
 
 ## 1. The first skill, and the plugin's name
 
@@ -43,7 +43,7 @@ The engineer first declared the feature Affirmed, and the record took a confirma
 
 ## Where the durable records live
 
-- The feature record, `local/implementations/2026-10-30T01-21-06Z-skills`, with both phases, their findings, and their verdicts.
+- The feature record, `local/progressions/2026-10-30T01-21-06Z-skills`, with both phases, their findings, and their verdicts.
 - The loop record, `local/logs/loops/2026-11-03T21-59-55Z-skills`.
 - The migration record, `local/migration/2026-11-03T23-28-30Z-the-session-start-hooks-move-into-the-plugin`.
 - The log entries of 2026-11-03 to 2026-11-06 under `local/logs/log/`.

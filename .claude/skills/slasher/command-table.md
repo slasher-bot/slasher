@@ -7,9 +7,9 @@
 | `/next, /proceed, /.` | Proceed to the next step in the current multi-step process or with the action that the agent is suggesting, or resume interrupted work |
 | `/next?` | "What are we doing?" or "what's next?" The next step in the current multi-step process, or the step that has been interrupted. |
 | `/item` | Items hold the project's thinking: ideas, plans, designs, notes, and work to be done, each with a state. |
-| `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
+| `/feature` | A feature builds something the project needs, on its own branch or worktree, to a declared end. Features and experiments are both kinds of progressions. |
 | `/features` | Lists the current features. |
-| `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of implementations. |
+| `/experiment` | An experiment tests a question on its own branch or worktree, to a declared end. Features and experiments are both kinds of progressions. |
 | `/experiments` | Lists the current experiments. |
 | `/process` | These commands move the work under way along: take its next step, or say what was done and what's next. |
 | `/log` | The log records what was decided and when, and a work session record tells the story of a stretch of work. |

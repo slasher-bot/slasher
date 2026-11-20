@@ -31,7 +31,7 @@ Added Mon Nov 16 2026. The plan uses the private rule's definition of a record: 
 - log entries, including those the hook writes for a process question
 - journal entries
 - work session records
-- implementation records, for features and experiments
+- progression records, for features and experiments
 - loop records
 
 **Not settled:**
@@ -54,7 +54,7 @@ Added Mon Nov 16 2026.
 - Whether the agent asks to end the session before starting a feature or an experiment, whose record keeps it from being left silently open. That it asks is recommended.
 - Whether the private session's log hook also changes, to write straight to the private log. That is a change to `/private`, and is recommended as a separate item.
 
-**Implementation:** `2026-11-17T06-37-31Z-unrecorded-command`, the feature that builds it.
+**Progression:** `2026-11-17T06-37-31Z-unrecorded-command`, the feature that builds it.
 
 ---
 

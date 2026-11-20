@@ -81,8 +81,8 @@ Every rule Slasher holds, by package, with the name it is cited by and when it l
 
 | # | Rule | Name | Loads | Trigger |
 |---|---|---|---|---|
-| 27 | The implementations directory holds one record per implementation | `the-implementations-directory-holds-one-record-per-implementation` | on-demand | When starting an experiment or feature, or writing or changing an implementation record |
-| 28 | An implementation runs on a branch to a declared end | `an-implementation-runs-on-a-branch-to-a-declared-end` | on-demand | When starting, working within, adding a worktree to, suspending, or concluding an experiment or feature implementation |
+| 27 | The implementations directory holds one record per implementation | `the-progressions-directory-holds-one-record-per-progression` | on-demand | When starting an experiment or feature, or writing or changing an implementation record |
+| 28 | An implementation runs on a branch to a declared end | `a-progression-runs-on-a-branch-to-a-declared-end` | on-demand | When starting, working within, adding a worktree to, suspending, or concluding an experiment or feature implementation |
 | 29 | When an implementation's phase starts, its goal is stated, and the phases are listed with the current one marked | `a-phase-starts-by-stating-its-goal` | on-demand | When starting a phase of an experiment or a feature |
 | 30 | When the work diverges from the plan, the work is definitive | `when-the-work-diverges-from-the-plan-the-work-is-definitive` | pre-loaded |  |
 
@@ -95,7 +95,7 @@ Every rule Slasher holds, by package, with the name it is cited by and when it l
 | 33 | The log records why work was abandoned, and never says undone work was done | `the-log-records-why-work-was-abandoned-and-never-says-undone-work-was-done` | on-demand | When writing a log entry, especially one recording abandoned work |
 | 34 | A log entry recording an engineer's decision is tagged `[decision]` | `a-log-entry-recording-an-engineers-decision-is-tagged-decision` | on-demand | When writing a log entry that records a decision |
 | 35 | A log entry is written for an item on creation, on each settled resolution, and on a change of state | `a-log-entry-is-written-for-an-item-on-creation-on-each-settled-resolution-and-on-a-change-of-state` | on-demand | When creating an item, adding a dated Settled resolution to it, changing its **State:** line, or closing a work session with a reconciliation |
-| 36 | A log entry is written for an implementation record, and the concluding entry depends on whether the work merged | `a-log-entry-is-written-for-an-implementation-record-and-the-concluding-entry-depends-on-whether-the-work-merged` | on-demand | When creating an implementation record, or changing its **State:** line |
+| 36 | A log entry is written for an implementation record, and the concluding entry depends on whether the work merged | `a-log-entry-is-written-for-a-progression-record-and-the-concluding-entry-depends-on-whether-the-work-merged` | on-demand | When creating an implementation record, or changing its **State:** line |
 | 37 | A suspension is a log entry tagged `[suspended]`, and nothing is moved | `a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved` | on-demand | When the project stops doing something, such as removing a rule, procedure, or report |
 
 ### Work sessions

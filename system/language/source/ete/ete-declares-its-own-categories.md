@@ -12,7 +12,7 @@
 
 **Evented systems and autonomous components.** Terms that name the parts of a message-based system, the components that run on their own, and what they do. Examples: `projection`, `entity`, `event`, `stream`, `consumer`, `handler`, `message`, `autonomous component`.
 
-**Agent artifacts.** Terms that name the files an agent and an engineer write and read as they work, and what is done to them. Examples: `working-state artifact`, `implementation record`, `loop record`, `work session record`, `log entry`, `rule file`, `vocabulary`.
+**Agent artifacts.** Terms that name the files an agent and an engineer write and read as they work, and what is done to them. Examples: `working-state artifact`, `progression record`, `loop record`, `work session record`, `log entry`, `rule file`, `vocabulary`.
 
 **Human-computer interaction (HCI).** Terms that name how a person and a machine work together, and what each of them does. Examples: `attended`, `unattended`, `free-text option`, `selection prompt`, `harness`.
 
@@ -58,7 +58,7 @@ Adding a category is one departure, stated once. Reserving each such word by a s
 
 1. This category holds terms that name the files an agent and an engineer write and read as they work.
 2. It also holds terms for what is done to those files.
-3. Examples: `working-state artifact`, `implementation record`, `loop record`, `work session record`, `log entry`, `rule file`, `vocabulary`.
+3. Examples: `working-state artifact`, `progression record`, `loop record`, `work session record`, `log entry`, `rule file`, `vocabulary`.
 
 ## Human-computer interaction (HCI)
 
@@ -85,8 +85,11 @@ Adding a category is one departure, stated once. Reserving each such word by a s
 
 - 2026-10-28, revised: Why points removed, solubility 76, clarity 1.00; checked: 11 directives, 11 kept, 0 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 22 directives, 21 kept, 0 less precise, 1 lost, 1 repair
+- 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Sun Oct 25 2026 this rule was titled "ETE declares categories of its own".
 
@@ -117,3 +120,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 2:42:32 PM PT
 Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:50 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT

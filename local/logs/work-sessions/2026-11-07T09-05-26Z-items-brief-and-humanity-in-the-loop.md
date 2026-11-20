@@ -20,7 +20,7 @@ The engineer recorded the title *Slasher: Humanity in the Loop AI* as an idea, t
 
 ## 4. Ideas
 
-1. A phase's commits are squashed into the implementation branch.
+1. A phase's commits are squashed into the progression branch.
 2. Rules are renamed handlers.
 3. An `/unattended` command carries out a request on the agent's own.
 4. An `/items` command does what `/report` does. This one became the feature below.
@@ -49,7 +49,7 @@ The help, the command domain table, the printed-list rule, the brief rule, and t
 ## Where the durable records live
 
 - The `/items` item: `local/items/2026-11-07T09-00-56Z-an-items-command-does-what-report-does`
-- The `/items` feature record: `local/implementations/2026-11-07T09-02-55Z-items-command`
+- The `/items` feature record: `local/progressions/2026-11-07T09-02-55Z-items-command`
 - The more-detail item: `local/items/2026-11-07T08-08-25Z-a-brief-explanation-offers-a-more-detailed-answer`
 - The bare `/slasher` item: `local/items/2026-11-07T07-42-28Z-a-bare-slasher-offers-things-to-learn-about`
 - The title item: `local/items/2026-11-07T08-33-48Z-slashers-title-reads-humanity-in-the-loop-ai`

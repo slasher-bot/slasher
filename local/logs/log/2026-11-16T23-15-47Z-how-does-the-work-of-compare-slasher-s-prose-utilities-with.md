@@ -9,6 +9,6 @@ The question, put through the selection interface:
 The options:
 
 - **The item Active** — Make the item Active, and do the comparison on master, writing it into the item. No feature record and no branch.
-- **A feature for the item** — Create a feature record and its branch, as /feature start for the item does. The item becomes Implementation. Asks the working location, participation, and forecast next.
+- **A feature for the item** — Create a feature record and its branch, as /feature start for the item does. The item becomes Progression. Asks the working location, participation, and forecast next.
 
 The engineer's answer: **The item Active**

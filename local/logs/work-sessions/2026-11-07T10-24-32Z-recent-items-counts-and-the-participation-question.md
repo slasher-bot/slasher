@@ -46,7 +46,7 @@ The engineer asked whether the agent can calculate how much confidence improves 
 - The a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule
 - The attended-or-unattended-is-chosen-when-the-work-is-started rule, on the feature branch `feature/worktree/participation-question-offers-unattended-first`
 - The item: `local/items/2026-11-07T08-03-39Z-the-participation-question-offers-unattended-first`
-- The feature record: `local/implementations/2026-11-07T09-46-08Z-participation-question-offers-unattended-first`
+- The feature record: `local/progressions/2026-11-07T09-46-08Z-participation-question-offers-unattended-first`
 - The log entries from `2026-11-07T09-27-02Z` onward under `local/logs/log/`
 
 ---

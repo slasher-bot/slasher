@@ -7,7 +7,7 @@
 
 **As the engineer stated it:** Commit and push command and shortcut
 
-**Implementation:** `2026-11-16T00-08-27Z-commit-and-push-command`
+**Progression:** `2026-11-16T00-08-27Z-commit-and-push-command`
 
 ---
 

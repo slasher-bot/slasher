@@ -32,7 +32,7 @@
 
 **It is the third rename of this directory.** `code/` until 2026-08-21, then `tool/` for minutes, then `tools/`, now `ext/`. The first was argued and the rest have been quick.
 
-**`ext` is an abbreviation where the system has used whole words.** `rules/`, `ideas/`, `logs/`, `implementations/`, `migration/`, `journal/`, and `system/` are all words. The `expand-abbreviations-on-first-use` rule bars an abbreviation the reader may not know without spelling it out, and this one abbreviates two words at once with neither spelled out. A directory name is not prose, so that rule does not govern it — but the reason behind it reaches this.
+**`ext` is an abbreviation where the system has used whole words.** `rules/`, `ideas/`, `logs/`, `progressions/`, `migration/`, `journal/`, and `system/` are all words. The `expand-abbreviations-on-first-use` rule bars an abbreviation the reader may not know without spelling it out, and this one abbreviates two words at once with neither spelled out. A directory name is not prose, so that rule does not govern it — but the reason behind it reaches this.
 
 **A path change is not free.** `tools/ruby-lang` is installed in four projects and its prefix is written into `waytide-ruby`'s `install.sh`, its `install-dependencies.sh`, and its README. The `**Repository:**` declaration means a path change no longer forces a repository rename, which it would have before today.
 

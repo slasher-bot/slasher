@@ -18,7 +18,7 @@ The engineer set three things about the answer `/work-status` gives, each record
 
 ## 3. `/report` and `/report brief`
 
-The engineer said `/current` and `/work-status` are not clear from the outside. The agent's candidate names were put twice, and the engineer asked to clarify each time. Asked one question at a time, the engineer answered with names of their own: `/report` lists the current items and implementations, `/report brief` says what was recently done and what's next, and `/brief` is its alias. The engineer dropped `/current`, `/work-status`, and `/sup?`.
+The engineer said `/current` and `/work-status` are not clear from the outside. The agent's candidate names were put twice, and the engineer asked to clarify each time. Asked one question at a time, the engineer answered with names of their own: `/report` lists the current items and progressions, `/report brief` says what was recently done and what's next, and `/brief` is its alias. The engineer dropped `/current`, `/work-status`, and `/sup?`.
 
 The rule behind `/report brief` was renamed the-brief-report-says-what-was-recently-done-and-what-is-next. The startup read now runs `/report 10`. Historical records keep the old names.
 
@@ -55,7 +55,7 @@ A bare `/slasher` now offers Items, Features, Experiments, and Commands through 
 
 - The rules: the-brief-report-says-what-was-recently-done-and-what-is-next, a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows, the-command-domain-table-prints-when-the-rules-have-loaded, the-startup-display-prints-as-the-session-starts, the-slasher-skills-are-delivered-as-a-plugin-named-slasher, and a-bare-slasher-offers-topics-to-learn-about
 - The item: `local/items/2026-11-07T07-42-28Z-a-bare-slasher-offers-things-to-learn-about`
-- The feature record: `local/implementations/2026-11-07T07-59-23Z-bare-slasher-offers-topics`
+- The feature record: `local/progressions/2026-11-07T07-59-23Z-bare-slasher-offers-topics`
 - The loop record: `local/logs/loops/2026-11-07T08-01-06Z-bare-slasher-offers-topics`
 - The log entries from `2026-11-07T06-36-37Z` onward under `local/logs/log/`
 - The README and `material/README_.md`

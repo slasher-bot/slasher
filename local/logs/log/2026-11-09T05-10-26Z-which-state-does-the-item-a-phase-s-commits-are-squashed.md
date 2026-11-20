@@ -1,10 +1,10 @@
-# Which state does the item A phase's commits are squashed into the implementation branch take? — Realized, selected by the engineer
+# Which state does the item A phase's commits are squashed into the progression branch take? — Realized, selected by the engineer
 
 **Tags:** [decision]
 
 The question, put through the selection interface:
 
-> Which state does the item A phase's commits are squashed into the implementation branch take?
+> Which state does the item A phase's commits are squashed into the progression branch take?
 
 The options:
 

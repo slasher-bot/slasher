@@ -10,7 +10,7 @@ The engineer asked that the items printed after the rules load be headed *5 most
 
 ## 2. Ideas and an observation
 
-- **The status line shows the current implementation and its phase** on a second line, item `2026-11-06T21-35-35Z`. The engineer settled its three open points: the most recently acted-upon implementation is shown, there is no second line when nothing is current, and no phase is shown for work with no phases.
+- **The status line shows the current progression and its phase** on a second line, item `2026-11-06T21-35-35Z`. The engineer settled its three open points: the most recently acted-upon progression is shown, there is no second line when nothing is current, and no phase is shown for work with no phases.
 - **Projects carries ideas, patterns, and corrections into other projects**, item `2026-11-06T08-16-42Z`, changed from an Open idea to an observation, at the engineer's direction.
 - **`/clarify` does what the reply "I don't understand" does**, item `2026-11-07T03-57-24Z`. It came from this session: twice, asking to clarify through the selection interface led nowhere, and the engineer's reply "I don't understand" led to the question being explained again from what the test sets up and does.
 
@@ -52,7 +52,7 @@ The feature was completed and merged into `master`, and its branch and worktree 
 ## Where the durable records live
 
 - The rename item: `local/items/2026-10-30T18-25-28Z-waytide-is-renamed-slasher`
-- The feature record: `local/implementations/2026-11-06T21-42-05Z-rename-to-slasher`
+- The feature record: `local/progressions/2026-11-06T21-42-05Z-rename-to-slasher`
 - The migration record: `local/migration/2026-11-07T01-26-11Z-waytide-is-renamed-slasher`
 - The loop record: `local/logs/loops/2026-11-07T03-51-32Z-rename-to-slasher`
 - The log entries of 2026-11-06 and 2026-11-07 under `local/logs/log/`

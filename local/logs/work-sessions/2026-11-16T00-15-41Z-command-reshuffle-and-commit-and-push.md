@@ -2,7 +2,7 @@
 
 This work session moved commands between packages and renamed them, then built one new command. `/reprint-and-review` moved to the `prose` package and became `/print-and-review`, with the shortcut `/pr`. Sending email moved under `/email`, and `/smtp` was removed. It ended with `/commit-and-push`, and its shortcut `/cp`, built as an unattended feature and merged to `master`.
 
-This is the communicable record of the work session, a guided tour. The items, implementation record, loop record, rules, and log entries it points to are the source of truth.
+This is the communicable record of the work session, a guided tour. The items, progression record, loop record, rules, and log entries it points to are the source of truth.
 
 ## 1. Print-and-review moves to prose
 
@@ -17,7 +17,7 @@ The engineer asked for the smtp commands to come under `/email`, and selected `/
 The engineer recorded *Commit and push command and shortcut* as a work item and started it as a feature on a branch, unattended, with no forecast. The engineer accepted the plan as first shown. `/commit-and-push`, with `/cp`, runs the automated suite, commits the work, and pushes the current branch. Typing it is the request, so it asks only about changes the session did not make. It is in the `git` package, in the PUSH domain, whose description now names both acts.
 
 - Item: `2026-11-15T23-56-12Z-a-command-and-shortcut-commit-and-push`, Completed
-- Implementation record: `2026-11-16T00-08-27Z-commit-and-push-command`
+- Progression record: `2026-11-16T00-08-27Z-commit-and-push-command`
 - Loop record: the loop record for the commit-and-push command, under `local/logs/loops/`
 
 ## 4. The conclusion
@@ -37,7 +37,7 @@ The engineer recorded *Commit and push command and shortcut* as a work item and 
 ## Where the durable records live
 
 - `local/items/`: the commit-and-push work item, Completed.
-- `local/implementations/`: the commit-and-push command implementation record.
+- `local/progressions/`: the commit-and-push command progression record.
 - `local/logs/loops/`: the loop record for the feature.
 - `local/logs/log/`: an entry for each decision and each change of state.
 - `system/prose/`, `system/imap/`, `system/smtp/`, and `system/git/`: the commands, their rules, and their help.

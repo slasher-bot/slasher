@@ -5,7 +5,7 @@
 
 **As the engineer stated it:** "/packages" command
 
-**Implementation:** `2026-11-13T23-02-14Z-packages-command`, the feature that builds it.
+**Progression:** `2026-11-13T23-02-14Z-packages-command`, the feature that builds it.
 
 ---
 

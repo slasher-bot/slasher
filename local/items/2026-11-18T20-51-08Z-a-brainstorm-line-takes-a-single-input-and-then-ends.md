@@ -10,7 +10,7 @@ Added Wed Nov 18 2026: "/brainstorm" should take a <text> input. When it does, t
 
 Open question, added Wed Nov 18 2026: `/brainstorm <kind>` already starts a brainstorm into a new item of that kind, so a text whose first word is a kind, such as "idea" or "work", can be read either way.
 
-**Implementation:** `2026-11-18T21-06-12Z-brainstorm-text`, the feature that builds it.
+**Progression:** `2026-11-18T21-06-12Z-brainstorm-text`, the feature that builds it.
 
 ---
 
