@@ -84,6 +84,10 @@ Each answer changes different rules:
 
 - **2026-11-19** — **The commit-message rule's subject widens from the software to the thing that changed.** Content takes the same form as code: `Pricing column` for a new piece, `Pricing column draft is complete`, and `Pricing column opening is clarified`. Content takes no separate form, no `Content:` prefix, and no colon form.
 
+**As the engineer stated it:** Disregard the fixed phases for content. The writer will decide.
+
+- **2026-11-19** — **Content is offered no standard phases. The writer decides a piece's phases, if any.** This replaces the resolution above that outline, draft, review, and final are offered as standard phases, which stays as written.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
@@ -97,3 +101,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 10:55:07 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:56:21 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:59:47 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:02:51 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:09:17 PM PT
