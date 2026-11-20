@@ -1,6 +1,6 @@
 # A built-in slasher-home project
 
-**State:** Implementation
+**State:** Realized
 
 **Tags:** [idea]
 
@@ -26,3 +26,4 @@ Authored by Scott Bellware on Thu Nov 19 2026 at 6:52:38 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 8:50:29 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 8:50:56 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 8:55:28 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 9:17:03 PM PT
