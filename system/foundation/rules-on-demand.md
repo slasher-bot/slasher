@@ -322,7 +322,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ## The current command
 
-1. `/current` lists the Open and Active items, then, under the heading *Progressions (feature, experiment, article)*, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
+1. `/current` lists the Open and Active items, then, under the heading *Progressions (feature, experiment, content)*, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
 2. The current progressions are the progressions of every kind whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current progression as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no progression is current, print the one line *No current progression.* under that heading, in place of the rows.

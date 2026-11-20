@@ -78,13 +78,15 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 **Each current progression is one row: its handle, its title, and its state.** Its title is the record's own, as in `Feature — The current command`. It takes no ordinal and no SHA columns, since the list is a summary below the items, not a list of its own.
 
-**The progressions sit under the heading *Progressions (feature, experiment, article)*.** **Where no progression is current, the summary is one line: *No current progression.*** It is printed under that heading, in place of the rows.
+**The progressions sit under the heading *Progressions (feature, experiment, content)*.** **Where no progression is current, the summary is one line: *No current progression.*** It is printed under that heading, in place of the rows.
 
 **As the engineer stated it:** No current feature or experiment.
 
 **As the engineer later stated it:** Change it to: No current progression (feature, experiment, article)
 
 **As the engineer then stated it:** Put "(feature, experiment, article)" in the "Progressions" heading, remove it from the "No current progression" line
+
+**As the engineer then stated it:** (feature, experiment, content)
 
 **As the engineer stated it:** Change current-items to current, and include a summary of current implementations at the bottom.
 
@@ -189,7 +191,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ## The current command
 
-1. `/current` lists the Open and Active items, then, under the heading *Progressions (feature, experiment, article)*, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
+1. `/current` lists the Open and Active items, then, under the heading *Progressions (feature, experiment, content)*, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
 2. The current progressions are the progressions of every kind whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current progression as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no progression is current, print the one line *No current progression.* under that heading, in place of the rows.
@@ -259,8 +261,11 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 - 2026-11-20, revised: `/progressions`, and its alias `/implementations`, lists the current progressions of every kind; checked: 108 directives, 105 kept, 3 less precise, 0 lost, 2 repairs; the third, the reason an untouched record shows one SHA twice, is a reason and is left as it is; re-checked: 108 directives, 106 kept, 2 less precise, 0 lost, 1 repair, `/progressions` taking the number and `current`; the other is that reason; re-checked: 108 directives, 107 kept, 1 less precise, 0 lost, the one being that reason
 - 2026-11-20, revised: where no progression is current, `/current` prints *No current progression (feature, experiment, article)*, in the engineer's words; checked: 108 directives, 107 kept, 1 less precise, 0 lost, the one being the reason left before
 - 2026-11-20, revised: the heading *Progressions (feature, experiment, article)*, and the line *No current progression.*, in the engineer's words; checked: 109 directives, 108 kept, 1 less precise, 0 lost, the one being the reason left before
+- 2026-11-20, revised: the heading names *content*, not *article*, in the engineer's words, a swap of one term for another the engineer settled; not re-checked
 
 ## History
+
+Until Fri Nov 20 2026 the heading read *Progressions (feature, experiment, article)*.
 
 Until Fri Nov 20 2026 the progressions `/current` lists sat under a heading the rule did not name, and where none was current the line read *No current progression (feature, experiment, article)*.
 
@@ -369,3 +374,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:43 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:37:55 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:51:26 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:55:05 AM PT
