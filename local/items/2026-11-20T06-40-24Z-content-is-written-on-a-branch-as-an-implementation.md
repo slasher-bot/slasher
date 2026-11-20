@@ -80,6 +80,10 @@ Each answer changes different rules:
 
 - **2026-11-19** — **The content list command is both `/contents` and `/content list`.** `/contents` follows the pattern of `/features` and `/experiments`. `/content list` is a subcommand of `/content`, as `/item list` is of `/item`.
 
+**As the engineer stated it:** I accept, answering the agent's recommendation to widen the commit-message rule so its subject is the thing that changed rather than the software.
+
+- **2026-11-19** — **The commit-message rule's subject widens from the software to the thing that changed.** Content takes the same form as code: `Pricing column` for a new piece, `Pricing column draft is complete`, and `Pricing column opening is clarified`. Content takes no separate form, no `Content:` prefix, and no colon form.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 10:40:24 PM PT
@@ -92,3 +96,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 10:49:31 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:55:07 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:56:21 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 10:59:47 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:02:51 PM PT
