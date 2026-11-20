@@ -19,11 +19,21 @@ Realizes the item `2026-11-19T17-17-49Z-open-opens-the-last-record`.
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/open-the-last-record`
-- **Base:** the commit on `master` holding this record as first written
+- **Base:** `76c99a46`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-open-the-last-record`
 - **Participation:** unattended.
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-19T17-17-49Z-open-opens-the-last-record`
+
+## What happened
+
+- A bare `/open` opens the more recent of the most recent principal record and the last text the agent generated that the engineer is working on.
+- Text already in a file opens as that file. Text in the chat only is written to a markdown file in the system's temporary directory, and that file opens.
+- Where there is neither, a bare `/open` says so and opens nothing. It no longer asks which record.
+- `/open <record>` is unchanged.
+- The `/open` rule, its skill, the RECORD help, and its command-table row say so. The rule has no compressed text to check.
+- No loop record: the work is a rule and its skill and help, which is content work in this project.
+- The automated suite passes: 121 tests.
 
 ## Confirmations
 
@@ -35,3 +45,4 @@ Realizes the item `2026-11-19T17-17-49Z-open-opens-the-last-record`.
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 5:08:14 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 5:09:53 PM PT
