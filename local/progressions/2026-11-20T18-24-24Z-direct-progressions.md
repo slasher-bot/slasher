@@ -19,7 +19,7 @@ Realizes the idea `2026-11-20T04-43-41Z-progressions-are-created-and-started-dir
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Progression branch:** `feature/worktree/direct-progressions`
-- **Base:** the commit holding this record as first written, from `master`
+- **Base:** `c0cf73a6`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-direct-progressions`
 - **Participation:** unattended, stated by the engineer in the request. The question was not asked.
 - **Forecast:** none. The verdict question is not asked.
@@ -39,6 +39,16 @@ Realizes the idea `2026-11-20T04-43-41Z-progressions-are-created-and-started-dir
 10. Write the loop record where code changes. Compile the source, and run the suite.
 11. Commit the change on the branch.
 
+## What happened
+
+- `/progression` creates or changes a progression with no kind, titled `Progression — <name>`, tagged `[progression]`, on a `progression/<subject>` branch. It takes the subcommands `/feature` takes.
+- `/implementation` does what `/progression` does, and titles the progression it creates `Implementation — <name>`, tagged `[implementation]`, on an `implementation/<subject>` branch.
+- `/progressions`, and its alias `/implementations`, lists the current progressions of every kind, with the number and `current` that `/features` takes, and the counts under *Other progressions*.
+- The PROGRESSIONS help and its two rows of the command table, after `/experiment` in the help order.
+- Four rules name the new records: the progressions-directory rule, the branch rule, the printed-list rule, and the command-row rule. The compressed texts of the first three were checked: the directory rule kept all 126 directives at once, the branch rule kept all 163 after one repair, and the printed-list rule keeps 107 of 108 after three repairs, the one left being a reason.
+- No code changed, so there is no loop record.
+- The automated suite passes: 137 tests.
+
 ## Confirmations
 
 - **2026-11-20** — Participation: Unattended, stated by the engineer in the request.
@@ -50,3 +60,4 @@ Realizes the idea `2026-11-20T04-43-41Z-progressions-are-created-and-started-dir
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 10:24:24 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:30:32 AM PT

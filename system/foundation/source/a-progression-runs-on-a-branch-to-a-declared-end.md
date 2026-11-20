@@ -20,7 +20,7 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 **As the engineer stated it:** When an implementation starts, an initial implementation record should be recorded on master. Then the branch is made, and the branch's version takes updates added during the course of the implementation, but the initial record remains on master
 
-- **Name it `experiment/<subject>` or `feature/<subject>`**, matching the tag. `<subject>` is a short dash-separated, lower-case name of what is under test or what is being built, named literally. Add a `-run-<n>` suffix only where the work actually has multiple runs.
+- **Name it `experiment/<subject>`, `feature/<subject>`, `progression/<subject>`, or `implementation/<subject>`**, matching the tag. `<subject>` is a short dash-separated, lower-case name of what is under test or what is being built, named literally. Add a `-run-<n>` suffix only where the work actually has multiple runs.
 - **Where the work has a worktree, the name carries `worktree/`** — `feature/worktree/<subject>` and `experiment/worktree/<subject>`. A branch checked out in a worktree cannot be checked out again in the main working tree, and nothing in `git branch` says which those are. The segment says it in the one listing where the question comes up.
 - **Adding a worktree to work already under way renames the branch**, and that act is already a confirmed one the record carries. A name that says where the work is has to keep saying it, or it is worse than a name that never claimed to.
 - **The upstream branch is not encoded in the name.** A branch can outlive a change of upstream target, so the record names it.
@@ -145,7 +145,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 ## The branch
 
 1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
-2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
+2. Name it `experiment/<subject>`, `feature/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
 5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
@@ -229,7 +229,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 1. When the progression is created, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
 2. Do not ask it where the working location is the current branch. Work there states no forecast.
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
-4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
+4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work, through the selection interface. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
 6. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
 7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed.
@@ -315,8 +315,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-15, revised: a phase is created by `/phase new`, where it was added, as point 3 of the phases; not re-checked
 - 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
+- 2026-11-20, revised: a progression created directly takes a branch named `progression/<subject>` or `implementation/<subject>`; checked: 163 directives, 161 kept, 1 less precise, 1 lost, 1 repair, the verdict question going through the selection interface; the lost one is the trigger, which the loader prints beside the compressed text; re-checked: 163 directives, 163 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Fri Nov 20 2026 a progression's branch was named `experiment/<subject>` or `feature/<subject>` only.
 
 Until Fri Nov 20 2026 this rule was named an-implementation-runs-on-a-branch-to-a-declared-end, and said implementation where it now says progression. The progression-replaces-implementation work item settled that progression replaces implementation in the record sense.
 
@@ -426,3 +429,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:56 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:13:11 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT

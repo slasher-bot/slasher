@@ -4,7 +4,7 @@
 
 `slasher/local/progressions/` holds **progression records**: one file per progression, carrying how it started, where it is being worked, and what became of it. A progression is a bounded unit of work with a lifecycle, and the record is a persisted, dated artifact kept after it concludes.
 
-**Two kinds, and a tag says which.** An **experiment** is tagged `[experiment]` and a **feature** is tagged `[feature]`. The tags are the ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule). **They name what the work is, and no rule reads them to decide how it runs.**
+**Two kinds, and a tag says which.** An **experiment** is tagged `[experiment]` and a **feature** is tagged `[feature]`. A progression created directly, with no kind, is tagged `[progression]`, or `[implementation]` where `/implementation` created it. The tags are the ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule). **They name what the work is, and no rule reads them to decide how it runs.**
 
 **Either kind opens with a question or an intent, whichever the work has.** An experiment may be built to an intent, and a feature to a question.
 
@@ -23,7 +23,7 @@ Open with the **Question** or the **Intent**, then the setup:
 - the **working location** chosen when the progression is created
 - **whether it states a forecast**, asked when the progression is created, and the forecast where it states one
 - **whether it reaches a verdict**, asked at the end of work with a forecast
-- a **`**Tags:**`** line carrying `[experiment]` or `[feature]`
+- a **`**Tags:**`** line carrying `[experiment]`, `[feature]`, `[progression]`, or `[implementation]`
 
 **Work with a forecast states it** — what is expected to happen — **before** the work. As the work proceeds it records what actually happened against that forecast, then the findings and any post-hoc misses. The outcomes the forecast did not account for are usually the most informative.
 
@@ -83,11 +83,11 @@ Open with the **Question** or the **Intent**, then the setup:
 
 ## Format
 
-The same frontmatter-free markdown as rules — a `# Experiment — <name>` or `# Feature — <name>` title, then prose and tables. **The kind reads in the title and is stated as data in the `**Tags:**` line**, and a record whose title says one kind and whose tag says another is a defect in the record. The filename takes the ISO-8601-UTC prefix (see the file-names rule), and no state (see the a-records-file-name-carries-no-state rule). End the file with the provenance footer, and pair it with a log entry (see the a-log-entry-is-written-for-a-progression-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
+The same frontmatter-free markdown as rules — a `# Experiment — <name>`, `# Feature — <name>`, `# Progression — <name>`, or `# Implementation — <name>` title, then prose and tables. **The kind reads in the title and is stated as data in the `**Tags:**` line**, and a record whose title says one kind and whose tag says another is a defect in the record. The filename takes the ISO-8601-UTC prefix (see the file-names rule), and no state (see the a-records-file-name-carries-no-state rule). End the file with the provenance footer, and pair it with a log entry (see the a-log-entry-is-written-for-a-progression-record-and-the-concluding-entry-depends-on-whether-the-work-merged rule).
 
 **Why:** an experiment and a feature share one lifecycle. What differs between two progressions is whether the work is judged against a forecast, and that is a decision about this piece of work rather than about its kind. A forecast recorded at creation keeps a verdict possible, and the verdict is decided at the end, when the work has shown what it shows. The kind keeps naming what the work is.
 
-**How to apply:** record every progression here, tagged `[experiment]` or `[feature]`. Open with the question or the intent, then the branch topology, the working location, and whether it states a forecast. Forecast before the work where the engineer gives one, and record what happened against it. Record the verdict selection at the end, where the work has a forecast.
+**How to apply:** record every progression here, tagged `[experiment]`, `[feature]`, `[progression]`, or `[implementation]`. Open with the question or the intent, then the branch topology, the working location, and whether it states a forecast. Forecast before the work where the engineer gives one, and record what happened against it. Record the verdict selection at the end, where the work has a forecast.
 
 Write the state line as `Open` when `new` writes the record, or as `Active` when `start` writes it, make it `Active` when the work starts, and update it as the state changes. Record each confirmation the lifecycle requires.
 
@@ -97,7 +97,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 2. A record carries how the progression started, where it is being worked, and what became of it.
 3. A progression is a bounded unit of work with a lifecycle.
 4. The record is a persisted, dated artifact, kept after the progression concludes.
-5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
+5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. A progression created directly, with no kind, is tagged `[progression]`, or `[implementation]` where `/implementation` created it. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 6. The tags name what the work is. No rule reads them to decide how the work runs.
 7. Either kind opens with a question or an intent, whichever the work has.
 8. Whether the work states a forecast is asked when the progression is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
@@ -108,7 +108,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 1. Open with the **Question** or the **Intent**.
 2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
-4. The setup also includes a `**Tags:**` line carrying `[experiment]` or `[feature]`.
+4. The setup also includes a `**Tags:**` line carrying `[experiment]`, `[feature]`, `[progression]`, or `[implementation]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
 6. As the work proceeds, it records what actually happened against the forecast.
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
@@ -171,7 +171,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 ## Format
 
 1. Use the same frontmatter-free markdown as rules: a title, then prose and tables.
-2. The title is `# Experiment — <name>` or `# Feature — <name>`.
+2. The title is `# Experiment — <name>`, `# Feature — <name>`, `# Progression — <name>`, or `# Implementation — <name>`.
 3. The kind reads in the title and is stated as data in the `**Tags:**` line.
 4. A record whose title and tag name different kinds is defective.
 5. The filename takes the ISO-8601-UTC prefix (see the file-names rule).
@@ -202,8 +202,11 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 - 2026-11-14, revised: the opening questions are asked when the implementation is created, not at the start; not re-checked
 - 2026-11-16, revised: a file name carries no state, which the engineer settled; checked: 49 directives, 49 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
+- 2026-11-20, revised: a progression created directly takes `[progression]` or `[implementation]`, and its title; checked: 126 directives, 126 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Fri Nov 20 2026 a progression was an experiment or a feature, and none could be created without one of those kinds.
 
 Until Fri Nov 20 2026 this rule was named the-implementations-directory-holds-one-record-per-implementation, and said implementation where it now says progression. The progression-replaces-implementation work item settled that progression replaces implementation in the record sense.
 
@@ -288,3 +291,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:56 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT

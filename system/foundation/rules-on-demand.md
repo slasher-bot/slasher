@@ -20,7 +20,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A command domain's rows live beside its skill, in `command-table-rows.md`.** A command domain is a group of root commands that share one heading, one description, and one help command in the Slasher help. Its row names the domain's help command, and its description is the one under that heading. A domain with no root command of its own name has a skill named for the domain, as `/process` for PROCESS and `/language` for LANGUAGE, and its rows live beside that skill. A package carries the rows of the domains it holds, as `imap` carries `/email`'s.
 
-**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/pros-and-cons, /??`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc, /:`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
+**One row to a domain, and a few root commands have rows of their own.** `/features` has a row below `/feature`, `/experiments` below `/experiment`, `/progressions, /implementations` below `/progression, /implementation`, `/decision` below `/log`, `/note` below `/decision`, and `/notes` below `/note`, each in its domain's rows file. `/pros-and-cons, /??`, `/ask-again, /aa`, `/estimate-confidence, /%`, `/unattended, /!`, `/shortcuts, /sc, /:`, and `/load` have rows of their own, beside their skills, in that order at the bottom of the table. The PHASE domain has no row. Write no other root command, alias, or subcommand into a row.
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
@@ -323,7 +323,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 ## The current command
 
 1. `/current` lists the Open and Active items, then, under a heading of their own, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
-2. The current progressions are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
+2. The current progressions are the progressions of every kind whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current progression as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no progression is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. The items table `/current` prints takes the kind column every list of items takes.
@@ -335,12 +335,13 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Open, Active, or Suspended.
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
-3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
+3. Present each record as one row: an ordinal, its handle, its title, and its state. The title is the record's own. Give it no SHA columns.
 4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
 5. Each command takes `current` too, as `/items` does. `/features current` does what `/features` does, and `/features current 3` what `/features 3` does.
 6. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
 7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
 8. A number given to the command does not change these counts.
+9. `/progressions`, and its alias `/implementations`, lists the current progressions of every kind, as `/features` lists the features, and takes the number *n* and `current` as `/features` takes them. Where none is current, print *No current progression.* Its counts sit under the heading *Other progressions*.
 
 ## The notes command
 
@@ -376,7 +377,7 @@ Trigger: When creating, starting, adding a worktree to, suspending, or concludin
 ## The branch
 
 1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
-2. Name it `experiment/<subject>` or `feature/<subject>`, matching the tag.
+2. Name it `experiment/<subject>`, `feature/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
 5. With a worktree, the name carries `worktree/`: `experiment/worktree/<subject>`, `feature/worktree/<subject>`.
@@ -460,7 +461,7 @@ Trigger: When creating, starting, adding a worktree to, suspending, or concludin
 1. When the progression is created, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
 2. Do not ask it where the working location is the current branch. Work there states no forecast.
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
-4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work. Record the answer as a confirmation.
+4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work, through the selection interface. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
 6. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it with a verdict word instead.
 7. A third option reads *What's a verdict?* Selecting it explains, in a sentence or two, that a verdict is the engineer's declaration that the work is Affirmed, Refuted, or Inconclusive, against the forecast stated before the work, and that work without a verdict concludes Completed.
@@ -1678,7 +1679,7 @@ Trigger: When creating or starting an experiment or feature, or writing or chang
 2. A record carries how the progression started, where it is being worked, and what became of it.
 3. A progression is a bounded unit of work with a lifecycle.
 4. The record is a persisted, dated artifact, kept after the progression concludes.
-5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
+5. An experiment is tagged `[experiment]`, and a feature is tagged `[feature]`. A progression created directly, with no kind, is tagged `[progression]`, or `[implementation]` where `/implementation` created it. These are ordinary square-bracket tags (see the a-record-may-be-categorized-with-square-bracket-tags rule).
 6. The tags name what the work is. No rule reads them to decide how the work runs.
 7. Either kind opens with a question or an intent, whichever the work has.
 8. Whether the work states a forecast is asked when the progression is created. Put it to the engineer, and record it as a confirmation beside the working location and the participation.
@@ -1689,7 +1690,7 @@ Trigger: When creating or starting an experiment or feature, or writing or chang
 1. Open with the **Question** or the **Intent**.
 2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and whether it states a forecast. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
-4. The setup also includes a `**Tags:**` line carrying `[experiment]` or `[feature]`.
+4. The setup also includes a `**Tags:**` line carrying `[experiment]`, `[feature]`, `[progression]`, or `[implementation]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
 6. As the work proceeds, it records what actually happened against the forecast.
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
@@ -1752,7 +1753,7 @@ Trigger: When creating or starting an experiment or feature, or writing or chang
 ## Format
 
 1. Use the same frontmatter-free markdown as rules: a title, then prose and tables.
-2. The title is `# Experiment — <name>` or `# Feature — <name>`.
+2. The title is `# Experiment — <name>`, `# Feature — <name>`, `# Progression — <name>`, or `# Implementation — <name>`.
 3. The kind reads in the title and is stated as data in the `**Tags:**` line.
 4. A record whose title and tag name different kinds is defective.
 5. The filename takes the ISO-8601-UTC prefix (see the file-names rule).

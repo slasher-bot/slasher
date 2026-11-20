@@ -54,7 +54,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ## The current command
 
-**`/current` lists the current items, then the current progressions.** The items are the Open and Active ones. A Progression item is left out, since the progressions below show the work it is under. The progressions are the features and experiments whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
+**`/current` lists the current items, then the current progressions.** The items are the Open and Active ones. A Progression item is left out, since the progressions below show the work it is under. The progressions are the progressions of every kind whose `**State:**` line reads Open, Active, or Suspended: the ones that have not concluded, whether they are not yet started, under way, or paused.
 
 **As the engineer stated it:** When current items and implementations are printed together, as is the case with some commands, items in the Implementation state should not be printed. When current items are printed on their own, items in the Implementation state should be printed.
 
@@ -95,6 +95,8 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 **Each command takes `current` too, as `/items` does, and it changes nothing.** `/features current` lists what `/features` lists, and `/features current 3` what `/features 3` lists.
 
 **Where none of its kind is current, the list is one line:** *No current feature.* for `/features`, and *No current experiment.* for `/experiments`.
+
+**`/progressions` lists the current progressions of every kind, and `/implementations` is its alias.** It is what `/features` is, for every kind at once: an ordinal, the handle, the title, and the state in each row, the number and `current` as `/features` takes them, the one line *No current progression.* where none is current, and the counts under the heading *Other progressions*.
 
 **Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Open, Active, and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
 
@@ -184,7 +186,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 ## The current command
 
 1. `/current` lists the Open and Active items, then, under a heading of their own, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
-2. The current progressions are the features and experiments whose `**State:**` line reads Open, Active, or Suspended.
+2. The current progressions are the progressions of every kind whose `**State:**` line reads Open, Active, or Suspended.
 3. Present each current progression as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
 4. Where no progression is current, print the one line *No current feature or experiment.* under the summary's heading, in place of the rows.
 5. The items table `/current` prints takes the kind column every list of items takes.
@@ -196,12 +198,13 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Open, Active, or Suspended.
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
-3. Present each record as one row: an ordinal, its handle, its title, and its state. Give it no SHA columns.
+3. Present each record as one row: an ordinal, its handle, its title, and its state. The title is the record's own. Give it no SHA columns.
 4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
 5. Each command takes `current` too, as `/items` does. `/features current` does what `/features` does, and `/features current 3` what `/features 3` does.
 6. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
 7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
 8. A number given to the command does not change these counts.
+9. `/progressions`, and its alias `/implementations`, lists the current progressions of every kind, as `/features` lists the features, and takes the number *n* and `current` as `/features` takes them. Where none is current, print *No current progression.* Its counts sit under the heading *Other progressions*.
 
 ## The notes command
 
@@ -249,8 +252,11 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 - 2026-11-13, revised: current is Open, Active, and Implementation; not re-checked
 - 2026-11-18, revised: every list of items takes a kind column, between the title and the state, and a list of notes takes none, which the engineer asked for; checked: 83 directives, 81 kept, 2 less precise, 0 lost. Left less precise: the features and experiments title being the record's own, and no note counting as current or left out, both in sections this revision did not change
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
+- 2026-11-20, revised: `/progressions`, and its alias `/implementations`, lists the current progressions of every kind; checked: 108 directives, 105 kept, 3 less precise, 0 lost, 2 repairs; the third, the reason an untouched record shows one SHA twice, is a reason and is left as it is; re-checked: 108 directives, 106 kept, 2 less precise, 0 lost, 1 repair, `/progressions` taking the number and `current`; the other is that reason; re-checked: 108 directives, 107 kept, 1 less precise, 0 lost, the one being that reason
 
 ## History
+
+Until Fri Nov 20 2026 no command listed the current progressions of every kind but `/current`, and `/progressions` and `/implementations` did not exist.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
@@ -350,3 +356,4 @@ Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 4:59:30 PM PT
 Changed by Scott Bellware on Wed Nov 18 2026 at 10:33:31 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:43 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
