@@ -1,6 +1,6 @@
 # /open opens the last record
 
-**State:** Implementation
+**State:** Completed
 
 **Tags:** [work]
 
@@ -17,3 +17,4 @@
 Authored by Scott Bellware on Thu Nov 19 2026 at 9:17:49 AM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 4:46:47 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 5:08:14 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 5:10:23 PM PT
