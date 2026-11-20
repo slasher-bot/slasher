@@ -26,12 +26,53 @@
 # That placement is the foundation rule a-project-does-not-name-its-downstream-consumers-in-its-own-files: a
 # project does not name the projects that consume it, so this script is
 # committed and the list it reads is not.
+#
+# In a workspace, it also reads the workspace project's own list: projects.toml
+# in the workspace project's local directory. The workspace is the one that
+# slasher.toml, in the directory above the project, names:
+#
+#   workspace-project = "some-workspace"
+#
+# The workspace list is committed with the workspace project, so it holds only
+# what is the same on every machine. Its entries name a path and nothing else,
+# and each path is relative, read from the directory that holds slasher.toml.
+# Settings that differ from one machine to another stay in the machine's list.
+# The two lists are read together, and a project in both is listed once.
 
 set -e
+
+scripts=$(dirname "$0")
 
 # Overridable so the script can be exercised against a registry written for a
 # test, without touching the engineer's own.
 registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/projects.toml}
+
+# --- The workspace list ----------------------------------------------------
+
+workspace_list=""
+workspace_parent=$(dirname "$PWD")
+
+if [ -f "$workspace_parent/slasher.toml" ]; then
+  workspace_name=$(
+    sed -n 's/^[[:space:]]*workspace-project[[:space:]]*=[[:space:]]*"\([^"]*\)"[[:space:]]*$/\1/p' \
+      "$workspace_parent/slasher.toml"
+  )
+
+  workspace="$workspace_parent/$workspace_name"
+
+  if [ -n "$workspace_name" ] && [ -d "$workspace" ]; then
+    workspace_local=$(cd "$workspace" && "$scripts/local-directory.sh")
+
+    case $workspace_local in
+      /*) ;;
+      *) workspace_local="$workspace/$workspace_local" ;;
+    esac
+
+    if [ -f "$workspace_local/projects.toml" ]; then
+      workspace_list="$workspace_local/projects.toml"
+    fi
+  fi
+fi
 
 # --- The registry ----------------------------------------------------------
 #
@@ -53,7 +94,7 @@ registry=${SLASHER_REGISTRY:-$HOME/.config/slasher/projects.toml}
 # registry used to name the folders to search. Each project is now named by its
 # own entry.
 
-if [ ! -f "$registry" ]; then
+if [ ! -f "$registry" ] && [ -z "$workspace_list" ]; then
   echo "No registry at $registry" >&2
   echo >&2
   echo "Create it, with an entry for each project:" >&2
@@ -66,72 +107,113 @@ fi
 paths=$(mktemp)
 trap 'rm -f "$paths"' EXIT
 
-in_project=""
-line_number=0
-
 refuse() {
-  echo "$registry, line $line_number: $1" >&2
+  echo "$list, line $line_number: $1" >&2
   echo "  $line" >&2
   echo >&2
-  echo "Each project is a [[project]] entry, with its root as its path:" >&2
-  echo >&2
-  echo "  [[project]]" >&2
-  echo "  path = \"~/projects/some-project\"" >&2
+  if [ "$list" = "$workspace_list" ]; then
+    echo "Each project is a [[project]] entry, with its path relative to $workspace_parent:" >&2
+    echo >&2
+    echo "  [[project]]" >&2
+    echo "  path = \"some-project\"" >&2
+  else
+    echo "Each project is a [[project]] entry, with its root as its path:" >&2
+    echo >&2
+    echo "  [[project]]" >&2
+    echo "  path = \"~/projects/some-project\"" >&2
+  fi
   exit 1
 }
 
-# The `|| [ -n "$line" ]` reads a final line that carries no newline.
-while IFS= read -r line || [ -n "$line" ]; do
-  line_number=$((line_number + 1))
+# Reads one list, and adds each entry's path to the paths file. The workspace
+# list takes only a relative path in each entry.
+read_list() {
+  list=$1
+  in_project=""
+  line_number=0
 
-  trimmed=$(printf '%s' "$line" | sed 's/^[[:space:]]*//; s/[[:space:]]*$//')
+  # The `|| [ -n "$line" ]` reads a final line that carries no newline.
+  while IFS= read -r line || [ -n "$line" ]; do
+    line_number=$((line_number + 1))
 
-  case $trimmed in
-    '' | '#'*)
+    trimmed=$(printf '%s' "$line" | sed 's/^[[:space:]]*//; s/[[:space:]]*$//')
+
+    case $trimmed in
+      '' | '#'*)
+        continue
+        ;;
+      '[[project]]')
+        in_project=yes
+        continue
+        ;;
+      included* | excluded*)
+        refuse "the included and excluded lists are not read; name each project in a [[project]] entry"
+        ;;
+    esac
+
+    if [ -z "$in_project" ]; then
+      refuse "expected [[project]]"
+    fi
+
+    # A name, =, a quoted string, and an optional trailing comment.
+    name=$(
+      printf '%s' "$trimmed" |
+        sed -n 's/^\([A-Za-z0-9_-]\{1,\}\)[[:space:]]*=[[:space:]]*"[^"]*"[[:space:]]*\(#.*\)\{0,1\}$/\1/p'
+    )
+
+    if [ -z "$name" ]; then
+      refuse "expected a name = \"value\" line in a [[project]] entry"
+    fi
+
+    if [ "$name" != "path" ]; then
+      if [ "$list" = "$workspace_list" ]; then
+        refuse "a workspace entry holds only a path; put the $name setting in $registry"
+      fi
       continue
-      ;;
-    '[[project]]')
-      in_project=yes
-      continue
-      ;;
-    included* | excluded*)
-      refuse "the included and excluded lists are not read; name each project in a [[project]] entry"
-      ;;
-  esac
+    fi
 
-  if [ -z "$in_project" ]; then
-    refuse "expected [[project]]"
-  fi
+    path=$(printf '%s' "$trimmed" | sed 's/^[^"]*"\([^"]*\)".*$/\1/')
 
-  # A name, =, a quoted string, and an optional trailing comment.
-  name=$(
-    printf '%s' "$trimmed" |
-      sed -n 's/^\([A-Za-z0-9_-]\{1,\}\)[[:space:]]*=[[:space:]]*"[^"]*"[[:space:]]*\(#.*\)\{0,1\}$/\1/p'
-  )
+    if [ "$list" = "$workspace_list" ]; then
+      # The workspace list is committed, so a path in it is relative, and is
+      # read from the directory that holds slasher.toml.
+      case $path in
+        /* | '~' | '~/'*)
+          refuse "a workspace entry's path is relative to $workspace_parent"
+          ;;
+      esac
 
-  if [ -z "$name" ]; then
-    refuse "expected a name = \"value\" line in a [[project]] entry"
-  fi
+      path="$workspace_parent/$path"
 
-  if [ "$name" != "path" ]; then
-    continue
-  fi
+      # A path such as ../other/some-project is read to the directory it names,
+      # so a project in both lists is the same path in each.
+      if [ -d "$path" ]; then
+        path=$(cd "$path" && pwd)
+      fi
+    else
+      # A leading ~ is this machine's home directory. Nothing else is expanded.
+      case $path in
+        '~') path=$HOME ;;
+        '~/'*) path=$HOME${path#\~} ;;
+      esac
+    fi
 
-  path=$(printf '%s' "$trimmed" | sed 's/^[^"]*"\([^"]*\)".*$/\1/')
+    # A trailing slash would make one project read as two.
+    while [ "$path" != "/" ] && [ "${path%/}" != "$path" ]; do
+      path=${path%/}
+    done
 
-  # A leading ~ is this machine's home directory. Nothing else is expanded.
-  case $path in
-    '~') path=$HOME ;;
-    '~/'*) path=$HOME${path#\~} ;;
-  esac
+    printf '%s\n' "$path" >> "$paths"
+  done < "$list"
+}
 
-  # A trailing slash would make one project read as two.
-  while [ "$path" != "/" ] && [ "${path%/}" != "$path" ]; do
-    path=${path%/}
-  done
+if [ -f "$registry" ]; then
+  read_list "$registry"
+fi
 
-  printf '%s\n' "$path" >> "$paths"
-done < "$registry"
+if [ -n "$workspace_list" ]; then
+  read_list "$workspace_list"
+fi
 
 # --- The projects ----------------------------------------------------------
 #
@@ -157,5 +239,9 @@ while IFS= read -r project; do
 done < "$paths"
 
 if [ "$listed" -eq 0 ]; then
-  echo "No Slasher projects are listed in $registry" >&2
+  if [ -n "$workspace_list" ]; then
+    echo "No Slasher projects are listed in $registry or $workspace_list" >&2
+  else
+    echo "No Slasher projects are listed in $registry" >&2
+  fi
 fi

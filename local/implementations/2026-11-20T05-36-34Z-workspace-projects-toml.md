@@ -19,7 +19,7 @@ Realizes the idea `2026-11-20T04-39-16Z-a-workspace-project-has-its-own-projects
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/workspace-projects-toml`
-- **Base:** the commit holding this record as first written, from `master`
+- **Base:** `b9e3c217`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-workspace-projects-toml`
 - **Participation:** unattended, stated by the engineer in the request. The question was not asked.
 - **Forecast:** none. The verdict question is not asked.
@@ -41,6 +41,18 @@ Realizes the idea `2026-11-20T04-39-16Z-a-workspace-project-has-its-own-projects
 12. Compile the source, and run the suite.
 13. Commit the change on the branch.
 
+## What happened
+
+- `list-projects.sh`, run in a workspace, reads `projects.toml` in the workspace project's local directory beside the registry, and lists the projects in both, each once. The workspace is the one `slasher.toml`, in the directory above the project, names.
+- A workspace entry holds only a path. The path is relative, read from the directory that holds `slasher.toml`. Another setting, an absolute path, or a path that starts with `~` is refused, and the error names its line.
+- Where there is no registry but there is a workspace list, the workspace list is listed.
+- `resolve-project.sh <name>` finds a project only the workspace list names, since it reads `list-projects.sh`.
+- Outside a workspace, nothing changes.
+- The projects rule, its compressed text, the projects skill, and its help name the workspace list. The compressed text is not checked again, as with the rule's earlier revisions.
+- Six tests: `test/automated/list-projects/workspace.sh`, `workspace-without-machine-registry.sh`, `workspace-entry-with-another-setting.sh`, `workspace-entry-with-an-absolute-path.sh`, `workspace-entry-with-a-path-under-the-home-directory.sh`, and `test/automated/resolve-project/name-in-the-workspace-list.sh`.
+- The loop record is `2026-11-20T05-41-23Z-workspace-projects-toml`.
+- The automated suite passes: 130 tests.
+
 ## Confirmations
 
 - **2026-11-19** — Participation: Unattended, stated by the engineer in the request.
@@ -51,3 +63,4 @@ Realizes the idea `2026-11-20T04-39-16Z-a-workspace-project-has-its-own-projects
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 9:36:34 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 9:41:23 PM PT

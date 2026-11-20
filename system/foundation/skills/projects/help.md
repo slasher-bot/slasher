@@ -2,7 +2,8 @@ PROJECTS
   This command lists the Slasher projects registered on this machine. The list
   helps move ideas, new patterns, and corrections into other projects.
 
-  /projects                        The machine's registry of Slasher projects
+  /projects                        The machine's registry of Slasher projects, and
+                                   the workspace's own list in a workspace
   /projects -workspace <instruction>    Carry out the instruction in this project's workspace project
   /workspace <instruction>              An alias of /projects -workspace
   /projects -system <instruction>  Carry out the instruction in the machine's system project

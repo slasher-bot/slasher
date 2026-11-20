@@ -1,6 +1,6 @@
 ---
 name: projects
-description: List the machine's registry of Slasher projects, or carry out an instruction in the workspace project, the system project, the Slasher home directory, or a registered project.
+description: List the machine's registry of Slasher projects, and the workspace's own list in a workspace, or carry out an instruction in the workspace project, the system project, the Slasher home directory, or a registered project.
 argument-hint: "[help | -workspace | -system | -slasher-home | <name>] [instruction]"
 disable-model-invocation: true
 ---

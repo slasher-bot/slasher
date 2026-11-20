@@ -1203,7 +1203,7 @@ Source: system/foundation/source/projects-lists-the-registry-and-carries-out-an-
 
 Trigger: When the engineer asks for the Slasher projects on this machine, or asks for an instruction to be carried out in another project, as with `/projects`, `/projects -workspace`, `/workspace`, `/system`, `/projects -system`, `/slasher-home`, `/projects -slasher-home`, or `/projects <name>`
 
-1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `list-projects.sh`, which reads `~/.config/slasher/projects.toml`, and print its report. Where there is no registry, say so.
+1. `/projects` lists the Slasher projects registered on this machine, from within any project. Run foundation's `list-projects.sh`, which reads `~/.config/slasher/projects.toml` and, in a workspace, the workspace list, and print its report. Where there is no list, say so.
 2. `/projects -workspace <instruction>`, `/projects -system <instruction>`, `/projects -slasher-home <instruction>`, and `/projects <name> <instruction>` carry out the instruction in the workspace project, the machine's system project, the Slasher home directory, which holds the development version of Slasher, or the registered project with that name. `/workspace <instruction>` is an alias of `/projects -workspace <instruction>`, `/system <instruction>` of `/projects -system <instruction>`, and `/slasher-home <instruction>` of `/projects -slasher-home <instruction>`.
 3. Resolve the target from the current project's root with `slasher/system/foundation/resolve-project.sh -workspace`, `-system`, `-slasher-home`, or `<name>`, or `system/foundation/resolve-project.sh` where there is no `slasher/` directory. It prints the target's root.
 4. Where the script fails, report its message and do nothing more. On a machine that declares no Slasher home directory, `-slasher-home` does not resolve to a project.
@@ -1211,7 +1211,9 @@ Trigger: When the engineer asks for the Slasher projects on this machine, or ask
 6. Carry out the instruction under the target's root, by the target's conventions. Report what was done and where.
 7. A commit in the target waits for the engineer's selection.
 8. With a target and no instruction, print the target's root, and act on nothing.
-9. Do not change the registry, `slasher.toml`, `system-project.toml`, or `slasher-home.toml`. Write no project's name into the project the session is in.
+9. Do not change the registry, the workspace list, `slasher.toml`, `system-project.toml`, or `slasher-home.toml`. Write no project's name into the project the session is in.
+10. The workspace list is `projects.toml` in the workspace project's local directory. It is added to the registry, and a project in both is listed once.
+11. A workspace entry holds only a relative path, read from the directory that holds `slasher.toml`. Settings stay in the registry. `list-projects.sh` refuses any other entry and names its line.
 
 # Pros and cons gives each option of the last question with its pros and cons
 
