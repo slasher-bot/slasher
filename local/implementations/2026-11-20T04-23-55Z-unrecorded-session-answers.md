@@ -12,7 +12,7 @@ Realizes the problem `2026-11-20T04-20-12Z-an-unrecorded-session-withholds-answe
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -25,7 +25,7 @@ Realizes the problem `2026-11-20T04-20-12Z-an-unrecorded-session-withholds-answe
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-20T04-20-12Z-an-unrecorded-session-withholds-answers`
 
-## Plan, as accepted on 2026-11-20
+## Plan, as accepted on 2026-11-19
 
 1. Write the feature record and its log entry on master.
 2. Make the item Implementation, and commit the records on master.
@@ -47,12 +47,14 @@ Realizes the problem `2026-11-20T04-20-12Z-an-unrecorded-session-withholds-answe
 
 ## Confirmations
 
-- **2026-11-20** — Participation: Unattended, stated by the engineer in the request.
-- **2026-11-20** — Working location: Branch and worktree, selected by the engineer.
-- **2026-11-20** — Forecast: No forecast, selected by the engineer.
-- **2026-11-20** — Plan: Accept, selected by the engineer.
+- **2026-11-19** — Participation: Unattended, stated by the engineer in the request.
+- **2026-11-19** — Working location: Branch and worktree, selected by the engineer.
+- **2026-11-19** — Forecast: No forecast, selected by the engineer.
+- **2026-11-19** — Plan: Accept, selected by the engineer.
+- **2026-11-19** — Conclusion: Completed, requested by the engineer with `/feature Complete`.
 
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 8:23:55 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 8:27:01 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 8:32:58 PM PT
