@@ -1,8 +1,8 @@
 # Content is judged by named criteria for each paragraph and each sentence
 
-**Trigger:** When reviewing or editing content, as with `/prose`, `/edit`, or `/review`
+**Trigger:** When reviewing or editing content, as with `/prose`, `/line-edit`, or `/review`
 
-**Every review of content judges it by the same named criteria.** `/prose edit`, `/prose suggest`, and `/prose critique` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
+**Every review of content judges it by the same named criteria.** `/prose line-edit`, `/prose suggest`, and `/prose critique` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
 
 **A paragraph is judged by four criteria:**
 
@@ -35,7 +35,7 @@ Related:
 
 - the prose-suggest-suggests-numbered-edits-and-accept-or-reject-settles-them rule — suggests edits by these criteria
 - the prose-critique-gives-an-overall-critical-review-of-content rule — reviews the whole by these criteria
-- the edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule — walks a text by these criteria
+- the line-edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule — walks a text by these criteria
 - the `language` package's writing-states-the-evidence-and-the-reader-draws-the-conclusion rule — the conclusion-drawing check, stated once
 
 ---
@@ -43,3 +43,4 @@ Related:
 Authored by Scott Bellware on Mon Nov 16 2026 at 6:08:38 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:15:56 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 6:31:25 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 11:50:20 AM PT

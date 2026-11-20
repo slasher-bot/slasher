@@ -2,11 +2,11 @@
 
 Source: system/prose/source/content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence.md
 
-Trigger: When reviewing or editing content, as with `/prose`, `/edit`, or `/review`
+Trigger: When reviewing or editing content, as with `/prose`, `/line-edit`, or `/review`
 
-**Trigger:** When reviewing or editing content, as with `/prose`, `/edit`, or `/review`
+**Trigger:** When reviewing or editing content, as with `/prose`, `/line-edit`, or `/review`
 
-**Every review of content judges it by the same named criteria.** `/prose edit`, `/prose suggest`, and `/prose critique` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
+**Every review of content judges it by the same named criteria.** `/prose line-edit`, `/prose suggest`, and `/prose critique` each judge by this rule. Content is prose written for people to read, such as a page, a README, an article, or a draft.
 
 **A paragraph is judged by four criteria:**
 
@@ -31,21 +31,23 @@ Trigger: When reviewing or editing content, as with `/prose`, `/edit`, or `/revi
 
 **How to apply:** on any review of content, judge each paragraph by its four criteria and, where sentences are reviewed, each sentence by its three. Name the criterion in each finding, say what is wrong and why it matters, and say where a passage is clean.
 
-# Edit walks the content paragraph by paragraph, then sentence by sentence
+# A line edit walks the content paragraph by paragraph, then sentence by sentence
 
-Source: system/prose/source/edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence.md
+Source: system/prose/source/line-edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence.md
 
-Trigger: When the engineer types `/prose edit` or `/edit`, or asks to work through content paragraph by paragraph
+Trigger: When the engineer types `/prose line-edit` or `/line-edit`, or asks to work through content paragraph by paragraph
 
-**Trigger:** When the engineer types `/prose edit` or `/edit`, or asks to work through content paragraph by paragraph
+**Trigger:** When the engineer types `/prose line-edit` or `/line-edit`, or asks to work through content paragraph by paragraph
 
-**`/prose edit <content>` walks the content one paragraph at a time.** `/edit` is its short form, and does exactly what it does. Content is prose written for people to read, such as a file, a page, or a draft in the chat. A bare `/prose edit` walks the content the conversation is on. Where the words name no content, or the conversation is on none, say so, and start nothing. It judges each paragraph and each sentence by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule.
+**`/prose line-edit <content>` walks the content one paragraph at a time.** `/line-edit` is its short form, and does exactly what it does. Content is prose written for people to read, such as a file, a page, or a draft in the chat. A bare `/prose line-edit` walks the content the conversation is on. Where the words name no content, or the conversation is on none, say so, and start nothing. It judges each paragraph and each sentence by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule.
 
 **As the engineer stated it:** Do the Both, option, but use the commend "edit" rather than "walkthrough"
 
 **As the engineer later stated it:** `edit` goes paragraph by paragraph, sentence by sentence, allowing the user to `accept`, `reject`, or `ignore`. This reflects the prior implementation of the `doc-edit` rules
 
 **As the engineer later stated it:** The sentences in a paragraph should be numbered as "s1", "s2", etc
+
+**As the engineer later stated it:** Change "/prose edit" to "/prose line-edit". Asked what becomes of the short form `/edit`, the engineer selected *Rename to /line-edit*.
 
 **The walk starts by numbering the paragraphs and their sentences.** Read the content whole, for its arc, its tone, and its intent. Number its paragraphs p1, p2, p3, and so on. A heading, a blockquote, and a code block each count as a paragraph where it stands on its own lines. Number the sentences of each paragraph s1, s2, s3, and so on, from 1 in each paragraph. A sentence is named by its paragraph and its number, as p4 s2. Say how many paragraphs there are, then show p1.
 
@@ -59,22 +61,22 @@ Trigger: When the engineer types `/prose edit` or `/edit`, or asks to work throu
 
 **Subcommands move the walk:**
 
-- **`/prose edit next`**: show the next paragraph and its findings.
-- **`/prose edit previous`**: show the previous paragraph and its findings.
-- **`/prose edit p<n>`**, as `/prose edit p4`: show that paragraph and its findings, and make it the current one.
-- **`/prose edit p<n> s<n>`**, as `/prose edit p4 s2`: judge that sentence by the three sentence criteria, and show it with its findings and suggestions.
-- **`/prose edit sentences [p<n> ...]`**: judge the sentences of the paragraphs named, or of every paragraph, by the three sentence criteria. Group the findings by paragraph, and name each sentence a finding is about by its number, as p4 s2, with the sentence quoted.
-- **`/prose edit print`**: print the content from p1 to the current paragraph, with every accepted change made.
+- **`/prose line-edit next`**: show the next paragraph and its findings.
+- **`/prose line-edit previous`**: show the previous paragraph and its findings.
+- **`/prose line-edit p<n>`**, as `/prose line-edit p4`: show that paragraph and its findings, and make it the current one.
+- **`/prose line-edit p<n> s<n>`**, as `/prose line-edit p4 s2`: judge that sentence by the three sentence criteria, and show it with its findings and suggestions.
+- **`/prose line-edit sentences [p<n> ...]`**: judge the sentences of the paragraphs named, or of every paragraph, by the three sentence criteria. Group the findings by paragraph, and name each sentence a finding is about by its number, as p4 s2, with the sentence quoted.
+- **`/prose line-edit print`**: print the content from p1 to the current paragraph, with every accepted change made.
 
 **After the last paragraph, ask before the sentence pass.** Ask, through the selection interface, whether to judge the sentences of every paragraph, of the paragraphs the engineer names, or of none.
 
-**The walk holds its place for the session.** The paragraph and sentence numbers and the current paragraph stand until a new `/prose edit <content>` starts another walk. An accepted change does not renumber the walk. `/prose edit next` and the other subcommands with no walk started say so, and do nothing.
+**The walk holds its place for the session.** The paragraph and sentence numbers and the current paragraph stand until a new `/prose line-edit <content>` starts another walk. An accepted change does not renumber the walk. `/prose line-edit next` and the other subcommands with no walk started say so, and do nothing.
 
-**`/prose edit` is a subcommand of `/prose`,** in the PROSE command domain, under the prose-reviews-content-through-its-subcommands rule.
+**`/prose line-edit` is a subcommand of `/prose`,** in the PROSE command domain, under the prose-reviews-content-through-its-subcommands rule.
 
 **Why:** a long text reviewed in one answer gives the writer every finding at once, and the writer loses the passage each one is about. A walk keeps one paragraph in view with its findings. Numbered paragraphs and sentences let the writer name any passage in a word. Each suggestion is the writer's to accept, reject, or put off, so the writer's words change only by the writer's decision.
 
-**How to apply:** on `/prose edit <content>`, number the paragraphs and their sentences, say how many paragraphs there are, and show p1 with its findings and suggestions. Ask for each suggestion whether to accept, reject, or ignore it. On each subcommand, move the walk and show the paragraph or the sentence with its findings, or judge its sentences, or print the content so far.
+**How to apply:** on `/prose line-edit <content>`, number the paragraphs and their sentences, say how many paragraphs there are, and show p1 with its findings and suggestions. Ask for each suggestion whether to accept, reject, or ignore it. On each subcommand, move the walk and show the paragraph or the sentence with its findings, or judge its sentences, or print the content so far.
 
 # `/prose critique` gives an overall critical review of content
 
@@ -102,9 +104,9 @@ Trigger: When the engineer types `/prose critique`, or asks for a critique of co
 
 Source: system/prose/source/prose-reviews-content-through-its-subcommands.md
 
-Trigger: When the engineer types `/prose`, `/edit`, `/review`, `/accept`, or `/reject`
+Trigger: When the engineer types `/prose`, `/line-edit`, `/review`, `/accept`, or `/reject`
 
-**Trigger:** When the engineer types `/prose`, `/edit`, `/review`, `/accept`, or `/reject`
+**Trigger:** When the engineer types `/prose`, `/line-edit`, `/review`, `/accept`, or `/reject`
 
 **As the engineer stated it:** A "/prose" command, with subcommands like "edit", "suggest", and "critique", which reviews content.
 
@@ -112,11 +114,13 @@ Trigger: When the engineer types `/prose`, `/edit`, `/review`, `/accept`, or `/r
 
 **As the engineer later selected it:** `/edit` stays as a short form of `/prose edit`, and `/review` as a short form of `/prose suggest`.
 
+**As the engineer later stated it:** Change "/prose edit" to "/prose line-edit". Asked what becomes of the short form `/edit`, the engineer selected *Rename to /line-edit*.
+
 **`/prose` reviews content.** Content is prose written for people to read, such as a page, a README, an article, or a draft in the chat. Every subcommand judges it by the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule.
 
 **Its subcommands:**
 
-- **`/prose edit`** walks the content paragraph by paragraph, then sentence by sentence, and each suggestion is accepted, rejected, or ignored. The edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule governs it.
+- **`/prose line-edit`** walks the content paragraph by paragraph, then sentence by sentence, and each suggestion is accepted, rejected, or ignored. The line-edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule governs it.
 - **`/prose suggest`** lists numbered suggested edits to the content. The prose-suggest-suggests-numbered-edits-and-accept-or-reject-settles-them rule governs it.
 - **`/prose accept`** and **`/prose reject`** settle pending suggestions by their numbers, as that rule says.
 - **`/prose critique`** gives an overall critical review of the content. The prose-critique-gives-an-overall-critical-review-of-content rule governs it.
@@ -125,14 +129,14 @@ Trigger: When the engineer types `/prose`, `/edit`, `/review`, `/accept`, or `/r
 
 **Four short forms do exactly what their subcommands do,** and pass their words on unchanged:
 
-- `/edit` is `/prose edit`.
+- `/line-edit` is `/prose line-edit`.
 - `/review` is `/prose suggest`. `/review accept` and `/review reject` are `/prose accept` and `/prose reject`.
 - `/accept` is `/prose accept`.
 - `/reject` is `/prose reject`.
 
-**Suggestions share one numbering in a session.** A suggestion that `/prose edit` makes and one that `/prose suggest` makes are numbered in the same sequence, so `/accept 3` names one suggestion, whichever subcommand made it.
+**Suggestions share one numbering in a session.** A suggestion that `/prose line-edit` makes and one that `/prose suggest` makes are numbered in the same sequence, so `/accept 3` names one suggestion, whichever subcommand made it.
 
-**`/prose` is the PROSE command domain.** `/prose help` prints its help. `/edit help`, `/review help`, `/accept help`, and `/reject help` say that the command takes no `help`, name `/prose help`, and do nothing more. Claude Code's built-in code-review command also takes `/review`. Where it does, the engineer types `/slasher:review`.
+**`/prose` is the PROSE command domain.** `/prose help` prints its help. `/line-edit help`, `/review help`, `/accept help`, and `/reject help` say that the command takes no `help`, name `/prose help`, and do nothing more. Claude Code's built-in code-review command also takes `/review`. Where it does, the engineer types `/slasher:review`.
 
 **Why:** the acts of working on content belong together, under one name the engineer can ask for help on. The short forms keep the commands the engineer already types.
 
@@ -180,7 +184,7 @@ Trigger: When the engineer types `/prose suggest`, `/prose accept`, `/prose reje
    Reason:    Precision. It states the policy and does not hedge.
 ```
 
-**A suggestion is pending until it is accepted or rejected.** A later `/prose suggest`, or a `/prose edit` walk, adds its suggestions after the pending ones, and the numbering continues. Neither drops a pending suggestion. A number is never used again in the same session, so a number always names one suggestion.
+**A suggestion is pending until it is accepted or rejected.** A later `/prose suggest`, or a `/prose line-edit` walk, adds its suggestions after the pending ones, and the numbering continues. Neither drops a pending suggestion. A number is never used again in the same session, so a number always names one suggestion.
 
 **`/prose accept` shows the result, then writes it on the engineer's selection.** `/prose accept 1 3`, or `/accept 1 3`, accepts suggestions 1 and 3. A number may be written `#3` or `3`. A bare `/prose accept` accepts every pending suggestion. Show each changed passage as it would read. Then ask, through the selection interface, whether to write the changes to the file, with the options *Write the changes* and *Something else — say what to change*. Write them only on that selection. An accepted suggestion stops being pending when its change is written. Where the engineer does not select writing, the suggestions stay pending.
 

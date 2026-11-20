@@ -36,7 +36,7 @@
    Reason:    Precision. It states the policy and does not hedge.
 ```
 
-**A suggestion is pending until it is accepted or rejected.** A later `/prose suggest`, or a `/prose edit` walk, adds its suggestions after the pending ones, and the numbering continues. Neither drops a pending suggestion. A number is never used again in the same session, so a number always names one suggestion.
+**A suggestion is pending until it is accepted or rejected.** A later `/prose suggest`, or a `/prose line-edit` walk, adds its suggestions after the pending ones, and the numbering continues. Neither drops a pending suggestion. A number is never used again in the same session, so a number always names one suggestion.
 
 **`/prose accept` shows the result, then writes it on the engineer's selection.** `/prose accept 1 3`, or `/accept 1 3`, accepts suggestions 1 and 3. A number may be written `#3` or `3`. A bare `/prose accept` accepts every pending suggestion. Show each changed passage as it would read. Then ask, through the selection interface, whether to write the changes to the file, with the options *Write the changes* and *Something else — say what to change*. Write them only on that selection. An accepted suggestion stops being pending when its change is written. Where the engineer does not select writing, the suggestions stay pending.
 
@@ -62,7 +62,7 @@ Related:
 
 - the content-is-judged-by-named-criteria-for-each-paragraph-and-each-sentence rule — the criteria each suggestion's reason names
 - the prose-reviews-content-through-its-subcommands rule — the command this is a subcommand of, and its short forms
-- the edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule — a walk whose suggestions share this numbering
+- the line-edit-walks-the-content-paragraph-by-paragraph-then-sentence-by-sentence rule — a walk whose suggestions share this numbering
 - the present-every-prompt-to-the-engineer-through-the-selection-ui rule — the question `/prose accept` asks before it writes
 - the prose-critique-gives-an-overall-critical-review-of-content rule — a review of the whole, which suggests no numbered edits
 
@@ -73,3 +73,4 @@ Changed by Scott Bellware on Sun Nov 15 2026 at 12:29:39 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 12:32:30 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:08:58 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 6:31:25 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 11:50:20 AM PT
