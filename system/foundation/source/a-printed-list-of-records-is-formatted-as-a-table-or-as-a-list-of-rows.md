@@ -1,6 +1,6 @@
 # A printed list of records is formatted as a table or as a list of rows
 
-**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, `/experiments`, or `/notes`
+**Trigger:** When the engineer asks for a list of records, as with `/item list`, `/list`, `/items`, `/current`, `/features`, `/experiments`, `/contents`, or `/notes`
 
 **When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence.** A table presents the fields in headed columns. Rows present one record to a line, its fields in sequence, with no columns. **A list is called a table only where it is formatted as columns.** That reaches any record — items, progression records, log entries, loop records, work session records, migration records, journal entries, and commits.
 
@@ -8,7 +8,7 @@
 
 **A list of items opens with an ordinal**, a number from 1 in the order the rows are printed, ahead of the handle. The engineer refers to a row by that number.
 
-**Two SHA columns follow the handle: the commit that created the record, and the last to touch it.** They are standing columns rather than chosen ones, in every list but a list of items, a list of commits, and the lists `/features` and `/experiments` print.
+**Two SHA columns follow the handle: the commit that created the record, and the last to touch it.** They are standing columns rather than chosen ones, in every list but a list of items, a list of commits, and the lists `/features`, `/experiments`, and `/contents` print.
 
 ```
 |                        | created   | changed   | progression                      | state     |
@@ -104,6 +104,8 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 **`/progressions` lists the current progressions of every kind, and `/implementations` is its alias.** It is what `/features` is, for every kind at once: an ordinal, the handle, the title, and the state in each row, the number and `current` as `/features` takes them, the one line *No current progression.* where none is current, and the counts under the heading *Other progressions*.
 
+**`/contents` lists the current content, and `/content list` does the same.** It is what `/features` is, for the content kind: an ordinal, the handle, the title, and the state in each row, the number and `current` as `/features` takes them, the one line *No current content.* where none is current, and the counts under the heading *Other content*. The content-is-a-progression-without-the-steps-that-serve-only-code rule governs the content kind.
+
 **Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Open, Active, and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
 
 **As the engineer stated it:** Create a "/features" command and an "/experiments" command that does for them what the "/items" command does
@@ -150,7 +152,7 @@ Keep every column short. Where a field runs to a sentence, use rows instead.
 4. The handle is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit.
 5. Every column after the handle has a heading.
 6. Two SHA columns come right after the handle: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the handle, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed.
-7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features` and `/experiments` print. They are not chosen per request.
+7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features`, `/experiments`, and `/contents` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
 ```
@@ -211,6 +213,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
 8. A number given to the command does not change these counts.
 9. `/progressions`, and its alias `/implementations`, lists the current progressions of every kind, as `/features` lists the features, and takes the number *n* and `current` as `/features` takes them. Where none is current, print *No current progression.* Its counts sit under the heading *Other progressions*.
+10. `/contents`, and `/content list`, lists the current content, as `/features` lists the features, and takes the number *n* and `current` as `/features` takes them. Where none is current, print *No current content.* Its counts sit under the heading *Other content*.
 
 ## The notes command
 
@@ -262,8 +265,11 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 - 2026-11-20, revised: where no progression is current, `/current` prints *No current progression (feature, experiment, article)*, in the engineer's words; checked: 108 directives, 107 kept, 1 less precise, 0 lost, the one being the reason left before
 - 2026-11-20, revised: the heading *Progressions (feature, experiment, article)*, and the line *No current progression.*, in the engineer's words; checked: 109 directives, 108 kept, 1 less precise, 0 lost, the one being the reason left before
 - 2026-11-20, revised: the heading names *content*, not *article*, in the engineer's words, a swap of one term for another the engineer settled; not re-checked
+- 2026-11-20, revised: `/contents` and `/content list` list the current content, as the content kind settles; checked: 77 directives, 76 kept, 0 less precise, 1 lost, 1 repair: the content rule is named in Related; re-checked: 77 directives, 77 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Fri Nov 20 2026 there was no `/contents` command, and no list of content.
 
 Until Fri Nov 20 2026 the heading read *Progressions (feature, experiment, article)*.
 
@@ -327,6 +333,7 @@ Related:
 - the file-names rule — the prefix the handle column carries
 - the `git` package's a-commits-sha-refers-to-the-work-the-commit-carries rule — what a SHA in those columns refers to when the engineer names one back
 - the `language` package's an-answer-is-a-list-and-prose-must-justify-itself rule — the answer's form, which this does not displace
+- the content-is-a-progression-without-the-steps-that-serve-only-code rule — the content kind, which `/contents` and `/content list` list
 
 ---
 
@@ -375,3 +382,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:37:55 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:51:26 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:55:05 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:19 PM PT

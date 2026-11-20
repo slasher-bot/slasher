@@ -245,8 +245,8 @@ Source: system/git/source/write-subject-first-commit-messages.md
 
 Trigger: When writing a commit message
 
-1. The subject of a commit message is **the software**, never the engineer.
-2. The log records changes to the software and their effects. It is not an account of what the engineer did.
+1. The subject of a commit message is **the thing that changed**: the software, or a piece of content such as an article. It is never the engineer.
+2. The log records changes to the project and their effects. It is not an account of what the engineer did.
 3. The first line leads with the thing that changed and its new state.
 4. State it as a fact, in passive voice and indicative mood.
 5. **State the change, don't narrate the work.** "Widget reconciliation is corrected" — not "Fix widget reconciliation" and not "Fixed widget reconciliation".
@@ -258,7 +258,8 @@ Trigger: When writing a commit message
 11. State both the current version and the next one.
 12. "Increased" holds even when a trailing segment resets.
 13. **Never lead with a verb.** That covers the imperative ("Fix…") and the past tense ("Fixed…") alike.
-14. Name the software that changed, then its new state.
+14. Name the software or the content that changed, then its new state.
 15. **The subject's length is the a-commit-messages-subject-stops-at-50-characters-and-its-body-wraps-at-72 rule's.** That rule caps the subject at 50 characters and wraps the body at 72.
 16. **Split the commit when the subject will not fit.**
-17. Do not drop the software subject and lead with a verb instead.
+17. Do not drop the subject and lead with a verb instead.
+18. **Content takes the same forms**, with no separate form and no prefix: "Pricing column", "Pricing column draft is complete", "Pricing column opening is clarified".

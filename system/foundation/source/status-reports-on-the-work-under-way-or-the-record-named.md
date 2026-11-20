@@ -2,15 +2,15 @@
 
 **Trigger:** When the engineer types `/status`, or asks for the status of the work under way
 
-**`/status` reports the status of one item, feature, or experiment.** It finds the record, then reports on it as the command of its kind does: an item as `/item status` does, a feature as `/feature status` does, and an experiment as `/experiment status` does. It is in the PROCESS command domain, so `/status help` says that the command takes no `help`, and names `/process help`.
+**`/status` reports the status of one item, feature, experiment, or content progression.** It finds the record, then reports on it as the command of its kind does: an item as `/item status` does, a feature as `/feature status` does, an experiment as `/experiment status` does, and content as `/content status` does. It is in the PROCESS command domain, so `/status help` says that the command takes no `help`, and names `/process help`.
 
 **As the engineer stated it:** Add a root "/status" command
 
-**A bare `/status` reports on the work under way.** That is the feature or experiment the conversation is on. Where the conversation is on none, it is the one progression whose `**State:**` line reads Active, and where none is Active, the one Active item. Where more than one record is a candidate at the step that decides, ask which, through the selection interface, each candidate an option. Where no record is a candidate, say that no work is under way, and report nothing.
+**A bare `/status` reports on the work under way.** That is the feature, experiment, or content the conversation is on. Where the conversation is on none, it is the one progression whose `**State:**` line reads Active, and where none is Active, the one Active item. Where more than one record is a candidate at the step that decides, ask which, through the selection interface, each candidate an option. Where no record is a candidate, say that no work is under way, and report nothing.
 
 **`/status <record>` reports on the record the identifier names.** An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of items, features, or experiments printed in the session, as `/status 3`
+- **a number**, the ordinal of a row in the last list of items, features, experiments, or content printed in the session, as `/status 3`
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the progressions, as `/status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item or progression, as `/status cart payment`
 
@@ -29,6 +29,8 @@
 
 ## History
 
+Until Fri Nov 20 2026 `/status` reported on an item, a feature, or an experiment, since there was no content kind.
+
 Until Fri Nov 20 2026 the report did not say whether the record was ready to conclude.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
@@ -44,3 +46,4 @@ Related:
 Authored by Scott Bellware on Mon Nov 16 2026 at 2:26:06 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:43 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PM PT

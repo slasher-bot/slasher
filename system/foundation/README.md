@@ -40,6 +40,8 @@ Beyond the four core directories, foundation defines the **work-artifact** direc
 
 **A progression carries a full branch lifecycle**, in the `the-progressions-directory-holds-one-record-per-progression` and `a-progression-runs-on-a-branch-to-a-declared-end` rules — its own branch, a working location chosen at the start, a declared end, and recorded confirmations. **Two kinds, and a tag says which.** An `[experiment]` is built to a **question** and a `[feature]` to an **intent**, and that one difference accounts for every other: an experiment forecasts, reaches a verdict of affirmed, refuted, or inconclusive, merges through a test gate on the engineer's affirmation, and is watched for drift. A feature does none of those, ends **completed**, is simply verified before it integrates, and is the only kind that may be built on the current branch.
 
+**Content is a progression without the steps that serve only code** (`content-is-a-progression-without-the-steps-that-serve-only-code`). A piece of writing is tagged `[content]`, titled `Content — <name>`, and built on a `content/<subject>` branch with `/content`. It goes through no design steps, states no forecast, and reaches no verdict. Where the `prose` package is active, `/content complete` offers a review before the merge.
+
 **An experiment may run in phases, and each phase starts by stating its goal** (`a-phase-starts-by-stating-its-goal`) — what the phase is to establish, and how that serves the experiment's question — beside a list of the experiment's phases with the current one marked.
 
 The four rules that stated this as two lifecycles were consolidated on 2026-08-18. They agreed on almost everything and had already drifted in their wording of the same clauses.
