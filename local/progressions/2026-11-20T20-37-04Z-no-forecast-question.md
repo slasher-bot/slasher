@@ -19,6 +19,7 @@ Realizes the idea `2026-11-20T19-31-16Z-remove-the-forecast-question-from-progre
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Progression branch:** `feature/no-forecast-question`
+- **Base:** `d0451873`, from `master`
 - **Working location:** branch only. This working tree switches to the branch, and back at the conclusion.
 - **Participation:** unattended, stated by the engineer in the request. The question was not asked.
 - **Forecast:** none. The verdict question is not asked.
@@ -38,6 +39,16 @@ Realizes the idea `2026-11-20T19-31-16Z-remove-the-forecast-question-from-progre
 10. Compile the source, and run the suite.
 11. Commit the change on the branch.
 
+## What happened
+
+- A progression is not asked whether it states a forecast when it is created, and the forecast selection is no longer one of its confirmations.
+- `/phase new` asks no forecast question either.
+- A progression or a phase states a forecast only where the engineer gives one without being asked, and the record carries it. The verdict question at the end stays, for work with a forecast.
+- An unattended feature chooses only its working location, and states no forecast unless the engineer gave one in the request.
+- The two progression rules, the unattended rule, the phase skill, and the feature and phase help are conformed.
+- The compressed texts of the three changed rules are checked. One repair was made: the unattended rule's compressed text says a revised plan follows the engineer's direction.
+- The automated suite passes: 137 tests.
+
 ## Confirmations
 
 - **2026-11-20** — Participation: Unattended, stated by the engineer in the request.
@@ -49,3 +60,4 @@ Realizes the idea `2026-11-20T19-31-16Z-remove-the-forecast-question-from-progre
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 12:37:04 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:40:47 PM PT

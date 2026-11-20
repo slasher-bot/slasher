@@ -101,9 +101,9 @@ FEATURES
   /features [current] [<n>]        The current features, or the n most recent
   /feature help                    Print this command's help
 
-  Either kind opens with a question or an intent. A forecast is
-  stated when it is created, where you give one, and the verdict is asked
-  when the work completes.
+  Any kind opens with a question or an intent. No forecast question is
+  asked. A forecast is stated where you give one, and the verdict is asked
+  when work with a forecast completes.
 
 EXPERIMENTS
   An experiment tests a question on its own branch or worktree, to a declared
@@ -209,7 +209,8 @@ PHASE
                                    not realized)
   /phase inconclusive              -> Inconclusive
 
-  Whether a phase states a forecast is asked when it is created.
+  A phase is not asked whether it states a forecast. It states one
+  where you give one.
   A phase with one is asked the verdict question when it completes.
 
   /phases                          List the phases, the current one emphasized

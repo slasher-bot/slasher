@@ -8,7 +8,7 @@
 
 A progression is bounded work with a lifecycle. It runs on a branch created for it, it is designed through the five hinges, and it reaches one of a fixed set of declared states. Content is the exception: it leaves out the five hinges, the participation question, the forecast, and the verdict, as the content-is-a-progression-without-the-steps-that-serve-only-code rule says. It is never left silently open.
 
-**Whether the work states a forecast decides the parts that differ while it runs, and whether it reaches a verdict is asked at its end. The tag decides neither.** Either kind opens with a question or an intent. A forecast is stated when the progression is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule). Every clause below that names work with a forecast, or work with or without a verdict, names it because of those two. No clause varies by kind, except for content. The tag names the branch and the record, and nothing else, except `[content]`.
+**Whether the work states a forecast decides the parts that differ while it runs, and whether it reaches a verdict is asked at its end. The tag decides neither.** Any kind opens with a question or an intent. No forecast question is asked. A forecast is stated only where the engineer gives one without being asked. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule). Every clause below that names work with a forecast, or work with or without a verdict, names it because of those two. No clause varies by kind, except for content. The tag names the branch and the record, and nothing else, except `[content]`.
 
 **As the engineer stated it:** change features and experiments so that both can have either an intent or a question.
 
@@ -30,7 +30,7 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 ## A progression in phases
 
-**An experiment or a feature may run in phases.** Each phase is a question or an intent of its own that serves the progression's. The record names the phases and their order when the progression is created, and, as each phase starts, the commit it branched from. **Whether a phase states a forecast is asked when it is created, by `/phase new`**, whatever its progression chose, with the options the progression's forecast question has: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work, and a phase without one states none. **A phase with a forecast is asked the verdict question when its work is complete**, with the progression's three options. A phase without one concludes Completed, unasked. **As the engineer stated it:** chosen per phase.
+**An experiment or a feature may run in phases.** Each phase is a question or an intent of its own that serves the progression's. The record names the phases and their order when the progression is created, and, as each phase starts, the commit it branched from. **A phase is not asked whether it states a forecast.** A phase states one only where the engineer gives one without being asked, whatever its progression stated, and states it before its work. A phase without one states none. **A phase with a forecast is asked the verdict question when its work is complete**, with the progression's three options. A phase without one concludes Completed, unasked. **As the engineer stated it:** chosen per phase.
 
 **As the engineer stated it:** features should have phases as well.
 
@@ -74,9 +74,9 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 **Attended or unattended, put through the selection interface beside the working location.** Attended is the default. See the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule, which states why the two sit at one gate and what changes between them.
 
-## The forecast at creation, and the verdict at the end
+## The forecast, and the verdict at the end
 
-**When the progression is created, ask whether the work states a forecast, beside the working location and the participation, and record the answer as a confirmation.** A forecast is what is expected to happen, stated before the work. Its two options read *No forecast*, then *State a forecast*, in that order. Where the engineer states one, write it in the record. Where the working location is the current branch, do not ask: work there states none. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
+**No forecast question is asked when the progression is created.** A forecast is what is expected to happen, stated before the work. The work states one only where the engineer gives one without being asked, in the request or before the work starts. Where the engineer gives one, write it in the record. Work on the current branch states none. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 
 **At the end, ask the verdict question of work with a forecast, and of no other work.** It is asked when the work is complete, through the selection interface, and recorded as a confirmation. **Its two options read, in these words and in this order:** *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*. A verdict is the engineer's declaration, so the options name whose it is. Work concluded without a verdict concludes Completed. Work concluded with one concludes Affirmed, Refuted, or Inconclusive, on the engineer's declaration. Work without a forecast is not asked. `complete` concludes it Completed, and the engineer can conclude it Affirmed, Refuted, or Inconclusive instead.
 
@@ -128,7 +128,7 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 Stating the shared lifecycle once and conditioning six clauses on the verdict choice is smaller than stating it twice, and it makes the asymmetry legible instead of leaving a reader to diff two rules to find it.
 
-**How to apply:** branch for every progression, named for its tag. Record the upstream branch, the branch, and the base. Ask the working location, the participation level, and whether the work states a forecast when the progression is created, through the selection interface, and record all three. Offer the current branch last, and ask no forecast there. Ask the verdict question at the end, of work with a forecast only. Before work that reaches a verdict merges, write on its branch the rules and changes master needs to conform to it.
+**How to apply:** branch for every progression, named for its tag. Record the upstream branch, the branch, and the base. Ask the working location and the participation level when the progression is created, through the selection interface, and record both. Ask no forecast question. Write a forecast in the record only where the engineer gives one. Offer the current branch last, and take no forecast there. Ask the verdict question at the end, of work with a forecast only. Before work that reaches a verdict merges, write on its branch the rules and changes master needs to conform to it.
 
 Follow DBE inside. End in a declared state. Copy affirmed work's log into the project's log and merge where it produced implementation. Verify work without a verdict before integrating and add no gate at the merge.
 
@@ -139,7 +139,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 1. A progression runs on its own branch, designed through the five hinges by DBE, to a declared state. Content leaves out the five hinges, the participation question, the forecast, and the verdict, as the content-is-a-progression-without-the-steps-that-serve-only-code rule says.
 2. It is never left silently open.
 3. Whether the work states a forecast decides the parts that differ while it runs. Whether it reaches a verdict is asked at its end. The tag names the record and the branch, and decides nothing else, except `[content]`.
-4. Either kind opens with a question or an intent. A forecast is stated when the progression is created only where the engineer gives one. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule).
+4. Any kind opens with a question or an intent. No forecast question is asked. A forecast is stated only where the engineer gives one without being asked. Only work with a forecast is asked the verdict question, and the engineer can conclude any work with a verdict word (see the the-progressions-directory-holds-one-record-per-progression rule).
 5. A clause below names work with a forecast, or with or without a verdict, only because of that difference. Every other clause holds for all.
 
 ## The branch
@@ -166,7 +166,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 1. An experiment or a feature may run in phases. Each phase is a question or an intent that serves the progression's.
 2. The record names the phases and their order when the progression is created, and, as each phase starts, the commit it branched from.
-3. When a phase is created, by `/phase new`, ask whether it states a forecast, whatever its progression chose: *No forecast*, then *State a forecast*. A phase with a forecast states it before its work. When its work is complete, ask it the verdict question, with the progression's three options. A phase without a forecast is not asked.
+3. A phase is not asked whether it states a forecast. It states one only where the engineer gives one without being asked, whatever its progression stated, and before its work. When its work is complete, ask it the verdict question, with the progression's three options. A phase without a forecast is not asked.
 4. A phase's branch is the progression's branch, a dot, and the phase's name: `experiment/rule-reduction.flattening`, `feature/worktree/skills.slash-commands`.
 5. Git refuses a slash here, because no branch can sit beneath another branch's name.
 6. A `worktree/` segment carries into each phase's name.
@@ -226,8 +226,8 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## The forecast and the verdict
 
-1. When the progression is created, ask whether the work states a forecast, through the selection interface, beside the working location and the participation. Its options read *No forecast*, then *State a forecast*, in that order. Record the answer as a confirmation, and write a stated forecast in the record.
-2. Do not ask it where the working location is the current branch. Work there states no forecast.
+1. Ask no forecast question when the progression is created. A forecast is what is expected to happen, stated before the work. The work states one only where the engineer gives one without being asked. Write it in the record.
+2. Work on the current branch states no forecast.
 3. Whether the work states a forecast follows neither the kind nor whether it opens with a question or an intent.
 4. At the end, when the work is complete, ask the verdict question of work with a forecast, and of no other work, through the selection interface. Record the answer as a confirmation.
 5. Its two options read, in these words and in this order: *Conclude without an engineer's verdict*, then *Conclude with an engineer's verdict*.
@@ -317,8 +317,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
 - 2026-11-20, revised: a progression created directly takes a branch named `progression/<subject>` or `implementation/<subject>`; checked: 163 directives, 161 kept, 1 less precise, 1 lost, 1 repair, the verdict question going through the selection interface; the lost one is the trigger, which the loader prints beside the compressed text; re-checked: 163 directives, 163 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: content leaves out the five hinges, the participation question, the forecast, and the verdict, and its branch is `content/<subject>`; checked: 155 directives, 153 kept, 2 less precise, 0 lost. Left less precise, neither touched by this revision: that a forecast is what is expected to happen, and that work without a verdict is verified before it integrates, which the compressed text gives as a reason rather than a directive
+- 2026-11-20, revised: no forecast question is asked of a progression or a phase, which the engineer settled; checked: 126 directives, 126 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Fri Nov 20 2026 a progression was asked, when it was created, whether it states a forecast, with the options *No forecast* and *State a forecast*, and `/phase new` asked the same of each phase. The engineer removed both questions. A forecast is now stated only where the engineer gives one without being asked.
 
 Until Fri Nov 20 2026 every progression was designed through the five hinges, no clause varied by kind, and no branch was named `content/<subject>`.
 
@@ -434,3 +437,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:37:43 PM PT
