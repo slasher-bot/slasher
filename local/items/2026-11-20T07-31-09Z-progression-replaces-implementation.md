@@ -44,8 +44,13 @@ The rename is a structural change and a change to a term that existing records c
 
 - **2026-11-19** — **The item state Implementation becomes Progression.** An item takes it when a progression is created for it.
 
+**As the engineer stated it:** Yes, answering *whether existing records and Slasher projects change over by being renamed by `install.sh` when a project's packages are refreshed*.
+
+- **2026-11-19** — **`install.sh` makes the change in a Slasher project when its packages are refreshed or Slasher is installed.** What it renames, beyond the directory, is not settled.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:35:25 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:38:14 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:39:30 PM PT
