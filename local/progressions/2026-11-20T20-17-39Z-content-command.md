@@ -12,7 +12,7 @@ Realizes the work item `2026-11-20T06-40-24Z-content-items`.
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -65,3 +65,4 @@ Realizes the work item `2026-11-20T06-40-24Z-content-items`.
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 12:17:39 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:26:56 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:28:47 PM PT
