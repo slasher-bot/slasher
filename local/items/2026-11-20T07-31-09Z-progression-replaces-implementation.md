@@ -52,6 +52,10 @@ The rename is a structural change and a change to a term that existing records c
 
 - **2026-11-19** — **`install.sh` changes the `**State:** Implementation` line in existing items to `**State:** Progression`.**
 
+**As the engineer stated it:** Do the rename first, answering the order of this item and the work item `2026-11-20T06-40-24Z-content-items`.
+
+- **2026-11-19** — **The rename is done before content is built.** The work item `2026-11-20T06-40-24Z-content-items` waits for this item to conclude.
+
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 11:31:09 PM PT
@@ -59,3 +63,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 11:35:25 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:38:14 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:39:30 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 11:40:18 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 11:42:00 PM PT
