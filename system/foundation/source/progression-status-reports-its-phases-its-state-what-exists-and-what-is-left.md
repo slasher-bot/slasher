@@ -21,17 +21,22 @@
 - **State:** the word on its `**State:**` line.
 - **What exists:** each thing the progression's question or intent asks for that now exists on its branch, such as a command, a rule, or a file.
 - **What is left:** each thing it asks for that does not exist yet, and any decision it waits on.
+- **Ready to conclude:** yes or no, last. Where no, name what stands in the way. A progression is ready to conclude when its plan is done, its work is committed, the automated suite passes, and its branch merges to its upstream branch without a conflict. A progression built on the current branch has nothing to merge. For work with a forecast, the line reports these facts only, since the length of that work is the engineer's judgment.
+
+**As the engineer later stated it:** "/status" invoked on either an item or a progression includes in the output whether it's ready to be concluded
 
 **Read the record, its branch, and the work when the command is typed, never from memory.**
 
-**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the progression is the engineer's to ask for.
+**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the progression is the engineer's to ask for. *Ready to conclude* states a fact, and is not an offer to conclude.
 
 **Why:** `/item status` reports where an item stands. A feature or an experiment is asked about the same way, and its phases are part of where it stands.
 
-**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, and what is left.
+**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, what is left, and whether it is ready to conclude.
 
 
 ## History
+
+Until Fri Nov 20 2026 the progression status report ended with what is left, and did not say whether the progression was ready to conclude.
 
 Until Fri Nov 20 2026 this rule was named implementation-status-reports-its-phases-its-state-what-exists-and-what-is-left, and said implementation where it now says progression. The progression-replaces-implementation work item settled that progression replaces implementation in the record sense.
 
@@ -46,3 +51,4 @@ Related:
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 2:23:56 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 AM PT

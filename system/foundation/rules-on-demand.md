@@ -1085,14 +1085,17 @@ Trigger: When the engineer types `/item status`, or asks for the status of an it
 - **State:** the word on its `**State:**` line.
 - **What exists:** each thing the item asks for that now exists, such as a command, a rule, or a file.
 - **What is left:** each thing the item asks for that does not exist yet, and any decision it waits on.
+- **Ready to conclude:** yes or no, last. Where no, name what stands in the way. An item is ready to conclude when everything it asks for exists and no decision it needs is open.
+
+**As the engineer later stated it:** "/status" invoked on either an item or a progression includes in the output whether it's ready to be concluded
 
 **Read the item and the work when the command is typed, never from memory.** The item's content is point-in-time. What exists is read from the project as it now stands.
 
-**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the item is the engineer's to ask for.
+**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the item is the engineer's to ask for. *Ready to conclude* states a fact, and is not an offer to conclude.
 
 **Why:** the engineer often asks where one item stands, as *#6 status*. One subcommand answers it the same way each time: which item, its state, what exists, and what is left.
 
-**How to apply:** on `/item status`, find the item from the identifier, or the one Active item where none was given. Name it, then give its state, what exists, and what is left, each as a short list item.
+**How to apply:** on `/item status`, find the item from the identifier, or the one Active item where none was given. Name it, then give its state, what exists, what is left, and whether it is ready to conclude, each as a short list item.
 
 # Next takes the next step of the work under way, and next? names it
 
@@ -1189,14 +1192,17 @@ Trigger: When the engineer types `/feature status` or `/experiment status`, or a
 - **State:** the word on its `**State:**` line.
 - **What exists:** each thing the progression's question or intent asks for that now exists on its branch, such as a command, a rule, or a file.
 - **What is left:** each thing it asks for that does not exist yet, and any decision it waits on.
+- **Ready to conclude:** yes or no, last. Where no, name what stands in the way. A progression is ready to conclude when its plan is done, its work is committed, the automated suite passes, and its branch merges to its upstream branch without a conflict. A progression built on the current branch has nothing to merge. For work with a forecast, the line reports these facts only, since the length of that work is the engineer's judgment.
+
+**As the engineer later stated it:** "/status" invoked on either an item or a progression includes in the output whether it's ready to be concluded
 
 **Read the record, its branch, and the work when the command is typed, never from memory.**
 
-**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the progression is the engineer's to ask for.
+**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the progression is the engineer's to ask for. *Ready to conclude* states a fact, and is not an offer to conclude.
 
 **Why:** `/item status` reports where an item stands. A feature or an experiment is asked about the same way, and its phases are part of where it stands.
 
-**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, and what is left.
+**How to apply:** on `/feature status` or `/experiment status`, find the record from the identifier, or the one the conversation is on, or the one Active record of the kind. Name it, give its phases or its question or intent, then its state, what exists, what is left, and whether it is ready to conclude.
 
 # Projects lists the registry, and carries out an instruction in another project
 
@@ -1328,6 +1334,10 @@ Trigger: When the engineer types `/status`, or asks for the status of the work u
 - **words from the title**, which match the title of one item or progression, as `/status cart payment`
 
 **Where the identifier names no record, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of records was printed in the session, say so, and report nothing.
+
+**The report ends with whether the record is ready to conclude**, for an item and for a progression alike, as the rule for its kind says.
+
+**As the engineer later stated it:** "/status" invoked on either an item or a progression includes in the output whether it's ready to be concluded
 
 **The report changes nothing.** It writes no record, changes no state, and offers no state change.
 

@@ -16,6 +16,10 @@
 
 **Where the identifier names no record, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of records was printed in the session, say so, and report nothing.
 
+**The report ends with whether the record is ready to conclude**, for an item and for a progression alike, as the rule for its kind says.
+
+**As the engineer later stated it:** "/status" invoked on either an item or a progression includes in the output whether it's ready to be concluded
+
 **The report changes nothing.** It writes no record, changes no state, and offers no state change.
 
 **Why:** the engineer asks *where does this stand?* without stopping to name the kind of record. One root command finds the work under way, or the record named, and gives the report its kind gives.
@@ -24,6 +28,8 @@
 
 
 ## History
+
+Until Fri Nov 20 2026 the report did not say whether the record was ready to conclude.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
@@ -37,3 +43,4 @@ Related:
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 2:26:06 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:43 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 AM PT

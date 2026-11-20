@@ -21,14 +21,22 @@
 - **State:** the word on its `**State:**` line.
 - **What exists:** each thing the item asks for that now exists, such as a command, a rule, or a file.
 - **What is left:** each thing the item asks for that does not exist yet, and any decision it waits on.
+- **Ready to conclude:** yes or no, last. Where no, name what stands in the way. An item is ready to conclude when everything it asks for exists and no decision it needs is open.
+
+**As the engineer later stated it:** "/status" invoked on either an item or a progression includes in the output whether it's ready to be concluded
 
 **Read the item and the work when the command is typed, never from memory.** The item's content is point-in-time. What exists is read from the project as it now stands.
 
-**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the item is the engineer's to ask for.
+**The report changes nothing.** It writes no record, changes no state, and offers no state change. Concluding the item is the engineer's to ask for. *Ready to conclude* states a fact, and is not an offer to conclude.
 
 **Why:** the engineer often asks where one item stands, as *#6 status*. One subcommand answers it the same way each time: which item, its state, what exists, and what is left.
 
-**How to apply:** on `/item status`, find the item from the identifier, or the one Active item where none was given. Name it, then give its state, what exists, and what is left, each as a short list item.
+**How to apply:** on `/item status`, find the item from the identifier, or the one Active item where none was given. Name it, then give its state, what exists, what is left, and whether it is ready to conclude, each as a short list item.
+
+
+## History
+
+Until Fri Nov 20 2026 the item status report ended with what is left, and did not say whether the item was ready to conclude.
 
 Related:
 
@@ -39,3 +47,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 1:36:24 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 AM PT
