@@ -1,10 +1,12 @@
 # A workspace project can have its own projects.toml
 
-**State:** Open
+**State:** Implementation
 
 **Tags:** [idea]
 
 A workspace project can have its own `projects.toml`.
+
+Its implementation is the feature `2026-11-20T05-36-34Z-workspace-projects-toml`.
 
 ## Suggestions — Thu Nov 19 2026
 
@@ -35,3 +37,4 @@ The workspace project commits a small list of its member projects. That list is 
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 8:39:16 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 9:27:49 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 9:36:34 PM PT
