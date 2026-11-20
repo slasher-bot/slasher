@@ -45,7 +45,7 @@ Source: system/language/source/an-answer-is-a-list-and-prose-must-justify-itself
 8. Test each list item by asking whether it could be false. Remove it if it could not.
 9. *The check is green*, *nine of thirteen scripts lack it*, and *the branch is deleted* are facts. *This keeps the record honest* is narration.
 10. Reasoning belongs in rules, records, and commit messages. It does not belong in an answer unless asked for.
-11. Reasoning the engineer wants is asked for through the expansion line.
+11. Reasoning the engineer wants is asked for with `/expand`.
 
 ## Dependent reasoning takes an ordered list, not prose
 
@@ -55,20 +55,10 @@ Source: system/language/source/an-answer-is-a-list-and-prose-must-justify-itself
 4. Those numbers are handles, such as *#2*. They imply no order.
 5. In all other cases, leave the list unordered.
 
-## After a brief explanation, and where an expansion would add something, the engineer is offered an expansion
+## No answer ends with an offer
 
-1. End a brief explanation with this line, always:
-
-```
-For more detail than bullet points, ask for an expanded answer.
-```
-
-2. Write it as a line on its own, not as a selection prompt.
-3. A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, a request worded *Briefly explain…*, or an answer asked for with `/brief`.
-4. End any other answer with the line only where the agent compressed material out of it and an expansion would add something. That is the agent's own judgment.
-5. It offers more depth on the answer given, not a next topic. Do not end any answer with an offer of a next topic, or of what else might be done.
-6. It names the form being given up, "more detail than bullet points". "More detail" alone does not do this.
-7. Leave it out of an answer that says all it has.
+1. End no answer with an offer of a next topic, of what else might be done, or of more detail.
+2. The engineer asks for more detail with `/expand`.
 
 ## Expanding an answer
 
@@ -81,7 +71,6 @@ For more detail than bullet points, ask for an expanded answer.
 1. `/brief <request>` answers the request in brief, as opening it with *Brief:* does.
 2. A bare `/brief` gives the previous answer again in brief, with no claim changed.
 3. A brief answer leads with its point and takes a few lines.
-4. It is a brief explanation, so it ends with the expansion line.
 
 # Communicate plainly, and name the actual thing
 

@@ -28,7 +28,7 @@ An answer to the engineer is a **list**. Prose is not forbidden, and it is not t
 
 **The test:** could the list item be false? A fact can be. *The check is green*, *nine of thirteen scripts lack it*, *the branch is deleted* are all falsifiable. *This keeps the record honest* is not — it is a comment on a fact rather than a fact, and it is where narration hides.
 
-**Why the reasoning still belongs somewhere.** A rule, a record, and a commit message all carry why. Each is written to be read as a document and its reader came for the reasoning. **An answer is not one of those.** The engineer asked something, and reasoning they did not ask for is the agent taking their turn to think out loud. Where the reasoning is wanted, it is asked for — which is what the expansion line is for.
+**Why the reasoning still belongs somewhere.** A rule, a record, and a commit message all carry why. Each is written to be read as a document and its reader came for the reasoning. **An answer is not one of those.** The engineer asked something, and reasoning they did not ask for is the agent taking their turn to think out loud. Where the reasoning is wanted, it is asked for, with `/expand`.
 
 ## Dependent reasoning takes an ordered list, not prose
 
@@ -40,19 +40,9 @@ An answer to the engineer is a **list**. Prose is not forbidden, and it is not t
 
 **This is why dependent reasoning is not an exception.** The problem was never prose against lists. It was one kind of list used where another was meant.
 
-## After a brief explanation, and where an expansion would add something, the engineer is offered an expansion
+## No answer ends with an offer
 
-**A brief explanation always ends with one line, and another answer ends with it where an expansion would add something:**
-
-```
-For more detail than bullet points, ask for an expanded answer.
-```
-
-- **It is a line, not a prompt.** A selection prompt where no decision is pending doubles the turns and becomes furniture — a thing always present is read once and never again.
-- **A brief explanation always ends with it.** A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, a request worded *Briefly explain…*, or an answer asked for with `/brief`. Its brevity is the point of the request, so there is always more to give.
-- **Any other answer ends with it only where the agent compressed material out of it, and an expansion would add something.** That is the agent's own judgment. On a report, a confirmation, or an answer that says all it has, the line is noise, and putting it under every answer is how a line stops being read.
-- **What it offers is depth on the answer given, not a next topic.** That distinction is the whole difference between this line and the trailing offer-of-more that is otherwise a defect: it points back at what was just said, not forward at what else might be done.
-- **It names the form being traded away**, not only the depth on offer. *More detail* alone leaves an engineer to guess what an expansion would look like. *more detail than bullet points* says the expansion is a different form of answer, which is what they would be asking for.
+**No answer ends with an offer of a next topic, of what else might be done, or of more detail.** The engineer asks for more detail when they want it, with `/expand`.
 
 **Why:** an agent produces prose without choosing to, and prose is where padding, editorializing, and unattributed back-references hide. A list forces each claim onto its own line, where a claim with nothing in it is visible as a line with nothing in it. The engineer this was settled with had stated the preference three times in a week before it was written down. A preference restated is a rule that has not been written, because every restatement is evidence the agent does not hold it between sessions. Inverting the burden, rather than expressing a preference, is what makes the difference survive a session boundary.
 
@@ -60,7 +50,7 @@ For more detail than bullet points, ask for an expanded answer.
 
 Test each survivor by whether it could be false. Number the list where its list items depend on each other, or where the engineer may refer back to them, and leave it unordered otherwise.
 
-Write prose only where the answer is a sentence or two. Do not reach for it because an explanation was requested, or because the reasoning is connected. The first is not a justification, and the second is served by numbering. End a brief explanation with `For more detail than bullet points, ask for an expanded answer.` on its own line. End any other answer with it only where the agent compressed material out of it and an expansion would add something.
+Write prose only where the answer is a sentence or two. Do not reach for it because an explanation was requested, or because the reasoning is connected. The first is not a justification, and the second is served by numbering.
 
 ## Expanding an answer
 
@@ -68,7 +58,7 @@ Write prose only where the answer is a sentence or two. Do not reach for it beca
 
 ## Answering in brief
 
-**`/brief` asks for an answer in brief, as opening a request with *Brief:* does.** Words typed after it are the request, and they are answered in brief. A bare `/brief` gives the previous answer again in brief, with no claim changed. A brief answer leads with its point and takes a few lines. It is a brief explanation, so it ends with the expansion line. `/brief` and `/expand` are counterparts: one gives an answer in fewer words, and the other in more.
+**`/brief` asks for an answer in brief, as opening a request with *Brief:* does.** Words typed after it are the request, and they are answered in brief. A bare `/brief` gives the previous answer again in brief, with no claim changed. A brief answer leads with its point and takes a few lines. `/brief` and `/expand` are counterparts: one gives an answer in fewer words, and the other in more.
 
 ## Compressed
 
@@ -97,7 +87,7 @@ Write prose only where the answer is a sentence or two. Do not reach for it beca
 8. Test each list item by asking whether it could be false. Remove it if it could not.
 9. *The check is green*, *nine of thirteen scripts lack it*, and *the branch is deleted* are facts. *This keeps the record honest* is narration.
 10. Reasoning belongs in rules, records, and commit messages. It does not belong in an answer unless asked for.
-11. Reasoning the engineer wants is asked for through the expansion line.
+11. Reasoning the engineer wants is asked for with `/expand`.
 
 ## Dependent reasoning takes an ordered list, not prose
 
@@ -107,20 +97,10 @@ Write prose only where the answer is a sentence or two. Do not reach for it beca
 4. Those numbers are handles, such as *#2*. They imply no order.
 5. In all other cases, leave the list unordered.
 
-## After a brief explanation, and where an expansion would add something, the engineer is offered an expansion
+## No answer ends with an offer
 
-1. End a brief explanation with this line, always:
-
-```
-For more detail than bullet points, ask for an expanded answer.
-```
-
-2. Write it as a line on its own, not as a selection prompt.
-3. A brief explanation is one asked for as brief, such as a topic a bare `/slasher` explains, a request worded *Briefly explain…*, or an answer asked for with `/brief`.
-4. End any other answer with the line only where the agent compressed material out of it and an expansion would add something. That is the agent's own judgment.
-5. It offers more depth on the answer given, not a next topic. Do not end any answer with an offer of a next topic, or of what else might be done.
-6. It names the form being given up, "more detail than bullet points". "More detail" alone does not do this.
-7. Leave it out of an answer that says all it has.
+1. End no answer with an offer of a next topic, of what else might be done, or of more detail.
+2. The engineer asks for more detail with `/expand`.
 
 ## Expanding an answer
 
@@ -133,7 +113,6 @@ For more detail than bullet points, ask for an expanded answer.
 1. `/brief <request>` answers the request in brief, as opening it with *Brief:* does.
 2. A bare `/brief` gives the previous answer again in brief, with no claim changed.
 3. A brief answer leads with its point and takes a few lines.
-4. It is a brief explanation, so it ends with the expansion line.
 
 ## Compression
 
@@ -144,8 +123,11 @@ For more detail than bullet points, ask for an expanded answer.
 - 2026-11-07, revised: a brief explanation always ends with the expansion line, and another answer only where the agent judges an expansion would add something; checked: 25 directives, 23 kept, 1 less precise, 1 lost, 1 repair: the ban on a single bullet, or two bullets for a two-clause answer, restored to the compressed text; re-checked: 25 directives, 24 kept, 1 less precise, 0 lost. Left less precise: the line left off reports and confirmations, which *an answer that says all it has* carries
 - 2026-11-11, revised: `/brief` answers a request in brief, or gives the previous answer again in brief; checked: 29 directives, 28 kept, 1 less precise, 0 lost, 0 repairs. Left less precise, from before this change: the line left off reports and confirmations, which *an answer that says all it has* carries
 - 2026-11-16, revised: the examples of characterizing the work moved to the writing-states-the-evidence-and-the-reader-draws-the-conclusion rule; checked: 50 directives, 49 kept, 1 less precise, 0 lost. Left less precise, from before this change: the expansion line left off a report and a confirmation, named only as an answer that says all it has
+- 2026-11-19, revised: no answer ends with the expansion line, which the engineer asked to have removed; checked: 25 directives, 25 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Thu Nov 19 2026 a brief explanation, and an answer the agent had compressed, ended with the line *For more detail than bullet points, ask for an expanded answer.* The engineer had it removed.
 
 Until Mon Nov 16 2026 this rule gave its own examples of characterizing the work. They moved to the writing-states-the-evidence-and-the-reader-draws-the-conclusion rule, so they are stated once.
 
@@ -196,3 +178,4 @@ Changed by Scott Bellware on Sat Nov 7 2026 at 12:22:04 AM PT
 Changed by Scott Bellware on Sat Nov 7 2026 at 12:30:08 AM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 3:08:14 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:15:56 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 4:33:50 PM PT
