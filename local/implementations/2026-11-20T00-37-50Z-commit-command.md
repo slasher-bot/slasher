@@ -19,11 +19,21 @@ Realizes the item `2026-11-19T18-03-15Z-a-commit-command-with-the-c-alias`.
 - **Tags:** [feature]
 - **Upstream branch:** `master`
 - **Implementation branch:** `feature/worktree/commit-command`
-- **Base:** the commit on `master` holding this record as first written
+- **Base:** `b12a6c9b`, from `master`, the commit holding this record as first written
 - **Working location:** branch and worktree, at `../slasher-feature-worktree-commit-command`
 - **Participation:** unattended.
 - **Forecast:** none. The verdict question is not asked.
 - **Item:** `2026-11-19T18-03-15Z-a-commit-command-with-the-c-alias`
+
+## What happened
+
+- The `git` package holds the commit-commits-the-work-on-the-current-branch rule, and the `/commit` and `/c` skills.
+- `/commit` runs the automated suite, commits the working tree's changes on the current branch, and pushes nothing.
+- The PUSH help, the command table, and the shortcuts table name `/commit` and `/c`.
+- `/current` keeps only `/'`. The current line at the end of the session-start read is *Type /current or /' for open and active work.*
+- The two command-table rules say so. Neither has a compressed text to check.
+- No loop record: the work is rules and skills, which is content work in this project.
+- The automated suite passes: 121 tests.
 
 ## Confirmations
 
@@ -35,3 +45,4 @@ Realizes the item `2026-11-19T18-03-15Z-a-commit-command-with-the-c-alias`.
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 4:37:50 PM PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 4:40:28 PM PT
