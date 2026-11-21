@@ -1,6 +1,6 @@
 # The startup sentence puts a shortcut alias in parentheses after its command
 
-**State:** Progression
+**State:** Completed
 
 **Tags:** [work]
 
@@ -19,11 +19,13 @@ The implementation `2026-11-21T21-24-19Z-startup-alias-parentheses` carries this
 ## Tasks
 
 - [x] The engineer selects each alias that is reformatted.
-- [ ] The plugin build writes each selected alias in parentheses after its command in the startup sentence.
-- [ ] The rule that describes the startup sentence says so.
-- [ ] The test of the startup sentence confirms it.
+- [x] The plugin build writes each selected alias in parentheses after its command in the startup sentence.
+- [x] The rule that describes the startup sentence says so.
+- [x] The test of the startup sentence confirms it.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 1:23:00 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 1:24:19 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 1:28:45 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 1:34:50 PM PT

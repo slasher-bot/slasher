@@ -115,16 +115,46 @@ fi
 
 # The startup table the session-start read prints: its own rows, then a sentence naming, in the
 # command table's order, every command whose name the startup rows leave out, then the help line.
-# A shortcut alias, whose name starts with no letter, is left out of the sentence too.
+# A shortcut alias whose name starts with no letter is left out of the sentence too. A shortcut
+# alias whose name starts with a letter, as the shortcuts table lists it, stands in parentheses
+# after its row's command, as `/commit (/c)`, rather than as a command of its own.
 if [ -f "$plugin/command-table-startup.md" ] && [ -f "$plugin/command-table.md" ]; then
   startup=$(cat "$plugin/command-table-startup.md")
   shown=$(printf '%s\n' "$startup" | awk -F'|' 'NR > 2 { print $2 }' | tr ',' '\n' | tr -d ' `')
-  others=$(awk -F'|' 'NR > 2 && /^\|/ { print $2 }' "$plugin/command-table.md" |
-    tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | tr -d '`' |
-    grep '^/[A-Za-z]' | while IFS= read -r name; do
-      printf '%s\n' "$shown" | grep -qxF -- "$(printf '%s' "$name" | tr -d ' ')" || printf '%s\n' "$name"
-    done)
+  shortcuts=""
+  if [ -f "$plugin/shortcuts.md" ]; then
+    shortcuts=$(awk -F'|' 'NR > 2 && /^\|/ { print $2 }' "$plugin/shortcuts.md" | tr ',' '\n' | tr -d ' `')
+  fi
+  others=$(SHOWN="$shown" SHORTCUTS="$shortcuts" awk -F'|' '
+    BEGIN {
+      count = split(ENVIRON["SHOWN"], list, "\n")
+      for (i = 1; i <= count; i++) is_shown[list[i]] = 1
+      count = split(ENVIRON["SHORTCUTS"], list, "\n")
+      for (i = 1; i <= count; i++) is_shortcut[list[i]] = 1
+    }
+    NR > 2 && /^\|/ {
+      count = split($2, cell, ",")
+      command = ""; aliases = ""; listed = ""
+      for (i = 1; i <= count; i++) {
+        name = cell[i]
+        gsub(/`/, "", name); sub(/^[[:space:]]+/, "", name); sub(/[[:space:]]+$/, "", name)
+        key = name; gsub(/ /, "", key)
+        if (name !~ /^\/[A-Za-z]/) continue
+        if ((key in is_shortcut) && command != "") {
+          aliases = aliases (aliases == "" ? "" : ", ") name
+        } else if (command == "") {
+          command = name; command_key = key
+        } else if (!(key in is_shown)) {
+          listed = listed name "\n"
+        }
+      }
+      if (command != "" && !(command_key in is_shown)) {
+        print command (aliases == "" ? "" : " (" aliases ")")
+      }
+      printf "%s", listed
+    }' "$plugin/command-table.md")
   sentence=$(printf '%s\n' "$others" | awk '
+    NF == 0 { next }
     { names[++n] = "`" $0 "`" }
     END {
       if (n == 0) exit

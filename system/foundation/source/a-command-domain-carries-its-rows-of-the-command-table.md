@@ -16,7 +16,7 @@
 
 **A shortcut alias changes three files together.** Change its row in `command-table-header.md` or beside its skill, its row in `plugin/shortcuts.md`, and `plugin/command-table-startup.md` where it names the alias, in the same commit. `plugin/shortcuts.md` is foundation's, and lists another package's shortcut too, as `/p`.
 
-**The startup table's four rows stand in `plugin/command-table-startup.md`.** The `/slasher help` row also names `/help`. The `/commands, /;` row reads *Print the list of Slasher commands*. The `/recent, /?` row takes `/recent`'s description from the help. The `/current, /'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand.
+**The startup table's four rows stand in `plugin/command-table-startup.md`.** The `/slasher help` row also names `/help`. The `/commands, /;` row reads *Print the list of Slasher commands*. The `/recent, /?` row takes `/recent`'s description from the help. The `/current, /'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand. In the sentence, a shortcut alias whose name starts with a letter stands in parentheses after its command, as `/commit (/c)`. The shortcuts table, `plugin/shortcuts.md`, says which names are shortcut aliases. A shortcut alias whose name starts with no letter is left out of the sentence.
 
 **Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* The plugin build adds it.
 
@@ -25,6 +25,8 @@
 **How to apply:** when you write or change a command, its help, or a shortcut alias, change its row in its domain's `command-table-rows.md`, or foundation's plugin files for the top rows and the shortcuts, and run `./compile.sh` so the plugin's tables are rebuilt.
 
 ## History
+
+Until Sat Nov 21 2026 the startup sentence named a shortcut alias whose name starts with a letter as a command of its own, after its command, as `/commit`, `/c`.
 
 Until Fri Nov 20 2026 there was no `/contents` row, since there was no content kind.
 
@@ -121,3 +123,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 4:38:48 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 6:31:25 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 1:27:10 PM PT
