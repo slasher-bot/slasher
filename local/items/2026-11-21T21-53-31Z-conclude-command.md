@@ -18,10 +18,11 @@ The implementation `2026-11-21T22-07-53Z-conclude-command` carries this item's w
 
 ## Tasks
 
-- [ ] `/conclude` tells the agent *conclude*, as typing the word does.
-- [ ] The help and the command table name `/conclude`.
+- [x] `/conclude` tells the agent *conclude*, as typing the word does.
+- [x] The help and the command table name `/conclude`.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 1:53:31 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 2:07:53 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 2:09:46 PM PT

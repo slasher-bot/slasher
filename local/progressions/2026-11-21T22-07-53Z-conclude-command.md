@@ -19,7 +19,7 @@ Realizes the work item `2026-11-21T21-53-31Z-conclude-command`.
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/conclude-command`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `a3635e49`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-conclude-command`. The main working tree stays on `master`.
 - **Participation:** unattended, by `/!`.
 - **Forecast:** none given.
@@ -35,6 +35,12 @@ Realizes the work item `2026-11-21T21-53-31Z-conclude-command`.
 
 ## What happened
 
+- A `/conclude` skill is in `foundation`, beside `/complete`. A bare `/conclude` finds the work under way as `/work-status` does, and `/conclude <record>` the record named. It puts the concluding states the record can take to the engineer, and concludes in the state selected, under the items rule or the progressions rules.
+- The skill has no rule of its own. The items rule and the progressions rules already say what concluding with no state named does.
+- The ITEMS help names `/conclude` after `/complete`. The command table has no row for it.
+- No test was written. The skill is instructions to the agent, and no script changed.
+- The automated suite passed: 139 test files.
+
 ## Confirmations
 
 - **2026-11-21** — Creation: started unattended by `/!`. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -44,3 +50,4 @@ Realizes the work item `2026-11-21T21-53-31Z-conclude-command`.
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 2:07:53 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 2:09:46 PM PT

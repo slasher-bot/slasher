@@ -37,6 +37,8 @@ ITEMS
   /item complete, /complete        -> the kind's concluding state:
                                    Realized, Completed, Corrected, or
                                    Resolved
+  /conclude [<record>]             The work under way, or the record named,
+                                   -> the concluding state you select
   /item realize, /realize          -> Realized
   /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
