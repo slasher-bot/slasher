@@ -83,9 +83,13 @@ A kind the table does not name starts Open and concludes Realized, as an idea do
 - **Open** — the work has not started, whether the thinking is settled or not.
 - **Recorded** — the starting state of a goal, an aspiration, a design, and a note. A design and a note never leave it. See the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule. The engineer can make a goal or an aspiration Active, or leave it Recorded.
 - **Active** — the work is in progress. An item becomes Active when its work starts, from Open, or from Recorded for a goal or an aspiration.
-- **Progression** — the item turned into a feature or an experiment, which carries its work. The item and the progression record name each other.
+- **Progression** — the item turned into a progression, such as a feature, an experiment, or an implementation, which carries its work. The item and the progression record name each other.
 
-**An item that turns into a progression takes `Progression`.** It takes it when the feature or the experiment is created for it. It follows the progression: when the progression is Completed or Affirmed, the item takes its kind's concluding state. When the progression reaches any other concluding state, or is set aside, the agent asks the engineer what state the item takes. An item in Progression is a current item, and its progression is listed as current work too.
+**An item that turns into a progression takes `Progression`.** It takes it when the progression is created for it. It follows the progression: when the progression is Completed or Affirmed, the item takes its kind's concluding state. When the progression reaches any other concluding state, or is set aside, the agent asks the engineer what state the item takes. An item in Progression is a current item, and its progression is listed as current work too.
+
+**An item started directly takes an implementation.** An item is started directly where the engineer asks to start it or do it without naming a kind, as *Do #4 unattended*. The progression created for it is an implementation, titled `Implementation — <name>`, tagged `[implementation]`, on an `implementation/<subject>` branch. A request that names a kind, as *Start #1 as an unattended feature*, creates that kind. `/item start` and `/start` keep their meaning: they make an item Active and create no progression.
+
+**As the engineer stated it:** When an item is started directly, call it an implementation rather than a featyre
 
 **As the engineer stated it:** When an item turns into an implementation, change its state to "implementation".
 
@@ -216,8 +220,9 @@ Change the state line as the item reaches another word, leave the file's name as
 61. Do not refuse to answer until the item is amended.
 62. Reconcile a settled item; never regenerate it. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
 63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The progressions rule asks the same for a progression concluded with no state named. *Complete that item* names its kind's concluding state.
-64. **Progression** — when a feature or an experiment is created for an item, the item takes Progression, and the two records name each other. It is a current item, and its progression is listed as current work too.
+64. **Progression** — when a progression, such as a feature, an experiment, or an implementation, is created for an item, the item takes Progression. The progression carries the item's work, and the two records name each other. It is a current item, and its progression is listed as current work too.
 65. When the progression is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
+66. An item started directly, where the engineer asks to start it or do it without naming a kind, takes an implementation: titled `Implementation — <name>`, tagged `[implementation]`, on an `implementation/<subject>` branch. A request that names a kind creates a progression of that kind. `/item start` and `/start` make an item Active and create no progression.
 
 ## Compression
 
@@ -250,8 +255,11 @@ Change the state line as the item reaches another word, leave the file's name as
 - 2026-11-15, revised: *conclude* replaces *finish*; not re-checked
 - 2026-11-16, revised: a file name carries no state, and a state change renames nothing, which the engineer settled; checked: 75 directives, 73 kept, 2 less precise, 0 lost, 2 repairs: code samples are barred only in an item that sequences work, and a settled item is reconciled, never regenerated; re-checked: 75 directives, 74 kept, 1 less precise, 0 lost. The source decides the less precise one kept: the Out of Scope / Deferred tail is for what an item deliberately leaves out, as the body says
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
+- 2026-11-21, revised: an item started directly takes an implementation, which the engineer settled; checked: 102 directives, 99 kept, 3 less precise, 0 lost, 1 repair: a request naming a kind creates a progression of that kind. Left less precise, neither touched by this revision: where a brainstorm's reframed points sit, and that the compressed text limits the no-code-samples directive to an item that sequences work; re-checked: 102 directives, 99 kept, 3 less precise, 0 lost, 1 repair: point 64 says what the Progression state means; re-checked: 102 directives, 100 kept, 2 less precise, 0 lost, the two left as named above
 
 ## History
+
+Until Sat Nov 21 2026 an item asked to be started or done without a kind took a feature. The engineer settled that it takes an implementation.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
@@ -376,3 +384,4 @@ Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:34 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 6:14:09 PM PT

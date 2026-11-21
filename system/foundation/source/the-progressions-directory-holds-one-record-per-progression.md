@@ -59,7 +59,7 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Any progression can take any concluding word, whether or not it has a forecast.** The engineer concludes it Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. **`complete` concludes a progression without a forecast as Completed.** Where it has a forecast, the agent asks which concluding word it takes: Completed, Affirmed, Refuted, or Inconclusive.
 
-**Where the progression is created for an item, the item takes `Progression`**, and the two records name each other. When the progression is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, the agent asks the engineer what state the item takes. See the the-items-directory-holds-one-file-per-item rule.
+**Where the progression is created for an item, the item takes `Progression`**, and the two records name each other. When the progression is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, the agent asks the engineer what state the item takes. An item started directly, without a kind named, takes an implementation. See the the-items-directory-holds-one-file-per-item rule.
 
 **An item already on `master` takes each of these state changes on `master` too**, not only on the progression's branch. Change the item's state line and write its log entry on `master`, with the same content as on the branch, so the two match when the branch merges. Contributors read `master`, so the items there show the state each item is in now.
 
@@ -144,7 +144,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
     - **Refuted**: the question was disproven, or the intent was not met.
     - **Inconclusive**: it ran and gave no clear verdict either way.
 12. The engineer concludes a progression Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
-13. Where the progression is created for an item, make the item Progression, and name each record in the other. When the progression is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
+13. Where the progression is created for an item, make the item Progression, and name each record in the other. An item started directly, without a kind named, takes an implementation, as the the-items-directory-holds-one-file-per-item rule says. When the progression is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
     - Where the item is already on `master`, make each of these state changes on `master` too, not only on the progression's branch. Commit the same item content and the same log entry on both, so the merge matches.
 14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed progression does to its merged branch is settled when it first occurs.
 15. Where the engineer asks for a progression to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the progression before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
@@ -205,8 +205,11 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 - 2026-11-20, revised: a progression created directly takes `[progression]` or `[implementation]`, and its title; checked: 126 directives, 126 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: the content kind, tagged `[content]` and titled `Content — <name>`, the one tag a rule reads; checked: 67 directives, 66 kept, 1 less precise, 0 lost, 1 repair: *any kind*, not *either kind*, opens with a question or an intent; re-checked: 67 directives, 67 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: no forecast question is asked, and the forecast selection is no longer a confirmation, which the engineer settled; checked: 96 directives, 96 kept, 0 less precise, 0 lost
+- 2026-11-21, revised: an item started directly takes an implementation; checked: 86 directives, 86 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sat Nov 21 2026 this rule did not say which kind an item started directly takes.
 
 Until Fri Nov 20 2026 whether the work states a forecast was asked when the progression was created, and recorded as a confirmation. The engineer removed the question.
 
@@ -300,3 +303,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:37:58 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 6:14:21 PM PT

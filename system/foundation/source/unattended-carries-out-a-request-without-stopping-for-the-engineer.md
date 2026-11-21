@@ -12,7 +12,7 @@
 
 **A commit on `master` and a push still wait for the engineer.** The agent puts each one through the selection interface, as it would without the command. A commit on `master` lands where every reader reads, and a push sends the work outside the machine.
 
-**The request decides where the work is done.** Where the request names a feature to build, or an item to start, the agent starts a feature for it. The feature runs unattended, and the agent chooses its working location, and records it as its own selection. It states no forecast unless the engineer gave one in the request. The verdict question at its end still waits for the engineer, since a verdict is the engineer's declaration. Otherwise the agent works where the working tree already is, and creates no branch.
+**The request decides where the work is done.** Where the request names a feature to build, the agent starts a feature for it. Where it names an item to start or do, without naming a kind, the agent starts an implementation for it, as the the-items-directory-holds-one-file-per-item rule says. The progression runs unattended, and the agent chooses its working location, and records it as its own selection. It states no forecast unless the engineer gave one in the request. The verdict question at its end still waits for the engineer, since a verdict is the engineer's declaration. Otherwise the agent works where the working tree already is, and creates no branch.
 
 **It holds for the one request.** When the request is done, the next prompt is attended again, unless it too begins with `/unattended`.
 
@@ -26,7 +26,7 @@
 2. Show a plan first, through the selection interface: *Accept the plan?*, the plan as its list, and the options *Accept* and *Revise*. On *Revise*, revise it as the engineer directs, and show it again. Generate nothing until it is accepted.
 3. After acceptance, decide every question yourself: candidates, design, wording, confirmations, and commits on any branch but `master`. Record each decision where its convention records it, as the agent's, with its reasoning.
 4. A commit on `master` and a push still wait for the engineer's selection.
-5. Where the request names a feature to build or an item to start, start an unattended feature for it, choosing its working location and recording it as the agent's selection. It states no forecast unless the engineer gave one in the request. The verdict question at its end waits for the engineer. Otherwise work where the working tree is, creating no branch.
+5. Where the request names a feature to build, start an unattended feature for it. Where it names an item to start or do, without naming a kind, start an unattended implementation for it, as the the-items-directory-holds-one-file-per-item rule says. Choose its working location, and record it as the agent's selection. It states no forecast unless the engineer gave one in the request. The verdict question at its end waits for the engineer. Otherwise work where the working tree is, creating no branch.
 6. It holds for the one request. The next prompt is attended unless it also begins with `/unattended`.
 
 ## Compression
@@ -34,8 +34,11 @@
 - 2026-11-07, compressed: written with the rule; checked: 15 directives, 14 kept, 1 less precise, 0 lost, 0 repairs. Left less precise: *decide each question, and do not stop for it*, which point 3 carries once the plan is accepted
 - 2026-11-08, revised: the agent chooses a forecast at the start, and the verdict question at the end waits for the engineer; not re-checked
 - 2026-11-20, revised: the agent chooses only the working location, since no forecast question is asked; checked: 23 directives, 22 kept, 1 less precise, 0 lost, 1 repair: a revised plan follows the engineer's direction; re-checked: 23 directives, 23 kept, 0 less precise, 0 lost
+- 2026-11-21, revised: an item started without a kind named takes an implementation, not a feature; checked: 28 directives, 27 kept, 1 less precise, 0 lost, 1 repair: the items rule is named; re-checked: 28 directives, 28 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sat Nov 21 2026 an item named in an unattended request took a feature. The engineer settled that an item started directly takes an implementation.
 
 Until Fri Nov 20 2026 the agent also chose whether an unattended feature states a forecast. No forecast question is asked any more.
 
@@ -55,3 +58,4 @@ Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:25 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:17 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:38:10 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 6:14:21 PM PT
