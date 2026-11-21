@@ -1,6 +1,6 @@
 # Implementation as the item state for an implementation progression
 
-**State:** Open
+**State:** Abandoned
 
 **Tags:** [work]
 
@@ -23,3 +23,4 @@
 Authored by Scott Bellware on Fri Nov 20 2026 at 6:43:52 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 7:08:47 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 7:40:56 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 7:43:03 PM PT
