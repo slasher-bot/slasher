@@ -50,9 +50,11 @@ Realizes the work item `2026-11-21T21-37-32Z-progressions-are-listed-with-letter
 - **2026-11-21** — Participation: unattended, as the engineer asked.
 - **2026-11-21** — Plan: Accept, selected by the engineer.
 - **2026-11-21** — Conclusion: Completed, selected by the engineer. The work has no forecast, so no verdict question was asked.
+- **2026-11-21** — Branch deletion and worktree removal: Remove and delete, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 2:18:20 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 2:31:40 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 2:29:55 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 2:30:14 PM PT
