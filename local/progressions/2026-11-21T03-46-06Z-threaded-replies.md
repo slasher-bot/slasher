@@ -47,7 +47,7 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 - The existing fetch test stays the control for a message without the three headers. It passes unchanged.
 - The imap README says a message file carries the three headers, and why.
 - `send.py` reads every header of a message file and sends it, so the three headers go out with a reply with no change there. It also sends the `UID:` line a fetched file opens with, as a header. That is outside this work, and is unchanged.
-- The fetch from a real account is left to the engineer.
+- The engineer ran the fetch from a real account, the gmail account's label Slasher Test, into the private store. It took a message and two replies to it. The first reply's file carries Message-ID, In-Reply-To, and References. The second's References names both earlier messages, on one line. The message that is not a reply carries Message-ID and neither of the other two. Each file keeps its blank line, its line of dashes, and its body.
 - The loop record is `2026-11-21T03-58-14Z-threaded-replies` in `local/logs/loops/`.
 
 ## Confirmations
@@ -60,3 +60,4 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 7:46:06 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 7:58:14 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 8:26:10 PM PT
