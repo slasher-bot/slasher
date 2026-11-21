@@ -5,7 +5,7 @@ FEATURES
   /feature new                     Create its branch and an Open record
   /feature new with phases         Create it, asking for its phases
   /feature status [<feature>]      Phases, state, what exists, and
-                                   what is left. <feature>: a number
+                                   what is left. <feature>: a letter
                                    from the last list, a datetime, or
                                    words from the title
   /feature start, /start           Open -> Active, or, where none is

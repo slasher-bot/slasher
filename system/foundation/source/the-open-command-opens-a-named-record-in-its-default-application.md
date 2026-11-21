@@ -8,7 +8,7 @@
 
 **The words name a record in one of four ways.**
 
-1. An ordinal from the list of records printed last in the session, as `#3` or `3`, as in `/open #3` after `/items current`.
+1. An ordinal from the list of records printed last in the session: a number for an item's row, as `#3` or `3`, as in `/open #3` after `/items current`, and a letter for a progression's, as `#B` or `B`, as in `/open B` after `/features`. A letter may be typed in either case.
 2. A handle, the record's ISO-8601-UTC filename prefix, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
 3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents.md`.
 4. Words from the record's title or filename, as `/open cart contents`.
@@ -38,6 +38,8 @@ After the open, say what was opened, in one line, with its path: from the projec
 
 ## History
 
+Until Sat Nov 21 2026 an ordinal was a number for a progression's row too, since a list of progressions numbered its rows.
+
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
 Until Thu Nov 19 2026 a bare `/open` asked which record, through the selection interface, and offered the current items and the current implementations, most recently created first.
@@ -58,3 +60,4 @@ Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 5:08:30 PM PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 5:14:40 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 2:26:02 PM PT

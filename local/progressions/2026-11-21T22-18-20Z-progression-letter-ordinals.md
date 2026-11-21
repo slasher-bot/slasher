@@ -19,7 +19,7 @@ Realizes the work item `2026-11-21T21-37-32Z-progressions-are-listed-with-letter
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/progression-letter-ordinals`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `97402d69`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-progression-letter-ordinals`. The main working tree stays on `master`.
 - **Participation:** unattended, as the engineer asked.
 - **Forecast:** none given.
@@ -37,6 +37,13 @@ Realizes the work item `2026-11-21T21-37-32Z-progressions-are-listed-with-letter
 
 ## What happened
 
+- A printed list of progressions gives each row a letter ordinal, from A, after Z AA, AB: `/features`, `/experiments`, `/contents`, `/progressions`, and the progressions under `/current`. The printed-list rule says so, in its body and its compressed text.
+- The agent decided: a letter may be typed in either case, and after Z come AA, AB, and so on. In `/current`, the items keep numbers and the progressions take letters, so no two rows share an ordinal.
+- A letter names a progression's row in `/feature status`, `/experiment status`, `/content status`, `/work-status`, `/open`, and `/print`. Their rules and the feature, experiment, and content help say so. `/print` names a record as `/open` does, so its rule did not change.
+- The compressed text was checked against the body by two fresh agents: 100 directives, 98 kept, 1 less precise, 1 lost. One repair. The lost directive used the old term Implementation, which the compressed text carries as Progression. The re-check: 100 directives, 100 kept.
+- No test was written. No script changed.
+- The automated suite passed: 139 test files.
+
 ## Confirmations
 
 - **2026-11-21** — Creation: started unattended, as the engineer asked. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -46,3 +53,4 @@ Realizes the work item `2026-11-21T21-37-32Z-progressions-are-listed-with-letter
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 2:18:20 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 2:31:40 PM PT

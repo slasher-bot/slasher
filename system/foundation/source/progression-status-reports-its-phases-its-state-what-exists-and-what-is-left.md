@@ -8,11 +8,11 @@
 
 **`/feature status <feature>` reports on the feature the identifier names**, and `/experiment status <experiment>` on the experiment. An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of features or experiments printed in the session, as `/feature status 2`
+- **a letter**, the ordinal of a row in the last list of features, experiments, content, or progressions printed in the session, as `/feature status B`. A letter may be typed in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, as `/feature status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one record of the kind, as `/feature status cart payment`
 
-**Where the identifier names no record of the kind, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of the kind was printed in the session, say so, and report nothing.
+**Where the identifier names no record of the kind, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a letter is given and no list of the kind was printed in the session, say so, and report nothing.
 
 **Name the progression before the report**, by its record's title, so the engineer can see which one the identifier named.
 
@@ -36,6 +36,8 @@
 
 ## History
 
+Until Sat Nov 21 2026 a progression's row in a printed list was named by a number, as `/feature status 2`, since a list of progressions numbered its rows.
+
 Until Fri Nov 20 2026 there was no `/content status`, since there was no content kind.
 
 Until Fri Nov 20 2026 the progression status report ended with what is left, and did not say whether the progression was ready to conclude.
@@ -55,3 +57,4 @@ Authored by Scott Bellware on Mon Nov 16 2026 at 2:23:56 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 2:26:02 PM PT

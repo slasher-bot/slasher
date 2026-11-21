@@ -280,7 +280,7 @@ Trigger: When the engineer asks for a list of records, as with `/item list`, `/l
 3. The first column is the record's handle and has no heading.
 4. The handle is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit.
 5. Every column after the handle has a heading.
-6. Two SHA columns come right after the handle: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the handle, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed.
+6. Two SHA columns come right after the handle: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the handle, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z. The engineer may type a letter in either case. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has.
 7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features`, `/experiments`, and `/contents` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
@@ -324,7 +324,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 1. `/current` lists the Open and Active items, then, under the heading *Progressions (feature, experiment, content)*, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
 2. The current progressions are the progressions of every kind whose `**State:**` line reads Open, Active, or Suspended.
-3. Present each current progression as one row: its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no ordinal and no SHA columns.
+3. Present each current progression as one row: its letter ordinal, its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no SHA columns. Its letters count from A, apart from the items' numbers.
 4. Where no progression is current, print the one line *No current progression.* under that heading, in place of the rows.
 5. The items table `/current` prints takes the kind column every list of items takes.
 6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current progressions in full.
@@ -335,8 +335,8 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Open, Active, or Suspended.
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
-3. Present each record as one row: an ordinal, its handle, its title, and its state. The title is the record's own. Give it no SHA columns.
-4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from 1.
+3. Present each record as one row: a letter ordinal, its handle, its title, and its state. The title is the record's own. Give it no SHA columns.
+4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from A.
 5. Each command takes `current` too, as `/items` does. `/features current` does what `/features` does, and `/features current 3` what `/features 3` does.
 6. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
 7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
@@ -1226,11 +1226,11 @@ Trigger: When the engineer types `/feature status`, `/experiment status`, or `/c
 
 **`/feature status <feature>` reports on the feature the identifier names**, and `/experiment status <experiment>` on the experiment. An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of features or experiments printed in the session, as `/feature status 2`
+- **a letter**, the ordinal of a row in the last list of features, experiments, content, or progressions printed in the session, as `/feature status B`. A letter may be typed in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, as `/feature status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one record of the kind, as `/feature status cart payment`
 
-**Where the identifier names no record of the kind, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of the kind was printed in the session, say so, and report nothing.
+**Where the identifier names no record of the kind, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a letter is given and no list of the kind was printed in the session, say so, and report nothing.
 
 **Name the progression before the report**, by its record's title, so the engineer can see which one the identifier named.
 
@@ -1636,7 +1636,7 @@ Trigger: When the engineer types `/open`, or asks for a record they name to be o
 
 **The words name a record in one of four ways.**
 
-1. An ordinal from the list of records printed last in the session, as `#3` or `3`, as in `/open #3` after `/items current`.
+1. An ordinal from the list of records printed last in the session: a number for an item's row, as `#3` or `3`, as in `/open #3` after `/items current`, and a letter for a progression's, as `#B` or `B`, as in `/open B` after `/features`. A letter may be typed in either case.
 2. A handle, the record's ISO-8601-UTC filename prefix, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
 3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents.md`.
 4. Words from the record's title or filename, as `/open cart contents`.
@@ -2008,11 +2008,11 @@ Trigger: When the engineer types `/work-status` or `/ws`, or asks for the status
 
 **`/work-status <record>` reports on the record the identifier names.** An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of items, features, experiments, or content printed in the session, as `/work-status 3`
+- **an ordinal**, of a row in the last list of records printed in the session: a number for an item's row, as `/work-status 3`, and a letter for a progression's, as `/work-status B`. A letter may be typed in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the progressions, as `/work-status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item or progression, as `/work-status cart payment`
 
-**Where the identifier names no record, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of records was printed in the session, say so, and report nothing.
+**Where the identifier names no record, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where an ordinal is given and no list of records was printed in the session, say so, and report nothing.
 
 **The report ends with whether the record is ready to conclude**, for an item and for a progression alike, as the rule for its kind says.
 

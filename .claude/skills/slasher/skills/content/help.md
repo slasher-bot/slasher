@@ -5,7 +5,7 @@ CONTENT
 
   /content new                     Create its branch and an Open record
   /content status [<content>]      Phases, state, what exists, and
-                                   what is left. <content>: a number
+                                   what is left. <content>: a letter
                                    from the last list, a datetime, or
                                    words from the title
   /content start, /start           Open -> Active, or, where none is

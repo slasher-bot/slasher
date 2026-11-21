@@ -82,7 +82,7 @@ FEATURES
   /feature new                     Create its branch and an Open record
   /feature new with phases         Create it, asking for its phases
   /feature status [<feature>]      Phases, state, what exists, and
-                                   what is left. <feature>: a number
+                                   what is left. <feature>: a letter
                                    from the last list, a datetime, or
                                    words from the title
   /feature start, /start           Open -> Active, or, where none is
@@ -116,7 +116,7 @@ EXPERIMENTS
   /experiment new with phases      Create it, asking for its phases
   /experiment status [<experiment>]
                                    Phases, state, what exists, and
-                                   what is left. <experiment>: a number
+                                   what is left. <experiment>: a letter
                                    from the last list, a datetime, or
                                    words from the title
   /experiment start, /start        Open -> Active, or, where none is
@@ -146,7 +146,7 @@ CONTENT
 
   /content new                     Create its branch and an Open record
   /content status [<content>]      Phases, state, what exists, and
-                                   what is left. <content>: a number
+                                   what is left. <content>: a letter
                                    from the last list, a datetime, or
                                    words from the title
   /content start, /start           Open -> Active, or, where none is

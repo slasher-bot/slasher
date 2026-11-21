@@ -12,11 +12,11 @@
 
 **`/work-status <record>` reports on the record the identifier names.** An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of items, features, experiments, or content printed in the session, as `/work-status 3`
+- **an ordinal**, of a row in the last list of records printed in the session: a number for an item's row, as `/work-status 3`, and a letter for a progression's, as `/work-status B`. A letter may be typed in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the progressions, as `/work-status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item or progression, as `/work-status cart payment`
 
-**Where the identifier names no record, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where a number is given and no list of records was printed in the session, say so, and report nothing.
+**Where the identifier names no record, say so, and report nothing.** Where words match more than one record's title, ask which, through the selection interface, each match an option. Where an ordinal is given and no list of records was printed in the session, say so, and report nothing.
 
 **The report ends with whether the record is ready to conclude**, for an item and for a progression alike, as the rule for its kind says.
 
@@ -30,6 +30,8 @@
 
 
 ## History
+
+Until Sat Nov 21 2026 the ordinal was a number for a progression's row too, since a list of progressions numbered its rows.
 
 Until Sat Nov 21 2026 the command was `/status`, and this rule was named status-reports-on-the-work-under-way-or-the-record-named. Claude Code has a `/status` command of its own, so the Slasher command was typed `/slasher:status` to reach it.
 
@@ -52,3 +54,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:43 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 1:46:54 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 2:26:02 PM PT
