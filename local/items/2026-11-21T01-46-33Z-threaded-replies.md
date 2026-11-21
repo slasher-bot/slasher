@@ -1,8 +1,10 @@
 # Threaded replies
 
-**State:** Open
+**State:** Progression
 
 **Tags:** [work]
+
+Its progression is the implementation `2026-11-21T03-46-06Z-threaded-replies`.
 
 **As the engineer stated it:**
 
@@ -29,3 +31,4 @@
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 5:46:33 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 7:46:06 PM PT
