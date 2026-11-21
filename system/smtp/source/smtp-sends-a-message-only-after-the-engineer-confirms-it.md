@@ -8,13 +8,19 @@
 
 **Report the result as the script prints it.** It names the recipients and the SMTP host. Where the script fails, report its message, and do not run it again on your own.
 
+**As the engineer stated it:** After smtp sends a message, summarize it
+
+**After a send succeeds, summarize the message sent:** its recipients, its subject, and its gist in a sentence or two, read from the message file. Where the send fails, summarize nothing.
+
 **A credential never passes through the chat.** The `imap` package's email-fetches-the-accounts-named-and-lists-them-without-credentials rule holds here too. The agent does not ask for a credential, read one aloud, or print one. Where the engineer asks to store one, give them the `credential.sh write` command to run in their own terminal.
 
 **Why:** a message sent cannot be taken back, and it reaches people outside the project. Receiving changes only the project's own files. That difference is why sending is a package of its own, and why each send waits for the engineer, even where the agent works unattended.
 
-**How to apply:** on `/email send`, read the message file, show its account and headers, and ask *Send* or *Do not send*. On *Send*, run `send.py` from the project root, and report what it printed.
+**How to apply:** on `/email send`, read the message file, show its account and headers, and ask *Send* or *Do not send*. On *Send*, run `send.py` from the project root, report what it printed, and summarize the message sent.
 
 ## History
+
+Until Sat Nov 21 2026 a send reported only what the script printed. The engineer asked that the message sent be summarized.
 
 Until Sun Nov 15 2026 the command was `/smtp send`, the smtp package's own. The engineer moved it under `/email`, as `/email send`, and removed `/smtp`.
 
@@ -27,3 +33,4 @@ Related:
 
 Authored by Scott Bellware on Fri Nov 13 2026 at 12:24:04 AM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 3:25:32 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 6:44:03 PM PT

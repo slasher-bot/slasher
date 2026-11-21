@@ -12,13 +12,14 @@ Realizes the work items `2026-11-21T01-31-32Z-summarize-messages-after-imap-rece
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/email-summaries`
+- **Base:** `d0c8ebc1`, from `master`
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-email-summaries`. The main working tree stays on `master`.
 - **Participation:** unattended, stated by the engineer in the request. The question was not asked.
 - **Forecast:** none given.
@@ -38,12 +39,24 @@ Realizes the work items `2026-11-21T01-31-32Z-summarize-messages-after-imap-rece
 10. Compile the source, and run the suite.
 11. Commit the change on the branch.
 
+## What happened
+
+- The imap rule says that after a fetch, the agent summarizes each message the fetch wrote, one line each: its sender, its subject, and its gist. It groups them by account and folder, summarizes at most the 20 most recent, and says so where the fetch wrote none.
+- The smtp rule says that after a send succeeds, the agent summarizes the message sent: its recipients, its subject, and its gist. A failed send is not summarized.
+- The `/email` help says both. No script changed.
+- Neither rule carries a compressed text, so nothing was checked.
+- The automated suite passes: 137 tests.
+
 ## Confirmations
 
 - **2026-11-21** — Participation: Unattended, stated by the engineer in the request.
 - **2026-11-21** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-21** — Plan: Accept, selected by the engineer.
+- **2026-11-21** — Concluding state: Completed, selected by the engineer.
+- **2026-11-21** — Merge, worktree removal, and branch deletion: Merge, remove, and delete, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 6:42:29 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 6:45:32 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 7:05:24 PM PT

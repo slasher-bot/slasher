@@ -17,5 +17,7 @@ EMAIL
   A project lists its accounts in email/slasher-email.toml, in its local
   directory, an [[account]] table to each.
   A message file holds headers, then a blank line, then the body.
+  After a fetch, each message it wrote is summarized in a line. After a
+  send, the message sent is summarized.
   A credential is stored in your own terminal, never through the chat:
   slasher/system/imap/credential.sh write <host> <login> [--name <name>]
