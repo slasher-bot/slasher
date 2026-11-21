@@ -3,6 +3,7 @@
 | `/i` | `/items current` | Lists the current items |
 | `/'` | `/current` | Lists the current items and progressions |
 | `/?` | `/recent` | Brief summary of recent work, and what's next |
+| `/ws` | `/work-status` | The status of the work under way, or of the record named |
 | `/??` | `/pros-and-cons` | Gives each option of the last question with its pros and cons |
 | `/aa` | `/ask-again` | Repeats the agent's previous multiple-choice question |
 | `/.` | `/next` | Takes the next step |

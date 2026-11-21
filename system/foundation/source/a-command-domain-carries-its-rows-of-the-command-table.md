@@ -8,7 +8,7 @@
 
 **A description may open with *These commands*, as the help does.** No description opens with *This command*. Keep each row in line with the help: when a domain's heading, its help command, or its description changes in the help, change its row in the same commit.
 
-**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, and `/next?`. Their order is `/commands, /;`, `/recent, /?`, `/current, /'`, `/next, /proceed, /.`, and `/next?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` and `/commit, /c` in the `git` package.
+**The table's top rows are foundation's.** `plugin/command-table-header.md` holds the heading and the rows that open the table: `/slasher help`, then each command with a shortcut alias, and `/next?`. Their order is `/commands, /;`, `/recent, /?`, `/current, /'`, `/work-status, /ws`, `/next, /proceed, /.`, and `/next?`. A command of another package with a shortcut alias has its row beside its skill, as `/push, /p` and `/commit, /c` in the `git` package.
 
 **A row with a shortcut alias names the command first and the alias after it, as `/recent, /?`.** A command with an alias and a shortcut names the alias, then the shortcut last, as `/next, /proceed, /.`. A command with two shortcuts names both, in the order they were given, as `/shortcuts, /sc, /:`. This holds in the full table and in the startup table alike.
 
@@ -25,6 +25,8 @@
 **How to apply:** when you write or change a command, its help, or a shortcut alias, change its row in its domain's `command-table-rows.md`, or foundation's plugin files for the top rows and the shortcuts, and run `./compile.sh` so the plugin's tables are rebuilt.
 
 ## History
+
+Until Sat Nov 21 2026 the top rows had no `/work-status, /ws` row, since `/status` had no shortcut alias and no row.
 
 Until Sat Nov 21 2026 the startup sentence named a shortcut alias whose name starts with a letter as a command of its own, after its command, as `/commit`, `/c`.
 
@@ -124,3 +126,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 6:31:25 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 1:27:10 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 1:46:54 PM PT
