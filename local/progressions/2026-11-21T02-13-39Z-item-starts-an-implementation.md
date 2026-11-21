@@ -12,7 +12,7 @@ Realizes the work item `2026-11-21T01-48-00Z-call-an-item-started-directly-an-im
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -52,8 +52,11 @@ This feature is a feature, not an implementation, because the rules it changes w
 - **2026-11-21** — Participation: Unattended, stated by the engineer in the request.
 - **2026-11-21** — Working location: Branch and worktree, selected by the engineer.
 - **2026-11-21** — Plan: Accept, selected by the engineer.
+- **2026-11-21** — Concluding state: Completed, selected by the engineer.
+- **2026-11-21** — Merge, worktree removal, and branch deletion: Merge, remove, and delete, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 6:13:39 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 6:17:03 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 6:19:32 PM PT
