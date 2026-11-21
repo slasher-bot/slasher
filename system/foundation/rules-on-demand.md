@@ -32,7 +32,7 @@ Trigger: When writing or changing a Slasher command, its help, or a shortcut ali
 
 **A shortcut alias changes three files together.** Change its row in `command-table-header.md` or beside its skill, its row in `plugin/shortcuts.md`, and `plugin/command-table-startup.md` where it names the alias, in the same commit. `plugin/shortcuts.md` is foundation's, and lists another package's shortcut too, as `/p`.
 
-**The startup table's four rows stand in `plugin/command-table-startup.md`.** The `/slasher help` row also names `/help`. The `/commands, /;` row reads *Print the list of Slasher commands*. The `/recent, /?` row takes `/recent`'s description from the help. The `/current, /'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand.
+**The startup table's four rows stand in `plugin/command-table-startup.md`.** The `/slasher help` row also names `/help`. The `/commands, /;` row reads *Print the list of Slasher commands*. The `/recent, /?` row takes `/recent`'s description from the help. The `/current, /'` row reads *Lists the current items, features, and experiments.* The plugin build writes the sentence below them, naming every other command, so the sentence is never written by hand. In the sentence, a shortcut alias whose name starts with a letter stands in parentheses after its command, as `/commit (/c)`. The shortcuts table, `plugin/shortcuts.md`, says which names are shortcut aliases. A shortcut alias whose name starts with no letter is left out of the sentence.
 
 **Each table is followed by the help line:** *Type /help for all of Slasher's help, or /<command> help for one command's.* The plugin build adds it.
 

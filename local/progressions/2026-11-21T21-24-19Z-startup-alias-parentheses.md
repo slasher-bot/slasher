@@ -19,7 +19,7 @@ Realizes the work item `2026-11-21T21-23-00Z-the-startup-sentence-puts-a-shortcu
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/startup-alias-parentheses`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `d72490ff`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-startup-alias-parentheses`. The main working tree stays on `master`.
 - **Participation:** unattended, as the engineer asked in the request.
 - **Forecast:** none given.
@@ -40,6 +40,13 @@ Realizes the work item `2026-11-21T21-23-00Z-the-startup-sentence-puts-a-shortcu
 
 ## What happened
 
+- The plugin build reads the shortcuts table. In the startup sentence, a shortcut alias whose name starts with a letter stands in parentheses after its row's command. The sentence now reads `/push (/p)`, `/commit (/c)`, `/commit-and-push (/cp)`, `/ask-again (/aa)`, and `/shortcuts (/sc)`.
+- `/proceed`, `/implementation`, and `/implementations` stay commands of their own in the sentence.
+- A sentence with no other command to name is no longer written as an empty name.
+- A new test, `command-table-startup-shortcut-alias.sh`, failed before the change and passes after it.
+- The a-command-domain-carries-its-rows-of-the-command-table rule says so, with a History line. It carries no compressed text.
+- The automated suite passed: 139 test files.
+
 ## Confirmations
 
 - **2026-11-21** — Creation: started unattended by `/work`, with the request to do the work unattended. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -49,3 +56,4 @@ Realizes the work item `2026-11-21T21-23-00Z-the-startup-sentence-puts-a-shortcu
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 1:24:19 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 1:28:45 PM PT
