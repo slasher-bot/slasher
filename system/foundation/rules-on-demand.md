@@ -1589,8 +1589,9 @@ Trigger: When creating an item, changing an item's state or content, or answerin
 61. Do not refuse to answer until the item is amended.
 62. Reconcile a settled item; never regenerate it. Where one item names another as what it realizes, the named item is the source of truth. Reconcile it; never regenerate it from the work downstream.
 63. Where the engineer asks for an item to be concluded and names no state, put the concluding states the item can take to the engineer through the selection interface. Do not choose the state, and do not conclude the item before the engineer selects one. *Conclude that item* names no state. *That item is done* names one. The progressions rule asks the same for a progression concluded with no state named. *Complete that item* names its kind's concluding state.
-64. **Progression** — when a feature or an experiment is created for an item, the item takes Progression, and the two records name each other. It is a current item, and its progression is listed as current work too.
+64. **Progression** — when a progression, such as a feature, an experiment, or an implementation, is created for an item, the item takes Progression. The progression carries the item's work, and the two records name each other. It is a current item, and its progression is listed as current work too.
 65. When the progression is Completed or Affirmed, the item takes its kind's concluding state. When it reaches another concluding state, or is set aside, ask the engineer what state the item takes.
+66. An item started directly, where the engineer asks to start it or do it without naming a kind, takes an implementation: titled `Implementation — <name>`, tagged `[implementation]`, on an `implementation/<subject>` branch. A request that names a kind creates a progression of that kind. `/item start` and `/start` make an item Active and create no progression.
 
 # The log records why work was abandoned, and never says undone work was done
 
@@ -1783,7 +1784,7 @@ Trigger: When creating or starting an experiment, a feature, or content, or writ
     - **Refuted**: the question was disproven, or the intent was not met.
     - **Inconclusive**: it ran and gave no clear verdict either way.
 12. The engineer concludes a progression Affirmed, Refuted, or Inconclusive with `affirm`, `refute`, or `inconclusive`. `complete` concludes work without a forecast as Completed. Where the work has a forecast, ask which concluding word it takes.
-13. Where the progression is created for an item, make the item Progression, and name each record in the other. When the progression is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
+13. Where the progression is created for an item, make the item Progression, and name each record in the other. An item started directly, without a kind named, takes an implementation, as the the-items-directory-holds-one-file-per-item rule says. When the progression is Completed or Affirmed, conclude the item in its kind's concluding state. Otherwise, at its conclusion or when it is set aside, ask the engineer what state the item takes.
     - Where the item is already on `master`, make each of these state changes on `master` too, not only on the progression's branch. Commit the same item content and the same log entry on both, so the merge matches.
 14. `resume` takes back any state but Open and Active, to Active. What resuming a Completed progression does to its merged branch is settled when it first occurs.
 15. Where the engineer asks for a progression to be concluded and names no state, put the concluding states it can take to the engineer through the selection interface. Do not choose the state, and do not conclude the progression before the engineer selects one. *Conclude the feature* names no state. *The feature is completed* names one.
@@ -2018,7 +2019,7 @@ Trigger: When the engineer types `/unattended`
 2. Show a plan first, through the selection interface: *Accept the plan?*, the plan as its list, and the options *Accept* and *Revise*. On *Revise*, revise it as the engineer directs, and show it again. Generate nothing until it is accepted.
 3. After acceptance, decide every question yourself: candidates, design, wording, confirmations, and commits on any branch but `master`. Record each decision where its convention records it, as the agent's, with its reasoning.
 4. A commit on `master` and a push still wait for the engineer's selection.
-5. Where the request names a feature to build or an item to start, start an unattended feature for it, choosing its working location and recording it as the agent's selection. It states no forecast unless the engineer gave one in the request. The verdict question at its end waits for the engineer. Otherwise work where the working tree is, creating no branch.
+5. Where the request names a feature to build, start an unattended feature for it. Where it names an item to start or do, without naming a kind, start an unattended implementation for it, as the the-items-directory-holds-one-file-per-item rule says. Choose its working location, and record it as the agent's selection. It states no forecast unless the engineer gave one in the request. The verdict question at its end waits for the engineer. Otherwise work where the working tree is, creating no branch.
 6. It holds for the one request. The next prompt is attended unless it also begins with `/unattended`.
 
 # Working-state artifacts carry a provenance footer
