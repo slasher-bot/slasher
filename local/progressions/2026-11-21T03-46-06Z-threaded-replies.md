@@ -12,7 +12,7 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 
 ## State
 
-- **State:** Active
+- **State:** Affirmed
 
 ## Setup
 
@@ -48,6 +48,7 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 - The imap README says a message file carries the three headers, and why.
 - `send.py` reads every header of a message file and sends it, so the three headers go out with a reply with no change there. It also sends the `UID:` line a fetched file opens with, as a header. That is outside this work, and is unchanged.
 - The engineer ran the fetch from a real account, the gmail account's label Slasher Test, into the private store. It took a message and two replies to it. The first reply's file carries Message-ID, In-Reply-To, and References. The second's References names both earlier messages, on one line. The message that is not a reply carries Message-ID and neither of the other two. Each file keeps its blank line, its line of dashes, and its body.
+- Two replies were sent through the gmail account from fetched headers, the second answering the first. Each, fetched again with the new code, carries In-Reply-To naming the message it answers, and References naming every earlier message in the thread, on one line.
 - The loop record is `2026-11-21T03-58-14Z-threaded-replies` in `local/logs/loops/`.
 
 ## Confirmations
@@ -55,9 +56,12 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 - **2026-11-21** — Participation: Unattended, by the engineer's `/unattended`.
 - **2026-11-21** — Plan: Accept, selected by the engineer.
 - **2026-11-21** — Working location: Branch and worktree, selected by the agent. The work changes code, so it is kept off `master` until it is concluded, and the main working tree stays free for other work.
+- **2026-11-21** — Affirmation: "The test is affirmed", declared by the engineer, and confirmed as concluding the implementation Affirmed.
+- **2026-11-21** — Merge, worktree removal, and branch deletion: Merge, remove, and delete, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 7:46:06 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 7:58:14 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 8:26:10 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 8:33:26 PM PT
