@@ -39,6 +39,7 @@ ITEMS
                                    Resolved
   /conclude [<record>]             The work under way, or the record named,
                                    -> the concluding state you select
+  /cw [<record>]                   An alias of /conclude
   /item realize, /realize          -> Realized
   /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
