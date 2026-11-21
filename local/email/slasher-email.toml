@@ -1,0 +1,9 @@
+[[account]]
+name = "gmail"
+
+[account.imap]
+store = "private"
+
+[[account.imap.folder]]
+source = "Slasher Test"
+local = "slasher-test"
