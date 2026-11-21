@@ -227,10 +227,14 @@ def body(message):
     return ""
 
 
+def one_line(value):
+    return re.sub(r"\s+", " ", value).strip() if value else value
+
+
 def message_text(uid, message):
     lines = []
-    for header in ("Date", "From", "To", "CC", "Subject", "Reply-To"):
-        value = decoded(message.get(header))
+    for header in ("Date", "From", "To", "CC", "Subject", "Reply-To", "Message-ID", "In-Reply-To", "References"):
+        value = one_line(decoded(message.get(header)))
         if value:
             lines.append(f"{header}: {value}")
     return "\n".join([f"UID: {uid}", *lines, "", "-" * 72, "", body(message)]) + "\n"

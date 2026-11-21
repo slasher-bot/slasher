@@ -19,6 +19,7 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/threaded-replies`
+- **Base:** `3e916dff`, from `master`
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-threaded-replies`. The main working tree stays on `master`.
 - **Participation:** unattended, by `/unattended`.
 - **Forecast:** none given.
@@ -39,6 +40,16 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 11. Run the suite, and commit the change on the branch.
 12. Leave the fetch from a real account to the engineer. This project has no email configured, and the test asked for reaches the network.
 
+## What happened
+
+- A test, `fetch-threaded-reply.sh`, fetches a reply whose References header is folded, and reads the whole message file. It failed before the change.
+- `fetch.py` writes Message-ID, In-Reply-To, and References after Reply-To, and writes every header value on one line, each run of whitespace made one space. The rest of the file's format, and the skip of a UID already fetched, are unchanged.
+- The existing fetch test stays the control for a message without the three headers. It passes unchanged.
+- The imap README says a message file carries the three headers, and why.
+- `send.py` reads every header of a message file and sends it, so the three headers go out with a reply with no change there. It also sends the `UID:` line a fetched file opens with, as a header. That is outside this work, and is unchanged.
+- The fetch from a real account is left to the engineer.
+- The loop record is `2026-11-21T03-58-14Z-threaded-replies` in `local/logs/loops/`.
+
 ## Confirmations
 
 - **2026-11-21** — Participation: Unattended, by the engineer's `/unattended`.
@@ -48,3 +59,4 @@ Realizes the work item `2026-11-21T01-46-33Z-threaded-replies`.
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 7:46:06 PM PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 7:58:14 PM PT
