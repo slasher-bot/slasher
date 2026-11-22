@@ -79,7 +79,7 @@ Mon Jan 1 2026 18:06
 10. Render the date with the command `date "+%a %b %-d %Y %H:%M"`.
 11. This title form is distinct from the other two record date formats. Each format is used only where it is specified.
 12. The filename prefix stays machine-sortable UTC to the second, such as `2026-07-24T18-16-22Z-…`, per the file-names rule.
-13. The provenance footer stays local time to the second with a zone abbreviation, such as `Fri Jul 24 2026 at 11:58:56 AM PT`, per the record-a-rules-authorship-in-a-provenance-footer rule.
+13. The provenance footer stays local time to the second with a zone abbreviation, such as `Fri Jul 24 2026 at 11:58:56 PT`, per the record-a-rules-authorship-in-a-provenance-footer rule.
 14. The title is the one exception to the a-time-value-carries-minutes-and-seconds rule. Every other datetime written into a file carries seconds.
 15. The exception is narrow and covers only the title's date.
 
@@ -1321,8 +1321,8 @@ Changed by <name> on <datetime>
 Changed by <other name> on <datetime>
 ```
 
-4. The datetime is human-readable local time, formatted `Mon Jan 1 2026 at 3:45:12 PM PT`.
-5. It gives day-of-week, month, day, year, then the time with AM/PM and a timezone abbreviation.
+4. The datetime is human-readable local time, formatted `Mon Jan 1 2026 at 15:45:12 PT`.
+5. It gives day-of-week, month, day, year, then the time as 24-hour hours, minutes, and seconds, and a timezone abbreviation. It carries no AM/PM.
 6. The time is in the author's local time.
 7. The time carries minutes and seconds, per the a-time-value-carries-minutes-and-seconds rule.
 8. The footer does not use the ISO-8601-UTC filename-prefix form.
@@ -1330,7 +1330,7 @@ Changed by <other name> on <datetime>
 10. A Changed line is appended each time the rule is edited, oldest first.
 11. Never rewrite or remove an earlier line.
 12. Earlier lines keep the form they were written in. Lines written at hour resolution stay at hour resolution.
-13. Only new lines take the full time. Both forms may coexist in one footer.
+13. Only new lines take the full time. Both forms may coexist in one footer. Lines written in the 12-hour form keep it beside new 24-hour lines.
 14. The name is the contributor's name, as in their git identity.
 15. When authoring a new rule, end it with a `---` divider.
 16. Below the divider, add an `Authored by <name> on <local datetime>` line.

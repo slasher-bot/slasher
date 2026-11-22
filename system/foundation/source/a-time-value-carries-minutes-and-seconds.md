@@ -1,13 +1,13 @@
 # A time value carries minutes and seconds
 
-Wherever a datetime written into a file includes a **time of day**, that time is written to **seconds**. Write `3:45:12 PM PT`, not `3 PM PT` and not `3:45 PM PT`.
+Wherever a datetime written into a file includes a **time of day**, that time is written to **seconds**. Write `15:45:12 PT`, not `15 PT` and not `15:45 PT`.
 
 The rule governs the **resolution** of the time and nothing else. Which fields precede it, whether it is local or UTC, and how it is punctuated are each settled by the convention that specifies the datetime. This rule only fixes how finely the time is resolved when one is written.
 
 The two datetime conventions in this package satisfy it:
 
 - The **ISO-8601-UTC filename prefix** — `2026-07-01T20-40-00Z-some-name.md` — already carried seconds (see the file-names rule).
-- The **provenance footer** — `Mon Jan 1 2026 at 3:45:12 PM PT` — carries them because this rule requires it (see the record-a-rules-authorship-in-a-provenance-footer rule).
+- The **provenance footer** — `Mon Jan 1 2026 at 15:45:12 PT` — carries them because this rule requires it (see the record-a-rules-authorship-in-a-provenance-footer rule).
 
 **A date alone is not a time.** A convention may record only a date, as a design's **Settled** resolutions do. There is no time of day to resolve there, and this rule adds none. It applies when a time is written.
 
@@ -29,6 +29,8 @@ That reads as an error rather than as provenance, so the entry went unwritten in
 
 ## History
 
+Until Sat Nov 21 2026 this rule's examples showed the 12-hour time, as `3:45:12 PM PT`, which the provenance footer then took.
+
 Until 2026-10-25 How to apply said to write the seconds in every datetime that includes a time of day, naming no exception, while the body names two: a dated record title and a journal entry's filename stamp. The engineer settled that How to apply points to the exceptions the rule names, without listing them. The `Related:` label had also run into the end of How to apply's paragraph, and now stands on its own line.
 
 Related:
@@ -41,11 +43,11 @@ Related:
 ## Compressed
 
 1. When a datetime written into a file includes a time of day, write that time to seconds.
-2. Write `3:45:12 PM PT`, not `3 PM PT` and not `3:45 PM PT`.
+2. Write `15:45:12 PT`, not `15 PT` and not `15:45 PT`.
 3. This rule governs only the time's resolution.
 4. The convention that specifies the datetime settles the preceding fields, local versus UTC, and punctuation.
 5. The ISO-8601-UTC filename prefix, `2026-07-01T20-40-00Z-some-name.md`, already carries seconds (see the file-names rule).
-6. The provenance footer, `Mon Jan 1 2026 at 3:45:12 PM PT`, carries seconds because this rule requires it.
+6. The provenance footer, `Mon Jan 1 2026 at 15:45:12 PT`, carries seconds because this rule requires it.
 7. A date alone is not a time. A date-only convention, such as a design's **Settled** resolutions, gets no time added.
 8. This rule applies only when a time is written.
 9. A record's title is the first exception. A dated record title is written `Mon Jan 1 2026 18:06`: 24-hour, minutes, no seconds (see the a-date-in-a-records-title-is-written-as-the-day-the-date-and-the-24-hour-time rule).
@@ -65,6 +67,7 @@ Related:
 - 2026-10-25, revised: point 18 takes "except where this rule names an exception"; not checked
 - 2026-10-27, re-checked: 14 directives, 13 kept, 1 less precise, 0 lost, 1 repair, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 78 → 69, clarity 0.77 → 0.75; checked: 14 directives, 14 kept, 0 less precise, 0 lost
+- 2026-11-21, revised: the footer datetime is 24-hour, as the engineer settled; checked: 13 directives, 13 kept, 0 less precise, 0 lost
 
 ---
 
@@ -90,3 +93,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 6:05:00 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:58 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 18:31:40 PT

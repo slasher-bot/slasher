@@ -388,11 +388,11 @@ Source: system/foundation/source/a-status-report-prints-a-fixed-whole-project-re
 Source: system/foundation/source/a-time-value-carries-minutes-and-seconds.md
 
 1. When a datetime written into a file includes a time of day, write that time to seconds.
-2. Write `3:45:12 PM PT`, not `3 PM PT` and not `3:45 PM PT`.
+2. Write `15:45:12 PT`, not `15 PT` and not `15:45 PT`.
 3. This rule governs only the time's resolution.
 4. The convention that specifies the datetime settles the preceding fields, local versus UTC, and punctuation.
 5. The ISO-8601-UTC filename prefix, `2026-07-01T20-40-00Z-some-name.md`, already carries seconds (see the file-names rule).
-6. The provenance footer, `Mon Jan 1 2026 at 3:45:12 PM PT`, carries seconds because this rule requires it.
+6. The provenance footer, `Mon Jan 1 2026 at 15:45:12 PT`, carries seconds because this rule requires it.
 7. A date alone is not a time. A date-only convention, such as a design's **Settled** resolutions, gets no time added.
 8. This rule applies only when a time is written.
 9. A record's title is the first exception. A dated record title is written `Mon Jan 1 2026 18:06`: 24-hour, minutes, no seconds (see the a-date-in-a-records-title-is-written-as-the-day-the-date-and-the-24-hour-time rule).

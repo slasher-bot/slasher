@@ -12,11 +12,11 @@ Day-of-week, month, day, year, then the time as 24-hour hours and minutes. No `a
 
 - **The time is the author's local time**, like the provenance footer's — an in-file date is written for a person to read. The form carries no timezone marker, so a reader takes it as local to whoever wrote the record. The footer beneath it names the zone, and the filename prefix carries the timezone-explicit instant.
 - **The moment is the record's authoring time** — the same instant its ISO-8601-UTC filename prefix records, rendered in local time. For a record covering work that spanned more than one day, the title still names the single moment the record was written, not a range.
-- **This is a third date format, and the three do not overlap.** The **filename** prefix is machine-sortable and UTC (`2026-07-24T18-16-22Z-…`, see the file-names rule). The **provenance footer** is human-readable local time with a zone abbreviation (`Fri Jul 24 2026 at 11:58:56 AM PT`, see the record-a-rules-authorship-in-a-provenance-footer rule). The **title** is this form: compact, local, minute-precise. Each is used where it is specified and nowhere else.
+- **This is a third date format, and the three do not overlap.** The **filename** prefix is machine-sortable and UTC (`2026-07-24T18-16-22Z-…`, see the file-names rule). The **provenance footer** is human-readable local time with a zone abbreviation (`Fri Jul 24 2026 at 11:58:56 PT`, see the record-a-rules-authorship-in-a-provenance-footer rule). The **title** is this form: compact, local, minute-precise. Each is used where it is specified and nowhere else.
 
 - **It is the one exception to the seconds rule.** Every other datetime written into a file carries its time of day to seconds (see the a-time-value-carries-minutes-and-seconds rule). A title does not, and the exception is narrow. That rule exists because a running history's entries collide at a coarse resolution and the later one goes unwritten. A title appears once per file, so nothing can collide with it. The filename beside it already carries the same instant to the second, in UTC.
 
-**Why:** a title is the first thing read, and the line a record is referred to by. So its date wants to be compact and precise at once. A bare month and year is too coarse to distinguish two records from the same day. The footer's `at 11:58:56 AM PT` form is too long to sit inside a title alongside the record's name.
+**Why:** a title is the first thing read, and the line a record is referred to by. So its date wants to be compact and precise at once. A bare month and year is too coarse to distinguish two records from the same day. The footer's `at 11:58:56 PT` form is too long to sit inside a title alongside the record's name.
 
 Minute-precise 24-hour time is the shortest rendering that separates records written hours apart. Local time is chosen for the same reason the footer uses it. The title is for a reader, and the UTC instant is already carried, unambiguously, by the filename.
 
@@ -41,7 +41,7 @@ Mon Jan 1 2026 18:06
 10. Render the date with the command `date "+%a %b %-d %Y %H:%M"`.
 11. This title form is distinct from the other two record date formats. Each format is used only where it is specified.
 12. The filename prefix stays machine-sortable UTC to the second, such as `2026-07-24T18-16-22Z-…`, per the file-names rule.
-13. The provenance footer stays local time to the second with a zone abbreviation, such as `Fri Jul 24 2026 at 11:58:56 AM PT`, per the record-a-rules-authorship-in-a-provenance-footer rule.
+13. The provenance footer stays local time to the second with a zone abbreviation, such as `Fri Jul 24 2026 at 11:58:56 PT`, per the record-a-rules-authorship-in-a-provenance-footer rule.
 14. The title is the one exception to the a-time-value-carries-minutes-and-seconds rule. Every other datetime written into a file carries seconds.
 15. The exception is narrow and covers only the title's date.
 
@@ -49,8 +49,11 @@ Mon Jan 1 2026 18:06
 
 - 2026-10-24, compressed: compression 0.41, change 0.71, solubility 53 → 75, clarity 0.49 → 0.67, 19 directives, 19 kept, 0 less precise, 0 lost, after 1 repair, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 75 → 76, clarity 0.67 → 0.69; checked: 13 directives, 13 kept, 0 less precise, 0 lost
+- 2026-11-21, revised: the footer datetime is 24-hour, as the engineer settled; checked: 16 directives, 16 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sat Nov 21 2026 this rule's example of the provenance footer showed the 12-hour time, as `Fri Jul 24 2026 at 11:58:56 AM PT`.
 
 Until Sun Oct 25 2026 this rule was named record-title-date-format and titled "A date in a record's title is written `Mon Jan 1 2026 18:06`".
 
@@ -86,3 +89,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 6:05:00 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 18:31:40 PT
