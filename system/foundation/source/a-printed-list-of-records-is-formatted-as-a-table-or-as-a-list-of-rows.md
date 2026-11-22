@@ -8,7 +8,11 @@
 
 **The short date is printed by `format-datetime.sh`, never worked out.** `slasher/system/foundation/format-datetime.sh short-date <prefix>` prints it, under the dates-and-times-are-written-in-named-formats rule, as `format-datetime.sh short-date 2026-11-22T02-01-28Z` prints `Sat Nov 21`. Two records written on the same day show the same date, and their order tells them apart.
 
+**The short date does not break across lines.** Write a non-breaking space, U+00A0, between its parts, as `Sat Nov 21`, so a narrow terminal wraps the other columns and not the date.
+
 **As the engineer stated it:** Show short form of date in lists
+
+**As the engineer stated it:** The date in the lists should not break across lines
 
 **A list of items opens with an ordinal**, a number from 1 in the order the rows are printed, ahead of the date. The engineer refers to a row by that number.
 
@@ -153,7 +157,7 @@ Keep every column short. Where a field runs to a sentence, use rows instead.
 1. When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence. A table presents the fields in headed columns. Rows present one record to a line, with its fields in sequence and no columns. A list is called a table only where it is formatted as columns.
 2. This applies to any record type. That includes items, progression records, log entries, loop records, work session records, migration records, journal entries, and commits.
 3. The first column is the record's date and has no heading.
-4. For a working-state artifact, the date is its short date: the day its ISO-8601-UTC file name prefix names, in local time, as `Sat Nov 21`. Show no file name prefix. For a commit, the first column is the short SHA. Print the short date with `format-datetime.sh short-date <prefix>`, never by working it out. Two records written on the same day show the same date, and their order tells them apart.
+4. For a working-state artifact, the date is its short date: the day its ISO-8601-UTC file name prefix names, in local time, as `Sat Nov 21`. Show no file name prefix. For a commit, the first column is the short SHA. Print the short date with `slasher/system/foundation/format-datetime.sh short-date <prefix>`, never by working it out, as `2026-11-22T02-01-28Z` prints `Sat Nov 21`. Two records written on the same day show the same date, and their order tells them apart. Write a non-breaking space, U+00A0, between the short date's parts, so the date does not break across lines.
 5. Every column after the date has a heading.
 6. Two SHA columns come right after the date: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the date, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z. The engineer may type a letter in either case. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has.
 7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features`, `/experiments`, and `/contents` print. They are not chosen per request.
@@ -273,8 +277,11 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 - 2026-11-21, revised: a list of progressions numbers its rows with letters, A, B, C, and the progressions `/current` lists take one; checked: 100 directives, 98 kept, 1 less precise, 1 lost, 1 repair: that each row `/current` prints has an ordinal no other row has; the lost one, Implementation items left out where progressions are listed beside them, is carried under the term Progression, so the source decides it kept; re-checked: 100 directives, 100 kept, 0 less precise, 0 lost
 - 2026-11-21, revised: `/current` prints no item totals, and prints one line counting its Suspended items; checked: 91 directives, 91 kept, 0 less precise, 0 lost
 - 2026-11-22, revised: the first column of a list of records is its short date in local time, and a list shows no file name prefix; checked: 86 directives, 84 kept, 1 less precise, 1 lost, 1 repair: that two records of one day show the same date; re-checked: 86 directives, 86 kept, 0 less precise, 0 lost
+- 2026-11-22, revised: the short date is written with non-breaking spaces, so it does not break across lines; checked: 89 directives, 88 kept, 1 less precise, 0 lost, 1 repair: the full path of format-datetime.sh and its example; re-checked: 89 directives, 89 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 the short date was written with ordinary spaces, and a narrow terminal could break it across lines.
 
 Until Sun Nov 22 2026 the first column of a list of records was its handle: the full ISO-8601-UTC file name prefix, as `2026-11-22T02-01-28Z`. It is now the record's short date in local time, as `Sat Nov 21`, and the list shows no prefix.
 
@@ -400,3 +407,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:19 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 14:24:10 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 18:09:30 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:12:30 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:21:10 PT
