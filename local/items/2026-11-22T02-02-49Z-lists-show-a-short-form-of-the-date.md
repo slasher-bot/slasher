@@ -22,10 +22,10 @@ The implementation `2026-11-22T22-06-11Z-lists-show-short-date` carries this ite
 
 ## Tasks
 
-- [ ] The printed-list rule says the first column of a list of records is its short date, in local time, and shows no file name prefix.
-- [ ] The rule's example tables show the short date in the first column.
-- [ ] Each list command prints the short date: /items, /current, /features, /experiments, /progressions, /contents, and /notes.
-- [ ] The short date is printed by format-datetime.sh, never worked out by the agent.
+- [x] The printed-list rule says the first column of a list of records is its short date, in local time, and shows no file name prefix.
+- [x] The rule's example tables show the short date in the first column.
+- [x] Each list command prints the short date: /items, /current, /features, /experiments, /progressions, /contents, and /notes.
+- [x] The short date is printed by format-datetime.sh, never worked out by the agent.
 
 ---
 
@@ -38,3 +38,4 @@ Changed by Scott Bellware on Sun Nov 22 2026 at 13:45:50 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 13:52:56 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:02:49 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:06:11 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:10:36 PT

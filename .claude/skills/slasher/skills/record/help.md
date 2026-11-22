@@ -9,8 +9,8 @@ RECORD
   /record open                     Open the record in its default application
   /open <record>                   Open the record named in its default
                                    application. <record>: an ordinal from
-                                   the last list, a handle, a path, or
-                                   words from its title
+                                   the last list, a file name prefix, a
+                                   path, or words from its title
   /open                            Open the last record or the last text
                                    worked on, whichever is more recent
   /print <record>                  Print the record named. <record>: as

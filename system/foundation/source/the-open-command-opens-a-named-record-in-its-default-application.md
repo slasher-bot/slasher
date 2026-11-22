@@ -9,13 +9,13 @@
 **The words name a record in one of four ways.**
 
 1. An ordinal from the list of records printed last in the session: a number for an item's row, as `#3` or `3`, as in `/open #3` after `/items current`, and a letter for a progression's, as `#B` or `B`, as in `/open B` after `/features`. A letter may be typed in either case.
-2. A handle, the record's ISO-8601-UTC filename prefix, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
+2. A file name prefix, the record's ISO-8601-UTC date and time, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
 3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents.md`.
 4. Words from the record's title or filename, as `/open cart contents`.
 
 **Where the words match one record, open it.** Name it before opening it, so an ordinal is confirmed: after an open, say what was opened, in one line, with the record's title and its path from the project root, in backticks. Act on nothing else.
 
-**Where the words match more than one record, ask which**, through the selection interface, each record an option, named by its title and its handle. Where more match than the selection holds, offer the most recently created, and say how many others matched.
+**Where the words match more than one record, ask which**, through the selection interface, each record an option, named by its title and its file name prefix. Where more match than the selection holds, offer the most recently created, and say how many others matched.
 
 **Where the words match no record, say so, and open nothing.** Where an ordinal is given and no list of records was printed in the session, say so, and open nothing.
 
@@ -38,6 +38,8 @@ After the open, say what was opened, in one line, with its path: from the projec
 
 ## History
 
+Until Sun Nov 22 2026 this rule called a record's file name prefix its handle, the word the printed-list rule then used for a list's first column. A printed list now shows the short date in that column.
+
 Until Sat Nov 21 2026 an ordinal was a number for a progression's row too, since a list of progressions numbered its rows.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
@@ -51,7 +53,7 @@ Related:
 - the the-print-command-prints-the-last-record-or-text-worked-on rule — `/print`, which chooses the same thing and prints it
 - the a-reply-that-writes-a-record-ends-with-the-records-path rule — the principal record a bare `/open` opens
 - the the-record-command-copies-prints-or-opens-the-most-recent-principal-record rule — `/record open`, which opens the most recent principal record
-- the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule — the ordinal and the handle a printed list gives a record
+- the a-printed-list-of-records-is-formatted-as-a-table-or-as-a-list-of-rows rule — the ordinal a printed list gives a record
 
 ---
 
@@ -61,3 +63,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 17:08:30 PT
 Changed by Scott Bellware on Thu Nov 19 2026 at 17:14:40 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:14 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 14:26:02 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:14:05 PT

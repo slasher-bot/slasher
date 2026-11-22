@@ -4,37 +4,41 @@
 
 **When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence.** A table presents the fields in headed columns. Rows present one record to a line, its fields in sequence, with no columns. **A list is called a table only where it is formatted as columns.** That reaches any record — items, progression records, log entries, loop records, work session records, migration records, journal entries, and commits.
 
-**The first column is the record's handle and carries no heading.** That is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit. The columns after it are headed.
+**The first column is the record's date and carries no heading.** For a working-state artifact, that is its short date: the day its ISO-8601-UTC file name prefix names, in local time, in the short-date format, as `Sat Nov 21`. The list shows no file name prefix. For a commit, it is the short SHA. The columns after it are headed.
 
-**A list of items opens with an ordinal**, a number from 1 in the order the rows are printed, ahead of the handle. The engineer refers to a row by that number.
+**The short date is printed by `format-datetime.sh`, never worked out.** `slasher/system/foundation/format-datetime.sh short-date <prefix>` prints it, under the dates-and-times-are-written-in-named-formats rule, as `format-datetime.sh short-date 2026-11-22T02-01-28Z` prints `Sat Nov 21`. Two records written on the same day show the same date, and their order tells them apart.
 
-**A list of progressions opens with a letter ordinal**, A, B, C, and so on, from A in the order the rows are printed, ahead of the handle. After Z come AA, AB, and so on. The engineer refers to a row by that letter, and the engineer can type it in either case. A letter never names an item's row, and a number never names a progression's, so `/current`, which prints both, gives each row an ordinal no other row has.
+**As the engineer stated it:** Show short form of date in lists
+
+**A list of items opens with an ordinal**, a number from 1 in the order the rows are printed, ahead of the date. The engineer refers to a row by that number.
+
+**A list of progressions opens with a letter ordinal**, A, B, C, and so on, from A in the order the rows are printed, ahead of the date. After Z come AA, AB, and so on. The engineer refers to a row by that letter, and the engineer can type it in either case. A letter never names an item's row, and a number never names a progression's, so `/current`, which prints both, gives each row an ordinal no other row has.
 
 **As the engineer stated it:** Give progressions an ordinal like items in a list, but sequence them with letters, eg: A, B, C, etc
 
-**Two SHA columns follow the handle: the commit that created the record, and the last to touch it.** They are standing columns rather than chosen ones, in every list but a list of items, a list of commits, and the lists `/features`, `/experiments`, and `/contents` print.
+**Two SHA columns follow the date: the commit that created the record, and the last to touch it.** They are standing columns rather than chosen ones, in every list but a list of items, a list of commits, and the lists `/features`, `/experiments`, and `/contents` print.
 
 ```
-|                        | created   | changed   | progression                      | state     |
-|------------------------|-----------|-----------|----------------------------------|-----------|
-| `2026-08-25T00-36-18Z` | `159985b` | `ed7ec4a` | Feature — Self-Explanation       | Abandoned |
-| `2026-10-21T05-44-56Z` | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
+|            | created   | changed   | progression                      | state     |
+|------------|-----------|-----------|----------------------------------|-----------|
+| Mon Aug 24 | `159985b` | `ed7ec4a` | Feature — Self-Explanation       | Abandoned |
+| Tue Oct 20 | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
 ```
 
 A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |                        | item                        | kind   | state  |
-|---|------------------------|-----------------------------|--------|--------|
-| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Design | Active |
-| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Idea   | Open   |
+| # |            | item                        | kind   | state  |
+|---|------------|-----------------------------|--------|--------|
+| 1 | Mon Aug 10 | A Generalized Description   | Design | Active |
+| 2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
 ```
 
 **A record never amended shows the same SHA twice, and that is the point.** The pair says whether a record has been touched since it was written. One that has not, and whose subject has moved since, is the stale case a reader is looking for.
 
 **The last column is chosen for the question.** A list of items or progressions takes the state. A list of commits asked about for their subject widths takes the width. A column nobody asked for is padding.
 
-**A list of commits takes no SHA columns**, because the handle is already the SHA and a commit has no creation distinct from itself. **A list of items takes none either**, at the engineer's direction. Its rows are referred to by their ordinal.
+**A list of commits takes no SHA columns**, because the first column is already the SHA and a commit has no creation distinct from itself. **A list of items takes none either**, at the engineer's direction. Its rows are referred to by their ordinal.
 
 **Every list of items takes a kind column, between the title and the state.** It names the kind each of the item's tags gives, written as a word, not as a tag: *Idea* for `[idea]`, *Work* for `[work]`, and *Legal matter* for `[legal-matter]`. Where the item carries several tags, it names each, separated by commas. `/items`, `/items current`, `/item list`, and `/current` each print it. A list of notes takes none, since every row is a note.
 
@@ -48,7 +52,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ## The items command
 
-**`/items` lists every item, whatever its state, oldest first.** Each row is an ordinal, the item's handle, its title, its kind, and its state. The list takes no SHA columns, as other lists of items do.
+**`/items` lists every item, whatever its state, oldest first.** Each row is an ordinal, the item's date, its title, its kind, and its state. The list takes no SHA columns, as other lists of items do.
 
 **A hidden record is counted rather than listed**, under the a-status-report-prints-a-fixed-whole-project-report rule. A Suspended item is left out of the rows, and a line below the table gives the count and the kind, as `1 suspended item`.
 
@@ -66,7 +70,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 **As the engineer stated it:** Include the item kind in the table printed by "/current"
 
-**`/current` takes an optional number, *n*, and then lists only the *n* most recent current items.** An item's recency is its handle, the time it was created. The items listed keep the order of the full list, oldest first, and their ordinals count from 1. The number does not reach the current progressions, which are listed in full. `/current 5` lists the five most recently created current items.
+**`/current` takes an optional number, *n*, and then lists only the *n* most recent current items.** An item's recency is its file name prefix, the time it was created. The items listed keep the order of the full list, oldest first, and their ordinals count from 1. The number does not reach the current progressions, which are listed in full. `/current 5` lists the five most recently created current items.
 
 **As the engineer stated it:** The "/current" command should optionally take a number that is the **n-most** recent items
 
@@ -76,7 +80,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 **As the engineer stated it:** Don't print item totals in current
 
-**Each current progression is one row: its letter ordinal, its handle, its title, and its state.** Its title is the record's own, as in `Feature — The current command`. It takes no SHA columns, since the list is a summary below the items, not a list of its own. Its letters count from A, apart from the items' numbers.
+**Each current progression is one row: its letter ordinal, its date, its title, and its state.** Its title is the record's own, as in `Feature — The current command`. It takes no SHA columns, since the list is a summary below the items, not a list of its own. Its letters count from A, apart from the items' numbers.
 
 **The progressions sit under the heading *Progressions (feature, experiment, content)*.** **Where no progression is current, the summary is one line: *No current progression.*** It is printed under that heading, in place of the rows.
 
@@ -94,17 +98,17 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 **`/features` lists the current features, and `/experiments` lists the current experiments.** A current feature or experiment is one whose `**State:**` line reads Open, Active, or Suspended, as with the current progressions `/items` lists. A record's kind is the word its title opens with, as in `Feature — The current command` or `Experiment — Rules files flattening`.
 
-**Each row is a letter ordinal, the record's handle, its title, and its state.** The list takes the letter ordinal and no SHA columns, as a list of items takes its number ordinal and no SHA columns, since each command does for its kind what `/current` does for items. The title is the record's own.
+**Each row is a letter ordinal, the record's date, its title, and its state.** The list takes the letter ordinal and no SHA columns, as a list of items takes its number ordinal and no SHA columns, since each command does for its kind what `/current` does for items. The title is the record's own.
 
-**Each command takes an optional number, *n*, and then lists only the *n* most recently created current records of its kind.** A record's recency is its handle. The records listed keep the order of the full list, oldest first, and their ordinals count from A. `/features 3` lists the three most recently created current features.
+**Each command takes an optional number, *n*, and then lists only the *n* most recently created current records of its kind.** A record's recency is its file name prefix. The records listed keep the order of the full list, oldest first, and their ordinals count from A. `/features 3` lists the three most recently created current features.
 
 **Each command takes `current` too, as `/items` does, and it changes nothing.** `/features current` lists what `/features` lists, and `/features current 3` what `/features 3` lists.
 
 **Where none of its kind is current, the list is one line:** *No current feature.* for `/features`, and *No current experiment.* for `/experiments`.
 
-**`/progressions` lists the current progressions of every kind, and `/implementations` is its alias.** It is what `/features` is, for every kind at once: a letter ordinal, the handle, the title, and the state in each row, the number and `current` as `/features` takes them, the one line *No current progression.* where none is current, and the counts under the heading *Other progressions*.
+**`/progressions` lists the current progressions of every kind, and `/implementations` is its alias.** It is what `/features` is, for every kind at once: a letter ordinal, the date, the title, and the state in each row, the number and `current` as `/features` takes them, the one line *No current progression.* where none is current, and the counts under the heading *Other progressions*.
 
-**`/contents` lists the current content, and `/content list` does the same.** It is what `/features` is, for the content kind: a letter ordinal, the handle, the title, and the state in each row, the number and `current` as `/features` takes them, the one line *No current content.* where none is current, and the counts under the heading *Other content*. The content-is-a-progression-without-the-steps-that-serve-only-code rule governs the content kind.
+**`/contents` lists the current content, and `/content list` does the same.** It is what `/features` is, for the content kind: a letter ordinal, the date, the title, and the state in each row, the number and `current` as `/features` takes them, the one line *No current content.* where none is current, and the counts under the heading *Other content*. The content-is-a-progression-without-the-steps-that-serve-only-code rule governs the content kind.
 
 **Below the list, each command counts the records of its kind it leaves out, by state.** The counts sit under the heading *Other features* or *Other experiments*, as one comma-separated sentence, as in `34 Completed, 1 Abandoned`. Each state other than Open, Active, and Suspended that some record of the kind holds is named once, with its count. The states run from the largest count to the smallest. A number given to the command does not change the counts.
 
@@ -114,9 +118,9 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 **`/notes` lists every item tagged `[note]`, oldest first.** A note is Recorded when it is written and never changes state, so every note is listed, and no state is current or left out.
 
-**Each row is an ordinal, the note's handle, and its title.** The list takes no SHA columns, as a list of items does, and no state column, since every row would read Recorded.
+**Each row is an ordinal, the note's date, and its title.** The list takes no SHA columns, as a list of items does, and no state column, since every row would read Recorded.
 
-**`/notes` takes an optional number, *n*, and then lists only the *n* most recently created notes.** A note's recency is its handle. The notes listed keep the order of the full list, oldest first, and their ordinals count from 1. `/notes 3` lists the three most recently created notes.
+**`/notes` takes an optional number, *n*, and then lists only the *n* most recently created notes.** A note's recency is its file name prefix. The notes listed keep the order of the full list, oldest first, and their ordinals count from 1. `/notes 3` lists the three most recently created notes.
 
 **Where no note exists, the list is one line:** *No note.*
 
@@ -140,7 +144,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 Rows are the better form where a field is long, and that is the whole of the exception. The two forms are not in competition — they answer to the length of what is in them.
 
-**How to apply:** on a request for a list of records, render a table where every field is short, and rows where a field runs to a sentence. Do not call a list a table unless it is formatted as columns. Where the engineer asks for a table, render one in rows and columns. In a table, put the handle first with no heading, then the creating commit and the last commit to touch it, then the title, then one column for the fact that was asked about. Give a list of commits no SHA columns. Give a list of items an ordinal ahead of the handle, and no SHA columns. Give a list of progressions a letter ordinal ahead of the handle.
+**How to apply:** on a request for a list of records, render a table where every field is short, and rows where a field runs to a sentence. Do not call a list a table unless it is formatted as columns. Where the engineer asks for a table, render one in rows and columns. In a table, put the date first with no heading, then the creating commit and the last commit to touch it, then the title, then one column for the fact that was asked about. Give a list of commits no SHA columns. Give a list of items an ordinal ahead of the date, and no SHA columns. Give a list of progressions a letter ordinal ahead of the date.
 
 Keep every column short. Where a field runs to a sentence, use rows instead.
 
@@ -148,27 +152,27 @@ Keep every column short. Where a field runs to a sentence, use rows instead.
 
 1. When the engineer asks for a list of records, render it as a table where every field is short, and as rows where a field runs to a sentence. A table presents the fields in headed columns. Rows present one record to a line, with its fields in sequence and no columns. A list is called a table only where it is formatted as columns.
 2. This applies to any record type. That includes items, progression records, log entries, loop records, work session records, migration records, journal entries, and commits.
-3. The first column is the record's handle and has no heading.
-4. The handle is the ISO-8601-UTC filename prefix for a working-state artifact, or the short SHA for a commit.
-5. Every column after the handle has a heading.
-6. Two SHA columns come right after the handle: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the handle, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z. The engineer may type a letter in either case. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has.
+3. The first column is the record's date and has no heading.
+4. For a working-state artifact, the date is its short date: the day its ISO-8601-UTC file name prefix names, in local time, as `Sat Nov 21`. Show no file name prefix. For a commit, the first column is the short SHA. Print the short date with `format-datetime.sh short-date <prefix>`, never by working it out. Two records written on the same day show the same date, and their order tells them apart.
+5. Every column after the date has a heading.
+6. Two SHA columns come right after the date: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the date, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z. The engineer may type a letter in either case. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has.
 7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features`, `/experiments`, and `/contents` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
 ```
-|                        | created   | changed   | progression                      | state     |
-|------------------------|-----------|-----------|----------------------------------|-----------|
-| `2026-08-25T00-36-18Z` | `159985b` | `ed7ec4a` | Feature — Self-Explanation       | Abandoned |
-| `2026-10-21T05-44-56Z` | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
+|            | created   | changed   | progression                      | state     |
+|------------|-----------|-----------|----------------------------------|-----------|
+| Mon Aug 24 | `159985b` | `ed7ec4a` | Feature — Self-Explanation       | Abandoned |
+| Tue Oct 20 | `d27a638` | `66d2ea2` | Feature — "Item" replaces "idea" | Completed |
 ```
 
 A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |                        | item                        | kind   | state  |
-|---|------------------------|-----------------------------|--------|--------|
-| 1 | `2026-08-10T20-54-51Z` | A Generalized Description   | Design | Active |
-| 2 | `2026-08-23T06-58-41Z` | Slasher for content and web | Idea   | Open   |
+| # |            | item                        | kind   | state  |
+|---|------------|-----------------------------|--------|--------|
+| 1 | Mon Aug 10 | A Generalized Description   | Design | Active |
+| 2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
 ```
 
 9. A record that was never amended shows the same SHA in both columns. This is intended, since it shows the record has not been touched since it was written.
@@ -187,7 +191,7 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 ## The items command
 
 1. `/items` lists every item, whatever its state, oldest first.
-2. Present each item as one row: an ordinal, its handle, its title, its kind, and its state. Give it no SHA columns.
+2. Present each item as one row: an ordinal, its date, its title, its kind, and its state. Give it no SHA columns.
 3. A Suspended item is a hidden record, counted rather than listed, under the a-status-report-prints-a-fixed-whole-project-report rule. Leave it out of the rows. Below the table, print a line giving their count and kind, as `1 suspended item`.
 4. `/items current` lists the Open, Active, and Progression items, as `/item list current` does.
 
@@ -195,10 +199,10 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 1. `/current` lists the Open and Active items, then, under the heading *Progressions (feature, experiment, content)*, the current progressions. It leaves out Progression items, whose work the progressions show. `/items current` still lists them.
 2. The current progressions are the progressions of every kind whose `**State:**` line reads Open, Active, or Suspended.
-3. Present each current progression as one row: its letter ordinal, its handle, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no SHA columns. Its letters count from A, apart from the items' numbers.
+3. Present each current progression as one row: its letter ordinal, its date, its title, and its state. The title is the record's own, as in `Feature — The current command`. Give it no SHA columns. Its letters count from A, apart from the items' numbers.
 4. Where no progression is current, print the one line *No current progression.* under that heading, in place of the rows.
 5. The items table `/current` prints takes the kind column every list of items takes.
-6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current progressions in full.
+6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by file name prefix, oldest first, with ordinals from 1. It lists the current progressions in full.
 7. Print no item totals and no *Other items* heading. Below the items table, print one line giving the count and kind of the Suspended items, as `1 suspended item`, and no line where none is Suspended.
 8. A number given to `/current` does not change this count.
 
@@ -206,8 +210,8 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 1. `/features` lists the current features, and `/experiments` lists the current experiments: those whose `**State:**` line reads Open, Active, or Suspended.
 2. A record's kind is the word its title opens with, as in `Feature — The current command`.
-3. Present each record as one row: a letter ordinal, its handle, its title, and its state. The title is the record's own. Give it no SHA columns.
-4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by handle, oldest first, with ordinals from A.
+3. Present each record as one row: a letter ordinal, its date, its title, and its state. The title is the record's own. Give it no SHA columns.
+4. Each command takes an optional number *n*, as in `/features 3`. It then lists only the *n* most recently created current records of its kind, by file name prefix, oldest first, with ordinals from A.
 5. Each command takes `current` too, as `/items` does. `/features current` does what `/features` does, and `/features current 3` what `/features 3` does.
 6. Where none of its kind is current, print the one line *No current feature.* or *No current experiment.* in place of the rows.
 7. Below the list, under the heading *Other features* or *Other experiments*, print the count of each state other than Open, Active, and Suspended that some record of the kind holds, as one comma-separated sentence: `34 Completed, 1 Abandoned`. Order the states from the largest count to the smallest.
@@ -218,8 +222,8 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 ## The notes command
 
 1. `/notes` lists every item tagged `[note]`, oldest first.
-2. Present each note as one row: an ordinal, its handle, and its title. Give it no SHA columns and no state column.
-3. `/notes` takes an optional number *n*, as in `/notes 3`. It then lists only the *n* most recently created notes, by handle, oldest first, with ordinals from 1.
+2. Present each note as one row: an ordinal, its date, and its title. Give it no SHA columns and no state column.
+3. `/notes` takes an optional number *n*, as in `/notes 3`. It then lists only the *n* most recently created notes, by file name prefix, oldest first, with ordinals from 1.
 4. Where no note exists, print the one line *No note.* in place of the rows.
 
 ## Keep every column short
@@ -268,8 +272,11 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 - 2026-11-20, revised: `/contents` and `/content list` list the current content, as the content kind settles; checked: 77 directives, 76 kept, 0 less precise, 1 lost, 1 repair: the content rule is named in Related; re-checked: 77 directives, 77 kept, 0 less precise, 0 lost
 - 2026-11-21, revised: a list of progressions numbers its rows with letters, A, B, C, and the progressions `/current` lists take one; checked: 100 directives, 98 kept, 1 less precise, 1 lost, 1 repair: that each row `/current` prints has an ordinal no other row has; the lost one, Implementation items left out where progressions are listed beside them, is carried under the term Progression, so the source decides it kept; re-checked: 100 directives, 100 kept, 0 less precise, 0 lost
 - 2026-11-21, revised: `/current` prints no item totals, and prints one line counting its Suspended items; checked: 91 directives, 91 kept, 0 less precise, 0 lost
+- 2026-11-22, revised: the first column of a list of records is its short date in local time, and a list shows no file name prefix; checked: 86 directives, 84 kept, 1 less precise, 1 lost, 1 repair: that two records of one day show the same date; re-checked: 86 directives, 86 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 the first column of a list of records was its handle: the full ISO-8601-UTC file name prefix, as `2026-11-22T02-01-28Z`. It is now the record's short date in local time, as `Sat Nov 21`, and the list shows no prefix.
 
 Until Sat Nov 21 2026 `/current` printed, below its items table under the heading *Other items*, the count of each item state other than Open and Active, as one comma-separated sentence such as `47 Realized, 18 Recorded, 12 Abandoned`, largest first, with Progression and Suspended items counted. The engineer had asked for it in these words: *At the bottom of the table that prints by "/items", print a summary of how many other of the other iten types there are*, *Print these in a comma-separated sentence*, and *Above this line, put the heading: Other items*.
 
@@ -336,7 +343,8 @@ Until Tue Oct 27 2026 the example tables showed the handle as the date alone, su
 Related:
 
 - the a-status-report-prints-a-fixed-whole-project-report rule — whose tables this agrees with
-- the file-names rule — the prefix the handle column carries
+- the file-names rule — the prefix the short date is read from
+- the dates-and-times-are-written-in-named-formats rule — the short-date format the first column takes
 - the `git` package's a-commits-sha-refers-to-the-work-the-commit-carries rule — what a SHA in those columns refers to when the engineer names one back
 - the `language` package's an-answer-is-a-list-and-prose-must-justify-itself rule — the answer's form, which this does not displace
 - the content-is-a-progression-without-the-steps-that-serve-only-code rule — the content kind, which `/contents` and `/content list` list
@@ -391,3 +399,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 10:55:05 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:19 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 14:24:10 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 18:09:30 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:12:30 PT

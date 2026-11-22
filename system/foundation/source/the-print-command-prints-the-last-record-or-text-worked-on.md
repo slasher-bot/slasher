@@ -17,13 +17,17 @@
 
 **Print the contents as they are, with nothing added and nothing left out.** Act on nothing else.
 
-**`/print <record>` prints the record the words name**, in the same form, under a line naming its path from the project root. The words name a record as they do for `/open`, under the the-open-command-opens-a-named-record-in-its-default-application rule: an ordinal from the list of records printed last, a handle, a path or a filename, or words from the record's title or filename. Where the words match more than one record, ask which, through the selection interface. Where they match none, say so, and print nothing.
+**`/print <record>` prints the record the words name**, in the same form, under a line naming its path from the project root. The words name a record as they do for `/open`, under the the-open-command-opens-a-named-record-in-its-default-application rule: an ordinal from the list of records printed last, a file name prefix, a path or a filename, or words from the record's title or filename. Where the words match more than one record, ask which, through the selection interface. Where they match none, say so, and print nothing.
 
 **`/print` is in the RECORD command domain.** `/record help` prints its help. `/print help` says that this command takes no `help`, names `/record help`, and does nothing more.
 
 **Why:** the engineer often wants to read again the thing just worked on, in full, in the chat. That thing can be a record or a draft that is not a record. A bare `/print` most often means the thing just worked on, as a bare `/open` does, so the two commands choose it the same way.
 
 **How to apply:** on a bare `/print`, take the more recent of the last principal record and the last text being worked on, and print it as it now stands. With words, print the record they name.
+
+## History
+
+Until Sun Nov 22 2026 this rule called a record's file name prefix its handle, the word the printed-list rule then used for a list's first column. A printed list now shows the short date in that column.
 
 Related:
 
@@ -34,3 +38,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Thu Nov 19 2026 at 17:14:40 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:14:05 PT
