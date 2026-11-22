@@ -1,4 +1,4 @@
-# Work Session — Email accounts per project (2026-11-18)
+# Work Session — Email accounts per project
 
 This work session started with the engineer noting that the imap fetch has no way to say which email accounts apply to a project. It became a problem item, two settled decisions about where a project lists its accounts and how the file is shaped, and an unattended feature that built them. It ended with the feature merged and the item Resolved.
 
@@ -50,4 +50,4 @@ The engineer selected the merge. The automated suite passed on `master` with 121
 
 ---
 
-Authored by Scott Bellware on Wed Nov 18 2026 at 8:30:01 PM PT
+Authored by Scott Bellware on Wed Nov 18 2026 at 20:30:01 PT

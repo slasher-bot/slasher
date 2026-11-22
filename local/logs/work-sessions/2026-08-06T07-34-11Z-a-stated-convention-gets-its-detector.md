@@ -1,4 +1,4 @@
-# Work Session — A stated convention gets its detector (Thu Aug 6 2026 00:34)
+# Work Session — A stated convention gets its detector
 
 The work session began with the deferred queue holding one item — a check that would report a rule naming one mode's planning directory without the others — and the item's own instruction to settle a question before writing anything: whether a rule that is *about* the planning artifacts can be told mechanically from one that merely *mentions* them. It became an argument that the question did not have to be answered, because the defect the convention exists to prevent has a shape that correctness does not have. It ended with the check written, eleven findings corrected along with an eighth site the check cannot see, three commits, `foundation` published, and the check's own blind spot registered as the queue's new item.
 
@@ -74,4 +74,4 @@ The work session's shape was set by an item that told the work to settle a quest
 
 ---
 
-Authored by Scott Bellware on Thu Aug 6 2026 at 12:34:11 AM PT
+Authored by Scott Bellware on Thu Aug 6 2026 at 00:34:11 PT

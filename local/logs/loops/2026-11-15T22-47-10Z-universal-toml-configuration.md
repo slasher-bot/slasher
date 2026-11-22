@@ -38,4 +38,4 @@ One file, `slasher-email.toml`, configures both the fetch and the send of an ema
 
 ---
 
-Authored by Scott Bellware on Sun Nov 15 2026 at 2:47:10 PM PT
+Authored by Scott Bellware on Sun Nov 15 2026 at 14:47:10 PT

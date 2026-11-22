@@ -40,18 +40,18 @@ Until Sun Oct 25 2026 this rule was named plans-no-code-samples.
 ---
 
 Authored by Scott Bellware on Fri Jun 5 2026 at 10 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 2:30:44 PM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 1:03:00 AM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 11:16:34 AM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 9:32:50 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 11:41:53 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 12:34:07 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
-Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 10:33:43 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:43 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 14:30:44 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 01:03:00 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 11:16:34 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 21:32:50 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 23:41:53 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 00:34:07 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT
+Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 22:33:43 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:43 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT

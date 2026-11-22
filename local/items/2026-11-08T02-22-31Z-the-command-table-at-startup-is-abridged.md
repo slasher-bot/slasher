@@ -25,12 +25,12 @@ As the engineer first stated it, on 2026-11-07: "The command table at startup is
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 6:22:31 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:24:30 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:30:33 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:33:05 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:34:20 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:36:02 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:38:03 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:41:18 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 6:51:14 PM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 18:22:31 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:24:30 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:30:33 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:33:05 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:34:20 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:36:02 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:38:03 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:41:18 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 18:51:14 PT

@@ -23,9 +23,9 @@ These will all be subcommands of `/prose`
 
 ---
 
-Authored by Scott Bellware on Wed Nov 18 2026 at 7:25:07 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 5:21:27 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 6:11:05 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 6:17:05 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 6:27:27 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 6:34:53 PM PT
+Authored by Scott Bellware on Wed Nov 18 2026 at 19:25:07 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 17:21:27 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 18:11:05 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 18:17:05 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 18:27:27 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 18:34:53 PT

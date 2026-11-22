@@ -1,4 +1,4 @@
-# Work Session — Third-party marketplace (2026-11-12)
+# Work Session — Third-party marketplace
 
 This work session began by returning to the third-party marketplace experiment, after the plugin had been renamed `slasher-install` and the installer renamed to match. It became a clean install in a scratch project, a fix for the status line, and three additions that make the plugin a full install of Slasher. It ended with the install proven from GitHub, and the experiment concluded Affirmed and merged.
 
@@ -53,4 +53,4 @@ Twice the agent raised the experiment's end on its own: once as the next step, a
 
 ---
 
-Authored by Scott Bellware on Thu Nov 12 2026 at 2:40:22 PM PT
+Authored by Scott Bellware on Thu Nov 12 2026 at 14:40:22 PT

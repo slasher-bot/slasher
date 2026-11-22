@@ -1,4 +1,4 @@
-# Session — The notice closes on its command, and a construct with no rule is named (Thu Jul 30 2026 14:29)
+# Session — The notice closes on its command, and a construct with no rule is named
 
 The session opened with `load waytide` and became four unrelated pieces of work arriving on top of it. The notice's closing ask was split so the command a developer types stands on its own line. A question about whether the prompt's tab completion could be seeded with that command was investigated against the harness itself and answered no, with two adjacent mechanisms found and both declined. Foundation was published. And a construct that occurs in test code but that no rule accounts for — the **precondition** — was named and registered as a deferred item. The through-line was not planned: three of the four concerned the same closing line of the session-start notice, or the command it names.
 
@@ -100,5 +100,5 @@ The session's four pieces of work were unconnected when they arrived and turned 
 
 ---
 
-Authored by Scott Bellware on Thu Jul 30 2026 at 2:29:55 PM PT
-Changed by Scott Bellware on Thu Jul 30 2026 at 4:16:12 PM PT
+Authored by Scott Bellware on Thu Jul 30 2026 at 14:29:55 PT
+Changed by Scott Bellware on Thu Jul 30 2026 at 16:16:12 PT

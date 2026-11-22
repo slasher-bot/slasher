@@ -54,7 +54,7 @@ The design of a rule requiring bullet-list answers, run as an experiment on `exp
 
 ---
 
-Authored by Scott Bellware on Fri Aug 7 2026 at 12:36:25 PM PT
-Changed by Scott Bellware on Fri Aug 7 2026 at 1:02:20 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 5:57:58 PM PT
+Authored by Scott Bellware on Fri Aug 7 2026 at 12:36:25 PT
+Changed by Scott Bellware on Fri Aug 7 2026 at 13:02:20 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 17:57:58 PT

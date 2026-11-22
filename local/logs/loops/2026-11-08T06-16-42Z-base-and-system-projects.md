@@ -215,9 +215,9 @@ This outcome is prose: a rule, a skill, and its help. It runs through no hinges,
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 10:16:42 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 1:25:48 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 5:47:36 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 5:50:43 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 6:03:15 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 6:06:51 PM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 22:16:42 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 13:25:48 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 17:47:36 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 17:50:43 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 18:03:15 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 18:06:51 PT

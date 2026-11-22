@@ -9,7 +9,7 @@ The "Human in the loop" question, asked when a feature or experiment starts, sho
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 1:00:21 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 1:06:40 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 1:08:36 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 13:00:21 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 13:06:40 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 13:08:36 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:03:40 PT

@@ -1,4 +1,4 @@
-# Work Session — doc-edit in the prose package (2026-11-16)
+# Work Session — doc-edit in the prose package
 
 This work session started as a comparison of Slasher's prose commands with the doc-edit skill, became a feature that brought doc-edit's way of reviewing into the `prose` package, and ended with the check on writing that draws the reader's conclusion stated once, in `language`.
 
@@ -54,4 +54,4 @@ The engineer concluded the feature Completed. It merged to `master`, and the aut
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 6:21:10 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 18:21:10 PT

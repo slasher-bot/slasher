@@ -1,4 +1,4 @@
-# Work Session — The /records command (2026-11-15)
+# Work Session — The /records command
 
 This work session started with two ideas about the records line, the *Recorded in:* list that ends a reply that wrote a record. It merged them into one idea, discontinued an idea it bore on, and built the idea as a feature. It ended with `/records show` printing the previous reply's records line again, and with the configurable display dropped.
 
@@ -46,4 +46,4 @@ The rule a-reply-that-writes-a-record-ends-with-the-records-path now says that `
 
 ---
 
-Authored by Scott Bellware on Sat Nov 14 2026 at 7:47:59 PM PT
+Authored by Scott Bellware on Sat Nov 14 2026 at 19:47:59 PT

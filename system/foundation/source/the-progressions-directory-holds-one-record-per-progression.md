@@ -241,13 +241,13 @@ Until Sun Nov 8 2026 whether the work forecast and reached a verdict was one cho
 
 Until Thu Oct 29 2026 an experiment was built to a question and a feature to an intent, and that one difference decided the forecast, the verdict, the state words, and runs. The engineer settled that either kind opens with a question or an intent, that whether it forecasts and reaches a verdict is chosen at the start, and that the tags stay as names no rule reads.
 
-Until 2026-10-25 Abandoned, Superseded, and Suspended were listed as "the concluding words both kinds take", though Suspended is defined as paused, not ended, and the filename took its state suffix "once the record concludes". That left open whether a suspended record takes the suffix, which the a-record-ends-with-its-state-in-upper-case rule gives to any record carrying a state line. The engineer settled that Suspended is a state and not a conclusion, and that the suffix follows the state line.
+Until Sun Oct 25 2026 Abandoned, Superseded, and Suspended were listed as "the concluding words both kinds take", though Suspended is defined as paused, not ended, and the filename took its state suffix "once the record concludes". That left open whether a suspended record takes the suffix, which the a-record-ends-with-its-state-in-upper-case rule gives to any record carrying a state line. The engineer settled that Suspended is a state and not a conclusion, and that the suffix follows the state line.
 
 Until Sun Oct 25 2026 this rule was named implementations-convention and titled "`waytide/local/implementations/` — the record of an implementation's lifecycle".
 
 Until Mon Oct 26 2026 this rule was named the-implementations-directory-records-each-implementations-lifecycle and titled "The implementations directory records each implementation's lifecycle".
 
-Until 2026-10-26 the absence of a state line was an implementation's in-progress state. The line was added when the record reached a word, and an open record took no filename suffix. The engineer settled that implementations take the Active state, as items do, which makes the in-progress state a word on the line and in the filename.
+Until Mon Oct 26 2026 the absence of a state line was an implementation's in-progress state. The line was added when the record reached a word, and an open record took no filename suffix. The engineer settled that implementations take the Active state, as items do, which makes the in-progress state a word on the line and in the filename.
 
 Until Tue Oct 27 2026 this rule called `[experiment]` and `[feature]` reserved tags. The engineer settled that a tag means what a rule about it says, with no reserved category.
 
@@ -262,45 +262,45 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 1:41:52 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 2:47:19 PM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 9:08:35 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 2:38:37 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:14:54 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:37 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:13 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:30 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:53 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:58 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:03 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:14 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:02:18 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:03:07 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 5:55:37 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:28:06 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 3:18:10 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 9:42:16 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 10:38:42 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 9:36:13 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 2:59:48 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:40 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 4:19:24 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 2:50:59 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:57 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:33:10 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:41:56 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:37:58 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 6:14:21 PM PT
+Authored by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 13:41:52 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 14:47:19 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 21:08:35 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 14:38:37 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:14:54 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:37 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:13 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:30 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:53 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:58 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:03 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:14 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:02:18 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:03:07 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 17:55:37 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:28:06 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 15:18:10 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 21:42:16 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 22:38:42 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 21:36:13 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 14:59:48 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:00:40 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:25:25 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:33:14 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 16:19:24 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 14:50:59 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:02:57 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:33:10 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:41:56 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 18:36:15 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:11 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:37:58 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 18:14:21 PT

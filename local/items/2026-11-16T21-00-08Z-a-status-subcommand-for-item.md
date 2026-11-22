@@ -8,6 +8,6 @@ A "status" subcommand for item. Bare, it gives the status of the current item. O
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 1:00:08 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 1:35:15 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 2:52:19 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 13:00:08 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 13:35:15 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 14:52:19 PT

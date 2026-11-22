@@ -23,8 +23,8 @@ As the engineer first stated it: "A bare \"/slasher\" command offers the user th
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 11:42:28 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 11:59:23 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 12:01:22 AM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 12:38:23 AM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 12:48:19 AM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 23:42:28 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 23:59:23 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 00:01:22 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 00:38:23 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 00:48:19 PT

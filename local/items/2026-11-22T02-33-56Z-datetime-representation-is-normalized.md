@@ -67,18 +67,18 @@ The implementation `2026-11-22T20-39-10Z-datetime-normalization` carries this it
 
 ## Tasks
 
-- [ ] A rule names each datetime format, its form, and the zone rules, and maps each use to a format.
-- [ ] Each rule that set a form of its own names the format it takes instead.
-- [ ] The record-title date rule is discontinued, and the minutes-and-seconds rule no longer exempts dated titles.
-- [ ] The work session record's title is `# Work Session — <name>`.
-- [ ] A journal entry has no datetime line under its title.
-- [ ] A helper prints a UTC file name prefix in a named format in local time.
-- [ ] A migration record states the conversion of existing records.
-- [ ] This repository's work session titles carry no date.
-- [ ] This repository's journal entries carry no datetime line, and their 12-hour footer lines are date-time-text.
-- [ ] This repository's 12-hour footer lines with seconds are date-time-text, and lines that stop at the hour are unchanged.
-- [ ] This repository's History lines give their date as date, not iso-date.
-- [ ] A Slasher project's records are converted the same way by an install.sh migration when its packages are updated.
+- [x] A rule names each datetime format, its form, and the zone rules, and maps each use to a format.
+- [x] Each rule that set a form of its own names the format it takes instead.
+- [x] The record-title date rule is discontinued, and the minutes-and-seconds rule no longer exempts dated titles.
+- [x] The work session record's title is `# Work Session — <name>`.
+- [x] A journal entry has no datetime line under its title.
+- [x] A helper prints a UTC file name prefix in a named format in local time.
+- [x] A migration record states the conversion of existing records.
+- [x] This repository's work session titles carry no date.
+- [x] This repository's journal entries carry no datetime line, and their 12-hour footer lines are date-time-text.
+- [x] This repository's 12-hour footer lines with seconds are date-time-text, and lines that stop at the hour are unchanged.
+- [x] This repository's History lines give their date as date, not iso-date.
+- [x] A Slasher project's records are converted the same way by an install.sh migration when its packages are updated.
 
 ## Settled
 
@@ -98,3 +98,4 @@ Changed by Scott Bellware on Sat Nov 21 2026 at 23:27:50 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:32:34 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:33:56 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 12:39:10 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:16:51 PT

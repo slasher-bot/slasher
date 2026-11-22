@@ -1,4 +1,4 @@
-# Work Session — Waytide is renamed Slasher (2026-11-06)
+# Work Session — Waytide is renamed Slasher
 
 This work session began with the rules loading and a change to what the startup read prints. It recorded a few ideas and turned one item into an observation. It then became the feature that renamed Waytide to Slasher: the GitHub organization and repositories, a consuming project's folder, each machine's folders, the live text, and the addresses. It ended with that feature Completed and merged into `master`, and the rename item Realized.
 
@@ -61,4 +61,4 @@ The feature was completed and merged into `master`, and its branch and worktree 
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 9:22:11 PM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 21:22:11 PT

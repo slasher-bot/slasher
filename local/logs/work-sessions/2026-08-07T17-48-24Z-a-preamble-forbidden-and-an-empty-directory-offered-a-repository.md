@@ -1,4 +1,4 @@
-# Work Session — A preamble forbidden, and an empty directory offered a repository (Fri Aug 7 2026 10:48)
+# Work Session — A preamble forbidden, and an empty directory offered a repository
 
 A short work session with three changes, the first two about what happens before a developer has done anything. The first forbids the agent explaining a prompt before showing it. The second gives `install-all.sh` something to do when the directory it is run in is not a repository yet, rather than refusing. Between them it ran the documented install end to end against the published packages and cleared the scratch it had accumulated. **The third was appended after this record was first written** — a line naming the wait at the head of the rule read, which nothing had named.
 
@@ -75,5 +75,5 @@ Both changes are about the moment before a developer has done anything — an em
 
 ---
 
-Authored by Scott Bellware on Fri Aug 7 2026 at 10:48:24 AM PT
-Changed by Scott Bellware on Fri Aug 7 2026 at 11:11:02 AM PT
+Authored by Scott Bellware on Fri Aug 7 2026 at 10:48:24 PT
+Changed by Scott Bellware on Fri Aug 7 2026 at 11:11:02 PT

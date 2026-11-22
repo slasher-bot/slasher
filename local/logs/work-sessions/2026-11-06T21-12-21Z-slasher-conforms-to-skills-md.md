@@ -1,4 +1,4 @@
-# Work Session — Slasher conforms to skills.md (2026-11-06)
+# Work Session — Slasher conforms to skills.md
 
 This work session began with the rules loading and a request to run `/current 5` after the command domain table at startup. It moved to marking the `/current` number optional. It then became a feature that brought Slasher's help and skills into line with the engineer's restructured `skills.md`, one help for each command domain. It ended with that feature Completed and merged into `master`.
 
@@ -64,4 +64,4 @@ The engineer asked whether the feature was complete, then asked to complete it. 
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 1:12:21 PM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 13:12:21 PT

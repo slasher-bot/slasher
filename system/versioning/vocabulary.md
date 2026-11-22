@@ -36,23 +36,23 @@ The versioning package's vocabulary. One term, and it is the one the package exi
 
 ---
 
-Authored by Scott Bellware on Mon Aug 3 2026 at 11:31:19 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 5:23:03 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 5:50:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 11:41:53 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 7:22:16 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 9:24:38 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 10:22:47 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 12:14:07 PM PT
-Changed by Scott Bellware on Thu Aug 13 2026 at 10:31:52 AM PT
-Changed by Scott Bellware on Thu Aug 13 2026 at 11:18:04 AM PT
-Changed by Scott Bellware on Thu Aug 13 2026 at 12:52:39 PM PT
-Changed by Scott Bellware on Thu Aug 13 2026 at 1:08:26 PM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 1:29:25 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 11:55:34 AM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 12:04:03 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 12:09:54 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:28 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 9:33:19 PM PT
+Authored by Scott Bellware on Mon Aug 3 2026 at 23:31:19 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 17:23:03 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 17:50:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 23:41:53 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 07:22:16 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 09:24:38 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 10:22:47 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 12:14:07 PT
+Changed by Scott Bellware on Thu Aug 13 2026 at 10:31:52 PT
+Changed by Scott Bellware on Thu Aug 13 2026 at 11:18:04 PT
+Changed by Scott Bellware on Thu Aug 13 2026 at 12:52:39 PT
+Changed by Scott Bellware on Thu Aug 13 2026 at 13:08:26 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 13:29:25 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 11:55:34 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 12:04:03 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 12:09:54 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 21:09:28 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 21:33:19 PT

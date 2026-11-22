@@ -1,4 +1,4 @@
-# Work Session — The observation state migration is concluded (Thu Nov 5 2026)
+# Work Session — The observation state migration is concluded
 
 This work session took up a feature left open since October 28, found it working, and concluded it. The feature is the installer's migration of a consuming project's observations from the state `Stated` to `Recorded`. It had been built and committed on its own branch in one sitting, and then left Active while other work went on.
 
@@ -29,4 +29,4 @@ The engineer concluded it Completed. Its record took confirmations that it reach
 
 ---
 
-Authored by Scott Bellware on Thu Nov 5 2026 at 9:59:54 PM PT
+Authored by Scott Bellware on Thu Nov 5 2026 at 21:59:54 PT

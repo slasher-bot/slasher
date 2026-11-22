@@ -57,7 +57,7 @@ Until Mon Nov 2 2026 the view listed every entry, with no timespan.
 
 Until Sun Oct 25 2026 this rule was named timeline-view and titled "Timeline view: on request, list every journal entry chronologically, each row led by its datetime".
 
-Until 2026-08-14 a stored index of the journal was kept, maintained by two directives: one inserted a row as an entry was written, and one rebuilt the file.
+Until Fri Aug 14 2026 a stored index of the journal was kept, maintained by two directives: one inserted a row as an entry was written, and one rebuilt the file.
 
 Related:
 
@@ -68,22 +68,22 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Fri Aug 14 2026 at 9:55:45 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:44:17 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 12:54:20 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PM PT
-Changed by Scott Bellware on Thu Oct 15 2026 at 10:16:13 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 2:41:36 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:25 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:30 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:41 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:56 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:12:53 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:21:02 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:58 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:02:38 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:01:39 PM PT
-Changed by Scott Bellware on Mon Nov 2 2026 at 9:02:21 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Authored by Scott Bellware on Fri Aug 14 2026 at 09:55:45 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:44:17 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 12:54:20 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PT
+Changed by Scott Bellware on Thu Oct 15 2026 at 22:16:13 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 14:41:36 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:25 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:30 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:41 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:56 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:12:53 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:21:02 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:45:58 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:02:38 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:01:39 PT
+Changed by Scott Bellware on Mon Nov 2 2026 at 21:02:21 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 13:08:40 PT

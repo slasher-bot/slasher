@@ -86,16 +86,16 @@ This section states what was open **when the design was written**. Items resolve
 
 ---
 
-Authored by Scott Bellware on Mon Jul 27 2026 at 12:09:02 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:11:34 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 2:30:44 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 4:31:18 PM PT
-Changed by Scott Bellware on Fri Jul 31 2026 at 11:47:03 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 10:36:12 PM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 5:57:58 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:04:53 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
+Authored by Scott Bellware on Mon Jul 27 2026 at 00:09:02 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:11:34 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 14:30:44 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 16:31:18 PT
+Changed by Scott Bellware on Fri Jul 31 2026 at 23:47:03 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 22:36:12 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 00:32:03 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 17:57:58 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:04:53 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT

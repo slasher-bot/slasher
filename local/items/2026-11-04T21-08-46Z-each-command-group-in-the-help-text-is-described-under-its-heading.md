@@ -19,5 +19,5 @@ As the engineer first stated it: "New idea: Put short description of a category 
 
 ---
 
-Authored by Scott Bellware on Wed Nov 4 2026 at 1:08:46 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 1:04:27 AM PT
+Authored by Scott Bellware on Wed Nov 4 2026 at 13:08:46 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 01:04:27 PT

@@ -43,7 +43,7 @@ The loop advances **one outcome at a time** and, in attended work, **stops at ev
 
 Until Sun Nov 15 2026 this rule said *finish* where it now says *conclude*. The begin, start, end, conclude work item settled that *conclude* replaces *finish*.
 
-Until 2026-10-24 the opening said, without qualification, that the loop stops at every gate and proceeds only on the human's go. The rule predates unattended work, whose exception was added only to How to apply. The opening and the title now carry it too.
+Until Sat Oct 24 2026 the opening said, without qualification, that the loop stops at every gate and proceeds only on the human's go. The rule predates unattended work, whose exception was added only to How to apply. The opening and the title now carry it too.
 
 Until Sun Oct 25 2026 this rule was named one-outcome-at-a-time-name-via-options.
 
@@ -63,26 +63,26 @@ Related:
 ---
 
 Authored by Scott Bellware on Sat Jun 27 2026 at 3 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 1:05:45 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:53:55 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 12:34:07 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 1:12:44 PM PT
-Changed by Scott Bellware on Thu Aug 13 2026 at 8:22:31 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 2:06:30 PM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 12:28:14 PM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 8:37:04 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 2:38:25 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 2:44:47 AM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:17 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:33 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:49 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:45:31 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:26:49 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:16:55 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:17 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 13:05:45 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:53:55 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 00:34:07 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 13:12:44 PT
+Changed by Scott Bellware on Thu Aug 13 2026 at 08:22:31 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 14:06:30 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 12:28:14 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 20:37:04 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 02:38:25 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 02:44:47 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:17 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:33 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:49 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:45:31 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:26:49 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:16:55 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:42:17 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 17:36:24 PT

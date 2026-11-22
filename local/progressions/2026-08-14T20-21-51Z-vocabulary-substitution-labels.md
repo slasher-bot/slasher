@@ -72,11 +72,11 @@ Five vocabularies carry a substitutions table, and each takes the new header row
 
 ---
 
-Authored by Scott Bellware on Fri Aug 14 2026 at 1:21:51 PM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 1:29:25 PM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 1:31:02 PM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 1:32:55 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:09:20 AM PT
+Authored by Scott Bellware on Fri Aug 14 2026 at 13:21:51 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 13:29:25 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 13:31:02 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 13:32:55 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:09:20 PT

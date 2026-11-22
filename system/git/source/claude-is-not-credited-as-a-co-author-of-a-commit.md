@@ -31,9 +31,9 @@ Until Mon Oct 26 2026 this rule was named a-commit-carries-no-claude-co-author-t
 ---
 
 Authored by Scott Bellware on Fri Jun 5 2026 at 10 AM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 11:19:33 AM PT
-Changed by Scott Bellware on Thu Oct 22 2026 at 3:27:23 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 11:39:25 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:03 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:14:43 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 11:19:33 PT
+Changed by Scott Bellware on Thu Oct 22 2026 at 15:27:23 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 23:39:25 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:03 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:14:43 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT

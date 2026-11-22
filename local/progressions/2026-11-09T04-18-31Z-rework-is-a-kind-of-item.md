@@ -35,5 +35,5 @@ The items rule describes the `[rework]` kind, in its list of kinds and its work-
 
 ---
 
-Authored by Scott Bellware on Sun Nov 8 2026 at 8:18:31 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 8:19:15 PM PT
+Authored by Scott Bellware on Sun Nov 8 2026 at 20:18:31 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 20:19:15 PT

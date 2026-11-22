@@ -1,4 +1,4 @@
-# Work Session — Forecasts asked for no longer, and items started directly (Fri Nov 20 2026)
+# Work Session — Forecasts asked for no longer, and items started directly
 
 The work session started after the `/content` command was merged. It removed the forecast question from the start of a progression and of a phase, published three packages and refreshed every Slasher project, recorded four work items, and ended with an item started directly taking an implementation.
 
@@ -41,4 +41,4 @@ An item is **started directly** where the engineer asks to start or do it withou
 
 ---
 
-Authored by Scott Bellware on Fri Nov 20 2026 at 6:24:01 PM PT
+Authored by Scott Bellware on Fri Nov 20 2026 at 18:24:01 PT

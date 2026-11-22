@@ -797,7 +797,7 @@ migrate_record_names() {
 # changes, and a journal file name is not renamed.
 migrate_datetimes() {
   [ -d "$own" ] || return 0
-  migrated=0
+  changed=$(mktemp)
 
   sessions="$own/logs/work-sessions"
   if [ -d "$sessions" ]; then
@@ -808,7 +808,7 @@ migrate_datetimes() {
       [ "$dateless" != "$title" ] || continue
       { printf '%s\n' "$dateless"; sed 1d "$record"; } > "$record.tmp"
       mv "$record.tmp" "$record"
-      migrated=$((migrated + 1))
+      echo "$record" >> "$changed"
     done
   fi
 
@@ -823,7 +823,7 @@ migrate_datetimes() {
       rm "$entry.tmp"
     else
       mv "$entry.tmp" "$entry"
-      migrated=$((migrated + 1))
+      echo "$entry" >> "$changed"
     fi
   done
 
@@ -846,13 +846,11 @@ migrate_datetimes() {
       rm "$record.tmp"
     else
       mv "$record.tmp" "$record"
-      echo "$record" >> "$own/.datetimes-converted"
+      echo "$record" >> "$changed"
     fi
   done
-  if [ -f "$own/.datetimes-converted" ]; then
-    migrated=$((migrated + $(wc -l < "$own/.datetimes-converted")))
-    rm "$own/.datetimes-converted"
-  fi
+  migrated=$(sort -u "$changed" | wc -l | tr -d ' ')
+  rm "$changed"
 
   if [ "$migrated" -gt 0 ]; then
     echo "Carried $migrated record(s) to the named datetime formats: no date in a work session title, no datetime line in a journal entry, and 24-hour footer lines."

@@ -98,7 +98,7 @@ end
 
 Until Thu Nov 5 2026 this rule had no trigger, and was read at every session start.
 
-Until 2026-10-24 the rule was a ban: a context that held only a test was not to be written, and an over-nested test was flattened. The engineer decided that naming the test directly is a preference, not to be imposed on other engineers, so such a context now draws a warning that can be suppressed.
+Until Sat Oct 24 2026 the rule was a ban: a context that held only a test was not to be written, and an over-nested test was flattened. The engineer decided that naming the test directly is a preference, not to be imposed on other engineers, so such a context now draws a warning that can be suppressed.
 
 Until Sun Oct 25 2026 this rule was named context-only-for-local-instrumentation and titled "Enclose a test in a context only when the outcome needs local instrumentation. Otherwise name the test directly, and warn of a context that holds only a test".
 
@@ -113,20 +113,20 @@ Related:
 ---
 
 Authored by Scott Bellware on Tue Jun 30 2026 at 12 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:54:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:57:57 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 1:12:44 AM PT
-Changed by Scott Bellware on Thu Oct 15 2026 at 4:49:18 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 11:55:15 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 1:56:34 AM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:26:14 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:26:40 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:27:11 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:27:22 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:11:22 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:23:42 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 8:06:23 PM PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 20:18:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:54:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:57:57 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 01:12:44 PT
+Changed by Scott Bellware on Thu Oct 15 2026 at 16:49:18 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 23:55:15 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 01:56:34 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:26:14 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:26:40 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:27:11 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:27:22 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:11:22 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:23:42 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 20:06:23 PT

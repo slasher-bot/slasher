@@ -98,24 +98,24 @@ Companion to the `lib-report` command in `ext/ruby-lang`, and to the `test-tree`
 
 Until Thu Nov 5 2026 its trigger read *When the user asks for a test report*, which was not a safe one.
 
-Until 2026-10-24 the context hierarchy alone was derived from a suite run, not from the source, while the opening said to re-derive everything from the current files. A test report is a report on the test files, so the hierarchy is now read from them as well.
+Until Sat Oct 24 2026 the context hierarchy alone was derived from a suite run, not from the source, while the opening said to re-derive everything from the current files. A test report is a report on the test files, so the hierarchy is now read from them as well.
 
 Until Sun Oct 25 2026 this rule was named test-report-format and titled ""Test report" classifies the suite and prints the two-level context hierarchy".
 
 ---
 
 Authored by Scott Bellware on Mon Jun 29 2026 at 12 AM PT
-Changed by Scott Bellware on Fri Jul 31 2026 at 10:53:02 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 11:41:53 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 1:47:26 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 1:58:40 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Fri Aug 21 2026 at 8:40:26 AM PT
-Changed by Scott Bellware on Sun Aug 23 2026 at 1:12:05 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 11:55:32 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 1:45:29 AM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:27:27 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
+Changed by Scott Bellware on Fri Jul 31 2026 at 22:53:02 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 20:18:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 23:41:53 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 01:47:26 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 01:58:40 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Fri Aug 21 2026 at 08:40:26 PT
+Changed by Scott Bellware on Sun Aug 23 2026 at 13:12:05 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 23:55:32 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 01:45:29 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:27:27 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 20:41:02 PT

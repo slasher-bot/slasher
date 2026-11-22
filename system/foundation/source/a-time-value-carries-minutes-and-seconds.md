@@ -33,7 +33,7 @@ Until Sun Nov 22 2026 a dated record title was this rule's first exception, writ
 
 Until Sat Nov 21 2026 this rule's examples showed the 12-hour time, as `3:45:12 PM PT`, which the provenance footer then took.
 
-Until 2026-10-25 How to apply said to write the seconds in every datetime that includes a time of day, naming no exception, while the body names two: a dated record title and a journal entry's filename stamp. The engineer settled that How to apply points to the exceptions the rule names, without listing them. The `Related:` label had also run into the end of How to apply's paragraph, and now stands on its own line.
+Until Sun Oct 25 2026 How to apply said to write the seconds in every datetime that includes a time of day, naming no exception, while the body names two: a dated record title and a journal entry's filename stamp. The engineer settled that How to apply points to the exceptions the rule names, without listing them. The `Related:` label had also run into the end of How to apply's paragraph, and now stands on its own line.
 
 Related:
 
@@ -75,27 +75,27 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Sun Jul 26 2026 at 11:53:08 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:41:09 AM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:42:20 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 12:34:07 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 5:06:31 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 2:54:56 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:21 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 2:13:03 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:48 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:04 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:10 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:41 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 5:52:41 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:05:00 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:58 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Authored by Scott Bellware on Sun Jul 26 2026 at 11:53:08 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:41:09 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 20:18:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:42:20 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 00:34:07 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 05:06:31 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 14:54:56 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:21 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 14:13:03 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:48 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:04 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:10 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:41 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 17:52:41 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:05:00 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:45:58 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 18:31:40 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 12:58:30 PT

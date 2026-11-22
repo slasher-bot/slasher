@@ -152,13 +152,13 @@ So a reduction that keeps only the directive is a reduction that discards the re
 
 ---
 
-Authored by Scott Bellware on Wed Sep 9 2026 at 1:36:50 PM PT
-Changed by Scott Bellware on Sat Oct 10 2026 at 9:38:18 AM PT
-Changed by Scott Bellware on Sat Oct 10 2026 at 9:50:23 AM PT
-Changed by Scott Bellware on Sat Oct 10 2026 at 9:52:32 AM PT
-Changed by Scott Bellware on Sat Oct 10 2026 at 9:54:05 AM PT
-Changed by Scott Bellware on Sat Oct 10 2026 at 9:54:48 AM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 10:36:44 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 2:38:56 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 4:28:05 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 9:26:41 AM PT
+Authored by Scott Bellware on Wed Sep 9 2026 at 13:36:50 PT
+Changed by Scott Bellware on Sat Oct 10 2026 at 09:38:18 PT
+Changed by Scott Bellware on Sat Oct 10 2026 at 09:50:23 PT
+Changed by Scott Bellware on Sat Oct 10 2026 at 09:52:32 PT
+Changed by Scott Bellware on Sat Oct 10 2026 at 09:54:05 PT
+Changed by Scott Bellware on Sat Oct 10 2026 at 09:54:48 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 22:36:44 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 14:38:56 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 16:28:05 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 09:26:41 PT

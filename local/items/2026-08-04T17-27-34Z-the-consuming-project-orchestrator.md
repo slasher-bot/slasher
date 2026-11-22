@@ -122,17 +122,17 @@ The consequence worth stating: **it runs on one machine.** It walks directories 
 
 ---
 
-Authored by Scott Bellware on Tue Aug 4 2026 at 10:27:34 AM PT
-Changed by Scott Bellware on Tue Aug 4 2026 at 10:34:48 AM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
-Changed by Scott Bellware on Thu Aug 6 2026 at 12:34:11 AM PT
-Changed by Scott Bellware on Thu Aug 6 2026 at 10:41:07 AM PT
-Changed by Scott Bellware on Thu Aug 6 2026 at 2:04:25 PM PT
-Changed by Scott Bellware on Thu Aug 6 2026 at 2:23:04 PM PT
-Changed by Scott Bellware on Fri Aug 7 2026 at 1:36:13 PM PT
-Changed by Scott Bellware on Fri Aug 7 2026 at 1:45:20 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:15:18 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
+Authored by Scott Bellware on Tue Aug 4 2026 at 10:27:34 PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:34:48 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 00:32:03 PT
+Changed by Scott Bellware on Thu Aug 6 2026 at 00:34:11 PT
+Changed by Scott Bellware on Thu Aug 6 2026 at 10:41:07 PT
+Changed by Scott Bellware on Thu Aug 6 2026 at 14:04:25 PT
+Changed by Scott Bellware on Thu Aug 6 2026 at 14:23:04 PT
+Changed by Scott Bellware on Fri Aug 7 2026 at 13:36:13 PT
+Changed by Scott Bellware on Fri Aug 7 2026 at 13:45:20 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:15:18 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT

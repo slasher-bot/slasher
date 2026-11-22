@@ -55,7 +55,7 @@ BRANCH SWITCHED
 
 Until Fri Nov 6 2026 nothing reported a switch, and the block depended on the agent loading this rule before it switched.
 
-Until 2026-10-23 the rule said that any unmissable form satisfied it, with `=` characters above and below the settled one.
+Until Fri Oct 23 2026 the rule said that any unmissable form satisfied it, with `=` characters above and below the settled one.
 
 ## Compressed
 
@@ -122,18 +122,18 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Sat Aug 8 2026 at 12:23:07 AM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 11:41:53 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Thu Oct 22 2026 at 3:26:14 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 2:12:54 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 2:13:21 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 11:39:11 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:53 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:09 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 12:53:55 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT
+Authored by Scott Bellware on Sat Aug 8 2026 at 00:23:07 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 23:41:53 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Thu Oct 22 2026 at 15:26:14 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 14:12:54 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 14:13:21 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 23:39:11 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:53 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:09 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 00:53:55 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:24:11 PT

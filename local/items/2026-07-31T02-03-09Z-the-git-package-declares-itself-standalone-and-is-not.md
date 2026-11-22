@@ -20,9 +20,9 @@ So `git` refers to `design-by-efferent`, `language`, and `foundation` while decl
 
 ---
 
-Authored by Scott Bellware on Thu Jul 30 2026 at 7:03:09 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 5:27:01 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PM PT
+Authored by Scott Bellware on Thu Jul 30 2026 at 19:03:09 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:21:39 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:25:14 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 17:27:01 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:08:27 PT

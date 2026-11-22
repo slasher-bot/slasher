@@ -1,4 +1,4 @@
-# Session — Three deferred items, a feature capability, and two diverged repositories (Sun Jul 26 2026 21:07)
+# Session — Three deferred items, a feature capability, and two diverged repositories
 
 The session began as a request to list the deferred queue and became the working-out of three items in it. It settled the resolution of every datetime written into a file, gave the experiment lifecycle a working location chosen at initiation, defined two triggers for changing it, and added a session-start check that reports work left open. It then designed, planned, and built a feature capability mirroring the experiment's. Publishing that work found two component repositories carrying commits made directly to them; both were adopted into this repository, and a check was added so the next one is found before a publish fails rather than by it. It ended by renaming the whole thing a **system** rather than a framework, and moving the project's own work under `local/`, so `waytide/` holds two directories instead of eleven.
 
@@ -356,21 +356,21 @@ Both surfaced from the same shape — work that exists but nothing announces.
 
 ---
 
-Authored by Scott Bellware on Sun Jul 26 2026 at 9:07:07 PM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 11:21:33 PM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 11:23:32 PM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 11:38:10 PM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 11:41:37 PM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 11:47:02 PM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 11:48:56 PM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 11:51:43 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:14:45 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:34:49 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:41:09 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:57:23 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:58:57 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:59:44 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 3:30:32 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 4:25:24 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 5:44:12 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 10:48:16 PM PT
+Authored by Scott Bellware on Sun Jul 26 2026 at 21:07:07 PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 23:21:33 PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 23:23:32 PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 23:38:10 PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 23:41:37 PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 23:47:02 PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 23:48:56 PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 23:51:43 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:14:45 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:34:49 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:41:09 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:57:23 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:58:57 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:59:44 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 15:30:32 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 16:25:24 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 17:44:12 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 22:48:16 PT

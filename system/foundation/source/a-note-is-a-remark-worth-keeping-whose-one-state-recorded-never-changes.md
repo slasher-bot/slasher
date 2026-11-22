@@ -112,11 +112,11 @@ Until Fri Nov 6 2026 an observation could be promoted to a rule. The rule was wr
 
 Until Fri Oct 30 2026 the state word Obsolete was Lapsed.
 
-Until 2026-10-25 the Promotion step said to "note the promotion in the two files", the rule and the observation, while the same step said to leave the observation as written and the body said nothing about the observation changes when the rule appears. The engineer settled that the rule is the observation's result, and that the observation names it in one added line.
+Until Sun Oct 25 2026 the Promotion step said to "note the promotion in the two files", the rule and the observation, while the same step said to leave the observation as written and the body said nothing about the observation changes when the rule appears. The engineer settled that the rule is the observation's result, and that the observation names it in one added line.
 
 Until Sun Oct 25 2026 this rule was named observations-convention and titled "An observation is `Stated` — a working hypothesis, not yet binding, whose one state never changes".
 
-Until 2026-10-28 an observation's one state was `Stated`, and its filename ended `-STATED`. The engineer settled `Recorded`, a word the STE dictionary approves with the meaning the state needs.
+Until Wed Oct 28 2026 an observation's one state was `Stated`, and its filename ended `-STATED`. The engineer settled `Recorded`, a word the STE dictionary approves with the meaning the state needs.
 
 Until Thu Oct 29 2026 this rule was named an-observation-is-a-working-hypothesis-whose-one-state-stated-never-changes, after the state it then named.
 
@@ -132,37 +132,37 @@ Related:
 
 Authored by Scott Bellware on Thu Jul 16 2026 at 6 PM PT
 Changed by Scott Bellware on Wed Jul 22 2026 at 10 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 2:30:44 PM PT
-Changed by Scott Bellware on Sat Aug 1 2026 at 4:34:12 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 11:41:53 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:21:39 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:25:14 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:32:18 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:24:07 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 1:41:52 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 11:14:28 PM PT
-Changed by Scott Bellware on Tue Aug 25 2026 at 10:27:24 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 3:23:16 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:14:54 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:39 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:14 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:30 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:15 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:38:01 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:03:07 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:22:08 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:53 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 5:26:52 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 2:22:19 PM PT
-Changed by Scott Bellware on Fri Oct 30 2026 at 1:48:29 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 12:45:17 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:10 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 14:30:44 PT
+Changed by Scott Bellware on Sat Aug 1 2026 at 16:34:12 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 23:41:53 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:21:39 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:25:14 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:32:18 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:24:07 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 13:41:52 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 23:14:28 PT
+Changed by Scott Bellware on Tue Aug 25 2026 at 10:27:24 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 15:23:16 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:14:54 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:39 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:14 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:30 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:15 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:38:01 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:03:07 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:22:08 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:45:53 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 17:26:52 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 14:22:19 PT
+Changed by Scott Bellware on Fri Oct 30 2026 at 13:48:29 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 00:45:17 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:10 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 18:36:15 PT

@@ -1,4 +1,4 @@
-# Work Session — Observation items become note items (2026-11-11)
+# Work Session — Observation items become note items
 
 This work session began with the idea that observation items become note items, so that *observation* names only what a test reads in Design By Efferent. It became a rewritten rule, a new command, an installer migration, and the retagging of this project's items. Along the way, `/ask-again` was changed to put an answered question again. It ended with the idea Realized.
 
@@ -43,4 +43,4 @@ The 18 items tagged `[observation]` were retagged `[note]`. Their filenames kept
 
 ---
 
-Authored by Scott Bellware on Wed Nov 11 2026 at 12:15:25 PM PT
+Authored by Scott Bellware on Wed Nov 11 2026 at 12:15:25 PT

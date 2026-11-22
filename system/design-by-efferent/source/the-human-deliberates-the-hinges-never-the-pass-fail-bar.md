@@ -66,7 +66,7 @@ The loop, by turn:
 
 ## History
 
-Until 2026-10-24 the Why named the hinges as the actuation and the resulting solubility alone, from when those were the only two, and turn two left "test mechanics" undefined. The engineer set out that mechanics are the testing framework and the ceremonies of using it, while the actuation, observation, controls, and naming are the test's content. The rule now says so, and the Why names the hinges of the hinge-cycle rule.
+Until Sat Oct 24 2026 the Why named the hinges as the actuation and the resulting solubility alone, from when those were the only two, and turn two left "test mechanics" undefined. The engineer set out that mechanics are the testing framework and the ceremonies of using it, while the actuation, observation, controls, and naming are the test's content. The rule now says so, and the Why names the hinges of the hinge-cycle rule.
 
 Until Sun Oct 25 2026 this rule was named dbe-human-in-the-loop and titled "Human-in-the-loop: deliberate the hinges (the actuation and solubility), never the pass/fail bar".
 
@@ -81,20 +81,20 @@ Related:
 ---
 
 Authored by Scott Bellware on Sat Jun 20 2026 at 11 AM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 2:21:56 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:56:35 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Thu Aug 13 2026 at 8:22:31 AM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 8:34:03 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 2:38:25 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 2:32:41 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:17 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:29 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:33 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:25:53 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:45:31 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:42:17 PM PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 14:21:56 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:56:35 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Thu Aug 13 2026 at 08:22:31 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 20:34:03 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 02:38:25 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 14:32:41 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:17 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:29 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:33 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:25:53 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:45:31 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:42:17 PT

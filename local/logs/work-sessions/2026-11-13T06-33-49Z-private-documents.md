@@ -1,4 +1,4 @@
-# Work Session — Private documents (2026-11-12)
+# Work Session — Private documents
 
 This work session began with the idea "Private documents", which held only its title. It became a `/document` command for documents kept outside the repository, then, at the engineer's direction, a `/private` command that records anything given to it only in the private directory. It ended with the feature Completed and merged into `master`.
 
@@ -62,4 +62,4 @@ The engineer said the feature works and selected *Commit and complete*. The feat
 
 ---
 
-Authored by Scott Bellware on Thu Nov 12 2026 at 10:33:49 PM PT
+Authored by Scott Bellware on Thu Nov 12 2026 at 22:33:49 PT

@@ -1,4 +1,4 @@
-# Work Session — /items, /brief, and Humanity in the Loop (2026-11-07)
+# Work Session — /items, /brief, and Humanity in the Loop
 
 This work session began with the engineer finding the expansion line displayed too often, and dialing it back. It went on to a loop in a bare `/slasher` that was added and withdrawn, a title the agent changed on its own, several ideas, and a feature that renamed `/report` to `/items` and made `/brief` a command of its own.
 
@@ -58,4 +58,4 @@ The help, the command domain table, the printed-list rule, the brief rule, and t
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 1:05:26 AM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 01:05:26 PT

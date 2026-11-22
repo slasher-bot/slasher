@@ -10,8 +10,8 @@ Added Mon Nov 16 2026: an "update" subcommand.
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 11:30:13 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 11:54:01 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 11:58:33 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 12:31:50 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 1:22:04 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 11:30:13 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:54:01 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:58:33 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 12:31:50 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 13:22:04 PT

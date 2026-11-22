@@ -65,7 +65,7 @@ Realizes the idea `2026-11-20T04-39-16Z-a-workspace-project-has-its-own-projects
 
 ---
 
-Authored by Scott Bellware on Thu Nov 19 2026 at 9:36:34 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 9:41:23 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 10:05:09 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 10:13:48 PM PT
+Authored by Scott Bellware on Thu Nov 19 2026 at 21:36:34 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 21:41:23 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 22:05:09 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 22:13:48 PT

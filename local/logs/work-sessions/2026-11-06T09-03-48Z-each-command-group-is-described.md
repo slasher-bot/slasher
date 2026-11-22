@@ -1,4 +1,4 @@
-# Work Session — Each command group is described (Fri Nov 6 2026)
+# Work Session — Each command group is described
 
 This work session gave every command group in the help text a short description, and concluded the feature that did it. It began with a work item asking that each heading in `scratch/skills.md` carry a sentence of description, both there and at the top of its root commands' help. It became a feature, and the engineer settled the fourteen descriptions one wording at a time. Several ideas and one rule change were recorded on the way.
 
@@ -35,4 +35,4 @@ The working tree had been switched to `master` by other work in the meantime, so
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 1:03:48 AM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 01:03:48 PT

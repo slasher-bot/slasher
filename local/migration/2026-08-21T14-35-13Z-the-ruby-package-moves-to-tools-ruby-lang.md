@@ -62,7 +62,7 @@ So a package may now **declare** its repository, on a `**Repository:**` line in 
 
 ---
 
-Authored by Scott Bellware on Fri Aug 21 2026 at 7:35:13 AM PT
-Changed by Scott Bellware on Fri Aug 21 2026 at 8:40:51 AM PT
-Changed by Scott Bellware on Fri Aug 21 2026 at 9:27:01 AM PT
-Changed by Scott Bellware on Fri Aug 21 2026 at 9:36:21 AM PT
+Authored by Scott Bellware on Fri Aug 21 2026 at 07:35:13 PT
+Changed by Scott Bellware on Fri Aug 21 2026 at 08:40:51 PT
+Changed by Scott Bellware on Fri Aug 21 2026 at 09:27:01 PT
+Changed by Scott Bellware on Fri Aug 21 2026 at 09:36:21 PT

@@ -59,11 +59,11 @@ Until Mon Nov 9 2026 an item had no Discontinued state, and the reversible words
 
 Until Sun Oct 25 2026 this rule was named a-record-ends-with-its-state-in-upper-case and titled "A record carrying a state line ends its filename with that state in upper case".
 
-Until 2026-08-16 the suffix was also appended to the file's contents.
+Until Sun Aug 16 2026 the suffix was also appended to the file's contents.
 
 Until Tue Oct 27 2026 live artifacts that cited a record by its full filename were reconciled at each rename. The engineer settled that a reference omits the state suffix and keeps the rest of the filename, so a state change breaks no reference.
 
-Until 2026-10-26 an implementation record took no suffix while its work was under way, since the absence of a state line was its in-progress state. Items had stopped taking an absent state on 2026-08-16, when **Active** was added. The engineer settled that implementations take the Active state too, so every item and every implementation record now carries a suffix.
+Until Mon Oct 26 2026 an implementation record took no suffix while its work was under way, since the absence of a state line was its in-progress state. Items had stopped taking an absent state on 2026-08-16, when **Active** was added. The engineer settled that implementations take the Active state too, so every item and every implementation record now carries a suffix.
 - **Thu Oct 29 2026** — the tag for a piece of work to be done was `[work-item]`, and the record was called a work item. It is `[work]`, at the engineer's direction.
 
 Related:
@@ -76,39 +76,39 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 3:03:12 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 10:31:36 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 10:28:48 PM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 10:29:41 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 4:15:31 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:21 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:14:54 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:25 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:03 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:14 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:15 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:02:18 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:03:07 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:22:08 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 5:41:58 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:53 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:02:14 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 10:35:25 AM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:28:06 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 3:18:10 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:01:29 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 10:34:26 AM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 5:26:52 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 6:34:30 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:33 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:00:03 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
+Authored by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 03:03:12 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 22:31:36 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 22:28:48 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 22:29:41 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 16:15:31 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:21 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:14:54 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:25 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:03 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:14 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:15 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:02:18 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:03:07 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:22:08 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 17:41:58 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:45:53 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:02:14 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 10:35:25 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:28:06 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 15:18:10 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:01:29 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 10:34:26 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 17:26:52 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 18:34:30 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 15:13:33 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:00:03 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:33:14 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 18:36:15 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:14 PT

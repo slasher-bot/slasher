@@ -38,5 +38,5 @@ The a-progression-runs-on-a-branch-to-a-declared-end rule squashes a phase's com
 
 ---
 
-Authored by Scott Bellware on Sun Nov 8 2026 at 8:41:28 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 9:10:37 PM PT
+Authored by Scott Bellware on Sun Nov 8 2026 at 20:41:28 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 21:10:37 PT

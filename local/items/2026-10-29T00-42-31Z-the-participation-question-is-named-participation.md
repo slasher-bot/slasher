@@ -28,8 +28,8 @@ On 2026-10-28, to the first open question: "Both". To the second: "I'm not sure,
 
 ---
 
-Authored by Scott Bellware on Wed Oct 28 2026 at 5:42:31 PM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 6:49:35 PM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 6:50:37 PM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 6:55:39 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 1:56:18 PM PT
+Authored by Scott Bellware on Wed Oct 28 2026 at 17:42:31 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 18:49:35 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 18:50:37 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 18:55:39 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 13:56:18 PT

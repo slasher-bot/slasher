@@ -1,4 +1,4 @@
-# Session — Two directories are recognized, and the first thing is set aside (Sun Aug 2 2026 22:31)
+# Session — Two directories are recognized, and the first thing is set aside
 
 Continues `2026-08-03T03-06-02Z-the-queue-empties-into-designs.md`, which closed on the deferred queue emptying. This stretch added **two artifact directories to the system** — `local/migration/` and `local/suspended/` — and then used the second one immediately, on a document the first one had just exposed as anomalous. Each step produced the next: recognizing migration surfaced a live procedure sitting in a historical record, which needed somewhere to go that did not exist, which became the suspension convention, whose first use was that document.
 
@@ -70,4 +70,4 @@ The return address was first written as YAML frontmatter, and the rule framed it
 
 ---
 
-Authored by Scott Bellware on Sun Aug 2 2026 at 10:31:33 PM PT
+Authored by Scott Bellware on Sun Aug 2 2026 at 22:31:33 PT

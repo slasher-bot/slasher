@@ -1,4 +1,4 @@
-# Work Session — The participation question shows the agent's confidence (Fri Nov 6 2026)
+# Work Session — The participation question shows the agent's confidence
 
 This work session put the agent's confidence in doing the work unattended into the question asked at a feature's or an experiment's start, and concluded the feature that did it, Affirmed. It began with the engineer asking to show a confidence percentage in the "Who decides?" question. It ended with the question renamed *Human in the loop*, four figures each explained on a line of its own, a warning and a recommendation below a floor of 70%, the figures recorded in the start confirmation, and unattended work waiting for the engineer to accept its plan. Nearly every word of the question was settled by the engineer, one wording at a time.
 
@@ -49,4 +49,4 @@ The engineer declared the feature Affirmed. No fresh agent had yet started a fea
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 2:04:42 AM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 02:04:42 PT

@@ -1,4 +1,4 @@
-# Work Session — Progressions are created and started directly (Fri Nov 20 2026)
+# Work Session — Progressions are created and started directly
 
 The work session started after the progression rename, with the packages published and every Slasher project on this machine updated and migrated. It took up the idea that a progression can be created without being a feature or an experiment, settled its commands through two revisions of the plan, and ended with the feature Completed on `master`.
 
@@ -42,4 +42,4 @@ The feature `2026-11-20T18-24-24Z-direct-progressions` added the four skills, th
 
 ---
 
-Authored by Scott Bellware on Fri Nov 20 2026 at 10:45:21 AM PT
+Authored by Scott Bellware on Fri Nov 20 2026 at 10:45:21 PT

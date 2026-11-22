@@ -1,4 +1,4 @@
-# Work Session — Startup sentence shortcut aliases (Sat Nov 21 2026)
+# Work Session — Startup sentence shortcut aliases
 
 The work session started with summaries of what Slasher gained since late October. It became a work item to change how the startup sentence shows shortcut aliases. That item was carried out as an unattended implementation, and the work session ended with the implementation Completed and merged.
 
@@ -47,4 +47,4 @@ The engineer asked for the work to be completed. The implementation concluded Co
 
 ---
 
-Authored by Scott Bellware on Sat Nov 21 2026 at 1:35:11 PM PT
+Authored by Scott Bellware on Sat Nov 21 2026 at 13:35:11 PT

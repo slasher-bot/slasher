@@ -69,21 +69,21 @@ Also on 2026-11-05: "There will also be a "system" project that is a single proj
 
 ---
 
-Authored by Scott Bellware on Thu Oct 29 2026 at 11:57:47 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 1:57:44 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 1:58:46 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 2:01:36 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 2:04:15 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 2:06:11 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 12:43:49 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 12:53:58 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 1:04:45 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 1:09:49 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 1:10:50 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 1:14:10 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 1:15:15 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 7:15:40 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 7:11:58 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 7:14:09 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 7:16:08 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 8:06:15 PM PT
+Authored by Scott Bellware on Thu Oct 29 2026 at 23:57:47 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 13:57:44 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 13:58:46 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 14:01:36 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 14:04:15 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 14:06:11 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 12:43:49 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 12:53:58 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 13:04:45 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 13:09:49 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 13:10:50 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 13:14:10 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 13:15:15 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 19:15:40 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 19:11:58 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 19:14:09 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 19:16:08 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 20:06:15 PT

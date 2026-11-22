@@ -69,7 +69,7 @@ Until Sun Nov 15 2026 this rule said *finish* where it now says *conclude*. The 
 
 Until Thu Nov 5 2026 this rule was loaded on demand, on the trigger *When planning to move content across a repository boundary, to restructure, rename, or regroup a project's files, or to conform existing content to a changed norm or standard*. Its trigger was not a safe one, so it is pre-loaded.
 
-Until 2026-10-25 the Related entry for the logs-directory rule said a migration record "is written to be executed rather than to account for what happened", while the body says the record also holds how the move actually went. The engineer settled that the record is written ahead of the move and then records what happened against the plan.
+Until Sun Oct 25 2026 the Related entry for the logs-directory rule said a migration record "is written to be executed rather than to account for what happened", while the body says the record also holds how the move actually went. The engineer settled that the record is written ahead of the move and then records what happened against the plan.
 
 Until Sun Oct 25 2026 this rule was named migration-convention and titled "`waytide/local/migration/` — execution plans for transitions of content between repository boundaries".
 
@@ -91,36 +91,36 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Sun Aug 2 2026 at 8:13:27 PM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 1:03:00 AM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 10:57:02 AM PT
-Changed by Scott Bellware on Thu Aug 6 2026 at 12:21:42 AM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:50:46 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 10:31:36 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:22:08 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:41:26 PM PT
-Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 2:36:54 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:19 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:25 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:12:23 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:13:10 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:16:22 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:18:41 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 6:38:54 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 11:55:45 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 11:58:05 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:06:33 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
+Authored by Scott Bellware on Sun Aug 2 2026 at 20:13:27 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 01:03:00 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 10:57:02 PT
+Changed by Scott Bellware on Thu Aug 6 2026 at 00:21:42 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 20:18:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:50:46 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 22:31:36 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:22:08 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:41:26 PT
+Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 14:36:54 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:19 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:25 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:12:23 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:13:10 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:16:22 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:18:41 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 18:38:54 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 20:41:02 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 17:36:24 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 23:44:42 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 23:55:45 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 23:58:05 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:06:33 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:11 PT

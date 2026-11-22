@@ -1,4 +1,4 @@
-# Work Session — The current command feature is completed (2026-11-06)
+# Work Session — The current command feature is completed
 
 This work session began as a request to change `/current-items` to `/current`, with a summary of current progressions below the items. It became a feature, built in its own worktree, and ended with the feature Completed, merged into `master`, and its item Realized.
 
@@ -52,4 +52,4 @@ The engineer asked to conclude the feature. The item received a dated Settled se
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 10:21:07 AM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 10:21:07 PT

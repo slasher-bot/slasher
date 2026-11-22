@@ -43,6 +43,14 @@ Realizes the work item `2026-11-22T02-33-56Z-datetime-representation-is-normaliz
 
 ## What happened
 
+- The dates-and-times-are-written-in-named-formats rule names six formats, the zone rules, and the format each use takes. Its compressed text, and those of the eleven rules amended to cite it, were checked against their bodies by two fresh agents: every directive kept.
+- The record-title date rule and the journal datetime-line rule are removed. What cited them is reconciled, and each removal has a log entry.
+- The agent decided that the journal timeline leads each bullet with the entry's stamp in the short-date format, since a printed list takes short-date and the datetime line it read is gone.
+- `format-datetime.sh` and the `install.sh` migration were written test-first. The loop record `local/logs/loops/` holds their hinges.
+- This repository's records were converted under the migration record `2026-11-22T21-14-21Z-datetimes-take-named-formats`.
+- No `Changed by` line was added for the conversion.
+- The automated suite passed: 152 test files.
+
 ## Confirmations
 
 - **2026-11-22** — Creation: started unattended, as the engineer asked. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -52,3 +60,4 @@ Realizes the work item `2026-11-22T02-33-56Z-datetime-representation-is-normaliz
 ---
 
 Authored by Scott Bellware on Sun Nov 22 2026 at 12:39:10 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:16:51 PT

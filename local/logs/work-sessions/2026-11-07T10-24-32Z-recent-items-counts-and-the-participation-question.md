@@ -1,4 +1,4 @@
-# Work Session — /recent, the /items counts, and the participation question (2026-11-07)
+# Work Session — /recent, the /items counts, and the participation question
 
 This work session began with a rename of `/brief` to `/recent`, and went on to add a count of the other items by state below the `/items` table. It then started item 8 as a feature, which put Unattended first in the *Human in the loop* question. Most of the session went to that question's wording. It ended with the wording settled and committed on the feature branch, and the feature still open.
 
@@ -51,4 +51,4 @@ The engineer asked whether the agent can calculate how much confidence improves 
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 2:24:32 AM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 02:24:32 PT

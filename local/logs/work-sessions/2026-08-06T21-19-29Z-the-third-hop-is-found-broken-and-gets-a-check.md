@@ -1,4 +1,4 @@
-# Work Session — The third hop is found broken and gets a check (Thu Aug 6 2026 14:19)
+# Work Session — The third hop is found broken and gets a check
 
 The work session began with two questions about the names in the check built earlier the same day — what *partial planning directories* meant, and what a *triple* was. Both names turned out to be defective and were corrected. It became a survey of the consuming projects, undertaken to settle whether a deferred item was worth doing, which found every one of them carrying a mode rule named for a mode Waytide had retired the day before. It ended with those projects repaired, refreshed, and pushed; a check packaged in `foundation` so the same drift reports itself; the deferred queue empty; and all three hops — this repository, the component repositories, and the consuming projects — current with each other.
 
@@ -79,4 +79,4 @@ The deferred item was wrong about its own subject and right to exist. It anticip
 
 ---
 
-Authored by Scott Bellware on Thu Aug 6 2026 at 2:19:29 PM PT
+Authored by Scott Bellware on Thu Aug 6 2026 at 14:19:29 PT

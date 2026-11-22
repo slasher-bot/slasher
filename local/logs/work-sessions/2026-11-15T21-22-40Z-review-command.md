@@ -1,4 +1,4 @@
-# Work Session — The /review command and the prose package (2026-11-15)
+# Work Session — The /review command and the prose package
 
 This work session started with an idea for an `/edit` command that suggests edits to content. It became a feature, which renamed the command four times and settled its design in five decisions. It created a new package, `prose`, to carry it, and changed which packages this repository activates. It ended with `/review` merged to `master`, and with Claude Code's built-in `/review` known to take the bare name.
 
@@ -64,4 +64,4 @@ The engineer concluded the feature Completed. It merged to `master`, with one co
 
 ---
 
-Authored by Scott Bellware on Sun Nov 15 2026 at 1:22:40 PM PT
+Authored by Scott Bellware on Sun Nov 15 2026 at 13:22:40 PT

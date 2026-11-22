@@ -1,4 +1,4 @@
-# Work Session — Base and system projects (2026-11-08)
+# Work Session — Base and system projects
 
 This work session began with a feature that lets a project address its base project, the machine's system project, and any registered project, by `/projects`. It turned aside many times, to aliases, a command for the agent's confidence, a one-line notice after a compaction, a `/decision` command, and the command table. It ended with the feature Completed and merged to `master`, the item back to Open, and registries at more than one level abandoned.
 
@@ -64,4 +64,4 @@ The engineer abandoned registries at more than one level, as a dated resolution 
 
 ---
 
-Authored by Scott Bellware on Sun Nov 8 2026 at 7:18:08 PM PT
+Authored by Scott Bellware on Sun Nov 8 2026 at 19:18:08 PT

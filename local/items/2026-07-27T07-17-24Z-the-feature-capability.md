@@ -52,22 +52,22 @@ One commit per task, subject-first and stating the fact rather than the bookkeep
 
 ---
 
-Authored by Scott Bellware on Mon Jul 27 2026 at 12:17:24 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:23:45 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:26:33 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:27:13 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:28:02 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:29:18 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:29:37 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:30:58 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:31:12 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 12:31:35 AM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 2:07:00 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 2:30:44 PM PT
-Changed by Scott Bellware on Sat Aug 1 2026 at 3:48:36 PM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:19:18 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:40:35 PM PT
+Authored by Scott Bellware on Mon Jul 27 2026 at 00:17:24 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:23:45 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:26:33 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:27:13 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:28:02 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:29:18 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:29:37 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:30:58 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:31:12 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 00:31:35 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 14:07:00 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 14:30:44 PT
+Changed by Scott Bellware on Sat Aug 1 2026 at 15:48:36 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 00:32:03 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:19:18 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:40:35 PT

@@ -1,4 +1,4 @@
-# Work Session — Threaded replies (Fri Nov 20 2026)
+# Work Session — Threaded replies
 
 The work session started with the threaded replies work item, which the engineer wrote as seven steps. It became an unattended implementation, was tested against a real Gmail thread and with two replies sent from it, and ended Affirmed and merged.
 
@@ -41,4 +41,4 @@ The engineer declared the test affirmed, and confirmed that it concludes the imp
 
 ---
 
-Authored by Scott Bellware on Fri Nov 20 2026 at 8:34:54 PM PT
+Authored by Scott Bellware on Fri Nov 20 2026 at 20:34:54 PT

@@ -133,6 +133,6 @@ This work session began as a question: can Waytide's rules be made much cheaper 
 
 ---
 
-Authored by Scott Bellware on Thu Oct 29 2026 at 6:50:58 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 11:01:32 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 11:38:04 PM PT
+Authored by Scott Bellware on Thu Oct 29 2026 at 18:50:58 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 23:01:32 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 23:38:04 PT

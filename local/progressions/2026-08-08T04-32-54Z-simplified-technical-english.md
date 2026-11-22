@@ -85,13 +85,13 @@ Outcomes the forecast did not account for, recorded post hoc.
 
 ---
 
-Authored by Scott Bellware on Fri Aug 7 2026 at 9:32:54 PM PT
-Changed by Scott Bellware on Fri Aug 7 2026 at 11:08:29 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 12:11:58 AM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 12:44:59 AM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 10:42:59 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:09:20 AM PT
+Authored by Scott Bellware on Fri Aug 7 2026 at 21:32:54 PT
+Changed by Scott Bellware on Fri Aug 7 2026 at 23:08:29 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 00:11:58 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 00:44:59 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 22:42:59 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:09:20 PT

@@ -1,4 +1,4 @@
-# Work Session — The design question is suspended, and the participation feature is completed (2026-11-07)
+# Work Session — The design question is suspended, and the participation feature is completed
 
 This work session began with the engineer judging the design question asked after a work session record to be obsolete. It went on to remove that question from the rules, and ended with the participation-question feature completed and merged.
 
@@ -28,4 +28,4 @@ Asked whether the feature was ready, the agent found the branch committed and me
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 2:31:53 AM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 02:31:53 PT

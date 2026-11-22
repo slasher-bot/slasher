@@ -1,4 +1,4 @@
-# Work Session — Ask-again shortcut (2026-11-11)
+# Work Session — Ask-again shortcut
 
 This work session began with the work item for a shortcut that puts an escaped question again. It became the `/ask-again` command, a rearranged command table, and `current` for `/features` and `/experiments`. It ended with the shortcut settled as `/aa`, after `/..` and `/,`, and the work item Done.
 
@@ -39,4 +39,4 @@ After the publish, the engineer changed the shortcut to `/,` and then to `/aa`. 
 
 ---
 
-Authored by Scott Bellware on Wed Nov 11 2026 at 10:40:50 AM PT
+Authored by Scott Bellware on Wed Nov 11 2026 at 10:40:50 PT

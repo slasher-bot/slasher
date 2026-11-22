@@ -43,11 +43,11 @@ Whether anything migrates the directory in a project that has already installed 
 
 ---
 
-Authored by Scott Bellware on Thu Jul 30 2026 at 9:58:10 AM PT
-Changed by Scott Bellware on Thu Jul 30 2026 at 10:31:04 AM PT
-Changed by Scott Bellware on Thu Jul 30 2026 at 11:36:08 AM PT
-Changed by Scott Bellware on Thu Jul 30 2026 at 11:36:53 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:09:20 AM PT
+Authored by Scott Bellware on Thu Jul 30 2026 at 09:58:10 PT
+Changed by Scott Bellware on Thu Jul 30 2026 at 10:31:04 PT
+Changed by Scott Bellware on Thu Jul 30 2026 at 11:36:08 PT
+Changed by Scott Bellware on Thu Jul 30 2026 at 11:36:53 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:09:20 PT

@@ -1,4 +1,4 @@
-# Work Session — The bootstrap in slasher/SLASHER.md (2026-11-16)
+# Work Session — The bootstrap in slasher/SLASHER.md
 
 This work session started with an explanation of the problem James Hughes reported: after an update, Slasher kept telling him his `AGENTS.md` was out of date. It became a choice between two solutions, a name for Slasher's own file, and a feature that moved the bootstrap out of `AGENTS.md`. It ended with the feature merged and the problem Resolved.
 
@@ -51,4 +51,4 @@ The engineer concluded the feature Completed. It merged to `master` cleanly, the
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 11:44:30 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 23:44:30 PT

@@ -49,7 +49,7 @@ The reservation is bounded by being stated. A reader who wants to know where Sla
 
 ## History
 
-Until 2026-10-24 the bold heading read *Recast the sentence instead where the approved meaning serves*, which put the recast where How to apply puts using the approved meaning. The heading now names the recast's own condition, where a different word serves.
+Until Sat Oct 24 2026 the bold heading read *Recast the sentence instead where the approved meaning serves*, which put the recast where How to apply puts using the approved meaning. The heading now names the recast's own condition, where a different word serves.
 
 Related:
 
@@ -59,15 +59,15 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Wed Aug 12 2026 at 8:47:52 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 9:06:40 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 9:24:38 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 12:14:07 PM PT
-Changed by Scott Bellware on Thu Aug 13 2026 at 1:08:26 PM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 12:11:48 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 2:41:36 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:20:27 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:20:47 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:36 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:50 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Authored by Scott Bellware on Wed Aug 12 2026 at 08:47:52 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 09:06:40 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 09:24:38 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 12:14:07 PT
+Changed by Scott Bellware on Thu Aug 13 2026 at 13:08:26 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 12:11:48 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 14:41:36 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:20:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:20:47 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:36 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 21:09:50 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT

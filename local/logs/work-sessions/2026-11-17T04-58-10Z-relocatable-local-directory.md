@@ -1,4 +1,4 @@
-# Work Session — Relocatable local directory (2026-11-16)
+# Work Session — Relocatable local directory
 
 This work session started as a plan proposed for one idea: that a project's `local` directory can be located in any directory. The engineer settled the open decisions one at a time, then started a feature, which built the capability unattended and was merged to `master`.
 
@@ -55,4 +55,4 @@ The engineer concluded the feature Completed. It merged to `master` cleanly, the
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 8:58:10 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 20:58:10 PT

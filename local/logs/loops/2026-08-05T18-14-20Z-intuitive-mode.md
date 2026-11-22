@@ -30,5 +30,5 @@ The composite renamed; the five consuming projects untouched. `install.sh` parse
 
 ---
 
-Authored by Scott Bellware on Wed Aug 5 2026 at 11:14:20 AM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 11:17:30 AM PT
+Authored by Scott Bellware on Wed Aug 5 2026 at 11:14:20 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 11:17:30 PT

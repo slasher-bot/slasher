@@ -35,5 +35,5 @@ The items rule says a correction carries `[correction]`, `[work]`, and `[rework]
 
 ---
 
-Authored by Scott Bellware on Sun Nov 8 2026 at 8:22:50 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 8:23:10 PM PT
+Authored by Scott Bellware on Sun Nov 8 2026 at 20:22:50 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 20:23:10 PT

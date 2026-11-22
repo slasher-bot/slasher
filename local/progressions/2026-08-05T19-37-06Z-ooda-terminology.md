@@ -112,10 +112,10 @@ Cycle 3 put a question that was not a hinge — how the artifact sense and the l
 
 ---
 
-Authored by Scott Bellware on Wed Aug 5 2026 at 12:37:06 PM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 9:28:17 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:09:20 AM PT
+Authored by Scott Bellware on Wed Aug 5 2026 at 12:37:06 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 21:28:17 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:09:20 PT

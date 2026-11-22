@@ -1,4 +1,4 @@
-# Work Session — A rule corrected and an option removed (Thu Aug 6 2026 19:54)
+# Work Session — A rule corrected and an option removed
 
 The work session began with a question — what a usage line is — and ended having corrected the rule that demanded one, added usage lines to seven scripts, and removed the only mechanism in the system for making Waytide invisible while it is in force. Between those, a check built earlier the same day produced its first real finding.
 
@@ -84,4 +84,4 @@ Both halves of the work session came from the same place: something written down
 
 ---
 
-Authored by Scott Bellware on Thu Aug 6 2026 at 7:54:05 PM PT
+Authored by Scott Bellware on Thu Aug 6 2026 at 19:54:05 PT

@@ -30,4 +30,4 @@ The bootstrap moves out of a project's `AGENTS.md` into `slasher/SLASHER.md`, wh
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 11:25:22 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 23:25:22 PT

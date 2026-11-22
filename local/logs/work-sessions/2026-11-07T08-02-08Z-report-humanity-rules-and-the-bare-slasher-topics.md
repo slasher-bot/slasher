@@ -1,4 +1,4 @@
-# Work Session — Report, Humanity rules, and the bare /slasher topics (2026-11-06)
+# Work Session — Report, Humanity rules, and the bare /slasher topics
 
 This work session began with the engineer finding that `/current` and `/work-status` do not say what they do. It renamed them `/report` and `/report brief`, changed Slasher's title and tagline, and made a run of changes to the command domain table and the brief report. It ended with a feature that makes a bare `/slasher` offer topics to learn about.
 
@@ -62,4 +62,4 @@ A bare `/slasher` now offers Items, Features, Experiments, and Commands through 
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 12:02:08 AM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 00:02:08 PT

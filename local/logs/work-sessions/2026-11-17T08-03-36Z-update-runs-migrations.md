@@ -1,4 +1,4 @@
-# Work Session — /package update runs the installer's migrations (2026-11-17)
+# Work Session — /package update runs the installer's migrations
 
 This work session started with a question: does an install migrate a Slasher project? It found that the migrations ran only when `install.sh agents-md` was run by hand after an update. It became a work item, and a feature that made `/package update` run the pulled installer's migrations. It ended with the feature merged and the item Completed.
 
@@ -40,4 +40,4 @@ The engineer concluded the feature Completed. Master had gained two commits from
 
 ---
 
-Authored by Scott Bellware on Tue Nov 17 2026 at 12:03:36 AM PT
+Authored by Scott Bellware on Tue Nov 17 2026 at 00:03:36 PT

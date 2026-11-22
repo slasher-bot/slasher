@@ -31,4 +31,4 @@ The fix that keeps the headings within a rule's compressed text when the compile
 
 ---
 
-Authored by Scott Bellware on Fri Oct 23 2026 at 11:45:46 PM PT
+Authored by Scott Bellware on Fri Oct 23 2026 at 23:45:46 PT

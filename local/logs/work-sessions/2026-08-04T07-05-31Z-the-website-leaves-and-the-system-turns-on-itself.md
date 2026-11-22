@@ -1,4 +1,4 @@
-# Work Session — The website leaves and the system turns on itself (Tue Aug 4 2026 00:05)
+# Work Session — The website leaves and the system turns on itself
 
 Continues `2026-08-03T05-59-57Z-the-example-project-changes-hands.md`, which closed on the website not being an interactive chat. This stretch began by answering the question that record named as blocking — what the self-explanation is produced *from* — and the answer freed everything after it. The source is a **projection**, which made the website a producible artifact rather than a written one, which made it a project of its own, which took the material out of this repository. With the website gone, the work turned inward on the composite's own naming and structure: the work-session term, the plan document's shape, two missing vocabularies, and finally a whole package dissolving into `foundation`.
 
@@ -148,4 +148,4 @@ Each of the three projects holding it dropped `waytide/system/plan/` and refresh
 
 ---
 
-Authored by Scott Bellware on Tue Aug 4 2026 at 12:05:31 AM PT
+Authored by Scott Bellware on Tue Aug 4 2026 at 00:05:31 PT

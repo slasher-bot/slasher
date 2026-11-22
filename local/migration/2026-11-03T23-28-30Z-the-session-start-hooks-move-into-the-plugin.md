@@ -35,5 +35,5 @@ The hooks that start a Waytide session move from a project's `.claude/settings.j
 
 ---
 
-Authored by Scott Bellware on Tue Nov 3 2026 at 3:28:30 PM PT
-Changed by Scott Bellware on Wed Nov 4 2026 at 11:37:47 AM PT
+Authored by Scott Bellware on Tue Nov 3 2026 at 15:28:30 PT
+Changed by Scott Bellware on Wed Nov 4 2026 at 11:37:47 PT

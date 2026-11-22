@@ -21,8 +21,8 @@ Convert consuming projects to project entries that replace the lists.
 
 ---
 
-Authored by Scott Bellware on Sun Nov 15 2026 at 11:20:02 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 11:07:29 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 11:08:49 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 11:15:09 AM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 12:20:55 PM PT
+Authored by Scott Bellware on Sun Nov 15 2026 at 23:20:02 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:07:29 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:08:49 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 11:15:09 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 12:20:55 PT

@@ -50,7 +50,7 @@ end
 
 ## History
 
-Until 2026-10-24 an error test's context was called the deliberate exception to the context-only-for-local-instrumentation rule's ban on a context that holds only a test. That rule now warns rather than bans, and does not warn of a leading `When …` context, so there is no exception to make.
+Until Sat Oct 24 2026 an error test's context was called the deliberate exception to the context-only-for-local-instrumentation rule's ban on a context that holds only a test. That rule now warns rather than bans, and does not warn of a leading `When …` context, so there is no exception to make.
 
 Until Sun Oct 25 2026 this rule was named error-test-named-fails-condition-is-context and titled "An error test is named "Fails" (or "Doesn't fail"). Its condition is promoted to a context".
 
@@ -62,16 +62,16 @@ Related:
 ---
 
 Authored by Scott Bellware on Thu Jul 16 2026 at 7 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:57:57 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 1:12:44 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 11:55:16 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 1:56:34 AM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:26:14 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:26:40 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:27:22 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:11:22 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 20:18:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:57:57 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 01:12:44 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 23:55:16 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 01:56:34 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:26:14 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:26:40 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:27:22 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:11:22 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT

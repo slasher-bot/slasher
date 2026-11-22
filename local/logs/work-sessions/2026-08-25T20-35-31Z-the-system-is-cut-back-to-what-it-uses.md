@@ -1,4 +1,4 @@
-# Work Session — The system is cut back to what it uses (Tue Aug 25 2026 13:35)
+# Work Session — The system is cut back to what it uses
 
 Seven days that began by moving one directory and ended by removing four mechanisms. The work started as ordinary maintenance — where a migration record belongs, what the system's description says — and turned into a distribution question when the Ruby package left the default set. Answering that produced **package sets**, which is the one thing built in the gap. Everything after it was subtraction: the deferred queue, the mode vocabulary, the observation lifecycle, and every hard-wrapped line came out. The last day closed eleven ideas, four of them by abandonment, and settled the largest question underneath them — the core of Waytide keeps Design By Efferent.
 
@@ -125,4 +125,4 @@ The week's shape is worth naming because it was not planned. One directory move 
 
 ---
 
-Authored by Scott Bellware on Tue Aug 25 2026 at 1:35:31 PM PT
+Authored by Scott Bellware on Tue Aug 25 2026 at 13:35:31 PT

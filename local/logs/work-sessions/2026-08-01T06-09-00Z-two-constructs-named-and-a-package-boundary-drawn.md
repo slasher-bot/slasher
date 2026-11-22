@@ -1,4 +1,4 @@
-# Session — Two constructs named, a package boundary drawn, and every package published (Fri Jul 31 2026 23:09)
+# Session — Two constructs named, a package boundary drawn, and every package published
 
 The continuation of the work recorded in `2026-07-30T21-29-55Z-the-notice-closes-on-its-command.md`, which closed with the precondition registered as a deferred item. What followed carried that item out and went further than it: **precondition** and **exceptional path** were settled as terms and written as rules, a deferred investigation was removed, restored, and then carried out, and settling it produced a rule nobody set out to write — what makes a reference to another package a **dependency** rather than a **citation**. The session ended with all five changed packages published.
 
@@ -114,4 +114,4 @@ The session's most useful rule was not on anyone's list. The citation-versus-dep
 
 ---
 
-Authored by Scott Bellware on Fri Jul 31 2026 at 11:09:00 PM PT
+Authored by Scott Bellware on Fri Jul 31 2026 at 23:09:00 PT

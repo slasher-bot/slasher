@@ -96,7 +96,7 @@ Until Fri Nov 20 2026 this rule was named a-log-entry-is-written-for-an-implemen
 
 Until Thu Oct 29 2026 the concluding entry was worded by kind: an affirmed experiment or a completed feature merged, and an experiment's verdict was its finding. The engineer settled that the verdict is chosen at the start, whatever the kind, so the entry is worded by verdict.
 
-Until 2026-10-25 the concluding entry's form was said to be decided by whether the record itself is on `master`, while a later paragraph and How to apply made the merge the test. How to apply also told every unmerged case to write the findings, which abandoned work does not have, and left out the reasoning for stopping. The engineer settled that the merge is the test, and that the findings are written where there are any, with the reasoning for stopping for abandoned work.
+Until Sun Oct 25 2026 the concluding entry's form was said to be decided by whether the record itself is on `master`, while a later paragraph and How to apply made the merge the test. How to apply also told every unmerged case to write the findings, which abandoned work does not have, and left out the reasoning for stopping. The engineer settled that the merge is the test, and that the findings are written where there are any, with the reasoning for stopping for abandoned work.
 
 Until Sun Oct 25 2026 this rule was named implementation-records-take-a-log-entry and titled "An implementation record takes a log entry — and what the concluding entry carries depends on whether the work reached `master`".
 
@@ -113,30 +113,30 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Sun Aug 16 2026 at 3:12:15 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 1:41:52 PM PT
-Changed by Scott Bellware on Tue Aug 25 2026 at 10:59:12 AM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 10:35:39 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 2:27:14 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:25 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:39 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:53 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:58 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:03 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:31 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:38:01 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:42:32 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:02:18 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 5:41:58 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 5:55:37 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 2:26:56 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 10:40:45 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
+Authored by Scott Bellware on Sun Aug 16 2026 at 03:12:15 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 13:41:52 PT
+Changed by Scott Bellware on Tue Aug 25 2026 at 10:59:12 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 22:35:39 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 14:27:14 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:25 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:39 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:53 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:58 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:03 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:31 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:38:01 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:42:32 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:02:18 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 17:41:58 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 17:55:37 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:19:36 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 14:26:56 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:41:43 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 22:40:45 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:11 PT

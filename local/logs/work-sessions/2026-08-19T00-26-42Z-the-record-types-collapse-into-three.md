@@ -1,4 +1,4 @@
-# Work Session — The record types collapse into three (2026-08-18)
+# Work Session — The record types collapse into three
 
 The work session began with a mechanical consolidation — experiments and features into one record — and became a sweep through every working-state directory Waytide had accumulated. It ended with three: `ideas/`, `progressions/`, and `logs/`. What separated the old directories from each other became tags, and the tag protocol was generalized twice on the way, each time because a prohibition turned out to have no reason under it. Along the way the `diary` package was renamed `journal`, the suspension mechanism was retired after fifteen days and eleven unrestored items, one move was made and reversed within the hour, and all four consuming projects were brought across.
 
@@ -114,4 +114,4 @@ The work session did its best work when it stopped to ask why a rule said what i
 
 ---
 
-Authored by Scott Bellware on Tue Aug 18 2026 at 5:26:42 PM PT
+Authored by Scott Bellware on Tue Aug 18 2026 at 17:26:42 PT

@@ -34,8 +34,8 @@ Slasher's prose package holds two commands: `/review`, which suggests numbered e
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 12:00:50 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 3:15:53 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 3:16:16 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 3:19:44 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 6:22:14 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 12:00:50 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 15:15:53 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 15:16:16 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 15:19:44 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 18:22:14 PT

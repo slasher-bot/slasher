@@ -51,18 +51,18 @@ The journal package's vocabulary. Five terms, and two substitutions: one keeps t
 
 ---
 
-Authored by Scott Bellware on Fri Aug 14 2026 at 2:25:00 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:11:21 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:14:56 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:44:17 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:59:11 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 1:29:25 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 11:22:43 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 11:55:34 AM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 12:04:03 PM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 4:36:21 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:28 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 9:33:19 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 12:58:37 PM PT
+Authored by Scott Bellware on Fri Aug 14 2026 at 02:25:00 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:11:21 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:14:56 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:44:17 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:59:11 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 13:29:25 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 23:22:43 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 11:55:34 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 12:04:03 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 16:36:21 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 21:09:28 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 21:33:19 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 12:58:37 PT

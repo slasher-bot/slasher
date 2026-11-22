@@ -42,16 +42,16 @@ On 2026-11-06, asked whether it was too late to change their mind about the XDG 
 
 ---
 
-Authored by Scott Bellware on Fri Oct 30 2026 at 11:25:28 AM PT
-Changed by Scott Bellware on Tue Nov 3 2026 at 11:49:57 AM PT
-Changed by Scott Bellware on Tue Nov 3 2026 at 12:09:14 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 1:05:34 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 1:43:30 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 2:14:35 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 5:25:36 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 5:32:41 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:12:58 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:19:54 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:35:40 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:45:01 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 9:22:11 PM PT
+Authored by Scott Bellware on Fri Oct 30 2026 at 11:25:28 PT
+Changed by Scott Bellware on Tue Nov 3 2026 at 11:49:57 PT
+Changed by Scott Bellware on Tue Nov 3 2026 at 12:09:14 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 13:05:34 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 13:43:30 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 14:14:35 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 17:25:36 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 17:32:41 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:12:58 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:19:54 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:35:40 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:45:01 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 21:22:11 PT

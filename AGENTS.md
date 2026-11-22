@@ -25,20 +25,20 @@ The `local/` directory holds this project's own working state. That is `logs/`, 
 **Do not run `system/foundation/install.sh` in this repo.** It installs the packages into a Slasher project and generates that project's `slasher/system/` AGENTS.md. Running it here would append a Slasher project's bootstrap to this file.
 
 The root `CLAUDE.md` is a one-line `@AGENTS.md` import. Claude Code reads `CLAUDE.md`, not `AGENTS.md`, so the import is what makes this bootstrap load in a Claude Code session. In a Slasher project `install.sh` places the same `CLAUDE.md` bridge alongside the generated `AGENTS.md`. Here in the source it is hand-maintained like this file.
-Changed by Scott Bellware on Sun Aug 9 2026 at 6:06:52 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:37:36 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:24:07 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 1:41:52 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 2:11:33 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:22:08 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:41:26 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 11:14:28 PM PT
-Changed by Scott Bellware on Mon Oct 12 2026 at 1:00:17 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Tue Nov 3 2026 at 3:52:10 PM PT
-Changed by Scott Bellware on Wed Nov 4 2026 at 6:22:34 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:56 PM PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 18:06:52 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 20:18:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:37:36 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:24:07 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 13:41:52 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 14:11:33 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:22:08 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:41:26 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 23:14:28 PT
+Changed by Scott Bellware on Mon Oct 12 2026 at 13:00:17 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Tue Nov 3 2026 at 15:52:10 PT
+Changed by Scott Bellware on Wed Nov 4 2026 at 18:22:34 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 23:44:56 PT

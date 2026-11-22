@@ -19,6 +19,6 @@ As the engineer stated it: "Use "log" rather then "decision log" in all rules an
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 10:22:31 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 10:26:16 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 10:27:24 AM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 10:22:31 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 10:26:16 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 10:27:24 PT

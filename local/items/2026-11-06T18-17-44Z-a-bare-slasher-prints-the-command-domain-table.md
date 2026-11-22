@@ -15,5 +15,5 @@ As the engineer first stated it: "A bare "/shasher" prints the table of command 
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 10:17:44 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 9:36:16 PM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 10:17:44 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 21:36:16 PT

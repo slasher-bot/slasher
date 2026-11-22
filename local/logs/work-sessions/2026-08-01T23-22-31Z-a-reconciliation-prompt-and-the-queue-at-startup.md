@@ -1,4 +1,4 @@
-# Session — A reconciliation prompt, its first use, and the deferred queue printed at startup (Sat Aug 1 2026 16:22)
+# Session — A reconciliation prompt, its first use, and the deferred queue printed at startup
 
 Continues `2026-08-01T06-09-00Z-two-constructs-named-and-a-package-boundary-drawn.md`, which closed on the package-boundary work. What followed had one shape throughout: **a mechanism was added, then immediately used on the thing that motivated it, and the use found something the reasoning had not.** A design-reconciliation prompt was written into the session-record convention and its first firing found three divergences in the one design on file. A deferred item about stranded references was settled, and the only broken reference in the repository turned out to be one this session had created. A feature then built the deferred queue's startup print, and its first rendered output was rejected on sight.
 
@@ -188,5 +188,5 @@ Two further distinctions went in: **rank is not the gate** — `**Gated on:**` s
 
 ---
 
-Authored by Scott Bellware on Sat Aug 1 2026 at 4:22:31 PM PT
-Changed by Scott Bellware on Sat Aug 1 2026 at 5:52:08 PM PT
+Authored by Scott Bellware on Sat Aug 1 2026 at 16:22:31 PT
+Changed by Scott Bellware on Sat Aug 1 2026 at 17:52:08 PT

@@ -62,8 +62,8 @@ git subtree pull --prefix slasher/system/testing git@github.com:slasher-bot/test
 ## License
 
 Slasher is licensed under the **Eventide Common Interest License**. It is source-available and free to use. It is not open source in the strict sense, since it does not permit modification. The license text is forthcoming and will be published in `LICENSE`.
-Changed by Scott Bellware on Sat Aug 8 2026 at 2:34:57 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:58:52 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 12:59:35 PM PT
-Changed by Scott Bellware on Mon Nov 2 2026 at 8:54:25 PM PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 14:34:57 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:58:52 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 12:59:35 PT
+Changed by Scott Bellware on Mon Nov 2 2026 at 20:54:25 PT

@@ -1,4 +1,4 @@
-# Work Session — Prose commands, email send, and commit-and-push (2026-11-15)
+# Work Session — Prose commands, email send, and commit-and-push
 
 This work session moved commands between packages and renamed them, then built one new command. `/reprint-and-review` moved to the `prose` package and became `/print-and-review`, with the shortcut `/pr`. Sending email moved under `/email`, and `/smtp` was removed. It ended with `/commit-and-push`, and its shortcut `/cp`, built as an unattended feature and merged to `master`.
 
@@ -44,4 +44,4 @@ The engineer recorded *Commit and push command and shortcut* as a work item and 
 
 ---
 
-Authored by Scott Bellware on Sun Nov 15 2026 at 4:15:41 PM PT
+Authored by Scott Bellware on Sun Nov 15 2026 at 16:15:41 PT

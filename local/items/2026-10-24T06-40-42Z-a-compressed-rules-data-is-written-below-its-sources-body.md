@@ -26,9 +26,9 @@ For part of Tue Oct 27 2026 this item was to stay Active until the experiment me
 
 ---
 
-Authored by Scott Bellware on Fri Oct 23 2026 at 11:40:42 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:28:06 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 1:49:49 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:49 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:48:43 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 3:08:26 PM PT
+Authored by Scott Bellware on Fri Oct 23 2026 at 23:40:42 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:28:06 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 13:49:49 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:49 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:48:43 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 15:08:26 PT

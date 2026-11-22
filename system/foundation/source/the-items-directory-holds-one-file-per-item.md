@@ -303,9 +303,9 @@ Until Sun Oct 25 2026 this rule was named items-convention and titled "`waytide/
 
 Until Mon Oct 26 2026 this rule was named the-items-directory-holds-the-projects-items-one-file-per-item and titled "The items directory holds the project's items, one file per item".
 
-Until 2026-08-25 the `**Waits for:**` and `**Priority:**` lines were the deferred queue's mechanism.
+Until Tue Aug 25 2026 the `**Waits for:**` and `**Priority:**` lines were the deferred queue's mechanism.
 
-Until 2026-10-26 **Active** meant settled, with the work expected, and **Open** meant the thinking is not settled. They were the two starting words, and an item started Active where it settled something, whether or not the work had begun. No state said the work was under way. The engineer settled that Active is the in-progress state, and that an item stays Open until its work starts, settled or not.
+Until Mon Oct 26 2026 **Active** meant settled, with the work expected, and **Open** meant the thinking is not settled. They were the two starting words, and an item started Active where it settled something, whether or not the work had begun. No state said the work was under way. The engineer settled that Active is the in-progress state, and that an item stays Open until its work starts, settled or not.
 
 Until Tue Oct 27 2026 this rule said that no tag is reserved and that a tag decides nothing, while `[work-item]`, in this rule, and `[observation]`, in the observations rule, each decide what a record is. The engineer settled that a tag means what a rule about it says, so the general claim is removed rather than restated.
 - **Thu Oct 29 2026** — the tag for a piece of work to be done was `[work-item]`, and the record was called a work item. It is `[work]`, at the engineer's direction.
@@ -321,67 +321,67 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Mon Aug 17 2026 at 11:40:35 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:24:07 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 2:11:33 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 2:47:19 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 11:04:26 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 11:14:28 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 11:22:43 PM PT
-Changed by Scott Bellware on Tue Aug 25 2026 at 10:27:24 AM PT
-Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 AM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 1:11:55 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 2:38:56 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 4:05:21 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 4:15:31 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 10:03:13 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 10:04:38 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 10:12:31 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 10:23:01 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 10:25:35 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 10:27:15 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 11:27:49 PM PT
-Changed by Scott Bellware on Thu Oct 22 2026 at 11:13:06 AM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 11:38:44 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:14:54 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:13 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:17 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:25 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:14 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:30 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:43 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:03:07 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 5:41:58 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:02:14 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 3:09:08 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:28:06 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 3:18:10 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 3:19:11 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 9:26:00 PM PT
-Changed by Scott Bellware on Wed Oct 28 2026 at 5:26:52 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 6:34:30 PM PT
-Changed by Scott Bellware on Fri Oct 30 2026 at 1:48:29 PM PT
-Changed by Scott Bellware on Mon Nov 2 2026 at 6:49:58 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 12:45:17 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 11:30:03 AM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 11:36:57 AM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 8:18:46 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 8:22:50 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 3:13:12 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:59:34 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:25 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 6:44:35 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:02:34 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 5:36:24 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 6:14:09 PM PT
+Authored by Scott Bellware on Mon Aug 17 2026 at 23:40:35 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:24:07 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 14:11:33 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 14:47:19 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 23:04:26 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 23:14:28 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 23:22:43 PT
+Changed by Scott Bellware on Tue Aug 25 2026 at 10:27:24 PT
+Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 13:11:55 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 14:38:56 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 16:05:21 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 16:15:31 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 22:03:13 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 22:04:38 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 22:12:31 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 22:23:01 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 22:25:35 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 22:27:15 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 23:27:49 PT
+Changed by Scott Bellware on Thu Oct 22 2026 at 11:13:06 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 23:38:44 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:14:54 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:13 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:17 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:25 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:14 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:30 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:43 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:03:07 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 17:41:58 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:02:14 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:19:36 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 15:09:08 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:28:06 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 15:18:10 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 15:19:11 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 21:26:00 PT
+Changed by Scott Bellware on Wed Oct 28 2026 at 17:26:52 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 18:34:30 PT
+Changed by Scott Bellware on Fri Oct 30 2026 at 13:48:29 PT
+Changed by Scott Bellware on Mon Nov 2 2026 at 18:49:58 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 00:45:17 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 10:29:16 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:30:03 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:36:57 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 20:18:46 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 20:22:50 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 15:13:12 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:59:34 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:25:25 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:33:14 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 16:23:43 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 18:44:35 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:02:34 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 17:36:24 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 18:36:15 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:11 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 18:14:09 PT

@@ -1,4 +1,4 @@
-# Work Session — Email summaries (Fri Nov 20 2026)
+# Work Session — Email summaries
 
 The work session started with two work items for the email packages, asked for together, and ended with both realized by one implementation, the first started directly since that rule took effect.
 
@@ -34,4 +34,4 @@ Asked to conclude it, the engineer selected Completed, and the merge, the worktr
 
 ---
 
-Authored by Scott Bellware on Fri Nov 20 2026 at 7:06:43 PM PT
+Authored by Scott Bellware on Fri Nov 20 2026 at 19:06:43 PT

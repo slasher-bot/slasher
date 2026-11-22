@@ -64,6 +64,6 @@ Realizes the work item `2026-11-20T07-31-09Z-progression-replaces-implementation
 
 ---
 
-Authored by Scott Bellware on Fri Nov 20 2026 at 12:18:26 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:32:16 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 9:55:31 AM PT
+Authored by Scott Bellware on Fri Nov 20 2026 at 00:18:26 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:32:16 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 09:55:31 PT

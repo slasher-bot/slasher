@@ -1,4 +1,4 @@
-# Work Session — Progression replaces implementation (Fri Nov 20 2026)
+# Work Session — Progression replaces implementation
 
 The work session started with a question about how Slasher writes content on a branch, when an article is neither a feature nor an experiment. It settled a design for content, found that *implementation* no longer named what features, experiments, and content share, and searched for a better word until the engineer chose **progression**. It then amended the migration rule so a migration may conform historical records, and ended with the rename built unattended and Completed on `master`.
 
@@ -49,4 +49,4 @@ The feature `2026-11-20T08-18-26Z-progression-replaces-implementation` ran in a 
 
 ---
 
-Authored by Scott Bellware on Fri Nov 20 2026 at 9:56:26 AM PT
+Authored by Scott Bellware on Fri Nov 20 2026 at 09:56:26 PT

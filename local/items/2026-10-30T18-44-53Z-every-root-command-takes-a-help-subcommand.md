@@ -16,5 +16,5 @@ As the engineer first stated it: "Idea: Add a help subcommand (argument) to ever
 
 ---
 
-Authored by Scott Bellware on Fri Oct 30 2026 at 11:44:53 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 10:07:49 AM PT
+Authored by Scott Bellware on Fri Oct 30 2026 at 11:44:53 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 10:07:49 PT

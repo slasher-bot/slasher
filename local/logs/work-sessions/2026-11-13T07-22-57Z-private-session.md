@@ -1,4 +1,4 @@
-# Work Session — Private session (2026-11-12)
+# Work Session — Private session
 
 This work session began after the Private documents feature, with three short changes: `foundation` published, the shortcut of `/next` changed, and a new idea recorded. It became the feature that idea asked for, `/private session`, built unattended. It ended with the feature Completed and merged into `master`.
 
@@ -54,4 +54,4 @@ The engineer tried `/private session` in another session, and it worked. That se
 
 ---
 
-Authored by Scott Bellware on Thu Nov 12 2026 at 11:22:57 PM PT
+Authored by Scott Bellware on Thu Nov 12 2026 at 23:22:57 PT

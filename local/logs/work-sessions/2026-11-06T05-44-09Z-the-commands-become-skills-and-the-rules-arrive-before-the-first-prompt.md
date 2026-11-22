@@ -1,4 +1,4 @@
-# Work Session — The commands become skills, and the rules arrive before the first prompt (Thu Nov 5 2026)
+# Work Session — The commands become skills, and the rules arrive before the first prompt
 
 This work session began with one skill to build, `/log`, and ended with the skills feature concluded and merged into `master`. Phase 1 built every command in the help text as a skill in a plugin, which came to be named `slasher` and to carry the whole session start. Phase 2 measured the session-start read, found the limit on what a hook can carry, and shrank the read by about 18%, with five rules now arriving before the first prompt. Along the way the engineer recorded several ideas, among them the base project.
 
@@ -52,5 +52,5 @@ The engineer first declared the feature Affirmed, and the record took a confirma
 
 ---
 
-Authored by Scott Bellware on Thu Nov 5 2026 at 9:44:09 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 9:55:42 PM PT
+Authored by Scott Bellware on Thu Nov 5 2026 at 21:44:09 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 21:55:42 PT

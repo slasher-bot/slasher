@@ -1,4 +1,4 @@
-# Work Session — Code examples in questions, and the AGENTS.md problem (2026-11-15)
+# Work Session — Code examples in questions, and the AGENTS.md problem
 
 This work session took an item James Hughes proposed, that a question's code examples be shown in the chat before the selection, and built it as an unattended feature. It also recorded a second report from him, that the installer fails silently where a project already has an `AGENTS.md`. It ended with the feature merged to `master` and the problem item Open.
 
@@ -52,4 +52,4 @@ The engineer concluded the feature Completed. It merged to `master`, and the aut
 
 ---
 
-Authored by Scott Bellware on Sun Nov 15 2026 at 4:42:31 PM PT
+Authored by Scott Bellware on Sun Nov 15 2026 at 16:42:31 PT

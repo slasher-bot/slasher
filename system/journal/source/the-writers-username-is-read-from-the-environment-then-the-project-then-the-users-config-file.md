@@ -220,7 +220,7 @@ Until Sun Oct 25 2026 this rule was named identity-resolution-contract and title
 
 Until Mon Oct 26 2026 this rule was named the-writers-identity-resolves-through-a-fixed-override-chain and titled "The writer's identity resolves through a fixed override chain".
 
-Until 2026-08-14 the user file sat under `identity/`.
+Until Fri Aug 14 2026 the user file sat under `identity/`.
 
 Related:
 
@@ -230,26 +230,26 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Fri Aug 14 2026 at 9:55:45 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:44:17 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:49:47 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:56:08 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 10:56:57 AM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 12:31:47 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 1:11:55 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 2:41:36 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:13:00 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:30 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:35 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:41 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:21:02 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:58 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:02:14 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:01:29 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:08 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 11:54:23 PM PT
+Authored by Scott Bellware on Fri Aug 14 2026 at 09:55:45 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:44:17 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:49:47 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:56:08 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 10:56:57 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 12:31:47 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 13:11:55 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 14:41:36 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:13:00 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:30 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:35 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:41 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:21:02 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 18:45:58 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:02:14 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:01:29 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:08 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 23:44:42 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 23:54:23 PT

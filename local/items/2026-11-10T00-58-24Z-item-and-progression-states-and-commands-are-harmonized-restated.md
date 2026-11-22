@@ -72,16 +72,16 @@ Existing items and progression records are converted to these states, under a mi
 
 ---
 
-Authored by Scott Bellware on Mon Nov 9 2026 at 4:58:24 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:04:37 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:05:54 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:08:55 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:19:56 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:21:46 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:24:22 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:28:00 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:37:25 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 8:49:07 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:05:16 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:25:33 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:40:49 PM PT
+Authored by Scott Bellware on Mon Nov 9 2026 at 16:58:24 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:04:37 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:05:54 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:08:55 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:19:56 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:21:46 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:24:22 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:28:00 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:37:25 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 20:49:07 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:05:16 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:25:33 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:40:49 PT

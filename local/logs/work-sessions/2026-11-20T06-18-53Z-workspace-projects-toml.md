@@ -1,4 +1,4 @@
-# Work Session — A workspace project's own projects.toml (Thu Nov 19 2026)
+# Work Session — A workspace project's own projects.toml
 
 The work session started with an idea that held one sentence: a workspace project can have its own `projects.toml`. It became a set of suggestions for the decisions the idea left open, then an unattended feature that built them. It ended with a check of the `/projects` rule's compressed text, which found gaps from this feature and from four earlier revisions, and with the feature Completed on `master`.
 
@@ -66,4 +66,4 @@ The **compressed text** is the shorter version of a rule that the loader prints 
 
 ---
 
-Authored by Scott Bellware on Thu Nov 19 2026 at 10:18:53 PM PT
+Authored by Scott Bellware on Thu Nov 19 2026 at 22:18:53 PT

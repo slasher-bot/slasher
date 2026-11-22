@@ -91,11 +91,11 @@ Wrapping the body in the message itself rather than leaving it to the terminal k
 
 ## History
 
-Until 2026-10-23 the rule made truncation available wherever the subject was not the agent's to rewrite, which could reach beyond a journal entry.
+Until Fri Oct 23 2026 the rule made truncation available wherever the subject was not the agent's to rewrite, which could reach beyond a journal entry.
 
 Until Sun Oct 25 2026 this rule was named commit-message-widths.
 
-Until 2026-08-18 the journal's commit message read `Diary entry: <subject> (Tue Jun 16 2026)`, which this rule gave as its worked case.
+Until Tue Aug 18 2026 the journal's commit message read `Diary entry: <subject> (Tue Jun 16 2026)`, which this rule gave as its worked case.
 
 Related:
 
@@ -105,18 +105,18 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Mon Aug 17 2026 at 11:58:01 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:18:34 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:29:06 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 2:57:52 PM PT
-Changed by Scott Bellware on Thu Oct 22 2026 at 3:26:20 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 3:56:43 PM PT
-Changed by Scott Bellware on Fri Oct 23 2026 at 11:39:15 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:52 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:58 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:14 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:35 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:02:14 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Authored by Scott Bellware on Mon Aug 17 2026 at 23:58:01 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 00:18:34 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 00:29:06 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 12:31:05 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 14:57:52 PT
+Changed by Scott Bellware on Thu Oct 22 2026 at 15:26:20 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 15:56:43 PT
+Changed by Scott Bellware on Fri Oct 23 2026 at 23:39:15 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:52 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:58 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:14 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:35 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:02:14 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT

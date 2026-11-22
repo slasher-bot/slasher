@@ -9,7 +9,7 @@ When current items and progressions are printed together, as is the case with so
 
 ---
 
-Authored by Scott Bellware on Fri Nov 13 2026 at 4:25:56 PM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 4:59:15 PM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 5:01:09 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT
+Authored by Scott Bellware on Fri Nov 13 2026 at 16:25:56 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 16:59:15 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 17:01:09 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:03:40 PT

@@ -10,7 +10,7 @@ The term stands in the at-the-implementation-hinge-the-engineer-chooses-a-direct
 
 ---
 
-Authored by Scott Bellware on Wed Nov 11 2026 at 1:16:17 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 1:34:13 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 2:09:56 PM PT
-Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:40 PM PT
+Authored by Scott Bellware on Wed Nov 11 2026 at 13:16:17 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 13:34:13 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 14:09:56 PT
+Changed by Scott Bellware on Sat Nov 14 2026 at 16:03:40 PT

@@ -323,7 +323,7 @@ Until Mon Nov 2 2026 this rule did not say how a list of items is asked for by s
 
 Until Sun Oct 25 2026 this rule was named a-record-list-is-a-table and titled "A list of records presented on request is a table".
 
-Until 2026-10-25 the rule opened by saying to render a list of records as a table, and gave rows, the form for a field that runs to a sentence, only in a later section. The engineer settled that the opening and How to apply say which form a printed list takes, and when.
+Until Sun Oct 25 2026 the rule opened by saying to render a list of records as a table, and gave rows, the form for a field that runs to a sentence, only in a later section. The engineer settled that the opening and How to apply say which form a printed list takes, and when.
 
 The engineer also settled the same day that a list is not called a table unless it is formatted as columns.
 
@@ -343,51 +343,51 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Sun Aug 23 2026 at 12:22:25 AM PT
-Changed by Scott Bellware on Sun Aug 23 2026 at 1:07:00 AM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 11:04:26 PM PT
-Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:21 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:16:48 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:26 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:46 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 8:12:20 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 8:12:44 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 8:14:47 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:42:32 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 1:47:00 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 8:54:53 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 1:46:43 PM PT
-Changed by Scott Bellware on Mon Nov 2 2026 at 6:58:44 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 8:41:02 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 10:17:13 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 10:33:13 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 12:31:45 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 11:08:55 PM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 1:04:28 AM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 1:30:58 AM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 11:19:47 AM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 11:55:17 AM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 10:53:56 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:04:16 PM PT
-Changed by Scott Bellware on Mon Nov 9 2026 at 9:33:14 PM PT
-Changed by Scott Bellware on Tue Nov 10 2026 at 10:13:39 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 12:50:34 AM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 2:56:24 PM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 3:39:16 PM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 4:23:43 PM PT
-Changed by Scott Bellware on Fri Nov 13 2026 at 4:59:30 PM PT
-Changed by Scott Bellware on Wed Nov 18 2026 at 10:33:31 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:43 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 10:37:55 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 10:51:26 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 10:55:05 AM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:19 PM PT
-Changed by Scott Bellware on Sat Nov 21 2026 at 2:24:10 PM PT
-Changed by Scott Bellware on Sat Nov 21 2026 at 6:09:30 PM PT
+Authored by Scott Bellware on Sun Aug 23 2026 at 00:22:25 PT
+Changed by Scott Bellware on Sun Aug 23 2026 at 01:07:00 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 23:04:26 PT
+Changed by Scott Bellware on Tue Aug 25 2026 at 10:52:18 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:21 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:16:48 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:26 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:46 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 20:12:20 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 20:12:44 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 20:14:47 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:42:32 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 13:47:00 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 20:54:53 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:41:43 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 13:46:43 PT
+Changed by Scott Bellware on Mon Nov 2 2026 at 18:58:44 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 20:41:02 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 10:17:13 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 10:33:13 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 12:31:45 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 23:08:55 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 01:04:28 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 01:30:58 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:19:47 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:55:17 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 22:53:56 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:04:16 PT
+Changed by Scott Bellware on Mon Nov 9 2026 at 21:33:14 PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 22:13:39 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 00:50:34 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 14:56:24 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 15:39:16 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 16:23:43 PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 16:59:30 PT
+Changed by Scott Bellware on Wed Nov 18 2026 at 22:33:31 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:43 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:37:55 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:51:26 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 10:55:05 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:19 PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 14:24:10 PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 18:09:30 PT

@@ -1,4 +1,4 @@
-# Work Session — /items counts, the improvement kind, and the status line's second line (2026-11-07)
+# Work Session — /items counts, the improvement kind, and the status line's second line
 
 The work session began with small corrections to what `/items` prints, and went on to abandon one item and realize another, the improvement kind. It ended with a feature built through the design loop: the status line's second line, which names the progression under way.
 
@@ -59,4 +59,4 @@ The engineer asked for most first presentations of a question to be clarified. T
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 12:40:14 PM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 12:40:14 PT

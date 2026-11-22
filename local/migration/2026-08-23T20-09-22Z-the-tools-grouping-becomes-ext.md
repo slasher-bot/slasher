@@ -44,7 +44,7 @@ The directory that groups Waytide's extensions and externals is renamed from `to
 - **2026-08-23 — one project's package-set declaration was rewritten.** Its `**Inactive:**` line named `tools/ruby-lang`. A new declaration names `ext/ruby-lang`, the set is otherwise unchanged, and the earlier record stands as what was declared at the time.
 
 ---
-Authored by Scott Bellware on Sun Aug 23 2026 at 1:09:22 PM PT
-Changed by Scott Bellware on Sun Aug 23 2026 at 1:31:50 PM PT
-Changed by Scott Bellware on Sun Aug 23 2026 at 1:41:07 PM PT
-Changed by Scott Bellware on Sun Aug 23 2026 at 1:47:33 PM PT
+Authored by Scott Bellware on Sun Aug 23 2026 at 13:09:22 PT
+Changed by Scott Bellware on Sun Aug 23 2026 at 13:31:50 PT
+Changed by Scott Bellware on Sun Aug 23 2026 at 13:41:07 PT
+Changed by Scott Bellware on Sun Aug 23 2026 at 13:47:33 PT

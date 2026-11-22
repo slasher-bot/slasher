@@ -13,5 +13,5 @@ As the engineer first stated it: "\"/sup?\" alias for work-status"
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 12:59:54 AM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 9:41:59 AM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 00:59:54 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 09:41:59 PT

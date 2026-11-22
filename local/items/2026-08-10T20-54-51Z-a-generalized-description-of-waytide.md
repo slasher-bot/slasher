@@ -64,11 +64,11 @@ The second is what the self-explanation aspiration's **projection** already desc
 
 ---
 
-Authored by Scott Bellware on Mon Aug 10 2026 at 1:54:51 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:19:18 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
-Changed by Scott Bellware on Thu Aug 20 2026 at 1:11:54 PM PT
-Changed by Scott Bellware on Thu Aug 20 2026 at 3:35:12 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 5:24:55 PM PT
+Authored by Scott Bellware on Mon Aug 10 2026 at 13:54:51 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:19:18 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT
+Changed by Scott Bellware on Thu Aug 20 2026 at 13:11:54 PT
+Changed by Scott Bellware on Thu Aug 20 2026 at 15:35:12 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 17:24:55 PT

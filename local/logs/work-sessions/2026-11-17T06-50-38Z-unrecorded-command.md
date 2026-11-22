@@ -1,4 +1,4 @@
-# Work Session — The /unrecorded command (2026-11-16)
+# Work Session — The /unrecorded command
 
 This work session started as an idea for a command that mirrors `/private`, but writes no records at all. It became a plan, a list of the records a session would leave unwritten, and a feature that built the command unattended and was merged to `master`.
 
@@ -47,4 +47,4 @@ The engineer concluded the feature Completed. It merged to `master` cleanly, the
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 10:50:38 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 22:50:38 PT

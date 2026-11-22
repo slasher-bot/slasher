@@ -80,7 +80,7 @@ Until Mon Oct 26 2026 this rule called the records under `logs/` "the running re
 
 Until Mon Oct 26 2026 this rule was named the-logs-directory-groups-the-running-records and titled "The logs directory groups the running records".
 
-Until 2026-08-18 `log/` was the only log directory.
+Until Tue Aug 18 2026 `log/` was the only log directory.
 
 Until Tue Oct 27 2026 this rule said the log holds one file per decision. Not every entry records a decision, so the engineer settled that it holds one file per entry.
 
@@ -92,27 +92,27 @@ Related:
 
 ---
 
-Authored by Scott Bellware on Tue Aug 18 2026 at 1:41:52 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:22:08 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:41:26 PM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 1:11:55 PM PT
-Changed by Scott Bellware on Wed Oct 14 2026 at 9:08:35 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:37 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:39 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:19 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:25 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:41 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:38:01 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:42:32 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:12:23 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:13:10 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:16:22 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:38:10 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 7:02:14 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 10:02:47 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
+Authored by Scott Bellware on Tue Aug 18 2026 at 13:41:52 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:22:08 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:41:26 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 13:11:55 PT
+Changed by Scott Bellware on Wed Oct 14 2026 at 21:08:35 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:37 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:39 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:19 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:25 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:41 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:38:01 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:42:32 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:12:23 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:13:10 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:16:22 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:38:10 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 19:02:14 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 22:02:47 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:11 PT

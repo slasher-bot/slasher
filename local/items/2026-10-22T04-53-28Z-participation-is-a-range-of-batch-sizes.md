@@ -20,7 +20,7 @@ As the engineer first stated it: "Batch size, or level of detail in the decision
 
 ---
 
-Authored by Scott Bellware on Wed Oct 21 2026 at 9:53:28 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:54:30 PM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:55:12 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 1:04:20 PM PT
+Authored by Scott Bellware on Wed Oct 21 2026 at 21:53:28 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 21:54:30 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 21:55:12 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 13:04:20 PT

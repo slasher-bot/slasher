@@ -1,4 +1,4 @@
-# Work Session — Harmonized states (2026-11-09)
+# Work Session — Harmonized states
 
 This work session began with a request to discontinue a work item, and items had no Discontinued state. It became a comparison of the states and commands of items and progressions, a plan to give both one set of each, and a feature that built the plan. It ended with the feature Completed and merged, and the plan Realized.
 
@@ -57,4 +57,4 @@ The engineer asked for the compressed text of the seven revised rules to be chec
 
 ---
 
-Authored by Scott Bellware on Mon Nov 9 2026 at 9:44:18 PM PT
+Authored by Scott Bellware on Mon Nov 9 2026 at 21:44:18 PT

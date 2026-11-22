@@ -1,4 +1,4 @@
-# Work Session — The answer form is ruled, and a tool finds its third position (Fri Aug 7 2026 13:43)
+# Work Session — The answer form is ruled, and a tool finds its third position
 
 An experiment ran to a verdict and a classification came apart. The experiment asked whether bullet lists should be the required form for an agent's answers; it was affirmed, merged, and its branch deleted, and the rule it produced was corrected twice more from use. Then a question about who can run the orchestrator exposed that its placement rested on the wrong test, and moved it into a package.
 
@@ -88,4 +88,4 @@ The experiment's rule was corrected twice within an hour of existing, both times
 
 ---
 
-Authored by Scott Bellware on Fri Aug 7 2026 at 1:43:37 PM PT
+Authored by Scott Bellware on Fri Aug 7 2026 at 13:43:37 PT

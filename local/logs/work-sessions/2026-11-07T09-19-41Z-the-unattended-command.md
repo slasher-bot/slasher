@@ -1,4 +1,4 @@
-# Work Session — The /unattended command (2026-11-07)
+# Work Session — The /unattended command
 
 This work session began with the engineer typing *Srtart #11*, and became an attended feature that built `/unattended`: a command that has the agent carry out a request on its own once a plan is accepted. An idea about the verdict question was recorded along the way. It ended with the feature completed, and the engineer asking how to test the command.
 
@@ -49,4 +49,4 @@ The command governs the agent's behavior, so no automated test reaches it. The e
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 1:19:41 AM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 01:19:41 PT

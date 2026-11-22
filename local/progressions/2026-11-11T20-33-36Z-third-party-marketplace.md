@@ -82,28 +82,28 @@ Settled by the engineer on 2026-11-11, before the first hinge.
 
 ---
 
-Authored by Scott Bellware on Wed Nov 11 2026 at 12:33:36 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:02 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 12:46:14 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:05 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 1:09:35 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 3:14:03 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 9:05:43 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 9:10:12 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 9:16:33 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 9:27:33 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 9:51:15 AM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 9:56:30 AM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 AM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 10:04:51 AM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 11:01:13 AM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 11:41:41 AM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 11:49:23 AM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 1:28:02 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 1:32:28 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 1:41:34 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 1:46:52 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 2:12:32 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 2:20:23 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 2:31:24 PM PT
-Changed by Scott Bellware on Thu Nov 12 2026 at 2:39:12 PM PT
+Authored by Scott Bellware on Wed Nov 11 2026 at 12:33:36 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:45:02 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:46:14 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 12:59:05 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 13:09:35 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 15:14:03 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 21:05:43 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 21:10:12 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 21:16:33 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 21:27:33 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 09:51:15 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 09:56:30 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 10:01:46 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 10:04:51 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:01:13 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:41:41 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 11:49:23 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 13:28:02 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 13:32:28 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 13:41:34 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 13:46:52 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 14:12:32 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 14:20:23 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 14:31:24 PT
+Changed by Scott Bellware on Thu Nov 12 2026 at 14:39:12 PT

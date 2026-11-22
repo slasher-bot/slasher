@@ -100,5 +100,5 @@ The feature that takes a tool-named package out of Waytide's default distributio
 
 ---
 
-Authored by Scott Bellware on Thu Aug 20 2026 at 11:09:44 PM PT
-Changed by Scott Bellware on Fri Aug 21 2026 at 9:10:48 AM PT
+Authored by Scott Bellware on Thu Aug 20 2026 at 23:09:44 PT
+Changed by Scott Bellware on Fri Aug 21 2026 at 09:10:48 PT

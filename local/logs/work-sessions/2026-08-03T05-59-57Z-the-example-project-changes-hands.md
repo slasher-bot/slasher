@@ -1,4 +1,4 @@
-# Session — The example project changes hands, and the replay becomes a projection (Sun Aug 2 2026 22:59)
+# Session — The example project changes hands, and the replay becomes a projection
 
 Continues `2026-08-03T05-31-33Z-two-directories-recognized-and-the-first-suspension.md`, which closed on the phase-B runbook being suspended. This is a short stretch and entirely design work: the example project moved from a project that would have to be built to one that already exists, and then the way that project is presented was settled as a **projection** rather than a replay of its records.
 
@@ -94,7 +94,7 @@ Both wrong. **The website's chat is a content and style element** — a rendered
 
 ---
 
-Authored by Scott Bellware on Sun Aug 2 2026 at 10:59:57 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:12:47 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 5:57:58 PM PT
+Authored by Scott Bellware on Sun Aug 2 2026 at 22:59:57 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:12:47 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 17:57:58 PT

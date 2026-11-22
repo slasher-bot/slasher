@@ -1,4 +1,4 @@
-# Work Session — The command table and the README logo (2026-11-06)
+# Work Session — The command table and the README logo
 
 This work session began with the rules loading and a check of where the work stood: nothing was under way, and seven ideas were open. It became a run of small changes to the command domain table, which added a `/command-table` command and rows for `/current` and `/work-status`. It then turned to the root `README.md`, which took the Slasher logo and lost its byline. It ended with a question about what to call Slasher's commands.
 
@@ -61,4 +61,4 @@ The engineer asked the proper term for what Slasher calls commands. In Claude Co
 
 ---
 
-Authored by Scott Bellware on Fri Nov 6 2026 at 10:30:51 PM PT
+Authored by Scott Bellware on Fri Nov 6 2026 at 22:30:51 PT

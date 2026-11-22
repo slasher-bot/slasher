@@ -1,4 +1,4 @@
-# Work Session — Shortcut commands, and the verdict question explains a verdict (2026-11-07)
+# Work Session — Shortcut commands, and the verdict question explains a verdict
 
 This work session began with a shortcut command for the question *What are we doing?*. It became a set of three one-character commands and a smaller command table, passed through the README's wording, came to the verdict question offering to explain what a verdict is, and ended with an item's state commands typed without the `/item` prefix.
 
@@ -57,5 +57,5 @@ The engineer started the item that proposed typing an item's state commands as r
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 11:03:24 AM PT
-Changed by Scott Bellware on Sat Nov 7 2026 at 11:52:39 AM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 11:03:24 PT
+Changed by Scott Bellware on Sat Nov 7 2026 at 11:52:39 PT

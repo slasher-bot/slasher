@@ -120,8 +120,8 @@ What "flatten the rules files" resolved to, affirmed as the new framework norm:
 ---
 
 Authored by Scott Bellware on Tue Jul 21 2026 at 2 AM PT
-Changed by Scott Bellware on Sun Jul 26 2026 at 10:12:41 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:02:44 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:09:20 AM PT
+Changed by Scott Bellware on Sun Jul 26 2026 at 22:12:41 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:44:25 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:02:44 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:09:20 PT

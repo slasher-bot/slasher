@@ -1,4 +1,4 @@
-# Work Session — The install path is walked, and Waytide is licensed (Thu Aug 6 2026 17:24)
+# Work Session — The install path is walked, and Waytide is licensed
 
 The work session began with a doubt about whether one script was self-executable. It became a walk down the install path a new project actually takes, which produced four defects in a row — none of them in the packages, all of them in how the system is obtained and started. It ended somewhere unrelated to where it started: Waytide carrying a copyright notice and a named license across all eight repositories, printed at the head of every rule read, and propagated through all three hops to every consuming project.
 
@@ -101,4 +101,4 @@ The work session started from a claim that was false and ended having fixed four
 
 ---
 
-Authored by Scott Bellware on Thu Aug 6 2026 at 5:24:54 PM PT
+Authored by Scott Bellware on Thu Aug 6 2026 at 17:24:54 PT

@@ -81,7 +81,7 @@ Until Tue Nov 10 2026 the rule did not say what follows an escaped selection.
 
 Until Tue Nov 10 2026 the negative was given as *Don't accept*, beside *Accept*. The engineer found it hard to understand, and it reads *Something else — say what to change*.
 
-Until 2026-10-25 the rule said that where a prompt has four genuine candidates, the fourth is dropped to keep `Explain`, while it also said to present every genuine candidate the agent finds. The engineer settled that where there are more than three, the question says so and points to `Explain`, whose answer gives every candidate, and that a candidate beyond the third is chosen through the "Other" answer.
+Until Sun Oct 25 2026 the rule said that where a prompt has four genuine candidates, the fourth is dropped to keep `Explain`, while it also said to present every genuine candidate the agent finds. The engineer settled that where there are more than three, the question says so and points to `Explain`, whose answer gives every candidate, and that a candidate beyond the third is chosen through the "Other" answer.
 
 Until Sun Oct 25 2026 this rule was named present-every-prompt-through-askuserquestion.
 
@@ -96,38 +96,38 @@ Related:
 ---
 
 Authored by Scott Bellware on Fri Jul 3 2026 at 8 AM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 10:15:04 PM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 11:11:13 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 6:06:52 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 1:05:45 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 8:18:59 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 9:29:23 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 10:40:54 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 11:41:53 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 1:12:44 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 5:06:31 AM PT
-Changed by Scott Bellware on Wed Aug 12 2026 at 1:12:44 PM PT
-Changed by Scott Bellware on Fri Aug 14 2026 at 2:06:30 PM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 1:04:10 AM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 8:49:17 PM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 8:54:56 PM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 3:27:43 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:12 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:20:33 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:48 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:45:31 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:19:36 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 1:34:54 PM PT
-Changed by Scott Bellware on Thu Oct 29 2026 at 1:40:05 PM PT
-Changed by Scott Bellware on Tue Nov 10 2026 at 11:06:08 AM PT
-Changed by Scott Bellware on Tue Nov 10 2026 at 6:32:55 PM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 12:30:49 AM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 10:33:27 AM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 10:37:48 AM PT
-Changed by Scott Bellware on Wed Nov 11 2026 at 10:48:44 AM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 4:26:49 PM PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 22:15:04 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 23:11:13 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 18:06:52 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 13:05:45 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 20:18:59 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 21:29:23 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 22:40:54 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 23:41:53 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 01:12:44 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 05:06:31 PT
+Changed by Scott Bellware on Wed Aug 12 2026 at 13:12:44 PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 14:06:30 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 01:04:10 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 20:49:17 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 20:54:56 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 15:27:43 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:12 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:20:33 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:22:48 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:45:31 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:06:51 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:19:36 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 13:34:54 PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 13:40:05 PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 11:06:08 PT
+Changed by Scott Bellware on Tue Nov 10 2026 at 18:32:55 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 00:30:49 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:33:27 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:37:48 PT
+Changed by Scott Bellware on Wed Nov 11 2026 at 10:48:44 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 16:26:49 PT

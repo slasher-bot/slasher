@@ -19,5 +19,5 @@ As the engineer first stated it: "Idea: “/alias <alias-name>” generates an a
 
 ---
 
-Authored by Scott Bellware on Thu Oct 29 2026 at 11:46:24 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 1:04:20 PM PT
+Authored by Scott Bellware on Thu Oct 29 2026 at 23:46:24 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 13:04:20 PT

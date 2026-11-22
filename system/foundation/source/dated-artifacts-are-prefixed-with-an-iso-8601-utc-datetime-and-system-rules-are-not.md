@@ -80,33 +80,33 @@ Until Mon Oct 26 2026 this rule was named dated-artifacts-take-an-iso-8601-utc-d
 ---
 
 Authored by Scott Bellware on Wed Jul 1 2026 at 1 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 2:07:00 PM PT
-Changed by Scott Bellware on Mon Jul 27 2026 at 2:30:44 PM PT
-Changed by Scott Bellware on Sat Aug 1 2026 at 4:34:12 PM PT
-Changed by Scott Bellware on Thu Aug 6 2026 at 12:21:42 AM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 1:24:07 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 6:14:48 PM PT
-Changed by Scott Bellware on Mon Aug 10 2026 at 11:41:53 PM PT
-Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:24:07 AM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:22:08 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 4:41:26 PM PT
-Changed by Scott Bellware on Tue Oct 20 2026 at 11:23:55 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 3:50:22 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:14:54 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:21:48 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:23:36 PM PT
-Changed by Scott Bellware on Sun Oct 25 2026 at 4:24:14 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:42:32 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 3:12:23 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 5:52:41 PM PT
-Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
-Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
-Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:28 PM PT
-Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
-Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 14:07:00 PT
+Changed by Scott Bellware on Mon Jul 27 2026 at 14:30:44 PT
+Changed by Scott Bellware on Sat Aug 1 2026 at 16:34:12 PT
+Changed by Scott Bellware on Thu Aug 6 2026 at 00:21:42 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 13:24:07 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 18:14:48 PT
+Changed by Scott Bellware on Mon Aug 10 2026 at 23:41:53 PT
+Changed by Scott Bellware on Tue Aug 11 2026 at 02:41:09 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 02:54:58 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:24:07 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:22:08 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 16:41:26 PT
+Changed by Scott Bellware on Tue Oct 20 2026 at 11:23:55 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 09:37:27 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 15:50:22 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:14:54 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:21:48 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:23:36 PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 16:24:14 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:42:32 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 15:12:23 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 17:52:41 PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 14:29:24 PT
+Changed by Scott Bellware on Mon Oct 26 2026 at 14:41:43 PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 21:09:28 PT
+Changed by Scott Bellware on Fri Nov 6 2026 at 20:47:18 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 23:44:42 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 18:36:15 PT
+Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:14 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 13:01:15 PT

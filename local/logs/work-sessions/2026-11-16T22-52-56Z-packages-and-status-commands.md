@@ -1,4 +1,4 @@
-# Work Session — The packages and status commands (2026-11-16)
+# Work Session — The packages and status commands
 
 This work session started by recording four items, then took up two work items in turn. The `/packages` command became a command domain of its own, with its own help, and `update` replaced `refresh` in every package command. A `status` subcommand for `/item` followed, then the same report for features and experiments, and a root `/status` command that finds the work under way. Then a feature let a bare `/private` start a private session and `/private end` end it. It ended with a feature that replaced `/idk` and `/clarify` with a pros and cons command.
 
@@ -90,6 +90,6 @@ The engineer started the idea "A pros and cons command for the last question" as
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 2:52:56 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 3:07:55 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 3:14:12 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 14:52:56 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 15:07:55 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 15:14:12 PT

@@ -1,4 +1,4 @@
-# Work Session — Record names without state (2026-11-16)
+# Work Session — Record names without state
 
 This work session started as a question about one idea: whether to take the state out of record file names. It became a feature that did so, with a migration for every Slasher project, and it ended with the feature Completed and merged to `master`.
 
@@ -50,4 +50,4 @@ The engineer concluded the feature Completed. It merged to `master` with no reco
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 7:25:19 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 19:25:19 PT

@@ -497,4 +497,4 @@ The appendix to the experiment record's `git` batch. Each rule's compression, di
 
 ---
 
-Authored by Scott Bellware on Thu Oct 22 2026 at 3:28:16 PM PT
+Authored by Scott Bellware on Thu Oct 22 2026 at 15:28:16 PT

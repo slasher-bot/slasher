@@ -1,4 +1,4 @@
-# Work Session — An existing AGENTS.md at install (2026-11-15)
+# Work Session — An existing AGENTS.md at install
 
 This work session tested James Hughes's report that the installer fails silently where a project already has an `AGENTS.md`, and fixed it. The test showed the failure is not silent at the installer, but is lost under `/install`. The fix gives the installer an explicit answer, fails loudly without one, and has `/install` ask. It ran attended through three outcomes, then unattended to the end, at the engineer's direction.
 
@@ -53,4 +53,4 @@ The engineer concluded the feature Completed. It merged to `master`, and the aut
 
 ---
 
-Authored by Scott Bellware on Sun Nov 15 2026 at 5:29:32 PM PT
+Authored by Scott Bellware on Sun Nov 15 2026 at 17:29:32 PT

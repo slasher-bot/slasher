@@ -1905,5 +1905,5 @@ The prompt for the same rule. The checker's `compressed.md` holds the rule's tit
 
 ---
 
-Authored by Scott Bellware on Sat Oct 24 2026 at 12:00:23 AM PT
-Changed by Scott Bellware on Sat Oct 24 2026 at 1:59:18 AM PT
+Authored by Scott Bellware on Sat Oct 24 2026 at 00:00:23 PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 01:59:18 PT

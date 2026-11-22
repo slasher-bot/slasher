@@ -1,4 +1,4 @@
-# Work Session — The load line, and the words for starting and ending work (2026-11-14)
+# Work Session — The load line, and the words for starting and ending work
 
 This work session started with a question about whether the agent can tell how Claude Code was started. It became a small feature that leaves the load line out of the startup display when Claude Code is started with `/load`. It then became a larger feature that harmonized the words Slasher uses for starting and ending work, settled one decision at a time against an analysis. It ended with both features Completed and merged to `master`.
 
@@ -62,4 +62,4 @@ Each decision is a dated Settled resolution in the work item, with a log entry:
 
 ---
 
-Authored by Scott Bellware on Sat Nov 14 2026 at 5:43:58 PM PT
+Authored by Scott Bellware on Sat Nov 14 2026 at 17:43:58 PT

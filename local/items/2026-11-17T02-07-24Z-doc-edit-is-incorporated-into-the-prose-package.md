@@ -15,5 +15,5 @@ Incorporate the doc-edit skill into the prose package, as the comparison `2026-1
 
 ---
 
-Authored by Scott Bellware on Mon Nov 16 2026 at 6:07:24 PM PT
-Changed by Scott Bellware on Mon Nov 16 2026 at 6:19:19 PM PT
+Authored by Scott Bellware on Mon Nov 16 2026 at 18:07:24 PT
+Changed by Scott Bellware on Mon Nov 16 2026 at 18:19:19 PT

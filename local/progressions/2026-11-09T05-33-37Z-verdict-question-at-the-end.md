@@ -41,5 +41,5 @@ The start asks whether the work states a forecast, *No forecast* first, and the 
 
 ---
 
-Authored by Scott Bellware on Sun Nov 8 2026 at 9:33:37 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 9:52:21 PM PT
+Authored by Scott Bellware on Sun Nov 8 2026 at 21:33:37 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 21:52:21 PT

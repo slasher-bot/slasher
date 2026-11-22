@@ -34,8 +34,8 @@ Waytide shapes the agent through **rules read at the start of a session**. A Cla
 
 ---
 
-Authored by Scott Bellware on Sun Aug 9 2026 at 6:42:21 PM PT
-Changed by Scott Bellware on Tue Aug 18 2026 at 9:24:07 AM PT
-Changed by Scott Bellware on Sun Aug 23 2026 at 12:58:46 AM PT
-Changed by Scott Bellware on Wed Oct 21 2026 at 2:38:56 PM PT
-Changed by Scott Bellware on Thu Nov 19 2026 at 10:09:01 PM PT
+Authored by Scott Bellware on Sun Aug 9 2026 at 18:42:21 PT
+Changed by Scott Bellware on Tue Aug 18 2026 at 09:24:07 PT
+Changed by Scott Bellware on Sun Aug 23 2026 at 00:58:46 PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 14:38:56 PT
+Changed by Scott Bellware on Thu Nov 19 2026 at 22:09:01 PT

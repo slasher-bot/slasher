@@ -26,8 +26,8 @@ The failure was reproduced in a test project holding its own `AGENTS.md`, by run
 
 ---
 
-Authored by Scott Bellware on Sun Nov 15 2026 at 4:38:17 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 4:47:41 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 4:59:24 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 5:21:45 PM PT
-Changed by Scott Bellware on Sun Nov 15 2026 at 5:28:08 PM PT
+Authored by Scott Bellware on Sun Nov 15 2026 at 16:38:17 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 16:47:41 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 16:59:24 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 17:21:45 PT
+Changed by Scott Bellware on Sun Nov 15 2026 at 17:28:08 PT

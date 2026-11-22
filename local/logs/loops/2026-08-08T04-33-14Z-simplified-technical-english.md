@@ -25,6 +25,6 @@ The design of whether to adopt the AeroSpace and Defence Simplified Technical En
 
 ---
 
-Authored by Scott Bellware on Fri Aug 7 2026 at 9:33:14 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 5:57:58 PM PT
+Authored by Scott Bellware on Fri Aug 7 2026 at 21:33:14 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 17:57:58 PT

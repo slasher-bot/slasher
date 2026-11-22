@@ -47,27 +47,27 @@ This design exists because that failure is avoidable by construction — if both
 
 ---
 
-Authored by Scott Bellware on Sun Aug 2 2026 at 5:45:18 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 5:48:53 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 5:53:08 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 5:55:41 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 5:57:03 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 6:00:12 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 7:04:47 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 7:08:19 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 7:13:24 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 7:21:36 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 7:47:19 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 10:40:22 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 10:57:25 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:06:44 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:10:19 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:16:27 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:19:58 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:23:41 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:39:26 PM PT
-Changed by Scott Bellware on Sun Aug 2 2026 at 11:52:17 PM PT
-Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
-Changed by Scott Bellware on Sun Aug 16 2026 at 3:03:12 AM PT
-Changed by Scott Bellware on Mon Aug 17 2026 at 11:16:30 PM PT
-Changed by Scott Bellware on Mon Aug 24 2026 at 5:47:27 PM PT
+Authored by Scott Bellware on Sun Aug 2 2026 at 17:45:18 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 17:48:53 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 17:53:08 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 17:55:41 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 17:57:03 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 18:00:12 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 19:04:47 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 19:08:19 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 19:13:24 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 19:21:36 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 19:47:19 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 22:40:22 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 22:57:25 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:06:44 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:10:19 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:16:27 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:19:58 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:23:41 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:39:26 PT
+Changed by Scott Bellware on Sun Aug 2 2026 at 23:52:17 PT
+Changed by Scott Bellware on Wed Aug 5 2026 at 00:32:03 PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 03:03:12 PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 23:16:30 PT
+Changed by Scott Bellware on Mon Aug 24 2026 at 17:47:27 PT

@@ -1,4 +1,4 @@
-# Work Session — The abridged startup command table (2026-11-07)
+# Work Session — The abridged startup command table
 
 This work session began with the rules loading, and an idea that the command table printed at startup is abridged. It became a feature, built in its own worktree, that gave the session start a four-row table and a sentence naming the other commands. The engineer then reworded the four rows one at a time, and the feature ended Completed and merged to `master`.
 
@@ -60,4 +60,4 @@ The engineer concluded the feature as Completed. The item is Realized, `master` 
 
 ---
 
-Authored by Scott Bellware on Sat Nov 7 2026 at 6:52:00 PM PT
+Authored by Scott Bellware on Sat Nov 7 2026 at 18:52:00 PT

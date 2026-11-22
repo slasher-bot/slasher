@@ -1,4 +1,4 @@
-# Work Session — The /content command (Fri Nov 20 2026)
+# Work Session — The /content command
 
 The work session started by concluding the feature that makes `/status` say whether a record is ready to conclude. It went through two renames the engineer asked for, then settled the last open questions of the content work item, and ended with the `/content` command built in a worktree and merged to `master`.
 
@@ -50,4 +50,4 @@ The review at `/content complete` is offered only where the `prose` package is a
 
 ---
 
-Authored by Scott Bellware on Fri Nov 20 2026 at 12:30:50 PM PT
+Authored by Scott Bellware on Fri Nov 20 2026 at 12:30:50 PT

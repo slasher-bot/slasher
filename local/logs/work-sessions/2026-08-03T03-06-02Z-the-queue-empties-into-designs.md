@@ -1,4 +1,4 @@
-# Session — The queue empties into designs, and Waytide learns to describe itself (Sun Aug 2 2026 20:06)
+# Session — The queue empties into designs, and Waytide learns to describe itself
 
 Continues `2026-08-01T23-22-31Z-a-reconciliation-prompt-and-the-queue-at-startup.md`, which closed on the deferred queue gaining a priority. This stretch **emptied that queue** — from six items to none — and the way it emptied is the story: four items were carried out as rules, three were promoted to **designs**, and two were withdrawn. The promotions are the practice the deferred-items-preempt-design observation implied and never settled.
 
@@ -102,6 +102,6 @@ The last two items were removed rather than carried out. **The decline-the-rule-
 
 ---
 
-Authored by Scott Bellware on Sun Aug 2 2026 at 8:06:02 PM PT
-Changed by Scott Bellware on Sat Aug 8 2026 at 8:20:44 PM PT
-Changed by Scott Bellware on Sun Aug 9 2026 at 5:57:58 PM PT
+Authored by Scott Bellware on Sun Aug 2 2026 at 20:06:02 PT
+Changed by Scott Bellware on Sat Aug 8 2026 at 20:20:44 PT
+Changed by Scott Bellware on Sun Aug 9 2026 at 17:57:58 PT

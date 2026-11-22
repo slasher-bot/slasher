@@ -17,7 +17,7 @@ On 2026-11-08 the engineer corrected the idea: "Use [work] rather than [work-ite
 
 ---
 
-Authored by Scott Bellware on Sun Nov 8 2026 at 2:17:53 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 2:19:51 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 8:18:31 PM PT
-Changed by Scott Bellware on Sun Nov 8 2026 at 8:19:15 PM PT
+Authored by Scott Bellware on Sun Nov 8 2026 at 14:17:53 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 14:19:51 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 20:18:31 PT
+Changed by Scott Bellware on Sun Nov 8 2026 at 20:19:15 PT
