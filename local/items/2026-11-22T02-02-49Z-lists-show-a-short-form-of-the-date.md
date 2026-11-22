@@ -1,6 +1,6 @@
 # Lists show a short form of the date
 
-**State:** Open
+**State:** Progression
 
 **Tags:** [work]
 
@@ -15,6 +15,10 @@ A printed list of records shows a short form of the date. Today each row's handl
 - **2026-11-22** — The short form is the short-date format in local time, as the dates-and-times-are-written-in-named-formats rule maps a printed list of records. `slasher/system/foundation/format-datetime.sh short-date <prefix>` prints it from a record's UTC file name prefix, as `format-datetime.sh short-date 2026-11-22T02-01-28Z` prints `Sat Nov 21`.
 - **2026-11-22** — The short date replaces the file name prefix column in a printed list of records, selected by the engineer. A list then shows no file name prefix.
 - **2026-11-22** — A list of commits keeps the short SHA in its first column, since a commit has no file name prefix.
+
+## Progression
+
+The implementation `2026-11-22T22-06-11Z-lists-show-short-date` carries this item's work.
 
 ## Tasks
 
@@ -33,3 +37,4 @@ Changed by Scott Bellware on Sun Nov 22 2026 at 13:38:24 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 13:45:50 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 13:52:56 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:02:49 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:06:11 PT
