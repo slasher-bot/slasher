@@ -350,7 +350,7 @@ Trigger: When creating, starting, adding a worktree to, suspending, or concludin
 
 ## The branch
 
-1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
+1. `new` writes the record `Open`, commits it with its log entry on the upstream branch, `master` in the ordinary case, and creates no branch. It asks neither the working-location question nor the participation question. `start` asks both, makes the record `Active`, and creates the branch. Where no progression is in place, `start` creates it and starts it in one step.
 2. Name it `experiment/<subject>`, `feature/<subject>`, `content/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
@@ -364,7 +364,7 @@ Trigger: When creating, starting, adding a worktree to, suspending, or concludin
 12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
 13. Make no git tag for the base.
 14. A later run branches from the recorded commit.
-15. Except on the current branch, `new`, or `start` where it creates the progression, commits the first record, `Open` or `Active`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the progression branch from that commit.
+15. Except on the current branch, `start` writes the working location, the participation level, and the progression branch into the record, commits it `Active` with its log entry on the upstream branch, `master` in the ordinary case, then creates the progression branch from that commit. An `Open` record names no progression branch, base, or working location.
 16. Make every later update to the record on the progression branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
 17. Where the working location is the current branch, write the record there. There is no second copy.
 
@@ -392,7 +392,7 @@ Trigger: When creating, starting, adding a worktree to, suspending, or concludin
 
 ## The working location
 
-1. Put the working location through the selection interface each time a progression is created, with no default.
+1. Put the working location through the selection interface each time a progression is started, with no default. `new` does not ask it.
 2. Each option states what it creates:
 
 > **Branch only** — Create the branch and switch this working tree to it. At the conclusion this
@@ -425,9 +425,9 @@ Trigger: When creating, starting, adding a worktree to, suspending, or concludin
 
 ## Participation
 
-1. Put attended or unattended through the selection interface beside the working location.
+1. Put attended or unattended through the selection interface beside the working location, when the progression is started.
 2. Attended is the default.
-3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule states why the two sit at one gate, and what changes between them.
+3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule states why the two sit at one gate, and what changes between them.
 4. Record both choices.
 
 ## The forecast and the verdict
@@ -1740,7 +1740,7 @@ Trigger: When creating or starting an experiment, a feature, or content, or writ
 ## The record
 
 1. Open with the **Question** or the **Intent**.
-2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and the forecast where the engineer gives one. Add whether it reaches a verdict at the end.
+2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is started, and the forecast where the engineer gives one. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
 4. The setup also includes a `**Tags:**` line carrying `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
@@ -1748,7 +1748,7 @@ Trigger: When creating or starting an experiment, a feature, or content, or writ
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
 8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
-10. Every record carries these: the working-location selection and the attended-or-unattended selection, each at the progression's creation, and the verdict selection at the end where the work has a forecast.
+10. Every record carries these: the working-location selection and the attended-or-unattended selection, each at the progression's start, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
 12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded progression, and merging untested code.
 
@@ -1761,7 +1761,7 @@ Trigger: When creating or starting an experiment, a feature, or content, or writ
 5. `Active` is the in-progress state, as it is for an item.
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
-8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no progression is in place, `start` creates the branch and writes the record `Active`.
+8. `new` writes the record `Open`, and creates no branch. An `Open` record names no progression branch, base, or working location. `start` makes it `Active` and creates the branch. Where no progression is in place, `start` creates the record and the branch, and writes the record `Active`.
 9. The filename carries no state (see the a-records-file-name-carries-no-state rule).
 10. The state words every progression takes are these.
     - **Open**: the record and the branch exist, and the work has not started.

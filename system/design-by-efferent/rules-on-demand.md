@@ -35,7 +35,7 @@ Trigger: When writing a loop record for a feature under slasher/local/logs/loops
 
 1. Name the file per the ISO 8601 UTC datetime prefix convention: `YYYY-MM-DDTHH-MM-SSZ-<feature-name>.md`.
 2. Begin with a `# Loop record — <feature>` title and a one-paragraph summary of the feature.
-3. Declare the mode at the top, as **attended** or **unattended**, per the attended-or-unattended-is-chosen-when-the-work-is-created rule.
+3. Declare the mode at the top, as **attended** or **unattended**, per the attended-or-unattended-is-chosen-when-the-work-is-started rule.
 4. State the mode once.
 5. Write one section per cycle, in order.
 6. Each cycle records a **Hinge**: the subtle, load-bearing decision the AI determined.
@@ -139,14 +139,14 @@ Trigger: When reaching the implementation hinge of an outcome
 2. Open each option's description with the agent's own estimate, as *Rework risk: 30% (how likely it is that you will have to redo what this produces.)*. The labels' words stay as fixed.
 3. Each label's figure is the agent's confidence in that option: 100% minus the option's rework risk, computed.
 
-# Attended or unattended is chosen when the work is created
+# Attended or unattended is chosen when the work is started
 
-Source: system/design-by-efferent/source/attended-or-unattended-is-chosen-when-the-work-is-created.md
+Source: system/design-by-efferent/source/attended-or-unattended-is-chosen-when-the-work-is-started.md
 
-Trigger: When creating a feature or an experiment
+Trigger: When starting a feature or an experiment
 
 1. Work designed through DBE runs in one of two modes: attended or unattended.
-2. Choose the mode when a feature or an experiment is created. Hold it for the work's whole duration.
+2. Choose the mode when a feature or an experiment is started, not when it is created `Open`. Hold it for the work's whole duration.
 3. **Attended** is human-in-the-loop. The loop waits at every hinge, and the engineer deliberates each one.
 4. Attended is the default.
 5. **Unattended**: the loop does not wait. The agent determines and decides each hinge, generating through to the end of the work.
@@ -156,7 +156,7 @@ Trigger: When creating a feature or an experiment
 9. Every hinge is still determined and run in both modes. Only who decides it changes, and whether the loop stops.
 10. Attended is small-batch: a wrong turn is caught at its hinge. Unattended is big-batch: a wrong turn is found with everything built on it.
 11. The choice is a judgment about this piece of work: how load-bearing it is, and how likely the first pass is to be right.
-12. Ask the mode when the work is created, through the selection UI, beside the working-location selection.
+12. Ask the mode when the work is started, through the selection UI, beside the working-location selection.
 13. Put both decisions at the same gate. Do not add a separate gate.
 14. Ask the question in these exact words, with the agent's own figures:
 
@@ -196,7 +196,7 @@ with these options:
 27. The engineer may choose either option, whatever the score.
 28. Name no reserved term, such as hinge, gate, or loop, in the question or in any option.
 29. Name the hinges when the loop reaches the first one, not before.
-30. Record the mode in the feature or experiment record, as a confirmation at creation, beside the working-location selection.
+30. Record the mode in the feature or experiment record, as a confirmation at its start, beside the working-location selection.
 31. That confirmation records what was chosen, when, and by whom.
 32. That confirmation also records the five figures the question showed, whether the warning was shown, and whether Attended was recommended. Write it in this form, with the actual date and figures in place of the example ones:
 
@@ -388,7 +388,7 @@ end
 23. Propose each hinge and get it accepted before the next, per the the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rule.
 24. Do not present the whole test file for a single accept.
 25. Settle the three test hinges first, then assemble and show the file.
-26. The exception to points 24 and 25 is when the engineer chose unattended work at the start, per the attended-or-unattended-is-chosen-when-the-work-is-created rule.
+26. The exception to points 24 and 25 is when the engineer chose unattended work at the start, per the attended-or-unattended-is-chosen-when-the-work-is-started rule.
 
 # The hinge cycle is actuation, observation, controls, implementation, and naming
 
@@ -449,7 +449,7 @@ Trigger: When starting the DBE loop on an outcome, before the first hinge
 
 4. Give the account once, when the loop starts on a piece of work.
 5. Do not repeat it at each cycle or at each outcome.
-6. The account does not apply under unattended work, where no hinge is put to the engineer. There the plan takes its place (see the attended-or-unattended-is-chosen-when-the-work-is-created rule).
+6. The account does not apply under unattended work, where no hinge is put to the engineer. There the plan takes its place (see the attended-or-unattended-is-chosen-when-the-work-is-started rule).
 7. Give the account after the participation decision, not before it.
 8. Place the account immediately ahead of the first hinge.
 9. The participation decision names no hinge, on purpose.

@@ -16,7 +16,7 @@ Source: system/design-by-efferent/source/advance-one-outcome-at-a-time-and-stop-
 12. See the the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rule for the mechanism and its reasons.
 13. Build one outcome's test at a time.
 14. After each test, stop at each of its hinges (see the the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rule) and wait.
-15. Under unattended work, chosen at the start, the agent decides each hinge itself and does not stop (see the attended-or-unattended-is-chosen-when-the-work-is-created rule).
+15. Under unattended work, chosen at the start, the agent decides each hinge itself and does not stop (see the attended-or-unattended-is-chosen-when-the-work-is-started rule).
 16. Never write several test files at once, in either mode.
 17. To conclude an unnamed test, present candidate names as options through the selection UI.
 18. Then apply the name the human chose or dictated.
@@ -80,7 +80,7 @@ Source: system/design-by-efferent/source/test-first-is-the-default-so-never-ask-
 3. Attended or unattended is a different question. It asks how often the loop stops, not what it builds.
 4. The choice neither confirms nor declines the method.
 5. A question with a genuinely situational answer is a decision, not a settled default. This rule does not forbid asking it.
-6. See the attended-or-unattended-is-chosen-when-the-work-is-created rule.
+6. See the attended-or-unattended-is-chosen-when-the-work-is-started rule.
 
 # The human deliberates the hinges, never the pass/fail bar
 
@@ -107,7 +107,7 @@ Source: system/design-by-efferent/source/the-human-deliberates-the-hinges-never-
 5. **The three test hinges produce turn one.** Put the actuation, the observation, and the controls to the human in turn, per the the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rule.
 6. Assemble the test file once all three are accepted.
 7. Never produce the whole test file at an earlier hinge.
-8. The exception is when the engineer chose unattended work at the start. Then the agent decides each hinge and generates through (see the attended-or-unattended-is-chosen-when-the-work-is-created rule).
+8. The exception is when the engineer chose unattended work at the start. Then the agent decides each hinge and generates through (see the attended-or-unattended-is-chosen-when-the-work-is-started rule).
 9. The human deliberates whether the actuation reads as soluble use, not the test mechanics: the testing framework and the ceremonies of using it. The actuation, observation, and controls, as well as the naming of things, are the test's content, not its mechanics.
 10. If it does not, fix the cradle now, before any implementation exists.
 11. **AI generates the implementation inside the cradle, straight through.**

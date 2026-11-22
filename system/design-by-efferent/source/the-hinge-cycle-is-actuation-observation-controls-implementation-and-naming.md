@@ -32,7 +32,7 @@ The fifth hinge, **naming**, is **deferred to the feature's close**. Per the fir
 
 **It is given once**, when the loop starts on a piece of work — not at each cycle and not at each outcome. A passage repeated at every hinge stops being read, which is the failure the the-startup-display-prints-as-the-session-starts rule names about a permanent line.
 
-**It does not apply under unattended work**, where no hinge is put to the engineer at all. There the plan takes its place (see the attended-or-unattended-is-chosen-when-the-work-is-created rule).
+**It does not apply under unattended work**, where no hinge is put to the engineer at all. There the plan takes its place (see the attended-or-unattended-is-chosen-when-the-work-is-started rule).
 
 **It comes after the participation decision, not before it.** That decision names no hinge on purpose, because it is asked at a feature's or an experiment's start and the engineer has met nothing yet. This account is where they meet the five, and it sits immediately ahead of the first one.
 
@@ -117,7 +117,7 @@ This is the **initial**-implementation cycle for one outcome. Looping to further
 
 4. Give the account once, when the loop starts on a piece of work.
 5. Do not repeat it at each cycle or at each outcome.
-6. The account does not apply under unattended work, where no hinge is put to the engineer. There the plan takes its place (see the attended-or-unattended-is-chosen-when-the-work-is-created rule).
+6. The account does not apply under unattended work, where no hinge is put to the engineer. There the plan takes its place (see the attended-or-unattended-is-chosen-when-the-work-is-started rule).
 7. Give the account after the participation decision, not before it.
 8. Place the account immediately ahead of the first hinge.
 9. The participation decision names no hinge, on purpose.

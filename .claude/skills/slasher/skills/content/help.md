@@ -3,7 +3,8 @@ CONTENT
   declared end. It is a kind of progression, without the steps that serve
   only code.
 
-  /content new                     Create its branch and an Open record
+  /content new                     Write an Open record. start creates
+                                   its branch
   /content status [<content>]      Phases, state, what exists, and
                                    what is left. <content>: a letter
                                    from the last list, a datetime, or

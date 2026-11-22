@@ -79,7 +79,8 @@ FEATURES
   A feature builds something the project needs, on its own branch or worktree,
   to a declared end. Features and experiments are both kinds of progressions.
 
-  /feature new                     Create its branch and an Open record
+  /feature new                     Write an Open record. start creates
+                                   its branch
   /feature new with phases         Create it, asking for its phases
   /feature status [<feature>]      Phases, state, what exists, and
                                    what is left. <feature>: a letter
@@ -112,7 +113,8 @@ EXPERIMENTS
   An experiment tests a question on its own branch or worktree, to a declared
   end. Features and experiments are both kinds of progressions.
 
-  /experiment new                  Create its branch and an Open record
+  /experiment new                  Write an Open record. start creates
+                                   its branch
   /experiment new with phases      Create it, asking for its phases
   /experiment status [<experiment>]
                                    Phases, state, what exists, and
@@ -144,7 +146,8 @@ CONTENT
   declared end. It is a kind of progression, without the steps that serve
   only code.
 
-  /content new                     Create its branch and an Open record
+  /content new                     Write an Open record. start creates
+                                   its branch
   /content status [<content>]      Phases, state, what exists, and
                                    what is left. <content>: a letter
                                    from the last list, a datetime, or
@@ -173,8 +176,9 @@ PROGRESSIONS
   declared end. These commands create one with no kind, and list the current
   progressions of every kind: features, experiments, and those with no kind.
 
-  /progression new                 Create its branch and an Open record,
-                                   titled Progression — <name>
+  /progression new                 Write an Open record, titled
+                                   Progression — <name>. start creates
+                                   its branch
   /progression new with phases     Create it, asking for its phases
   /progression status [<progression>]
                                    Phases, state, what exists, and

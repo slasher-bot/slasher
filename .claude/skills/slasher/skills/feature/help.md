@@ -2,7 +2,8 @@ FEATURES
   A feature builds something the project needs, on its own branch or worktree,
   to a declared end. Features and experiments are both kinds of progressions.
 
-  /feature new                     Create its branch and an Open record
+  /feature new                     Write an Open record. start creates
+                                   its branch
   /feature new with phases         Create it, asking for its phases
   /feature status [<feature>]      Phases, state, what exists, and
                                    what is left. <feature>: a letter

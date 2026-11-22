@@ -3,8 +3,9 @@ PROGRESSIONS
   declared end. These commands create one with no kind, and list the current
   progressions of every kind: features, experiments, and those with no kind.
 
-  /progression new                 Create its branch and an Open record,
-                                   titled Progression — <name>
+  /progression new                 Write an Open record, titled
+                                   Progression — <name>. start creates
+                                   its branch
   /progression new with phases     Create it, asking for its phases
   /progression status [<progression>]
                                    Phases, state, what exists, and

@@ -79,7 +79,7 @@ Where a piece of work is both — a rule that governs content, a script that bui
 
 Related:
 
-- the `design-by-efferent` package's the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming and attended-or-unattended-is-chosen-when-the-work-is-created rules — what this suspends for content work
+- the `design-by-efferent` package's the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming and attended-or-unattended-is-chosen-when-the-work-is-started rules — what this suspends for content work
 - the `foundation` the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the unconditional read that leaves no package dormant
 - the a-projects-binding-rules-are-recorded-in-its-packages-and-its-local-rules-directory rule and the a-packages-vocabulary-holds-its-terms-and-the-most-specific-one-decides rule — the precedence this asserts and the gap it names
 - the a-suspension-is-a-log-entry-tagged-suspended-and-nothing-is-moved rule — how this rule ends

@@ -15,7 +15,7 @@ The engineer typed `/content $ARGUMENTS`.
    - **Conclude:** `complete`
    - **Set aside:** `defer`, `suspend`, `discontinue`, `obsolete`, `supersede`, `abandon`
    - **Other:** `resume`, `status`, `list`, `help`
-5. **`new`**: create the content's branch and write its record Open. Load the-progressions-directory-holds-one-record-per-progression and a-progression-runs-on-a-branch-to-a-declared-end. The words after it, where any were typed, state what the content is.
+5. **`new`**: write the content's record Open, and create no branch. Ask neither the working-location question nor the participation question: `start` asks them, and creates the branch. Load the-progressions-directory-holds-one-record-per-progression and a-progression-runs-on-a-branch-to-a-declared-end. The words after it, where any were typed, state what the content is.
 6. **`status [<content>]`**: report the content's phases, its state, what exists, and what is left, for the content named, or the one the conversation is on. Load progression-status-reports-its-phases-its-state-what-exists-and-what-is-left and a-phase-starts-by-stating-its-goal.
 7. **`complete`**: offer the review, then conclude the content Completed, as the content rule says. Load a-progression-runs-on-a-branch-to-a-declared-end and the-progressions-directory-holds-one-record-per-progression.
 8. **A change of state**, `start`, `defer`, `suspend`, `discontinue`, `obsolete`, `supersede`, `abandon`, or `resume`: change the content's state, as the root command of the same name does for content. Load a-progression-runs-on-a-branch-to-a-declared-end and the-progressions-directory-holds-one-record-per-progression.

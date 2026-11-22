@@ -19,7 +19,7 @@ Realizes the correction item `2026-11-22T02-01-04Z-location-and-participation-ar
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/questions-asked-at-start`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `3354fa7e`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-questions-asked-at-start`. The main working tree stays on `master`.
 - **Participation:** unattended, as the engineer asked.
 - **Forecast:** none given.
@@ -39,6 +39,14 @@ Realizes the correction item `2026-11-22T02-01-04Z-location-and-participation-ar
 
 ## What happened
 
+- The progression rule says `new` writes the record `Open`, commits it with its log entry on `master`, creates no branch, and asks neither question. `start` asks the working-location and participation questions, writes the answers and the branch into the record, commits it `Active`, and creates the branch.
+- The progressions-directory rule says an `Open` record names no progression branch, base, or working location, and the selections are made at the start.
+- The attended-or-unattended rule says the mode is asked when the work is started. The agent renamed it attended-or-unattended-is-chosen-when-the-work-is-started, since its name said *created*, and conformed the eleven rules that cite it.
+- The help and skill text for `new` in `/feature`, `/experiment`, `/content`, `/progression`, and `/implementation` say it writes an `Open` record and creates no branch.
+- The compressed texts were checked against their bodies by two fresh agents. One repair, in the progression rule. One directive is left less precise, untouched by this revision, as it was on 2026-11-07.
+- No test was written. No script changed. The status line skips a record that names no branch.
+- The automated suite passed: 152 test files.
+
 ## Confirmations
 
 - **2026-11-22** — Creation: started unattended, as the engineer asked. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -48,3 +56,4 @@ Realizes the correction item `2026-11-22T02-01-04Z-location-and-participation-ar
 ---
 
 Authored by Scott Bellware on Sun Nov 22 2026 at 14:26:16 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:31:30 PT

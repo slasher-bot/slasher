@@ -20,7 +20,7 @@ Open with the **Question** or the **Intent**, then the setup:
 - the **upstream branch** it merges into — `master` or another topic branch
 - the **progression branch**
 - its **base**
-- the **working location** chosen when the progression is created
+- the **working location** chosen when the progression is started. An `Open` record names no progression branch, base, or working location, since `new` creates no branch.
 - **the forecast**, where the engineer gives one without being asked
 - **whether it reaches a verdict**, asked at the end of work with a forecast
 - a **`**Tags:**`** line carrying `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`
@@ -29,13 +29,13 @@ Open with the **Question** or the **Intent**, then the setup:
 
 **Work without a forecast states none of that.** There is no comparison against a forecast, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word, which any progression can take.
 
-**Every record carries the confirmations the lifecycle required**, so the work's authority is auditable: the working-location selection and the attended-or-unattended selection, each at the progression's creation, the verdict selection at the end where the work has a forecast, adding a worktree to work already under way, and branch deletion with worktree removal. **Work that reaches a verdict also records** the affirmation declaration, concluding a superseded one, and merging untested code.
+**Every record carries the confirmations the lifecycle required**, so the work's authority is auditable: the working-location selection and the attended-or-unattended selection, each at the progression's start, the verdict selection at the end where the work has a forecast, adding a worktree to work already under way, and branch deletion with worktree removal. **Work that reaches a verdict also records** the affirmation declaration, concluding a superseded one, and merging untested code.
 
 ## The state
 
 **The state sits on a canonical `**State:**` line**, carrying one word and nothing else — `- **State:** Suspended`. It is written with the record, and changes as the record reaches another word. That line is the only authoritative statement of the state: the same words run through a record's prose freely, and nothing else in the file can be read as the state.
 
-**`new` creates the branch and writes the record `Open`.** `start` makes it `Active`, the in-progress state, as it is for an item. Where no progression is in place, `start` creates the branch and writes the record `Active`. Absence is not a state, and a record without a line is a defect.
+**`new` writes the record `Open`, and creates no branch.** `start` makes it `Active`, the in-progress state, as it is for an item, and creates the branch. Where no progression is in place, `start` creates the record and the branch, and writes the record `Active`. Absence is not a state, and a record without a line is a defect.
 
 **The state words every progression takes:**
 
@@ -106,7 +106,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 ## The record
 
 1. Open with the **Question** or the **Intent**.
-2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is created, and the forecast where the engineer gives one. Add whether it reaches a verdict at the end.
+2. Then give the setup: a `**State:**` line, the upstream branch it merges into, the progression branch, its base, the working location chosen when the progression is started, and the forecast where the engineer gives one. Add whether it reaches a verdict at the end.
 3. The upstream branch is `master` or another topic branch.
 4. The setup also includes a `**Tags:**` line carrying `[experiment]`, `[feature]`, `[content]`, `[progression]`, or `[implementation]`.
 5. Work with a forecast states it, what is expected to happen, before the work.
@@ -114,7 +114,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 7. It then records the findings and any post-hoc misses, including outcomes the forecast did not account for.
 8. Work without a forecast records no comparison against one, and no findings or misses. It concludes Completed, unless the engineer concludes it with a verdict word.
 9. Every record carries the confirmations the lifecycle required, so the work's authority is auditable.
-10. Every record carries these: the working-location selection and the attended-or-unattended selection, each at the progression's creation, and the verdict selection at the end where the work has a forecast.
+10. Every record carries these: the working-location selection and the attended-or-unattended selection, each at the progression's start, and the verdict selection at the end where the work has a forecast.
 11. Every record also carries these: adding a worktree to work already under way, and branch deletion with worktree removal.
 12. Work that reaches a verdict also records the affirmation declaration, concluding a superseded progression, and merging untested code.
 
@@ -127,7 +127,7 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 5. `Active` is the in-progress state, as it is for an item.
 6. A record without a line is a defect. Absence is not a state.
 7. Do not invent a state word.
-8. `new` creates the branch and writes the record `Open`. `start` makes it `Active`. Where no progression is in place, `start` creates the branch and writes the record `Active`.
+8. `new` writes the record `Open`, and creates no branch. An `Open` record names no progression branch, base, or working location. `start` makes it `Active` and creates the branch. Where no progression is in place, `start` creates the record and the branch, and writes the record `Active`.
 9. The filename carries no state (see the a-records-file-name-carries-no-state rule).
 10. The state words every progression takes are these.
     - **Open**: the record and the branch exist, and the work has not started.
@@ -206,8 +206,11 @@ Write the state line as `Open` when `new` writes the record, or as `Active` when
 - 2026-11-20, revised: the content kind, tagged `[content]` and titled `Content — <name>`, the one tag a rule reads; checked: 67 directives, 66 kept, 1 less precise, 0 lost, 1 repair: *any kind*, not *either kind*, opens with a question or an intent; re-checked: 67 directives, 67 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: no forecast question is asked, and the forecast selection is no longer a confirmation, which the engineer settled; checked: 96 directives, 96 kept, 0 less precise, 0 lost
 - 2026-11-21, revised: an item started directly takes an implementation; checked: 86 directives, 86 kept, 0 less precise, 0 lost
+- 2026-11-22, revised: `new` writes the record `Open` and creates no branch, and the selections are made at the start; checked: 33 directives, 33 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 `new` created the branch as well as writing the record `Open`, and the working-location and attended-or-unattended selections were made at the progression's creation. They are made at its start now, and `start` creates the branch.
 
 Until Sat Nov 21 2026 this rule did not say which kind an item started directly takes.
 
@@ -304,3 +307,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:37:58 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 18:14:21 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:36:10 PT

@@ -14,9 +14,9 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 ## The branch
 
-**`new` writes the record `Open`, then creates the branch.** `start` makes the record `Active` when the work starts. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
+**`new` writes the record `Open`, and creates no branch.** It asks neither the working-location question nor the participation question, since nothing is started. `start` asks both, makes the record `Active`, and creates the branch. Where no progression is in place, `start` creates it and starts it in one step.
 
-**The first record is committed on the upstream branch before the progression branch is created.** `new` writes the record `Open`, or `start` writes it `Active` where it creates the progression, with its log entry, and commits both on the upstream branch, `master` in the ordinary case. Then it creates the progression branch from that commit. The progression branch's copy of the record takes every update made during the work. Its first update records the base, the commit holding the first record, which that record cannot name itself. The upstream branch's copy stays as first written until the work merges, so the upstream branch shows the progression as current while it runs. Where the working location is the current branch, the record is written there, and there is no second copy.
+**`new` commits the record `Open`, with its log entry, on the upstream branch, `master` in the ordinary case.** It names no progression branch, base, or working location, since none is chosen until the start. **`start` commits the record `Active` on the upstream branch before the progression branch is created.** It writes the working location, the participation level, and the progression branch into the record, and commits the record with its log entry on the upstream branch. Then it creates the progression branch from that commit. Where no progression is in place, `start` writes the record `Active` and does the same. The progression branch's copy of the record takes every update made during the work. Its first update records the base, the commit holding the first record, which that record cannot name itself. The upstream branch's copy stays as first written until the work merges, so the upstream branch shows the progression as current while it runs. Where the working location is the current branch, the record is written there, and there is no second copy.
 
 **As the engineer stated it:** When an implementation starts, an initial implementation record should be recorded on master. Then the branch is made, and the branch's version takes updates added during the course of the implementation, but the initial record remains on master
 
@@ -42,9 +42,9 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 - **The progression concludes after its phases**, and only then merges to its upstream branch. A phase's commits reach no other branch.
 - **One phase runs at a time, in the order the record names**, each starting from the progression's branch as the phases before it left it.
 
-## The working location, chosen when the progression is created
+## The working location, chosen when the progression is started
 
-**Put it through the selection interface each time a progression is created, with no standing default.** The trade is situational: work that resolves in a sitting favours branch only, and work that has to coexist with other work favours a worktree.
+**Put it through the selection interface each time a progression is started, with no standing default.** `new` does not ask it, since `new` creates no branch. The trade is situational: work that resolves in a sitting favours branch only, and work that has to coexist with other work favours a worktree.
 
 **Each option states what it creates:**
 
@@ -70,9 +70,9 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 **The working location changes on two triggers, and only by adding a worktree.** One is external: other work arrives that the engineer intends to work alongside this. One is internal — the work is **escalated**, judged to need more isolation than the single working tree gives it, having proved larger than it was taken for. Either way the addition is confirmed and recorded, the record **gains a line** rather than having its original rewritten, and the conclusion dispatches on the current location. Collapsing a worktree back has no motivation and is not done.
 
-## The human's level of participation, chosen when the progression is created
+## The human's level of participation, chosen when the progression is started
 
-**Attended or unattended, put through the selection interface beside the working location.** Attended is the default. See the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule, which states why the two sit at one gate and what changes between them.
+**Attended or unattended, put through the selection interface beside the working location.** Attended is the default. See the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule, which states why the two sit at one gate and what changes between them.
 
 ## The forecast, and the verdict at the end
 
@@ -128,7 +128,7 @@ A progression is bounded work with a lifecycle. It runs on a branch created for 
 
 Stating the shared lifecycle once and conditioning six clauses on the verdict choice is smaller than stating it twice, and it makes the asymmetry legible instead of leaving a reader to diff two rules to find it.
 
-**How to apply:** branch for every progression, named for its tag. Record the upstream branch, the branch, and the base. Ask the working location and the participation level when the progression is created, through the selection interface, and record both. Ask no forecast question. Write a forecast in the record only where the engineer gives one. Offer the current branch last, and take no forecast there. Ask the verdict question at the end, of work with a forecast only. Before work that reaches a verdict merges, write on its branch the rules and changes master needs to conform to it.
+**How to apply:** branch for every progression, named for its tag. Record the upstream branch, the branch, and the base. Ask the working location and the participation level when the progression is started, not when `new` writes it `Open`, through the selection interface, and record both. Ask no forecast question. Write a forecast in the record only where the engineer gives one. Offer the current branch last, and take no forecast there. Ask the verdict question at the end, of work with a forecast only. Before work that reaches a verdict merges, write on its branch the rules and changes master needs to conform to it.
 
 Follow DBE inside. End in a declared state. Copy affirmed work's log into the project's log and merge where it produced implementation. Verify work without a verdict before integrating and add no gate at the merge.
 
@@ -144,7 +144,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## The branch
 
-1. `new` writes the record `Open`, then creates the branch. `start` makes it `Active`. Where no progression is in place, `start` creates it as `new` does, and writes the record `Active`.
+1. `new` writes the record `Open`, commits it with its log entry on the upstream branch, `master` in the ordinary case, and creates no branch. It asks neither the working-location question nor the participation question. `start` asks both, makes the record `Active`, and creates the branch. Where no progression is in place, `start` creates it and starts it in one step.
 2. Name it `experiment/<subject>`, `feature/<subject>`, `content/<subject>`, `progression/<subject>`, or `implementation/<subject>`, matching the tag.
 3. The subject is short, lower-case, and dash-separated, and names literally what is tested or built.
 4. Add `-run-<n>` only where the work has more than one run.
@@ -158,7 +158,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 12. Record the branch, its upstream, and its base. Record the base as its commit SHA and the ref it came from.
 13. Make no git tag for the base.
 14. A later run branches from the recorded commit.
-15. Except on the current branch, `new`, or `start` where it creates the progression, commits the first record, `Open` or `Active`, and its log entry on the upstream branch, `master` in the ordinary case, then creates the progression branch from that commit.
+15. Except on the current branch, `start` writes the working location, the participation level, and the progression branch into the record, commits it `Active` with its log entry on the upstream branch, `master` in the ordinary case, then creates the progression branch from that commit. An `Open` record names no progression branch, base, or working location.
 16. Make every later update to the record on the progression branch. The first records the base, the commit that holds the first record, which that record cannot name. Leave the upstream branch's copy as first written until the work merges.
 17. Where the working location is the current branch, write the record there. There is no second copy.
 
@@ -186,7 +186,7 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## The working location
 
-1. Put the working location through the selection interface each time a progression is created, with no default.
+1. Put the working location through the selection interface each time a progression is started, with no default. `new` does not ask it.
 2. Each option states what it creates:
 
 > **Branch only** — Create the branch and switch this working tree to it. At the conclusion this
@@ -219,9 +219,9 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 
 ## Participation
 
-1. Put attended or unattended through the selection interface beside the working location.
+1. Put attended or unattended through the selection interface beside the working location, when the progression is started.
 2. Attended is the default.
-3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created rule states why the two sit at one gate, and what changes between them.
+3. The design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started rule states why the two sit at one gate, and what changes between them.
 4. Record both choices.
 
 ## The forecast and the verdict
@@ -318,8 +318,11 @@ Raise no ending for work with a forecast. Leave the engineer on the upstream bra
 - 2026-11-20, revised: a progression created directly takes a branch named `progression/<subject>` or `implementation/<subject>`; checked: 163 directives, 161 kept, 1 less precise, 1 lost, 1 repair, the verdict question going through the selection interface; the lost one is the trigger, which the loader prints beside the compressed text; re-checked: 163 directives, 163 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: content leaves out the five hinges, the participation question, the forecast, and the verdict, and its branch is `content/<subject>`; checked: 155 directives, 153 kept, 2 less precise, 0 lost. Left less precise, neither touched by this revision: that a forecast is what is expected to happen, and that work without a verdict is verified before it integrates, which the compressed text gives as a reason rather than a directive
 - 2026-11-20, revised: no forecast question is asked of a progression or a phase, which the engineer settled; checked: 126 directives, 126 kept, 0 less precise, 0 lost
+- 2026-11-22, revised: `new` writes the record `Open` and creates no branch, and the working-location and participation questions are asked at the start; checked: 63 directives, 62 kept, 1 less precise, 0 lost, 1 repair: `new` commits its log entry on `master`; re-checked: 63 directives, 62 kept, 1 less precise, 0 lost. Left less precise, untouched by this revision, as on 2026-11-07: that work without a verdict is verified before it integrates
 
 ## History
+
+Until Sun Nov 22 2026 `new` created the branch as well as writing the record `Open`, and the working-location and participation questions were asked when a progression was created. The engineer settled that both are asked when it is started, and `start` now creates the branch.
 
 Until Fri Nov 20 2026 a progression was asked, when it was created, whether it states a forecast, with the options *No forecast* and *State a forecast*, and `/phase new` asked the same of each phase. The engineer removed both questions. A forecast is now stated only where the engineer gives one without being asked.
 
@@ -374,7 +377,7 @@ Until Mon Oct 26 2026 this rule restated why attended or unattended sits at one 
 Related:
 
 - the the-progressions-directory-holds-one-record-per-progression rule — the record, the tags, and the state words
-- the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-created and the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rules
+- the design-by-efferent attended-or-unattended-is-chosen-when-the-work-is-started and the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rules
 - the the-harness-announces-slashers-installation-and-the-agent-never-prints-the-notice rule — the status line naming the progression under way
 - the `git` run-the-test-suite-after-changes-before-considering-whether-to-commit and announce-a-branch-switch-in-a-bordered-block rules
 - the a-phase-starts-by-stating-its-goal rule — what is said when a phase starts
@@ -438,3 +441,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:14 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:25:21 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:45 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:37:43 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:33:20 PT
