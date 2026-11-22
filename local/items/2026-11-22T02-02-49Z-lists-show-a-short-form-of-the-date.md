@@ -4,6 +4,8 @@
 
 **Tags:** [work]
 
+**Waits for:** the work item `2026-11-22T02-33-56Z-datetime-representation-is-normalized`
+
 **As the engineer stated it:** Show short form of date in lists
 
 A printed list of records shows a short form of the date. Today each row's handle is the full ISO-8601-UTC filename prefix, as `2026-11-22T02-01-28Z`. The short form is not yet settled.
@@ -18,3 +20,4 @@ A printed list of records shows a short form of the date. Today each row's handl
 Authored by Scott Bellware on Sat Nov 21 2026 at 6:02:49 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 6:19:33 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 6:20:30 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 18:35:48 PT
