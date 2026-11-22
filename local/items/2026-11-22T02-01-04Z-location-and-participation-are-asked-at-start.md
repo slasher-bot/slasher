@@ -1,6 +1,6 @@
 # Location and participation are asked when a progression is started
 
-**State:** Progression
+**State:** Corrected
 
 **Tags:** [correction] [work] [rework]
 
@@ -30,3 +30,4 @@ The implementation `2026-11-22T22-26-16Z-questions-asked-at-start` carries this 
 Authored by Scott Bellware on Sat Nov 21 2026 at 18:01:04 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:24:34 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:26:16 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:35:54 PT
