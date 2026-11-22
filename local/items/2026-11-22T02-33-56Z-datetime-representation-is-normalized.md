@@ -55,6 +55,10 @@ Journal file name stamps that carry no time, as `2026-08-13`, stay as written. T
 
 Existing footer lines in the 12-hour form with seconds should be migrated to date-time-text, as `Mon Oct 26 2026 at 5:52:41 PM PT` becomes `Mon Oct 26 2026 at 17:52:41 PT`. Footer lines that stop at the hour, as `Sat Jun 27 2026 at 1 PM PT`, stay as written, since they have no minutes or seconds to convert.
 
+History lines that give their date as iso-date, as `Until 2026-10-25 …`, should be migrated to date, as `Until Sun Oct 25 2026 …`.
+
+A journal entry's footer lines are migrated as every other footer line is: the 12-hour form with seconds becomes date-time-text, and a line that stops at the hour stays as written.
+
 The migration is recorded in a migration record under `slasher/local/migration/`, and a Slasher project's records are migrated by an `install.sh` migration when its packages are updated.
 
 ## Tasks
@@ -69,6 +73,7 @@ The migration is recorded in a migration record under `slasher/local/migration/`
 - [ ] This repository's work session titles carry no date.
 - [ ] This repository's journal entries carry no datetime line, and their 12-hour footer lines are date-time-text.
 - [ ] This repository's 12-hour footer lines with seconds are date-time-text, and lines that stop at the hour are unchanged.
+- [ ] This repository's History lines give their date as date, not iso-date.
 - [ ] A Slasher project's records are converted the same way by an install.sh migration when its packages are updated.
 
 ## Settled
@@ -87,3 +92,4 @@ Changed by Scott Bellware on Sat Nov 21 2026 at 23:16:33 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:21:18 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:27:50 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:32:34 PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 23:33:56 PT
