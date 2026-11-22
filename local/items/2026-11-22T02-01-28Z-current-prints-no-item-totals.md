@@ -1,6 +1,6 @@
 # /current prints no item totals
 
-**State:** Progression
+**State:** Completed
 
 **Tags:** [work]
 
@@ -16,3 +16,4 @@ The implementation `2026-11-22T02-06-47Z-current-no-item-totals` carries this it
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 6:01:28 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 6:06:47 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 6:14:31 PM PT
