@@ -328,8 +328,8 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 4. Where no progression is current, print the one line *No current progression.* under that heading, in place of the rows.
 5. The items table `/current` prints takes the kind column every list of items takes.
 6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current progressions in full.
-7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Progression and Suspended items here too.
-8. A number given to `/current` does not change these counts.
+7. Print no item totals and no *Other items* heading. Below the items table, print one line giving the count and kind of the Suspended items, as `1 suspended item`, and no line where none is Suspended.
+8. A number given to `/current` does not change this count.
 
 ## The features and experiments commands
 

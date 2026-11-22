@@ -72,13 +72,9 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 
 **As the engineer stated it:** Don't print the kind as its tag. eg: for "[idea]", print in the table, "Idea"
 
-**Below the items table, `/current` counts the items it leaves out, by state.** The counts sit under the heading *Other items*, as one comma-separated sentence, as in `47 Realized, 18 Recorded, 12 Abandoned`. Each state other than Open and Active that some item holds is named once, with its count, Progression included. The states run from the largest count to the smallest. A Suspended item is counted here like any other, which is the treatment a hidden record already takes. A number given to `/current` does not change the counts, since they count the items whose state is not current, not the current items the number leaves out.
+**`/current` prints no item totals.** It counts no state of the items it leaves out, and prints no *Other items* heading. A Suspended item is a hidden record, under the a-status-report-prints-a-fixed-whole-project-report rule, so below the items table `/current` prints one line giving the count and the kind of the Suspended items, as `1 suspended item`, as `/items` does. Where no item is Suspended, it prints no such line. A number given to `/current` does not change the count.
 
-**As the engineer stated it:** At the bottom of the table that prints by "/items", print a summary of how many other of the other iten types there are
-
-**As the engineer stated it:** Print these in a comma-separated sentence
-
-**As the engineer stated it:** Above this line, put the heading: Other items
+**As the engineer stated it:** Don't print item totals in current
 
 **Each current progression is one row: its letter ordinal, its handle, its title, and its state.** Its title is the record's own, as in `Feature — The current command`. It takes no SHA columns, since the list is a summary below the items, not a list of its own. Its letters count from A, apart from the items' numbers.
 
@@ -203,8 +199,8 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 4. Where no progression is current, print the one line *No current progression.* under that heading, in place of the rows.
 5. The items table `/current` prints takes the kind column every list of items takes.
 6. `/current` takes an optional number *n*, as in `/current 5`. It then lists only the *n* most recently created Open and Active items, by handle, oldest first, with ordinals from 1. It lists the current progressions in full.
-7. Below the items table, under the heading *Other items*, print the count of each state other than Open and Active that some item holds, as one comma-separated sentence: `47 Realized, 18 Recorded, 12 Abandoned`. Order the states from the largest count to the smallest. Count Progression and Suspended items here too.
-8. A number given to `/current` does not change these counts.
+7. Print no item totals and no *Other items* heading. Below the items table, print one line giving the count and kind of the Suspended items, as `1 suspended item`, and no line where none is Suspended.
+8. A number given to `/current` does not change this count.
 
 ## The features and experiments commands
 
@@ -271,8 +267,11 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 - 2026-11-20, revised: the heading names *content*, not *article*, in the engineer's words, a swap of one term for another the engineer settled; not re-checked
 - 2026-11-20, revised: `/contents` and `/content list` list the current content, as the content kind settles; checked: 77 directives, 76 kept, 0 less precise, 1 lost, 1 repair: the content rule is named in Related; re-checked: 77 directives, 77 kept, 0 less precise, 0 lost
 - 2026-11-21, revised: a list of progressions numbers its rows with letters, A, B, C, and the progressions `/current` lists take one; checked: 100 directives, 98 kept, 1 less precise, 1 lost, 1 repair: that each row `/current` prints has an ordinal no other row has; the lost one, Implementation items left out where progressions are listed beside them, is carried under the term Progression, so the source decides it kept; re-checked: 100 directives, 100 kept, 0 less precise, 0 lost
+- 2026-11-21, revised: `/current` prints no item totals, and prints one line counting its Suspended items; checked: 91 directives, 91 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sat Nov 21 2026 `/current` printed, below its items table under the heading *Other items*, the count of each item state other than Open and Active, as one comma-separated sentence such as `47 Realized, 18 Recorded, 12 Abandoned`, largest first, with Progression and Suspended items counted. The engineer had asked for it in these words: *At the bottom of the table that prints by "/items", print a summary of how many other of the other iten types there are*, *Print these in a comma-separated sentence*, and *Above this line, put the heading: Other items*.
 
 Until Sat Nov 21 2026 a list of progressions numbered its rows 1, 2, 3, as a list of items does, and the progressions `/current` lists took no ordinal.
 
@@ -391,3 +390,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 10:51:26 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 10:55:05 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:20:19 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 2:24:10 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 6:09:30 PM PT

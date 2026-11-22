@@ -19,7 +19,7 @@ Realizes the work item `2026-11-22T02-01-28Z-current-prints-no-item-totals`.
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/current-no-item-totals`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `3ca311e6`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-current-no-item-totals`. The main working tree stays on `master`.
 - **Participation:** unattended, by `/!`.
 - **Forecast:** none given.
@@ -38,6 +38,13 @@ Realizes the work item `2026-11-22T02-01-28Z-current-prints-no-item-totals`.
 
 ## What happened
 
+- The printed-list rule says `/current` prints no item totals and no *Other items* heading, in its body and its compressed text.
+- Below its items table, `/current` prints one line counting the Suspended items, as `1 suspended item`, and none where no item is Suspended. The agent decided this because the hidden-record rule requires a hidden record to be counted, not omitted.
+- The counts under `/features`, `/experiments`, `/progressions`, and `/contents` are unchanged.
+- The compressed text was checked against the body by two fresh agents: 91 directives, 91 kept.
+- No test was written. No script changed.
+- The automated suite passed: 139 test files.
+
 ## Confirmations
 
 - **2026-11-21** — Creation: started unattended by `/!`. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -47,3 +54,4 @@ Realizes the work item `2026-11-22T02-01-28Z-current-prints-no-item-totals`.
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 6:06:47 PM PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 6:09:15 PM PT
