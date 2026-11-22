@@ -53,9 +53,11 @@ Realizes the correction item `2026-11-22T02-01-04Z-location-and-participation-ar
 - **2026-11-22** — Participation: unattended, as the engineer asked.
 - **2026-11-22** — Plan: Accept, selected by the engineer.
 - **2026-11-22** — Conclusion: Completed, selected by the engineer. The work has no forecast, so no verdict question was asked.
+- **2026-11-22** — Branch deletion and worktree removal: Remove and delete, selected by the engineer.
 
 ---
 
 Authored by Scott Bellware on Sun Nov 22 2026 at 14:26:16 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:31:30 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:35:54 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:36:39 PT
