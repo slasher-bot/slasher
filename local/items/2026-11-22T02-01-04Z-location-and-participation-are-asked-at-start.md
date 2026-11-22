@@ -1,12 +1,16 @@
 # Location and participation are asked when a progression is started
 
-**State:** Open
+**State:** Progression
 
 **Tags:** [correction] [work] [rework]
 
 **As the engineer stated it:** Questions about progression location and attendence should only be asked when the progression is started
 
 The working-location question and the attended-or-unattended question are asked when a progression is started, not when it is created Open. Today the rules ask both at creation, as they did for `Progression — Test`, created Open and not started.
+
+## Progression
+
+The implementation `2026-11-22T22-26-16Z-questions-asked-at-start` carries this item's work.
 
 ## What the change reaches
 
@@ -25,3 +29,4 @@ The working-location question and the attended-or-unattended question are asked 
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 18:01:04 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:24:34 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:26:16 PT
