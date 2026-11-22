@@ -395,11 +395,11 @@ Source: system/foundation/source/a-time-value-carries-minutes-and-seconds.md
 6. The provenance footer, `Mon Jan 1 2026 at 15:45:12 PT`, carries seconds because this rule requires it.
 7. A date alone is not a time. A date-only convention, such as a design's **Settled** resolutions, gets no time added.
 8. This rule applies only when a time is written.
-9. A record's title is the first exception. A dated record title is written `Mon Jan 1 2026 18:06`: 24-hour, minutes, no seconds (see the a-date-in-a-records-title-is-written-as-the-day-the-date-and-the-24-hour-time rule).
-10. The title exception covers titles only. It reaches no other written time.
-11. A journal entry's filename stamp is the second exception. It stops at the minute (see the `journal` package's journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule).
+9. The dates-and-times-are-written-in-named-formats rule names each format and the use that takes it.
+10. A record's title carries no date, so it takes no exception.
+11. A journal entry's filename stamp is the one exception. It stops at the minute (see the `journal` package's journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule).
 12. A journal filename stamp carries seconds only where the writer stated seconds. Do not supply a clock's seconds.
-13. Only these two exceptions exist. Do not assume a third.
+13. Only this one exception exists. Do not assume a second.
 14. A format that wants a further exception must state its own case in its own rule. It must argue from what this rule's defect does not reach. The defect is a repeated line within one file, whose entries collide at the same resolution.
 15. Never revise a recorded datetime to a resolution it never had, and do not supply minutes or seconds for a past event. Supplying missing minutes or seconds would falsify the record.
 16. This rule applies to new values only. Leave coarser values already written as they are.
@@ -583,8 +583,8 @@ Source: system/foundation/source/the-work-sessions-directory-holds-one-record-pe
 
 ## The shape of a work session record
 
-1. Title the record `# Work Session — <name> (<date>)`.
-2. Records written before 2026-08-03 are titled `# Session — …`. Keep those titles. Do not retitle them.
+1. Title the record `# Work Session — <name>`. The title carries no date.
+2. Records written before 2026-08-03 are titled `# Session — …`. Keep that word. Do not retitle them `# Work Session — …`.
 3. The parts appear in the order below.
 4. **Opening summary**: a short paragraph naming what the work session was, as its arc. For example, it started as X, became Y, and ended with Z.
 5. **Framing note**: states that this is the communicable record, or guided tour. It states that the durable records it points to are the source of truth.

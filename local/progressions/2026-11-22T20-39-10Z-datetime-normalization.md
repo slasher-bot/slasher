@@ -19,7 +19,7 @@ Realizes the work item `2026-11-22T02-33-56Z-datetime-representation-is-normaliz
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/datetime-normalization`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `0fafbec0`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-datetime-normalization`. The main working tree stays on `master`.
 - **Participation:** unattended, as the engineer asked.
 - **Forecast:** none given.

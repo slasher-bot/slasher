@@ -4,7 +4,7 @@
 
 Where the writer asks for the timeline — *show the timeline*, *list the entries* — list every journal entry in the active writer's journal directory, `slasher/local/journal/<username>/`. Those are the `20*.md` files there, and `<username>` is resolved by the the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule. List them in chronological order, oldest first.
 
-Format each as a single bullet, `- **<datetime>** — <title>`. The `<datetime>` is the human-readable datetime line under the entry's title, as `Wed Jun 17 2026 at 18:28` is. The `<title>` is the entry's `# ` heading with the leading `# ` removed. End with a one-line count and date span, as *15 entries, spanning Jun 15–17, 2026*. Output the list alone, with no preamble.
+Format each as a single bullet, `- **<datetime>** — <title>`. The `<datetime>` is the entry's file name stamp in the short-date format, as `Wed Jun 17` is, under the `foundation` package's dates-and-times-are-written-in-named-formats rule. The stamp is already local time, so it is not converted. The `<title>` is the entry's `# ` heading with the leading `# ` removed. End with a one-line count and date span, as *15 entries, spanning Jun 15–17, 2026*. Output the list alone, with no preamble.
 
 **A list may be asked for within a timespan, as with `/journal list <timespan>`, and then holds only the entries whose datetime falls within it.** A timespan is a date, a range of dates, or a phrase the writer would say, such as *last week* or *since October*, read in the writer's local time. Both ends of a range are included. The count and date span at the end describe the entries listed.
 
@@ -20,7 +20,7 @@ Format each as a single bullet, `- **<datetime>** — <title>`. The `<datetime>`
 
 **Why:** the timeline says nothing the entries do not. It is an ordering and a rendering of material that is already on disk, so a second copy of it buys a reader nothing and can only disagree with the first. Computing it on request means it is correct by construction, and it cannot be stale.
 
-**How to apply:** resolve the active `<username>` by the the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule. Read the `20*.md` files in `slasher/local/journal/<username>/`, sort them by their datetime line, emit the bullets, and append the computed count and date span. Write nothing to a file.
+**How to apply:** resolve the active `<username>` by the the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule. Read the `20*.md` files in `slasher/local/journal/<username>/`, sort them by their file name stamp, emit the bullets, and append the computed count and date span. Write nothing to a file.
 
 ## Compressed
 
@@ -28,9 +28,9 @@ Format each as a single bullet, `- **<datetime>** — <title>`. The `<datetime>`
 2. The directory is `slasher/local/journal/<username>/`.
 3. Resolve `<username>` by the the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule.
 4. The entries are the `20*.md` files in that directory.
-5. Sort the entries by their datetime line, oldest first.
+5. Sort the entries by their file name stamp, oldest first.
 6. Format each entry as a single bullet: `- **<datetime>** — <title>`.
-7. The `<datetime>` is the human-readable datetime line under the entry's title, as `Wed Jun 17 2026 at 18:28` is.
+7. The `<datetime>` is the entry's file name stamp in the short-date format, as `Wed Jun 17`. The stamp is local time, and is not converted.
 8. The `<title>` is the entry's `# ` heading with the leading `# ` removed.
 9. End with a one-line count and date span, as *15 entries, spanning Jun 15–17, 2026*.
 10. Output the list alone, with no preamble.
@@ -47,8 +47,11 @@ Format each as a single bullet, `- **<datetime>** — <title>`. The `<datetime>`
 - 2026-10-28, revised: Why points removed, solubility 83 → 80, clarity 0.78 → 0.78; checked: 12 directives, 12 kept, 0 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 15 directives, 15 kept, 0 less precise, 0 lost, 0 repairs
 - 2026-11-02, revised: the list takes a timespan, and is asked for with /journal list; checked: 21 directives, 20 kept, 1 less precise, 0 lost, 1 repair; re-checked: 21 directives, 20 kept, 1 less precise, 0 lost. Left less precise: /journal timeline not ruled out, which the command-protocol rule covers by asking
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 14 directives, 14 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 each bullet was led by the entry's datetime line, as `Wed Jun 17 2026 at 18:28`, and the entries were sorted by it. A journal entry carries no datetime line now, so each bullet is led by its file name stamp in the short-date format.
 
 Until Mon Nov 2 2026 the view listed every entry, with no timespan.
 
@@ -59,7 +62,7 @@ Until 2026-08-14 a stored index of the journal was kept, maintained by two direc
 Related:
 
 - the the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule — how `<username>` is resolved
-- the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule — the line each bullet is led by
+- the `foundation` package's dates-and-times-are-written-in-named-formats rule — the short-date format each bullet is led by
 - the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule — the entries this reads, and the *new entry* directive that writes one
 - the foundation package's vocabulary — the projection term
 
@@ -83,3 +86,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 7:01:39 PM PT
 Changed by Scott Bellware on Mon Nov 2 2026 at 9:02:21 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:08:40 PT

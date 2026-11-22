@@ -782,6 +782,84 @@ migrate_record_names() {
   fi
 }
 
+# Carry a project's records to the named datetime formats. The dates-and-times-are-written-in-named-
+# formats rule settled on 2026-11-22 that a record's title carries no date, that a journal entry
+# carries no datetime line under its title, and that a footer line is 24-hour. A rule change cannot
+# reach a project's own records, so the installer does, and within a migration the migration rule
+# permits it to conform historical records.
+#
+# It drops the date from a work session record's title, as `(Sat Nov 21 2026 18:01)`,
+# `(Sat Nov 21 2026)`, or `(2026-07-26)`, and keeps the word Session where an old title has it. It
+# drops the datetime line under a journal entry's title, as `Sat Nov 21 2026 at 18:01`, with the
+# blank line after it. It converts a footer line in the 12-hour form with seconds, as
+# `5:52:41 PM PT`, to 24-hour, as `17:52:41 PT`, in every record. A footer line that stops at the
+# hour has no minutes or seconds to convert, and is left as written. Nothing else in a record
+# changes, and a journal file name is not renamed.
+migrate_datetimes() {
+  [ -d "$own" ] || return 0
+  migrated=0
+
+  sessions="$own/logs/work-sessions"
+  if [ -d "$sessions" ]; then
+    for record in "$sessions"/*.md; do
+      [ -f "$record" ] || continue
+      title=$(sed -n 1p "$record")
+      dateless=$(printf '%s\n' "$title" | sed -E 's/^(# (Work )?Session — .*) \(([A-Z][a-z][a-z] [A-Z][a-z][a-z] [0-9][0-9]? [0-9][0-9][0-9][0-9]( [0-9][0-9]:[0-9][0-9])?|[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])\)$/\1/')
+      [ "$dateless" != "$title" ] || continue
+      { printf '%s\n' "$dateless"; sed 1d "$record"; } > "$record.tmp"
+      mv "$record.tmp" "$record"
+      migrated=$((migrated + 1))
+    done
+  fi
+
+  for entry in "$own"/journal/*/*.md; do
+    [ -f "$entry" ] || continue
+    awk '
+      NR == 3 && /^[A-Z][a-z][a-z] [A-Z][a-z][a-z] [0-9][0-9]? [0-9][0-9][0-9][0-9]( at [0-9][0-9]:[0-9][0-9])?$/ { dropped = 1; next }
+      NR == 4 && dropped && /^$/ { next }
+      { print }
+    ' "$entry" > "$entry.tmp"
+    if cmp -s "$entry" "$entry.tmp"; then
+      rm "$entry.tmp"
+    else
+      mv "$entry.tmp" "$entry"
+      migrated=$((migrated + 1))
+    fi
+  done
+
+  find "$own" -name '*.md' -type f | while IFS= read -r record; do
+    awk '
+      /^(Authored|Changed) by .* on [A-Z][a-z][a-z] [A-Z][a-z][a-z] [0-9][0-9]? [0-9][0-9][0-9][0-9] at [0-9][0-9]?:[0-9][0-9]:[0-9][0-9] (AM|PM) [A-Z]+$/ {
+        n = split($0, word, " ")
+        split(word[n - 2], part, ":")
+        hour = part[1] + 0
+        if (word[n - 1] == "AM" && hour == 12) hour = 0
+        if (word[n - 1] == "PM" && hour != 12) hour = hour + 12
+        line = word[1]
+        for (i = 2; i <= n - 3; i++) line = line " " word[i]
+        printf "%s %02d:%s:%s %s\n", line, hour, part[2], part[3], word[n]
+        next
+      }
+      { print }
+    ' "$record" > "$record.tmp"
+    if cmp -s "$record" "$record.tmp"; then
+      rm "$record.tmp"
+    else
+      mv "$record.tmp" "$record"
+      echo "$record" >> "$own/.datetimes-converted"
+    fi
+  done
+  if [ -f "$own/.datetimes-converted" ]; then
+    migrated=$((migrated + $(wc -l < "$own/.datetimes-converted")))
+    rm "$own/.datetimes-converted"
+  fi
+
+  if [ "$migrated" -gt 0 ]; then
+    echo "Carried $migrated record(s) to the named datetime formats: no date in a work session title, no datetime line in a journal entry, and 24-hour footer lines."
+    echo "Commit the change."
+  fi
+}
+
 # Carry a project's implementations to progressions. Progression replaced implementation on
 # 2026-11-20 as the name of a bounded piece of work on its own branch, and its file became a
 # progression record. A rule change cannot reach a project's own records, so the installer does,
@@ -981,6 +1059,7 @@ if [ "$migrations" = yes ]; then
   migrate_record_names
   migrate_progressions
   migrate_email_configuration
+  migrate_datetimes
 fi
 
 # 4. An existing AGENTS.md left unchanged because no one was there to answer leaves the rules

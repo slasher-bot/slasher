@@ -1,0 +1,1 @@
+# The a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule is removed, superseded by the named-formats rule, under which a journal entry carries no datetime line. The journal rules that cited it are reconciled, and the timeline leads each bullet with the stamp in the short-date format

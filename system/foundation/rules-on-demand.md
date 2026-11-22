@@ -56,33 +56,6 @@ Trigger: When running or writing a Slasher slash command
 8. A command's skill only reads the words typed, and hands the act to the rule that governs it. That rule says what the act is. This rule does not, and governs only how a command is typed and how its words are read.
 9. `help` is always the subcommand, never an argument. `/reserve help` does not reserve the word "help".
 
-# A date in a record's title is written as the day, the date, and the 24-hour time
-
-Source: system/foundation/source/a-date-in-a-records-title-is-written-as-the-day-the-date-and-the-24-hour-time.md
-
-Trigger: When writing a date into a working-state record's title
-
-1. A working-state record's title may carry a date, as the work session record's `# Work Session — <name> (<date>)` does.
-2. In any record whose title is dated, write the date in this form:
-
-```
-Mon Jan 1 2026 18:06
-```
-
-3. The order is day-of-week, month, day, year, then 24-hour hours and minutes.
-4. Do not write `at`, AM/PM, or seconds.
-5. Do not add a timezone abbreviation or any other timezone marker.
-6. The time is the author's local time.
-7. The date is the record's authoring time. It is the same instant as its ISO-8601-UTC filename prefix, rendered in local time.
-8. For a record covering work over more than one day, the title still names the single moment the record was written.
-9. Do not write a date range.
-10. Render the date with the command `date "+%a %b %-d %Y %H:%M"`.
-11. This title form is distinct from the other two record date formats. Each format is used only where it is specified.
-12. The filename prefix stays machine-sortable UTC to the second, such as `2026-07-24T18-16-22Z-…`, per the file-names rule.
-13. The provenance footer stays local time to the second with a zone abbreviation, such as `Fri Jul 24 2026 at 11:58:56 PT`, per the record-a-rules-authorship-in-a-provenance-footer rule.
-14. The title is the one exception to the a-time-value-carries-minutes-and-seconds rule. Every other datetime written into a file carries seconds.
-15. The exception is narrow and covers only the title's date.
-
 # A design section documenting a package dependency is titled "Package Dependency"
 
 Source: system/foundation/source/a-design-section-documenting-a-package-dependency-is-titled-package-dependency.md
@@ -1024,7 +997,7 @@ Trigger: When creating and naming a new file under slasher/local/ or a new rule 
 
 ## Format
 1. The prefix is an ISO 8601 datetime normalized to UTC. A dash-separated, lower-case name and `.md` follow it.
-2. **Format:** `YYYY-MM-DDTHH-MM-SSZ-<name>.md`.
+2. **Format:** `YYYY-MM-DDTHH-MM-SSZ-<name>.md`. The prefix is the iso-full format in UTC, under the dates-and-times-are-written-in-named-formats rule.
 3. Join the date and time with `T`. The trailing `Z` marks UTC.
 4. Write the time's colons as dashes, for filesystem safety, as in `2026-07-01T20-40-00Z-some-name.md`.
 5. The name is dash-separated and lower-case.
@@ -1036,6 +1009,59 @@ Trigger: When creating and naming a new file under slasher/local/ or a new rule 
 2. Name a rule in a distributed package (`foundation`, `language`, `testing`, …) by a dash-separated, lower-case name alone. An example is `write-subject-first-commit-messages.md`, not `2026-…-subject-first-commit-messages.md`.
 3. A package's structural files take no prefix. These are `README.md`, `vocabulary.md`, and `install-dependencies.sh`, each named by what it is.
 4. A project's own `slasher/local/vocabulary.md` takes no prefix.
+
+# Dates and times are written in named formats
+
+Source: system/foundation/source/dates-and-times-are-written-in-named-formats.md
+
+Trigger: When writing a date or a time into a file, a file name, or a printed list
+
+1. Write every date and time in one of the named formats. A format is named for its form, not for where it is used.
+2. Each use takes the format the mapping names. Do not write a date or a time in a form the table does not name.
+
+## The formats
+
+| Name | Form | Example |
+|---|---|---|
+| **iso-full** | `YYYY-MM-DDTHH-MM-SS` | `2026-11-21T18-01-28` |
+| **iso-date-short-time** | `YYYY-MM-DDTHH-MM` | `2026-11-21T18-01` |
+| **iso-date** | `YYYY-MM-DD` | `2026-11-21` |
+| **date** | `Ddd Mmm D YYYY` | `Sat Nov 21 2026` |
+| **short-date** | `Ddd Mmm D` | `Sat Nov 21` |
+| **date-time-text** | `Ddd Mmm D YYYY at HH:MM:SS` | `Sat Nov 21 2026 at 18:01:28` |
+
+1. The time is 24-hour. The day of the month takes no leading zero.
+2. An ISO format writes the time's colons as dashes.
+
+## The zone
+
+1. An ISO format is written in UTC or local time. A text format, `date`, `short-date`, or `date-time-text`, is written in local time only.
+2. A time in UTC ends in `Z`, as `2026-11-22T02-01-28Z`.
+3. A time in local time in a text format ends in the zone abbreviation, as `18:01:28 PT`. Write `PT`, not `PST` or `PDT`.
+4. A time in local time in an ISO format has no suffix. Never write a numeric offset.
+5. A format with no time has no suffix, and names the local day.
+
+## The mapping
+
+| Use | Format | Zone | Example |
+|---|---|---|---|
+| a dated record's file name prefix | iso-full | UTC | `2026-11-22T02-01-28Z` |
+| a journal entry's file name stamp | iso-date-short-time | local | `2026-11-21T18-01` |
+| a journal entry's file name stamp, where the writer gives seconds | iso-full | local | `2026-11-21T18-01-28` |
+| a journal entry's file name stamp, where the writer gives no time | iso-date | local | `2026-11-21` |
+| a provenance footer line | date-time-text | local | `Sat Nov 21 2026 at 18:01:28 PT` |
+| a Settled resolution, a confirmation, or a Compression line | iso-date | local | `2026-11-21` |
+| a History line | date | local | `Until Sat Nov 21 2026 …` |
+| a printed list of records | short-date | local | `Sat Nov 21` |
+
+1. A record's title carries no date.
+2. A journal entry carries no datetime line under its title.
+3. Add a use to the mapping before writing it. A new form is added to the table first.
+
+## Converting
+
+1. Convert a UTC time to local time with `slasher/system/foundation/format-datetime.sh <format> <prefix>`, never by working it out. `format-datetime.sh short-date 2026-11-22T02-01-28Z` prints `Sat Nov 21`. With no prefix it prints the present moment.
+2. When a time carries seconds is the a-time-value-carries-minutes-and-seconds rule's. A value already written keeps its precision.
 
 # Disclosure is the one reason to edit a historical record
 
@@ -1322,7 +1348,7 @@ Changed by <other name> on <datetime>
 ```
 
 4. The datetime is human-readable local time, formatted `Mon Jan 1 2026 at 15:45:12 PT`.
-5. It gives day-of-week, month, day, year, then the time as 24-hour hours, minutes, and seconds, and a timezone abbreviation. It carries no AM/PM.
+5. It gives day-of-week, month, day, year, then the time as 24-hour hours, minutes, and seconds, and a timezone abbreviation. It carries no AM/PM. It is the date-time-text format in local time, under the dates-and-times-are-written-in-named-formats rule.
 6. The time is in the author's local time.
 7. The time carries minutes and seconds, per the a-time-value-carries-minutes-and-seconds rule.
 8. The footer does not use the ISO-8601-UTC filename-prefix form.

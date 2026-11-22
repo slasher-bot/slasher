@@ -36,7 +36,7 @@ journal = "private"
 
 ## A private entry takes the shape of a project journal entry
 
-**A private entry follows the project journal's rules for its filename, its datetime line, its summary, and its footer.** That is the journal-entries rule, the where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface rule, the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule, the where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone rule, and the journal-convention's `Authored by` footer. The an-entry-is-the-writers-words rule holds too: the agent writes the writer's words and none of its own.
+**A private entry follows the project journal's rules for its filename, its summary, and its footer.** That is the journal-entries rule, the where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface rule, the where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone rule, and the journal-convention's `Authored by` footer. The an-entry-is-the-writers-words rule holds too: the agent writes the writer's words and none of its own.
 
 **Nothing about a private entry is logged.** Not its creation, not a change the writer directs to it, not its being read, and not its move to the project journal. The project's log is committed with the project, so any log entry about a private entry would show that the entry exists, which is the one thing kept out of the repository. This holds where another rule asks for a log entry: the an-entry-is-the-writers-words rule records a directed change in the log, and for a private entry it is not recorded. A directed change is made exactly as the writer named it, and nothing beside the entry records it.
 
@@ -58,7 +58,7 @@ journal = "private"
 
 Keeping the private journal outside the repository, rather than in an ignored file inside it, means no `.gitignore` has to stay correct. It also means a reader of the repository cannot see that private entries exist.
 
-**How to apply:** on `New private journal entry`, `New private entry`, or `Private note`, write the entry in `~/.local/share/slasher/journal/<project>/`, named for the project that holds the project journal. Make the directory where it is absent. Give the entry the project journal's filename, datetime line, summary, and footer, and ask for its time as a project journal entry's time is asked for. Commit nothing.
+**How to apply:** on `New private journal entry`, `New private entry`, or `Private note`, write the entry in `~/.local/share/slasher/journal/<project>/`, named for the project that holds the project journal. Make the directory where it is absent. Give the entry the project journal's filename, summary, and footer, and ask for its time as a project journal entry's time is asked for. Commit nothing.
 
 Make a change the writer directs to a private entry exactly as named. Write no log entry about a private entry, for any reason.
 
@@ -100,7 +100,7 @@ journal = "private"
 
 ## A private entry's shape
 
-1. Give a private entry the project journal's filename, datetime line, summary, and footer, by the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry, where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface, a-journal-entry-has-a-human-readable-datetime-line-under-its-title, and where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone rules, and the the-journal-is-the-record-the-writer-keeps rule's `Authored by` footer.
+1. Give a private entry the project journal's filename, summary, and footer, by the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry, where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface, and where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone rules, and the the-journal-is-the-record-the-writer-keeps rule's `Authored by` footer.
 2. Ask for its time as a project journal entry's time is asked for.
 3. The an-entry-is-the-writers-words rule holds: write the writer's words and none of the agent's own.
 4. Log nothing about a private entry: not its creation, a change the writer directs to it, its being read, or its move to the project journal.
@@ -130,8 +130,11 @@ journal = "private"
 - 2026-10-29, merge from master re-checked: 22 directives, 22 kept, 0 less precise, 0 lost, 0 repairs
 - 2026-11-03, revised: /journal publish-private asks for confirmation; checked: 32 directives, 30 kept, 2 less precise, 0 lost. Left less precise, from before this change: which rule asks for a log entry, and who deploys a hook
 - 2026-11-15, revised: a project's journal can be private entirely; checked: 43 directives, 43 kept, 0 less precise, 0 lost
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 27 directives, 27 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 a journal entry carried a datetime line under its title, as `Sat Nov 21 2026 at 18:01`, under the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule. The dates-and-times-are-written-in-named-formats rule settled that it carries none, and that rule is discontinued.
 
 Until Sun Nov 15 2026 this rule said "consuming project" for a Slasher project, and named the registry `consuming-projects.toml` and its reader `read-consuming-projects.sh` where it named them.
 
@@ -143,7 +146,7 @@ Related:
 
 - the journal-convention — the project journal, and the one this is kept apart from
 - the a-private-journal-is-read-only-on-command rule — when the agent reads a private journal
-- the journal-entries, ask-for-entry-time-or-omit-it, datetime-stamp-line, and omit-body-when-same-as-title rules — the entry's shape
+- the journal-entries, ask-for-entry-time-or-omit-it, and omit-body-when-same-as-title rules — the entry's shape
 - the an-entry-is-the-writers-words rule — who writes an entry
 - the foundation package's a-project-does-not-name-its-consumers rule — per-machine configuration under `~/.config/`, beside which this keeps data
 
@@ -158,3 +161,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 10:09:38 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:54:23 PM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:08:40 PT

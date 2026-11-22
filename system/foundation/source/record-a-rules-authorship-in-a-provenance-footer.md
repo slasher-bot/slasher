@@ -26,7 +26,7 @@ Changed by <name> on <datetime>
 Changed by <other name> on <datetime>
 ```
 
-- **The datetime is human-readable local time**, formatted `Mon Jan 1 2026 at 15:45:12 PT` — day-of-week, month, day, year, then the time as 24-hour hours, minutes, and seconds, and a timezone abbreviation, in the author's **local** time. It carries no AM/PM. The time carries **minutes and seconds**, per the a-time-value-carries-minutes-and-seconds rule. At hour resolution two edits in one hour are indistinguishable and the second is unrecordable, because its line would duplicate the first verbatim. This deliberately differs from the ISO-8601-UTC filename prefix (machine-sortable, UTC): the footer is provenance written for a person to read.
+- **The datetime is human-readable local time**, formatted `Mon Jan 1 2026 at 15:45:12 PT` — day-of-week, month, day, year, then the time as 24-hour hours, minutes, and seconds, and a timezone abbreviation, in the author's **local** time. It carries no AM/PM. It is the date-time-text format in local time, under the dates-and-times-are-written-in-named-formats rule. The time carries **minutes and seconds**, per the a-time-value-carries-minutes-and-seconds rule. At hour resolution two edits in one hour are indistinguishable and the second is unrecordable, because its line would duplicate the first verbatim. This deliberately differs from the ISO-8601-UTC filename prefix (machine-sortable, UTC): the footer is provenance written for a person to read.
 - **Authored** names the original author and when the rule was first written. **Changed** is appended each time the rule is edited, oldest first — never rewrite or remove an earlier line.
 - **Earlier lines keep the form they were written in.** Footers written before the time carried minutes and seconds stay at hour resolution. An earlier line is never rewritten, and the minutes of a past edit are not recoverable — so the two forms coexist in the same footer. Only new lines take the full time. Lines written in the 12-hour form, as `3:45:12 PM PT`, keep it too, beside new lines in the 24-hour form.
 
@@ -59,7 +59,7 @@ Changed by <other name> on <datetime>
 ```
 
 4. The datetime is human-readable local time, formatted `Mon Jan 1 2026 at 15:45:12 PT`.
-5. It gives day-of-week, month, day, year, then the time as 24-hour hours, minutes, and seconds, and a timezone abbreviation. It carries no AM/PM.
+5. It gives day-of-week, month, day, year, then the time as 24-hour hours, minutes, and seconds, and a timezone abbreviation. It carries no AM/PM. It is the date-time-text format in local time, under the dates-and-times-are-written-in-named-formats rule.
 6. The time is in the author's local time.
 7. The time carries minutes and seconds, per the a-time-value-carries-minutes-and-seconds rule.
 8. The footer does not use the ISO-8601-UTC filename-prefix form.
@@ -78,8 +78,11 @@ Changed by <other name> on <datetime>
 - 2026-10-24, compressed: compression 0.29, change 0.51, solubility 50 → 79, clarity 0.30 → 0.75, 12 directives, 12 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 79 → 79, clarity 0.75 → 0.76; checked: 10 directives, 10 kept, 0 less precise, 0 lost
 - 2026-11-21, revised: the footer datetime is 24-hour, as the engineer settled; checked: 17 directives, 17 kept, 0 less precise, 0 lost
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 16 directives, 16 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 this rule set out the footer's datetime form itself. It is the date-time-text format in local time, which the dates-and-times-are-written-in-named-formats rule names.
 
 Until Sat Nov 21 2026 the footer's time was 12-hour with AM/PM, as `Mon Jan 1 2026 at 3:45:12 PM PT`. The engineer settled that it is 24-hour.
 
@@ -111,3 +114,4 @@ Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 18:31:40 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:01:15 PT

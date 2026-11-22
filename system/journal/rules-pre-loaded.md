@@ -29,7 +29,7 @@ Source: system/journal/source/an-entry-is-the-writers-words.md
 7. Invent no fact, and embellish nothing.
 8. Add the entry's settled shape and nothing else.
 9. Add the datetime prefix and the `Authored by` line the the-journal-is-the-record-the-writer-keeps rule requires.
-10. Add the datetime line under the title.
+10. Add no datetime line under the title.
 11. Add a `**Tags:**` line only where the writer gave tags.
 12. Add the `**Summary:**` line the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule asks for.
 13. The summary states the entry's gist in the writer's own terms, not the agent's reading of what it means.

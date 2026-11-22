@@ -1,0 +1,1 @@
+# The a-date-in-a-records-title-is-written-as-the-day-the-date-and-the-24-hour-time rule is removed, superseded by the named-formats rule, under which a record's title carries no date. The minutes-and-seconds rule loses its title exception

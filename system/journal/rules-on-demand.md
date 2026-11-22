@@ -1,34 +1,3 @@
-# A journal entry has a human-readable datetime line under its title
-
-Source: system/journal/source/a-journal-entry-has-a-human-readable-datetime-line-under-its-title.md
-
-Trigger: When writing a journal entry
-
-1. Every journal entry carries a datetime stamp line in its content.
-2. The line sits on its own line, directly under the `# <title>` heading.
-3. It sits above the `**Tags:**` line, where there is one.
-4. It sits above the `**Summary:**` line, where there is one.
-5. It sits above the body.
-6. Format: `Ddd Mon D YYYY at HH:MM`. An example is `Mon Jun 1 2026 at 13:40`.
-7. The fields are the abbreviated weekday, then the abbreviated month, then the day of the month with no leading zero.
-8. Next come the four-digit year, the literal word `at`, and the 24-hour `HH:MM`.
-9. Derive the datetime from the entry's filename stamp, which is local time, per the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule.
-10. Parse the filename's `YYYY-MM-DDTHH-MM` as local time.
-11. Parse its `YYYY-MM-DDTHH-MM-SS` form as local time, where the writer gave seconds.
-12. Convert no time zone.
-13. The line reads to the minute, whichever form the stamp takes.
-14. Parse a stamp that carries seconds to the second, and render it without the seconds.
-15. A full entry is the `# <title>`, the datetime line, the optional `**Tags:**` line, the optional `**Summary:**` line, then the body.
-16. Omit the body where it would duplicate the title.
-17. When creating an entry, compute the line from the local-time filename stamp with this command:
-
-```
-date -j -f "%Y-%m-%d %H:%M" "<stamp>" "+%a %b %e %Y at %H:%M"
-```
-
-18. Collapse any double space in the output.
-19. Where the stamp carries seconds, use `"%Y-%m-%d %H:%M:%S"` as the parse format.
-
 # A private journal is read only when the engineer commands it
 
 Source: system/journal/source/a-private-journal-is-read-only-on-command.md
@@ -51,9 +20,9 @@ Trigger: When the writer asks for the journal timeline or a list of journal entr
 2. The directory is `slasher/local/journal/<username>/`.
 3. Resolve `<username>` by the the-writers-username-is-read-from-the-environment-then-the-project-then-the-users-config-file rule.
 4. The entries are the `20*.md` files in that directory.
-5. Sort the entries by their datetime line, oldest first.
+5. Sort the entries by their file name stamp, oldest first.
 6. Format each entry as a single bullet: `- **<datetime>** — <title>`.
-7. The `<datetime>` is the human-readable datetime line under the entry's title, as `Wed Jun 17 2026 at 18:28` is.
+7. The `<datetime>` is the entry's file name stamp in the short-date format, as `Wed Jun 17`. The stamp is local time, and is not converted.
 8. The `<title>` is the entry's `# ` heading with the leading `# ` removed.
 9. End with a one-line count and date span, as *15 entries, spanning Jun 15–17, 2026*.
 10. Output the list alone, with no preamble.
@@ -78,7 +47,7 @@ Trigger: When writing a journal entry (including when the writer types `/journal
 
 ## Filename
 
-1. Name the file `YYYY-MM-DDTHH-MM-<name>.md`.
+1. Name the file `YYYY-MM-DDTHH-MM-<name>.md`. The stamp is the iso-date-short-time format in local time, iso-full where the writer gives seconds, and iso-date where the writer gives no time, under the `foundation` package's dates-and-times-are-written-in-named-formats rule.
 2. Compute the timestamp in local time with `date +%Y-%m-%dT%H-%M`.
 3. Write the colons of ISO 8601 as dashes.
 4. Never use UTC for journal entries. This is the writer's stated preference.
@@ -96,9 +65,9 @@ Trigger: When writing a journal entry (including when the writer types `/journal
 ## Entry format
 
 1. **Voice:** write in first person, from the writer's perspective, for example *I raised the concern …*.
-2. **Structure:** write a `# <title>`, then the datetime line, then a `**Tags:**` line where the entry has tags.
+2. **Structure:** write a `# <title>`, then a `**Tags:**` line where the entry has tags.
 3. Follow these with a bold `**Summary:**` one-line gist, then the narrative prose.
-4. Write the datetime line by the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule.
+4. Write no datetime line. The file name stamp carries the entry's time.
 5. Make the summary a standalone takeaway, not a restatement of the title. It shows first in a Quick Look preview.
 6. Omit the summary where it would be identical or nearly identical to the body, as on a very short entry.
 7. The entry is then the title and the prose, with nothing repeated.
@@ -108,7 +77,7 @@ Trigger: When writing a journal entry (including when the writer types `/journal
 ## The directive *new entry*
 
 1. Where the writer opens with *new entry*, or types `/journal`, `/journal new`, or `/journal entry`, write the entry by this rule.
-2. Also apply the a-journal-entry-has-a-human-readable-datetime-line-under-its-title, where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone, and where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface rules.
+2. Also apply the where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone and where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface rules.
 3. Also apply the `foundation` package's a-record-may-be-categorized-with-square-bracket-tags rule.
 4. Nothing else follows from the directive.
 5. Write nothing beside the entry file.
@@ -165,7 +134,7 @@ journal = "private"
 
 ## A private entry's shape
 
-1. Give a private entry the project journal's filename, datetime line, summary, and footer, by the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry, where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface, a-journal-entry-has-a-human-readable-datetime-line-under-its-title, and where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone rules, and the the-journal-is-the-record-the-writer-keeps rule's `Authored by` footer.
+1. Give a private entry the project journal's filename, summary, and footer, by the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry, where-an-entry-carries-no-time-ask-for-one-through-the-selection-interface, and where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone rules, and the the-journal-is-the-record-the-writer-keeps rule's `Authored by` footer.
 2. Ask for its time as a project journal entry's time is asked for.
 3. The an-entry-is-the-writers-words rule holds: write the writer's words and none of the agent's own.
 4. Log nothing about a private entry: not its creation, a change the writer directs to it, its being read, or its move to the project journal.
@@ -229,11 +198,11 @@ Trigger: When writing, changing, or committing a journal entry
 ## Format
 
 1. An entry is frontmatter-free markdown.
-2. It opens with a `# <title>` naming what the entry is about, then the datetime line, then the writer's prose.
+2. It opens with a `# <title>` naming what the entry is about, then the writer's prose.
 3. An entry takes a `**Tags:**` line where it is categorized.
 4. An entry takes a `**Summary:**` line only where the summary says something the body does not.
 5. An entry carries no state line and no section beyond those.
-6. The a-journal-entry-has-a-human-readable-datetime-line-under-its-title, where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone, and journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rules each state one part of that shape.
+6. The where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone and journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rules each state one part of that shape.
 7. The foundation package's a-record-may-be-categorized-with-square-bracket-tags rule states the tag protocol.
 
 ## Footer
@@ -392,10 +361,10 @@ Trigger: When creating a journal entry for which the writer gave no time
 ## The ask carries these options
 
 1. **No time.** The filename drops the `T HH-MM` block and becomes `YYYY-MM-DD-<name>.md`.
-2. Under **No time**, the datetime line drops the `at HH:MM` and reads `Ddd Mon D YYYY`.
+2. Under **No time**, the stamp is a date alone.
 3. **Now**, with the current time in the label, as in `Now (2:01 PM)`.
 4. Under **Now**, the filename takes the `YYYY-MM-DDTHH-MM` prefix.
-5. Under **Now**, the datetime line reads `Ddd Mon D YYYY at HH:MM`.
+5. Under **Now**, the stamp stops at the minute.
 6. **Enter the time.** The writer gives the value.
 7. A value stated to the second takes the `YYYY-MM-DDTHH-MM-SS` prefix.
 8. Every other entered value stops at the minute.
@@ -407,7 +376,7 @@ Trigger: When creating a journal entry for which the writer gave no time
 3. Hold **Now** to the minute. Drop the clock's seconds value from the stamp.
 4. Write seconds in a filename only where the writer stated seconds. No answer produces a resolution the writer did not give.
 5. A date-only entry sorts to the start of its day, matching the filename sort where `-` precedes `T`.
-6. Name the file and write the datetime line to match the answer.
+6. Name the file to match the answer.
 
 # Where an entry's body says the same thing as its title, keep the title alone
 
@@ -416,7 +385,7 @@ Source: system/journal/source/where-an-entrys-body-says-the-same-thing-as-its-ti
 Trigger: When drafting a journal entry
 
 1. Where a journal entry's body would be identical or nearly identical to its `# <title>`, omit the body.
-2. The entry is then the title heading, the datetime line, and a `**Tags:**` line where it has one. The datetime line stays, whatever else is dropped.
+2. The entry is then the title heading, and a `**Tags:**` line where it has one.
 3. No prose repeats what the title already says. Omit the `**Summary:**` line where it would duplicate the body, as the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule directs.
 4. After drafting an entry, compare the title and the body.
 5. Where the body adds no fact, no detail, and no framing beyond the title, drop the body and keep the title.

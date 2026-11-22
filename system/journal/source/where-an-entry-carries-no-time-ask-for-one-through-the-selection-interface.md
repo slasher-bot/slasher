@@ -8,8 +8,8 @@ When creating a journal entry, where the writer has not given a **time**, ask th
 
 **The ask carries these options:**
 
-1. **No time.** The filename drops the `T HH-MM` block and becomes `YYYY-MM-DD-<name>.md`. The datetime line drops the `at HH:MM` with it and reads `Ddd Mon D YYYY`.
-2. **Now**, with the current time in the label — `Now (2:01 PM)`. The filename takes the `YYYY-MM-DDTHH-MM` prefix and the datetime line reads `Ddd Mon D YYYY at HH:MM`.
+1. **No time.** The filename drops the `T HH-MM` block and becomes `YYYY-MM-DD-<name>.md`.
+2. **Now**, with the current time in the label — `Now (2:01 PM)`. The filename takes the `YYYY-MM-DDTHH-MM` prefix.
 3. **Enter the time.** The writer gives the value. A value stated to the second takes the `YYYY-MM-DDTHH-MM-SS` prefix. Every other value stops at the minute.
 
 **`Now` is held to the minute, like every other answer.** It reads a clock that has a seconds value, and the stamp drops it. Seconds reach a filename only where the writer states them, so no answer here produces a resolution the writer did not give. See the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule.
@@ -30,7 +30,7 @@ Offering the date-only form as an answer is what makes it reachable. It was form
 
 Stamp the filename to the minute under **Now**, and under a time the writer stated to the minute. Write seconds only where the writer stated seconds.
 
-Name the file and write the datetime line to match the answer. Settle the date first by the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule's dating default, and do not put the date to the writer.
+Name the file to match the answer. Settle the date first by the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule's dating default, and do not put the date to the writer.
 
 ## Compressed
 
@@ -48,10 +48,10 @@ Name the file and write the datetime line to match the answer. Settle the date f
 ## The ask carries these options
 
 1. **No time.** The filename drops the `T HH-MM` block and becomes `YYYY-MM-DD-<name>.md`.
-2. Under **No time**, the datetime line drops the `at HH:MM` and reads `Ddd Mon D YYYY`.
+2. Under **No time**, the stamp is a date alone.
 3. **Now**, with the current time in the label, as in `Now (2:01 PM)`.
 4. Under **Now**, the filename takes the `YYYY-MM-DDTHH-MM` prefix.
-5. Under **Now**, the datetime line reads `Ddd Mon D YYYY at HH:MM`.
+5. Under **Now**, the stamp stops at the minute.
 6. **Enter the time.** The writer gives the value.
 7. A value stated to the second takes the `YYYY-MM-DDTHH-MM-SS` prefix.
 8. Every other entered value stops at the minute.
@@ -63,15 +63,18 @@ Name the file and write the datetime line to match the answer. Settle the date f
 3. Hold **Now** to the minute. Drop the clock's seconds value from the stamp.
 4. Write seconds in a filename only where the writer stated seconds. No answer produces a resolution the writer did not give.
 5. A date-only entry sorts to the start of its day, matching the filename sort where `-` precedes `T`.
-6. Name the file and write the datetime line to match the answer.
+6. Name the file to match the answer.
 
 ## Compression
 
 - 2026-10-24, compressed: compression 0.38, change 0.83, solubility 43 → 74, clarity 0.52 → 0.81, 24 directives, 24 kept, 0 less precise, 0 lost, after 2 repairs, re-checked kept
 - 2026-10-28, revised: Why points removed, solubility 74 → 70, clarity 0.81 → 0.81; checked: 24 directives, 24 kept, 0 less precise, 0 lost
 - 2026-10-29, revised: the `Explain` option and every statement about the free-text option are removed, at the engineer's direction; checked: 26 directives, 26 kept, 0 less precise, 0 lost; what is not kept was left out on purpose, in this revision or an earlier one, or is stated in the pre-loaded present-every-prompt-to-the-engineer-through-the-selection-ui rule
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 16 directives, 16 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 a journal entry carried a datetime line under its title, as `Sat Nov 21 2026 at 18:01`, under the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule. The dates-and-times-are-written-in-named-formats rule settled that it carries none, and that rule is discontinued.
 
 Until Sun Oct 25 2026 this rule was named ask-for-entry-time-or-omit-it.
 
@@ -80,7 +83,6 @@ Until Thu Oct 29 2026 the ask also carried an `Explain` option, offered under th
 Related:
 
 - the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule — the dating default that settles the date, and the filename stamp
-- the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule — the in-content line that drops the time with it
 - the foundation package's present-every-prompt-to-the-engineer-through-the-selection-ui rule — the interface
 
 ---
@@ -103,3 +105,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:58 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 1:34:54 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 1:40:05 PM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:08:40 PT

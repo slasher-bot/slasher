@@ -10,7 +10,7 @@
 
 ## The shape of a work session record
 
-Titled `# Work Session — <name> (<date>)`, it reads in this order. **Records written before 2026-08-03 are titled `# Session — …`** and keep those titles. A record states what it stated when it was written. Retitling it would edit a historical record to suit a later convention.
+Titled `# Work Session — <name>`, it reads in this order. Its title carries no date, since its file name prefix carries the moment it was written. **Records written before 2026-08-03 are titled `# Session — …`** and keep that word. A record states what it stated when it was written. Retitling it would edit a historical record to suit a later convention.
 
 - **Opening summary** — a short paragraph naming what the work session *was*: its arc (started as X, became Y, ended with Z).
 - **Framing note** — that this is the communicable record / guided tour, and that the durable records are the source of truth the narrative points to.
@@ -56,8 +56,8 @@ When *you* raise the question of recording, rather than being told to, put it th
 
 ## The shape of a work session record
 
-1. Title the record `# Work Session — <name> (<date>)`.
-2. Records written before 2026-08-03 are titled `# Session — …`. Keep those titles. Do not retitle them.
+1. Title the record `# Work Session — <name>`. The title carries no date.
+2. Records written before 2026-08-03 are titled `# Session — …`. Keep that word. Do not retitle them `# Work Session — …`.
 3. The parts appear in the order below.
 4. **Opening summary**: a short paragraph naming what the work session was, as its arc. For example, it started as X, became Y, and ended with Z.
 5. **Framing note**: states that this is the communicable record, or guided tour. It states that the durable records it points to are the source of truth.
@@ -86,8 +86,11 @@ When *you* raise the question of recording, rather than being told to, put it th
 - 2026-11-14, revised: *started* replaces *began*, and Completed replaces Done in point 15; not re-checked
 - 2026-11-15, revised: a record is written at a work session's end, where it said close, as point 12; not re-checked
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 27 directives, 27 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 the record was titled `# Work Session — <name> (<date>)`, with the date written as `Mon Jan 1 2026 18:06`. The dates-and-times-are-written-in-named-formats rule settled that a record's title carries no date, and the titles already written lost their dates in the datetime-normalization migration.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
@@ -193,3 +196,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 4:03:08 PM PT
 Changed by Scott Bellware on Sat Nov 14 2026 at 5:31:35 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:11 AM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:01:15 PT

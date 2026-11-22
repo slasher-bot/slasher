@@ -18,7 +18,7 @@
 
 **An entry written at 23:40 on a Tuesday reads as that Tuesday, wherever the writer was.** Normalizing it would move some entries onto a date the writer did not live through. A personal record is read back against the day the person remembers, so the local hour is the one that has to survive.
 
-**Format:** frontmatter-free markdown. A `# <title>` naming what the entry is about, then the datetime line, then the writer's prose. An entry takes a `**Tags:**` line where it is categorized, and a `**Summary:**` line where the summary says something the body does not. An entry is thinking rather than a report, so it carries no state line and no section beyond those. The a-journal-entry-has-a-human-readable-datetime-line-under-its-title, where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone, and journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rules each state one part of that shape, and the `foundation` package's a-record-may-be-categorized-with-square-bracket-tags rule states the tag protocol, which is no longer the journal's own.
+**Format:** frontmatter-free markdown. A `# <title>` naming what the entry is about, then the writer's prose. An entry takes a `**Tags:**` line where it is categorized, and a `**Summary:**` line where the summary says something the body does not. An entry is thinking rather than a report, so it carries no state line and no section beyond those. The where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone and journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rules each state one part of that shape, and the `foundation` package's a-record-may-be-categorized-with-square-bracket-tags rule states the tag protocol, which is no longer the journal's own.
 
 **An entry carries the provenance footer**, like every other working-state artifact. See the foundation package's working-state-artifacts-carry-a-provenance-footer rule. The footer names who wrote it, which is what a journal kept by more than one writer needs.
 
@@ -91,11 +91,11 @@ One file per entry rather than one per day follows the convention every other da
 ## Format
 
 1. An entry is frontmatter-free markdown.
-2. It opens with a `# <title>` naming what the entry is about, then the datetime line, then the writer's prose.
+2. It opens with a `# <title>` naming what the entry is about, then the writer's prose.
 3. An entry takes a `**Tags:**` line where it is categorized.
 4. An entry takes a `**Summary:**` line only where the summary says something the body does not.
 5. An entry carries no state line and no section beyond those.
-6. The a-journal-entry-has-a-human-readable-datetime-line-under-its-title, where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone, and journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rules each state one part of that shape.
+6. The where-an-entrys-body-says-the-same-thing-as-its-title-keep-the-title-alone and journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rules each state one part of that shape.
 7. The foundation package's a-record-may-be-categorized-with-square-bracket-tags rule states the tag protocol.
 
 ## Footer
@@ -138,8 +138,11 @@ Journal: Idea
 - 2026-10-28, revised: Why points removed, solubility 50 → 50, clarity 0.80 → 0.79; checked: 37 directives, 35 kept, 2 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 37 directives, 35 kept, 0 less precise, 2 lost, 2 repairs
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 35 directives, 35 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 a journal entry carried a datetime line under its title, as `Sat Nov 21 2026 at 18:01`, under the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule. The dates-and-times-are-written-in-named-formats rule settled that it carries none, and that rule is discontinued.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
@@ -209,3 +212,4 @@ Changed by Scott Bellware on Wed Oct 28 2026 at 3:55:30 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 12:58:37 PM PT
 Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:08:40 PT

@@ -9,7 +9,7 @@ The datetime prefix marks a **dated artifact** — something a project accrues o
 
 The prefix is an **ISO 8601 datetime normalized to UTC**, followed by a dash-separated, lower-case name and `.md`.
 
-**Format:** `YYYY-MM-DDTHH-MM-SSZ-<name>.md`. The date and time are joined by `T`, and the trailing `Z` marks UTC. The time's colons are written as dashes for filesystem safety, as in `2026-07-01T20-40-00Z-some-name.md`. The name is dash-separated and lower-case.
+**Format:** `YYYY-MM-DDTHH-MM-SSZ-<name>.md`. The date and time are joined by `T`, and the trailing `Z` marks UTC. The time's colons are written as dashes for filesystem safety, as in `2026-07-01T20-40-00Z-some-name.md`. The prefix is the iso-full format in UTC, under the dates-and-times-are-written-in-named-formats rule. The name is dash-separated and lower-case.
 
 **The name carries no state.** An item's or a progression record's name is the prefix and a dash-separated, lower-case name, with nothing after it. See the a-records-file-name-carries-no-state rule.
 
@@ -37,7 +37,7 @@ That is the distinction between the two kinds of rule: a **system rule** ships i
 
 ## Format
 1. The prefix is an ISO 8601 datetime normalized to UTC. A dash-separated, lower-case name and `.md` follow it.
-2. **Format:** `YYYY-MM-DDTHH-MM-SSZ-<name>.md`.
+2. **Format:** `YYYY-MM-DDTHH-MM-SSZ-<name>.md`. The prefix is the iso-full format in UTC, under the dates-and-times-are-written-in-named-formats rule.
 3. Join the date and time with `T`. The trailing `Z` marks UTC.
 4. Write the time's colons as dashes, for filesystem safety, as in `2026-07-01T20-40-00Z-some-name.md`.
 5. The name is dash-separated and lower-case.
@@ -57,8 +57,11 @@ That is the distinction between the two kinds of rule: a **system rule** ships i
 - 2026-10-29, merge from master re-checked: 14 directives, 13 kept, 0 less precise, 1 lost, 1 repair
 - 2026-11-16, revised: the name carries no state, so the state suffix is no longer an exception to the lower case, which the engineer settled; checked: 11 directives, 11 kept, 0 less precise, 0 lost
 - 2026-11-20, revised: progression replaces implementation in the record sense, a term swap the engineer settled; not re-checked
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 16 directives, 16 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 this rule named no format for the prefix. It is the iso-full format in UTC, which the dates-and-times-are-written-in-named-formats rule names.
 
 Until Fri Nov 20 2026 this rule said implementation where it now says progression, in the sense of a feature or an experiment and its record. The progression-replaces-implementation work item settled the change.
 
@@ -106,3 +109,4 @@ Changed by Scott Bellware on Fri Nov 6 2026 at 8:47:18 PM PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 11:44:42 PM PT
 Changed by Scott Bellware on Mon Nov 16 2026 at 6:36:15 PM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:22:14 AM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:01:15 PT

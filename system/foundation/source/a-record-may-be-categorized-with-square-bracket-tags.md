@@ -53,7 +53,7 @@ Related:
 - the the-progressions-directory-holds-one-record-per-progression rule — the states of `[experiment]` and `[feature]`
 - the the-items-directory-holds-one-file-per-item rule — the states of an item, and of `[work]`
 - the a-note-is-a-remark-worth-keeping-whose-one-state-recorded-never-changes rule — the one state of `[note]`
-- the `journal` package's a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule — where a journal entry's `**Tags:**` line sits
+- the `journal` package's journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule — where a journal entry's `**Tags:**` line sits
 
 ---
 
@@ -86,3 +86,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
 Changed by Scott Bellware on Thu Oct 29 2026 at 6:34:30 PM PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:44:56 AM PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:24:11 AM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:08:40 PT

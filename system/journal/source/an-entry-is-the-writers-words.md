@@ -4,7 +4,7 @@
 
 **Where the writer dictates an entry, write down what they said.** Write their words, in their order. Preserve their meaning and their emphasis. Correct the grammar and the flow, and go no further than that. Invent no fact, and embellish nothing.
 
-**What the agent adds is the entry's settled shape and nothing else.** That is the datetime prefix and the `Authored by` line the the-journal-is-the-record-the-writer-keeps rule requires, the datetime line under the title, a `**Tags:**` line where the writer gave tags, and the `**Summary:**` line the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule asks for. The summary states the entry's gist in the writer's own terms. It is not the agent's reading of what the entry means, and it is dropped where it would repeat the body.
+**What the agent adds is the entry's settled shape and nothing else.** That is the datetime prefix and the `Authored by` line the the-journal-is-the-record-the-writer-keeps rule requires, a `**Tags:**` line where the writer gave tags, and the `**Summary:**` line the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule asks for. The summary states the entry's gist in the writer's own terms. It is not the agent's reading of what the entry means, and it is dropped where it would repeat the body.
 
 **Do not edit an entry that is already there.** Not to correct a fact, not to fix a spelling, and not to reconcile it with something that has since changed. An entry is a historical record.
 
@@ -24,7 +24,7 @@
 
 The other four records survive being the agent's work because they report what happened. The journal reports nothing. It holds a judgment, and a judgment has an author or it has nothing.
 
-**How to apply:** write no entry of your own. Where the writer dictates one, write their words, correcting the grammar and the flow and no more. Add the prefix, the footer, the datetime line, any tags they gave, and the summary. Offer nothing.
+**How to apply:** write no entry of your own. Where the writer dictates one, write their words, correcting the grammar and the flow and no more. Add the prefix, the footer, any tags they gave, and the summary. Offer nothing.
 
 Change no entry that exists on your own reading. Where the writer directs a change to one, make exactly the change they named, leave everything else as written, and log it.
 
@@ -39,7 +39,7 @@ Change no entry that exists on your own reading. Where the writer directs a chan
 7. Invent no fact, and embellish nothing.
 8. Add the entry's settled shape and nothing else.
 9. Add the datetime prefix and the `Authored by` line the the-journal-is-the-record-the-writer-keeps rule requires.
-10. Add the datetime line under the title.
+10. Add no datetime line under the title.
 11. Add a `**Tags:**` line only where the writer gave tags.
 12. Add the `**Summary:**` line the journal-entries-are-recorded-in-the-writers-journal-directory-one-file-per-entry rule asks for.
 13. The summary states the entry's gist in the writer's own terms, not the agent's reading of what it means.
@@ -62,8 +62,11 @@ Change no entry that exists on your own reading. Where the writer directs a chan
 - 2026-10-24, compressed: compression 0.36, change 0.60, solubility 44 → 74, clarity 0.45 → 0.75, 24 directives, 24 kept, 0 less precise, 0 lost
 - 2026-10-28, revised: Why points removed, solubility 74 → 70, clarity 0.75 → 0.71; checked: 16 directives, 16 kept, 0 less precise, 0 lost
 - 2026-10-29, merge from master re-checked: 25 directives, 25 kept, 0 less precise, 0 lost, 0 repairs
+- 2026-11-22, revised: dates and times take the named formats, a record's title carries no date, and a journal entry carries no datetime line; checked: 14 directives, 14 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Sun Nov 22 2026 a journal entry carried a datetime line under its title, as `Sat Nov 21 2026 at 18:01`, under the a-journal-entry-has-a-human-readable-datetime-line-under-its-title rule. The dates-and-times-are-written-in-named-formats rule settled that it carries none, and that rule is discontinued.
 
 Until Mon Oct 26 2026 this rule called the log "the decision log". The engineer settled that it is the log, since its entries record more than decisions.
 
@@ -90,3 +93,4 @@ Changed by Scott Bellware on Mon Oct 26 2026 at 6:45:58 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
 Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
 Changed by Scott Bellware on Mon Oct 26 2026 at 2:41:43 PM PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 13:08:40 PT
