@@ -12,7 +12,7 @@ Realizes the work item `2026-11-22T02-02-49Z-lists-show-a-short-form-of-the-date
 
 ## State
 
-- **State:** Active
+- **State:** Completed
 
 ## Setup
 
@@ -52,8 +52,10 @@ Realizes the work item `2026-11-22T02-02-49Z-lists-show-a-short-form-of-the-date
 - **2026-11-22** — Creation: started unattended, as the engineer asked. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
 - **2026-11-22** — Participation: unattended, as the engineer asked.
 - **2026-11-22** — Plan: Accept, selected by the engineer.
+- **2026-11-22** — Conclusion: Completed, selected by the engineer. The work has no forecast, so no verdict question was asked.
 
 ---
 
 Authored by Scott Bellware on Sun Nov 22 2026 at 14:06:11 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:10:36 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:13:57 PT

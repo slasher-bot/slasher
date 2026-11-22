@@ -1,6 +1,6 @@
 # Lists show a short form of the date
 
-**State:** Progression
+**State:** Completed
 
 **Tags:** [work]
 
@@ -39,3 +39,4 @@ Changed by Scott Bellware on Sun Nov 22 2026 at 13:52:56 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:02:49 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:06:11 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:10:36 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 14:13:57 PT
