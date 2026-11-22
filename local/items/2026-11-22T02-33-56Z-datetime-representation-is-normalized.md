@@ -1,6 +1,6 @@
 # Datetime representation is normalized
 
-**State:** Open
+**State:** Progression
 
 **Tags:** [work]
 
@@ -61,6 +61,10 @@ A journal entry's footer lines are migrated as every other footer line is: the 1
 
 The migration is recorded in a migration record under `slasher/local/migration/`, and a Slasher project's records are migrated by an `install.sh` migration when its packages are updated.
 
+## Progression
+
+The implementation `2026-11-22T20-39-10Z-datetime-normalization` carries this item's work.
+
 ## Tasks
 
 - [ ] A rule names each datetime format, its form, and the zone rules, and maps each use to a format.
@@ -93,3 +97,4 @@ Changed by Scott Bellware on Sat Nov 21 2026 at 23:21:18 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:27:50 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:32:34 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 23:33:56 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 12:39:10 PT
