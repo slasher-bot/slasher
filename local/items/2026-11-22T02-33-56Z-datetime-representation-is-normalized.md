@@ -16,6 +16,11 @@ Slasher writes dates and times in a normalized set of forms. Today it writes the
 - the date, as `2026-11-21`
 - the short date, as `Sat Nov 21`
 
+## Settled
+
+- **2026-11-21** — **As the engineer stated it:** A person reading a file has already chosen a low-level experience. Low-level datetime formats are not innappropriate at that level
+
 ---
 
 Authored by Scott Bellware on Sat Nov 21 2026 at 18:33:56 PT
+Changed by Scott Bellware on Sat Nov 21 2026 at 19:40:45 PT
