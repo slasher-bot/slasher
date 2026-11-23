@@ -1,6 +1,6 @@
 # The "No review" option comes first when concluding content
 
-**State:** Progression
+**State:** Completed
 
 **Tags:** [work]
 
@@ -16,3 +16,4 @@ The implementation `2026-11-23T03-56-06Z-no-review-first` carries this item's wo
 
 Authored by Scott Bellware on Sun Nov 22 2026 at 18:36:24 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 19:56:06 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 20:09:18 PT
