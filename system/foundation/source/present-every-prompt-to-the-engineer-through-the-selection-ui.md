@@ -22,13 +22,17 @@ Reserve plain prose for statements, reports, and explanations that are **not** a
 
 **As the engineer stated it:** Desist from presenting the selection UI in a loop automatically. It doesn't provide opportunity for the user to digest. And: I want the original question put to the user automatically, but not the repeat of the question if the user escapes the selection UI.
 
-## A question's code examples are shown in the chat before the selection
+## The options are printed in the chat before the selection
+
+**Before every selection, print each option in the chat in full:** its label, what it does, and any example it carries, as a numbered list under the question. The selection's preview box is too small to review an option in. The chat is where the options are read.
+
+**The selection carries short options.** Each option's label is the label printed in the chat, and its description is a few words. Give no option a preview.
+
+**As the engineer stated it:** In the selection UI, the preview box is too small to review options in. The options should always be printed in the chat, with short options in the selection
 
 **Where a question has code examples, print each one in the chat before the selection.** Put each example in a fenced code block with a language tag, and keep its indentation. Give each a short label, such as *Candidate A*, above its block.
 
 **The selection follows in the same response, with the same labels.** Each option's label is its example's label. Its description is the example's key line, the line that tells it apart from the others.
-
-**Where the question is single-select, put each example in its option's preview too.** Text printed before a question may not be on screen while the question is open. The preview is shown beside the options.
 
 **As James Hughes stated it, in the Eventide Slack:** "When a question has code examples, show each example in the chat before you open the option picker. Use a fenced Markdown code block with a language tag. Keep the original indentation. Give each example a short label and use the same label in the picker. Always show the labeled examples and the picker at the same time."
 
@@ -49,11 +53,12 @@ Reserve plain prose for statements, reports, and explanations that are **not** a
 11. Keep plain prose for statements, reports, and explanations that do not ask the engineer to choose.
 12. Where the engineer escapes a selection, by refusing it, stopping it to clarify, or interrupting it, do not put it again on your own. Say where the work stopped, and wait. Put it again when the engineer asks, as with `/ask-again` or `/aa`, or after a clarification they asked for. Put the next question the work reaches without waiting.
 
-## Code examples
+## Options in the chat
 
 1. Where a question has code examples, print each one in the chat before the selection, in a fenced code block with a language tag, its indentation kept, under a short label.
-2. Put the selection in the same response. Each option's label is its example's label, and its description is the example's key line, the line that tells it apart from the others.
-3. Where the question is single-select, also put each example in its option's preview, since text printed before a question may not be on screen while it is open.
+2. Put the selection in the same response. Each option's label is its example's label, and its description is the example's key line, which tells it apart.
+3. Before each selection, print every option in full in the chat, numbered: label, what it does, and any example.
+4. In the selection, give each option its printed label, a few words, and no preview.
 
 ## Compression
 
@@ -68,8 +73,12 @@ Reserve plain prose for statements, reports, and explanations that are **not** a
 - 2026-11-11, revised: the shortcut alias `/..` becomes `/,`, a swap the engineer settled; not re-checked
 - 2026-11-11, revised: the shortcut alias `/,` becomes `/aa`, a swap the engineer settled; not re-checked
 - 2026-11-15, revised: a question's code examples are shown in the chat, labeled, and in each option's preview; checked: 24 directives, 23 kept, 1 less precise, 0 lost, 1 repair; re-checked: 24 directives, 23 kept, 1 less precise, 0 lost. Left less precise: the quoted words against putting the selection in a loop, which the body applies only to an escaped selection, and which one checker judged kept
+- 2026-11-22, revised: every option is printed in the chat in full before the selection, the selection carries short options, and no option takes a preview, at the engineer's direction; checked: 29 directives, 28 kept, 1 less precise, 0 lost. Left less precise: James Hughes's quoted words, whose behavior the compressed text carries
+- 2026-11-22, revised: points 2 to 4 shortened, so the session-start context stays within its 10,000 characters; re-checked: 29 directives, 28 kept, 1 less precise, 0 lost. Left less precise, for the length: that the numbered list sits under the question
 
 ## History
+
+Until Sun Nov 22 2026 an option was printed in the chat only where it carried a code example, and a single-select question put each example in its option's preview too. The engineer settled that every option is printed in the chat in full, the selection carries short options, and no option takes a preview.
 
 Until Sun Nov 15 2026 the rule did not say how a question's code examples are shown. James Hughes proposed it in the Eventide Slack, and the engineer built it.
 
@@ -131,3 +140,4 @@ Changed by Scott Bellware on Wed Nov 11 2026 at 10:33:27 PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:37:48 PT
 Changed by Scott Bellware on Wed Nov 11 2026 at 10:48:44 PT
 Changed by Scott Bellware on Sun Nov 15 2026 at 16:26:49 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 15:10:20 PT
