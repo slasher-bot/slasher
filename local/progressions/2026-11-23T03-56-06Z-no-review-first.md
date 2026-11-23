@@ -19,7 +19,7 @@ Realizes the work item `2026-11-23T02-36-24Z-no-review-comes-first-when-concludi
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/no-review-first`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `527432ad`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-no-review-first`. The main working tree stays on `master`.
 - **Participation:** unattended, as the engineer asked.
 - **Forecast:** none given.
@@ -37,6 +37,12 @@ Realizes the work item `2026-11-23T02-36-24Z-no-review-comes-first-when-concludi
 
 ## What happened
 
+- The content rule offers *No review* first and *Review* second.
+- Its How to apply asks the working location when the content is started, as the questions-asked-at-start implementation settled for every progression.
+- The rule has no compressed text, so there was nothing to check.
+- No test was written. No script changed.
+- The automated suite passed: 152 test files.
+
 ## Confirmations
 
 - **2026-11-22** — Creation: started unattended, as the engineer asked. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -46,3 +52,4 @@ Realizes the work item `2026-11-23T02-36-24Z-no-review-comes-first-when-concludi
 ---
 
 Authored by Scott Bellware on Sun Nov 22 2026 at 19:56:06 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 19:56:49 PT

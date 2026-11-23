@@ -28,7 +28,7 @@
 
 ## The review before the merge
 
-**Where the `prose` package is active, `/content complete` offers a review before the merge.** Ask, through the selection interface, whether to review the content, with the options *Review* and *No review*. Where the writer selects *Review*, ask which kind of review, with the options `/prose critique`, `/prose suggest`, and `/prose line-edit`. Then run the review the writer selected, on the content the progression produced.
+**Where the `prose` package is active, `/content complete` offers a review before the merge.** Ask, through the selection interface, whether to review the content, with the options *No review*, first, and *Review*. Where the writer selects *Review*, ask which kind of review, with the options `/prose critique`, `/prose suggest`, and `/prose line-edit`. Then run the review the writer selected, on the content the progression produced.
 
 **Ordinarily, the merge waits until the writer has accepted or rejected each of the review's suggestions.** The writer can leave the review before every suggestion is settled, and the merge then does not wait on it. A critique makes no suggestion, so the merge waits for nothing after it. Where the writer selects *No review*, conclude the content without one.
 
@@ -38,7 +38,13 @@
 
 **Why:** writing belongs on a branch, with a record and a declared end, as code does. The steps that design code from its use site have nothing to act on in a piece of writing, and a forecast and a verdict do not apply to it. A review takes the place of the tests that a merge of code waits for.
 
-**How to apply:** on `/content`, read the subcommand, and act as `/feature` does for the same subcommand, with the content kind's title, tag, and branch name. Ask only the working location when the content is created. On `/content complete`, offer the review where `prose` is active, and wait for its suggestions to be settled before the merge, unless the writer leaves the review.
+**How to apply:** on `/content`, read the subcommand, and act as `/feature` does for the same subcommand, with the content kind's title, tag, and branch name. Ask only the working location, when the content is started. On `/content complete`, offer the review where `prose` is active, and wait for its suggestions to be settled before the merge, unless the writer leaves the review.
+
+**As the engineer stated it:** The "no review" option comes first when concluding content progressions
+
+## History
+
+Until Sun Nov 22 2026 the review question offered *Review* first and *No review* second, and How to apply asked the working location when the content was created.
 
 Related:
 
@@ -50,3 +56,4 @@ Related:
 ---
 
 Authored by Scott Bellware on Fri Nov 20 2026 at 12:19:44 PT
+Changed by Scott Bellware on Sun Nov 22 2026 at 19:56:49 PT
