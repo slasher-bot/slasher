@@ -1,6 +1,6 @@
 # Items are referred to as i<number> and progressions as p<letter>
 
-**State:** Progression
+**State:** Completed
 
 **Tags:** [work]
 
@@ -38,3 +38,4 @@ Changed by Scott Bellware on Mon Nov 23 2026 at 22:39:55 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:43:53 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:44:47 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:47:21 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:54:09 PT
