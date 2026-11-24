@@ -28,9 +28,10 @@ ITEMS
                                    <state>: any item state, or "current"
                                    (Open, Active, and Progression)
   /item status [<item>]            The item's state, what exists, and what
-                                   is left. <item>: a number from the last
-                                   list, a datetime, or words from the
-                                   title. With none, the Active item
+                                   is left. <item>: its row in the last
+                                   list, as i6, a datetime, or words
+                                   from the title. With none, the Active
+                                   item
 
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active

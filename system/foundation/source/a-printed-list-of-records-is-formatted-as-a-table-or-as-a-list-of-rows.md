@@ -14,9 +14,15 @@
 
 **As the engineer stated it:** The date in the lists should not break across lines
 
-**A list of items opens with an ordinal**, a number from 1 in the order the rows are printed, ahead of the date. The engineer refers to a row by that number.
+**A list of items opens with an ordinal**, a number from 1 in the order the rows are printed, ahead of the date, printed with the prefix `i`, as `i1`, `i2`. The engineer refers to a row by it.
 
-**A list of progressions opens with a letter ordinal**, A, B, C, and so on, from A in the order the rows are printed, ahead of the date. After Z come AA, AB, and so on. The engineer refers to a row by that letter, and the engineer can type it in either case. A letter never names an item's row, and a number never names a progression's, so `/current`, which prints both, gives each row an ordinal no other row has.
+**A list of progressions opens with a letter ordinal**, A, B, C, and so on, from A in the order the rows are printed, ahead of the date, printed with the prefix `p`, as `pA`, `pB`. After Z come AA, AB, and so on. The engineer refers to a row by it. A letter never names an item's row, and a number never names a progression's, so `/current`, which prints both, gives each row an ordinal no other row has.
+
+**A reference to a row takes any of these forms, in either case:** the prefixed ordinal, as `i1` or `pA`. The ordinal alone, as `1` or `A`. Either one opening with `#`, as `#1`, `#i1`, or `#pA`. `I1` names the row `i1` names, and `Pa`, `pa`, and `PA` the row `pA` names. The prefix `p` is also the `prose` package's prefix for a paragraph, as `p4`. A digit after the `p` names a paragraph, and a letter names a progression. **A list of any other record, such as log entries or commits, takes no ordinal and no prefix.**
+
+**As the engineer stated it:** Refer to items as i<ordinal number> and refer to progressions as p<ordinal letter>
+
+**As the engineer later stated it:** Actually, print them in the table
 
 **As the engineer stated it:** Give progressions an ordinal like items in a list, but sequence them with letters, eg: A, B, C, etc
 
@@ -32,10 +38,10 @@
 A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |            | item                        | kind   | state  |
-|---|------------|-----------------------------|--------|--------|
-| 1 | Mon Aug 10 | A Generalized Description   | Design | Active |
-| 2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
+| #  |            | item                        | kind   | state  |
+|----|------------|-----------------------------|--------|--------|
+| i1 | Mon Aug 10 | A Generalized Description   | Design | Active |
+| i2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
 ```
 
 **A record never amended shows the same SHA twice, and that is the point.** The pair says whether a record has been touched since it was written. One that has not, and whose subject has moved since, is the stale case a reader is looking for.
@@ -159,7 +165,7 @@ Keep every column short. Where a field runs to a sentence, use rows instead.
 3. The first column is the record's date and has no heading.
 4. For a working-state artifact, the date is its short date: the day its ISO-8601-UTC file name prefix names, in local time, as `Sat Nov 21`. Show no file name prefix. For a commit, the first column is the short SHA. Print the short date with `slasher/system/foundation/format-datetime.sh short-date <prefix>`, never by working it out, as `2026-11-22T02-01-28Z` prints `Sat Nov 21`. Two records written on the same day show the same date, and their order tells them apart. Write a non-breaking space, U+00A0, between the short date's parts, so the date does not break across lines.
 5. Every column after the date has a heading.
-6. Two SHA columns come right after the date: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the date, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z. The engineer may type a letter in either case. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has.
+6. Two SHA columns come right after the date: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the date, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed, and prints with the prefix `i`, as `i1`. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z, printed with the prefix `p`, as `pA`. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has. A reference to a row may be the prefixed ordinal, the ordinal alone, or either opening with `#`, in either case: `i1`, `1`, `#1`, `#i1`, `I1`, `pA`, `A`, `pa`, `#pA`. A digit after `p` names a `prose` paragraph, as `p4`, and a letter a progression. A list of any other record takes no ordinal.
 7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features`, `/experiments`, and `/contents` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
@@ -173,10 +179,10 @@ Keep every column short. Where a field runs to a sentence, use rows instead.
 A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |            | item                        | kind   | state  |
-|---|------------|-----------------------------|--------|--------|
-| 1 | Mon Aug 10 | A Generalized Description   | Design | Active |
-| 2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
+| #  |            | item                        | kind   | state  |
+|----|------------|-----------------------------|--------|--------|
+| i1 | Mon Aug 10 | A Generalized Description   | Design | Active |
+| i2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
 ```
 
 9. A record that was never amended shows the same SHA in both columns. This is intended, since it shows the record has not been touched since it was written.
@@ -278,8 +284,11 @@ A list of items takes the ordinal, a kind column, and no SHA columns:
 - 2026-11-21, revised: `/current` prints no item totals, and prints one line counting its Suspended items; checked: 91 directives, 91 kept, 0 less precise, 0 lost
 - 2026-11-22, revised: the first column of a list of records is its short date in local time, and a list shows no file name prefix; checked: 86 directives, 84 kept, 1 less precise, 1 lost, 1 repair: that two records of one day show the same date; re-checked: 86 directives, 86 kept, 0 less precise, 0 lost
 - 2026-11-22, revised: the short date is written with non-breaking spaces, so it does not break across lines; checked: 89 directives, 88 kept, 1 less precise, 0 lost, 1 repair: the full path of format-datetime.sh and its example; re-checked: 89 directives, 89 kept, 0 less precise, 0 lost
+- 2026-11-23, revised: an item's row prints as `i1` and a progression's as `pA`, and a reference takes the prefixed or bare ordinal, with or without `#`, in either case; checked: 94 directives, 94 kept, 0 less precise, 0 lost
 
 ## History
+
+Until Mon Nov 23 2026 an item's row printed its ordinal as a bare number, as `1`, and a progression's as a bare letter, as `A`. They now print with the prefixes `i` and `p`, as `i1` and `pA`, and a reference takes either form.
 
 Until Sun Nov 22 2026 the short date was written with ordinary spaces, and a narrow terminal could break it across lines.
 
@@ -408,3 +417,4 @@ Changed by Scott Bellware on Sat Nov 21 2026 at 14:24:10 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 18:09:30 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:12:30 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:21:10 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:55:10 PT

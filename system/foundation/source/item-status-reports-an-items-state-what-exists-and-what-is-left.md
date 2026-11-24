@@ -8,7 +8,7 @@
 
 **`/item status <item>` reports on the item the identifier names.** An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of items printed in the session, as `/item status 6`
+- **an ordinal**, of a row in the last list of items printed in the session, as `/item status i6`, `/item status 6`, or `/item status #i6`, in either case
 - **a datetime prefix**, the item's ISO-8601-UTC filename prefix, as `/item status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item, as `/item status cart payment`
 
@@ -36,6 +36,8 @@
 
 ## History
 
+Until Mon Nov 23 2026 a row was named by its bare ordinal, as `3` or `B`. A printed list now shows the prefixed ordinal, as `i3` or `pB`, and either form names the row.
+
 Until Fri Nov 20 2026 the item status report ended with what is left, and did not say whether the item was ready to conclude.
 
 Related:
@@ -48,3 +50,4 @@ Related:
 
 Authored by Scott Bellware on Mon Nov 16 2026 at 13:36:24 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:58:30 PT

@@ -7,8 +7,8 @@ EXPERIMENTS
   /experiment new with phases      Create it, asking for its phases
   /experiment status [<experiment>]
                                    Phases, state, what exists, and
-                                   what is left. <experiment>: a letter
-                                   from the last list, a datetime, or
+                                   what is left. <experiment>: its row in
+                                   the last list, as pB, a datetime, or
                                    words from the title
   /experiment start, /start        Open -> Active, or, where none is
                                    Open, create one Active

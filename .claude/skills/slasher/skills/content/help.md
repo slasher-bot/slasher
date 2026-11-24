@@ -6,8 +6,8 @@ CONTENT
   /content new                     Write an Open record. start creates
                                    its branch
   /content status [<content>]      Phases, state, what exists, and
-                                   what is left. <content>: a letter
-                                   from the last list, a datetime, or
+                                   what is left. <content>: its row in
+                                   the last list, as pB, a datetime, or
                                    words from the title
   /content start, /start           Open -> Active, or, where none is
                                    Open, create one Active

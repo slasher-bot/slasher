@@ -6,8 +6,8 @@ FEATURES
                                    its branch
   /feature new with phases         Create it, asking for its phases
   /feature status [<feature>]      Phases, state, what exists, and
-                                   what is left. <feature>: a letter
-                                   from the last list, a datetime, or
+                                   what is left. <feature>: its row in
+                                   the last list, as pB, a datetime, or
                                    words from the title
   /feature start, /start           Open -> Active, or, where none is
                                    Open, create one Active

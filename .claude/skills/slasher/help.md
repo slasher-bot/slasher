@@ -40,9 +40,10 @@ ITEMS
                                    <state>: any item state, or "current"
                                    (Open, Active, and Progression)
   /item status [<item>]            The item's state, what exists, and what
-                                   is left. <item>: a number from the last
-                                   list, a datetime, or words from the
-                                   title. With none, the Active item
+                                   is left. <item>: its row in the last
+                                   list, as i6, a datetime, or words
+                                   from the title. With none, the Active
+                                   item
 
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active
@@ -83,8 +84,8 @@ FEATURES
                                    its branch
   /feature new with phases         Create it, asking for its phases
   /feature status [<feature>]      Phases, state, what exists, and
-                                   what is left. <feature>: a letter
-                                   from the last list, a datetime, or
+                                   what is left. <feature>: its row in
+                                   the last list, as pB, a datetime, or
                                    words from the title
   /feature start, /start           Open -> Active, or, where none is
                                    Open, create one Active
@@ -118,8 +119,8 @@ EXPERIMENTS
   /experiment new with phases      Create it, asking for its phases
   /experiment status [<experiment>]
                                    Phases, state, what exists, and
-                                   what is left. <experiment>: a letter
-                                   from the last list, a datetime, or
+                                   what is left. <experiment>: its row in
+                                   the last list, as pB, a datetime, or
                                    words from the title
   /experiment start, /start        Open -> Active, or, where none is
                                    Open, create one Active
@@ -149,8 +150,8 @@ CONTENT
   /content new                     Write an Open record. start creates
                                    its branch
   /content status [<content>]      Phases, state, what exists, and
-                                   what is left. <content>: a letter
-                                   from the last list, a datetime, or
+                                   what is left. <content>: its row in
+                                   the last list, as pB, a datetime, or
                                    words from the title
   /content start, /start           Open -> Active, or, where none is
                                    Open, create one Active
@@ -296,9 +297,9 @@ RECORD
   /record print                    Print the record's contents
   /record open                     Open the record in its default application
   /open <record>                   Open the record named in its default
-                                   application. <record>: an ordinal from
-                                   the last list, a file name prefix, a
-                                   path, or words from its title
+                                   application. <record>: its row in the
+                                   last list, as i3 or pB, a file name
+                                   prefix, a path, or words from its title
   /open                            Open the last record or the last text
                                    worked on, whichever is more recent
   /print <record>                  Print the record named. <record>: as

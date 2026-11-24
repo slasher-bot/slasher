@@ -8,7 +8,7 @@
 
 **`/feature status <feature>` reports on the feature the identifier names**, and `/experiment status <experiment>` on the experiment. An identifier is any of three forms:
 
-- **a letter**, the ordinal of a row in the last list of features, experiments, content, or progressions printed in the session, as `/feature status B`. A letter may be typed in either case
+- **an ordinal**, of a row in the last list of features, experiments, content, or progressions printed in the session, as `/feature status pB`, `/feature status B`, or `/feature status #pB`, in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, as `/feature status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one record of the kind, as `/feature status cart payment`
 
@@ -36,6 +36,8 @@
 
 ## History
 
+Until Mon Nov 23 2026 a row was named by its bare ordinal, as `3` or `B`. A printed list now shows the prefixed ordinal, as `i3` or `pB`, and either form names the row.
+
 Until Sat Nov 21 2026 a progression's row in a printed list was named by a number, as `/feature status 2`, since a list of progressions numbered its rows.
 
 Until Fri Nov 20 2026 there was no `/content status`, since there was no content kind.
@@ -58,3 +60,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:11 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 14:26:02 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:58:30 PT

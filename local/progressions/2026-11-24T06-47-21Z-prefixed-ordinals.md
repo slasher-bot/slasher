@@ -19,7 +19,7 @@ Realizes the work item `2026-11-24T02-53-34Z-items-and-progressions-are-referred
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/prefixed-ordinals`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `fb7cb0e4`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-prefixed-ordinals`. The main working tree stays on `master`.
 - **Participation:** unattended, as the engineer asked.
 - **Forecast:** none given.
@@ -38,6 +38,13 @@ Realizes the work item `2026-11-24T02-53-34Z-items-and-progressions-are-referred
 
 ## What happened
 
+- The printed-list rule prints an item's row as `i1` and a progression's as `pA`, in every list of items or progressions. A list of any other record takes no ordinal. The example tables show `i1` and `i2`.
+- A reference to a row takes the prefixed ordinal or the bare one, with or without `#`, in either case: `i1`, `1`, `#1`, `#i1`, `I1`, `pA`, `A`, `pa`, `#pA`. The printed-list rule states it, and the item-status, progression-status, work-status, and `/open` rules accept it. `/print`, `/conclude`, and `/cw` follow from them.
+- The item, feature, experiment, content, and RECORD help name a row as `i6` or `pB`.
+- The printed-list rule's compressed text was checked against its body by two fresh agents: 94 directives, 94 kept. The other changed rules have no compressed text.
+- No test was written. No script changed.
+- The automated suite passed: 152 test files.
+
 ## Confirmations
 
 - **2026-11-23** — Creation: started unattended, as the engineer asked. The agent selected the working location, a branch and a worktree, so the work stays off `master` until the engineer selects the merge.
@@ -47,3 +54,4 @@ Realizes the work item `2026-11-24T02-53-34Z-items-and-progressions-are-referred
 ---
 
 Authored by Scott Bellware on Mon Nov 23 2026 at 22:47:21 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:50:37 PT

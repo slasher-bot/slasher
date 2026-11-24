@@ -12,7 +12,7 @@
 
 **`/work-status <record>` reports on the record the identifier names.** An identifier is any of three forms:
 
-- **an ordinal**, of a row in the last list of records printed in the session: a number for an item's row, as `/work-status 3`, and a letter for a progression's, as `/work-status B`. A letter may be typed in either case
+- **an ordinal**, of a row in the last list of records printed in the session: an item's row as `/work-status i3`, `3`, or `#i3`, and a progression's as `/work-status pB`, `B`, or `#pB`, in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the progressions, as `/work-status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item or progression, as `/work-status cart payment`
 
@@ -30,6 +30,8 @@
 
 
 ## History
+
+Until Mon Nov 23 2026 a row was named by its bare ordinal, as `3` or `B`. A printed list now shows the prefixed ordinal, as `i3` or `pB`, and either form names the row.
 
 Until Sat Nov 21 2026 the ordinal was a number for a progression's row too, since a list of progressions numbered its rows.
 
@@ -55,3 +57,4 @@ Changed by Scott Bellware on Fri Nov 20 2026 at 11:19:39 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 12:21:01 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 13:46:54 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 14:26:02 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:58:30 PT

@@ -253,7 +253,7 @@ Trigger: When the engineer asks for a list of records, as with `/item list`, `/l
 3. The first column is the record's date and has no heading.
 4. For a working-state artifact, the date is its short date: the day its ISO-8601-UTC file name prefix names, in local time, as `Sat Nov 21`. Show no file name prefix. For a commit, the first column is the short SHA. Print the short date with `slasher/system/foundation/format-datetime.sh short-date <prefix>`, never by working it out, as `2026-11-22T02-01-28Z` prints `Sat Nov 21`. Two records written on the same day show the same date, and their order tells them apart. Write a non-breaking space, U+00A0, between the short date's parts, so the date does not break across lines.
 5. Every column after the date has a heading.
-6. Two SHA columns come right after the date: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the date, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z. The engineer may type a letter in either case. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has.
+6. Two SHA columns come right after the date: the commit that created the record, then the last commit to touch it. A list of items takes no SHA columns, and opens with an ordinal ahead of the date, which the engineer refers to a row by. The ordinal counts from 1, in the order the rows are printed, and prints with the prefix `i`, as `i1`. A list of progressions opens with a letter ordinal instead: A, B, C, from A in the order the rows are printed, then AA, AB, and so on after Z, printed with the prefix `p`, as `pA`. A letter never names an item's row, and a number never names a progression's, so each row `/current` prints has an ordinal no other row has. A reference to a row may be the prefixed ordinal, the ordinal alone, or either opening with `#`, in either case: `i1`, `1`, `#1`, `#i1`, `I1`, `pA`, `A`, `pa`, `#pA`. A digit after `p` names a `prose` paragraph, as `p4`, and a letter a progression. A list of any other record takes no ordinal.
 7. These two SHA columns are always present, in every list but a list of items, a list of commits, or the lists `/features`, `/experiments`, and `/contents` print. They are not chosen per request.
 8. After the SHA columns comes the title. Then comes one column for the fact asked about.
 
@@ -267,10 +267,10 @@ Trigger: When the engineer asks for a list of records, as with `/item list`, `/l
 A list of items takes the ordinal, a kind column, and no SHA columns:
 
 ```
-| # |            | item                        | kind   | state  |
-|---|------------|-----------------------------|--------|--------|
-| 1 | Mon Aug 10 | A Generalized Description   | Design | Active |
-| 2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
+| #  |            | item                        | kind   | state  |
+|----|------------|-----------------------------|--------|--------|
+| i1 | Mon Aug 10 | A Generalized Description   | Design | Active |
+| i2 | Sat Aug 22 | Slasher for content and web | Idea   | Open   |
 ```
 
 9. A record that was never amended shows the same SHA in both columns. This is intended, since it shows the record has not been touched since it was written.
@@ -1147,7 +1147,7 @@ Trigger: When the engineer types `/item status`, or asks for the status of an it
 
 **`/item status <item>` reports on the item the identifier names.** An identifier is any of three forms:
 
-- **a number**, the ordinal of a row in the last list of items printed in the session, as `/item status 6`
+- **an ordinal**, of a row in the last list of items printed in the session, as `/item status i6`, `/item status 6`, or `/item status #i6`, in either case
 - **a datetime prefix**, the item's ISO-8601-UTC filename prefix, as `/item status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item, as `/item status cart payment`
 
@@ -1254,7 +1254,7 @@ Trigger: When the engineer types `/feature status`, `/experiment status`, or `/c
 
 **`/feature status <feature>` reports on the feature the identifier names**, and `/experiment status <experiment>` on the experiment. An identifier is any of three forms:
 
-- **a letter**, the ordinal of a row in the last list of features, experiments, content, or progressions printed in the session, as `/feature status B`. A letter may be typed in either case
+- **an ordinal**, of a row in the last list of features, experiments, content, or progressions printed in the session, as `/feature status pB`, `/feature status B`, or `/feature status #pB`, in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, as `/feature status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one record of the kind, as `/feature status cart payment`
 
@@ -1664,7 +1664,7 @@ Trigger: When the engineer types `/open`, or asks for a record they name to be o
 
 **The words name a record in one of four ways.**
 
-1. An ordinal from the list of records printed last in the session: a number for an item's row, as `#3` or `3`, as in `/open #3` after `/items current`, and a letter for a progression's, as `#B` or `B`, as in `/open B` after `/features`. A letter may be typed in either case.
+1. An ordinal from the list of records printed last in the session: an item's row as `i3`, `3`, `#3`, or `#i3`, as in `/open i3` after `/items current`, and a progression's as `pB`, `B`, `#B`, or `#pB`, as in `/open pB` after `/features`. Any of them may be typed in either case.
 2. A file name prefix, the record's ISO-8601-UTC date and time, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
 3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents.md`.
 4. Words from the record's title or filename, as `/open cart contents`.
@@ -2036,7 +2036,7 @@ Trigger: When the engineer types `/work-status` or `/ws`, or asks for the status
 
 **`/work-status <record>` reports on the record the identifier names.** An identifier is any of three forms:
 
-- **an ordinal**, of a row in the last list of records printed in the session: a number for an item's row, as `/work-status 3`, and a letter for a progression's, as `/work-status B`. A letter may be typed in either case
+- **an ordinal**, of a row in the last list of records printed in the session: an item's row as `/work-status i3`, `3`, or `#i3`, and a progression's as `/work-status pB`, `B`, or `#pB`, in either case
 - **a datetime prefix**, the record's ISO-8601-UTC filename prefix, looked for among the items and the progressions, as `/work-status 2026-10-02T14-10-05Z`
 - **words from the title**, which match the title of one item or progression, as `/work-status cart payment`
 

@@ -8,7 +8,7 @@
 
 **The words name a record in one of four ways.**
 
-1. An ordinal from the list of records printed last in the session: a number for an item's row, as `#3` or `3`, as in `/open #3` after `/items current`, and a letter for a progression's, as `#B` or `B`, as in `/open B` after `/features`. A letter may be typed in either case.
+1. An ordinal from the list of records printed last in the session: an item's row as `i3`, `3`, `#3`, or `#i3`, as in `/open i3` after `/items current`, and a progression's as `pB`, `B`, `#B`, or `#pB`, as in `/open pB` after `/features`. Any of them may be typed in either case.
 2. A file name prefix, the record's ISO-8601-UTC date and time, as `2026-03-02T10-15-00Z`, or enough of its start to match one record.
 3. A path or a filename, as `slasher/local/items/2026-03-02T10-15-00Z-the-cart-keeps-its-contents.md`.
 4. Words from the record's title or filename, as `/open cart contents`.
@@ -38,6 +38,8 @@ After the open, say what was opened, in one line, with its path: from the projec
 
 ## History
 
+Until Mon Nov 23 2026 a row was named by its bare ordinal, as `3` or `B`. A printed list now shows the prefixed ordinal, as `i3` or `pB`, and either form names the row.
+
 Until Sun Nov 22 2026 this rule called a record's file name prefix its handle, the word the printed-list rule then used for a list's first column. A printed list now shows the short date in that column.
 
 Until Sat Nov 21 2026 an ordinal was a number for a progression's row too, since a list of progressions numbered its rows.
@@ -64,3 +66,4 @@ Changed by Scott Bellware on Thu Nov 19 2026 at 17:14:40 PT
 Changed by Scott Bellware on Fri Nov 20 2026 at 00:22:14 PT
 Changed by Scott Bellware on Sat Nov 21 2026 at 14:26:02 PT
 Changed by Scott Bellware on Sun Nov 22 2026 at 14:14:05 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:58:30 PT
