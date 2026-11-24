@@ -22,6 +22,7 @@ The `prose` package's line-edit rule numbers a piece of content's paragraphs `p1
 - **2026-11-23** — The prefix appears in commands only. A printed list keeps its ordinals as `1` and `A`, and a command accepts `i1` and `pA` as well. Selected by the engineer.
 - **2026-11-23** — The forms in use today still work: `#1`, `1`, and `i1` each name an item's row, and `A` and `pA` each name a progression's row. Selected by the engineer.
 - **2026-11-23** — **As the engineer stated it:** Actually, print them in the table. A printed list's first column carries the prefixed ordinal, as `i1` for an item and `pA` for a progression. This replaces the earlier resolution that the prefix appears in commands only.
+- **2026-11-23** — A reference may be typed in either case, prefix and letter alike: `I1` names the same row as `i1`, and `Pa`, `pa`, and `PA` the same row as `pA`. A list prints `i1` and `pA`. Selected by the engineer.
 
 ---
 
@@ -29,3 +30,4 @@ Authored by Scott Bellware on Mon Nov 23 2026 at 18:53:34 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:32:54 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:39:06 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:39:55 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:43:53 PT
