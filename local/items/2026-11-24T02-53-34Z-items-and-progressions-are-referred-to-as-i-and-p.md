@@ -1,6 +1,6 @@
 # Items are referred to as i<number> and progressions as p<letter>
 
-**State:** Open
+**State:** Progression
 
 **Tags:** [work]
 
@@ -15,6 +15,10 @@ The `prose` package's line-edit rule numbers a piece of content's paragraphs `p1
 - **A command can tell the two apart.** A paragraph's reference ends in a number, and a progression's in a letter, as `pA`, then `pAA` after Z. No value is both. Paragraph references go to `/prose line-edit` only. Row references go to `/open`, `/print`, `/work-status`, and the status commands.
 - **A reader may not.** The prefix `p` would name a paragraph in prose work and a progression everywhere else, and the language rules hold a term to one meaning. Both can arise in one session: in a line edit of a progression's content, `pB` is the progression and `p4` a paragraph in it. In free text, as "fix p2" or "look at pB", only the character after the `p` says which is meant, and `pa` and `p4` are one keystroke apart.
 - **Two ways out, neither settled.** Progressions take a prefix nothing else uses, as `gA` or `rA`. Or line-edit's paragraphs take another prefix.
+
+## Progression
+
+The implementation `2026-11-24T06-47-21Z-prefixed-ordinals` carries this item's work.
 
 ## Settled
 
@@ -33,3 +37,4 @@ Changed by Scott Bellware on Mon Nov 23 2026 at 22:39:06 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:39:55 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:43:53 PT
 Changed by Scott Bellware on Mon Nov 23 2026 at 22:44:47 PT
+Changed by Scott Bellware on Mon Nov 23 2026 at 22:47:21 PT
