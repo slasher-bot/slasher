@@ -1,6 +1,6 @@
 # The package refresh fails looking for an SSH key, and SLASHER_ORIGIN in the session environment has no effect
 
-**State:** Open
+**State:** Progression
 
 **Tags:** [problem]
 
@@ -24,6 +24,10 @@ Reported by James Hughes:
 2. **The SSH address cannot work on his machine.** His SSH config has no `Host github.com` entry, since he keeps two GitHub accounts under other host names. `git@github.com:slasher-bot` takes no key GitHub accepts for it, so GitHub refuses the key. The passphrase and host-key causes are ruled out.
 3. **What stands.** A project has no place to keep its repository address. The scripts default to `git@github.com:`, which fails for anyone whose GitHub SSH keys sit under other host names, and the one override, `SLASHER_ORIGIN`, has to reach the shell.
 
+## Progression
+
+The implementation `2026-11-26T04-37-18Z-package-fetch-https` carries this item's work.
+
 ## Settled
 
 - **2026-11-25** — The package scripts fetch over HTTPS by default. `install.sh`, `update-packages.sh`, and `slasher-install` take `https://github.com/slasher-bot` where `SLASHER_ORIGIN` is not set, in place of `git@github.com:slasher-bot`. `SLASHER_ORIGIN` stays as the override, as `SLASHER_ORIGIN=git@github.com:slasher-bot` for SSH. A Slasher project only pulls from the public package repositories, so HTTPS needs no key and no setup. Publishing from the composite pushes over SSH by its own addresses, and does not change. The README says so, and says that a variable set in the Claude desktop app's Environment setting does not reach the commands the agent runs, while one set in a shell profile does. Selected by the engineer, of three options: HTTPS by default, a stored address in the registry, or documentation only.
@@ -35,3 +39,4 @@ Changed by Scott Bellware on Mon Nov 23 2026 at 22:34:54 PT
 Changed by Scott Bellware on Wed Nov 25 2026 at 20:19:07 PT
 Changed by Scott Bellware on Wed Nov 25 2026 at 20:21:39 PT
 Changed by Scott Bellware on Wed Nov 25 2026 at 20:28:26 PT
+Changed by Scott Bellware on Wed Nov 25 2026 at 20:37:18 PT
