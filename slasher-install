@@ -26,12 +26,12 @@
 # stopped installing all of anything and started installing a named list.
 set -e
 
-# The origin the packages are fetched from. Override it to work over HTTPS where no SSH
-# key is registered:
+# The origin the packages are fetched from. The packages are public, so HTTPS
+# fetches them with no key. Override it to work over SSH:
 #
-#   SLASHER_ORIGIN=https://github.com/slasher-bot <this script>
+#   SLASHER_ORIGIN=git@github.com:slasher-bot <this script>
 #
-origin=${SLASHER_ORIGIN:-git@github.com:slasher-bot}
+origin=${SLASHER_ORIGIN:-https://github.com/slasher-bot}
 
 # A package set is a named list of packages. `default` is the set a project gets when it names
 # nothing, and it is one named set among others rather than a special case in the code.

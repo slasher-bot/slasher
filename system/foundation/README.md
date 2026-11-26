@@ -137,11 +137,11 @@ It also **renames `slasher/local/logs/work-sessions/` if your project still hold
 You can install with plain `git subtree` instead, but then you must add the root `AGENTS.md` yourself or the system stays inactive:
 
 ```
-git subtree add  --prefix slasher/system/foundation git@github.com:slasher-bot/foundation.git master --squash
-git subtree pull --prefix slasher/system/foundation git@github.com:slasher-bot/foundation.git master --squash
+git subtree add  --prefix slasher/system/foundation https://github.com/slasher-bot/foundation.git master --squash
+git subtree pull --prefix slasher/system/foundation https://github.com/slasher-bot/foundation.git master --squash
 ```
 
-**Over HTTPS**, where no SSH key is registered, use `https://github.com/slasher-bot/foundation.git` in place of the address above. A script takes `SLASHER_ORIGIN=https://github.com/slasher-bot` for the same reason.
+**Over SSH**, use `git@github.com:slasher-bot/foundation.git` in place of the address above. A script takes `SLASHER_ORIGIN=git@github.com:slasher-bot` for the same reason.
 
 This package has no dependencies. (The composite `install-all.sh` installs every package and runs this same bootstrap for you.)
 
@@ -158,7 +158,7 @@ The declaration exists because a repository name is met by people as well as by 
 It reports each package that moved and the rule files that changed in it. Those files are binding, and a silent refresh would be a change of behavior nobody saw. Name packages to refresh only those (`… update-packages.sh testing git`). Set `SLASHER_ORIGIN` to refresh from a fork or a mirror instead of `https://github.com/slasher-bot`. A single package can still be pulled directly:
 
 ```
-git subtree pull --prefix slasher/system/foundation git@github.com:slasher-bot/foundation.git master --squash
+git subtree pull --prefix slasher/system/foundation https://github.com/slasher-bot/foundation.git master --squash
 ```
 
 

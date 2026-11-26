@@ -46,11 +46,11 @@ imap  →  (nothing — standalone)
 Install with `git subtree`. It puts the files in your project's `slasher/system/` tree, committed alongside your code:
 
 ```
-git subtree add  --prefix slasher/system/imap git@github.com:slasher-bot/imap.git master --squash
-git subtree pull --prefix slasher/system/imap git@github.com:slasher-bot/imap.git master --squash
+git subtree add  --prefix slasher/system/imap https://github.com/slasher-bot/imap.git master --squash
+git subtree pull --prefix slasher/system/imap https://github.com/slasher-bot/imap.git master --squash
 ```
 
-**Over HTTPS**, where no SSH key is registered, use `https://github.com/slasher-bot/imap.git` in place of the address above. A script takes `SLASHER_ORIGIN=https://github.com/slasher-bot` for the same reason.
+**Over SSH**, use `git@github.com:slasher-bot/imap.git` in place of the address above. A script takes `SLASHER_ORIGIN=git@github.com:slasher-bot` for the same reason.
 
 It has no dependencies.
 

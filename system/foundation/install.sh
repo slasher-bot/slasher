@@ -34,12 +34,12 @@
 #     slasher/SLASHER.md, so the text has one source here.
 set -e
 
-# The origin foundation is fetched from. Override it to install over HTTPS where no SSH
-# key is registered:
+# The origin foundation is fetched from. The packages are public, so HTTPS
+# fetches them with no key. Override it to work over SSH:
 #
-#   SLASHER_ORIGIN=https://github.com/slasher-bot ./install.sh
+#   SLASHER_ORIGIN=git@github.com:slasher-bot ./install.sh
 #
-origin=${SLASHER_ORIGIN:-git@github.com:slasher-bot}
+origin=${SLASHER_ORIGIN:-https://github.com/slasher-bot}
 
 prefix="slasher/system/foundation"
 repo="$origin/foundation.git"

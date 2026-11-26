@@ -19,7 +19,7 @@ Realizes the problem item `2026-11-22T06-31-22Z-package-refresh-fails-looking-fo
 - **Tags:** [implementation]
 - **Upstream branch:** `master`
 - **Progression branch:** `implementation/worktree/package-fetch-https`
-- **Base:** the commit on `master` that holds this record as first written
+- **Base:** `3115b00f`, from `master`, the commit holding this record as first written
 - **Working location:** a branch and a worktree, at `../slasher-implementation-worktree-package-fetch-https`. The main working tree stays on `master`.
 - **Participation:** unattended
 - **Forecast:** none given.
@@ -38,6 +38,15 @@ Realizes the problem item `2026-11-22T06-31-22Z-package-refresh-fails-looking-fo
 
 ## What happened
 
+- `update-packages.sh`, `install.sh`, and `slasher-install` fetch from `https://github.com/slasher-bot` where `SLASHER_ORIGIN` is not set. Their comments name `SLASHER_ORIGIN=git@github.com:slasher-bot` as the way to SSH.
+- Three tests under `test/automated/default-origin/` were written first. Each failed on the SSH address, and passes now. A stand-in `git` keeps them off the network.
+- The root README says the packages are fetched over HTTPS, how to choose SSH, and that a variable set in the Claude desktop app's Environment setting does not reach the commands Claude Code runs, while one set in a shell profile does.
+- The ten package READMEs give their `git subtree` commands with the HTTPS address, and name SSH as the alternative.
+- The `/slasher-install:install` skill says the installer fetches over HTTPS, and names the SSH override.
+- The loop record `local/logs/loops/` holds the hinges of the tests and the change.
+- No rule changed, so no compressed text was checked.
+- The automated suite passed: 155 test files.
+
 ## Confirmations
 
 - **2026-11-25** — Working location: a branch and a worktree, selected by the engineer.
@@ -47,3 +56,4 @@ Realizes the problem item `2026-11-22T06-31-22Z-package-refresh-fails-looking-fo
 ---
 
 Authored by Scott Bellware on Wed Nov 25 2026 at 20:37:18 PT
+Changed by Scott Bellware on Wed Nov 25 2026 at 20:42:14 PT

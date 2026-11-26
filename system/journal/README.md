@@ -35,11 +35,11 @@ journal  →  foundation
 Install with `git subtree`. It puts the files in your project's `slasher/system/` tree, committed alongside your code and read at session start:
 
 ```
-git subtree add  --prefix slasher/system/journal git@github.com:slasher-bot/journal.git master --squash
-git subtree pull --prefix slasher/system/journal git@github.com:slasher-bot/journal.git master --squash
+git subtree add  --prefix slasher/system/journal https://github.com/slasher-bot/journal.git master --squash
+git subtree pull --prefix slasher/system/journal https://github.com/slasher-bot/journal.git master --squash
 ```
 
-**Over HTTPS**, where no SSH key is registered, use `https://github.com/slasher-bot/journal.git` in place of the address above. A script takes `SLASHER_ORIGIN=https://github.com/slasher-bot` for the same reason.
+**Over SSH**, use `git@github.com:slasher-bot/journal.git` in place of the address above. A script takes `SLASHER_ORIGIN=git@github.com:slasher-bot` for the same reason.
 
 It depends on `foundation`. Install its dependencies from the root of the Slasher project:
 
@@ -50,7 +50,7 @@ slasher/system/journal/install-dependencies.sh
 **Refresh from upstream** periodically to pull the latest rules:
 
 ```
-git subtree pull --prefix slasher/system/journal git@github.com:slasher-bot/journal.git master --squash
+git subtree pull --prefix slasher/system/journal https://github.com/slasher-bot/journal.git master --squash
 ```
 
 

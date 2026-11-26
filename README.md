@@ -68,7 +68,7 @@ sh slasher-install
 
 The `slasher-install` script installs and refreshes packages. `sh slasher-install --list` prints the package sets and the packages outside them. It optionally takes a list of names that contains either the names of packages, or a named _package set_. With no arguments it installs the default set of packages.
 
-The script fetches the packages over SSH. Where no SSH key is registered, run it as `SLASHER_ORIGIN=https://github.com/slasher-bot sh slasher-install`.
+The script fetches the packages over HTTPS, which needs no key, since the packages are public. To fetch them over SSH instead, run it as `SLASHER_ORIGIN=git@github.com:slasher-bot sh slasher-install`. To make that hold for the package commands Claude Code runs, set `SLASHER_ORIGIN` in a shell profile, such as `~/.zshrc`. A variable set in the Claude desktop app's Environment setting does not reach those commands.
 
 Where the project already has an `AGENTS.md`, the script asks before adding Slasher's section to it. `sh slasher-install --append-agents-md` adds it without asking.
 

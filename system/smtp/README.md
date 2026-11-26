@@ -32,11 +32,11 @@ smtp  →  imap
 Install with `git subtree`. It puts the files in your project's `slasher/system/` tree, committed alongside your code:
 
 ```
-git subtree add  --prefix slasher/system/smtp git@github.com:slasher-bot/smtp.git master --squash
-git subtree pull --prefix slasher/system/smtp git@github.com:slasher-bot/smtp.git master --squash
+git subtree add  --prefix slasher/system/smtp https://github.com/slasher-bot/smtp.git master --squash
+git subtree pull --prefix slasher/system/smtp https://github.com/slasher-bot/smtp.git master --squash
 ```
 
-**Over HTTPS**, where no SSH key is registered, use `https://github.com/slasher-bot/smtp.git` in place of the address above. A script takes `SLASHER_ORIGIN=https://github.com/slasher-bot` for the same reason.
+**Over SSH**, use `git@github.com:slasher-bot/smtp.git` in place of the address above. A script takes `SLASHER_ORIGIN=git@github.com:slasher-bot` for the same reason.
 
 Then install its dependency, `imap`, with `slasher/system/smtp/install-dependencies.sh`.
 
