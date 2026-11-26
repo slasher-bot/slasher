@@ -1,6 +1,6 @@
 # The package refresh fails looking for an SSH key, and SLASHER_ORIGIN in the session environment has no effect
 
-**State:** Progression
+**State:** Resolved
 
 **Tags:** [problem]
 
@@ -40,3 +40,4 @@ Changed by Scott Bellware on Wed Nov 25 2026 at 20:19:07 PT
 Changed by Scott Bellware on Wed Nov 25 2026 at 20:21:39 PT
 Changed by Scott Bellware on Wed Nov 25 2026 at 20:28:26 PT
 Changed by Scott Bellware on Wed Nov 25 2026 at 20:37:18 PT
+Changed by Scott Bellware on Wed Nov 25 2026 at 20:43:38 PT
